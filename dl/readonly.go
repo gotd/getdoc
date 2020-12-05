@@ -8,9 +8,15 @@ import (
 	"path"
 
 	"github.com/cockroachdb/pebble/vfs"
+	"golang.org/x/xerrors"
 )
 
+const maxZipSize = 1024 * 1024 * 10 // 10mb
+
 func copyZipFile(f *zip.File, fs *vfs.MemFS) error {
+	if f.CompressedSize64 > maxZipSize {
+		return xerrors.Errorf("file size %d is larger than maximum %d", f.CompressedSize64, maxZipSize)
+	}
 	rc, err := f.Open()
 	if err != nil {
 		return err
@@ -21,7 +27,7 @@ func copyZipFile(f *zip.File, fs *vfs.MemFS) error {
 	if err != nil {
 		return err
 	}
-	if _, err := io.Copy(mf, io.LimitReader(rc, 1024*1024)); err != nil {
+	if _, err := io.Copy(mf, io.LimitReader(rc, maxZipSize)); err != nil {
 		return nil
 	}
 	if err := mf.Close(); err != nil {
