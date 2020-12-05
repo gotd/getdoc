@@ -9,8 +9,8 @@ import (
 
 // Type represents type (aka class) documentation.
 type Type struct {
-	Name        string
-	Description []string
+	Name        string   `json:"name"`
+	Description []string `json:"description"`
 }
 
 // ParseType parses Type documentation from reader.

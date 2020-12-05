@@ -12,14 +12,16 @@ import (
 	"golang.org/x/xerrors"
 )
 
+// Category index.
 type Category struct {
-	Name   string
-	Values []string
+	Name   string   `json:"name"`
+	Values []string `json:"values"`
 }
 
+// Index of schema.
 type Index struct {
-	Layer      int
-	Categories []Category
+	Layer      int        `json:"layer"`
+	Categories []Category `json:"categories"`
 }
 
 type indexLink struct {
@@ -27,6 +29,7 @@ type indexLink struct {
 	Value string
 }
 
+// ParseIndex parses schema index documentation fro reader.
 func ParseIndex(reader io.Reader) (*Index, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {

@@ -8,11 +8,11 @@ import (
 
 // Doc represents full documentation description.
 type Doc struct {
-	Index Index
+	Index Index `json:"index"`
 
-	Constructors map[string]Constructor
-	Types        map[string]Type
-	Methods      map[string]Method
+	Constructors map[string]Constructor `json:"constructors"`
+	Types        map[string]Type        `json:"types"`
+	Methods      map[string]Method      `json:"methods"`
 }
 
 // docTitle extracts title from document.
@@ -53,6 +53,9 @@ func docTableAfter(doc *goquery.Document, after string) *goquery.Selection {
 		}
 		return true
 	})
+	if table == nil {
+		return &goquery.Selection{}
+	}
 	return table.First().Find("tbody > tr")
 }
 

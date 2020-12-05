@@ -9,9 +9,9 @@ import (
 
 // Constructor represents constructor documentation.
 type Constructor struct {
-	Name        string
-	Description []string
-	Fields      map[string]string
+	Name        string            `json:"name"`
+	Description []string          `json:"description,omitempty"`
+	Fields      map[string]string `json:"fields,omitempty"`
 }
 
 // ParseConstructor parses html documentation from reader and produces Constructor.

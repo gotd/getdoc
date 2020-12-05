@@ -10,17 +10,17 @@ import (
 
 // Method represents method documentation.
 type Method struct {
-	Name        string
-	Description []string
-	Parameters  map[string]string
-	Errors      []Error
+	Name        string            `json:"name"`
+	Description []string          `json:"description,omitempty"`
+	Parameters  map[string]string `json:"parameters,omitempty"`
+	Errors      []Error           `json:"errors,omitempty"`
 }
 
 // Error represent possible error documentation.
 type Error struct {
-	Code        int
-	Type        string
-	Description string
+	Code        int    `json:"code"`
+	Type        string `json:"type"`
+	Description string `json:"description"`
 }
 
 // docErrors extract error code documentation from document.
