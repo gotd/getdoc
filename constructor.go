@@ -21,16 +21,6 @@ func ParseConstructor(reader io.Reader) (*Constructor, error) {
 		return nil, xerrors.Errorf("failed to parse document: %w", err)
 	}
 
-	var generalDescription []string
-	doc.Find("#dev_page_content").Each(func(i int, s *goquery.Selection) {
-		s.Children().EachWithBreak(func(i int, selection *goquery.Selection) bool {
-			if selection.Is("p") && selection.Text() != "" {
-				generalDescription = append(generalDescription, selection.Text())
-			}
-			return !selection.HasClass("clearfix")
-		})
-	})
-
 	// 2. Find description of each field.
 	fieldDescription := make(map[string]string)
 	doc.Find("#dev_page_content > table > tbody > tr").Each(func(i int, row *goquery.Selection) {
@@ -50,7 +40,7 @@ func ParseConstructor(reader io.Reader) (*Constructor, error) {
 
 	return &Constructor{
 		Name:        name,
-		Description: generalDescription,
+		Description: generalDescription(doc),
 		Fields:      fieldDescription,
 	}, nil
 }

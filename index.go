@@ -102,7 +102,7 @@ func extractLink(v string) indexLink {
 		CategoryMethod,
 	} {
 		pref := "/" + s + "/"
-		if strings.HasPrefix(v, "/"+s+"/") {
+		if strings.HasPrefix(v, pref) {
 			val := strings.TrimPrefix(v, pref)
 			val = strings.TrimSpace(val)
 			unescaped, err := url.PathUnescape(val)
