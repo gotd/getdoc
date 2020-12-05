@@ -6,31 +6,22 @@ import (
 	"path"
 
 	"golang.org/x/xerrors"
+
+	"github.com/gotd/getdoc/dl"
 )
 
+// Downloader abstracts documentation fetching.
 type Downloader interface {
 	Get(ctx context.Context, layer int, key string) ([]byte, error)
 }
 
-type walker struct {
-	client Downloader
-}
-
-func (w *walker) Index(ctx context.Context) (*Index, error) {
-	data, err := w.client.Get(ctx, 0, "schema")
-	if err != nil {
-		return nil, err
-	}
-	return ParseIndex(bytes.NewReader(data))
-}
-
 // Extracts uses Downloader to extract documentation.
 func Extract(ctx context.Context, d Downloader) (*Doc, error) {
-	w := walker{
-		client: d,
+	data, err := d.Get(ctx, dl.NoLayer, "schema")
+	if err != nil {
+		return nil, xerrors.Errorf("failed to get schema: %w", err)
 	}
-
-	index, err := w.Index(ctx)
+	index, err := ParseIndex(bytes.NewReader(data))
 	if err != nil {
 		return nil, xerrors.Errorf("failed to extract index: %w", err)
 	}
@@ -42,7 +33,7 @@ func Extract(ctx context.Context, d Downloader) (*Doc, error) {
 	}
 	for _, category := range index.Categories {
 		for _, v := range category.Values {
-			data, err := w.client.Get(ctx, index.Layer, path.Join(category.Name, v))
+			data, err := d.Get(ctx, index.Layer, path.Join(category.Name, v))
 			if err != nil {
 				return nil, xerrors.Errorf("fetch(%s/%s) failed: %w", category.Name, v, err)
 			}

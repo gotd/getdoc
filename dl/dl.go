@@ -62,6 +62,9 @@ func (c *Client) Close() error {
 	return c.db.Close()
 }
 
+// NoLayer can be passed as "layer" argument.
+const NoLayer = 0
+
 func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, error) {
 	if c.readonly {
 		return nil, ErrReadOnly
@@ -77,7 +80,7 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 	if err != nil {
 		return nil, err
 	}
-	if layer > 0 {
+	if layer != NoLayer {
 		// Current layer is determined by cookie value.
 		req.AddCookie(&http.Cookie{
 			Name:  "stel_dev_layer",
@@ -107,9 +110,19 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 	return body, nil
 }
 
+// Get fetches documentation by key and layer.
+//
+// Pass "NoLayer" as layer to use default documentation.
+// Examples for "key" value:
+//	* "schema" for index of documentation
+//	* "constructor/inputMediaGeoLive" for constructor "inputMediaGeoLive"
+//	* "type/InputMedia" for class "InputMedia"
+//	* "method/messages.addChatUser" for "messages.addChatUser" method
+//
+// Blank key is invalid.
 func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error) {
 	k := []byte(key)
-	if layer > 0 {
+	if layer != NoLayer {
 		k = []byte(fmt.Sprintf("%d:%s", layer, k))
 	}
 
