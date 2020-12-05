@@ -23,7 +23,7 @@ func copyZipFile(f *zip.File, fs *vfs.MemFS) error {
 	}
 	defer func() { _ = rc.Close() }()
 
-	mf, err := fs.Create(path.Join("zip", f.Name))
+	mf, err := fs.Create(path.Join("zip", f.Name)) // #nosec
 	if err != nil {
 		return err
 	}
