@@ -19,7 +19,7 @@ type Doc struct {
 
 // docTitle extracts title from document.
 func docTitle(doc *goquery.Document) string {
-	return doc.Find("#dev_page_title").Text()
+	return strings.TrimSpace(doc.Find("#dev_page_title").Text())
 }
 
 // docDescription extracts description lines from document.
