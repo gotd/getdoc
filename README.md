@@ -1,3 +1,3 @@
 # getdoc
 
-Documentation update utility for Telegram schema.
+Documentation parsing utility for Telegram schema using [goquery](https://github.com/PuerkitoBio/goquery).
