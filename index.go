@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"golang.org/x/xerrors"
+	"github.com/cockroachdb/errors"
 )
 
 // Category index.
@@ -33,7 +33,7 @@ type indexLink struct {
 func ParseIndex(reader io.Reader) (*Index, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
-		return nil, xerrors.Errorf("failed to parse document: %w", err)
+		return nil, errors.Errorf("failed to parse document: %w", err)
 	}
 
 	// Searching for current layer.
@@ -46,7 +46,7 @@ func ParseIndex(reader io.Reader) (*Index, error) {
 		}
 	})
 	if layer == 0 {
-		return nil, xerrors.New("unable to find layer id")
+		return nil, errors.New("unable to find layer id")
 	}
 
 	// Searching for all unique references.

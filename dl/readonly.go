@@ -7,15 +7,15 @@ import (
 	"io/ioutil"
 	"path"
 
+	"github.com/cockroachdb/errors"
 	"github.com/cockroachdb/pebble/vfs"
-	"golang.org/x/xerrors"
 )
 
 const maxZipSize = 1024 * 1024 * 10 // 10mb
 
 func copyZipFile(f *zip.File, fs *vfs.MemFS) error {
 	if f.CompressedSize64 > maxZipSize {
-		return xerrors.Errorf("file size %d is larger than maximum %d", f.CompressedSize64, maxZipSize)
+		return errors.Errorf("file size %d is larger than maximum %d", f.CompressedSize64, maxZipSize)
 	}
 	rc, err := f.Open()
 	if err != nil {

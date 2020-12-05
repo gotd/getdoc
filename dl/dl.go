@@ -3,7 +3,6 @@ package dl
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -11,10 +10,10 @@ import (
 	"strconv"
 
 	"github.com/cenkalti/backoff/v4"
+	"github.com/cockroachdb/errors"
 	"github.com/cockroachdb/pebble"
 	"github.com/cockroachdb/pebble/vfs"
 	"go.uber.org/ratelimit"
-	"golang.org/x/xerrors"
 )
 
 type Client struct {
@@ -94,17 +93,17 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 
 	res, err := c.http.Do(req)
 	if err != nil {
-		return nil, xerrors.Errorf("failed to do request: %w", err)
+		return nil, errors.Errorf("failed to do request: %w", err)
 	}
 	defer func() { _ = res.Body.Close() }()
 
 	if res.StatusCode != http.StatusOK {
-		return nil, xerrors.Errorf("unexpected http code %d", res.StatusCode)
+		return nil, errors.Errorf("unexpected http code %d", res.StatusCode)
 	}
 
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		return nil, xerrors.Errorf("failed to read body: %w", err)
+		return nil, errors.Errorf("failed to read body: %w", err)
 	}
 
 	return body, nil
@@ -132,12 +131,12 @@ func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error)
 		// Copy buf because slice is not valid after close.
 		data := append([]byte(nil), buf...)
 		if err := closer.Close(); err != nil {
-			return nil, xerrors.Errorf("cache: %w", err)
+			return nil, errors.Errorf("cache: %w", err)
 		}
 		return data, nil
 	}
 	if !errors.Is(err, pebble.ErrNotFound) {
-		return nil, xerrors.Errorf("cache: %w", err)
+		return nil, errors.Errorf("cache: %w", err)
 	}
 
 	// Downloading with retry backoff.
@@ -160,12 +159,12 @@ func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error)
 		data = out
 		return nil
 	}, backoff.NewExponentialBackOff()); err != nil {
-		return nil, xerrors.Errorf("failed to fetch: %w", err)
+		return nil, errors.Errorf("failed to fetch: %w", err)
 	}
 
 	// Adding value to cache.
 	if err := c.db.Set(k, data, &pebble.WriteOptions{}); err != nil {
-		return nil, xerrors.Errorf("cache: %w", err)
+		return nil, errors.Errorf("cache: %w", err)
 	}
 
 	return data, nil

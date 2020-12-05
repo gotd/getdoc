@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/PuerkitoBio/goquery"
-	"golang.org/x/xerrors"
+	"github.com/cockroachdb/errors"
 )
 
 // Method represents method documentation.
@@ -53,7 +53,7 @@ func docErrors(doc *goquery.Document) []Error {
 func ParseMethod(reader io.Reader) (*Method, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
-		return nil, xerrors.Errorf("failed to parse document: %w", err)
+		return nil, errors.Errorf("failed to parse document: %w", err)
 	}
 	return &Method{
 		Name:        docTitle(doc),

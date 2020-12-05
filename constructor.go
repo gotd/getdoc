@@ -4,7 +4,7 @@ import (
 	"io"
 
 	"github.com/PuerkitoBio/goquery"
-	"golang.org/x/xerrors"
+	"github.com/cockroachdb/errors"
 )
 
 // Constructor represents constructor documentation.
@@ -18,7 +18,7 @@ type Constructor struct {
 func ParseConstructor(reader io.Reader) (*Constructor, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
-		return nil, xerrors.Errorf("failed to parse document: %w", err)
+		return nil, errors.Errorf("failed to parse document: %w", err)
 	}
 	return &Constructor{
 		Name:        docTitle(doc),
