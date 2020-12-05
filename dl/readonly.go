@@ -21,7 +21,7 @@ func copyZipFile(f *zip.File, fs *vfs.MemFS) error {
 	if err != nil {
 		return err
 	}
-	if _, err := io.Copy(mf, rc); err != nil {
+	if _, err := io.Copy(mf, io.LimitReader(rc, 1024*1024)); err != nil {
 		return nil
 	}
 	if err := mf.Close(); err != nil {

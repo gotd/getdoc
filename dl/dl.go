@@ -70,7 +70,7 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 		return nil, ErrReadOnly
 	}
 
-	// stel_dev_layer=117
+	// `stel_dev_layer=117`
 	u := &url.URL{
 		Scheme: "https",
 		Host:   "core.telegram.org",
@@ -137,7 +137,7 @@ func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error)
 		return data, nil
 	}
 	if !errors.Is(err, pebble.ErrNotFound) {
-		return nil, xerrors.Errorf("cache: w", err)
+		return nil, xerrors.Errorf("cache: %w", err)
 	}
 
 	// Downloading with retry backoff.

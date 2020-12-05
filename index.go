@@ -39,7 +39,7 @@ func ParseIndex(reader io.Reader) (*Index, error) {
 	// Searching for current layer.
 	var layer int
 	doc.Find("a.dropdown-toggle").Each(func(i int, selection *goquery.Selection) {
-		matches := regexp.MustCompile("Layer (\\d+)").FindStringSubmatch(selection.Text())
+		matches := regexp.MustCompile(`Layer (\d+)`).FindStringSubmatch(selection.Text())
 		id, err := strconv.Atoi(matches[1])
 		if err == nil {
 			layer = id

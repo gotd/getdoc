@@ -10,7 +10,7 @@ import (
 )
 
 func TestLoad(t *testing.T) {
-	for _, layer := range append(Layers) {
+	for _, layer := range append(Layers, LayerLatest) {
 		t.Run(fmt.Sprintf("%d", layer), func(t *testing.T) {
 			doc, err := Load(layer)
 			if err != nil {
