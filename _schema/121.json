@@ -2572,7 +2572,8 @@
     "channelParticipantsMentions": {
       "name": "channelParticipantsMentions",
       "description": [
-        "This filter is used when looking for supergroup members to mention.\nThis filter will automatically remove anonymous admins, and return even non-participant users that replied to a specific thread through the comment section of a channel."
+        "This filter is used when looking for supergroup members to mention.",
+        "This filter will automatically remove anonymous admins, and return even non-participant users that replied to a specific thread through the comment section of a channel."
       ],
       "fields": {
         "flags": "Flags, see TL conditional fields",
@@ -8528,7 +8529,8 @@
     "statsPercentValue": {
       "name": "statsPercentValue",
       "description": [
-        "Channel statistics percentage.\nCompute the percentage simply by doing part * total / 100"
+        "Channel statistics percentage.",
+        "Compute the percentage simply by doing part * total / 100"
       ],
       "fields": {
         "part": "Partial value",
@@ -8547,7 +8549,8 @@
     "stickerPack": {
       "name": "stickerPack",
       "description": [
-        "A stickerpack is a group of stickers associated to the same emoji.\nIt is not a sticker pack the way it is usually intended, you may be looking for a StickerSet."
+        "A stickerpack is a group of stickers associated to the same emoji.",
+        "It is not a sticker pack the way it is usually intended, you may be looking for a StickerSet."
       ],
       "fields": {
         "documents": "Stickers",
@@ -9072,7 +9075,8 @@
     "updateChannelTooLong": {
       "name": "updateChannelTooLong",
       "description": [
-        "There are new updates in the specified channel, the client must fetch them.\nIf the difference is too long or if the channel isn't currently in the states, start fetching from the specified pts."
+        "There are new updates in the specified channel, the client must fetch them.",
+        "If the difference is too long or if the channel isn't currently in the states, start fetching from the specified pts."
       ],
       "fields": {
         "channel_id": "The channel",
@@ -13297,7 +13301,8 @@
     "auth.exportLoginToken": {
       "name": "auth.exportLoginToken",
       "description": [
-        "Generate a login token, for login via QR code.\nThe generated login token should be encoded using base64url, then shown as a tg://login?token=base64encodedtoken URL in the QR code.",
+        "Generate a login token, for login via QR code.",
+        "The generated login token should be encoded using base64url, then shown as a tg://login?token=base64encodedtoken URL in the QR code.",
         "For more info, see login via QR code."
       ],
       "parameters": {
@@ -14375,7 +14380,8 @@
       "name": "channels.getGroupsForDiscussion",
       "description": [
         "Get all groups that can be used as discussion groups.",
-        "Returned legacy group chats must be first upgraded to supergroups before they can be set as a discussion group.\nTo set a returned supergroup as a discussion group, access to its old messages must be enabled using channels.togglePreHistoryHidden, first."
+        "Returned legacy group chats must be first upgraded to supergroups before they can be set as a discussion group.",
+        "To set a returned supergroup as a discussion group, access to its old messages must be enabled using channels.togglePreHistoryHidden, first."
       ]
     },
     "channels.getInactiveChannels": {
@@ -15406,7 +15412,8 @@
     "help.getAppChangelog": {
       "name": "help.getAppChangelog",
       "description": [
-        "Get changelog of current app.\nTypically, an updates constructor will be returned, containing one or more updateServiceNotification updates with app-specific changelogs."
+        "Get changelog of current app.",
+        "Typically, an updates constructor will be returned, containing one or more updateServiceNotification updates with app-specific changelogs."
       ],
       "parameters": {
         "prev_app_version": "Previous app version"
@@ -18997,7 +19004,9 @@
     "messages.setBotPrecheckoutResults": {
       "name": "messages.setBotPrecheckoutResults",
       "description": [
-        "Once the user has confirmed their payment and shipping details, the bot receives an updateBotPrecheckoutQuery update.\nUse this method to respond to such pre-checkout queries.\nNote: Telegram must receive an answer within 10 seconds after the pre-checkout query was sent."
+        "Once the user has confirmed their payment and shipping details, the bot receives an updateBotPrecheckoutQuery update.",
+        "Use this method to respond to such pre-checkout queries.",
+        "Note: Telegram must receive an answer within 10 seconds after the pre-checkout query was sent."
       ],
       "parameters": {
         "error": "Required if the success isn't set. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. \"Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!\"). Telegram will display this message to the user.",
@@ -20049,7 +20058,8 @@
     "stats.getMessagePublicForwards": {
       "name": "stats.getMessagePublicForwards",
       "description": [
-        "Obtains a list of messages, indicating to which other public channels was a channel message forwarded.\nWill return a list of messages with peer_id equal to the public channel to which this message was forwarded."
+        "Obtains a list of messages, indicating to which other public channels was a channel message forwarded.",
+        "Will return a list of messages with peer_id equal to the public channel to which this message was forwarded."
       ],
       "parameters": {
         "channel": "Source channel",
