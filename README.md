@@ -1,4 +1,4 @@
-# getdoc
+# getdoc ![CI](https://github.com/gotd/getdoc/workflows/CI/badge.svg)
 
 Documentation extract utilities for Telegram schema using [goquery](https://github.com/PuerkitoBio/goquery).
 
