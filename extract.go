@@ -15,7 +15,7 @@ type Downloader interface {
 	Get(ctx context.Context, layer int, key string) ([]byte, error)
 }
 
-// Extracts uses Downloader to extract documentation.
+// Extract uses Downloader to extract documentation.
 func Extract(ctx context.Context, d Downloader) (*Doc, error) {
 	data, err := d.Get(ctx, dl.NoLayer, "schema")
 	if err != nil {
