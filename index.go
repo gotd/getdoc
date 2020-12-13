@@ -29,7 +29,7 @@ type indexLink struct {
 	Value string
 }
 
-// ParseIndex parses schema index documentation fro reader.
+// ParseIndex parses schema index documentation from reader.
 func ParseIndex(reader io.Reader) (*Index, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
