@@ -9,9 +9,10 @@ import (
 
 // Constructor represents constructor documentation.
 type Constructor struct {
-	Name        string            `json:"name"`
-	Description []string          `json:"description,omitempty"`
-	Fields      map[string]string `json:"fields,omitempty"`
+	Name        string                      `json:"name"`
+	Description []string                    `json:"description,omitempty"`
+	Links       []string                    `json:"links,omitempty"`
+	Fields      map[string]ParamDescription `json:"fields,omitempty"`
 }
 
 // ParseConstructor parses html documentation from reader and produces Constructor.
@@ -20,9 +21,12 @@ func ParseConstructor(reader io.Reader) (*Constructor, error) {
 	if err != nil {
 		return nil, errors.Errorf("failed to parse document: %w", err)
 	}
+
+	desc, links := docDescription(doc)
 	return &Constructor{
 		Name:        docTitle(doc),
-		Description: docDescription(doc),
+		Description: desc,
+		Links:       links,
 		Fields:      docParams(doc),
 	}, nil
 }

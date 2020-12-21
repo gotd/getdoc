@@ -23,10 +23,10 @@ func TestParseMethod(t *testing.T) {
 	expected := &Method{
 		Name:        "langpack.getDifference",
 		Description: []string{"Get new strings in languagepack"},
-		Parameters: map[string]string{
-			"from_version": "Previous localization pack version",
-			"lang_code":    "Language code",
-			"lang_pack":    "Language pack",
+		Parameters: map[string]ParamDescription{
+			"from_version": {Description: "Previous localization pack version"},
+			"lang_code":    {Description: "Language code"},
+			"lang_pack":    {Description: "Language pack"},
 		},
 		Errors: []Error{
 			{Code: 400, Type: "LANG_PACK_INVALID", Description: "The provided language pack is invalid"},
