@@ -6,6 +6,8 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
+
+	"github.com/gotd/getdoc/href"
 )
 
 // Doc represents full documentation description.
@@ -23,25 +25,27 @@ func docTitle(doc *goquery.Document) string {
 }
 
 // docDescription extracts description lines from document.
-func docDescription(doc *goquery.Document) []string {
-	var description []string
+func docDescription(doc *goquery.Document) (desc, links []string) {
 	doc.Find("#dev_page_content").Each(func(i int, s *goquery.Selection) {
 		s.Children().EachWithBreak(func(i int, selection *goquery.Selection) bool {
 			if selection.Is("p") && selection.Text() != "" {
-				// Trimming space and handling newlines.
+				hrefs := href.Replace(selection)
+
 				text := strings.TrimSpace(selection.Text())
 				for _, part := range strings.Split(text, "\n") {
 					part = strings.TrimSpace(part)
 					if part == "" {
 						continue
 					}
-					description = append(description, part)
+					desc = append(desc, part)
 				}
+
+				links = append(links, addHost(hrefs)...)
 			}
 			return !selection.HasClass("clearfix")
 		})
 	})
-	return description
+	return
 }
 
 // docTableAfter extracts table after selector "after".
@@ -69,19 +73,30 @@ func docTableAfter(doc *goquery.Document, after string) *goquery.Selection {
 	return table.First().Find("tbody > tr")
 }
 
+type ParamDescription struct {
+	Description string   `json:"description"`
+	Links       []string `json:"links"`
+}
+
 // docParams extract parameters documentation from document.
 //
-// Key is parameter name, value is documentation string.
-func docParams(doc *goquery.Document) map[string]string {
-	fields := make(map[string]string)
+// Key is parameter name, value is documentation struct.
+func docParams(doc *goquery.Document) map[string]ParamDescription {
+	fields := make(map[string]ParamDescription)
+
 	docTableAfter(doc, "#parameters").
 		Each(func(i int, row *goquery.Selection) {
 			var rowContents []string
+			var links []string
 			row.Find("td").Each(func(i int, column *goquery.Selection) {
-				rowContents = append(rowContents, strings.TrimSpace(column.Text()))
+				links = addHost(href.Replace(column))
+				rowContents = append(rowContents, column.Text())
 			})
 			if len(rowContents) == 3 {
-				fields[rowContents[0]] = rowContents[2]
+				fields[rowContents[0]] = ParamDescription{
+					Description: rowContents[2],
+					Links:       links,
+				}
 			}
 		})
 	return fields

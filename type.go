@@ -10,7 +10,8 @@ import (
 // Type represents type (aka class) documentation.
 type Type struct {
 	Name        string   `json:"name"`
-	Description []string `json:"description"`
+	Description []string `json:"description,omitempty"`
+	Links       []string `json:"links,omitempty"`
 }
 
 // ParseType parses Type documentation from reader.
@@ -19,8 +20,11 @@ func ParseType(reader io.Reader) (*Type, error) {
 	if err != nil {
 		return nil, errors.Errorf("failed to parse document: %w", err)
 	}
+
+	desc, links := docDescription(doc)
 	return &Type{
 		Name:        docTitle(doc),
-		Description: docDescription(doc),
+		Description: desc,
+		Links:       links,
 	}, nil
 }

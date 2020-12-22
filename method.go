@@ -10,10 +10,11 @@ import (
 
 // Method represents method documentation.
 type Method struct {
-	Name        string            `json:"name"`
-	Description []string          `json:"description,omitempty"`
-	Parameters  map[string]string `json:"parameters,omitempty"`
-	Errors      []Error           `json:"errors,omitempty"`
+	Name        string                      `json:"name"`
+	Description []string                    `json:"description,omitempty"`
+	Links       []string                    `json:"links,omitempty"`
+	Parameters  map[string]ParamDescription `json:"parameters,omitempty"`
+	Errors      []Error                     `json:"errors,omitempty"`
 }
 
 // Error represent possible error documentation.
@@ -55,9 +56,12 @@ func ParseMethod(reader io.Reader) (*Method, error) {
 	if err != nil {
 		return nil, errors.Errorf("failed to parse document: %w", err)
 	}
+
+	desc, links := docDescription(doc)
 	return &Method{
 		Name:        docTitle(doc),
-		Description: docDescription(doc),
+		Description: desc,
+		Links:       links,
 		Parameters:  docParams(doc),
 		Errors:      docErrors(doc),
 	}, nil
