@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/PuerkitoBio/goquery v1.6.0
 	github.com/cenkalti/backoff/v4 v4.1.0
-	github.com/cockroachdb/errors v1.8.1
+	github.com/cockroachdb/errors v1.8.2
 	github.com/cockroachdb/pebble v0.0.0-20201130172119-f19faf8529d6
 	github.com/go-bindata/go-bindata v3.1.2+incompatible
 	github.com/stretchr/testify v1.6.1
