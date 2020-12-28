@@ -25,8 +25,8 @@ type Error struct {
 	Description string `json:"description"`
 }
 
-func botCanUse(doc *goquery.Document) bool {
-	return doc.Find("#bots-can-use-this-method") != nil
+func docBotCanUser(doc *goquery.Document) bool {
+	return doc.Find("#bots-can-use-this-method").Length() > 0
 }
 
 // docErrors extract error code documentation from document.
@@ -69,6 +69,6 @@ func ParseMethod(reader io.Reader) (*Method, error) {
 		Links:       links,
 		Parameters:  docParams(doc),
 		Errors:      docErrors(doc),
-		BotCanUse:   botCanUse(doc),
+		BotCanUse:   docBotCanUser(doc),
 	}, nil
 }

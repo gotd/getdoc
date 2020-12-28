@@ -22,7 +22,6 @@ func TestParseMethod(t *testing.T) {
 
 	expected := &Method{
 		Name:        "langpack.getDifference",
-		BotCanUse:   true,
 		Description: []string{"Get new strings in languagepack"},
 		Parameters: map[string]ParamDescription{
 			"from_version": {Description: "Previous localization pack version"},

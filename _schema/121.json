@@ -21354,8 +21354,7 @@
           "description": "Types of values sent and their hashes",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.cancelPasswordEmail": {
       "name": "account.cancelPasswordEmail",
@@ -21364,8 +21363,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/srp"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.changePhone": {
       "name": "account.changePhone",
@@ -21401,8 +21399,7 @@
           "type": "PHONE_NUMBER_INVALID",
           "description": "The phone number is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.checkUsername": {
       "name": "account.checkUsername",
@@ -21421,8 +21418,7 @@
           "type": "USERNAME_INVALID",
           "description": "Unacceptable username"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.confirmPasswordEmail": {
       "name": "account.confirmPasswordEmail",
@@ -21451,8 +21447,7 @@
           "type": "EMAIL_HASH_EXPIRED",
           "description": "Email hash expired"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.confirmPhone": {
       "name": "account.confirmPhone",
@@ -21487,8 +21482,7 @@
           "type": "PHONE_CODE_EMPTY",
           "description": "phone_code is missing"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.createTheme": {
       "name": "account.createTheme",
@@ -21518,8 +21512,7 @@
           "description": "Theme name",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.deleteAccount": {
       "name": "account.deleteAccount",
@@ -21541,8 +21534,7 @@
           "type": "2FA_CONFIRM_WAIT_X",
           "description": "Since this account is active and protected by a 2FA password, we will delete it in 1 week for security purposes. You can cancel this process at any time, you'll be able to reset your account in X seconds."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.deleteSecureValue": {
       "name": "account.deleteSecureValue",
@@ -21558,8 +21550,7 @@
           "description": "Document types to delete",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.finishTakeoutSession": {
       "name": "account.finishTakeoutSession",
@@ -21584,15 +21575,13 @@
           "type": "TAKEOUT_REQUIRED",
           "description": "A takeout session has to be initialized, first"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getAccountTTL": {
       "name": "account.getAccountTTL",
       "description": [
         "Get days to live of account"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getAllSecureValues": {
       "name": "account.getAllSecureValues",
@@ -21602,8 +21591,7 @@
       "links": [
         "https://core.telegram.org/passport",
         "https://core.telegram.org/passport/encryption#encryption"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getAuthorizationForm": {
       "name": "account.getAuthorizationForm",
@@ -21623,36 +21611,31 @@
           "description": "Telegram Passport element types requested by the service",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getAuthorizations": {
       "name": "account.getAuthorizations",
       "description": [
         "Get logged-in sessions"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getAutoDownloadSettings": {
       "name": "account.getAutoDownloadSettings",
       "description": [
         "Get media autodownload settings"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getContactSignUpNotification": {
       "name": "account.getContactSignUpNotification",
       "description": [
         "Whether the user will receive notifications when contacts sign up"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getContentSettings": {
       "name": "account.getContentSettings",
       "description": [
         "Get sensitive content settings"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getGlobalPrivacySettings": {
       "name": "account.getGlobalPrivacySettings",
@@ -21671,8 +21654,7 @@
           "description": "Wallpapers to fetch info about",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getNotifyExceptions": {
       "name": "account.getNotifyExceptions",
@@ -21694,8 +21676,7 @@
           "description": "If specified, only chats of the specified category will be returned",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getNotifySettings": {
       "name": "account.getNotifySettings",
@@ -21714,15 +21695,13 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getPassword": {
       "name": "account.getPassword",
       "description": [
         "Obtain configuration for two-factor authorization with password"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getPasswordSettings": {
       "name": "account.getPasswordSettings",
@@ -21746,8 +21725,7 @@
           "type": "PASSWORD_HASH_INVALID",
           "description": "The provided password hash is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getPrivacy": {
       "name": "account.getPrivacy",
@@ -21766,8 +21744,7 @@
           "type": "PRIVACY_KEY_INVALID",
           "description": "The privacy key is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getSecureValue": {
       "name": "account.getSecureValue",
@@ -21783,8 +21760,7 @@
           "description": "Requested value types",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getTheme": {
       "name": "account.getTheme",
@@ -21816,8 +21792,7 @@
           "type": "THEME_INVALID",
           "description": "Invalid theme provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getThemes": {
       "name": "account.getThemes",
@@ -21835,8 +21810,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getTmpPassword": {
       "name": "account.getTmpPassword",
@@ -21864,8 +21838,7 @@
           "type": "TMP_PASSWORD_DISABLED",
           "description": "The temporary password is disabled"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getWallPaper": {
       "name": "account.getWallPaper",
@@ -21877,8 +21850,7 @@
           "description": "The wallpaper to get info about",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getWallPapers": {
       "name": "account.getWallPapers",
@@ -21892,8 +21864,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getWebAuthorizations": {
       "name": "account.getWebAuthorizations",
@@ -21902,8 +21873,7 @@
       ],
       "links": [
         "https://core.telegram.org/widgets/login"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.initTakeoutSession": {
       "name": "account.initTakeoutSession",
@@ -21958,8 +21928,7 @@
           "type": "TAKEOUT_INIT_DELAY_X",
           "description": "Wait X seconds before initing takeout"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.installTheme": {
       "name": "account.installTheme",
@@ -21985,8 +21954,7 @@
           "description": "Theme to install",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.installWallPaper": {
       "name": "account.installWallPaper",
@@ -22002,8 +21970,7 @@
           "description": "Wallpaper to install",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.registerDevice": {
       "name": "account.registerDevice",
@@ -22055,8 +22022,7 @@
           "type": "TOKEN_INVALID",
           "description": "The provided token is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.reportPeer": {
       "name": "account.reportPeer",
@@ -22084,8 +22050,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.resendPasswordEmail": {
       "name": "account.resendPasswordEmail",
@@ -22094,8 +22059,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/srp"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.resetAuthorization": {
       "name": "account.resetAuthorization",
@@ -22122,22 +22086,19 @@
           "type": "HASH_INVALID",
           "description": "The provided hash is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.resetNotifySettings": {
       "name": "account.resetNotifySettings",
       "description": [
         "Resets all notification settings from users and groups."
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.resetWallPapers": {
       "name": "account.resetWallPapers",
       "description": [
         "Delete installed wallpapers"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.resetWebAuthorization": {
       "name": "account.resetWebAuthorization",
@@ -22154,8 +22115,7 @@
             "https://core.telegram.org/constructor/webAuthorization"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.resetWebAuthorizations": {
       "name": "account.resetWebAuthorizations",
@@ -22164,8 +22124,7 @@
       ],
       "links": [
         "https://core.telegram.org/widgets/login"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.saveAutoDownloadSettings": {
       "name": "account.saveAutoDownloadSettings",
@@ -22191,8 +22150,7 @@
           "description": "Media autodownload settings",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.saveSecureValue": {
       "name": "account.saveSecureValue",
@@ -22216,8 +22174,7 @@
             "https://core.telegram.org/passport/encryption#encryption"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.saveTheme": {
       "name": "account.saveTheme",
@@ -22233,8 +22190,7 @@
           "description": "Unsave",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.saveWallPaper": {
       "name": "account.saveWallPaper",
@@ -22254,8 +22210,7 @@
           "description": "Wallpaper to save",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.sendChangePhoneCode": {
       "name": "account.sendChangePhoneCode",
@@ -22278,8 +22233,7 @@
           "type": "PHONE_NUMBER_INVALID",
           "description": "The phone number is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.sendConfirmPhoneCode": {
       "name": "account.sendConfirmPhoneCode",
@@ -22307,8 +22261,7 @@
           "type": "HASH_INVALID",
           "description": "The provided hash is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.sendVerifyEmailCode": {
       "name": "account.sendVerifyEmailCode",
@@ -22323,8 +22276,7 @@
           "description": "The email where to send the code",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.sendVerifyPhoneCode": {
       "name": "account.sendVerifyPhoneCode",
@@ -22343,8 +22295,7 @@
           "description": "Phone code settings",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.setAccountTTL": {
       "name": "account.setAccountTTL",
@@ -22363,8 +22314,7 @@
           "type": "TTL_DAYS_INVALID",
           "description": "The provided TTL is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.setContactSignUpNotification": {
       "name": "account.setContactSignUpNotification",
@@ -22376,8 +22326,7 @@
           "description": "Whether to disable contact sign up notifications",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.setContentSettings": {
       "name": "account.setContentSettings",
@@ -22395,8 +22344,7 @@
           "description": "Enable NSFW content",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.setGlobalPrivacySettings": {
       "name": "account.setGlobalPrivacySettings",
@@ -22437,8 +22385,7 @@
           "type": "PRIVACY_VALUE_INVALID",
           "description": "The specified privacy rule combination is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.unregisterDevice": {
       "name": "account.unregisterDevice",
@@ -22467,8 +22414,7 @@
           "type": "TOKEN_INVALID",
           "description": "The provided token is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.updateDeviceLocked": {
       "name": "account.updateDeviceLocked",
@@ -22485,8 +22431,7 @@
             "https://core.telegram.org/api/push-updates"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.updateNotifySettings": {
       "name": "account.updateNotifySettings",
@@ -22524,8 +22469,7 @@
           "type": "SETTINGS_INVALID",
           "description": "Invalid settings were provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.updatePasswordSettings": {
       "name": "account.updatePasswordSettings",
@@ -22577,8 +22521,7 @@
           "type": "SRP_ID_INVALID",
           "description": "Invalid SRP ID provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.updateProfile": {
       "name": "account.updateProfile",
@@ -22616,8 +22559,7 @@
           "type": "FIRSTNAME_INVALID",
           "description": "The first name is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.updateStatus": {
       "name": "account.updateStatus",
@@ -22632,8 +22574,7 @@
             "https://core.telegram.org/constructor/userStatusOffline"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.updateTheme": {
       "name": "account.updateTheme",
@@ -22671,8 +22612,7 @@
           "description": "Theme name",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.updateUsername": {
       "name": "account.updateUsername",
@@ -22706,8 +22646,7 @@
           "type": "USERNAME_OCCUPIED",
           "description": "Username is taken"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.uploadTheme": {
       "name": "account.uploadTheme",
@@ -22746,8 +22685,7 @@
           "type": "THEME_FILE_INVALID",
           "description": "Invalid theme file provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.uploadWallPaper": {
       "name": "account.uploadWallPaper",
@@ -22767,8 +22705,7 @@
           "description": "Wallpaper settings",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.verifyEmail": {
       "name": "account.verifyEmail",
@@ -22794,8 +22731,7 @@
           "type": "EMAIL_VERIFY_EXPIRED",
           "description": "The verification email has expired"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.verifyPhone": {
       "name": "account.verifyPhone",
@@ -22829,8 +22765,7 @@
           "type": "PHONE_CODE_EXPIRED",
           "description": "The phone code you provided has expired, this may happen if it was sent to any chat on telegram (if the code is sent through a telegram chat (not the official account) to avoid it append or prepend to the code some chars)"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.acceptLoginToken": {
       "name": "auth.acceptLoginToken",
@@ -22856,8 +22791,7 @@
           "type": "AUTH_TOKEN_INVALIDX",
           "description": "The specified auth token is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.bindTempAuthKey": {
       "name": "auth.bindTempAuthKey",
@@ -22944,8 +22878,7 @@
           "type": "PHONE_NUMBER_INVALID",
           "description": "The phone number is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.checkPassword": {
       "name": "auth.checkPassword",
@@ -22979,8 +22912,7 @@
           "type": "SRP_PASSWORD_CHANGED",
           "description": "Password has changed"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.dropTempAuthKeys": {
       "name": "auth.dropTempAuthKeys",
@@ -23043,8 +22975,7 @@
           "description": "List of already logged-in user IDs, to prevent logging in twice with the same user",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "auth.importAuthorization": {
       "name": "auth.importAuthorization",
@@ -23150,8 +23081,7 @@
           "type": "AUTH_TOKEN_EXPIRED",
           "description": "The authorization token has expired"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.logOut": {
       "name": "auth.logOut",
@@ -23181,8 +23111,7 @@
           "type": "CODE_EMPTY",
           "description": "The provided code is empty"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.requestPasswordRecovery": {
       "name": "auth.requestPasswordRecovery",
@@ -23205,8 +23134,7 @@
           "type": "PASSWORD_EMPTY",
           "description": "The provided password is empty"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.resendCode": {
       "name": "auth.resendCode",
@@ -23244,8 +23172,7 @@
           "type": "PHONE_NUMBER_INVALID",
           "description": "The phone number is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.resetAuthorizations": {
       "name": "auth.resetAuthorizations",
@@ -23268,8 +23195,7 @@
           "type": "FRESH_RESET_AUTHORISATION_FORBIDDEN",
           "description": "You can't logout other sessions if less than 24 hours have passed since you logged on the current session"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.sendCode": {
       "name": "auth.sendCode",
@@ -23364,8 +23290,7 @@
           "type": "SMS_CODE_CREATE_FAILED",
           "description": "An error occurred while creating the SMS code"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.signIn": {
       "name": "auth.signIn",
@@ -23414,8 +23339,7 @@
           "type": "PHONE_NUMBER_UNOCCUPIED",
           "description": "The code is valid but no user with the given number is registered"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.signUp": {
       "name": "auth.signUp",
@@ -23486,8 +23410,7 @@
           "type": "PHONE_NUMBER_OCCUPIED",
           "description": "The phone number is already in use"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.answerWebhookJSONQuery": {
       "name": "bots.answerWebhookJSONQuery",
@@ -23598,8 +23521,7 @@
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.createChannel": {
       "name": "channels.createChannel",
@@ -23666,8 +23588,7 @@
           "type": "USER_RESTRICTED",
           "description": "You're spamreported, you can't create channels or chats."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.deleteChannel": {
       "name": "channels.deleteChannel",
@@ -23711,8 +23632,7 @@
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.deleteHistory": {
       "name": "channels.deleteHistory",
@@ -23745,8 +23665,7 @@
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.deleteMessages": {
       "name": "channels.deleteMessages",
@@ -23843,8 +23762,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editAdmin": {
       "name": "channels.editAdmin",
@@ -24108,8 +24026,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editLocation": {
       "name": "channels.editLocation",
@@ -24138,8 +24055,7 @@
           "type": "MEGAGROUP_REQUIRED",
           "description": "You can only use this method on a supergroup"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editPhoto": {
       "name": "channels.editPhoto",
@@ -24298,8 +24214,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getAdminLog": {
       "name": "channels.getAdminLog",
@@ -24377,8 +24292,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getAdminedPublicChannels": {
       "name": "channels.getAdminedPublicChannels",
@@ -24422,8 +24336,7 @@
           "type": "CHANNELS_ADMIN_PUBLIC_TOO_MUCH",
           "description": "Returned if the check_limit flag is set and the user has reached the limit of public channels/supergroups"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getChannels": {
       "name": "channels.getChannels",
@@ -24505,15 +24418,13 @@
         "https://core.telegram.org/api/channel",
         "https://core.telegram.org/api/channel",
         "https://core.telegram.org/method/channels.togglePreHistoryHidden"
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getInactiveChannels": {
       "name": "channels.getInactiveChannels",
       "description": [
         "Get inactive channels and supergroups"
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getLeftChannels": {
       "name": "channels.getLeftChannels",
@@ -24537,8 +24448,7 @@
           "type": "TAKEOUT_REQUIRED",
           "description": "A takeout session has to be initialized, first"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getMessages": {
       "name": "channels.getMessages",
@@ -24800,8 +24710,7 @@
           "type": "USER_PRIVACY_RESTRICTED",
           "description": "The user's privacy settings do not allow you to do this"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.joinChannel": {
       "name": "channels.joinChannel",
@@ -24870,8 +24779,7 @@
           "type": "USER_CHANNELS_TOO_MUCH",
           "description": "One of the users you tried to add is already in too many channels/supergroups"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.leaveChannel": {
       "name": "channels.leaveChannel",
@@ -24959,8 +24867,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.readMessageContents": {
       "name": "channels.readMessageContents",
@@ -24998,8 +24905,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.reportSpam": {
       "name": "channels.reportSpam",
@@ -25041,8 +24947,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.setDiscussionGroup": {
       "name": "channels.setDiscussionGroup",
@@ -25080,8 +24985,7 @@
           "type": "MEGAGROUP_ID_INVALID",
           "description": "Invalid supergroup ID"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.setStickers": {
       "name": "channels.setStickers",
@@ -25158,8 +25062,7 @@
           "type": "CHAT_NOT_MODIFIED",
           "description": "The pinned message wasn't modified"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.toggleSignatures": {
       "name": "channels.toggleSignatures",
@@ -25187,8 +25090,7 @@
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.toggleSlowMode": {
       "name": "channels.toggleSlowMode",
@@ -25233,8 +25135,7 @@
           "type": "SECONDS_INVALID",
           "description": "Invalid duration provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.updateUsername": {
       "name": "channels.updateUsername",
@@ -25297,8 +25198,7 @@
           "type": "USERNAME_OCCUPIED",
           "description": "The provided username is already occupied"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.acceptContact": {
       "name": "contacts.acceptContact",
@@ -25330,8 +25230,7 @@
           "type": "CONTACT_REQ_MISSING",
           "description": "Missing contact request"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.addContact": {
       "name": "contacts.addContact",
@@ -25386,8 +25285,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.block": {
       "name": "contacts.block",
@@ -25421,8 +25319,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.blockFromReplies": {
       "name": "contacts.blockFromReplies",
@@ -25470,8 +25367,7 @@
           "description": "Phone numbers",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.deleteContacts": {
       "name": "contacts.deleteContacts",
@@ -25483,8 +25379,7 @@
           "description": "User ID list",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.getBlocked": {
       "name": "contacts.getBlocked",
@@ -25500,8 +25395,7 @@
           "description": "The number of list elements to be skipped",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.getContactIDs": {
       "name": "contacts.getContactIDs",
@@ -25515,8 +25409,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.getContacts": {
       "name": "contacts.getContacts",
@@ -25531,8 +25424,7 @@
             "https://core.telegram.org/constructor/contacts.contactsNotModified"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.getLocated": {
       "name": "contacts.getLocated",
@@ -25570,8 +25462,7 @@
           "type": "USERPIC_UPLOAD_REQUIRED",
           "description": "You must have a profile picture to publish your geolocation"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.getSaved": {
       "name": "contacts.getSaved",
@@ -25590,15 +25481,13 @@
           "type": "TAKEOUT_REQUIRED",
           "description": "A takeout session has to be initialized, first"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.getStatuses": {
       "name": "contacts.getStatuses",
       "description": [
         "Returns the list of contact statuses."
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.getTopPeers": {
       "name": "contacts.getTopPeers",
@@ -25669,8 +25558,7 @@
           "type": "TYPES_EMPTY",
           "description": "No top peer type was provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.importContacts": {
       "name": "contacts.importContacts",
@@ -25686,15 +25574,13 @@
           "description": "List of contacts to import",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.resetSaved": {
       "name": "contacts.resetSaved",
       "description": [
         "Delete saved contacts"
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.resetTopPeerRating": {
       "name": "contacts.resetTopPeerRating",
@@ -25720,8 +25606,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.resolveUsername": {
       "name": "contacts.resolveUsername",
@@ -25789,8 +25674,7 @@
           "type": "SEARCH_QUERY_EMPTY",
           "description": "The search query is empty"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.toggleTopPeers": {
       "name": "contacts.toggleTopPeers",
@@ -25805,8 +25689,7 @@
           "description": "Enable/disable",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.unblock": {
       "name": "contacts.unblock",
@@ -25825,8 +25708,7 @@
           "type": "CONTACT_ID_INVALID",
           "description": "The provided contact ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "folders.deleteFolder": {
       "name": "folders.deleteFolder",
@@ -25843,8 +25725,7 @@
             "https://core.telegram.org/api/folders#peer-folders"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "folders.editPeerFolders": {
       "name": "folders.editPeerFolders",
@@ -25866,8 +25747,7 @@
           "type": "FOLDER_ID_INVALID",
           "description": "Invalid folder ID"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.acceptTermsOfService": {
       "name": "help.acceptTermsOfService",
@@ -25879,8 +25759,7 @@
           "description": "ID of terms of service",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.dismissSuggestion": {
       "name": "help.dismissSuggestion",
@@ -25915,8 +25794,7 @@
           "description": "User",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.getAppChangelog": {
       "name": "help.getAppChangelog",
@@ -25933,8 +25811,7 @@
           "description": "Previous app version",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.getAppConfig": {
       "name": "help.getAppConfig",
@@ -25943,8 +25820,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/config#client-configuration"
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getAppUpdate": {
       "name": "help.getAppUpdate",
@@ -25956,8 +25832,7 @@
           "description": "Source",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.getCdnConfig": {
       "name": "help.getCdnConfig",
@@ -26081,22 +25956,19 @@
           "description": "Path in t.me/path",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.getInviteText": {
       "name": "help.getInviteText",
       "description": [
         "Returns localized text of a text message with an invitation."
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getNearestDc": {
       "name": "help.getNearestDc",
       "description": [
         "Returns info on data centre nearest to the user."
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getPassportConfig": {
       "name": "help.getPassportConfig",
@@ -26113,8 +25985,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.getPromoData": {
       "name": "help.getPromoData",
@@ -26133,15 +26004,13 @@
           "description": "Referer",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.getSupport": {
       "name": "help.getSupport",
       "description": [
         "Returns the support user for the 'ask a question' feature."
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getSupportName": {
       "name": "help.getSupportName",
@@ -26160,15 +26029,13 @@
           "type": "USER_INVALID",
           "description": "Invalid user provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getTermsOfServiceUpdate": {
       "name": "help.getTermsOfServiceUpdate",
       "description": [
         "Look for updates of telegram's terms of service"
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getUserInfo": {
       "name": "help.getUserInfo",
@@ -26187,8 +26054,7 @@
           "type": "USER_INVALID",
           "description": "Invalid user provided"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.hidePromoData": {
       "name": "help.hidePromoData",
@@ -26213,8 +26079,7 @@
           "description": "List of input events",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "help.setBotUpdatesStatus": {
       "name": "help.setBotUpdatesStatus",
@@ -26486,8 +26351,7 @@
           "type": "LANG_PACK_INVALID",
           "description": "The provided language pack is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "langpack.getLangPack": {
       "name": "langpack.getLangPack",
@@ -26510,8 +26374,7 @@
           "type": "LANG_PACK_INVALID",
           "description": "The provided language pack is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "langpack.getLanguage": {
       "name": "langpack.getLanguage",
@@ -26527,8 +26390,7 @@
           "description": "Language pack name",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "langpack.getLanguages": {
       "name": "langpack.getLanguages",
@@ -26547,8 +26409,7 @@
           "type": "LANG_PACK_INVALID",
           "description": "The provided language pack is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "langpack.getStrings": {
       "name": "langpack.getStrings",
@@ -26575,8 +26436,7 @@
           "type": "LANG_PACK_INVALID",
           "description": "The provided language pack is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.acceptEncryption": {
       "name": "messages.acceptEncryption",
@@ -26615,8 +26475,7 @@
           "type": "ENCRYPTION_ALREADY_DECLINED",
           "description": "The secret chat was already declined"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.acceptUrlAuth": {
       "name": "messages.acceptUrlAuth",
@@ -26649,8 +26508,7 @@
           "description": "Set this flag to allow the bot to send messages to you (if requested)",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.addChatUser": {
       "name": "messages.addChatUser",
@@ -26722,8 +26580,7 @@
           "type": "USER_PRIVACY_RESTRICTED",
           "description": "The user's privacy settings do not allow you to do this"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.checkChatInvite": {
       "name": "messages.checkChatInvite",
@@ -26752,8 +26609,7 @@
           "type": "INVITE_HASH_INVALID",
           "description": "The invite hash is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.clearAllDrafts": {
       "name": "messages.clearAllDrafts",
@@ -26762,8 +26618,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/drafts"
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.clearRecentStickers": {
       "name": "messages.clearRecentStickers",
@@ -26781,8 +26636,7 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.createChat": {
       "name": "messages.createChat",
@@ -26825,8 +26679,7 @@
           "type": "USER_RESTRICTED",
           "description": "You're spamreported, you can't create channels or chats."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.deleteChatUser": {
       "name": "messages.deleteChatUser",
@@ -26922,8 +26775,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.deleteMessages": {
       "name": "messages.deleteMessages",
@@ -26969,8 +26821,7 @@
           "description": "Peer",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.discardEncryption": {
       "name": "messages.discardEncryption",
@@ -26999,8 +26850,7 @@
           "type": "ENCRYPTION_ID_INVALID",
           "description": "The provided secret chat ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editChatAbout": {
       "name": "messages.editChatAbout",
@@ -27109,8 +26959,7 @@
           "type": "USER_NOT_PARTICIPANT",
           "description": "You're not a member of this supergroup/channel"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editChatDefaultBannedRights": {
       "name": "messages.editChatDefaultBannedRights",
@@ -27529,8 +27378,7 @@
           "type": "STICKER_ID_INVALID",
           "description": "The provided sticker ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.forwardMessages": {
       "name": "messages.forwardMessages",
@@ -27726,8 +27574,7 @@
           "description": "Except these chats/channels/supergroups",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getAllDrafts": {
       "name": "messages.getAllDrafts",
@@ -27736,8 +27583,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/drafts"
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getAllStickers": {
       "name": "messages.getAllStickers",
@@ -27751,8 +27597,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getArchivedStickers": {
       "name": "messages.getArchivedStickers",
@@ -27782,8 +27627,7 @@
             "https://core.telegram.org/api/offsets"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getAttachedStickers": {
       "name": "messages.getAttachedStickers",
@@ -27795,8 +27639,7 @@
           "description": "Stickered media",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getBotCallbackAnswer": {
       "name": "messages.getBotCallbackAnswer",
@@ -27870,8 +27713,7 @@
           "type": "Timeout",
           "description": "Timeout while fetching data"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getChats": {
       "name": "messages.getChats",
@@ -27932,8 +27774,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getDhConfig": {
       "name": "messages.getDhConfig",
@@ -27958,8 +27799,7 @@
           "type": "RANDOM_LENGTH_INVALID",
           "description": "Random length invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getDialogFilters": {
       "name": "messages.getDialogFilters",
@@ -27968,15 +27808,13 @@
       ],
       "links": [
         "https://core.telegram.org/api/folders"
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getDialogUnreadMarks": {
       "name": "messages.getDialogUnreadMarks",
       "description": [
         "Get dialogs manually marked as unread"
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getDialogs": {
       "name": "messages.getDialogs",
@@ -28045,8 +27883,7 @@
           "type": "OFFSET_PEER_ID_INVALID",
           "description": "The provided offset peer is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getDiscussionMessage": {
       "name": "messages.getDiscussionMessage",
@@ -28109,8 +27946,7 @@
           "description": "Language code",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiKeywordsDifference": {
       "name": "messages.getEmojiKeywordsDifference",
@@ -28126,8 +27962,7 @@
           "description": "Language code",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiKeywordsLanguages": {
       "name": "messages.getEmojiKeywordsLanguages",
@@ -28139,8 +27974,7 @@
           "description": "Language codes",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiURL": {
       "name": "messages.getEmojiURL",
@@ -28152,8 +27986,7 @@
           "description": "Language code for which the emoji replacements will be suggested",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getFavedStickers": {
       "name": "messages.getFavedStickers",
@@ -28167,8 +28000,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getFeaturedStickers": {
       "name": "messages.getFeaturedStickers",
@@ -28182,8 +28014,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getFullChat": {
       "name": "messages.getFullChat",
@@ -28325,8 +28156,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getInlineBotResults": {
       "name": "messages.getInlineBotResults",
@@ -28397,8 +28227,7 @@
           "type": "Timeout",
           "description": "Timeout while fetching data"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getInlineGameHighScores": {
       "name": "messages.getInlineGameHighScores",
@@ -28441,8 +28270,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getMessageEditData": {
       "name": "messages.getMessageEditData",
@@ -28480,8 +28308,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getMessages": {
       "name": "messages.getMessages",
@@ -28544,8 +28371,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getOldFeaturedStickers": {
       "name": "messages.getOldFeaturedStickers",
@@ -28569,8 +28395,7 @@
           "description": "Offset",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getOnlines": {
       "name": "messages.getOnlines",
@@ -28594,8 +28419,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getPeerDialogs": {
       "name": "messages.getPeerDialogs",
@@ -28634,8 +28458,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getPeerSettings": {
       "name": "messages.getPeerSettings",
@@ -28659,8 +28482,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getPinnedDialogs": {
       "name": "messages.getPinnedDialogs",
@@ -28681,8 +28503,7 @@
           "type": "FOLDER_ID_INVALID",
           "description": "Invalid folder ID"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getPollResults": {
       "name": "messages.getPollResults",
@@ -28705,8 +28526,7 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getPollVotes": {
       "name": "messages.getPollVotes",
@@ -28760,8 +28580,7 @@
           "type": "POLL_VOTE_REQUIRED",
           "description": "Cast a vote in the poll before calling this method"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getRecentLocations": {
       "name": "messages.getRecentLocations",
@@ -28785,8 +28604,7 @@
           "description": "User",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getRecentStickers": {
       "name": "messages.getRecentStickers",
@@ -28810,8 +28628,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getReplies": {
       "name": "messages.getReplies",
@@ -28880,8 +28697,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getScheduledHistory": {
       "name": "messages.getScheduledHistory",
@@ -28911,8 +28727,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getScheduledMessages": {
       "name": "messages.getScheduledMessages",
@@ -28940,8 +28755,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getSearchCounters": {
       "name": "messages.getSearchCounters",
@@ -28960,15 +28774,13 @@
           "description": "Peer where to search",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getSplitRanges": {
       "name": "messages.getSplitRanges",
       "description": [
         "Get message ranges for saving the user's chat history"
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getStatsURL": {
       "name": "messages.getStatsURL",
@@ -29001,8 +28813,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getStickerSet": {
       "name": "messages.getStickerSet",
@@ -29040,8 +28851,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getSuggestedDialogFilters": {
       "name": "messages.getSuggestedDialogFilters",
@@ -29050,8 +28860,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/folders"
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getUnreadMentions": {
       "name": "messages.getUnreadMentions",
@@ -29110,8 +28919,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getWebPage": {
       "name": "messages.getWebPage",
@@ -29139,8 +28947,7 @@
           "type": "WC_CONVERT_URL_INVALID",
           "description": "WC convert URL invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getWebPagePreview": {
       "name": "messages.getWebPagePreview",
@@ -29171,8 +28978,7 @@
           "type": "MESSAGE_EMPTY",
           "description": "The provided message is empty"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.hidePeerSettingsBar": {
       "name": "messages.hidePeerSettingsBar",
@@ -29187,8 +28993,7 @@
           "description": "Peer",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.importChatInvite": {
       "name": "messages.importChatInvite",
@@ -29257,8 +29062,7 @@
           "type": "USER_CHANNELS_TOO_MUCH",
           "description": "One of the users you tried to add is already in too many channels/supergroups"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.installStickerSet": {
       "name": "messages.installStickerSet",
@@ -29281,8 +29085,7 @@
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.markDialogUnread": {
       "name": "messages.markDialogUnread",
@@ -29304,8 +29107,7 @@
           "description": "Mark as unread/read",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.migrateChat": {
       "name": "messages.migrateChat",
@@ -29337,8 +29139,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.readDiscussion": {
       "name": "messages.readDiscussion",
@@ -29385,8 +29186,7 @@
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.readFeaturedStickers": {
       "name": "messages.readFeaturedStickers",
@@ -29398,8 +29198,7 @@
           "description": "IDs of stickersets to mark as read",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.readHistory": {
       "name": "messages.readHistory",
@@ -29432,8 +29231,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.readMentions": {
       "name": "messages.readMentions",
@@ -29467,8 +29265,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.readMessageContents": {
       "name": "messages.readMessageContents",
@@ -29480,8 +29277,7 @@
           "description": "Message ID list",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.receivedMessages": {
       "name": "messages.receivedMessages",
@@ -29493,8 +29289,7 @@
           "description": "Maximum message ID available in a client.",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.receivedQueue": {
       "name": "messages.receivedQueue",
@@ -29513,8 +29308,7 @@
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.reorderPinnedDialogs": {
       "name": "messages.reorderPinnedDialogs",
@@ -29549,8 +29343,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.reorderStickerSets": {
       "name": "messages.reorderStickerSets",
@@ -29572,8 +29365,7 @@
           "description": "New stickerset order by stickerset IDs",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.report": {
       "name": "messages.report",
@@ -29600,8 +29392,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.reportEncryptedSpam": {
       "name": "messages.reportEncryptedSpam",
@@ -29620,8 +29411,7 @@
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.reportSpam": {
       "name": "messages.reportSpam",
@@ -29648,8 +29438,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.requestEncryption": {
       "name": "messages.requestEncryption",
@@ -29683,8 +29472,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.requestUrlAuth": {
       "name": "messages.requestUrlAuth",
@@ -29707,8 +29495,7 @@
           "description": "Peer where the message is located",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.saveDraft": {
       "name": "messages.saveDraft",
@@ -29754,8 +29541,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.saveGif": {
       "name": "messages.saveGif",
@@ -29778,8 +29564,7 @@
           "type": "GIF_ID_INVALID",
           "description": "The provided GIF ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.saveRecentSticker": {
       "name": "messages.saveRecentSticker",
@@ -29812,8 +29597,7 @@
           "type": "STICKER_ID_INVALID",
           "description": "The provided sticker ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.search": {
       "name": "messages.search",
@@ -29945,8 +29729,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.searchGlobal": {
       "name": "messages.searchGlobal",
@@ -30018,8 +29801,7 @@
           "type": "SEARCH_QUERY_EMPTY",
           "description": "The search query is empty"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.searchStickerSets": {
       "name": "messages.searchStickerSets",
@@ -30047,8 +29829,7 @@
           "description": "Query string",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.sendEncrypted": {
       "name": "messages.sendEncrypted",
@@ -30102,8 +29883,7 @@
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendEncryptedFile": {
       "name": "messages.sendEncryptedFile",
@@ -30161,8 +29941,7 @@
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendEncryptedService": {
       "name": "messages.sendEncryptedService",
@@ -30211,8 +29990,7 @@
           "type": "USER_IS_BLOCKED",
           "description": "You were blocked by this user"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendInlineBotResult": {
       "name": "messages.sendInlineBotResult",
@@ -30384,8 +30162,7 @@
           "type": "YOU_BLOCKED_USER",
           "description": "You blocked this user"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendMedia": {
       "name": "messages.sendMedia",
@@ -30978,8 +30755,7 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendScreenshotNotification": {
       "name": "messages.sendScreenshotNotification",
@@ -31006,8 +30782,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendVote": {
       "name": "messages.sendVote",
@@ -31057,8 +30832,7 @@
           "type": "REVOTE_NOT_ALLOWED",
           "description": "You cannot change your vote"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setBotCallbackAnswer": {
       "name": "messages.setBotCallbackAnswer",
@@ -31207,8 +30981,7 @@
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setGameScore": {
       "name": "messages.setGameScore",
@@ -31628,8 +31401,7 @@
           "type": "START_PARAM_TOO_LONG",
           "description": "Start parameter is too long"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.toggleDialogPin": {
       "name": "messages.toggleDialogPin",
@@ -31658,8 +31430,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.toggleStickerSets": {
       "name": "messages.toggleStickerSets",
@@ -31689,8 +31460,7 @@
           "description": "Uninstall the specified stickersets",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.uninstallStickerSet": {
       "name": "messages.uninstallStickerSet",
@@ -31709,8 +31479,7 @@
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.unpinAllMessages": {
       "name": "messages.unpinAllMessages",
@@ -31762,8 +31531,7 @@
           "type": "FILTER_ID_INVALID",
           "description": "The specified filter ID is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.updateDialogFiltersOrder": {
       "name": "messages.updateDialogFiltersOrder",
@@ -31780,8 +31548,7 @@
             "https://core.telegram.org/api/folders"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.updatePinnedMessage": {
       "name": "messages.updatePinnedMessage",
@@ -31864,8 +31631,7 @@
           "description": "The secret chat to associate the file to",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.uploadMedia": {
       "name": "messages.uploadMedia",
@@ -31980,8 +31746,7 @@
           "description": "Clear the last order settings saved by the user",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "payments.getBankCardData": {
       "name": "payments.getBankCardData",
@@ -31993,8 +31758,7 @@
           "description": "Credit card number",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "payments.getPaymentForm": {
       "name": "payments.getPaymentForm",
@@ -32013,8 +31777,7 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.getPaymentReceipt": {
       "name": "payments.getPaymentReceipt",
@@ -32033,15 +31796,13 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.getSavedInfo": {
       "name": "payments.getSavedInfo",
       "description": [
         "Get saved payment information"
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.sendPaymentForm": {
       "name": "payments.sendPaymentForm",
@@ -32080,8 +31841,7 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.validateRequestedInfo": {
       "name": "payments.validateRequestedInfo",
@@ -32114,8 +31874,7 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.acceptCall": {
       "name": "phone.acceptCall",
@@ -32159,8 +31918,7 @@
           "type": "CALL_PROTOCOL_FLAGS_INVALID",
           "description": "Call protocol flags invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.confirmCall": {
       "name": "phone.confirmCall",
@@ -32201,8 +31959,7 @@
           "type": "CALL_PEER_INVALID",
           "description": "The provided call peer object is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.discardCall": {
       "name": "phone.discardCall",
@@ -32248,15 +32005,13 @@
           "type": "CALL_PEER_INVALID",
           "description": "The provided call peer object is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.getCallConfig": {
       "name": "phone.getCallConfig",
       "description": [
         "Get phone call configuration to be passed to libtgvoip's shared config"
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.receivedCall": {
       "name": "phone.receivedCall",
@@ -32280,8 +32035,7 @@
           "type": "CALL_PEER_INVALID",
           "description": "The provided call peer object is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.requestCall": {
       "name": "phone.requestCall",
@@ -32344,8 +32098,7 @@
           "type": "USER_PRIVACY_RESTRICTED",
           "description": "The user's privacy settings do not allow you to do this"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.saveCallDebug": {
       "name": "phone.saveCallDebug",
@@ -32373,8 +32126,7 @@
           "type": "DATA_JSON_INVALID",
           "description": "The provided JSON data is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "phone.sendSignalingData": {
       "name": "phone.sendSignalingData",
@@ -32428,8 +32180,7 @@
           "type": "CALL_PEER_INVALID",
           "description": "The provided call peer object is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "photos.deletePhotos": {
       "name": "photos.deletePhotos",
@@ -32441,8 +32192,7 @@
           "description": "Input photos to delete",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "photos.getUserPhotos": {
       "name": "photos.getUserPhotos",
@@ -32523,8 +32273,7 @@
           "type": "PHOTO_ID_INVALID",
           "description": "Photo ID invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "photos.uploadProfilePhoto": {
       "name": "photos.uploadProfilePhoto",
@@ -32591,8 +32340,7 @@
           "type": "VIDEO_FILE_INVALID",
           "description": "The specified video file is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stats.getBroadcastStats": {
       "name": "stats.getBroadcastStats",
@@ -32639,8 +32387,7 @@
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stats.getMegagroupStats": {
       "name": "stats.getMegagroupStats",
@@ -32801,8 +32548,7 @@
           "type": "GRAPH_OUTDATED_RELOAD",
           "description": "The graph is outdated, please get a new async token using stats.getBroadcastStats"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.addStickerToSet": {
       "name": "stickers.addStickerToSet",
@@ -33197,8 +32943,7 @@
           "description": "Offset of chunk to download",
           "links": null
         }
-      },
-      "bot_can_use": true
+      }
     },
     "upload.getCdnFileHashes": {
       "name": "upload.getCdnFileHashes",
@@ -33380,8 +33125,7 @@
           "type": "LOCATION_INVALID",
           "description": "The provided location is invalid"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.reuploadCdnFile": {
       "name": "upload.reuploadCdnFile",
