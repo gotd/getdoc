@@ -15,6 +15,7 @@ type Method struct {
 	Links       []string                    `json:"links,omitempty"`
 	Parameters  map[string]ParamDescription `json:"parameters,omitempty"`
 	Errors      []Error                     `json:"errors,omitempty"`
+	BotCanUse   bool                        `json:"bot_can_use,omitempty"`
 }
 
 // Error represent possible error documentation.
@@ -22,6 +23,10 @@ type Error struct {
 	Code        int    `json:"code"`
 	Type        string `json:"type"`
 	Description string `json:"description"`
+}
+
+func botCanUse(doc *goquery.Document) bool {
+	return doc.Find("#bots-can-use-this-method") != nil
 }
 
 // docErrors extract error code documentation from document.
@@ -64,5 +69,6 @@ func ParseMethod(reader io.Reader) (*Method, error) {
 		Links:       links,
 		Parameters:  docParams(doc),
 		Errors:      docErrors(doc),
+		BotCanUse:   botCanUse(doc),
 	}, nil
 }
