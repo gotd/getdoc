@@ -9,24 +9,24 @@ import (
 	"net/url"
 	"strconv"
 
+	"errors"
+
 	"github.com/cenkalti/backoff/v4"
-	"github.com/cockroachdb/errors"
-	"github.com/cockroachdb/pebble"
-	"github.com/cockroachdb/pebble/vfs"
 	"go.uber.org/ratelimit"
+
+	"github.com/gotd/getdoc/dl/internal/cache"
 )
 
 type Client struct {
 	rate     ratelimit.Limiter
 	http     HTTPClient
-	db       *pebble.DB
+	cache    *cache.Cacher
 	readonly bool
 }
 
 type Options struct {
-	Path     string
-	FS       vfs.FS
 	Client   HTTPClient
+	Path     string
 	Readonly bool
 }
 
@@ -35,14 +35,11 @@ type HTTPClient interface {
 }
 
 func NewClient(opt Options) (*Client, error) {
-	db, err := pebble.Open(opt.Path, &pebble.Options{
-		FS:               opt.FS,
-		ReadOnly:         opt.Readonly,
-		ErrorIfNotExists: opt.Readonly,
-	})
+	c, err := cache.NewCacher(opt.Path, opt.Readonly)
 	if err != nil {
 		return nil, err
 	}
+
 	if opt.Client == nil {
 		opt.Client = http.DefaultClient
 	}
@@ -51,14 +48,14 @@ func NewClient(opt Options) (*Client, error) {
 		http:     opt.Client,
 		readonly: opt.Readonly,
 		rate:     ratelimit.New(10),
-		db:       db,
+		cache:    c,
 	}, nil
 }
 
 var ErrReadOnly = errors.New("write operation in read only mode")
 
 func (c *Client) Close() error {
-	return c.db.Close()
+	return c.cache.Close()
 }
 
 // NoLayer can be passed as "layer" argument.
@@ -93,17 +90,17 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 
 	res, err := c.http.Do(req)
 	if err != nil {
-		return nil, errors.Errorf("failed to do request: %w", err)
+		return nil, fmt.Errorf("failed to do request: %w", err)
 	}
 	defer func() { _ = res.Body.Close() }()
 
 	if res.StatusCode != http.StatusOK {
-		return nil, errors.Errorf("unexpected http code %d", res.StatusCode)
+		return nil, fmt.Errorf("unexpected http code %d", res.StatusCode)
 	}
 
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		return nil, errors.Errorf("failed to read body: %w", err)
+		return nil, fmt.Errorf("failed to read body: %w", err)
 	}
 
 	return body, nil
@@ -120,23 +117,20 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 //
 // Blank key is invalid.
 func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error) {
-	k := []byte(key)
-	if layer != NoLayer {
-		k = []byte(fmt.Sprintf("%d:%s", layer, k))
+	cacheKey := fmt.Sprintf("%d/%s", layer, key)
+	if layer == NoLayer {
+		cacheKey = "default-layer/" + key
 	}
 
 	// Trying to get from cache.
-	buf, closer, err := c.db.Get(k)
+	buf, err := c.cache.Get(cacheKey)
 	if err == nil {
 		// Copy buf because slice is not valid after close.
 		data := append([]byte(nil), buf...)
-		if err := closer.Close(); err != nil {
-			return nil, errors.Errorf("cache: %w", err)
-		}
 		return data, nil
 	}
-	if !errors.Is(err, pebble.ErrNotFound) {
-		return nil, errors.Errorf("cache: %w", err)
+	if !errors.Is(err, cache.ErrNotFound) {
+		return nil, fmt.Errorf("cache: %w", err)
 	}
 
 	// Downloading with retry backoff.
@@ -159,12 +153,12 @@ func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error)
 		data = out
 		return nil
 	}, backoff.NewExponentialBackOff()); err != nil {
-		return nil, errors.Errorf("failed to fetch: %w", err)
+		return nil, fmt.Errorf("failed to fetch: %w", err)
 	}
 
 	// Adding value to cache.
-	if err := c.db.Set(k, data, &pebble.WriteOptions{}); err != nil {
-		return nil, errors.Errorf("cache: %w", err)
+	if err := c.cache.Set(cacheKey, data); err != nil {
+		return nil, fmt.Errorf("cache: %w", err)
 	}
 
 	return data, nil

@@ -18,28 +18,21 @@ func (u unusableHTTPClient) Do(req *http.Request) (*http.Response, error) {
 }
 
 func TestExtract(t *testing.T) {
-	fs, err := dl.NewZipFS(filepath.Join("dl", "_testdata", "121.zip"))
-	if err != nil {
-		t.Fatal(err)
-	}
-
 	c, err := dl.NewClient(dl.Options{
-		Path:     "zip",
 		Client:   unusableHTTPClient{},
-		FS:       fs,
+		Path: filepath.Join("dl", "_testdata", "121.zip"),
 		Readonly: true,
 	})
 	if err != nil {
 		t.Fatal(err)
 	}
-
 	defer func() {
 		if err := c.Close(); err != nil {
 			t.Fatal(err)
 		}
 	}()
 
-	doc, err := Extract(context.Background(), c)
+	doc, err := ExtractLayer(context.Background(), 121, c)
 	if err != nil {
 		t.Fatal(err)
 	}

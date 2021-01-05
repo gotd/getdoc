@@ -1,11 +1,11 @@
 package getdoc
 
 import (
+	"fmt"
 	"io"
 	"strconv"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/cockroachdb/errors"
 )
 
 // Method represents method documentation.
@@ -59,7 +59,7 @@ func docErrors(doc *goquery.Document) []Error {
 func ParseMethod(reader io.Reader) (*Method, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
-		return nil, errors.Errorf("failed to parse document: %w", err)
+		return nil, fmt.Errorf("failed to parse document: %w", err)
 	}
 
 	desc, links := docDescription(doc)
