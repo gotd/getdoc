@@ -91,6 +91,7 @@ func dumpZipFS(fs afero.Fs, path string) error {
 			return err
 		}
 
+		path = filepath.ToSlash(path)
 		fw, err := w.Create(path)
 		if err != nil {
 			return err
