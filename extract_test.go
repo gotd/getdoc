@@ -20,7 +20,7 @@ func (u unusableHTTPClient) Do(req *http.Request) (*http.Response, error) {
 func TestExtract(t *testing.T) {
 	c, err := dl.NewClient(dl.Options{
 		Client:   unusableHTTPClient{},
-		Path: filepath.Join("dl", "_testdata", "121.zip"),
+		Path:     filepath.Join("dl", "_testdata", "121.zip"),
 		Readonly: true,
 	})
 	if err != nil {
