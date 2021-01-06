@@ -3,45 +3,12 @@ package cache
 import (
 	"archive/zip"
 	"bytes"
-	"fmt"
-	"io"
 	"io/ioutil"
 	"os"
 	"path/filepath"
-
-	"github.com/spf13/afero"
 )
 
-const maxZipSize = 1024 * 1024 * 10 // 10mb
-
-func copyZipFile(f *zip.File, fs afero.Fs) error {
-	if f.CompressedSize64 > maxZipSize {
-		return fmt.Errorf("file size %d is larger than maximum %d", f.CompressedSize64, maxZipSize)
-	}
-	rc, err := f.Open()
-	if err != nil {
-		return err
-	}
-	defer func() { _ = rc.Close() }()
-
-	mf, err := fs.Create(f.Name) // #nosec
-	if err != nil {
-		return err
-	}
-	if _, err := io.Copy(mf, io.LimitReader(rc, maxZipSize)); err != nil {
-		return nil
-	}
-	if err := mf.Close(); err != nil {
-		return err
-	}
-	if err := rc.Close(); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func newFsFromZip(p string) (afero.Fs, error) {
+func filesFromZip(p string) (map[string][]byte, error) {
 	data, err := ioutil.ReadFile(p)
 	if err != nil {
 		return nil, err
@@ -52,18 +19,31 @@ func newFsFromZip(p string) (afero.Fs, error) {
 		return nil, err
 	}
 
-	// Save all contents of zip file to in-memory fs.
-	fs := afero.NewMemMapFs()
+	files := make(map[string][]byte)
 	for _, f := range reader.File {
-		if err := copyZipFile(f, fs); err != nil {
+		if err := func() error {
+			rc, err := f.Open()
+			if err != nil {
+				return err
+			}
+			defer func() { _ = rc.Close() }()
+
+			buf, err := ioutil.ReadAll(rc)
+			if err != nil {
+				return err
+			}
+
+			files[f.Name] = buf
+			return nil
+		}(); err != nil {
 			return nil, err
 		}
 	}
 
-	return fs, nil
+	return files, nil
 }
 
-func dumpZipFS(fs afero.Fs, path string) error {
+func dumpZip(files map[string][]byte, path string) error {
 	if err := os.MkdirAll(filepath.Dir(path), 0750); err != nil {
 		return err
 	}
@@ -77,20 +57,7 @@ func dumpZipFS(fs afero.Fs, path string) error {
 	w := zip.NewWriter(f)
 	defer w.Close()
 
-	return afero.Walk(fs, ".", func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		if info.IsDir() {
-			return nil
-		}
-
-		data, err := afero.ReadFile(fs, path)
-		if err != nil {
-			return err
-		}
-
+	for path, data := range files {
 		path = filepath.ToSlash(path)
 		fw, err := w.Create(path)
 		if err != nil {
@@ -100,6 +67,7 @@ func dumpZipFS(fs afero.Fs, path string) error {
 		if _, err := fw.Write(data); err != nil {
 			return err
 		}
-		return nil
-	})
+	}
+
+	return nil
 }

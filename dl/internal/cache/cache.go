@@ -3,15 +3,15 @@ package cache
 import (
 	"errors"
 	"os"
-
-	"github.com/spf13/afero"
+	"sync"
 )
 
 var ErrNotFound = errors.New("not found")
 
 type Cacher struct {
 	path     string
-	fs       afero.Fs
+	files    map[string][]byte
+	mux      sync.RWMutex
 	readonly bool
 }
 
@@ -20,7 +20,7 @@ func NewCacher(path string, readonly bool) (*Cacher, error) {
 		if os.IsNotExist(err) {
 			return &Cacher{
 				path:     path,
-				fs:       afero.NewMemMapFs(),
+				files:    map[string][]byte{},
 				readonly: readonly,
 			}, nil
 		}
@@ -28,32 +28,35 @@ func NewCacher(path string, readonly bool) (*Cacher, error) {
 		return nil, err
 	}
 
-	fs, err := newFsFromZip(path)
+	files, err := filesFromZip(path)
 	if err != nil {
 		return nil, err
 	}
 
 	return &Cacher{
 		path:     path,
-		fs:       fs,
+		files:    files,
 		readonly: readonly,
 	}, nil
 }
 
 func (c *Cacher) Get(key string) ([]byte, error) {
-	if _, err := c.fs.Stat(key); err != nil {
-		if os.IsNotExist(err) {
-			return nil, ErrNotFound
-		}
+	c.mux.RLock()
+	defer c.mux.RUnlock()
 
-		return nil, err
+	data, found := c.files[key]
+	if !found {
+		return nil, ErrNotFound
 	}
 
-	return afero.ReadFile(c.fs, key)
+	return data, nil
 }
 
 func (c *Cacher) Set(key string, value []byte) error {
-	return afero.WriteFile(c.fs, key, value, 0600)
+	c.mux.Lock()
+	defer c.mux.Unlock()
+	c.files[key] = value
+	return nil
 }
 
 func (c *Cacher) Close() error {
@@ -61,5 +64,5 @@ func (c *Cacher) Close() error {
 		return nil
 	}
 
-	return dumpZipFS(c.fs, c.path)
+	return dumpZip(c.files, c.path)
 }

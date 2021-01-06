@@ -7,7 +7,6 @@ require (
 	github.com/cenkalti/backoff/v4 v4.1.0
 	github.com/go-bindata/go-bindata v3.1.2+incompatible
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/spf13/afero v1.5.1
 	github.com/stretchr/testify v1.6.1
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/ratelimit v0.1.0
