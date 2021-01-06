@@ -1,10 +1,10 @@
 package getdoc
 
 import (
+	"fmt"
 	"io"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/cockroachdb/errors"
 )
 
 // Type represents type (aka class) documentation.
@@ -18,7 +18,7 @@ type Type struct {
 func ParseType(reader io.Reader) (*Type, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
-		return nil, errors.Errorf("failed to parse document: %w", err)
+		return nil, fmt.Errorf("failed to parse document: %w", err)
 	}
 
 	desc, links := docDescription(doc)

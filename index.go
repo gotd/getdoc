@@ -1,6 +1,8 @@
 package getdoc
 
 import (
+	"errors"
+	"fmt"
 	"io"
 	"net/url"
 	"regexp"
@@ -9,7 +11,6 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/cockroachdb/errors"
 )
 
 // Category index.
@@ -33,7 +34,7 @@ type indexLink struct {
 func ParseIndex(reader io.Reader) (*Index, error) {
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
-		return nil, errors.Errorf("failed to parse document: %w", err)
+		return nil, fmt.Errorf("failed to parse document: %w", err)
 	}
 
 	// Searching for current layer.
