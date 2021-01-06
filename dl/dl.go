@@ -125,9 +125,7 @@ func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error)
 	// Trying to get from cache.
 	buf, err := c.cache.Get(cacheKey)
 	if err == nil {
-		// Copy buf because slice is not valid after close.
-		data := append([]byte(nil), buf...)
-		return data, nil
+		return buf, nil
 	}
 	if !errors.Is(err, cache.ErrNotFound) {
 		return nil, fmt.Errorf("cache: %w", err)
