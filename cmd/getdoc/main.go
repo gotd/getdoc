@@ -28,11 +28,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer func() {
-		if err := client.Close(); err != nil {
-			panic(err)
-		}
-	}()
 
 	ctx := context.Background()
 	fmt.Println("Extracting")

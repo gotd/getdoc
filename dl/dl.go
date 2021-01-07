@@ -20,7 +20,7 @@ import (
 type Client struct {
 	rate     ratelimit.Limiter
 	http     HTTPClient
-	cache    *cache.Cacher
+	cache    cache.Cacher
 	readonly bool
 }
 
@@ -28,6 +28,7 @@ type Options struct {
 	Client   HTTPClient
 	Path     string
 	Readonly bool
+	FromZip  bool
 }
 
 type HTTPClient interface {
@@ -35,28 +36,31 @@ type HTTPClient interface {
 }
 
 func NewClient(opt Options) (*Client, error) {
-	c, err := cache.NewCacher(opt.Path, opt.Readonly)
-	if err != nil {
-		return nil, err
-	}
-
 	if opt.Client == nil {
 		opt.Client = http.DefaultClient
 	}
 
-	return &Client{
+	c := &Client{
 		http:     opt.Client,
 		readonly: opt.Readonly,
 		rate:     ratelimit.New(10),
-		cache:    c,
-	}, nil
+	}
+
+	if opt.FromZip {
+		zipCache, err := cache.NewFromZip(opt.Path)
+		if err != nil {
+			return nil, err
+		}
+
+		c.cache = zipCache
+	} else {
+		c.cache = cache.NewFromDirectory(opt.Path)
+	}
+
+	return c, nil
 }
 
 var ErrReadOnly = errors.New("write operation in read only mode")
-
-func (c *Client) Close() error {
-	return c.cache.Close()
-}
 
 // NoLayer can be passed as "layer" argument.
 const NoLayer = 0
@@ -117,9 +121,9 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 //
 // Blank key is invalid.
 func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error) {
-	cacheKey := fmt.Sprintf("%d/%s", layer, key)
-	if layer == NoLayer {
-		cacheKey = "default-layer/" + key
+	cacheKey := key
+	if layer != NoLayer {
+		cacheKey = fmt.Sprintf("%d/%s", layer, key)
 	}
 
 	// Trying to get from cache.
