@@ -4,8 +4,6 @@ import (
 	"archive/zip"
 	"bytes"
 	"io/ioutil"
-	"os"
-	"path/filepath"
 )
 
 func filesFromZip(p string) (map[string][]byte, error) {
@@ -41,33 +39,4 @@ func filesFromZip(p string) (map[string][]byte, error) {
 	}
 
 	return files, nil
-}
-
-func dumpZip(files map[string][]byte, path string) error {
-	if err := os.MkdirAll(filepath.Dir(path), 0750); err != nil {
-		return err
-	}
-
-	f, err := os.Create(path)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	w := zip.NewWriter(f)
-	defer w.Close()
-
-	for path, data := range files {
-		path = filepath.ToSlash(path)
-		fw, err := w.Create(path)
-		if err != nil {
-			return err
-		}
-
-		if _, err := fw.Write(data); err != nil {
-			return err
-		}
-	}
-
-	return nil
 }

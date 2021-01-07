@@ -18,15 +18,11 @@ func TestClient_Download(t *testing.T) {
 		Client:   unusableHTTPClient{},
 		Path:     filepath.Join("_testdata", "121.zip"),
 		Readonly: true,
+		FromZip:  true,
 	})
 	if err != nil {
 		t.Fatal(err)
 	}
-	defer func() {
-		if err := c.Close(); err != nil {
-			t.Fatal(err)
-		}
-	}()
 
 	data, err := c.Get(context.Background(), 121, "schema")
 	if err != nil {

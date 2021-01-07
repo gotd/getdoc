@@ -22,15 +22,11 @@ func TestExtract(t *testing.T) {
 		Client:   unusableHTTPClient{},
 		Path:     filepath.Join("dl", "_testdata", "121.zip"),
 		Readonly: true,
+		FromZip:  true,
 	})
 	if err != nil {
 		t.Fatal(err)
 	}
-	defer func() {
-		if err := c.Close(); err != nil {
-			t.Fatal(err)
-		}
-	}()
 
 	doc, err := ExtractLayer(context.Background(), 121, c)
 	if err != nil {
