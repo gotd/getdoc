@@ -34,6 +34,7 @@ func ExtractLayer(ctx context.Context, layer int, d Downloader) (*Doc, error) {
 		Methods:      map[string]Method{},
 		Types:        map[string]Type{},
 		Constructors: map[string]Constructor{},
+		Errors:       map[string]Error{},
 	}
 	for _, category := range index.Categories {
 		for _, v := range category.Values {
@@ -61,6 +62,9 @@ func ExtractLayer(ctx context.Context, layer int, d Downloader) (*Doc, error) {
 					return nil, fmt.Errorf("parse(%s/%s) failed: %w", category.Name, v, err)
 				}
 				doc.Methods[t.Name] = *t
+				for _, e := range t.Errors {
+					doc.Errors[e.Type] = e
+				}
 			}
 		}
 	}

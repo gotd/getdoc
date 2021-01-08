@@ -17,6 +17,7 @@ type Doc struct {
 	Constructors map[string]Constructor `json:"constructors"`
 	Types        map[string]Type        `json:"types"`
 	Methods      map[string]Method      `json:"methods"`
+	Errors       map[string]Error       `json:"errors"`
 }
 
 // docTitle extracts title from document.
