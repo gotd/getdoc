@@ -75,6 +75,7 @@ func docTableAfter(doc *goquery.Document, after string) *goquery.Selection {
 }
 
 type ParamDescription struct {
+	Name        string   `json:"name"`
 	Description string   `json:"description"`
 	Links       []string `json:"links"`
 }
@@ -95,6 +96,7 @@ func docParams(doc *goquery.Document) map[string]ParamDescription {
 			})
 			if len(rowContents) == 3 {
 				fields[rowContents[0]] = ParamDescription{
+					Name:        rowContents[0],
 					Description: rowContents[2],
 					Links:       links,
 				}

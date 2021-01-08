@@ -24,9 +24,18 @@ func TestParseMethod(t *testing.T) {
 		Name:        "langpack.getDifference",
 		Description: []string{"Get new strings in languagepack"},
 		Parameters: map[string]ParamDescription{
-			"from_version": {Description: "Previous localization pack version"},
-			"lang_code":    {Description: "Language code"},
-			"lang_pack":    {Description: "Language pack"},
+			"from_version": {
+				Name:        "from_version",
+				Description: "Previous localization pack version",
+			},
+			"lang_code": {
+				Name:        "lang_code",
+				Description: "Language code",
+			},
+			"lang_pack": {
+				Name:        "lang_pack",
+				Description: "Language pack",
+			},
 		},
 		Errors: []Error{
 			{Code: 400, Type: "LANG_PACK_INVALID", Description: "The provided language pack is invalid"},
