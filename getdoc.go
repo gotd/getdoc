@@ -77,7 +77,7 @@ func docTableAfter(doc *goquery.Document, after string) *goquery.Selection {
 type ParamDescription struct {
 	Name        string   `json:"name"`
 	Description string   `json:"description"`
-	Links       []string `json:"links"`
+	Links       []string `json:"links,omitempty"`
 }
 
 // docParams extract parameters documentation from document.
