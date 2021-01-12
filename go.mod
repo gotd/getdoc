@@ -3,7 +3,7 @@ module github.com/gotd/getdoc
 go 1.15
 
 require (
-	github.com/PuerkitoBio/goquery v1.6.0
+	github.com/PuerkitoBio/goquery v1.6.1
 	github.com/cenkalti/backoff/v4 v4.1.0
 	github.com/go-bindata/go-bindata v3.1.2+incompatible
 	github.com/kr/pretty v0.1.0 // indirect
