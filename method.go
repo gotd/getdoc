@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"strconv"
+	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -46,11 +47,16 @@ func docErrors(doc *goquery.Document) []Error {
 			if err != nil {
 				return
 			}
-			output = append(output, Error{
+			e := Error{
 				Code:        code,
-				Type:        rowContents[1],
+				Type:        strings.ToUpper(rowContents[1]),
 				Description: rowContents[2],
-			})
+			}
+			if e.Code < 0 {
+				// Normalize code. Correct value is positive.
+				e.Code *= -1
+			}
+			output = append(output, e)
 		})
 	return output
 }

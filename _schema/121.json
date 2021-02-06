@@ -28408,8 +28408,8 @@
           "description": "The provided peer id is invalid"
         },
         {
-          "code": -503,
-          "type": "Timeout",
+          "code": 503,
+          "type": "TIMEOUT",
           "description": "Timeout while fetching data"
         }
       ]
@@ -28936,8 +28936,8 @@
           "description": "Invalid message ID provided"
         },
         {
-          "code": -503,
-          "type": "Timeout",
+          "code": 503,
+          "type": "TIMEOUT",
           "description": "Timeout while fetching data"
         }
       ]
@@ -35479,6 +35479,11 @@
       "type": "THEME_INVALID",
       "description": "Invalid theme provided"
     },
+    "TIMEOUT": {
+      "code": 503,
+      "type": "TIMEOUT",
+      "description": "Timeout while fetching data"
+    },
     "TMP_PASSWORD_DISABLED": {
       "code": 400,
       "type": "TMP_PASSWORD_DISABLED",
@@ -35503,11 +35508,6 @@
       "code": 400,
       "type": "TYPES_EMPTY",
       "description": "No top peer type was provided"
-    },
-    "Timeout": {
-      "code": -503,
-      "type": "Timeout",
-      "description": "Timeout while fetching data"
     },
     "UNTIL_DATE_INVALID": {
       "code": 400,
