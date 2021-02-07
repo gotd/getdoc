@@ -23,7 +23,7 @@ type Method struct {
 type Error struct {
 	Code        int    `json:"code"`
 	Type        string `json:"type"`
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 }
 
 func docBotCanUser(doc *goquery.Document) bool {
@@ -49,12 +49,8 @@ func docErrors(doc *goquery.Document) []Error {
 			}
 			e := Error{
 				Code:        code,
-				Type:        strings.ToUpper(rowContents[1]),
-				Description: rowContents[2],
-			}
-			if e.Code < 0 {
-				// Normalize code. Correct value is positive.
-				e.Code *= -1
+				Type:        strings.TrimSpace(rowContents[1]),
+				Description: strings.TrimSpace(rowContents[2]),
 			}
 			output = append(output, e)
 		})

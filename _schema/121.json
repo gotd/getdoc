@@ -28206,8 +28206,7 @@
         },
         {
           "code": 420,
-          "type": "P0NY_FLOODWAIT",
-          "description": " "
+          "type": "P0NY_FLOODWAIT"
         },
         {
           "code": 400,
@@ -28408,8 +28407,8 @@
           "description": "The provided peer id is invalid"
         },
         {
-          "code": 503,
-          "type": "TIMEOUT",
+          "code": -503,
+          "type": "Timeout",
           "description": "Timeout while fetching data"
         }
       ]
@@ -28936,8 +28935,8 @@
           "description": "Invalid message ID provided"
         },
         {
-          "code": 503,
-          "type": "TIMEOUT",
+          "code": -503,
+          "type": "Timeout",
           "description": "Timeout while fetching data"
         }
       ]
@@ -29286,8 +29285,7 @@
       "errors": [
         {
           "code": 403,
-          "type": "BROADCAST_FORBIDDEN",
-          "description": " "
+          "type": "BROADCAST_FORBIDDEN"
         },
         {
           "code": 400,
@@ -34291,8 +34289,7 @@
     },
     "BROADCAST_FORBIDDEN": {
       "code": 403,
-      "type": "BROADCAST_FORBIDDEN",
-      "description": " "
+      "type": "BROADCAST_FORBIDDEN"
     },
     "BROADCAST_ID_INVALID": {
       "code": 400,
@@ -34986,8 +34983,7 @@
     },
     "P0NY_FLOODWAIT": {
       "code": 420,
-      "type": "P0NY_FLOODWAIT",
-      "description": " "
+      "type": "P0NY_FLOODWAIT"
     },
     "PACK_SHORT_NAME_INVALID": {
       "code": 400,
@@ -35479,11 +35475,6 @@
       "type": "THEME_INVALID",
       "description": "Invalid theme provided"
     },
-    "TIMEOUT": {
-      "code": 503,
-      "type": "TIMEOUT",
-      "description": "Timeout while fetching data"
-    },
     "TMP_PASSWORD_DISABLED": {
       "code": 400,
       "type": "TMP_PASSWORD_DISABLED",
@@ -35508,6 +35499,11 @@
       "code": 400,
       "type": "TYPES_EMPTY",
       "description": "No top peer type was provided"
+    },
+    "Timeout": {
+      "code": -503,
+      "type": "Timeout",
+      "description": "Timeout while fetching data"
     },
     "UNTIL_DATE_INVALID": {
       "code": 400,
