@@ -3,10 +3,9 @@ package getdoc
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
-	"path"
 
-	"github.com/gotd/getdoc/internal"
+	// For embedding parsed schema.
+	_ "embed"
 )
 
 // Probably everything below should be code-generated from _schema folder.
@@ -32,17 +31,17 @@ func LayerExists(layer int) bool {
 // ErrNotFound means that current package version does not support requested layer.
 var ErrNotFound = errors.New("layer not found")
 
+//go:embed _schema/121.json
+var schema121 []byte
+
 // Load layer documentation.
 func Load(layer int) (*Doc, error) {
 	if !LayerExists(layer) {
 		return nil, ErrNotFound
 	}
-	data, err := internal.Asset(path.Join("_schema", fmt.Sprintf("%d.json", layer)))
-	if err != nil {
-		return nil, ErrNotFound
-	}
+
 	var doc Doc
-	if err := json.Unmarshal(data, &doc); err != nil {
+	if err := json.Unmarshal(schema121, &doc); err != nil {
 		return nil, err
 	}
 	return &doc, nil
