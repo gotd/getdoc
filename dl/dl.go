@@ -3,13 +3,12 @@ package dl
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strconv"
-
-	"errors"
 
 	"github.com/cenkalti/backoff/v4"
 	"go.uber.org/ratelimit"
