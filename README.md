@@ -4,6 +4,10 @@ Documentation extract utilities for Telegram schema using [goquery](https://gith
 
 Used by [gotd/td](https://github.com/gotd/td) for embedding documentation to generated code.
 
+## Parsed documentation
+
+Parsed documentation for 121 layer is available as [121.json](./_schema/121.json) with [schema](./_schema/schema.json).
+
 ## Example
 Latest schema is embedded to package, so you can just use it:
 ```go
