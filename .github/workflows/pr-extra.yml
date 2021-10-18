@@ -11,7 +11,7 @@ jobs:
     name: Vulnerability scanner
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.3.5
       - uses: actions/setup-go@v2
       - name: Run go list
         run: go list -json -m all > go.list
