@@ -7,8 +7,11 @@ import (
 )
 
 func ExampleLoad() {
-	layer := 121
+	layer := 133
 	if !getdoc.LayerExists(121) {
+		panic("not exists")
+	}
+	if !getdoc.LayerExists(133) {
 		panic("not exists")
 	}
 	doc, err := getdoc.Load(layer)
@@ -18,5 +21,5 @@ func ExampleLoad() {
 
 	fmt.Printf("Layer %d, constructors: %d\n", doc.Index.Layer, len(doc.Constructors))
 	// Output:
-	// Layer 121, constructors: 851
+	// Layer 133, constructors: 926
 }
