@@ -2,7 +2,7 @@ package getdoc
 
 import (
 	"bytes"
-	"io/ioutil"
+	"os"
 	"path"
 	"testing"
 
@@ -10,7 +10,7 @@ import (
 )
 
 func TestParseMethod(t *testing.T) {
-	data, err := ioutil.ReadFile(path.Join("_testdata", "method.html"))
+	data, err := os.ReadFile(path.Join("_testdata", "method.html"))
 	if err != nil {
 		t.Fatal(err)
 	}

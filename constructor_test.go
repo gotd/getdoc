@@ -2,7 +2,7 @@ package getdoc
 
 import (
 	"bytes"
-	"io/ioutil"
+	"os"
 	"path"
 	"testing"
 
@@ -10,7 +10,7 @@ import (
 )
 
 func TestConstructor(t *testing.T) {
-	data, err := ioutil.ReadFile(path.Join("_testdata", "constructor.html"))
+	data, err := os.ReadFile(path.Join("_testdata", "constructor.html"))
 	if err != nil {
 		t.Fatal(err)
 	}

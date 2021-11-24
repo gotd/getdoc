@@ -7,7 +7,6 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 
@@ -47,7 +46,7 @@ func main() {
 
 	outFileName := fmt.Sprintf("%d.json", doc.Index.Layer)
 	outFilePath := filepath.Join(*dir, outFileName)
-	if err := ioutil.WriteFile(outFilePath, out.Bytes(), 0600); err != nil {
+	if err := os.WriteFile(outFilePath, out.Bytes(), 0600); err != nil {
 		panic(err)
 	}
 

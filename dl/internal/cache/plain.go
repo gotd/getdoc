@@ -1,7 +1,6 @@
 package cache
 
 import (
-	"io/ioutil"
 	"os"
 	"path/filepath"
 )
@@ -22,7 +21,7 @@ func (p PlainFiles) Get(key string) ([]byte, error) {
 		}
 	}
 
-	return ioutil.ReadFile(path)
+	return os.ReadFile(path)
 }
 
 func (p PlainFiles) Set(key string, value []byte) error {
@@ -31,5 +30,5 @@ func (p PlainFiles) Set(key string, value []byte) error {
 		return err
 	}
 
-	return ioutil.WriteFile(path, value, 0600)
+	return os.WriteFile(path, value, 0600)
 }

@@ -3,11 +3,12 @@ package cache
 import (
 	"archive/zip"
 	"bytes"
-	"io/ioutil"
+	"io"
+	"os"
 )
 
 func filesFromZip(p string) (map[string][]byte, error) {
-	data, err := ioutil.ReadFile(p)
+	data, err := os.ReadFile(p)
 	if err != nil {
 		return nil, err
 	}
@@ -26,7 +27,7 @@ func filesFromZip(p string) (map[string][]byte, error) {
 			}
 			defer func() { _ = rc.Close() }()
 
-			buf, err := ioutil.ReadAll(rc)
+			buf, err := io.ReadAll(rc)
 			if err != nil {
 				return err
 			}

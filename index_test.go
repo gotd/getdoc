@@ -2,7 +2,7 @@ package getdoc
 
 import (
 	"bytes"
-	"io/ioutil"
+	"os"
 	"path"
 	"testing"
 
@@ -11,7 +11,7 @@ import (
 )
 
 func TestParseIndex(t *testing.T) {
-	data, err := ioutil.ReadFile(path.Join("_testdata", "schema.html"))
+	data, err := os.ReadFile(path.Join("_testdata", "schema.html"))
 	if err != nil {
 		t.Fatal(err)
 	}
