@@ -1,35 +1,12 @@
-name: release
+name: pkg
 
 on:
+  release:
   push:
     tags:
       - v*
+  workflow_dispatch:
 
 jobs:
-  fetch:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set output
-        id: vars
-        run: |
-          echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-          echo ::set-output name=module::$(cat go.mod | head -n 1 | awk '{print $2}')
-      - name: curl
-        run: |
-          curl --show-error --fail -w "HTTP %{http_code}\n" -o - 'https://pkg.go.dev/fetch/${{ steps.vars.outputs.module }}@${{ steps.vars.outputs.tag }}' \
-            -X 'POST' \
-            -H 'authority: pkg.go.dev' \
-            -H 'content-length: 0' \
-            -H 'sec-ch-ua: "Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"' \
-            -H 'sec-ch-ua-mobile: ?0' \
-            -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36' \
-            -H 'sec-ch-ua-platform: "Linux"' \
-            -H 'accept: */*' \
-            -H 'origin: https://pkg.go.dev' \
-            -H 'sec-fetch-site: same-origin' \
-            -H 'sec-fetch-mode: cors' \
-            -H 'sec-fetch-dest: empty' \
-            -H 'referer: https://pkg.go.dev/${{ steps.vars.outputs.module }}@${{ steps.vars.outputs.tag }}' \
-            -H 'accept-language: en-US,en;q=0.9,ru;q=0.8' \
-            --compressed
+  run:
+    uses: go-faster/x/.github/workflows/release.yml@main
