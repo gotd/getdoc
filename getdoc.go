@@ -49,13 +49,6 @@ func docDescription(doc *goquery.Document) (desc, links []string) {
 	return
 }
 
-// docTableAfter extracts table after selector "after".
-func docTableAfter(doc *goquery.Document, after string) *goquery.Selection {
-	return docTableAfterFunc(doc, func(s *goquery.Selection) bool {
-		return s.Find(after).Length() > 0
-	})
-}
-
 // docTableAfterFunc extracts table after selector "after".
 func docTableAfterFunc(doc *goquery.Document, after func(s *goquery.Selection) bool) *goquery.Selection {
 	var (
