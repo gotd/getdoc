@@ -31,7 +31,6 @@ func main() {
 	}
 
 	ctx := context.Background()
-	fmt.Println("Extracting")
 	doc, err := getdoc.Extract(ctx, client)
 	if err != nil {
 		panic(err)
