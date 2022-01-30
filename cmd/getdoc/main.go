@@ -16,6 +16,8 @@ import (
 
 func main() {
 	dir := flag.String("dir", filepath.Join(os.TempDir(), "getdoc"), "working directory")
+	outDir := flag.String("out-dir", "", "path to write schema")
+	outFile := flag.String("out-file", "", "filename of schema")
 	readonly := flag.Bool("readonly", false, "read-only mode")
 	pretty := flag.Bool("pretty", false, "pretty json output")
 	flag.Parse()
@@ -45,8 +47,19 @@ func main() {
 	}
 
 	outFileName := fmt.Sprintf("%d.json", doc.Index.Layer)
+	if out := *outFile; out != "" {
+		outFileName = out
+	}
+
 	outFilePath := filepath.Join(*dir, outFileName)
-	if err := os.WriteFile(outFilePath, out.Bytes(), 0600); err != nil {
+	if out := *outDir; out != "" {
+		if err := os.MkdirAll(out, 0o600); err != nil {
+			panic(err)
+		}
+		outFilePath = filepath.Join(out, outFileName)
+	}
+
+	if err := os.WriteFile(outFilePath, out.Bytes(), 0o600); err != nil {
 		panic(err)
 	}
 
