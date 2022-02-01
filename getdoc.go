@@ -49,14 +49,14 @@ func docDescription(doc *goquery.Document) (desc, links []string) {
 	return
 }
 
-// docTableAfter extracts table after selector "after".
-func docTableAfter(doc *goquery.Document, after string) *goquery.Selection {
+// docTableAfterFunc extracts table after selector "after".
+func docTableAfterFunc(doc *goquery.Document, after func(s *goquery.Selection) bool) *goquery.Selection {
 	var (
 		meetAfter bool
 		table     *goquery.Selection
 	)
 	doc.Find("#dev_page_content").Children().EachWithBreak(func(i int, s *goquery.Selection) bool {
-		if s.Find(after).Length() > 0 {
+		if after(s) {
 			// Found title of table. Next <table> element will be requested table.
 			meetAfter = true
 			return true
@@ -86,21 +86,26 @@ type ParamDescription struct {
 func docParams(doc *goquery.Document) map[string]ParamDescription {
 	fields := make(map[string]ParamDescription)
 
-	docTableAfter(doc, "#parameters").
-		Each(func(i int, row *goquery.Selection) {
-			var rowContents []string
-			var links []string
-			row.Find("td").Each(func(i int, column *goquery.Selection) {
-				links = addHost(href.Replace(column))
-				rowContents = append(rowContents, column.Text())
-			})
-			if len(rowContents) == 3 {
-				fields[rowContents[0]] = ParamDescription{
-					Name:        rowContents[0],
-					Description: rowContents[2],
-					Links:       links,
-				}
-			}
+	docTableAfterFunc(doc, func(s *goquery.Selection) bool {
+		return s.Find("#parameters").Length() > 0 ||
+			// Some pages have no such selector, so we try to detect "Parameters" header by text.
+			//
+			// TODO(tdakkota): try to parse attributes
+			strings.HasPrefix(s.Text(), "Parameters")
+	}).Each(func(i int, row *goquery.Selection) {
+		var rowContents []string
+		var links []string
+		row.Find("td").Each(func(i int, column *goquery.Selection) {
+			links = addHost(href.Replace(column))
+			rowContents = append(rowContents, column.Text())
 		})
+		if len(rowContents) == 3 {
+			fields[rowContents[0]] = ParamDescription{
+				Name:        rowContents[0],
+				Description: rowContents[2],
+				Links:       links,
+			}
+		}
+	})
 	return fields
 }

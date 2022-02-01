@@ -34,26 +34,31 @@ func docBotCanUser(doc *goquery.Document) bool {
 func docErrors(doc *goquery.Document) []Error {
 	var output []Error
 
-	docTableAfter(doc, "#possible-errors").
-		Each(func(i int, row *goquery.Selection) {
-			var rowContents []string
-			row.Find("td").Each(func(i int, column *goquery.Selection) {
-				rowContents = append(rowContents, column.Text())
-			})
-			if len(rowContents) != 3 {
-				return
-			}
-			code, err := strconv.Atoi(rowContents[0])
-			if err != nil {
-				return
-			}
-			e := Error{
-				Code:        code,
-				Type:        strings.TrimSpace(rowContents[1]),
-				Description: strings.TrimSpace(rowContents[2]),
-			}
-			output = append(output, e)
+	docTableAfterFunc(doc, func(s *goquery.Selection) bool {
+		return s.Find("#possible-errors").Length() > 0 ||
+			// Some pages have no such selector, so we try to detect "Possible errors" header by text.
+			//
+			// TODO(tdakkota): try to parse attributes
+			strings.HasPrefix(s.Text(), "Possible errors")
+	}).Each(func(i int, row *goquery.Selection) {
+		var rowContents []string
+		row.Find("td").Each(func(i int, column *goquery.Selection) {
+			rowContents = append(rowContents, column.Text())
 		})
+		if len(rowContents) != 3 {
+			return
+		}
+		code, err := strconv.Atoi(rowContents[0])
+		if err != nil {
+			return
+		}
+		e := Error{
+			Code:        code,
+			Type:        strings.TrimSpace(rowContents[1]),
+			Description: strings.TrimSpace(rowContents[2]),
+		}
+		output = append(output, e)
+	})
 	return output
 }
 

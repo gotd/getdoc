@@ -1,14 +1,12 @@
 linters-settings:
   govet:
     check-shadowing: true
-  golint:
-    min-confidence: 0
   gocyclo:
     min-complexity: 15
   maligned:
     suggest-new: true
   dupl:
-    threshold: 100
+    threshold: 120
   goconst:
     min-len: 2
     min-occurrences: 3
@@ -31,7 +29,11 @@ linters-settings:
       - exitAfterDefer
       - whyNoLint
       - singleCaseSwitch
+      - commentedOutCode
+      - appendAssign
       - octalLiteral
+      - preferWriteByte
+      - httpNoBody
 
 linters:
   disable-all: true
@@ -44,10 +46,9 @@ linters:
     - gochecknoinits
     - goconst
     - gocritic
-    - gocyclo
     - gofmt
     - goimports
-    - golint
+    - revive
     - gosec
     - gosimple
     - govet
@@ -55,7 +56,6 @@ linters:
     - lll
     - misspell
     - nakedret
-    - scopelint
     - staticcheck
     - structcheck
     - stylecheck
@@ -65,7 +65,6 @@ linters:
     - unused
     - varcheck
     - whitespace
-    - gocognit
 
   # Do not enable:
   # - wsl       (too opinionated about newlines)
@@ -74,12 +73,13 @@ linters:
   # - prealloc  (not worth it in scope of this project)
   # - maligned  (same as prealloc)
   # - funlen    (gocyclo is enough)
+  # - gochecknoglobals (we know when it is ok to use globals)
 
 issues:
   exclude-rules:
     # Exclude go:generate from lll
     - source: "//go:generate"
-      linters: [lll]
+      linters: [ lll ]
 
     # Disable linters that are annoying in tests.
     - path: _test\.go
@@ -93,10 +93,21 @@ issues:
         - gocognit
         - scopelint
         - lll
-        - gochecknoglobals
+
     # Ignore shadowing of err.
-    - linters: [govet]
-      text: 'declaration of "err"'
+    - linters: [ govet ]
+      text: 'declaration of "(err|ctx|log)"'
+
     # Ignore linters in main packages.
-    - path: main\.go
-      linters: [gochecknoglobals, goconst, funlen, gocognit, gocyclo]
+    - path: cmd\/.+\/main\.go
+      linters: [ goconst, funlen, gocognit, gocyclo ]
+
+    # Intended in commands:
+    # G307: Deferring unsafe method "Close" on type "*os.File"
+    # G304: Potential file inclusion via variable
+    - path: cmd\/.+\/main\.go
+      text: G(307|304)
+
+    - linters: [ revive ]
+      text: "if-return: redundant if ...; err != nil check, just return error instead."
+
