@@ -1,2 +1,0 @@
-Wrote layer 133 to _schema/latest.json
-Wrote layer 133 to _schema/133.json

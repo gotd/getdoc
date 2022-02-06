@@ -43,6 +43,7 @@ jobs:
         run: |
           make update_schema | tee output.txt
           echo "::set-output name=output::$(cat output.txt)"
+          rm output.txt
 
       - name: Create PR
         id: cpr
