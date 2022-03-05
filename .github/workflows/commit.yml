@@ -7,11 +7,5 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]'
-    steps:
-      - uses: actions/checkout@v2.4.0
-        with:
-          fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v4.1.9
+  commit:
+    uses: go-faster/x/.github/workflows/commit.yml@main
