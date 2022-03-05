@@ -17,6 +17,7 @@ import (
 func main() {
 	dir := flag.String("dir", filepath.Join(os.TempDir(), "getdoc"), "working directory")
 	outDir := flag.String("out-dir", "", "path to write schema")
+	host := flag.String("host", "core.telegram.org", "host")
 	outFile := flag.String("out-file", "", "filename of schema")
 	readonly := flag.Bool("readonly", false, "read-only mode")
 	pretty := flag.Bool("pretty", false, "pretty json output")
@@ -24,6 +25,7 @@ func main() {
 
 	client, err := dl.NewClient(dl.Options{
 		Path:     filepath.Join(*dir, "cache"),
+		Host:     *host,
 		Readonly: *readonly,
 	})
 	if err != nil {

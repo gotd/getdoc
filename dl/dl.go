@@ -20,11 +20,13 @@ type Client struct {
 	rate     ratelimit.Limiter
 	http     HTTPClient
 	cache    cache.Cacher
+	host     string
 	readonly bool
 }
 
 type Options struct {
 	Client   HTTPClient
+	Host     string
 	Path     string
 	Readonly bool
 	FromZip  bool
@@ -38,10 +40,14 @@ func NewClient(opt Options) (*Client, error) {
 	if opt.Client == nil {
 		opt.Client = http.DefaultClient
 	}
+	if opt.Host == "" {
+		opt.Host = "core.telegram.org"
+	}
 
 	c := &Client{
 		http:     opt.Client,
 		readonly: opt.Readonly,
+		host:     opt.Host,
 		rate:     ratelimit.New(10),
 	}
 
@@ -72,7 +78,7 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 	// `stel_dev_layer=117`
 	u := &url.URL{
 		Scheme: "https",
-		Host:   "core.telegram.org",
+		Host:   c.host,
 		Path:   key,
 	}
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), http.NoBody)
