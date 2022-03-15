@@ -33494,9 +33494,9 @@
         },
         "offset": {
           "name": "offset",
-          "description": "Offset (typically taken from the next_offset field of the returned MessageReactionsList¹)",
+          "description": "Offset (typically taken from the next_offset field of the returned messages.MessageReactionsList¹)",
           "links": [
-            "https://core.telegram.org/type/MessageReactionsList"
+            "https://core.telegram.org/type/messages.MessageReactionsList"
           ]
         },
         "peer": {
