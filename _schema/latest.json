@@ -5106,10 +5106,10 @@
     "chatFull": {
       "name": "chatFull",
       "description": [
-        "Full info about a legacy group¹."
+        "Full info about a basic group¹."
       ],
       "links": [
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "about": {
@@ -13429,13 +13429,13 @@
     "messages.chatFull": {
       "name": "messages.chatFull",
       "description": [
-        "Full info about a channel¹, supergroup², gigagroup³ or legacy group⁴."
+        "Full info about a channel¹, supergroup², gigagroup³ or basic group⁴."
       ],
       "links": [
         "https://core.telegram.org/api/channel#channels",
         "https://core.telegram.org/api/channel#supergroups",
         "https://core.telegram.org/api/channel#gigagroups",
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "chats": {
@@ -19765,10 +19765,10 @@
     "updateChatParticipantAdmin": {
       "name": "updateChatParticipantAdmin",
       "description": [
-        "Admin permissions of a user in a legacy group¹ were changed"
+        "Admin permissions of a user in a basic group¹ were changed"
       ],
       "links": [
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "chat_id": {
@@ -20515,10 +20515,10 @@
     "updateNewMessage": {
       "name": "updateNewMessage",
       "description": [
-        "New message in a private chat or in a legacy group¹."
+        "New message in a private chat or in a basic group¹."
       ],
       "links": [
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "message": {
@@ -23117,13 +23117,13 @@
     "ChatFull": {
       "name": "ChatFull",
       "description": [
-        "Full info about a channel¹, supergroup², gigagroup³ or legacy group⁴."
+        "Full info about a channel¹, supergroup², gigagroup³ or basic group⁴."
       ],
       "links": [
         "https://core.telegram.org/api/channel#channels",
         "https://core.telegram.org/api/channel#supergroups",
         "https://core.telegram.org/api/channel#gigagroups",
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ]
     },
     "ChatInvite": {
@@ -24865,13 +24865,13 @@
     "messages.ChatFull": {
       "name": "messages.ChatFull",
       "description": [
-        "Full info about a channel¹, supergroup², gigagroup³ or legacy group⁴."
+        "Full info about a channel¹, supergroup², gigagroup³ or basic group⁴."
       ],
       "links": [
         "https://core.telegram.org/api/channel#channels",
         "https://core.telegram.org/api/channel#supergroups",
         "https://core.telegram.org/api/channel#gigagroups",
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ]
     },
     "messages.ChatInviteImporters": {
@@ -25825,9 +25825,9 @@
         },
         "message_chats": {
           "name": "message_chats",
-          "description": "Whether to export messages in legacy groups¹",
+          "description": "Whether to export messages in basic groups¹",
           "links": [
-            "https://core.telegram.org/api/channel#legacy-groups"
+            "https://core.telegram.org/api/channel#basic-groups"
           ]
         },
         "message_megagroups": {
@@ -28799,12 +28799,12 @@
       "name": "channels.getGroupsForDiscussion",
       "description": [
         "Get all groups that can be used as discussion groups¹.",
-        "Returned legacy group chats¹ must be first upgraded to supergroups² before they can be set as a discussion group.",
+        "Returned basic group chats¹ must be first upgraded to supergroups² before they can be set as a discussion group.",
         "To set a returned supergroup as a discussion group, access to its old messages must be enabled using channels.togglePreHistoryHidden³, first."
       ],
       "links": [
         "https://core.telegram.org/api/discussion",
-        "https://core.telegram.org/api/channel#legacy-groups",
+        "https://core.telegram.org/api/channel#basic-groups",
         "https://core.telegram.org/api/channel#supergroups",
         "https://core.telegram.org/method/channels.togglePreHistoryHidden"
       ]
@@ -31653,10 +31653,10 @@
     "messages.editChatAdmin": {
       "name": "messages.editChatAdmin",
       "description": [
-        "Make a user admin in a legacy group¹."
+        "Make a user admin in a basic group¹."
       ],
       "links": [
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "parameters": {
         "chat_id": {
@@ -33170,17 +33170,17 @@
     "messages.getFullChat": {
       "name": "messages.getFullChat",
       "description": [
-        "Get full info about a legacy group¹."
+        "Get full info about a basic group¹."
       ],
       "links": [
-        "https://core.telegram.org/api/channel#legacy-groups"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "parameters": {
         "chat_id": {
           "name": "chat_id",
-          "description": "Legacy group¹ ID.",
+          "description": "Basic group¹ ID.",
           "links": [
-            "https://core.telegram.org/api/channel#legacy-groups"
+            "https://core.telegram.org/api/channel#basic-groups"
           ]
         }
       },
@@ -34655,7 +34655,7 @@
     "messages.migrateChat": {
       "name": "messages.migrateChat",
       "description": [
-        "Turn a legacy group into a supergroup¹"
+        "Turn a basic group into a supergroup¹"
       ],
       "links": [
         "https://core.telegram.org/api/channel#migration"
@@ -34663,9 +34663,9 @@
       "parameters": {
         "chat_id": {
           "name": "chat_id",
-          "description": "Legacy group¹ to migrate",
+          "description": "Basic group¹ to migrate",
           "links": [
-            "https://core.telegram.org/api/channel#legacy-groups"
+            "https://core.telegram.org/api/channel#basic-groups"
           ]
         }
       },
