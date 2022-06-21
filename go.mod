@@ -6,7 +6,7 @@ require (
 	github.com/PuerkitoBio/goquery v1.8.0
 	github.com/cenkalti/backoff/v4 v4.1.3
 	github.com/go-faster/errors v0.6.1
-	github.com/stretchr/testify v1.7.2
+	github.com/stretchr/testify v1.7.4
 	go.uber.org/ratelimit v0.2.0
 )
 
