@@ -19360,7 +19360,7 @@
         },
         "user_id": {
           "name": "user_id",
-          "description": "The bot ID"
+          "description": "The user ID"
         }
       }
     },
