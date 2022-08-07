@@ -119,10 +119,10 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 //
 // Pass "NoLayer" as layer to use default documentation.
 // Examples for "key" value:
-//	* "schema" for index of documentation
-//	* "constructor/inputMediaGeoLive" for constructor "inputMediaGeoLive"
-//	* "type/InputMedia" for class "InputMedia"
-//	* "method/messages.addChatUser" for "messages.addChatUser" method
+//   - "schema" for index of documentation
+//   - "constructor/inputMediaGeoLive" for constructor "inputMediaGeoLive"
+//   - "type/InputMedia" for class "InputMedia"
+//   - "method/messages.addChatUser" for "messages.addChatUser" method
 //
 // Blank key is invalid.
 func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error) {
