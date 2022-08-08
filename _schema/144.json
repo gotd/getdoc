@@ -1869,9 +1869,6 @@
         }
       }
     },
-    "Page not found": {
-      "name": "Page not found"
-    },
     "Updates": {
       "name": "Updates",
       "description": [
@@ -2217,6 +2214,34 @@
         }
       }
     },
+    "account.savedRingtone": {
+      "name": "account.savedRingtone"
+    },
+    "account.savedRingtoneConverted": {
+      "name": "account.savedRingtoneConverted",
+      "fields": {
+        "document": {
+          "name": "document",
+          "description": " "
+        }
+      }
+    },
+    "account.savedRingtones": {
+      "name": "account.savedRingtones",
+      "fields": {
+        "hash": {
+          "name": "hash",
+          "description": " "
+        },
+        "ringtones": {
+          "name": "ringtones",
+          "description": " "
+        }
+      }
+    },
+    "account.savedRingtonesNotModified": {
+      "name": "account.savedRingtonesNotModified"
+    },
     "account.sentEmailCode": {
       "name": "account.sentEmailCode",
       "description": [
@@ -2341,6 +2366,127 @@
           "description": "This account will self-destruct in the specified number of days"
         }
       }
+    },
+    "attachMenuBot": {
+      "name": "attachMenuBot",
+      "fields": {
+        "bot_id": {
+          "name": "bot_id",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "has_settings": {
+          "name": "has_settings",
+          "description": " "
+        },
+        "icons": {
+          "name": "icons",
+          "description": " "
+        },
+        "inactive": {
+          "name": "inactive",
+          "description": " "
+        },
+        "peer_types": {
+          "name": "peer_types",
+          "description": " "
+        },
+        "short_name": {
+          "name": "short_name",
+          "description": " "
+        }
+      }
+    },
+    "attachMenuBotIcon": {
+      "name": "attachMenuBotIcon",
+      "fields": {
+        "colors": {
+          "name": "colors",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "icon": {
+          "name": "icon",
+          "description": " "
+        },
+        "name": {
+          "name": "name",
+          "description": " "
+        }
+      }
+    },
+    "attachMenuBotIconColor": {
+      "name": "attachMenuBotIconColor",
+      "fields": {
+        "color": {
+          "name": "color",
+          "description": " "
+        },
+        "name": {
+          "name": "name",
+          "description": " "
+        }
+      }
+    },
+    "attachMenuBots": {
+      "name": "attachMenuBots",
+      "fields": {
+        "bots": {
+          "name": "bots",
+          "description": " "
+        },
+        "hash": {
+          "name": "hash",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "attachMenuBotsBot": {
+      "name": "attachMenuBotsBot",
+      "fields": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "attachMenuBotsNotModified": {
+      "name": "attachMenuBotsNotModified"
+    },
+    "attachMenuPeerTypeBotPM": {
+      "name": "attachMenuPeerTypeBotPM"
+    },
+    "attachMenuPeerTypeBroadcast": {
+      "name": "attachMenuPeerTypeBroadcast"
+    },
+    "attachMenuPeerTypeChat": {
+      "name": "attachMenuPeerTypeChat"
+    },
+    "attachMenuPeerTypePM": {
+      "name": "attachMenuPeerTypePM"
+    },
+    "attachMenuPeerTypeSameBotPM": {
+      "name": "attachMenuPeerTypeSameBotPM"
     },
     "auth.authorization": {
       "name": "auth.authorization",
@@ -2803,6 +2949,10 @@
           "name": "inactive",
           "description": "If not set, the reaction can be added to new messages and enabled in chats."
         },
+        "premium": {
+          "name": "premium",
+          "description": " "
+        },
         "reaction": {
           "name": "reaction",
           "description": "Reaction emoji"
@@ -2984,6 +3134,25 @@
         "description": {
           "name": "description",
           "description": "Description of the bot"
+        },
+        "description_document": {
+          "name": "description_document",
+          "description": " "
+        },
+        "description_photo": {
+          "name": "description_photo",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "menu_button": {
+          "name": "menu_button",
+          "description": " "
         },
         "user_id": {
           "name": "user_id",
@@ -3329,6 +3498,25 @@
         }
       }
     },
+    "botMenuButton": {
+      "name": "botMenuButton",
+      "fields": {
+        "text": {
+          "name": "text",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
+    },
+    "botMenuButtonCommands": {
+      "name": "botMenuButtonCommands"
+    },
+    "botMenuButtonDefault": {
+      "name": "botMenuButtonDefault"
+    },
     "cdnConfig": {
       "name": "cdnConfig",
       "description": [
@@ -3452,6 +3640,14 @@
         "id": {
           "name": "id",
           "description": "ID of the channel"
+        },
+        "join_request": {
+          "name": "join_request",
+          "description": " "
+        },
+        "join_to_send": {
+          "name": "join_to_send",
+          "description": " "
         },
         "left": {
           "name": "left",
@@ -4277,6 +4473,10 @@
           "name": "call",
           "description": "Livestream or group call information"
         },
+        "can_delete_channel": {
+          "name": "can_delete_channel",
+          "description": " "
+        },
         "can_set_location": {
           "name": "can_set_location",
           "description": "Can we set the geolocation of this group (for geogroups)"
@@ -4321,6 +4521,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "flags2": {
+          "name": "flags2",
+          "description": " "
         },
         "folder_id": {
           "name": "folder_id",
@@ -4929,10 +5133,6 @@
           "name": "id",
           "description": "ID of the group"
         },
-        "kicked": {
-          "name": "kicked",
-          "description": "Whether the current user was kicked from the group"
-        },
         "left": {
           "name": "left",
           "description": "Whether the current user has left the group"
@@ -5520,6 +5720,9 @@
         }
       }
     },
+    "chatInvitePublicJoinRequests": {
+      "name": "chatInvitePublicJoinRequests"
+    },
     "chatOnlines": {
       "name": "chatOnlines",
       "description": [
@@ -5801,6 +6004,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "force_try_ipv6": {
+          "name": "force_try_ipv6",
+          "description": " "
         },
         "forwarded_count_max": {
           "name": "forwarded_count_max",
@@ -6245,6 +6452,10 @@
           "links": [
             "https://core.telegram.org/mtproto/mtproto-transports#transport-obfuscation"
           ]
+        },
+        "this_port_only": {
+          "name": "this_port_only",
+          "description": " "
         }
       }
     },
@@ -6439,6 +6650,9 @@
           ]
         }
       }
+    },
+    "dialogFilterDefault": {
+      "name": "dialogFilterDefault"
     },
     "dialogFilterSuggested": {
       "name": "dialogFilterSuggested",
@@ -6638,6 +6852,30 @@
         "waveform": {
           "name": "waveform",
           "description": "Waveform"
+        }
+      }
+    },
+    "documentAttributeCustomEmoji": {
+      "name": "documentAttributeCustomEmoji",
+      "fields": {
+        "alt": {
+          "name": "alt",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "free": {
+          "name": "free",
+          "description": " "
+        },
+        "stickerset": {
+          "name": "stickerset",
+          "description": " "
         }
       }
     },
@@ -7822,6 +8060,39 @@
       "description": [
         "Password configuration not modified"
       ]
+    },
+    "help.premiumPromo": {
+      "name": "help.premiumPromo",
+      "fields": {
+        "currency": {
+          "name": "currency",
+          "description": " "
+        },
+        "monthly_amount": {
+          "name": "monthly_amount",
+          "description": " "
+        },
+        "status_entities": {
+          "name": "status_entities",
+          "description": " "
+        },
+        "status_text": {
+          "name": "status_text",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        },
+        "video_sections": {
+          "name": "video_sections",
+          "description": " "
+        },
+        "videos": {
+          "name": "videos",
+          "description": " "
+        }
+      }
     },
     "help.promoData": {
       "name": "help.promoData",
@@ -9174,6 +9445,28 @@
         }
       }
     },
+    "inputInvoiceMessage": {
+      "name": "inputInvoiceMessage",
+      "fields": {
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      }
+    },
+    "inputInvoiceSlug": {
+      "name": "inputInvoiceSlug",
+      "fields": {
+        "slug": {
+          "name": "slug",
+          "description": " "
+        }
+      }
+    },
     "inputKeyboardButtonUrlAuth": {
       "name": "inputKeyboardButtonUrlAuth",
       "description": [
@@ -9673,11 +9966,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -10293,6 +10592,9 @@
         "Whether we can see the exact last online timestamp of the user"
       ]
     },
+    "inputPrivacyKeyVoiceMessages": {
+      "name": "inputPrivacyKeyVoiceMessages"
+    },
     "inputPrivacyValueAllowAll": {
       "name": "inputPrivacyValueAllowAll",
       "description": [
@@ -10689,6 +10991,9 @@
         }
       }
     },
+    "inputStickerSetPremiumGifts": {
+      "name": "inputStickerSetPremiumGifts"
+    },
     "inputStickerSetShortName": {
       "name": "inputStickerSetShortName",
       "description": [
@@ -10741,6 +11046,39 @@
         "id": {
           "name": "id",
           "description": "The photo"
+        }
+      }
+    },
+    "inputStorePaymentGiftPremium": {
+      "name": "inputStorePaymentGiftPremium",
+      "fields": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
+        "currency": {
+          "name": "currency",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      }
+    },
+    "inputStorePaymentPremiumSubscription": {
+      "name": "inputStorePaymentPremiumSubscription",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "restore": {
+          "name": "restore",
+          "description": " "
         }
       }
     },
@@ -10945,6 +11283,34 @@
         }
       }
     },
+    "inputWebFileAudioAlbumThumbLocation": {
+      "name": "inputWebFileAudioAlbumThumbLocation",
+      "fields": {
+        "document": {
+          "name": "document",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "performer": {
+          "name": "performer",
+          "description": " "
+        },
+        "small": {
+          "name": "small",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        }
+      }
+    },
     "inputWebFileGeoPointLocation": {
       "name": "inputWebFileGeoPointLocation",
       "description": [
@@ -11047,6 +11413,14 @@
         "prices": {
           "name": "prices",
           "description": "Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)"
+        },
+        "recurring": {
+          "name": "recurring",
+          "description": " "
+        },
+        "recurring_terms_url": {
+          "name": "recurring_terms_url",
+          "description": " "
         },
         "shipping_address_requested": {
           "name": "shipping_address_requested",
@@ -11272,6 +11646,19 @@
         }
       }
     },
+    "keyboardButtonSimpleWebView": {
+      "name": "keyboardButtonSimpleWebView",
+      "fields": {
+        "text": {
+          "name": "text",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
+    },
     "keyboardButtonSwitchInline": {
       "name": "keyboardButtonSwitchInline",
       "description": [
@@ -11374,6 +11761,19 @@
         "user_id": {
           "name": "user_id",
           "description": "User ID"
+        }
+      }
+    },
+    "keyboardButtonWebView": {
+      "name": "keyboardButtonWebView",
+      "fields": {
+        "text": {
+          "name": "text",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
         }
       }
     },
@@ -11950,6 +12350,23 @@
         }
       }
     },
+    "messageActionGiftPremium": {
+      "name": "messageActionGiftPremium",
+      "fields": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
+        "currency": {
+          "name": "currency",
+          "description": " "
+        },
+        "months": {
+          "name": "months",
+          "description": " "
+        }
+      }
+    },
     "messageActionGroupCall": {
       "name": "messageActionGroupCall",
       "description": [
@@ -12024,6 +12441,25 @@
             "https://core.telegram.org/bots/payments#supported-currencies"
           ]
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "invoice_slug": {
+          "name": "invoice_slug",
+          "description": " "
+        },
+        "recurring_init": {
+          "name": "recurring_init",
+          "description": " "
+        },
+        "recurring_used": {
+          "name": "recurring_used",
+          "description": " "
+        },
         "total_amount": {
           "name": "total_amount",
           "description": "Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
@@ -12064,6 +12500,14 @@
         "payload": {
           "name": "payload",
           "description": "Bot specified invoice payload"
+        },
+        "recurring_init": {
+          "name": "recurring_init",
+          "description": " "
+        },
+        "recurring_used": {
+          "name": "recurring_used",
+          "description": " "
         },
         "shipping_option_id": {
           "name": "shipping_option_id",
@@ -12179,6 +12623,28 @@
         }
       }
     },
+    "messageActionWebViewDataSent": {
+      "name": "messageActionWebViewDataSent",
+      "fields": {
+        "text": {
+          "name": "text",
+          "description": " "
+        }
+      }
+    },
+    "messageActionWebViewDataSentMe": {
+      "name": "messageActionWebViewDataSentMe",
+      "fields": {
+        "data": {
+          "name": "data",
+          "description": " "
+        },
+        "text": {
+          "name": "text",
+          "description": " "
+        }
+      }
+    },
     "messageEmpty": {
       "name": "messageEmpty",
       "description": [
@@ -12210,11 +12676,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12226,11 +12698,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12242,11 +12720,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12258,11 +12742,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12274,11 +12764,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12290,11 +12786,34 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
+        }
+      }
+    },
+    "messageEntityCustomEmoji": {
+      "name": "messageEntityCustomEmoji",
+      "fields": {
+        "document_id": {
+          "name": "document_id",
+          "description": " "
+        },
+        "length": {
+          "name": "length",
+          "description": " "
+        },
+        "offset": {
+          "name": "offset",
+          "description": " "
         }
       }
     },
@@ -12309,11 +12828,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12325,11 +12850,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12341,11 +12872,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12360,11 +12897,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12380,11 +12923,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -12400,11 +12949,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12420,11 +12975,17 @@
         },
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12436,11 +12997,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12452,11 +13019,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12473,11 +13046,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "url": {
           "name": "url",
@@ -12493,11 +13072,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12509,11 +13094,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12530,11 +13121,17 @@
       "fields": {
         "length": {
           "name": "length",
-          "description": "Length of message entity within message (in UTF-8 codepoints)"
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset of message entity within message (in UTF-8 codepoints)"
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -12678,6 +13275,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "nopremium": {
+          "name": "nopremium",
+          "description": " "
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -13078,6 +13679,10 @@
           "links": [
             "https://core.telegram.org/api/threads"
           ]
+        },
+        "reply_to_scheduled": {
+          "name": "reply_to_scheduled",
+          "description": " "
         },
         "reply_to_top_id": {
           "name": "reply_to_top_id",
@@ -13883,12 +14488,23 @@
           "name": "count",
           "description": "Total number of featured stickers"
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "hash": {
           "name": "hash",
           "description": "Hash for pagination, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
+        },
+        "premium": {
+          "name": "premium",
+          "description": " "
         },
         "sets": {
           "name": "sets",
@@ -14503,6 +15119,30 @@
         "No new stickers were found for the given query"
       ]
     },
+    "messages.transcribedAudio": {
+      "name": "messages.transcribedAudio",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "pending": {
+          "name": "pending",
+          "description": " "
+        },
+        "text": {
+          "name": "text",
+          "description": " "
+        },
+        "transcription_id": {
+          "name": "transcription_id",
+          "description": " "
+        }
+      }
+    },
     "messages.translateNoResult": {
       "name": "messages.translateNoResult",
       "description": [
@@ -14575,6 +15215,34 @@
         "this_dc": {
           "name": "this_dc",
           "description": "Number of current data center"
+        }
+      }
+    },
+    "notificationSoundDefault": {
+      "name": "notificationSoundDefault"
+    },
+    "notificationSoundLocal": {
+      "name": "notificationSoundLocal",
+      "fields": {
+        "data": {
+          "name": "data",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        }
+      }
+    },
+    "notificationSoundNone": {
+      "name": "notificationSoundNone"
+    },
+    "notificationSoundRingtone": {
+      "name": "notificationSoundRingtone",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": " "
         }
       }
     },
@@ -15426,6 +16094,19 @@
         }
       }
     },
+    "paymentFormMethod": {
+      "name": "paymentFormMethod",
+      "fields": {
+        "title": {
+          "name": "title",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
+    },
     "paymentRequestedInfo": {
       "name": "paymentRequestedInfo",
       "description": [
@@ -15512,12 +16193,25 @@
         }
       }
     },
+    "payments.exportedInvoice": {
+      "name": "payments.exportedInvoice",
+      "fields": {
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
+    },
     "payments.paymentForm": {
       "name": "payments.paymentForm",
       "description": [
         "Payment form"
       ],
       "fields": {
+        "additional_methods": {
+          "name": "additional_methods",
+          "description": " "
+        },
         "bot_id": {
           "name": "bot_id",
           "description": "Bot ID"
@@ -15525,6 +16219,10 @@
         "can_save_credentials": {
           "name": "can_save_credentials",
           "description": "Whether the user can choose to save credentials."
+        },
+        "description": {
+          "name": "description",
+          "description": " "
         },
         "flags": {
           "name": "flags",
@@ -15557,6 +16255,10 @@
             "https://core.telegram.org/api/srp"
           ]
         },
+        "photo": {
+          "name": "photo",
+          "description": " "
+        },
         "provider_id": {
           "name": "provider_id",
           "description": "Payment provider ID."
@@ -15568,6 +16270,10 @@
         "saved_info": {
           "name": "saved_info",
           "description": "Saved server-side order information"
+        },
+        "title": {
+          "name": "title",
+          "description": " "
         },
         "url": {
           "name": "url",
@@ -15769,6 +16475,10 @@
         "Notification settings."
       ],
       "fields": {
+        "android_sound": {
+          "name": "android_sound",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -15776,9 +16486,17 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "ios_sound": {
+          "name": "ios_sound",
+          "description": " "
+        },
         "mute_until": {
           "name": "mute_until",
           "description": "Mute all notifications until this date"
+        },
+        "other_sound": {
+          "name": "other_sound",
+          "description": " "
         },
         "show_previews": {
           "name": "show_previews",
@@ -15787,10 +16505,6 @@
         "silent": {
           "name": "silent",
           "description": "Mute peer?"
-        },
-        "sound": {
-          "name": "sound",
-          "description": "Audio file name for notifications"
         }
       }
     },
@@ -16377,6 +17091,13 @@
         "Identifies an endpoint that can be used to connect to the other user in a phone call"
       ],
       "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "id": {
           "name": "id",
           "description": "Endpoint ID"
@@ -16396,6 +17117,10 @@
         "port": {
           "name": "port",
           "description": "Port ID"
+        },
+        "tcp": {
+          "name": "tcp",
+          "description": " "
         }
       }
     },
@@ -16889,6 +17614,38 @@
         }
       }
     },
+    "premiumGiftOption": {
+      "name": "premiumGiftOption",
+      "fields": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
+        "bot_url": {
+          "name": "bot_url",
+          "description": " "
+        },
+        "currency": {
+          "name": "currency",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "months": {
+          "name": "months",
+          "description": " "
+        },
+        "store_product": {
+          "name": "store_product",
+          "description": " "
+        }
+      }
+    },
     "privacyKeyAddedByPhone": {
       "name": "privacyKeyAddedByPhone",
       "description": [
@@ -16939,6 +17696,9 @@
       "description": [
         "Whether we can see the last online timestamp"
       ]
+    },
+    "privacyKeyVoiceMessages": {
+      "name": "privacyKeyVoiceMessages"
     },
     "privacyValueAllowAll": {
       "name": "privacyValueAllowAll",
@@ -18153,6 +18913,15 @@
         }
       }
     },
+    "simpleWebViewResultUrl": {
+      "name": "simpleWebViewResultUrl",
+      "fields": {
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
+    },
     "speakingInGroupCallAction": {
       "name": "speakingInGroupCallAction",
       "description": [
@@ -18205,6 +18974,10 @@
         "random_id": {
           "name": "random_id",
           "description": "Message ID"
+        },
+        "recommended": {
+          "name": "recommended",
+          "description": " "
         },
         "start_param": {
           "name": "start_param",
@@ -18615,6 +19388,10 @@
           "name": "count",
           "description": "Number of stickers in pack"
         },
+        "emojis": {
+          "name": "emojis",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -18650,6 +19427,10 @@
           "name": "thumb_dc_id",
           "description": "DC ID of thumbnail"
         },
+        "thumb_document_id": {
+          "name": "thumb_document_id",
+          "description": " "
+        },
         "thumb_version": {
           "name": "thumb_version",
           "description": "Thumbnail version"
@@ -18681,6 +19462,23 @@
         "set": {
           "name": "set",
           "description": "Stickerset"
+        }
+      }
+    },
+    "stickerSetFullCovered": {
+      "name": "stickerSetFullCovered",
+      "fields": {
+        "documents": {
+          "name": "documents",
+          "description": " "
+        },
+        "packs": {
+          "name": "packs",
+          "description": " "
+        },
+        "set": {
+          "name": "set",
+          "description": " "
         }
       }
     },
@@ -19183,6 +19981,9 @@
         "https://core.telegram.org/mtproto/TL-formal#predefined-identifiers"
       ]
     },
+    "updateAttachMenuBots": {
+      "name": "updateAttachMenuBots"
+    },
     "updateBotCallbackQuery": {
       "name": "updateBotCallbackQuery",
       "description": [
@@ -19367,6 +20168,19 @@
         "user_id": {
           "name": "user_id",
           "description": "The user that chose the result"
+        }
+      }
+    },
+    "updateBotMenuButton": {
+      "name": "updateBotMenuButton",
+      "fields": {
+        "bot_id": {
+          "name": "bot_id",
+          "description": " "
+        },
+        "button": {
+          "name": "button",
+          "description": " "
         }
       }
     },
@@ -21088,6 +21902,9 @@
         }
       }
     },
+    "updateReadFeaturedEmojiStickers": {
+      "name": "updateReadFeaturedEmojiStickers"
+    },
     "updateReadFeaturedStickers": {
       "name": "updateReadFeaturedStickers",
       "description": [
@@ -21215,6 +22032,9 @@
       "links": [
         "https://core.telegram.org/method/messages.getSavedGifs"
       ]
+    },
+    "updateSavedRingtones": {
+      "name": "updateSavedRingtones"
     },
     "updateServiceNotification": {
       "name": "updateServiceNotification",
@@ -21533,6 +22353,10 @@
         "The order of stickersets was changed"
       ],
       "fields": {
+        "emojis": {
+          "name": "emojis",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -21559,6 +22383,38 @@
         "theme": {
           "name": "theme",
           "description": "Theme"
+        }
+      }
+    },
+    "updateTranscribedAudio": {
+      "name": "updateTranscribedAudio",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "pending": {
+          "name": "pending",
+          "description": " "
+        },
+        "text": {
+          "name": "text",
+          "description": " "
+        },
+        "transcription_id": {
+          "name": "transcription_id",
+          "description": " "
         }
       }
     },
@@ -21699,6 +22555,15 @@
         "webpage": {
           "name": "webpage",
           "description": "Webpage preview"
+        }
+      }
+    },
+    "updateWebViewResultSent": {
+      "name": "updateWebViewResultSent",
+      "fields": {
+        "query_id": {
+          "name": "query_id",
+          "description": " "
         }
       }
     },
@@ -22192,9 +23057,17 @@
           "name": "apply_min_photo",
           "description": "If set, the profile picture for this user should be refetched"
         },
+        "attach_menu_enabled": {
+          "name": "attach_menu_enabled",
+          "description": " "
+        },
         "bot": {
           "name": "bot",
           "description": "Is this user a bot?"
+        },
+        "bot_attach_menu": {
+          "name": "bot_attach_menu",
+          "description": " "
         },
         "bot_chat_history": {
           "name": "bot_chat_history",
@@ -22273,6 +23146,10 @@
           "name": "photo",
           "description": "Profile picture of user"
         },
+        "premium": {
+          "name": "premium",
+          "description": " "
+        },
         "restricted": {
           "name": "restricted",
           "description": "Access to this user must be restricted for the reason specified in restriction_reason"
@@ -22333,6 +23210,14 @@
           "name": "blocked",
           "description": "Whether you have blocked this user"
         },
+        "bot_broadcast_admin_rights": {
+          "name": "bot_broadcast_admin_rights",
+          "description": " "
+        },
+        "bot_group_admin_rights": {
+          "name": "bot_group_admin_rights",
+          "description": " "
+        },
         "bot_info": {
           "name": "bot_info",
           "description": "For bots, info about the bot (bot commands, etc)"
@@ -22389,6 +23274,10 @@
             "https://core.telegram.org/api/pin"
           ]
         },
+        "premium_gifts": {
+          "name": "premium_gifts",
+          "description": " "
+        },
         "private_forward_name": {
           "name": "private_forward_name",
           "description": "Anonymized text to be shown instead of the the user's name on forwarded messages"
@@ -22412,6 +23301,10 @@
         "video_calls_available": {
           "name": "video_calls_available",
           "description": "Whether the user can receive video calls"
+        },
+        "voice_messages_forbidden": {
+          "name": "voice_messages_forbidden",
+          "description": " "
         }
       }
     },
@@ -22970,6 +23863,35 @@
           "description": "ID of preview"
         }
       }
+    },
+    "webViewMessageSent": {
+      "name": "webViewMessageSent",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        }
+      }
+    },
+    "webViewResultUrl": {
+      "name": "webViewResultUrl",
+      "fields": {
+        "query_id": {
+          "name": "query_id",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
     }
   },
   "types": {
@@ -23035,6 +23957,60 @@
       "name": "AccountDaysTTL",
       "description": [
         "Time-to-live of current account"
+      ]
+    },
+    "AttachMenuBot": {
+      "name": "AttachMenuBot",
+      "description": [
+        "Represents a bot web app that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ]
+    },
+    "AttachMenuBotIcon": {
+      "name": "AttachMenuBotIcon",
+      "description": [
+        "Represents an attachment menu icon for bot web apps »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ]
+    },
+    "AttachMenuBotIconColor": {
+      "name": "AttachMenuBotIconColor",
+      "description": [
+        "Represents an attachment menu icon color for bot web apps »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ]
+    },
+    "AttachMenuBots": {
+      "name": "AttachMenuBots",
+      "description": [
+        "Represents a list of bot web apps that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ]
+    },
+    "AttachMenuBotsBot": {
+      "name": "AttachMenuBotsBot",
+      "description": [
+        "Represents a bot web app that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ]
+    },
+    "AttachMenuPeerType": {
+      "name": "AttachMenuPeerType",
+      "description": [
+        "Indicates a supported peer type for a bot web app attachment menu¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
       ]
     },
     "Auth.ExportedAuthorization": {
@@ -23110,6 +24086,12 @@
       "name": "BotInlineResult",
       "description": [
         "Results of an inline query"
+      ]
+    },
+    "BotMenuButton": {
+      "name": "BotMenuButton",
+      "description": [
+        "Indicates the action to execute when pressing the in-UI menu button for bots"
       ]
     },
     "CdnConfig": {
@@ -23670,6 +24652,12 @@
         "Indicates a group call"
       ]
     },
+    "InputInvoice": {
+      "name": "InputInvoice",
+      "description": [
+        "An invoice"
+      ]
+    },
     "InputMedia": {
       "name": "InputMedia",
       "description": [
@@ -23775,6 +24763,12 @@
       "name": "InputStickeredMedia",
       "description": [
         "Represents a media with attached stickers"
+      ]
+    },
+    "InputStorePaymentPurpose": {
+      "name": "InputStorePaymentPurpose",
+      "description": [
+        "Info about a Telegram Premium purchase"
       ]
     },
     "InputTheme": {
@@ -24077,6 +25071,12 @@
         "Object contains info on nearest data center."
       ]
     },
+    "NotificationSound": {
+      "name": "NotificationSound",
+      "description": [
+        "Represents a notification sound"
+      ]
+    },
     "NotifyPeer": {
       "name": "NotifyPeer",
       "description": [
@@ -24097,9 +25097,6 @@
       "links": [
         "https://instantview.telegram.org"
       ]
-    },
-    "Page not found": {
-      "name": "Page not found"
     },
     "PageBlock": {
       "name": "PageBlock",
@@ -24165,6 +25162,12 @@
       "name": "PaymentCharge",
       "description": [
         "Charged payment"
+      ]
+    },
+    "PaymentFormMethod": {
+      "name": "PaymentFormMethod",
+      "description": [
+        "Represents a payment method"
       ]
     },
     "PaymentRequestedInfo": {
@@ -24318,6 +25321,12 @@
       "name": "PostAddress",
       "description": [
         "Shipping address"
+      ]
+    },
+    "PremiumGiftOption": {
+      "name": "PremiumGiftOption",
+      "description": [
+        "Telegram Premium gift option"
       ]
     },
     "PrivacyKey": {
@@ -24488,6 +25497,12 @@
       "name": "ShippingOption",
       "description": [
         "Shipping options"
+      ]
+    },
+    "SimpleWebViewResult": {
+      "name": "SimpleWebViewResult",
+      "description": [
+        "Contains the webview URL with appropriate theme and user info parameters added"
       ]
     },
     "SponsoredMessage": {
@@ -24715,6 +25730,24 @@
         "Webpage attributes"
       ]
     },
+    "WebViewMessageSent": {
+      "name": "WebViewMessageSent",
+      "description": [
+        "Contains information about an inline message sent by a Web App¹ on behalf of a user."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps"
+      ]
+    },
+    "WebViewResult": {
+      "name": "WebViewResult",
+      "description": [
+        "Contains information about a Web App¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps"
+      ]
+    },
     "account.ContentSettings": {
       "name": "account.ContentSettings",
       "description": [
@@ -24752,6 +25785,18 @@
       ],
       "links": [
         "https://core.telegram.org/method/account.resetPassword"
+      ]
+    },
+    "account.SavedRingtone": {
+      "name": "account.SavedRingtone",
+      "description": [
+        "Contains information about a saved ringtone"
+      ]
+    },
+    "account.SavedRingtones": {
+      "name": "account.SavedRingtones",
+      "description": [
+        "Contains a list of saved ringtones"
       ]
     },
     "account.SentEmailCode": {
@@ -24898,6 +25943,12 @@
       "name": "help.InviteText",
       "description": [
         "Object contains info on the text of a message with an invitation."
+      ]
+    },
+    "help.PremiumPromo": {
+      "name": "help.PremiumPromo",
+      "description": [
+        "Telegram Premium promotion information"
       ]
     },
     "help.PromoData": {
@@ -25094,6 +26145,12 @@
         "https://core.telegram.org/api/sponsored-messages"
       ]
     },
+    "messages.TranscribedAudio": {
+      "name": "messages.TranscribedAudio",
+      "description": [
+        "Transcribed text from a voice message"
+      ]
+    },
     "messages.TranslatedText": {
       "name": "messages.TranslatedText",
       "description": [
@@ -25110,6 +26167,12 @@
       "name": "payments.BankCardData",
       "description": [
         "Credit card info, provided by the card's bank(s)"
+      ]
+    },
+    "payments.ExportedInvoice": {
+      "name": "payments.ExportedInvoice",
+      "description": [
+        "Exported invoice"
       ]
     },
     "phone.ExportedGroupCallInvite": {
@@ -25237,9 +26300,6 @@
     }
   },
   "methods": {
-    "Page not found": {
-      "name": "Page not found"
-    },
     "account.acceptAuthorization": {
       "name": "account.acceptAuthorization",
       "description": [
@@ -25275,6 +26335,19 @@
       ],
       "links": [
         "https://core.telegram.org/api/srp"
+      ],
+      "parameters": {
+        "400": {
+          "name": "400",
+          "description": "Email hash expired."
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "EMAIL_HASH_EXPIRED",
+          "description": "Email hash expired."
+        }
       ]
     },
     "account.changeAuthorizationSettings": {
@@ -25484,6 +26557,11 @@
           "code": 400,
           "type": "THEME_MIME_INVALID",
           "description": "The theme's MIME type is invalid."
+        },
+        {
+          "code": 400,
+          "type": "THEME_TITLE_INVALID",
+          "description": "The specified theme title is invalid."
         }
       ]
     },
@@ -25518,6 +26596,17 @@
         "https://core.telegram.org/api/srp"
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "password": {
+          "name": "password",
+          "description": " "
+        },
         "reason": {
           "name": "reason",
           "description": "Why is the account being deleted, can be empty"
@@ -25764,6 +26853,16 @@
           "description": "The privacy key is invalid."
         }
       ]
+    },
+    "account.getSavedRingtones": {
+      "name": "account.getSavedRingtones",
+      "parameters": {
+        "hash": {
+          "name": "hash",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "account.getSecureValue": {
       "name": "account.getSecureValue",
@@ -26140,7 +27239,14 @@
           "name": "reason",
           "description": "Report reason"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "account.resendPasswordEmail": {
       "name": "account.resendPasswordEmail",
@@ -26149,6 +27255,19 @@
       ],
       "links": [
         "https://core.telegram.org/api/srp"
+      ],
+      "parameters": {
+        "400": {
+          "name": "400",
+          "description": "Email hash expired."
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "EMAIL_HASH_EXPIRED",
+          "description": "Email hash expired."
+        }
       ]
     },
     "account.resetAuthorization": {
@@ -26259,6 +27378,20 @@
           "description": "Media autodownload settings"
         }
       }
+    },
+    "account.saveRingtone": {
+      "name": "account.saveRingtone",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "unsave": {
+          "name": "unsave",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "account.saveSecureValue": {
       "name": "account.saveSecureValue",
@@ -26714,6 +27847,11 @@
         },
         {
           "code": 400,
+          "type": "NEW_SETTINGS_EMPTY",
+          "description": "No password is set on the current account, and no new password was specified in new_settings."
+        },
+        {
+          "code": 400,
           "type": "NEW_SETTINGS_INVALID",
           "description": "The new password settings are invalid."
         },
@@ -26767,6 +27905,11 @@
           "description": "About string too long."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "FIRSTNAME_INVALID",
           "description": "The first name is invalid."
@@ -26787,7 +27930,14 @@
             "https://core.telegram.org/constructor/userStatusOffline"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        }
+      ]
     },
     "account.updateTheme": {
       "name": "account.updateTheme",
@@ -26863,6 +28013,24 @@
           "description": "The provided username is already occupied."
         }
       ]
+    },
+    "account.uploadRingtone": {
+      "name": "account.uploadRingtone",
+      "parameters": {
+        "file": {
+          "name": "file",
+          "description": " "
+        },
+        "file_name": {
+          "name": "file_name",
+          "description": " "
+        },
+        "mime_type": {
+          "name": "mime_type",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "account.uploadTheme": {
       "name": "account.uploadTheme",
@@ -27034,6 +28202,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "AUTH_TOKEN_ALREADY_ACCEPTED",
+          "description": "The specified auth token was already accepted."
+        },
         {
           "code": 400,
           "type": "AUTH_TOKEN_EXPIRED",
@@ -27775,6 +28948,30 @@
           "description": "Command scope"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USER_BOT_INVALID",
+          "description": "This method can only be called by a bot."
+        }
+      ],
+      "bot_can_use": true
+    },
+    "bots.getBotMenuButton": {
+      "name": "bots.getBotMenuButton",
+      "parameters": {
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
+        }
+      ],
       "bot_can_use": true
     },
     "bots.resetBotCommands": {
@@ -27823,6 +29020,16 @@
       ],
       "bot_can_use": true
     },
+    "bots.setBotBroadcastDefaultAdminRights": {
+      "name": "bots.setBotBroadcastDefaultAdminRights",
+      "parameters": {
+        "admin_rights": {
+          "name": "admin_rights",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "bots.setBotCommands": {
       "name": "bots.setBotCommands",
       "description": [
@@ -27859,6 +29066,30 @@
           "description": "The specified language code is invalid."
         }
       ],
+      "bot_can_use": true
+    },
+    "bots.setBotGroupDefaultAdminRights": {
+      "name": "bots.setBotGroupDefaultAdminRights",
+      "parameters": {
+        "admin_rights": {
+          "name": "admin_rights",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "bots.setBotMenuButton": {
+      "name": "bots.setBotMenuButton",
+      "parameters": {
+        "button": {
+          "name": "button",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      },
       "bot_can_use": true
     },
     "channels.checkUsername": {
@@ -27924,8 +29155,23 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_ID_INVALID",
+          "description": "The specified supergroup ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
         },
         {
           "code": 400,
@@ -28082,6 +29328,17 @@
             "https://core.telegram.org/api/channel"
           ]
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "for_everyone": {
+          "name": "for_everyone",
+          "description": " "
+        },
         "max_id": {
           "name": "max_id",
           "description": "ID of message up to which the history must be deleted"
@@ -28095,8 +29352,17 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_PARICIPANT_MISSING"
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
         }
       ]
     },
@@ -28163,8 +29429,23 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
         },
         {
           "code": 400,
@@ -28429,6 +29710,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNELS_ADMIN_PUBLIC_TOO_MUCH",
+          "description": "You're admin of too many public channels, make some channels private to change the username of this channel."
+        },
         {
           "code": 400,
           "type": "CHANNEL_PRIVATE",
@@ -29128,6 +30414,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -29148,8 +30439,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         }
       ]
     },
@@ -29312,6 +30613,10 @@
           "code": 400,
           "type": "INVITE_REQUEST_SENT",
           "description": "You have successfully requested to join this chat or channel."
+        },
+        {
+          "code": 500,
+          "type": "MEMBER_CHAT_ADD_FAILED"
         },
         {
           "code": 400,
@@ -29604,6 +30909,34 @@
       ],
       "bot_can_use": true
     },
+    "channels.toggleJoinRequest": {
+      "name": "channels.toggleJoinRequest",
+      "parameters": {
+        "channel": {
+          "name": "channel",
+          "description": " "
+        },
+        "enabled": {
+          "name": "enabled",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "channels.toggleJoinToSend": {
+      "name": "channels.toggleJoinToSend",
+      "parameters": {
+        "channel": {
+          "name": "channel",
+          "description": " "
+        },
+        "enabled": {
+          "name": "enabled",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "channels.togglePreHistoryHidden": {
       "name": "channels.togglePreHistoryHidden",
       "description": [
@@ -29682,6 +31015,11 @@
           "code": 400,
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "The pinned message wasn't modified."
         }
       ]
     },
@@ -30249,7 +31587,13 @@
           "name": "phone",
           "description": "Phone number in international format, possibly obtained from a t.me/+number or tg://resolve?phone=number URI."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PHONE_NOT_OCCUPIED"
+        }
+      ]
     },
     "contacts.resolveUsername": {
       "name": "contacts.resolveUsername",
@@ -30645,6 +31989,10 @@
         }
       }
     },
+    "help.getPremiumPromo": {
+      "name": "help.getPremiumPromo",
+      "bot_can_use": true
+    },
     "help.getPromoData": {
       "name": "help.getPromoData",
       "description": [
@@ -30997,6 +32345,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "LANG_CODE_NOT_SUPPORTED",
+          "description": "The specified language code is not supported."
+        },
+        {
+          "code": 400,
           "type": "LANG_PACK_INVALID",
           "description": "The provided language pack is invalid."
         }
@@ -31016,7 +32369,19 @@
           "name": "lang_pack",
           "description": "Language pack name"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "LANG_CODE_NOT_SUPPORTED",
+          "description": "The specified language code is not supported."
+        },
+        {
+          "code": 400,
+          "type": "LANG_PACK_INVALID",
+          "description": "The provided language pack is invalid."
+        }
+      ]
     },
     "langpack.getLanguages": {
       "name": "langpack.getLanguages",
@@ -31057,6 +32422,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "LANG_CODE_NOT_SUPPORTED",
+          "description": "The specified language code is not supported."
+        },
         {
           "code": 400,
           "type": "LANG_PACK_INVALID",
@@ -31187,6 +32557,11 @@
         },
         {
           "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         },
@@ -31245,6 +32620,10 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
+          "code": 500,
+          "type": "CHAT_MEMBERS_CHANNEL"
+        },
+        {
           "code": 400,
           "type": "INVITE_HASH_EMPTY",
           "description": "The invite hash is empty."
@@ -31274,7 +32653,14 @@
           "name": "import_head",
           "description": "Beginning of the message file; up to 100 lines."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "IMPORT_FORMAT_UNRECOGNIZED",
+          "description": "The specified chat export file was exported from an unsupported chat app."
+        }
+      ]
     },
     "messages.checkHistoryImportPeer": {
       "name": "messages.checkHistoryImportPeer",
@@ -31489,8 +32875,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "INVITE_HASH_EXPIRED",
+          "description": "The invite link has expired."
+        },
+        {
+          "code": 400,
           "type": "INVITE_REVOKED_MISSING",
           "description": "The specified invite link was already revoked or is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -31537,6 +32933,11 @@
           "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
         },
         {
           "code": 400,
@@ -31634,7 +33035,19 @@
           "name": "peer",
           "description": "Chat"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "ADMIN_ID_INVALID",
+          "description": "The specified admin ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.deleteScheduledMessages": {
       "name": "messages.deleteScheduledMessages",
@@ -31991,6 +33404,10 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "CHAT_INVITE_PERMANENT"
+        },
+        {
           "code": 403,
           "type": "EDIT_BOT_INVITE_FORBIDDEN",
           "description": "Normal users can't edit invites that were created by bots."
@@ -32045,6 +33462,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "BUTTON_DATA_INVALID",
+          "description": "The data of one or more of the buttons you provided is invalid."
+        },
         {
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
@@ -32142,6 +33564,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 400,
+          "type": "CHAT_FORWARDS_RESTRICTED",
+          "description": "You can't forward messages from a protected chat."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -32150,6 +33577,11 @@
           "code": 400,
           "type": "ENTITIES_TOO_LONG",
           "description": "You provided too many styled message entities."
+        },
+        {
+          "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 403,
@@ -32639,6 +34071,10 @@
         "Get all archived stickers"
       ],
       "parameters": {
+        "emojis": {
+          "name": "emojis",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -32665,6 +34101,33 @@
           ]
         }
       }
+    },
+    "messages.getAttachMenuBot": {
+      "name": "messages.getAttachMenuBot",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ],
+      "bot_can_use": true
+    },
+    "messages.getAttachMenuBots": {
+      "name": "messages.getAttachMenuBots",
+      "parameters": {
+        "hash": {
+          "name": "hash",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.getAttachedStickers": {
       "name": "messages.getAttachedStickers",
@@ -32841,6 +34304,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "INVITE_HASH_EXPIRED",
           "description": "The invite link has expired."
@@ -32919,6 +34387,16 @@
           "description": "The provided user ID is invalid."
         }
       ]
+    },
+    "messages.getCustomEmojiDocuments": {
+      "name": "messages.getCustomEmojiDocuments",
+      "parameters": {
+        "document_id": {
+          "name": "document_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.getDhConfig": {
       "name": "messages.getDhConfig",
@@ -33139,6 +34617,16 @@
         }
       }
     },
+    "messages.getEmojiStickers": {
+      "name": "messages.getEmojiStickers",
+      "parameters": {
+        "hash": {
+          "name": "hash",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.getEmojiURL": {
       "name": "messages.getEmojiURL",
       "description": [
@@ -33171,6 +34659,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
         },
         {
           "code": 400,
@@ -33263,6 +34756,16 @@
           ]
         }
       }
+    },
+    "messages.getFeaturedEmojiStickers": {
+      "name": "messages.getFeaturedEmojiStickers",
+      "parameters": {
+        "hash": {
+          "name": "hash",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.getFeaturedStickers": {
       "name": "messages.getFeaturedStickers",
@@ -33562,6 +35065,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
+          "code": 403,
           "type": "MESSAGE_AUTHOR_REQUIRED",
           "description": "Message author required."
         },
@@ -33619,7 +35127,19 @@
           "name": "reaction",
           "description": "Get only reactions of this type (UTF8 emoji)"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "BROADCAST_FORBIDDEN",
+          "description": "Participants of polls in channels should stay anonymous."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        }
+      ]
     },
     "messages.getMessageReadParticipants": {
       "name": "messages.getMessageReadParticipants",
@@ -33644,6 +35164,16 @@
           "code": 400,
           "type": "CHAT_TOO_BIG",
           "description": "This method is not available for groups with more than chat_read_mark_size_threshold members, see client configuration »."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -33677,8 +35207,7 @@
           "name": "peer",
           "description": "Peer"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getMessagesViews": {
       "name": "messages.getMessagesViews",
@@ -33835,6 +35364,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
         },
         {
           "code": 400,
@@ -34060,6 +35594,16 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
         {
           "code": 400,
           "type": "MSG_ID_INVALID",
@@ -34525,7 +36069,33 @@
           "name": "peer",
           "description": "The chat or channel"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
+          "code": 400,
+          "type": "HIDE_REQUESTER_MISSING"
+        },
+        {
+          "code": 400,
+          "type": "USER_CHANNELS_TOO_MUCH",
+          "description": "One of the users you tried to add is already in too many channels/supergroups."
+        }
+      ]
     },
     "messages.hideChatJoinRequest": {
       "name": "messages.hideChatJoinRequest",
@@ -34804,6 +36374,65 @@
         }
       ]
     },
+    "messages.prolongWebView": {
+      "name": "messages.prolongWebView",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "query_id": {
+          "name": "query_id",
+          "description": " "
+        },
+        "reply_to_msg_id": {
+          "name": "reply_to_msg_id",
+          "description": " "
+        },
+        "send_as": {
+          "name": "send_as",
+          "description": " "
+        },
+        "silent": {
+          "name": "silent",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "messages.rateTranscribedAudio": {
+      "name": "messages.rateTranscribedAudio",
+      "parameters": {
+        "good": {
+          "name": "good",
+          "description": " "
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "transcription_id": {
+          "name": "transcription_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.readDiscussion": {
       "name": "messages.readDiscussion",
       "description": [
@@ -35053,6 +36682,10 @@
         "Reorder installed stickersets"
       ],
       "parameters": {
+        "emojis": {
+          "name": "emojis",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -35192,6 +36825,31 @@
         }
       ]
     },
+    "messages.requestSimpleWebView": {
+      "name": "messages.requestSimpleWebView",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "theme_params": {
+          "name": "theme_params",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.requestUrlAuth": {
       "name": "messages.requestUrlAuth",
       "description": [
@@ -35229,6 +36887,55 @@
         }
       }
     },
+    "messages.requestWebView": {
+      "name": "messages.requestWebView",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "from_bot_menu": {
+          "name": "from_bot_menu",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "reply_to_msg_id": {
+          "name": "reply_to_msg_id",
+          "description": " "
+        },
+        "send_as": {
+          "name": "send_as",
+          "description": " "
+        },
+        "silent": {
+          "name": "silent",
+          "description": " "
+        },
+        "start_param": {
+          "name": "start_param",
+          "description": " "
+        },
+        "theme_params": {
+          "name": "theme_params",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.saveDefaultSendAs": {
       "name": "messages.saveDefaultSendAs",
       "description": [
@@ -35249,6 +36956,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "SEND_AS_PEER_INVALID",
+          "description": "You can't send messages as the specified peer."
         }
       ]
     },
@@ -35464,6 +37176,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
         },
         {
           "code": 400,
@@ -36145,6 +37862,10 @@
           "description": "You can't forward messages from a protected chat."
         },
         {
+          "code": 403,
+          "type": "CHAT_GUEST_SEND_FORBIDDEN"
+        },
+        {
           "code": 400,
           "type": "CHAT_RESTRICTED",
           "description": "You can't send messages in this chat, you were restricted."
@@ -36181,8 +37902,18 @@
         },
         {
           "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
+        },
+        {
+          "code": 400,
           "type": "EMOTICON_INVALID",
           "description": "The specified emoji is invalid."
+        },
+        {
+          "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -36208,6 +37939,10 @@
           "code": 400,
           "type": "FILE_REFERENCE_EXPIRED",
           "description": "File reference expired, it must be refetched as described in the documentation."
+        },
+        {
+          "code": 500,
+          "type": "FILE_WRITE_FAILED"
         },
         {
           "code": 400,
@@ -36300,6 +38035,11 @@
           "description": "One of the poll questions is not acceptable."
         },
         {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
           "code": 400,
           "type": "QUIZ_CORRECT_ANSWERS_EMPTY",
           "description": "No correct quiz answer was specified."
@@ -36333,6 +38073,11 @@
           "code": 400,
           "type": "REPLY_MARKUP_INVALID",
           "description": "The provided reply markup is invalid."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MARKUP_TOO_LONG",
+          "description": "The specified reply_markup is too long."
         },
         {
           "code": 400,
@@ -36383,6 +38128,11 @@
           "code": 400,
           "type": "VIDEO_CONTENT_TYPE_INVALID",
           "description": "The video's content type is invalid."
+        },
+        {
+          "code": 400,
+          "type": "WEBDOCUMENT_MIME_INVALID",
+          "description": "Invalid webdocument mime type provided."
         },
         {
           "code": 400,
@@ -36505,6 +38255,10 @@
         },
         {
           "code": 400,
+          "type": "BUTTON_USER_PRIVACY_RESTRICTED"
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
         },
@@ -36517,6 +38271,10 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_GUEST_SEND_FORBIDDEN"
         },
         {
           "code": 400,
@@ -36542,6 +38300,11 @@
           "code": 400,
           "type": "ENTITIES_TOO_LONG",
           "description": "You provided too many styled message entities."
+        },
+        {
+          "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -36572,6 +38335,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 406,
+          "type": "PAYMENT_UNSUPPORTED"
         },
         {
           "code": 400,
@@ -36647,6 +38414,11 @@
           "code": 400,
           "type": "USER_IS_BOT",
           "description": "Bots can't send messages to other bots."
+        },
+        {
+          "code": 400,
+          "type": "WC_CONVERT_URL_INVALID",
+          "description": "WC convert URL invalid."
         },
         {
           "code": 400,
@@ -36782,6 +38554,11 @@
           "description": "There are too many scheduled messages."
         },
         {
+          "code": 400,
+          "type": "SEND_AS_PEER_INVALID",
+          "description": "You can't send messages as the specified peer."
+        },
+        {
           "code": 420,
           "type": "SLOWMODE_WAIT_%d",
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
@@ -36822,8 +38599,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
         },
         {
           "code": 400,
@@ -36837,8 +38624,18 @@
         },
         {
           "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         },
         {
           "code": 400,
@@ -36849,6 +38646,15 @@
           "code": 400,
           "type": "REACTION_INVALID",
           "description": "The specified reaction is invalid."
+        },
+        {
+          "code": 500,
+          "type": "SEND_REACTION_RESULT1_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "USER_BANNED_IN_CHANNEL",
+          "description": "You're banned from sending messages in supergroups/channels."
         }
       ]
     },
@@ -36900,6 +38706,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -36976,6 +38787,42 @@
           "description": "You cannot change your vote."
         }
       ]
+    },
+    "messages.sendWebViewData": {
+      "name": "messages.sendWebViewData",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "button_text": {
+          "name": "button_text",
+          "description": " "
+        },
+        "data": {
+          "name": "data",
+          "description": " "
+        },
+        "random_id": {
+          "name": "random_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "messages.sendWebViewResultMessage": {
+      "name": "messages.sendWebViewResultMessage",
+      "parameters": {
+        "bot_query_id": {
+          "name": "bot_query_id",
+          "description": " "
+        },
+        "result": {
+          "name": "result",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.setBotCallbackAnswer": {
       "name": "messages.setBotCallbackAnswer",
@@ -37125,7 +38972,24 @@
           "name": "peer",
           "description": "Group where to apply changes"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "The pinned message wasn't modified."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.setChatTheme": {
       "name": "messages.setChatTheme",
@@ -37450,6 +39314,10 @@
         },
         {
           "code": 400,
+          "type": "RESULT_ID_INVALID"
+        },
+        {
+          "code": 400,
           "type": "RESULT_TYPE_INVALID",
           "description": "Result type invalid."
         },
@@ -37699,6 +39567,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
@@ -37769,6 +39642,20 @@
           "description": "The specified import ID is invalid."
         }
       ]
+    },
+    "messages.toggleBotInAttachMenu": {
+      "name": "messages.toggleBotInAttachMenu",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "enabled": {
+          "name": "enabled",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.toggleDialogPin": {
       "name": "messages.toggleDialogPin",
@@ -37860,6 +39747,20 @@
         }
       }
     },
+    "messages.transcribeAudio": {
+      "name": "messages.transcribeAudio",
+      "parameters": {
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.translateText": {
       "name": "messages.translateText",
       "description": [
@@ -37894,7 +39795,23 @@
           "description": "Two-letter ISO 639-1 language code of the language to which the message is translated"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TO_LANG_INVALID",
+          "description": "The specified destination language is invalid."
+        }
+      ]
     },
     "messages.uninstallStickerSet": {
       "name": "messages.uninstallStickerSet",
@@ -37929,6 +39846,18 @@
           "description": "Chat where to unpin"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "The pinned message wasn't modified."
+        }
+      ],
       "bot_can_use": true
     },
     "messages.updateDialogFilter": {
@@ -37963,6 +39892,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
         {
           "code": 400,
           "type": "FILTER_ID_INVALID",
@@ -38157,6 +40091,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -38164,6 +40103,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
         },
         {
           "code": 400,
@@ -38233,6 +40177,44 @@
       ],
       "bot_can_use": true
     },
+    "payments.assignAppStoreTransaction": {
+      "name": "payments.assignAppStoreTransaction",
+      "parameters": {
+        "purpose": {
+          "name": "purpose",
+          "description": " "
+        },
+        "receipt": {
+          "name": "receipt",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.assignPlayMarketTransaction": {
+      "name": "payments.assignPlayMarketTransaction",
+      "parameters": {
+        "purpose": {
+          "name": "purpose",
+          "description": " "
+        },
+        "receipt": {
+          "name": "receipt",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.canPurchasePremium": {
+      "name": "payments.canPurchasePremium",
+      "parameters": {
+        "purpose": {
+          "name": "purpose",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "payments.clearSavedInfo": {
       "name": "payments.clearSavedInfo",
       "description": [
@@ -38255,6 +40237,16 @@
           "description": "Clear the last order settings saved by the user"
         }
       }
+    },
+    "payments.exportInvoice": {
+      "name": "payments.exportInvoice",
+      "parameters": {
+        "invoice_media": {
+          "name": "invoice_media",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "payments.getBankCardData": {
       "name": "payments.getBankCardData",
@@ -38288,13 +40280,9 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
-        "msg_id": {
-          "name": "msg_id",
-          "description": "Message ID of payment form"
-        },
-        "peer": {
-          "name": "peer",
-          "description": "The peer where the payment form was sent"
+        "invoice": {
+          "name": "invoice",
+          "description": " "
         },
         "theme_params": {
           "name": "theme_params",
@@ -38338,6 +40326,24 @@
         "Get saved payment information"
       ]
     },
+    "payments.requestRecurringPayment": {
+      "name": "payments.requestRecurringPayment",
+      "parameters": {
+        "invoice_media": {
+          "name": "invoice_media",
+          "description": " "
+        },
+        "recurring_init_charge": {
+          "name": "recurring_init_charge",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "payments.sendPaymentForm": {
       "name": "payments.sendPaymentForm",
       "description": [
@@ -38359,13 +40365,9 @@
           "name": "form_id",
           "description": "Form ID"
         },
-        "msg_id": {
-          "name": "msg_id",
-          "description": "Message ID of form"
-        },
-        "peer": {
-          "name": "peer",
-          "description": "The peer where the payment form was sent"
+        "invoice": {
+          "name": "invoice",
+          "description": " "
         },
         "requested_info_id": {
           "name": "requested_info_id",
@@ -38411,13 +40413,9 @@
           "name": "info",
           "description": "Requested order information"
         },
-        "msg_id": {
-          "name": "msg_id",
-          "description": "Message ID of payment form"
-        },
-        "peer": {
-          "name": "peer",
-          "description": "Peer where the payment form was sent"
+        "invoice": {
+          "name": "invoice",
+          "description": " "
         },
         "save": {
           "name": "save",
@@ -38496,7 +40494,14 @@
           "name": "sources",
           "description": "Source IDs"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_JOIN_MISSING",
+          "description": "You haven't joined this group call."
+        }
+      ]
     },
     "phone.confirmCall": {
       "name": "phone.confirmCall",
@@ -38583,8 +40588,21 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 500,
+          "type": "CHAT_FROM_CALL_CHANGED"
+        },
+        {
+          "code": 400,
+          "type": "CREATE_CALL_FAILED"
         },
         {
           "code": 400,
@@ -38639,6 +40657,11 @@
           "description": "The call was already accepted."
         },
         {
+          "code": 500,
+          "type": "CALL_OCCUPY_FAILED",
+          "description": "The call failed because the user is already making another call."
+        },
+        {
           "code": 400,
           "type": "CALL_PEER_INVALID",
           "description": "The provided call peer object is invalid."
@@ -38655,7 +40678,14 @@
           "name": "call",
           "description": "The group call to terminate"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_ALREADY_DISCARDED",
+          "description": "The group call was already discarded."
+        }
+      ]
     },
     "phone.editGroupCallParticipant": {
       "name": "phone.editGroupCallParticipant",
@@ -38710,6 +40740,16 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "GROUPCALL_FORBIDDEN",
+          "description": "The group call has already ended."
+        },
+        {
+          "code": 400,
+          "type": "PARTICIPANT_JOIN_MISSING",
+          "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
+        },
+        {
           "code": 400,
           "type": "USER_VOLUME_INVALID",
           "description": "The specified user volume is invalid."
@@ -38730,7 +40770,14 @@
           "name": "title",
           "description": "New title"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "GROUPCALL_FORBIDDEN",
+          "description": "The group call has already ended."
+        }
+      ]
     },
     "phone.exportGroupCallInvite": {
       "name": "phone.exportGroupCallInvite",
@@ -38797,7 +40844,14 @@
           "name": "peer",
           "description": "The dialog whose group call or livestream we're trying to join"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "phone.getGroupCallStreamChannels": {
       "name": "phone.getGroupCallStreamChannels",
@@ -38845,7 +40899,14 @@
           "name": "revoke",
           "description": "Whether to revoke the previous stream key or simply return the existing one"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        }
+      ]
     },
     "phone.getGroupParticipants": {
       "name": "phone.getGroupParticipants",
@@ -38905,6 +40966,11 @@
         },
         {
           "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
+        {
+          "code": 400,
           "type": "INVITE_FORBIDDEN_WITH_JOINAS",
           "description": "If the user has anonymously joined a group call as a channel, they can't invite other users to the group call because that would cause deanonymization, because the invite would be sent using the original user ID, not the anonymized channel ID."
         },
@@ -38956,8 +41022,32 @@
       "errors": [
         {
           "code": 400,
+          "type": "DATA_JSON_INVALID",
+          "description": "The provided JSON data is invalid."
+        },
+        {
+          "code": 500,
+          "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
+        },
+        {
+          "code": 403,
+          "type": "GROUPCALL_FORBIDDEN",
+          "description": "The group call has already ended."
+        },
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
+        {
+          "code": 400,
           "type": "GROUPCALL_SSRC_DUPLICATE_MUCH",
           "description": "The app needs to retry joining the group call with a new SSRC value."
+        },
+        {
+          "code": 400,
+          "type": "JOIN_AS_PEER_INVALID",
+          "description": "The specified peer cannot be used to join a group call."
         }
       ]
     },
@@ -39139,6 +41229,20 @@
         }
       ]
     },
+    "phone.saveCallLog": {
+      "name": "phone.saveCallLog",
+      "parameters": {
+        "file": {
+          "name": "file",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "phone.saveDefaultGroupCallJoinAs": {
       "name": "phone.saveDefaultGroupCallJoinAs",
       "description": [
@@ -39153,7 +41257,14 @@
           "name": "peer",
           "description": "The dialog"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "JOIN_AS_PEER_INVALID",
+          "description": "The specified peer cannot be used to join a group call."
+        }
+      ]
     },
     "phone.sendSignalingData": {
       "name": "phone.sendSignalingData",
@@ -39254,7 +41365,19 @@
           "name": "video_portrait",
           "description": "If video stream recording is enabled, whether to record in portrait or landscape mode"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "GROUPCALL_FORBIDDEN",
+          "description": "The group call has already ended."
+        },
+        {
+          "code": 400,
+          "type": "GROUPCALL_NOT_MODIFIED",
+          "description": "Group call settings weren't modified."
+        }
+      ]
     },
     "phone.toggleGroupCallSettings": {
       "name": "phone.toggleGroupCallSettings",
@@ -39304,7 +41427,14 @@
           "name": "subscribed",
           "description": "Enable or disable subscription"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "GROUPCALL_ALREADY_STARTED",
+          "description": "The groupcall has already started, you can join directly using phone.joinGroupCall."
+        }
+      ]
     },
     "photos.deletePhotos": {
       "name": "photos.deletePhotos",
@@ -39476,6 +41606,11 @@
           "code": 400,
           "type": "PHOTO_FILE_MISSING",
           "description": "Profile photo file missing."
+        },
+        {
+          "code": 400,
+          "type": "PHOTO_INVALID",
+          "description": "Photo invalid."
         },
         {
           "code": 400,
@@ -39687,6 +41822,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -39971,6 +42111,10 @@
           "code": 400,
           "type": "STICKER_VIDEO_BIG",
           "description": "The specified video sticker is too big."
+        },
+        {
+          "code": 400,
+          "type": "STICKER_VIDEO_NODOC"
         },
         {
           "code": 400,
@@ -40394,6 +42538,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": 403,
+          "type": "MTPROTO_CLUSTER_INVALID"
+        },
+        {
           "code": 400,
           "type": "OFFSET_INVALID",
           "description": "The provided offset is invalid."
@@ -40476,6 +42624,11 @@
         }
       },
       "errors": [
+        {
+          "code": 500,
+          "type": "CDN_UPLOAD_TIMEOUT",
+          "description": "A server-side timeout occurred while reuploading the file to the CDN DC."
+        },
         {
           "code": 400,
           "type": "RSA_DECRYPT_FAILED",
@@ -40570,6 +42723,11 @@
           "code": 400,
           "type": "FILE_PART_INVALID",
           "description": "The file part number is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         }
       ],
       "bot_can_use": true
@@ -40628,6 +42786,11 @@
         },
         {
           "code": 400,
+          "type": "FROM_MESSAGE_BOT_DISABLED",
+          "description": "Bots can't use fromMessage min constructors."
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -40659,6 +42822,11 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "USER_BOT_INVALID",
+          "description": "This method can only be called by a bot."
+        },
         {
           "code": 400,
           "type": "USER_ID_INVALID",
@@ -40884,6 +43052,10 @@
       "type": "BUTTON_URL_INVALID",
       "description": "Button URL invalid."
     },
+    "BUTTON_USER_PRIVACY_RESTRICTED": {
+      "code": 400,
+      "type": "BUTTON_USER_PRIVACY_RESTRICTED"
+    },
     "CALL_ALREADY_ACCEPTED": {
       "code": 400,
       "type": "CALL_ALREADY_ACCEPTED",
@@ -40914,6 +43086,11 @@
       "type": "CDN_METHOD_INVALID",
       "description": "You can't call this method in a CDN DC."
     },
+    "CDN_UPLOAD_TIMEOUT": {
+      "code": 500,
+      "type": "CDN_UPLOAD_TIMEOUT",
+      "description": "A server-side timeout occurred while reuploading the file to the CDN DC."
+    },
     "CHANNELS_ADMIN_LOCATED_TOO_MUCH": {
       "code": 400,
       "type": "CHANNELS_ADMIN_LOCATED_TOO_MUCH",
@@ -40929,10 +43106,19 @@
       "type": "CHANNELS_TOO_MUCH",
       "description": "You have joined too many channels/supergroups."
     },
+    "CHANNEL_ID_INVALID": {
+      "code": 400,
+      "type": "CHANNEL_ID_INVALID",
+      "description": "The specified supergroup ID is invalid."
+    },
     "CHANNEL_INVALID": {
       "code": 400,
       "type": "CHANNEL_INVALID",
       "description": "The provided channel is invalid."
+    },
+    "CHANNEL_PARICIPANT_MISSING": {
+      "code": 400,
+      "type": "CHANNEL_PARICIPANT_MISSING"
     },
     "CHANNEL_PRIVATE": {
       "code": 400,
@@ -40974,6 +43160,14 @@
       "type": "CHAT_FORWARDS_RESTRICTED",
       "description": "You can't forward messages from a protected chat."
     },
+    "CHAT_FROM_CALL_CHANGED": {
+      "code": 500,
+      "type": "CHAT_FROM_CALL_CHANGED"
+    },
+    "CHAT_GUEST_SEND_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_GUEST_SEND_FORBIDDEN"
+    },
     "CHAT_ID_EMPTY": {
       "code": 400,
       "type": "CHAT_ID_EMPTY",
@@ -40994,10 +43188,18 @@
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
+    "CHAT_INVITE_PERMANENT": {
+      "code": 400,
+      "type": "CHAT_INVITE_PERMANENT"
+    },
     "CHAT_LINK_EXISTS": {
       "code": 400,
       "type": "CHAT_LINK_EXISTS",
       "description": "The chat is public, you can't hide the history to new users."
+    },
+    "CHAT_MEMBERS_CHANNEL": {
+      "code": 500,
+      "type": "CHAT_MEMBERS_CHANNEL"
     },
     "CHAT_NOT_MODIFIED": {
       "code": 400,
@@ -41103,6 +43305,10 @@
       "code": 400,
       "type": "CONTACT_REQ_MISSING",
       "description": "Missing contact request."
+    },
+    "CREATE_CALL_FAILED": {
+      "code": 400,
+      "type": "CREATE_CALL_FAILED"
     },
     "CURRENCY_TOTAL_AMOUNT_INVALID": {
       "code": 400,
@@ -41224,6 +43430,11 @@
       "type": "ENTITIES_TOO_LONG",
       "description": "You provided too many styled message entities."
     },
+    "ENTITY_BOUNDS_INVALID": {
+      "code": 400,
+      "type": "ENTITY_BOUNDS_INVALID",
+      "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+    },
     "ENTITY_MENTION_USER_INVALID": {
       "code": 400,
       "type": "ENTITY_MENTION_USER_INVALID",
@@ -41324,6 +43535,10 @@
       "type": "FILE_TITLE_EMPTY",
       "description": "An empty file title was specified."
     },
+    "FILE_WRITE_FAILED": {
+      "code": 500,
+      "type": "FILE_WRITE_FAILED"
+    },
     "FILTER_ID_INVALID": {
       "code": 400,
       "type": "FILTER_ID_INVALID",
@@ -41419,6 +43634,20 @@
       "type": "GRAPH_OUTDATED_RELOAD",
       "description": "The graph is outdated, please get a new async token using stats.getBroadcastStats."
     },
+    "GROUPCALL_ADD_PARTICIPANTS_FAILED": {
+      "code": 500,
+      "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
+    },
+    "GROUPCALL_ALREADY_DISCARDED": {
+      "code": 400,
+      "type": "GROUPCALL_ALREADY_DISCARDED",
+      "description": "The group call was already discarded."
+    },
+    "GROUPCALL_ALREADY_STARTED": {
+      "code": 403,
+      "type": "GROUPCALL_ALREADY_STARTED",
+      "description": "The groupcall has already started, you can join directly using phone.joinGroupCall."
+    },
     "GROUPCALL_FORBIDDEN": {
       "code": 403,
       "type": "GROUPCALL_FORBIDDEN",
@@ -41453,6 +43682,10 @@
       "code": 400,
       "type": "HASH_INVALID",
       "description": "The provided hash is invalid."
+    },
+    "HIDE_REQUESTER_MISSING": {
+      "code": 400,
+      "type": "HIDE_REQUESTER_MISSING"
     },
     "IMAGE_PROCESS_FAILED": {
       "code": 400,
@@ -41524,10 +43757,20 @@
       "type": "INVITE_REVOKED_MISSING",
       "description": "The specified invite link was already revoked or is invalid."
     },
+    "JOIN_AS_PEER_INVALID": {
+      "code": 400,
+      "type": "JOIN_AS_PEER_INVALID",
+      "description": "The specified peer cannot be used to join a group call."
+    },
     "LANG_CODE_INVALID": {
       "code": 400,
       "type": "LANG_CODE_INVALID",
       "description": "The specified language code is invalid."
+    },
+    "LANG_CODE_NOT_SUPPORTED": {
+      "code": 400,
+      "type": "LANG_CODE_NOT_SUPPORTED",
+      "description": "The specified language code is not supported."
     },
     "LANG_PACK_INVALID": {
       "code": 400,
@@ -41619,6 +43862,10 @@
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
     },
+    "MEMBER_CHAT_ADD_FAILED": {
+      "code": 500,
+      "type": "MEMBER_CHAT_ADD_FAILED"
+    },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
       "type": "MESSAGE_AUTHOR_REQUIRED",
@@ -41679,6 +43926,10 @@
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
+    "MTPROTO_CLUSTER_INVALID": {
+      "code": 403,
+      "type": "MTPROTO_CLUSTER_INVALID"
+    },
     "MULTI_MEDIA_TOO_LONG": {
       "code": 400,
       "type": "MULTI_MEDIA_TOO_LONG",
@@ -41688,6 +43939,11 @@
       "code": 400,
       "type": "NEW_SALT_INVALID",
       "description": "The new salt is invalid."
+    },
+    "NEW_SETTINGS_EMPTY": {
+      "code": 400,
+      "type": "NEW_SETTINGS_EMPTY",
+      "description": "No password is set on the current account, and no new password was specified in new_settings."
     },
     "NEW_SETTINGS_INVALID": {
       "code": 400,
@@ -41799,6 +44055,10 @@
       "type": "PAYMENT_PROVIDER_INVALID",
       "description": "The specified payment provider is invalid."
     },
+    "PAYMENT_UNSUPPORTED": {
+      "code": 406,
+      "type": "PAYMENT_UNSUPPORTED"
+    },
     "PEER_ID_INVALID": {
       "code": 400,
       "type": "PEER_ID_INVALID",
@@ -41843,6 +44103,10 @@
       "code": 400,
       "type": "PHONE_CODE_INVALID",
       "description": "The provided phone code is invalid."
+    },
+    "PHONE_NOT_OCCUPIED": {
+      "code": 400,
+      "type": "PHONE_NOT_OCCUPIED"
     },
     "PHONE_NUMBER_APP_SIGNUP_FORBIDDEN": {
       "code": 400,
@@ -41979,6 +44243,11 @@
       "type": "POLL_VOTE_REQUIRED",
       "description": "Cast a vote in the poll before calling this method."
     },
+    "PREMIUM_ACCOUNT_REQUIRED": {
+      "code": 403,
+      "type": "PREMIUM_ACCOUNT_REQUIRED",
+      "description": "A premium account is required to execute this action."
+    },
     "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN": {
       "code": 406,
       "type": "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN",
@@ -42114,6 +44383,10 @@
       "type": "RESULT_ID_EMPTY",
       "description": "Result ID empty."
     },
+    "RESULT_ID_INVALID": {
+      "code": 400,
+      "type": "RESULT_ID_INVALID"
+    },
     "RESULT_TYPE_INVALID": {
       "code": 400,
       "type": "RESULT_TYPE_INVALID",
@@ -42198,6 +44471,10 @@
       "code": 400,
       "type": "SEND_MESSAGE_TYPE_INVALID",
       "description": "The message type is invalid."
+    },
+    "SEND_REACTION_RESULT1_INVALID": {
+      "code": 500,
+      "type": "SEND_REACTION_RESULT1_INVALID"
     },
     "SENSITIVE_CHANGE_FORBIDDEN": {
       "code": 403,
@@ -42364,6 +44641,10 @@
       "type": "STICKER_VIDEO_BIG",
       "description": "The specified video sticker is too big."
     },
+    "STICKER_VIDEO_NODOC": {
+      "code": 400,
+      "type": "STICKER_VIDEO_NODOC"
+    },
     "STICKER_VIDEO_NOWEBM": {
       "code": 400,
       "type": "STICKER_VIDEO_NOWEBM",
@@ -42409,6 +44690,11 @@
       "type": "THEME_MIME_INVALID",
       "description": "The theme's MIME type is invalid."
     },
+    "THEME_TITLE_INVALID": {
+      "code": 400,
+      "type": "THEME_TITLE_INVALID",
+      "description": "The specified theme title is invalid."
+    },
     "TITLE_INVALID": {
       "code": 400,
       "type": "TITLE_INVALID",
@@ -42423,6 +44709,11 @@
       "code": 400,
       "type": "TOKEN_INVALID",
       "description": "The provided token is invalid."
+    },
+    "TO_LANG_INVALID": {
+      "code": 400,
+      "type": "TO_LANG_INVALID",
+      "description": "The specified destination language is invalid."
     },
     "TTL_DAYS_INVALID": {
       "code": 400,
