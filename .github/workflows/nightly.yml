@@ -51,11 +51,11 @@ jobs:
         with:
           author: GitHub <actions@github.com>
           committer: GitHub <actions@github.com>
-          commit-message: 'feat(schema): update schema documentation to the latest layer'
+          commit-message: 'feat(schema): update documentation to the latest layer'
           branch: "feat/update-schema"
           delete-branch: true
           token: ${{ steps.generate-token.outputs.token }}
-          title: Update schema documentation to the latest layer.
+          title: "feat(schema): update documentation to the latest layer"
           body: |
             Update schema documentation to the latest layer.
             ```
