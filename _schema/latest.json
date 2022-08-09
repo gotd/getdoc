@@ -2215,32 +2215,50 @@
       }
     },
     "account.savedRingtone": {
-      "name": "account.savedRingtone"
+      "name": "account.savedRingtone",
+      "description": [
+        "The notification sound was already in MP3 format and was saved without any modification"
+      ]
     },
     "account.savedRingtoneConverted": {
       "name": "account.savedRingtoneConverted",
+      "description": [
+        "The notification sound was not in MP3 format and was successfully converted and saved, use the returned Document¹ to refer to the notification sound from now on"
+      ],
+      "links": [
+        "https://core.telegram.org/type/Document"
+      ],
       "fields": {
         "document": {
           "name": "document",
-          "description": " "
+          "description": "The converted notification sound"
         }
       }
     },
     "account.savedRingtones": {
       "name": "account.savedRingtones",
+      "description": [
+        "A list of saved notification sounds"
+      ],
       "fields": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         },
         "ringtones": {
           "name": "ringtones",
-          "description": " "
+          "description": "Saved notification sounds"
         }
       }
     },
     "account.savedRingtonesNotModified": {
-      "name": "account.savedRingtonesNotModified"
+      "name": "account.savedRingtonesNotModified",
+      "description": [
+        "The notification sound list hasn't changed."
+      ]
     },
     "account.sentEmailCode": {
       "name": "account.sentEmailCode",
@@ -2369,10 +2387,16 @@
     },
     "attachMenuBot": {
       "name": "attachMenuBot",
+      "description": [
+        "Represents a bot web app that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "Bot ID"
         },
         "flags": {
           "name": "flags",
@@ -2383,32 +2407,41 @@
         },
         "has_settings": {
           "name": "has_settings",
-          "description": " "
+          "description": "True, if the bot supports the \"settings_button_pressed\" event"
         },
         "icons": {
           "name": "icons",
-          "description": " "
+          "description": "Attachment menu icon"
         },
         "inactive": {
           "name": "inactive",
-          "description": " "
+          "description": "Whether this bot attachment menu entry should be shown in the attachment menu (toggle using messages.toggleBotInAttachMenu¹)",
+          "links": [
+            "https://core.telegram.org/method/messages.toggleBotInAttachMenu"
+          ]
         },
         "peer_types": {
           "name": "peer_types",
-          "description": " "
+          "description": "List of peer types where this attachment should be shown"
         },
         "short_name": {
           "name": "short_name",
-          "description": " "
+          "description": "Attachment menu item name"
         }
       }
     },
     "attachMenuBotIcon": {
       "name": "attachMenuBotIcon",
+      "description": [
+        "Represents an attachment menu icon for bot web apps »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "fields": {
         "colors": {
           "name": "colors",
-          "description": " "
+          "description": "Attachment menu icon colors."
         },
         "flags": {
           "name": "flags",
@@ -2419,74 +2452,122 @@
         },
         "icon": {
           "name": "icon",
-          "description": " "
+          "description": "The actual icon file."
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "One of the following values: note that animated icons must be played when the user clicks on the button, activating the bot web app. default_static - Default attachment menu icon in SVG format placeholder_static - Default placeholder for opened Web Apps in SVG format ios_static - Attachment menu icon in SVG format for the official iOS app ios_animated - Animated attachment menu icon in TGS format for the official iOS app android_animated - Animated attachment menu icon in TGS format for the official Android app macos_animated - Animated attachment menu icon in TGS format for the official native Mac OS app"
         }
       }
     },
     "attachMenuBotIconColor": {
       "name": "attachMenuBotIconColor",
+      "description": [
+        "Represents an attachment menu icon color for bot web apps »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "fields": {
         "color": {
           "name": "color",
-          "description": " "
+          "description": "Color in RGB24 format"
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "One of the following values: light_icon - Color of the attachment menu icon (light mode) light_text - Color of the attachment menu label, once selected (light mode) dark_icon - Color of the attachment menu icon (dark mode) dark_text - Color of the attachment menu label, once selected (dark mode)"
         }
       }
     },
     "attachMenuBots": {
       "name": "attachMenuBots",
+      "description": [
+        "Represents a list of bot web apps that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "fields": {
         "bots": {
           "name": "bots",
-          "description": " "
+          "description": "List of bot web apps that can be launched from the attachment menu »¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+          ]
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Info about related users/bots"
         }
       }
     },
     "attachMenuBotsBot": {
       "name": "attachMenuBotsBot",
+      "description": [
+        "Represents a bot web app that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "fields": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Represents a bot web app that can be launched from the attachment menu »¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Info about related users and bots"
         }
       }
     },
     "attachMenuBotsNotModified": {
-      "name": "attachMenuBotsNotModified"
+      "name": "attachMenuBotsNotModified",
+      "description": [
+        "The list of bot web apps hasn't changed"
+      ]
     },
     "attachMenuPeerTypeBotPM": {
-      "name": "attachMenuPeerTypeBotPM"
+      "name": "attachMenuPeerTypeBotPM",
+      "description": [
+        "The bot attachment menu entry is available in private chats with other bots"
+      ]
     },
     "attachMenuPeerTypeBroadcast": {
-      "name": "attachMenuPeerTypeBroadcast"
+      "name": "attachMenuPeerTypeBroadcast",
+      "description": [
+        "The bot attachment menu entry is available in channels"
+      ]
     },
     "attachMenuPeerTypeChat": {
-      "name": "attachMenuPeerTypeChat"
+      "name": "attachMenuPeerTypeChat",
+      "description": [
+        "The bot attachment menu entry is available in groups and supergroups¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel"
+      ]
     },
     "attachMenuPeerTypePM": {
-      "name": "attachMenuPeerTypePM"
+      "name": "attachMenuPeerTypePM",
+      "description": [
+        "The bot attachment menu entry is available in private chats with other users"
+      ]
     },
     "attachMenuPeerTypeSameBotPM": {
-      "name": "attachMenuPeerTypeSameBotPM"
+      "name": "attachMenuPeerTypeSameBotPM",
+      "description": [
+        "The bot attachment menu entry is available in the chat with the bot that offers it"
+      ]
     },
     "auth.authorization": {
       "name": "auth.authorization",
@@ -2951,7 +3032,7 @@
         },
         "premium": {
           "name": "premium",
-          "description": " "
+          "description": "Whether this reaction can only be used by Telegram Premium users"
         },
         "reaction": {
           "name": "reaction",
@@ -3137,11 +3218,11 @@
         },
         "description_document": {
           "name": "description_document",
-          "description": " "
+          "description": "Description animation in MPEG4 format"
         },
         "description_photo": {
           "name": "description_photo",
-          "description": " "
+          "description": "Description photo"
         },
         "flags": {
           "name": "flags",
@@ -3152,7 +3233,7 @@
         },
         "menu_button": {
           "name": "menu_button",
-          "description": " "
+          "description": "Indicates the action to execute when pressing the in-UI menu button for bots"
         },
         "user_id": {
           "name": "user_id",
@@ -3500,14 +3581,20 @@
     },
     "botMenuButton": {
       "name": "botMenuButton",
+      "description": [
+        "Indicates the action to execute when pressing the in-UI menu button for bots"
+      ],
       "fields": {
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Title to be displayed on the menu button instead of 'Menu'"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL of a web app¹ to open when the user clicks on the button",
+          "links": [
+            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button"
+          ]
         }
       }
     },
@@ -4475,7 +4562,7 @@
         },
         "can_delete_channel": {
           "name": "can_delete_channel",
-          "description": " "
+          "description": "Can we delete this channel?"
         },
         "can_set_location": {
           "name": "can_set_location",
@@ -4524,7 +4611,10 @@
         },
         "flags2": {
           "name": "flags2",
-          "description": " "
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
         },
         "folder_id": {
           "name": "folder_id",
@@ -6007,7 +6097,10 @@
         },
         "force_try_ipv6": {
           "name": "force_try_ipv6",
-          "description": " "
+          "description": "Whether to forcefully try connecting using IPv6 dcOptions¹",
+          "links": [
+            "https://core.telegram.org/type/DcOption"
+          ]
         },
         "forwarded_count_max": {
           "name": "forwarded_count_max",
@@ -8063,34 +8156,49 @@
     },
     "help.premiumPromo": {
       "name": "help.premiumPromo",
+      "description": [
+        "Telegram Premium promotion information"
+      ],
       "fields": {
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "monthly_amount": {
           "name": "monthly_amount",
-          "description": " "
+          "description": "Monthly price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "status_entities": {
           "name": "status_entities",
-          "description": " "
+          "description": "Message entities for styled text¹",
+          "links": [
+            "https://core.telegram.org/api/entities"
+          ]
         },
         "status_text": {
           "name": "status_text",
-          "description": " "
+          "description": "Description of the current state of the user's Telegram Premium subscription"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Related user information"
         },
         "video_sections": {
           "name": "video_sections",
-          "description": " "
+          "description": "A list of premium feature identifiers »¹, associated to each video",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "videos": {
           "name": "videos",
-          "description": " "
+          "description": "A list of videos"
         }
       }
     },
@@ -9447,23 +9555,35 @@
     },
     "inputInvoiceMessage": {
       "name": "inputInvoiceMessage",
+      "description": [
+        "An invoice contained in a messageMediaInvoice¹ message."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/messageMediaInvoice"
+      ],
       "fields": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Chat where the invoice was sent"
         }
       }
     },
     "inputInvoiceSlug": {
       "name": "inputInvoiceSlug",
+      "description": [
+        "An invoice slug taken from a t.me/invoice/ link or from the premium_invoice_slug app config parameter »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#client-configuration"
+      ],
       "fields": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "The invoice slug"
         }
       }
     },
@@ -10593,7 +10713,10 @@
       ]
     },
     "inputPrivacyKeyVoiceMessages": {
-      "name": "inputPrivacyKeyVoiceMessages"
+      "name": "inputPrivacyKeyVoiceMessages",
+      "description": [
+        "Whether people can send you voice messages"
+      ]
     },
     "inputPrivacyValueAllowAll": {
       "name": "inputPrivacyValueAllowAll",
@@ -11051,23 +11174,35 @@
     },
     "inputStorePaymentGiftPremium": {
       "name": "inputStorePaymentGiftPremium",
+      "description": [
+        "Info about a gifted Telegram Premium purchase"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user to which the Telegram Premium subscription was gifted"
         }
       }
     },
     "inputStorePaymentPremiumSubscription": {
       "name": "inputStorePaymentPremiumSubscription",
+      "description": [
+        "Info about a Telegram Premium purchase"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -11416,11 +11551,11 @@
         },
         "recurring": {
           "name": "recurring",
-          "description": " "
+          "description": "Whether this is a recurring payment"
         },
         "recurring_terms_url": {
           "name": "recurring_terms_url",
-          "description": " "
+          "description": "Terms of service URL for the recurring payment"
         },
         "shipping_address_requested": {
           "name": "shipping_address_requested",
@@ -12352,18 +12487,27 @@
     },
     "messageActionGiftPremium": {
       "name": "messageActionGiftPremium",
+      "description": [
+        "Info about a gifted Telegram Premium subscription"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the gift in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "months": {
           "name": "months",
-          "description": " "
+          "description": "Duration of the gifted Telegram Premium subscription"
         }
       }
     },
@@ -12450,11 +12594,14 @@
         },
         "invoice_slug": {
           "name": "invoice_slug",
-          "description": " "
+          "description": "An invoice slug taken from a t.me/invoice/ link or from the premium_invoice_slug app config parameter »¹",
+          "links": [
+            "https://core.telegram.org/api/config#client-configuration"
+          ]
         },
         "recurring_init": {
           "name": "recurring_init",
-          "description": " "
+          "description": "Whether this is a recurring payment"
         },
         "recurring_used": {
           "name": "recurring_used",
@@ -13278,7 +13425,7 @@
         },
         "nopremium": {
           "name": "nopremium",
-          "description": " "
+          "description": "Whether this is a normal sticker, if not set this is a premium sticker and a premium sticker animation must be played."
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -13682,7 +13829,7 @@
         },
         "reply_to_scheduled": {
           "name": "reply_to_scheduled",
-          "description": " "
+          "description": "Whether this message replies to a scheduled message"
         },
         "reply_to_top_id": {
           "name": "reply_to_top_id",
@@ -14504,7 +14651,7 @@
         },
         "premium": {
           "name": "premium",
-          "description": " "
+          "description": "Whether this is a premium stickerset"
         },
         "sets": {
           "name": "sets",
@@ -15121,6 +15268,9 @@
     },
     "messages.transcribedAudio": {
       "name": "messages.transcribedAudio",
+      "description": [
+        "Transcribed text from a voice message"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -15131,15 +15281,18 @@
         },
         "pending": {
           "name": "pending",
-          "description": " "
+          "description": "Whether the transcription is partial because audio transcription is still in progress, if set the user may receive further updateTranscribedAudio¹ updates with the updated transcription.",
+          "links": [
+            "https://core.telegram.org/constructor/updateTranscribedAudio"
+          ]
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Transcripted text"
         },
         "transcription_id": {
           "name": "transcription_id",
-          "description": " "
+          "description": "Transcription ID"
         }
       }
     },
@@ -24307,13 +24460,19 @@
     "DialogFilter": {
       "name": "DialogFilter",
       "description": [
-        "Dialog filter (folders)"
+        "Dialog filter (folder »¹)"
+      ],
+      "links": [
+        "https://core.telegram.org/api/folders"
       ]
     },
     "DialogFilterSuggested": {
       "name": "DialogFilterSuggested",
       "description": [
-        "Suggested dialog filters (folders)"
+        "Suggested dialog filters (folder »¹)"
+      ],
+      "links": [
+        "https://core.telegram.org/api/folders"
       ]
     },
     "DialogPeer": {
@@ -25790,13 +25949,13 @@
     "account.SavedRingtone": {
       "name": "account.SavedRingtone",
       "description": [
-        "Contains information about a saved ringtone"
+        "Contains information about a saved notification sound"
       ]
     },
     "account.SavedRingtones": {
       "name": "account.SavedRingtones",
       "description": [
-        "Contains a list of saved ringtones"
+        "Contains a list of saved notification sounds"
       ]
     },
     "account.SentEmailCode": {
@@ -31821,6 +31980,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+        },
+        {
+          "code": 400,
           "type": "USER_INVALID",
           "description": "Invalid user provided."
         }
@@ -33469,6 +33633,11 @@
         },
         {
           "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
         },
@@ -34736,6 +34905,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -35820,6 +35994,10 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "EMOTICON_STICKERPACK_MISSING"
+        },
+        {
           "code": 406,
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
@@ -36028,6 +36206,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+        },
         {
           "code": 400,
           "type": "MESSAGE_EMPTY",
@@ -37007,6 +37190,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -37665,6 +37853,11 @@
         },
         {
           "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+        },
+        {
+          "code": 400,
           "type": "INLINE_RESULT_EXPIRED",
           "description": "The inline query expired."
         },
@@ -37820,6 +38013,10 @@
           "code": 400,
           "type": "BOT_PAYMENTS_DISABLED",
           "description": "Please enable bot payments in botfather before calling this method."
+        },
+        {
+          "code": 400,
+          "type": "BOT_POLLS_DISABLED"
         },
         {
           "code": 400,
@@ -38507,6 +38704,11 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
+        },
+        {
+          "code": 400,
+          "type": "ENTITY_BOUNDS_INVALID",
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -43007,6 +43209,10 @@
       "type": "BOT_PAYMENTS_DISABLED",
       "description": "Please enable bot payments in botfather before calling this method."
     },
+    "BOT_POLLS_DISABLED": {
+      "code": 400,
+      "type": "BOT_POLLS_DISABLED"
+    },
     "BOT_RESPONSE_TIMEOUT": {
       "code": 400,
       "type": "BOT_RESPONSE_TIMEOUT",
@@ -43399,6 +43605,10 @@
       "code": 400,
       "type": "EMOTICON_INVALID",
       "description": "The specified emoji is invalid."
+    },
+    "EMOTICON_STICKERPACK_MISSING": {
+      "code": 400,
+      "type": "EMOTICON_STICKERPACK_MISSING"
     },
     "ENCRYPTED_MESSAGE_INVALID": {
       "code": 400,
