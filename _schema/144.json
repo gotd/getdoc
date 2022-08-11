@@ -3730,11 +3730,19 @@
         },
         "join_request": {
           "name": "join_request",
-          "description": " "
+          "description": "Whether a user's join request will have to be approved by administrators¹, toggle using channels.toggleJoinToSend²",
+          "links": [
+            "https://core.telegram.org/api/invites#join-requests",
+            "https://core.telegram.org/method/channels.toggleJoinRequest"
+          ]
         },
         "join_to_send": {
           "name": "join_to_send",
-          "description": " "
+          "description": "Whether a user needs to join the supergroup before they can send messages: can be false only for discussion groups »¹, toggle using channels.toggleJoinToSend²",
+          "links": [
+            "https://core.telegram.org/api/discussion",
+            "https://core.telegram.org/method/channels.toggleJoinToSend"
+          ]
         },
         "left": {
           "name": "left",
@@ -6950,10 +6958,13 @@
     },
     "documentAttributeCustomEmoji": {
       "name": "documentAttributeCustomEmoji",
+      "description": [
+        "Info about a custom emoji"
+      ],
       "fields": {
         "alt": {
           "name": "alt",
-          "description": " "
+          "description": "The actual emoji"
         },
         "flags": {
           "name": "flags",
@@ -6968,7 +6979,7 @@
         },
         "stickerset": {
           "name": "stickerset",
-          "description": " "
+          "description": "The emoji stickerset to which this emoji belongs."
         }
       }
     },
@@ -12949,18 +12960,30 @@
     },
     "messageEntityCustomEmoji": {
       "name": "messageEntityCustomEmoji",
+      "description": [
+        "Represents a custom emoji"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Document ID of the custom emoji, use messages.getCustomEmojiDocuments¹ to fetch the emoji animation and the actual emoji it represents.",
+          "links": [
+            "https://core.telegram.org/method/messages.getCustomEmojiDocuments"
+          ]
         },
         "length": {
           "name": "length",
-          "description": " "
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         }
       }
     },
@@ -15372,30 +15395,45 @@
       }
     },
     "notificationSoundDefault": {
-      "name": "notificationSoundDefault"
+      "name": "notificationSoundDefault",
+      "description": [
+        "Indicates the default notification sound should be used"
+      ]
     },
     "notificationSoundLocal": {
       "name": "notificationSoundLocal",
+      "description": [
+        "Indicates a specific local notification sound should be used"
+      ],
       "fields": {
         "data": {
           "name": "data",
-          "description": " "
+          "description": "Notification sound identifier (arbitrary data used by the client to identify a specific local notification sound)"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Notification sound title"
         }
       }
     },
     "notificationSoundNone": {
-      "name": "notificationSoundNone"
+      "name": "notificationSoundNone",
+      "description": [
+        "No notification sound should be used"
+      ]
     },
     "notificationSoundRingtone": {
       "name": "notificationSoundRingtone",
+      "description": [
+        "A specific previously uploaded notification sound should be used"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Document ID of notification sound uploaded using account.uploadRingtone¹",
+          "links": [
+            "https://core.telegram.org/method/account.uploadRingtone"
+          ]
         }
       }
     },
@@ -16249,6 +16287,9 @@
     },
     "paymentFormMethod": {
       "name": "paymentFormMethod",
+      "description": [
+        "Represents a payment method"
+      ],
       "fields": {
         "title": {
           "name": "title",
@@ -16348,10 +16389,13 @@
     },
     "payments.exportedInvoice": {
       "name": "payments.exportedInvoice",
+      "description": [
+        "Exported invoice"
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Exported invoice URL"
         }
       }
     },
@@ -16363,7 +16407,7 @@
       "fields": {
         "additional_methods": {
           "name": "additional_methods",
-          "description": " "
+          "description": "Additional payment methods"
         },
         "bot_id": {
           "name": "bot_id",
@@ -16375,7 +16419,7 @@
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Description"
         },
         "flags": {
           "name": "flags",
@@ -16410,7 +16454,7 @@
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Product photo"
         },
         "provider_id": {
           "name": "provider_id",
@@ -16426,7 +16470,7 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Form title"
         },
         "url": {
           "name": "url",
@@ -16630,7 +16674,7 @@
       "fields": {
         "android_sound": {
           "name": "android_sound",
-          "description": " "
+          "description": "Notification sound for the official android application"
         },
         "flags": {
           "name": "flags",
@@ -16641,7 +16685,7 @@
         },
         "ios_sound": {
           "name": "ios_sound",
-          "description": " "
+          "description": "Notification sound for the official iOS application"
         },
         "mute_until": {
           "name": "mute_until",
@@ -16649,7 +16693,7 @@
         },
         "other_sound": {
           "name": "other_sound",
-          "description": " "
+          "description": "Notification sound for other applications"
         },
         "show_previews": {
           "name": "show_previews",
@@ -17273,7 +17317,7 @@
         },
         "tcp": {
           "name": "tcp",
-          "description": " "
+          "description": "Whether TCP should be used"
         }
       }
     },
@@ -17769,10 +17813,16 @@
     },
     "premiumGiftOption": {
       "name": "premiumGiftOption",
+      "description": [
+        "Telegram Premium gift option"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "bot_url": {
           "name": "bot_url",
@@ -17780,7 +17830,10 @@
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -17791,7 +17844,7 @@
         },
         "months": {
           "name": "months",
-          "description": " "
+          "description": "Duration of gifted Telegram Premium subscription"
         },
         "store_product": {
           "name": "store_product",
@@ -27020,8 +27073,7 @@
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getSecureValue": {
       "name": "account.getSecureValue",
@@ -27549,8 +27601,7 @@
           "name": "unsave",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.saveSecureValue": {
       "name": "account.saveSecureValue",
@@ -28188,8 +28239,7 @@
           "name": "mime_type",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.uploadTheme": {
       "name": "account.uploadTheme",
@@ -29081,6 +29131,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "DATA_JSON_INVALID",
+          "description": "The provided JSON data is invalid."
+        },
+        {
+          "code": 400,
           "type": "QUERY_ID_INVALID",
           "description": "The query ID is invalid."
         },
@@ -29168,6 +29223,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "DATA_JSON_INVALID",
+          "description": "The provided JSON data is invalid."
+        },
+        {
+          "code": 400,
           "type": "METHOD_INVALID",
           "description": "The specified method is invalid."
         },
@@ -29187,6 +29247,12 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "RIGHTS_NOT_MODIFIED"
+        }
+      ],
       "bot_can_use": true
     },
     "bots.setBotCommands": {
@@ -29235,6 +29301,12 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "RIGHTS_NOT_MODIFIED"
+        }
+      ],
       "bot_can_use": true
     },
     "bots.setBotMenuButton": {
@@ -29616,8 +29688,7 @@
           "type": "PARTICIPANT_ID_INVALID",
           "description": "The specified participant ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editAdmin": {
       "name": "channels.editAdmin",
@@ -30581,8 +30652,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getSponsoredMessages": {
       "name": "channels.getSponsoredMessages",
@@ -31079,8 +31149,7 @@
           "name": "enabled",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "channels.toggleJoinToSend": {
       "name": "channels.toggleJoinToSend",
@@ -31093,8 +31162,7 @@
           "name": "enabled",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "channels.togglePreHistoryHidden": {
       "name": "channels.togglePreHistoryHidden",
@@ -32154,8 +32222,7 @@
       }
     },
     "help.getPremiumPromo": {
-      "name": "help.getPremiumPromo",
-      "bot_can_use": true
+      "name": "help.getPremiumPromo"
     },
     "help.getPromoData": {
       "name": "help.getPromoData",
@@ -34285,8 +34352,7 @@
           "type": "BOT_INVALID",
           "description": "This is not a valid bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getAttachMenuBots": {
       "name": "messages.getAttachMenuBots",
@@ -34295,8 +34361,7 @@
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getAttachedStickers": {
       "name": "messages.getAttachedStickers",
@@ -34559,10 +34624,21 @@
     },
     "messages.getCustomEmojiDocuments": {
       "name": "messages.getCustomEmojiDocuments",
+      "description": [
+        "Fetch info about custom emojis.",
+        "Returns a list of documents¹ with the animated custom emoji in TGS format, and a documentAttributeCustomEmoji² attribute with the original emoji and info about the emoji stickerset this custom emoji belongs to."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/document",
+        "https://core.telegram.org/constructor/documentAttributeCustomEmoji"
+      ],
       "parameters": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Custom emoji IDs from a messageEntityCustomEmoji¹.",
+          "links": [
+            "https://core.telegram.org/constructor/messageEntityCustomEmoji"
+          ]
         }
       },
       "bot_can_use": true
@@ -34788,13 +34864,15 @@
     },
     "messages.getEmojiStickers": {
       "name": "messages.getEmojiStickers",
+      "description": [
+        "Gets the list of currently installed custom emoji stickersets."
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiURL": {
       "name": "messages.getEmojiURL",
@@ -34933,13 +35011,15 @@
     },
     "messages.getFeaturedEmojiStickers": {
       "name": "messages.getFeaturedEmojiStickers",
+      "description": [
+        "Gets featured custom emoji stickersets."
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getFeaturedStickers": {
       "name": "messages.getFeaturedStickers",
@@ -36148,8 +36228,7 @@
           "name": "peer",
           "description": "Peer"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getWebPage": {
       "name": "messages.getWebPage",
@@ -36591,8 +36670,7 @@
           "name": "silent",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.rateTranscribedAudio": {
       "name": "messages.rateTranscribedAudio",
@@ -36613,8 +36691,7 @@
           "name": "transcription_id",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.readDiscussion": {
       "name": "messages.readDiscussion",
@@ -36783,8 +36860,7 @@
           "name": "peer",
           "description": "Peer"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.receivedMessages": {
       "name": "messages.receivedMessages",
@@ -37030,8 +37106,7 @@
           "name": "url",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.requestUrlAuth": {
       "name": "messages.requestUrlAuth",
@@ -37116,8 +37191,7 @@
           "name": "url",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.saveDefaultSendAs": {
       "name": "messages.saveDefaultSendAs",
@@ -39009,8 +39083,7 @@
           "name": "random_id",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.sendWebViewResultMessage": {
       "name": "messages.sendWebViewResultMessage",
@@ -39024,6 +39097,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "QUERY_ID_INVALID",
+          "description": "The query ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "messages.setBotCallbackAnswer": {
@@ -39856,8 +39936,7 @@
           "name": "enabled",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.toggleDialogPin": {
       "name": "messages.toggleDialogPin",
@@ -39960,8 +40039,7 @@
           "name": "peer",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.translateText": {
       "name": "messages.translateText",
@@ -40390,8 +40468,7 @@
           "name": "receipt",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "payments.assignPlayMarketTransaction": {
       "name": "payments.assignPlayMarketTransaction",
@@ -40404,8 +40481,7 @@
           "name": "receipt",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "payments.canPurchasePremium": {
       "name": "payments.canPurchasePremium",
@@ -40414,8 +40490,7 @@
           "name": "purpose",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "payments.clearSavedInfo": {
       "name": "payments.clearSavedInfo",
@@ -40448,6 +40523,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MEDIA_INVALID",
+          "description": "Media invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "payments.getBankCardData": {
@@ -40543,8 +40625,7 @@
           "name": "user_id",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "payments.sendPaymentForm": {
       "name": "payments.sendPaymentForm",
@@ -41442,8 +41523,7 @@
           "name": "peer",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "phone.saveDefaultGroupCallJoinAs": {
       "name": "phone.saveDefaultGroupCallJoinAs",
@@ -44606,6 +44686,10 @@
       "code": 400,
       "type": "REVOTE_NOT_ALLOWED",
       "description": "You cannot change your vote."
+    },
+    "RIGHTS_NOT_MODIFIED": {
+      "code": 400,
+      "type": "RIGHTS_NOT_MODIFIED"
     },
     "RIGHT_FORBIDDEN": {
       "code": 403,
