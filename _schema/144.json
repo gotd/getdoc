@@ -10681,13 +10681,13 @@
     "inputPrivacyKeyChatInvite": {
       "name": "inputPrivacyKeyChatInvite",
       "description": [
-        "Whether the user can be invited to chats"
+        "Whether people will be able to invite you to chats"
       ]
     },
     "inputPrivacyKeyForwards": {
       "name": "inputPrivacyKeyForwards",
       "description": [
-        "Whether messages forwarded from this user will be anonymous¹"
+        "Whether messages forwarded from you will be anonymous¹"
       ],
       "links": [
         "https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding"
@@ -10696,31 +10696,31 @@
     "inputPrivacyKeyPhoneCall": {
       "name": "inputPrivacyKeyPhoneCall",
       "description": [
-        "Whether the user will accept phone calls"
+        "Whether you will accept phone calls"
       ]
     },
     "inputPrivacyKeyPhoneNumber": {
       "name": "inputPrivacyKeyPhoneNumber",
       "description": [
-        "Whether people will be able to see the user's phone number"
+        "Whether people will be able to see your phone number"
       ]
     },
     "inputPrivacyKeyPhoneP2P": {
       "name": "inputPrivacyKeyPhoneP2P",
       "description": [
-        "Whether the user allows P2P communication during VoIP calls"
+        "Whether to allow P2P communication during VoIP calls"
       ]
     },
     "inputPrivacyKeyProfilePhoto": {
       "name": "inputPrivacyKeyProfilePhoto",
       "description": [
-        "Whether people will be able to see the user's profile picture"
+        "Whether people will be able to see your profile picture"
       ]
     },
     "inputPrivacyKeyStatusTimestamp": {
       "name": "inputPrivacyKeyStatusTimestamp",
       "description": [
-        "Whether we can see the exact last online timestamp of the user"
+        "Whether people will be able to see your exact last online timestamp"
       ]
     },
     "inputPrivacyKeyVoiceMessages": {
@@ -17855,7 +17855,7 @@
     "privacyKeyAddedByPhone": {
       "name": "privacyKeyAddedByPhone",
       "description": [
-        "Whether people can add you to their contact list by your phone number"
+        "Whether this user can be added to our contact list by their phone number"
       ]
     },
     "privacyKeyChatInvite": {
@@ -17888,7 +17888,7 @@
     "privacyKeyPhoneP2P": {
       "name": "privacyKeyPhoneP2P",
       "description": [
-        "Whether P2P connections in phone calls are allowed"
+        "Whether P2P connections in phone calls with this user are allowed"
       ]
     },
     "privacyKeyProfilePhoto": {
@@ -17900,11 +17900,14 @@
     "privacyKeyStatusTimestamp": {
       "name": "privacyKeyStatusTimestamp",
       "description": [
-        "Whether we can see the last online timestamp"
+        "Whether we can see the last online timestamp of this user"
       ]
     },
     "privacyKeyVoiceMessages": {
-      "name": "privacyKeyVoiceMessages"
+      "name": "privacyKeyVoiceMessages",
+      "description": [
+        "Whether the user accepts voice messages"
+      ]
     },
     "privacyValueAllowAll": {
       "name": "privacyValueAllowAll",
@@ -19596,7 +19599,7 @@
         },
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "This is a custom emoji stickerset"
         },
         "flags": {
           "name": "flags",
@@ -19635,7 +19638,10 @@
         },
         "thumb_document_id": {
           "name": "thumb_document_id",
-          "description": " "
+          "description": "Document ID of custom emoji thumbnail, fetch the document using messages.getCustomEmojiDocuments¹",
+          "links": [
+            "https://core.telegram.org/method/messages.getCustomEmojiDocuments"
+          ]
         },
         "thumb_version": {
           "name": "thumb_version",
@@ -19691,7 +19697,7 @@
     "stickerSetMultiCovered": {
       "name": "stickerSetMultiCovered",
       "description": [
-        "Stickerset, with a specific stickers as preview"
+        "Stickerset, with a specific set of stickers as preview"
       ],
       "fields": {
         "covers": {
@@ -20188,7 +20194,14 @@
       ]
     },
     "updateAttachMenuBots": {
-      "name": "updateAttachMenuBots"
+      "name": "updateAttachMenuBots",
+      "description": [
+        "The list of added bot web apps »¹ has changed, use messages.getAttachMenuBots² to fetch the updated list."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu",
+        "https://core.telegram.org/method/messages.getAttachMenuBots"
+      ]
     },
     "updateBotCallbackQuery": {
       "name": "updateBotCallbackQuery",
@@ -20379,14 +20392,17 @@
     },
     "updateBotMenuButton": {
       "name": "updateBotMenuButton",
+      "description": [
+        "The menu button behavior for the specified bot has changed"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "Bot ID"
         },
         "button": {
           "name": "button",
-          "description": " "
+          "description": "New menu button"
         }
       }
     },
@@ -22240,7 +22256,13 @@
       ]
     },
     "updateSavedRingtones": {
-      "name": "updateSavedRingtones"
+      "name": "updateSavedRingtones",
+      "description": [
+        "The list of saved notification sounds has changed, use account.getSavedRingtones¹ to fetch the new list."
+      ],
+      "links": [
+        "https://core.telegram.org/method/account.getSavedRingtones"
+      ]
     },
     "updateServiceNotification": {
       "name": "updateServiceNotification",
@@ -22561,7 +22583,7 @@
       "fields": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "Whether the updated stickers are custom emoji stickers"
         },
         "flags": {
           "name": "flags",
@@ -22594,6 +22616,12 @@
     },
     "updateTranscribedAudio": {
       "name": "updateTranscribedAudio",
+      "description": [
+        "A pending transcription initiated with messages.transcribeAudio¹ was updated."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.transcribeAudio"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -22604,23 +22632,26 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Transcribed message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer of the transcribed message"
         },
         "pending": {
           "name": "pending",
-          "description": " "
+          "description": "Whether this transcription is still pending and further updateTranscribedAudio¹ about it will be sent in the future.",
+          "links": [
+            "https://core.telegram.org/constructor/updateTranscribedAudio"
+          ]
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Transcribed text"
         },
         "transcription_id": {
           "name": "transcription_id",
-          "description": " "
+          "description": "Transcription ID"
         }
       }
     },
@@ -23354,7 +23385,7 @@
         },
         "premium": {
           "name": "premium",
-          "description": " "
+          "description": "Whether this user is a Telegram Premium user"
         },
         "restricted": {
           "name": "restricted",
@@ -23418,11 +23449,11 @@
         },
         "bot_broadcast_admin_rights": {
           "name": "bot_broadcast_admin_rights",
-          "description": " "
+          "description": "A suggested default set of administrator rights for the bot, to be shown when adding the bot as admin to a channel (only a suggestion, the admin right set may be modified by the user before adding the bot as admin)"
         },
         "bot_group_admin_rights": {
           "name": "bot_group_admin_rights",
-          "description": " "
+          "description": "A suggested default set of administrator rights for the bot, to be shown when adding the bot as admin to a supergroup (only a suggestion, the admin right set may be modified by the user before adding the bot as admin)"
         },
         "bot_info": {
           "name": "bot_info",
@@ -23510,7 +23541,7 @@
         },
         "voice_messages_forbidden": {
           "name": "voice_messages_forbidden",
-          "description": " "
+          "description": "Whether this user doesn't allow sending voice messages in a private chat with them"
         }
       }
     },
@@ -27068,10 +27099,16 @@
     },
     "account.getSavedRingtones": {
       "name": "account.getSavedRingtones",
+      "description": [
+        "Fetch saved notification sounds"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
@@ -27592,14 +27629,27 @@
     },
     "account.saveRingtone": {
       "name": "account.saveRingtone",
+      "description": [
+        "Save or remove saved notification sound.",
+        "If the notification sound is already in MP3 format, account.savedRingtone¹ will be returned.",
+        "Otherwise, it will be automatically converted and a account.savedRingtoneConverted² will be returned, containing a new document³ object that should be used to refer to the ringtone from now on (ie when deleting it using the unsave parameter, or when downloading it)."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/account.savedRingtone",
+        "https://core.telegram.org/constructor/account.savedRingtoneConverted",
+        "https://core.telegram.org/constructor/document"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Notification sound uploaded using account.uploadRingtone¹",
+          "links": [
+            "https://core.telegram.org/method/account.uploadRingtone"
+          ]
         },
         "unsave": {
           "name": "unsave",
-          "description": " "
+          "description": "Whether to add or delete the notification sound"
         }
       }
     },
@@ -28226,18 +28276,24 @@
     },
     "account.uploadRingtone": {
       "name": "account.uploadRingtone",
+      "description": [
+        "Upload notification sound, use account.saveRingtone¹ to convert it and add it to the list of saved notification sounds."
+      ],
+      "links": [
+        "https://core.telegram.org/method/account.saveRingtone"
+      ],
       "parameters": {
         "file": {
           "name": "file",
-          "description": " "
+          "description": "Notification sound"
         },
         "file_name": {
           "name": "file_name",
-          "description": " "
+          "description": "File name"
         },
         "mime_type": {
           "name": "mime_type",
-          "description": " "
+          "description": "MIME type of file"
         }
       }
     },
@@ -29173,10 +29229,17 @@
     },
     "bots.getBotMenuButton": {
       "name": "bots.getBotMenuButton",
+      "description": [
+        "Gets the menu button action for a given user or for all users, previously set using bots.setBotMenuButton¹; users can see this information in the botInfo² constructor."
+      ],
+      "links": [
+        "https://core.telegram.org/method/bots.setBotMenuButton",
+        "https://core.telegram.org/constructor/botInfo"
+      ],
       "parameters": {
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID or empty for the default menu button."
         }
       },
       "errors": [
@@ -29241,10 +29304,13 @@
     },
     "bots.setBotBroadcastDefaultAdminRights": {
       "name": "bots.setBotBroadcastDefaultAdminRights",
+      "description": [
+        "Set the default suggested admin rights for bots being added as admins to channels."
+      ],
       "parameters": {
         "admin_rights": {
           "name": "admin_rights",
-          "description": " "
+          "description": "Admin rights"
         }
       },
       "errors": [
@@ -29295,10 +29361,13 @@
     },
     "bots.setBotGroupDefaultAdminRights": {
       "name": "bots.setBotGroupDefaultAdminRights",
+      "description": [
+        "Set the default suggested admin rights for bots being added as admins to groups."
+      ],
       "parameters": {
         "admin_rights": {
           "name": "admin_rights",
-          "description": " "
+          "description": "Admin rights"
         }
       },
       "errors": [
@@ -29311,14 +29380,17 @@
     },
     "bots.setBotMenuButton": {
       "name": "bots.setBotMenuButton",
+      "description": [
+        "Sets the menu button action for a given user or for all users"
+      ],
       "parameters": {
         "button": {
           "name": "button",
-          "description": " "
+          "description": "Bot menu button action"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID"
         }
       },
       "bot_can_use": true
@@ -29568,7 +29640,7 @@
         },
         "for_everyone": {
           "name": "for_everyone",
-          "description": " "
+          "description": "Whether the history should be deleted for everyone"
         },
         "max_id": {
           "name": "max_id",
@@ -31140,27 +31212,39 @@
     },
     "channels.toggleJoinRequest": {
       "name": "channels.toggleJoinRequest",
+      "description": [
+        "Set whether all users should request admin approval to join the group »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#join-requests"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Group"
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Toggle"
         }
       }
     },
     "channels.toggleJoinToSend": {
       "name": "channels.toggleJoinToSend",
+      "description": [
+        "Set whether all users should join a discussion group in order to comment on a post »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/discussion#requiring-users-to-join-the-group"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Discussion group"
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Toggle"
         }
       }
     },
@@ -32222,7 +32306,10 @@
       }
     },
     "help.getPremiumPromo": {
-      "name": "help.getPremiumPromo"
+      "name": "help.getPremiumPromo",
+      "description": [
+        "Get Telegram Premim promotion information"
+      ]
     },
     "help.getPromoData": {
       "name": "help.getPromoData",
@@ -34309,7 +34396,7 @@
       "parameters": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "Get custom emoji stickers"
         },
         "flags": {
           "name": "flags",
@@ -34340,10 +34427,16 @@
     },
     "messages.getAttachMenuBot": {
       "name": "messages.getAttachMenuBot",
+      "description": [
+        "Returns attachment menu entry for a bot web app that can be launched from the attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot ID"
         }
       },
       "errors": [
@@ -34356,10 +34449,19 @@
     },
     "messages.getAttachMenuBots": {
       "name": "messages.getAttachMenuBots",
+      "description": [
+        "Returns installed attachment menu bot web apps »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
@@ -34870,7 +34972,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
@@ -35017,7 +35122,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
@@ -36674,22 +36782,25 @@
     },
     "messages.rateTranscribedAudio": {
       "name": "messages.rateTranscribedAudio",
+      "description": [
+        "Rate transcribed voice message"
+      ],
       "parameters": {
         "good": {
           "name": "good",
-          "description": " "
+          "description": "Whether the transcription was correct"
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the voice message was sent"
         },
         "transcription_id": {
           "name": "transcription_id",
-          "description": " "
+          "description": "Transcription ID"
         }
       }
     },
@@ -36943,7 +37054,7 @@
       "parameters": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "Reorder custom emoji stickersets"
         },
         "flags": {
           "name": "flags",
@@ -39927,14 +40038,20 @@
     },
     "messages.toggleBotInAttachMenu": {
       "name": "messages.toggleBotInAttachMenu",
+      "description": [
+        "Enable or disable web bot attachment menu »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot ID"
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Toggle"
         }
       }
     },
@@ -40030,14 +40147,17 @@
     },
     "messages.transcribeAudio": {
       "name": "messages.transcribeAudio",
+      "description": [
+        "Transcribe voice message"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Voice message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer ID where the voice message was sent"
         }
       }
     },
@@ -40517,10 +40637,13 @@
     },
     "payments.exportInvoice": {
       "name": "payments.exportInvoice",
+      "description": [
+        "Export invoice"
+      ],
       "parameters": {
         "invoice_media": {
           "name": "invoice_media",
-          "description": " "
+          "description": "Invoice"
         }
       },
       "errors": [
@@ -40566,7 +40689,7 @@
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         },
         "theme_params": {
           "name": "theme_params",
@@ -40650,7 +40773,7 @@
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         },
         "requested_info_id": {
           "name": "requested_info_id",
@@ -40698,7 +40821,7 @@
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         },
         "save": {
           "name": "save",
@@ -41514,14 +41637,17 @@
     },
     "phone.saveCallLog": {
       "name": "phone.saveCallLog",
+      "description": [
+        "Save phone call debug information"
+      ],
       "parameters": {
         "file": {
           "name": "file",
-          "description": " "
+          "description": "Logs"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Phone call"
         }
       }
     },
