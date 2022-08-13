@@ -26833,10 +26833,12 @@
     "account.deleteAccount": {
       "name": "account.deleteAccount",
       "description": [
-        "Delete the user's account from the telegram servers. Can be used, for example, to delete the account of a user that provided the login code, but forgot the 2FA password and no recovery method is configured¹."
+        "Delete the user's account from the telegram servers.",
+        "Can also be used to delete the account of a user that provided the login code, but forgot the 2FA password and no recovery method is configured, see here »¹ for more info on password recovery, and here »² for more info on account deletion."
       ],
       "links": [
-        "https://core.telegram.org/api/srp"
+        "https://core.telegram.org/api/srp#password-recovery",
+        "https://core.telegram.org/api/account-deletion"
       ],
       "parameters": {
         "flags": {
@@ -26848,7 +26850,11 @@
         },
         "password": {
           "name": "password",
-          "description": " "
+          "description": "2FA password¹: this field can be omitted even for accounts with 2FA enabled: in this case account account deletion will be delayed by 7 days as specified in the docs »²",
+          "links": [
+            "https://core.telegram.org/api/srp",
+            "https://core.telegram.org/api/account-deletion"
+          ]
         },
         "reason": {
           "name": "reason",
