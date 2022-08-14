@@ -3582,7 +3582,10 @@
     "botMenuButton": {
       "name": "botMenuButton",
       "description": [
-        "Indicates the action to execute when pressing the in-UI menu button for bots"
+        "URL of a web app¹ to open when the user clicks on the button"
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button"
       ],
       "fields": {
         "text": {
@@ -5819,7 +5822,13 @@
       }
     },
     "chatInvitePublicJoinRequests": {
-      "name": "chatInvitePublicJoinRequests"
+      "name": "chatInvitePublicJoinRequests",
+      "description": [
+        "Used in updates and in the channel log to indicate when a user is requesting to join or has joined a discussion group¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/discussion#requiring-users-to-join-the-group"
+      ]
     },
     "chatOnlines": {
       "name": "chatOnlines",
@@ -11794,14 +11803,26 @@
     },
     "keyboardButtonSimpleWebView": {
       "name": "keyboardButtonSimpleWebView",
+      "description": [
+        "Button to open a bot web app¹ using messages.requestSimpleWebView², without sending user information to the web app.",
+        "Can only be sent or received as part of a reply keyboard, use keyboardButtonWebView¹ for inline keyboards."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps",
+        "https://core.telegram.org/method/messages.requestSimpleWebView",
+        "https://core.telegram.org/constructor/keyboardButtonWebView"
+      ],
       "fields": {
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Button text"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Web app URL¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps"
+          ]
         }
       }
     },
@@ -11912,14 +11933,26 @@
     },
     "keyboardButtonWebView": {
       "name": "keyboardButtonWebView",
+      "description": [
+        "Button to open a bot web app¹ using messages.requestWebView², sending over user information after user confirmation.",
+        "Can only be sent or received as part of an inline keyboard, use keyboardButtonSimpleWebView¹ for reply keyboards."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps",
+        "https://core.telegram.org/method/messages.requestWebView",
+        "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
+      ],
       "fields": {
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Button text"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Web app url¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps"
+          ]
         }
       }
     },
@@ -12612,11 +12645,11 @@
         },
         "recurring_init": {
           "name": "recurring_init",
-          "description": "Whether this is a recurring payment"
+          "description": "Whether this is the first payment of a recurring payment we just subscribed to"
         },
         "recurring_used": {
           "name": "recurring_used",
-          "description": " "
+          "description": "Whether this payment is part of a recurring payment"
         },
         "total_amount": {
           "name": "total_amount",
@@ -12661,11 +12694,11 @@
         },
         "recurring_init": {
           "name": "recurring_init",
-          "description": " "
+          "description": "Whether this is the first payment of a recurring payment we just subscribed to"
         },
         "recurring_used": {
           "name": "recurring_used",
-          "description": " "
+          "description": "Whether this payment is part of a recurring payment"
         },
         "shipping_option_id": {
           "name": "shipping_option_id",
@@ -12783,23 +12816,41 @@
     },
     "messageActionWebViewDataSent": {
       "name": "messageActionWebViewDataSent",
+      "description": [
+        "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (user side service message)."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps"
+      ],
       "fields": {
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Text of the keyboardButtonSimpleWebView¹ that was pressed to open the web app.",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
+          ]
         }
       }
     },
     "messageActionWebViewDataSentMe": {
       "name": "messageActionWebViewDataSentMe",
+      "description": [
+        "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (bot side service message)."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps"
+      ],
       "fields": {
         "data": {
           "name": "data",
-          "description": " "
+          "description": "Relayed data."
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Text of the keyboardButtonSimpleWebView¹ that was pressed to open the web app.",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
+          ]
         }
       }
     },
@@ -16288,16 +16339,16 @@
     "paymentFormMethod": {
       "name": "paymentFormMethod",
       "description": [
-        "Represents a payment method"
+        "Represents an additional payment method"
       ],
       "fields": {
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Payment method description"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL to open in a webview to process the payment"
         }
       }
     },
@@ -19124,10 +19175,13 @@
     },
     "simpleWebViewResultUrl": {
       "name": "simpleWebViewResultUrl",
+      "description": [
+        "Contains the webview URL with appropriate theme parameters added"
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL"
         }
       }
     },
@@ -19186,7 +19240,7 @@
         },
         "recommended": {
           "name": "recommended",
-          "description": " "
+          "description": "Whether the message needs to be labeled as \"recommended\" instead of \"sponsored\""
         },
         "start_param": {
           "name": "start_param",
@@ -22125,7 +22179,10 @@
       }
     },
     "updateReadFeaturedEmojiStickers": {
-      "name": "updateReadFeaturedEmojiStickers"
+      "name": "updateReadFeaturedEmojiStickers",
+      "description": [
+        "Some featured emoji stickers were marked as read"
+      ]
     },
     "updateReadFeaturedStickers": {
       "name": "updateReadFeaturedStickers",
@@ -22797,10 +22854,16 @@
     },
     "updateWebViewResultSent": {
       "name": "updateWebViewResultSent",
+      "description": [
+        "Indicates to a bot that a webview was closed and an inline message was sent on behalf of the user using messages.sendWebViewResultMessage¹"
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+      ],
       "fields": {
         "query_id": {
           "name": "query_id",
-          "description": " "
+          "description": "Web app interaction ID"
         }
       }
     },
@@ -23296,7 +23359,10 @@
         },
         "attach_menu_enabled": {
           "name": "attach_menu_enabled",
-          "description": " "
+          "description": "Whether we installed the attachment menu web app¹ offered by this bot",
+          "links": [
+            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+          ]
         },
         "bot": {
           "name": "bot",
@@ -23304,7 +23370,10 @@
         },
         "bot_attach_menu": {
           "name": "bot_attach_menu",
-          "description": " "
+          "description": "Whether this bot offers an attachment menu web app¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+          ]
         },
         "bot_chat_history": {
           "name": "bot_chat_history",
@@ -23513,7 +23582,7 @@
         },
         "premium_gifts": {
           "name": "premium_gifts",
-          "description": " "
+          "description": "List of Telegram Premium subscriptions we gifted to or were gifted by this user"
         },
         "private_forward_name": {
           "name": "private_forward_name",
@@ -24103,6 +24172,9 @@
     },
     "webViewMessageSent": {
       "name": "webViewMessageSent",
+      "description": [
+        "Info about a sent inline webview message"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -24113,20 +24185,23 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         }
       }
     },
     "webViewResultUrl": {
       "name": "webViewResultUrl",
+      "description": [
+        "Contains the webview URL with appropriate theme and user info parameters added"
+      ],
       "fields": {
         "query_id": {
           "name": "query_id",
-          "description": " "
+          "description": "Webview session ID"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Webview URL to open"
         }
       }
     }
@@ -25745,7 +25820,7 @@
     "SimpleWebViewResult": {
       "name": "SimpleWebViewResult",
       "description": [
-        "Contains the webview URL with appropriate theme and user info parameters added"
+        "Contains the webview URL with appropriate theme parameters added"
       ]
     },
     "SponsoredMessage": {
@@ -25985,10 +26060,7 @@
     "WebViewResult": {
       "name": "WebViewResult",
       "description": [
-        "Contains information about a Web App¹"
-      ],
-      "links": [
-        "https://core.telegram.org/bots/webapps"
+        "Contains the webview URL with appropriate theme and user info parameters added"
       ]
     },
     "account.ContentSettings": {
@@ -35222,7 +35294,7 @@
     "messages.getHistory": {
       "name": "messages.getHistory",
       "description": [
-        "Gets back the conversation history with one interlocutor / within a chat"
+        "Returns the conversation history with one interlocutor / within a chat"
       ],
       "parameters": {
         "add_offset": {
@@ -36752,10 +36824,16 @@
     },
     "messages.prolongWebView": {
       "name": "messages.prolongWebView",
+      "description": [
+        "Indicate to the server (from the user side) that the user is still using a web app."
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot that owns the web app¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -36766,23 +36844,32 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Dialog where the web app was opened."
         },
         "query_id": {
           "name": "query_id",
-          "description": " "
+          "description": "Web app interaction ID obtained from messages.requestWebView¹",
+          "links": [
+            "https://core.telegram.org/method/messages.requestWebView"
+          ]
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
-          "description": " "
+          "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent in reply to this message ID.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+          ]
         },
         "send_as": {
           "name": "send_as",
-          "description": " "
+          "description": "Open the web app as the specified peer"
         },
         "silent": {
           "name": "silent",
-          "description": " "
+          "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent silently (no notifications for the receivers).",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+          ]
         }
       }
     },
@@ -37203,10 +37290,16 @@
     },
     "messages.requestSimpleWebView": {
       "name": "messages.requestSimpleWebView",
+      "description": [
+        "Open a bot web app¹."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot that owns the webapp"
         },
         "flags": {
           "name": "flags",
@@ -37217,11 +37310,11 @@
         },
         "theme_params": {
           "name": "theme_params",
-          "description": " "
+          "description": "Theme parameters"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Web app URL"
         }
       }
     },
@@ -37264,10 +37357,21 @@
     },
     "messages.requestWebView": {
       "name": "messages.requestWebView",
+      "description": [
+        "Open a bot web app¹, sending over user information after user confirmation.",
+        "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps",
+        "https://core.telegram.org/method/messages.prolongWebView"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot that owns the web app¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -37278,35 +37382,44 @@
         },
         "from_bot_menu": {
           "name": "from_bot_menu",
-          "description": " "
+          "description": "Whether the webview was opened after clicking on the bot's menu button."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Dialog where the web app is being opened"
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
-          "description": " "
+          "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent in reply to this message ID.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+          ]
         },
         "send_as": {
           "name": "send_as",
-          "description": " "
+          "description": "Open the web app as the specified peer"
         },
         "silent": {
           "name": "silent",
-          "description": " "
+          "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent silently (no notifications for the receivers).",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+          ]
         },
         "start_param": {
           "name": "start_param",
-          "description": " "
+          "description": "If the web app was opened from the attachment menu using a https://t.me/username?attach=botusername\u0026startattach=data or https://t.me/botusername?startattach=data link, start_param should contain the data from the startattach parameter."
         },
         "theme_params": {
           "name": "theme_params",
-          "description": " "
+          "description": "Theme parameters for the web app"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Web app URL¹",
+          "links": [
+            "https://core.telegram.org/bots/webapps"
+          ]
         }
       }
     },
@@ -37456,7 +37569,7 @@
     "messages.search": {
       "name": "messages.search",
       "description": [
-        "Gets back found messages"
+        "Returns found messages"
       ],
       "parameters": {
         "add_offset": {
@@ -39183,35 +39296,53 @@
     },
     "messages.sendWebViewData": {
       "name": "messages.sendWebViewData",
+      "description": [
+        "Used by the user to relay data from an opened reply keyboard bot web app¹ to the bot that owns it."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot that owns the web app"
         },
         "button_text": {
           "name": "button_text",
-          "description": " "
+          "description": "Text of the keyboardButtonSimpleWebView¹ that was pressed to open the web app.",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
+          ]
         },
         "data": {
           "name": "data",
-          "description": " "
+          "description": "Data to relay to the bot."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Unique client message ID to prevent duplicate sending of the same event"
         }
       }
     },
     "messages.sendWebViewResultMessage": {
       "name": "messages.sendWebViewResultMessage",
+      "description": [
+        "Terminate webview interaction started with messages.requestWebView¹, sending the specified message to the chat on behalf of the user."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.requestWebView"
+      ],
       "parameters": {
         "bot_query_id": {
           "name": "bot_query_id",
-          "description": " "
+          "description": "Webview interaction ID obtained from messages.requestWebView¹",
+          "links": [
+            "https://core.telegram.org/method/messages.requestWebView"
+          ]
         },
         "result": {
           "name": "result",
-          "description": " "
+          "description": "Message to send"
         }
       },
       "errors": [
@@ -40585,36 +40716,45 @@
     },
     "payments.assignAppStoreTransaction": {
       "name": "payments.assignAppStoreTransaction",
+      "description": [
+        "Informs server about a purchase made through the App Store: for official applications only."
+      ],
       "parameters": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Payment purpose"
         },
         "receipt": {
           "name": "receipt",
-          "description": " "
+          "description": "Receipt"
         }
       }
     },
     "payments.assignPlayMarketTransaction": {
       "name": "payments.assignPlayMarketTransaction",
+      "description": [
+        "Informs server about a purchase made through the Play Store: for official applications only."
+      ],
       "parameters": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Payment purpose"
         },
         "receipt": {
           "name": "receipt",
-          "description": " "
+          "description": "Receipt"
         }
       }
     },
     "payments.canPurchasePremium": {
       "name": "payments.canPurchasePremium",
+      "description": [
+        "Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase."
+      ],
       "parameters": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Payment purpose"
         }
       }
     },
