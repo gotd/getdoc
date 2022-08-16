@@ -6984,7 +6984,7 @@
         },
         "free": {
           "name": "free",
-          "description": " "
+          "description": "Whether this custom emoji can be sent by non-Premium users"
         },
         "stickerset": {
           "name": "stickerset",
@@ -11135,7 +11135,10 @@
       }
     },
     "inputStickerSetPremiumGifts": {
-      "name": "inputStickerSetPremiumGifts"
+      "name": "inputStickerSetPremiumGifts",
+      "description": [
+        "Stickers to show when receiving a gifted Telegram Premium subscription"
+      ]
     },
     "inputStickerSetShortName": {
       "name": "inputStickerSetShortName",
@@ -17877,7 +17880,7 @@
         },
         "bot_url": {
           "name": "bot_url",
-          "description": " "
+          "description": "A t.me/$invoice link to an invoice for in-app payment, using the official Premium bot; may be empty if direct payment isn't available."
         },
         "currency": {
           "name": "currency",
@@ -17899,7 +17902,7 @@
         },
         "store_product": {
           "name": "store_product",
-          "description": " "
+          "description": "An identifier for the App Store/Play Store product associated with the Premium gift."
         }
       }
     },
@@ -19718,7 +19721,7 @@
     "stickerSetCovered": {
       "name": "stickerSetCovered",
       "description": [
-        "Stickerset, with a specific sticker as preview"
+        "Stickerset with a single sticker as preview"
       ],
       "fields": {
         "cover": {
@@ -19733,25 +19736,32 @@
     },
     "stickerSetFullCovered": {
       "name": "stickerSetFullCovered",
+      "description": [
+        "Stickerset preview with all stickers of the stickerset included.",
+        "Used when there are only a few stickers in the stickerset, to avoid a further call to messages.getStickerSet¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.getStickerSet"
+      ],
       "fields": {
         "documents": {
           "name": "documents",
-          "description": " "
+          "description": "Stickers"
         },
         "packs": {
           "name": "packs",
-          "description": " "
+          "description": "Emoji information about every sticker in the stickerset"
         },
         "set": {
           "name": "set",
-          "description": " "
+          "description": "Stickerset"
         }
       }
     },
     "stickerSetMultiCovered": {
       "name": "stickerSetMultiCovered",
       "description": [
-        "Stickerset, with a specific set of stickers as preview"
+        "Stickerset, with multiple stickers as preview"
       ],
       "fields": {
         "covers": {
@@ -23582,7 +23592,7 @@
         },
         "premium_gifts": {
           "name": "premium_gifts",
-          "description": "List of Telegram Premium subscriptions we gifted to or were gifted by this user"
+          "description": "Telegram Premium subscriptions gift options"
         },
         "private_forward_name": {
           "name": "private_forward_name",
@@ -25907,7 +25917,7 @@
     "StickerSetCovered": {
       "name": "StickerSetCovered",
       "description": [
-        "Stickerset, with a specific sticker as preview"
+        "Stickerset preview"
       ]
     },
     "Theme": {
