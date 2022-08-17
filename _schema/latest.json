@@ -1407,7 +1407,6 @@
           "payments.getPaymentForm",
           "payments.getPaymentReceipt",
           "payments.getSavedInfo",
-          "payments.requestRecurringPayment",
           "payments.sendPaymentForm",
           "payments.validateRequestedInfo",
           "phone.acceptCall",
@@ -11236,7 +11235,7 @@
         },
         "restore": {
           "name": "restore",
-          "description": " "
+          "description": "Pass true if this is a restore of a Telegram Premium purchase; only for the App Store"
         }
       }
     },
@@ -28562,6 +28561,11 @@
         },
         {
           "code": 400,
+          "type": "AUTH_TOKEN_EXCEPTION",
+          "description": "An error occurred while importing the auth token."
+        },
+        {
+          "code": 400,
           "type": "AUTH_TOKEN_EXPIRED",
           "description": "The authorization token has expired."
         },
@@ -29404,7 +29408,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "RIGHTS_NOT_MODIFIED"
+          "type": "RIGHTS_NOT_MODIFIED",
+          "description": "The new admin rights are equal to the old rights, no change was made."
         }
       ],
       "bot_can_use": true
@@ -29461,7 +29466,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "RIGHTS_NOT_MODIFIED"
+          "type": "RIGHTS_NOT_MODIFIED",
+          "description": "The new admin rights are equal to the old rights, no change was made."
         }
       ],
       "bot_can_use": true
@@ -29481,6 +29487,13 @@
           "description": "User ID"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BUTTON_TEXT_INVALID",
+          "description": "The specified button text is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.checkUsername": {
@@ -31004,10 +31017,6 @@
           "description": "You have successfully requested to join this chat or channel."
         },
         {
-          "code": 500,
-          "type": "MEMBER_CHAT_ADD_FAILED"
-        },
-        {
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
@@ -31334,7 +31343,14 @@
           "name": "enabled",
           "description": "Toggle"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        }
+      ]
     },
     "channels.togglePreHistoryHidden": {
       "name": "channels.togglePreHistoryHidden",
@@ -31986,13 +32002,7 @@
           "name": "phone",
           "description": "Phone number in international format, possibly obtained from a t.me/+number or tg://resolve?phone=number URI."
         }
-      },
-      "errors": [
-        {
-          "code": 400,
-          "type": "PHONE_NOT_OCCUPIED"
-        }
-      ]
+      }
     },
     "contacts.resolveUsername": {
       "name": "contacts.resolveUsername",
@@ -36271,7 +36281,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "EMOTICON_STICKERPACK_MISSING"
+          "type": "EMOTICON_STICKERPACK_MISSING",
+          "description": "inputStickerSetDice.emoji cannot be empty."
         },
         {
           "code": 406,
@@ -38232,6 +38243,11 @@
         },
         {
           "code": 400,
+          "type": "VOICE_MESSAGES_FORBIDDEN",
+          "description": "This user's privacy settings forbid you from sending voice messages."
+        },
+        {
+          "code": 400,
           "type": "WEBPAGE_CURL_FAILED",
           "description": "Failure while fetching the webpage with cURL."
         },
@@ -38374,7 +38390,8 @@
         },
         {
           "code": 403,
-          "type": "CHAT_GUEST_SEND_FORBIDDEN"
+          "type": "CHAT_GUEST_SEND_FORBIDDEN",
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -38450,10 +38467,6 @@
           "code": 400,
           "type": "FILE_REFERENCE_EXPIRED",
           "description": "File reference expired, it must be refetched as described in the documentation."
-        },
-        {
-          "code": 500,
-          "type": "FILE_WRITE_FAILED"
         },
         {
           "code": 400,
@@ -38785,7 +38798,8 @@
         },
         {
           "code": 403,
-          "type": "CHAT_GUEST_SEND_FORBIDDEN"
+          "type": "CHAT_GUEST_SEND_FORBIDDEN",
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -39854,7 +39868,8 @@
         },
         {
           "code": 400,
-          "type": "RESULT_ID_INVALID"
+          "type": "RESULT_ID_INVALID",
+          "description": "One of the specified result IDs is invalid."
         },
         {
           "code": 400,
@@ -40889,23 +40904,6 @@
         "Get saved payment information"
       ]
     },
-    "payments.requestRecurringPayment": {
-      "name": "payments.requestRecurringPayment",
-      "parameters": {
-        "invoice_media": {
-          "name": "invoice_media",
-          "description": " "
-        },
-        "recurring_init_charge": {
-          "name": "recurring_init_charge",
-          "description": " "
-        },
-        "user_id": {
-          "name": "user_id",
-          "description": " "
-        }
-      }
-    },
     "payments.sendPaymentForm": {
       "name": "payments.sendPaymentForm",
       "description": [
@@ -41164,7 +41162,8 @@
         },
         {
           "code": 400,
-          "type": "CREATE_CALL_FAILED"
+          "type": "CREATE_CALL_FAILED",
+          "description": "An error occurred while creating the call."
         },
         {
           "code": 400,
@@ -41588,10 +41587,6 @@
           "description": "The provided JSON data is invalid."
         },
         {
-          "code": 500,
-          "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
-        },
-        {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
           "description": "The group call has already ended."
@@ -41735,11 +41730,6 @@
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
-        },
-        {
-          "code": 500,
-          "type": "PARTICIPANT_CALL_FAILED",
-          "description": "Failure while making call."
         },
         {
           "code": 400,
@@ -43102,10 +43092,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": 403,
-          "type": "MTPROTO_CLUSTER_INVALID"
-        },
-        {
           "code": 400,
           "type": "OFFSET_INVALID",
           "description": "The provided offset is invalid."
@@ -43486,6 +43472,11 @@
       "type": "AUTH_TOKEN_ALREADY_ACCEPTED",
       "description": "The specified auth token was already accepted."
     },
+    "AUTH_TOKEN_EXCEPTION": {
+      "code": 400,
+      "type": "AUTH_TOKEN_EXCEPTION",
+      "description": "An error occurred while importing the auth token."
+    },
     "AUTH_TOKEN_EXPIRED": {
       "code": 400,
       "type": "AUTH_TOKEN_EXPIRED",
@@ -43609,6 +43600,11 @@
       "code": 400,
       "type": "BUTTON_DATA_INVALID",
       "description": "The data of one or more of the buttons you provided is invalid."
+    },
+    "BUTTON_TEXT_INVALID": {
+      "code": 400,
+      "type": "BUTTON_TEXT_INVALID",
+      "description": "The specified button text is invalid."
     },
     "BUTTON_TYPE_INVALID": {
       "code": 400,
@@ -43734,7 +43730,8 @@
     },
     "CHAT_GUEST_SEND_FORBIDDEN": {
       "code": 403,
-      "type": "CHAT_GUEST_SEND_FORBIDDEN"
+      "type": "CHAT_GUEST_SEND_FORBIDDEN",
+      "description": "You join the discussion group before commenting, see here » for more info."
     },
     "CHAT_ID_EMPTY": {
       "code": 400,
@@ -43876,7 +43873,8 @@
     },
     "CREATE_CALL_FAILED": {
       "code": 400,
-      "type": "CREATE_CALL_FAILED"
+      "type": "CREATE_CALL_FAILED",
+      "description": "An error occurred while creating the call."
     },
     "CURRENCY_TOTAL_AMOUNT_INVALID": {
       "code": 400,
@@ -43970,7 +43968,8 @@
     },
     "EMOTICON_STICKERPACK_MISSING": {
       "code": 400,
-      "type": "EMOTICON_STICKERPACK_MISSING"
+      "type": "EMOTICON_STICKERPACK_MISSING",
+      "description": "inputStickerSetDice.emoji cannot be empty."
     },
     "ENCRYPTED_MESSAGE_INVALID": {
       "code": 400,
@@ -44107,10 +44106,6 @@
       "type": "FILE_TITLE_EMPTY",
       "description": "An empty file title was specified."
     },
-    "FILE_WRITE_FAILED": {
-      "code": 500,
-      "type": "FILE_WRITE_FAILED"
-    },
     "FILTER_ID_INVALID": {
       "code": 400,
       "type": "FILTER_ID_INVALID",
@@ -44205,10 +44200,6 @@
       "code": 400,
       "type": "GRAPH_OUTDATED_RELOAD",
       "description": "The graph is outdated, please get a new async token using stats.getBroadcastStats."
-    },
-    "GROUPCALL_ADD_PARTICIPANTS_FAILED": {
-      "code": 500,
-      "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
     },
     "GROUPCALL_ALREADY_DISCARDED": {
       "code": 400,
@@ -44434,10 +44425,6 @@
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
     },
-    "MEMBER_CHAT_ADD_FAILED": {
-      "code": 500,
-      "type": "MEMBER_CHAT_ADD_FAILED"
-    },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
       "type": "MESSAGE_AUTHOR_REQUIRED",
@@ -44497,10 +44484,6 @@
       "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
-    },
-    "MTPROTO_CLUSTER_INVALID": {
-      "code": 403,
-      "type": "MTPROTO_CLUSTER_INVALID"
     },
     "MULTI_MEDIA_TOO_LONG": {
       "code": 400,
@@ -44566,11 +44549,6 @@
       "code": 400,
       "type": "PARTICIPANTS_TOO_FEW",
       "description": "Not enough participants."
-    },
-    "PARTICIPANT_CALL_FAILED": {
-      "code": 500,
-      "type": "PARTICIPANT_CALL_FAILED",
-      "description": "Failure while making call."
     },
     "PARTICIPANT_ID_INVALID": {
       "code": 400,
@@ -44675,10 +44653,6 @@
       "code": 400,
       "type": "PHONE_CODE_INVALID",
       "description": "The provided phone code is invalid."
-    },
-    "PHONE_NOT_OCCUPIED": {
-      "code": 400,
-      "type": "PHONE_NOT_OCCUPIED"
     },
     "PHONE_NUMBER_APP_SIGNUP_FORBIDDEN": {
       "code": 400,
@@ -44957,7 +44931,8 @@
     },
     "RESULT_ID_INVALID": {
       "code": 400,
-      "type": "RESULT_ID_INVALID"
+      "type": "RESULT_ID_INVALID",
+      "description": "One of the specified result IDs is invalid."
     },
     "RESULT_TYPE_INVALID": {
       "code": 400,
@@ -44971,7 +44946,8 @@
     },
     "RIGHTS_NOT_MODIFIED": {
       "code": 400,
-      "type": "RIGHTS_NOT_MODIFIED"
+      "type": "RIGHTS_NOT_MODIFIED",
+      "description": "The new admin rights are equal to the old rights, no change was made."
     },
     "RIGHT_FORBIDDEN": {
       "code": 403,
@@ -45490,6 +45466,11 @@
       "code": 400,
       "type": "VIDEO_TITLE_EMPTY",
       "description": "The specified video title is empty."
+    },
+    "VOICE_MESSAGES_FORBIDDEN": {
+      "code": 400,
+      "type": "VOICE_MESSAGES_FORBIDDEN",
+      "description": "This user's privacy settings forbid you from sending voice messages."
     },
     "WALLPAPER_FILE_INVALID": {
       "code": 400,
