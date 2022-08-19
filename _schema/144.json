@@ -2334,7 +2334,10 @@
     "account.wallPapers": {
       "name": "account.wallPapers",
       "description": [
-        "Installed wallpapers"
+        "Installed wallpapers¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "fields": {
         "hash": {
@@ -2346,14 +2349,20 @@
         },
         "wallpapers": {
           "name": "wallpapers",
-          "description": "Wallpapers"
+          "description": "Wallpapers¹",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
     "account.wallPapersNotModified": {
       "name": "account.wallPapersNotModified",
       "description": [
-        "No new wallpapers were found"
+        "No new wallpapers¹ were found"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ]
     },
     "account.webAuthorizations": {
@@ -11296,11 +11305,17 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": "Wallpaper"
+          "description": "Wallpaper¹",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         },
         "wallpaper_settings": {
           "name": "wallpaper_settings",
-          "description": "Wallpaper settings"
+          "description": "Wallpaper¹ settings.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
@@ -11373,7 +11388,10 @@
     "inputWallPaper": {
       "name": "inputWallPaper",
       "description": [
-        "Wallpaper"
+        "Wallpaper¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "fields": {
         "access_hash": {
@@ -11382,16 +11400,20 @@
         },
         "id": {
           "name": "id",
-          "description": "Wallpaper ID"
+          "description": "Wallpaper¹ ID",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
     "inputWallPaperNoFile": {
       "name": "inputWallPaperNoFile",
       "description": [
-        "Wallpaper with no file access hash, used for example when deleting (unsave=true) wallpapers using account.saveWallPaper¹, specifying just the wallpaper ID."
+        "Wallpaper¹ with no file access hash, used for example when deleting (unsave=true) wallpapers using account.saveWallPaper², specifying just the wallpaper ID."
       ],
       "links": [
+        "https://core.telegram.org/api/wallpapers",
         "https://core.telegram.org/method/account.saveWallPaper"
       ],
       "fields": {
@@ -11404,7 +11426,11 @@
     "inputWallPaperSlug": {
       "name": "inputWallPaperSlug",
       "description": [
-        "Wallpaper by slug (a unique ID)"
+        "Wallpaper¹ by slug (a unique ID, obtained from a wallpaper link »²)"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers",
+        "https://core.telegram.org/api/links#wallpaper-links"
       ],
       "fields": {
         "slug": {
@@ -20156,7 +20182,10 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": "Wallpaper"
+          "description": "Wallpaper¹",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
@@ -23784,7 +23813,10 @@
     "wallPaper": {
       "name": "wallPaper",
       "description": [
-        "Wallpaper settings."
+        "Represents a wallpaper¹ based on an image."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "fields": {
         "access_hash": {
@@ -23793,11 +23825,11 @@
         },
         "creator": {
           "name": "creator",
-          "description": "Creator of the wallpaper"
+          "description": "Whether we created this wallpaper"
         },
         "dark": {
           "name": "dark",
-          "description": "Dark mode"
+          "description": "Whether this wallpaper should be used in dark mode."
         },
         "default": {
           "name": "default",
@@ -23820,31 +23852,40 @@
         },
         "pattern": {
           "name": "pattern",
-          "description": "Pattern"
+          "description": "Whether this is a pattern wallpaper »¹",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#pattern-wallpaper"
+          ]
         },
         "settings": {
           "name": "settings",
-          "description": "Wallpaper settings"
+          "description": "Info on how to generate the wallpaper, according to these instructions »¹.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         },
         "slug": {
           "name": "slug",
-          "description": "Unique wallpaper ID"
+          "description": "Unique wallpaper ID, used when generating wallpaper links¹ or importing wallpaper links².",
+          "links": [
+            "https://core.telegram.org/api/links#wallpaper-links",
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
     "wallPaperNoFile": {
       "name": "wallPaperNoFile",
       "description": [
-        "Wallpaper with no file access hash, used for example when deleting (unsave=true) wallpapers using account.saveWallPaper¹, specifying just the wallpaper ID.",
-        "Also used for some default wallpapers which contain only colours."
+        "Represents a wallpaper¹ only based on colors/gradients."
       ],
       "links": [
-        "https://core.telegram.org/method/account.saveWallPaper"
+        "https://core.telegram.org/api/wallpapers"
       ],
       "fields": {
         "dark": {
           "name": "dark",
-          "description": "Dark mode"
+          "description": "Whether this wallpaper should be used in dark mode."
         },
         "default": {
           "name": "default",
@@ -23863,23 +23904,33 @@
         },
         "settings": {
           "name": "settings",
-          "description": "Wallpaper settings"
+          "description": "Info on how to generate the wallpaper."
         }
       }
     },
     "wallPaperSettings": {
       "name": "wallPaperSettings",
       "description": [
-        "Wallpaper settings"
+        "Wallpaper¹ rendering information."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "fields": {
         "background_color": {
           "name": "background_color",
-          "description": "If set, a PNG pattern is to be combined with the color chosen by the user: the main color of the background in RGB24 format"
+          "description": "Used for solid »¹, [gradient »]/api/wallpapers#gradient-fill) and freeform gradient »² fills.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#solid-fill",
+            "https://core.telegram.org/api/wallpapers#freeform-gradient-fill"
+          ]
         },
         "blur": {
           "name": "blur",
-          "description": "If set, the wallpaper must be downscaled to fit in 450x450 square and then box-blurred with radius 12"
+          "description": "For image wallpapers »¹: if set, the JPEG must be downscaled to fit in 450x450 square and then box-blurred with radius 12.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#image-wallpapers"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -23890,27 +23941,40 @@
         },
         "fourth_background_color": {
           "name": "fourth_background_color",
-          "description": "If set, a PNG pattern is to be combined with the first, second, third and fourth background colors (RGB24 format) in a freeform gradient"
+          "description": "Used for freeform gradient »¹ fills.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#freeform-gradient-fill"
+          ]
         },
         "intensity": {
           "name": "intensity",
-          "description": "Intensity of the pattern when it is shown above the main background color, 0-100"
+          "description": "Used for pattern wallpapers »¹.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#pattern-wallpapers"
+          ]
         },
         "motion": {
           "name": "motion",
-          "description": "If set, the background needs to be slightly moved when device is rotated"
+          "description": "If set, the background needs to be slightly moved when the device is rotated."
         },
         "rotation": {
           "name": "rotation",
-          "description": "Clockwise rotation angle of the gradient, in degrees; 0-359. Should be always divisible by 45"
+          "description": "Clockwise rotation angle of the gradient, in degrees; 0-359. Should be always divisible by 45."
         },
         "second_background_color": {
           "name": "second_background_color",
-          "description": "If set, a PNG pattern is to be combined with the first and second background colors (RGB24 format) in a top-bottom gradient"
+          "description": "Used for gradient »¹ and freeform gradient »² fills.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#gradient-fill",
+            "https://core.telegram.org/api/wallpapers#freeform-gradient-fill"
+          ]
         },
         "third_background_color": {
           "name": "third_background_color",
-          "description": "If set, a PNG pattern is to be combined with the first, second and third background colors (RGB24 format) in a freeform gradient"
+          "description": "Used for freeform gradient »¹ fills.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#freeform-gradient-fill"
+          ]
         }
       }
     },
@@ -24265,7 +24329,10 @@
     "Account.WallPapers": {
       "name": "Account.WallPapers",
       "description": [
-        "Wallpapers"
+        "Wallpapers¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ]
     },
     "Account.WebAuthorizations": {
@@ -25119,7 +25186,10 @@
     "InputWallPaper": {
       "name": "InputWallPaper",
       "description": [
-        "Wallpaper"
+        "Wallpaper¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ]
     },
     "InputWebDocument": {
@@ -26021,13 +26091,16 @@
     "WallPaper": {
       "name": "WallPaper",
       "description": [
-        "Object contains info on a wallpaper."
+        "Object contains info on a wallpaper¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ]
     },
     "WallPaperSettings": {
       "name": "WallPaperSettings",
       "description": [
-        "Wallpaper settings"
+        "Wallpaper rendering information."
       ]
     },
     "WebAuthorization": {
@@ -27083,12 +27156,18 @@
     "account.getMultiWallPapers": {
       "name": "account.getMultiWallPapers",
       "description": [
-        "Get info about multiple wallpapers"
+        "Get info about multiple wallpapers¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "parameters": {
         "wallpapers": {
           "name": "wallpapers",
-          "description": "Wallpapers to fetch info about"
+          "description": "Wallpapers¹ to fetch info about",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
@@ -27297,12 +27376,18 @@
     "account.getWallPaper": {
       "name": "account.getWallPaper",
       "description": [
-        "Get info about a certain wallpaper"
+        "Get info about a certain wallpaper¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "parameters": {
         "wallpaper": {
           "name": "wallpaper",
-          "description": "The wallpaper to get info about"
+          "description": "The wallpaper¹ to get info about",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       },
       "errors": [
@@ -27316,7 +27401,10 @@
     "account.getWallPapers": {
       "name": "account.getWallPapers",
       "description": [
-        "Returns a list of available wallpapers."
+        "Returns a list of available wallpapers¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "parameters": {
         "hash": {
@@ -27430,16 +27518,25 @@
     "account.installWallPaper": {
       "name": "account.installWallPaper",
       "description": [
-        "Install wallpaper"
+        "Install wallpaper¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "parameters": {
         "settings": {
           "name": "settings",
-          "description": "Wallpaper settings"
+          "description": "Wallpaper¹ settings",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": "Wallpaper to install"
+          "description": "Wallpaper¹ to install",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       },
       "errors": [
@@ -27650,7 +27747,10 @@
     "account.resetWallPapers": {
       "name": "account.resetWallPapers",
       "description": [
-        "Delete installed wallpapers"
+        "Delete all installed wallpapers¹, reverting to the default wallpaper set."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ]
     },
     "account.resetWebAuthorization": {
@@ -27792,7 +27892,10 @@
     "account.saveWallPaper": {
       "name": "account.saveWallPaper",
       "description": [
-        "Install/uninstall wallpaper"
+        "Install/uninstall wallpaper¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "parameters": {
         "settings": {
@@ -27805,7 +27908,10 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": "Wallpaper to save"
+          "description": "Wallpaper¹ to install or uninstall",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       },
       "errors": [
@@ -28428,7 +28534,10 @@
     "account.uploadWallPaper": {
       "name": "account.uploadWallPaper",
       "description": [
-        "Create and upload a new wallpaper"
+        "Create and upload a new wallpaper¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
       ],
       "parameters": {
         "file": {
