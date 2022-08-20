@@ -5346,7 +5346,12 @@
         },
         "other": {
           "name": "other",
-          "description": "Set this flag if none of the other flags are set, but you still want the user to be an admin."
+          "description": "Set this flag if none of the other flags are set, but you still want the user to be an admin: if this or any of the other flags are set, the admin can get the chat admin log¹, get chat statistics², get message statistics in channels³, get channel members, see anonymous administrators in supergroups and ignore slow mode.",
+          "links": [
+            "https://core.telegram.org/api/recent-actions",
+            "https://core.telegram.org/api/stats",
+            "https://core.telegram.org/api/stats"
+          ]
         },
         "pin_messages": {
           "name": "pin_messages",
@@ -9493,7 +9498,10 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "The game's short name"
+          "description": "The game's short name, usually obtained from a game link »¹",
+          "links": [
+            "https://core.telegram.org/api/links#game-links"
+          ]
         }
       }
     },
@@ -32864,7 +32872,10 @@
         },
         "lang_pack": {
           "name": "lang_pack",
-          "description": "Language pack name"
+          "description": "Language pack name, usually obtained from a language pack link¹",
+          "links": [
+            "https://core.telegram.org/api/links#language-pack-links"
+          ]
         }
       },
       "errors": [
@@ -32892,7 +32903,10 @@
         },
         "lang_pack": {
           "name": "lang_pack",
-          "description": "Language pack name"
+          "description": "Language pack name, usually obtained from a language pack link¹",
+          "links": [
+            "https://core.telegram.org/api/links#language-pack-links"
+          ]
         }
       },
       "errors": [
@@ -32943,7 +32957,10 @@
         },
         "lang_pack": {
           "name": "lang_pack",
-          "description": "Language pack name"
+          "description": "Language pack name, usually obtained from a language pack link¹",
+          "links": [
+            "https://core.telegram.org/api/links#language-pack-links"
+          ]
         }
       },
       "errors": [
@@ -40196,7 +40213,7 @@
         "Start a conversation with a bot using a deep linking parameter¹"
       ],
       "links": [
-        "https://core.telegram.org/bots#deep-linking"
+        "https://core.telegram.org/api/links#bot-links"
       ],
       "parameters": {
         "bot": {
@@ -40215,7 +40232,7 @@
           "name": "start_param",
           "description": "Deep linking parameter¹",
           "links": [
-            "https://core.telegram.org/bots#deep-linking"
+            "https://core.telegram.org/api/links#bot-links"
           ]
         }
       },
