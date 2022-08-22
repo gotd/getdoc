@@ -6160,7 +6160,10 @@
         },
         "me_url_prefix": {
           "name": "me_url_prefix",
-          "description": "The domain to use to parse in-app links.For example t.me indicates that t.me/username links should parsed to @username, t.me/addsticker/name should be parsed to the appropriate stickerset and so on..."
+          "description": "The domain to use to parse deep links »¹.",
+          "links": [
+            "https://core.telegram.org/api/links"
+          ]
         },
         "megagroup_size_max": {
           "name": "megagroup_size_max",
@@ -8108,7 +8111,10 @@
     "help.deepLinkInfo": {
       "name": "help.deepLinkInfo",
       "description": [
-        "Deep linking info"
+        "Deep link info, see the here for more details¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#unsupported-links"
       ],
       "fields": {
         "entities": {
@@ -9611,9 +9617,10 @@
     "inputInvoiceSlug": {
       "name": "inputInvoiceSlug",
       "description": [
-        "An invoice slug taken from a t.me/invoice/ link or from the premium_invoice_slug app config parameter »¹"
+        "An invoice slug taken from an invoice deep link¹ or from the premium_invoice_slug app config parameter »²"
       ],
       "links": [
+        "https://core.telegram.org/api/links#invoice-links",
         "https://core.telegram.org/api/config#client-configuration"
       ],
       "fields": {
@@ -11159,12 +11166,18 @@
     "inputStickerSetShortName": {
       "name": "inputStickerSetShortName",
       "description": [
-        "Stickerset by short name, from tg://addstickers?set=short_name"
+        "Stickerset by short name, from a stickerset deep link »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#stickerset-links"
       ],
       "fields": {
         "short_name": {
           "name": "short_name",
-          "description": "From tg://addstickers?set=short_name"
+          "description": "Short name from a stickerset deep link »¹",
+          "links": [
+            "https://core.telegram.org/api/links#stickerset-links"
+          ]
         }
       }
     },
@@ -11335,7 +11348,10 @@
       "fields": {
         "slug": {
           "name": "slug",
-          "description": "Unique theme ID"
+          "description": "Unique theme ID obtained from a theme deep link »¹",
+          "links": [
+            "https://core.telegram.org/api/links#theme-links"
+          ]
         }
       }
     },
@@ -12674,8 +12690,9 @@
         },
         "invoice_slug": {
           "name": "invoice_slug",
-          "description": "An invoice slug taken from a t.me/invoice/ link or from the premium_invoice_slug app config parameter »¹",
+          "description": "An invoice slug taken from an invoice deep link¹ or from the premium_invoice_slug app config parameter »²",
           "links": [
+            "https://core.telegram.org/api/links#invoice-links",
             "https://core.telegram.org/api/config#client-configuration"
           ]
         },
@@ -17913,7 +17930,10 @@
         },
         "bot_url": {
           "name": "bot_url",
-          "description": "A t.me/$invoice link to an invoice for in-app payment, using the official Premium bot; may be empty if direct payment isn't available."
+          "description": "An invoice deep link »¹ to an invoice for in-app payment, using the official Premium bot; may be empty if direct payment isn't available.",
+          "links": [
+            "https://core.telegram.org/api/links#invoice-links"
+          ]
         },
         "currency": {
           "name": "currency",
@@ -19720,7 +19740,10 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Short name of stickerset to use in tg://addstickers?set=short_name"
+          "description": "Short name of stickerset, used when sharing stickerset using stickerset deep links¹.",
+          "links": [
+            "https://core.telegram.org/api/links#stickerset-links"
+          ]
         },
         "thumb_dc_id": {
           "name": "thumb_dc_id",
@@ -24874,7 +24897,10 @@
     "Help.DeepLinkInfo": {
       "name": "Help.DeepLinkInfo",
       "description": [
-        "Contains information about a tg:// deep link"
+        "Contains information about an unsupported deep link »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#unsupported-links"
       ]
     },
     "Help.PassportConfig": {
@@ -28875,11 +28901,12 @@
       "name": "auth.exportLoginToken",
       "description": [
         "Generate a login token, for login via QR code¹.",
-        "The generated login token should be encoded using base64url, then shown as a tg://login?token=base64encodedtoken URL in the QR code.",
+        "The generated login token should be encoded using base64url, then shown as a tg://login?token=base64encodedtoken deep link »² in the QR code.",
         "For more info, see login via QR code¹."
       ],
       "links": [
         "https://core.telegram.org/api/qr-login",
+        "https://core.telegram.org/api/links#qr-code-login-links",
         "https://core.telegram.org/api/qr-login"
       ],
       "parameters": {
@@ -32117,7 +32144,10 @@
       "parameters": {
         "phone": {
           "name": "phone",
-          "description": "Phone number in international format, possibly obtained from a t.me/+number or tg://resolve?phone=number URI."
+          "description": "Phone number in international format, possibly obtained from a phone number deep link¹.",
+          "links": [
+            "https://core.telegram.org/api/links#phone-number-links"
+          ]
         }
       }
     },
@@ -32481,12 +32511,15 @@
     "help.getDeepLinkInfo": {
       "name": "help.getDeepLinkInfo",
       "description": [
-        "Get info about a t.me link"
+        "Get info about an unsupported deep link, see here for more info »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#unsupported-links"
       ],
       "parameters": {
         "path": {
           "name": "path",
-          "description": "Path in t.me/path"
+          "description": "Path component of a tg: link"
         }
       }
     },
@@ -33152,7 +33185,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Invite hash in t.me/joinchat/hash or t.me/+hash"
+          "description": "Invite hash from chat invite deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-invite-links"
+          ]
         }
       },
       "errors": [
@@ -34591,10 +34627,12 @@
     "messages.getAllDrafts": {
       "name": "messages.getAllDrafts",
       "description": [
-        "Save get all message drafts¹."
+        "Return all message drafts¹.",
+        "Returns all the latest updateDraftMessage² updates related to all chats with drafts."
       ],
       "links": [
-        "https://core.telegram.org/api/drafts"
+        "https://core.telegram.org/api/drafts",
+        "https://core.telegram.org/constructor/updateDraftMessage"
       ]
     },
     "messages.getAllStickers": {
@@ -36759,7 +36797,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "hash from t.me/joinchat/hash"
+          "description": "hash from a chat invite deep link¹",
+          "links": [
+            "https://core.telegram.org/api/links#chat-invite-links"
+          ]
         }
       },
       "errors": [
@@ -37228,7 +37269,8 @@
     "messages.receivedQueue": {
       "name": "messages.receivedQueue",
       "description": [
-        "Confirms receipt of messages in a secret chat by client, cancels push notifications."
+        "Confirms receipt of messages in a secret chat by client, cancels push notifications.",
+        "The method returns a list of random_ids of messages for which push notifications were cancelled."
       ],
       "parameters": {
         "max_qts": {
@@ -37555,7 +37597,10 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "If the web app was opened from the attachment menu using a https://t.me/username?attach=botusername\u0026startattach=data or https://t.me/botusername?startattach=data link, start_param should contain the data from the startattach parameter."
+          "description": "If the web app was opened from the attachment menu using a attachment menu deep link¹, start_param should contain the data from the startattach parameter.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-attachment-menu-links"
+          ]
         },
         "theme_params": {
           "name": "theme_params",
@@ -41169,7 +41214,8 @@
     "phone.checkGroupCall": {
       "name": "phone.checkGroupCall",
       "description": [
-        "Check whether the group call Server Forwarding Unit is currently receiving the streams with the specified WebRTC source IDs"
+        "Check whether the group call Server Forwarding Unit is currently receiving the streams with the specified WebRTC source IDs.",
+        "Returns an intersection of the source IDs specified in sources, and the source IDs currently being forwarded by the SFU."
       ],
       "parameters": {
         "call": {
@@ -41469,7 +41515,10 @@
     "phone.exportGroupCallInvite": {
       "name": "phone.exportGroupCallInvite",
       "description": [
-        "Get an invite link for a group call or livestream"
+        "Get an invite link¹ for a group call or livestream"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#voice-chat-video-chat-livestream-links"
       ],
       "parameters": {
         "call": {
@@ -41478,7 +41527,7 @@
         },
         "can_self_unmute": {
           "name": "can_self_unmute",
-          "description": "For livestreams, if set, users that join using this link will be able to speak without explicitly requesting permission by (for example by raising their hand)."
+          "description": "For livestreams or muted group chats, if set, users that join using this link will be able to speak without explicitly requesting permission by (for example by raising their hand)."
         },
         "flags": {
           "name": "flags",
@@ -41687,7 +41736,10 @@
         },
         "invite_hash": {
           "name": "invite_hash",
-          "description": "The invitation hash from the invite link: https://t.me/username?voicechat=hash"
+          "description": "The invitation hash from the invite link »¹, if provided allows speaking in a livestream or muted group chat.",
+          "links": [
+            "https://core.telegram.org/api/links#video-chat-video-chat-livestream-links"
+          ]
         },
         "join_as": {
           "name": "join_as",
@@ -41965,7 +42017,7 @@
     "phone.setCallRating": {
       "name": "phone.setCallRating",
       "description": [
-        "Rate a call"
+        "Rate a call, returns info about the rating message sent to the official VoIP bot."
       ],
       "parameters": {
         "comment": {
@@ -42119,7 +42171,7 @@
     "photos.deletePhotos": {
       "name": "photos.deletePhotos",
       "description": [
-        "Deletes profile photos."
+        "Deletes profile photos. The method returns a list of successfully deleted photo IDs."
       ],
       "parameters": {
         "id": {
