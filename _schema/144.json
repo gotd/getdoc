@@ -11492,6 +11492,9 @@
     },
     "inputWebFileAudioAlbumThumbLocation": {
       "name": "inputWebFileAudioAlbumThumbLocation",
+      "description": [
+        "Used to download an album cover for any music file."
+      ],
       "fields": {
         "document": {
           "name": "document",
@@ -11506,7 +11509,7 @@
         },
         "performer": {
           "name": "performer",
-          "description": " "
+          "description": "Performer"
         },
         "small": {
           "name": "small",
@@ -11514,23 +11517,32 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Song title"
         }
       }
     },
     "inputWebFileGeoPointLocation": {
       "name": "inputWebFileGeoPointLocation",
       "description": [
-        "Geolocation"
+        "Used to download a server-generated image with the map preview from a geoPoint¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/geoPoint"
       ],
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Access hash"
+          "description": "Access hash of the geoPoint¹",
+          "links": [
+            "https://core.telegram.org/constructor/geoPoint"
+          ]
         },
         "geo_point": {
           "name": "geo_point",
-          "description": "Geolocation"
+          "description": "Generated from the lat, long and accuracy_radius parameters of the geoPoint¹",
+          "links": [
+            "https://core.telegram.org/constructor/geoPoint"
+          ]
         },
         "h": {
           "name": "h",
