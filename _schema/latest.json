@@ -6778,7 +6778,10 @@
       }
     },
     "dialogFilterDefault": {
-      "name": "dialogFilterDefault"
+      "name": "dialogFilterDefault",
+      "description": [
+        "Used only when reordering folders to indicate the default (all chats) folder."
+      ]
     },
     "dialogFilterSuggested": {
       "name": "dialogFilterSuggested",
@@ -15408,7 +15411,10 @@
     "messages.transcribedAudio": {
       "name": "messages.transcribedAudio",
       "description": [
-        "Transcribed text from a voice message"
+        "Transcribed text from a voice message »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/transcribe"
       ],
       "fields": {
         "flags": {
@@ -22755,9 +22761,10 @@
     "updateTranscribedAudio": {
       "name": "updateTranscribedAudio",
       "description": [
-        "A pending transcription initiated with messages.transcribeAudio¹ was updated."
+        "A pending voice message transcription »¹ initiated with messages.transcribeAudio² was updated."
       ],
       "links": [
+        "https://core.telegram.org/api/transcribe",
         "https://core.telegram.org/method/messages.transcribeAudio"
       ],
       "fields": {
@@ -23599,11 +23606,19 @@
         },
         "bot_broadcast_admin_rights": {
           "name": "bot_broadcast_admin_rights",
-          "description": "A suggested default set of administrator rights for the bot, to be shown when adding the bot as admin to a channel (only a suggestion, the admin right set may be modified by the user before adding the bot as admin)"
+          "description": "A suggested set of administrator rights¹ for the bot, to be shown when adding the bot as admin to a channel, see here for more info on how to handle them »².",
+          "links": [
+            "https://core.telegram.org/api/rights#suggested-bot-rights",
+            "https://core.telegram.org/api/rights#suggested-bot-rights"
+          ]
         },
         "bot_group_admin_rights": {
           "name": "bot_group_admin_rights",
-          "description": "A suggested default set of administrator rights for the bot, to be shown when adding the bot as admin to a supergroup (only a suggestion, the admin right set may be modified by the user before adding the bot as admin)"
+          "description": "A suggested set of administrator rights¹ for the bot, to be shown when adding the bot as admin to a group, see here for more info on how to handle them »².",
+          "links": [
+            "https://core.telegram.org/api/rights#suggested-bot-rights",
+            "https://core.telegram.org/api/rights#suggested-bot-rights"
+          ]
         },
         "bot_info": {
           "name": "bot_info",
@@ -26591,7 +26606,10 @@
     "messages.TranscribedAudio": {
       "name": "messages.TranscribedAudio",
       "description": [
-        "Transcribed text from a voice message"
+        "Transcribed text¹ from a voice message"
+      ],
+      "links": [
+        "https://core.telegram.org/api/transcribe"
       ]
     },
     "messages.TranslatedText": {
@@ -29553,7 +29571,11 @@
     "bots.setBotBroadcastDefaultAdminRights": {
       "name": "bots.setBotBroadcastDefaultAdminRights",
       "description": [
-        "Set the default suggested admin rights for bots being added as admins to channels."
+        "Set the default suggested admin rights¹ for bots being added as admins to channels, see here for more info on how to handle them »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/rights#suggested-bot-rights",
+        "https://core.telegram.org/api/rights#suggested-bot-rights"
       ],
       "parameters": {
         "admin_rights": {
@@ -29611,7 +29633,11 @@
     "bots.setBotGroupDefaultAdminRights": {
       "name": "bots.setBotGroupDefaultAdminRights",
       "description": [
-        "Set the default suggested admin rights for bots being added as admins to groups."
+        "Set the default suggested admin rights¹ for bots being added as admins to groups, see here for more info on how to handle them »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/rights#suggested-bot-rights",
+        "https://core.telegram.org/api/rights#suggested-bot-rights"
       ],
       "parameters": {
         "admin_rights": {
@@ -29631,7 +29657,10 @@
     "bots.setBotMenuButton": {
       "name": "bots.setBotMenuButton",
       "description": [
-        "Sets the menu button action for a given user or for all users"
+        "Sets the menu button action »¹ for a given user or for all users"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/menu"
       ],
       "parameters": {
         "button": {
@@ -37076,7 +37105,10 @@
     "messages.rateTranscribedAudio": {
       "name": "messages.rateTranscribedAudio",
       "description": [
-        "Rate transcribed voice message"
+        "Rate transcribed voice message¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/transcribe"
       ],
       "parameters": {
         "good": {
@@ -40493,7 +40525,10 @@
     "messages.transcribeAudio": {
       "name": "messages.transcribeAudio",
       "description": [
-        "Transcribe voice message"
+        "Transcribe voice message¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/transcribe"
       ],
       "parameters": {
         "msg_id": {
