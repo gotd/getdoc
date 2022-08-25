@@ -3590,9 +3590,10 @@
     "botMenuButton": {
       "name": "botMenuButton",
       "description": [
-        "URL of a web app¹ to open when the user clicks on the button"
+        "Bot menu button¹ that opens a web app² when clicked."
       ],
       "links": [
+        "https://core.telegram.org/api/bots/menu",
         "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button"
       ],
       "fields": {
@@ -3610,10 +3611,23 @@
       }
     },
     "botMenuButtonCommands": {
-      "name": "botMenuButtonCommands"
+      "name": "botMenuButtonCommands",
+      "description": [
+        "Bot menu button¹ that opens the bot command list when clicked."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/menu"
+      ]
     },
     "botMenuButtonDefault": {
-      "name": "botMenuButtonDefault"
+      "name": "botMenuButtonDefault",
+      "description": [
+        "Placeholder bot menu button¹ never returned to users: see the docs for more info²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/menu",
+        "https://core.telegram.org/api/bots/menu"
+      ]
     },
     "cdnConfig": {
       "name": "cdnConfig",
@@ -6296,7 +6310,7 @@
           "name": "webfile_dc_id",
           "description": "DC ID to use to download webfiles¹",
           "links": [
-            "https://core.telegram.org/api/files"
+            "https://core.telegram.org/api/files#downloading-webfiles"
           ]
         }
       }
@@ -9194,7 +9208,7 @@
     "inputDocument": {
       "name": "inputDocument",
       "description": [
-        "Defines a video for subsequent interaction."
+        "Defines a document for subsequent interaction."
       ],
       "fields": {
         "access_hash": {
@@ -11496,12 +11510,16 @@
     "inputWebFileAudioAlbumThumbLocation": {
       "name": "inputWebFileAudioAlbumThumbLocation",
       "description": [
-        "Used to download an album cover for any music file."
+        "Used to download an album cover for any music file using upload.getWebFile¹, see the webfile docs for more info »²."
+      ],
+      "links": [
+        "https://core.telegram.org/method/upload.getWebFile",
+        "https://core.telegram.org/api/files#downloading-webfiles"
       ],
       "fields": {
         "document": {
           "name": "document",
-          "description": " "
+          "description": "The audio file in question: must NOT be provided in secret chats, provide the title and performer fields instead."
         },
         "flags": {
           "name": "flags",
@@ -11512,25 +11530,26 @@
         },
         "performer": {
           "name": "performer",
-          "description": "Performer"
+          "description": "Song performer: should only be used in secret chats, in normal chats provide document instead, as it has more lax rate limits."
         },
         "small": {
           "name": "small",
-          "description": " "
+          "description": "Used to return a thumbnail with 100x100 resolution (instead of the default 600x600)"
         },
         "title": {
           "name": "title",
-          "description": "Song title"
+          "description": "Song title: should only be used in secret chats, in normal chats provide document instead, as it has more lax rate limits."
         }
       }
     },
     "inputWebFileGeoPointLocation": {
       "name": "inputWebFileGeoPointLocation",
       "description": [
-        "Used to download a server-generated image with the map preview from a geoPoint¹."
+        "Used to download a server-generated image with the map preview from a geoPoint¹, see the webfile docs for more info »²."
       ],
       "links": [
-        "https://core.telegram.org/constructor/geoPoint"
+        "https://core.telegram.org/constructor/geoPoint",
+        "https://core.telegram.org/api/files#downloading-webfiles"
       ],
       "fields": {
         "access_hash": {
@@ -19812,7 +19831,7 @@
       "name": "stickerSetFullCovered",
       "description": [
         "Stickerset preview with all stickers of the stickerset included.",
-        "Used when there are only a few stickers in the stickerset, to avoid a further call to messages.getStickerSet¹."
+        "Currently used only for custom emoji stickersets, to avoid a further call to messages.getStickerSet¹."
       ],
       "links": [
         "https://core.telegram.org/method/messages.getStickerSet"
@@ -29712,6 +29731,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid."
         },
@@ -29941,7 +29965,8 @@
         },
         {
           "code": 400,
-          "type": "CHANNEL_PARICIPANT_MISSING"
+          "type": "CHANNEL_PARICIPANT_MISSING",
+          "description": "The current user is not in the channel."
         },
         {
           "code": 400,
@@ -31004,6 +31029,11 @@
           "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
         },
         {
           "code": 400,
@@ -32190,7 +32220,14 @@
             "https://core.telegram.org/api/links#phone-number-links"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PHONE_NOT_OCCUPIED",
+          "description": "No user is associated to the specified phone number."
+        }
+      ]
     },
     "contacts.resolveUsername": {
       "name": "contacts.resolveUsername",
@@ -33239,10 +33276,6 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 500,
-          "type": "CHAT_MEMBERS_CHANNEL"
-        },
-        {
           "code": 400,
           "type": "INVITE_HASH_EMPTY",
           "description": "The invite hash is empty."
@@ -34024,7 +34057,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "CHAT_INVITE_PERMANENT"
+          "type": "CHAT_INVITE_PERMANENT",
+          "description": "You can't set an expiration date on permanent invite links."
         },
         {
           "code": 403,
@@ -36762,7 +36796,13 @@
         },
         {
           "code": 400,
-          "type": "HIDE_REQUESTER_MISSING"
+          "type": "HIDE_REQUESTER_MISSING",
+          "description": "The join request was missing or was already handled."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         },
         {
           "code": 400,
@@ -36811,6 +36851,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
         }
       ],
       "bot_can_use": true
@@ -37296,7 +37341,14 @@
           "name": "peer",
           "description": "Peer"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.receivedMessages": {
       "name": "messages.receivedMessages",
@@ -38561,10 +38613,6 @@
         },
         {
           "code": 400,
-          "type": "BOT_POLLS_DISABLED"
-        },
-        {
-          "code": 400,
           "type": "BROADCAST_PUBLIC_VOTERS_FORBIDDEN",
           "description": "You can't forward polls with public voters."
         },
@@ -38994,7 +39042,8 @@
         },
         {
           "code": 400,
-          "type": "BUTTON_USER_PRIVACY_RESTRICTED"
+          "type": "BUTTON_USER_PRIVACY_RESTRICTED",
+          "description": "The privacy setting of the user specified in a inputKeyboardButtonUserProfile button do not allow creating such a button."
         },
         {
           "code": 400,
@@ -39075,10 +39124,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": 406,
-          "type": "PAYMENT_UNSUPPORTED"
         },
         {
           "code": 400,
@@ -39384,6 +39429,10 @@
         },
         {
           "code": 400,
+          "type": "REACTIONS_TOO_MANY"
+        },
+        {
+          "code": 400,
           "type": "REACTION_EMPTY",
           "description": "Empty reaction provided."
         },
@@ -39391,10 +39440,6 @@
           "code": 400,
           "type": "REACTION_INVALID",
           "description": "The specified reaction is invalid."
-        },
-        {
-          "code": 500,
-          "type": "SEND_REACTION_RESULT1_INVALID"
         },
         {
           "code": 400,
@@ -41376,10 +41421,6 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
-          "code": 500,
-          "type": "CHAT_FROM_CALL_CHANGED"
-        },
-        {
           "code": 400,
           "type": "CREATE_CALL_FAILED",
           "description": "An error occurred while creating the call."
@@ -42780,7 +42821,10 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Sticker set name. Can contain only English letters, digits and underscores. Must end with \"by\" ( is case insensitive); 1-64 characters"
+          "description": "Short name of sticker set, to be used in sticker deep links »¹. Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in \"_by_\u003cbot_username\u003e\". \u003cbot_username\u003e is case insensitive. 1-64 characters.",
+          "links": [
+            "https://core.telegram.org/api/links#stickerset-links"
+          ]
         },
         "software": {
           "name": "software",
@@ -42869,7 +42913,7 @@
         {
           "code": 400,
           "type": "STICKER_TGS_NODOC",
-          "description": "Incorrect document type for sticker."
+          "description": "You must send the animated sticker as a document."
         },
         {
           "code": 400,
@@ -42893,7 +42937,8 @@
         },
         {
           "code": 400,
-          "type": "STICKER_VIDEO_NODOC"
+          "type": "STICKER_VIDEO_NODOC",
+          "description": "You must send the video sticker as a document."
         },
         {
           "code": 400,
@@ -43356,7 +43401,12 @@
     "upload.getWebfile": {
       "name": "upload.getWebfile",
       "description": [
-        "Returns content of an HTTP file or a part, by proxying the request through telegram."
+        "Returns content of a web file, by proxying the request through telegram, see the webfile docs for more info¹.",
+        "Note: the query must be sent to the DC specified in the webfile_dc_id MTProto configuration field¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/files#downloading-webfiles",
+        "https://core.telegram.org/api/config#mtproto-configuration"
       ],
       "parameters": {
         "limit": {
@@ -43373,6 +43423,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
+        },
         {
           "code": 400,
           "type": "LOCATION_INVALID",
@@ -43604,6 +43659,11 @@
         },
         {
           "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -43787,10 +43847,6 @@
       "type": "BOT_PAYMENTS_DISABLED",
       "description": "Please enable bot payments in botfather before calling this method."
     },
-    "BOT_POLLS_DISABLED": {
-      "code": 400,
-      "type": "BOT_POLLS_DISABLED"
-    },
     "BOT_RESPONSE_TIMEOUT": {
       "code": 400,
       "type": "BOT_RESPONSE_TIMEOUT",
@@ -43843,7 +43899,8 @@
     },
     "BUTTON_USER_PRIVACY_RESTRICTED": {
       "code": 400,
-      "type": "BUTTON_USER_PRIVACY_RESTRICTED"
+      "type": "BUTTON_USER_PRIVACY_RESTRICTED",
+      "description": "The privacy setting of the user specified in a inputKeyboardButtonUserProfile button do not allow creating such a button."
     },
     "CALL_ALREADY_ACCEPTED": {
       "code": 400,
@@ -43907,7 +43964,8 @@
     },
     "CHANNEL_PARICIPANT_MISSING": {
       "code": 400,
-      "type": "CHANNEL_PARICIPANT_MISSING"
+      "type": "CHANNEL_PARICIPANT_MISSING",
+      "description": "The current user is not in the channel."
     },
     "CHANNEL_PRIVATE": {
       "code": 400,
@@ -43949,10 +44007,6 @@
       "type": "CHAT_FORWARDS_RESTRICTED",
       "description": "You can't forward messages from a protected chat."
     },
-    "CHAT_FROM_CALL_CHANGED": {
-      "code": 500,
-      "type": "CHAT_FROM_CALL_CHANGED"
-    },
     "CHAT_GUEST_SEND_FORBIDDEN": {
       "code": 403,
       "type": "CHAT_GUEST_SEND_FORBIDDEN",
@@ -43980,16 +44034,13 @@
     },
     "CHAT_INVITE_PERMANENT": {
       "code": 400,
-      "type": "CHAT_INVITE_PERMANENT"
+      "type": "CHAT_INVITE_PERMANENT",
+      "description": "You can't set an expiration date on permanent invite links."
     },
     "CHAT_LINK_EXISTS": {
       "code": 400,
       "type": "CHAT_LINK_EXISTS",
       "description": "The chat is public, you can't hide the history to new users."
-    },
-    "CHAT_MEMBERS_CHANNEL": {
-      "code": 500,
-      "type": "CHAT_MEMBERS_CHANNEL"
     },
     "CHAT_NOT_MODIFIED": {
       "code": 400,
@@ -44473,7 +44524,8 @@
     },
     "HIDE_REQUESTER_MISSING": {
       "code": 400,
-      "type": "HIDE_REQUESTER_MISSING"
+      "type": "HIDE_REQUESTER_MISSING",
+      "description": "The join request was missing or was already handled."
     },
     "IMAGE_PROCESS_FAILED": {
       "code": 400,
@@ -44830,10 +44882,6 @@
       "type": "PAYMENT_PROVIDER_INVALID",
       "description": "The specified payment provider is invalid."
     },
-    "PAYMENT_UNSUPPORTED": {
-      "code": 406,
-      "type": "PAYMENT_UNSUPPORTED"
-    },
     "PEER_ID_INVALID": {
       "code": 400,
       "type": "PEER_ID_INVALID",
@@ -44878,6 +44926,11 @@
       "code": 400,
       "type": "PHONE_CODE_INVALID",
       "description": "The provided phone code is invalid."
+    },
+    "PHONE_NOT_OCCUPIED": {
+      "code": 400,
+      "type": "PHONE_NOT_OCCUPIED",
+      "description": "No user is associated to the specified phone number."
     },
     "PHONE_NUMBER_APP_SIGNUP_FORBIDDEN": {
       "code": 400,
@@ -45109,6 +45162,10 @@
       "type": "RANGES_INVALID",
       "description": "Invalid range provided."
     },
+    "REACTIONS_TOO_MANY": {
+      "code": 400,
+      "type": "REACTIONS_TOO_MANY"
+    },
     "REACTION_EMPTY": {
       "code": 400,
       "type": "REACTION_EMPTY",
@@ -45248,10 +45305,6 @@
       "code": 400,
       "type": "SEND_MESSAGE_TYPE_INVALID",
       "description": "The message type is invalid."
-    },
-    "SEND_REACTION_RESULT1_INVALID": {
-      "code": 500,
-      "type": "SEND_REACTION_RESULT1_INVALID"
     },
     "SENSITIVE_CHANGE_FORBIDDEN": {
       "code": 403,
@@ -45396,7 +45449,7 @@
     "STICKER_TGS_NODOC": {
       "code": 400,
       "type": "STICKER_TGS_NODOC",
-      "description": "Incorrect document type for sticker."
+      "description": "You must send the animated sticker as a document."
     },
     "STICKER_TGS_NOTGS": {
       "code": 400,
@@ -45420,7 +45473,8 @@
     },
     "STICKER_VIDEO_NODOC": {
       "code": 400,
-      "type": "STICKER_VIDEO_NODOC"
+      "type": "STICKER_VIDEO_NODOC",
+      "description": "You must send the video sticker as a document."
     },
     "STICKER_VIDEO_NOWEBM": {
       "code": 400,
