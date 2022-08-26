@@ -23308,7 +23308,7 @@
         },
         "mtime": {
           "name": "mtime",
-          "description": "Modification type"
+          "description": "Modification time"
         },
         "type": {
           "name": "type",
