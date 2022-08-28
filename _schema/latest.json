@@ -39600,7 +39600,10 @@
         },
         "data": {
           "name": "data",
-          "description": "Data to relay to the bot."
+          "description": "Data to relay to the bot, obtained from a web_app_data_send JS event¹.",
+          "links": [
+            "https://core.telegram.org/api/web-events#web_app_data_send"
+          ]
         },
         "random_id": {
           "name": "random_id",
