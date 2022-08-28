@@ -63,6 +63,7 @@ jobs:
             ```
 
       - uses: peter-evans/enable-pull-request-automerge@v2
+        if: steps.cpr.outputs.pull-request-number > 0
         with:
           token: ${{ steps.generate-token.outputs.token }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
