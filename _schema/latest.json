@@ -2399,7 +2399,7 @@
         "Represents a bot web app that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "fields": {
         "bot_id": {
@@ -2415,7 +2415,10 @@
         },
         "has_settings": {
           "name": "has_settings",
-          "description": "True, if the bot supports the \"settings_button_pressed\" event"
+          "description": "True, if the bot supports the \"settings_button_pressed\" event »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#settings_button_pressed"
+          ]
         },
         "icons": {
           "name": "icons",
@@ -2444,7 +2447,7 @@
         "Represents an attachment menu icon for bot web apps »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "fields": {
         "colors": {
@@ -2474,7 +2477,7 @@
         "Represents an attachment menu icon color for bot web apps »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "fields": {
         "color": {
@@ -2493,14 +2496,14 @@
         "Represents a list of bot web apps that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "fields": {
         "bots": {
           "name": "bots",
           "description": "List of bot web apps that can be launched from the attachment menu »¹",
           "links": [
-            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+            "https://core.telegram.org/api/bots/attach"
           ]
         },
         "hash": {
@@ -2522,14 +2525,14 @@
         "Represents a bot web app that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "fields": {
         "bot": {
           "name": "bot",
           "description": "Represents a bot web app that can be launched from the attachment menu »¹",
           "links": [
-            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+            "https://core.telegram.org/api/bots/attach"
           ]
         },
         "users": {
@@ -3594,7 +3597,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/bots/menu",
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button"
+        "https://core.telegram.org/api/bots/webapps"
       ],
       "fields": {
         "text": {
@@ -3605,7 +3608,7 @@
           "name": "url",
           "description": "URL of a web app¹ to open when the user clicks on the button",
           "links": [
-            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button"
+            "https://core.telegram.org/api/bots/webapps"
           ]
         }
       }
@@ -9918,7 +9921,11 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "Start parameter"
+          "description": "Unique bot deep links start parameter¹. If present, forwarded copies of the sent message will have a URL button with a deep link² to the bot (instead of a Pay button), with the value used as the start parameter. If absent, forwarded copies of the sent message will have a Pay button, allowing multiple users to pay directly from the forwarded message, using the same invoice.",
+          "links": [
+            "https://core.telegram.org/api/links#not-invoice",
+            "https://core.telegram.org/api/links#bot-links"
+          ]
         },
         "title": {
           "name": "title",
@@ -11894,7 +11901,7 @@
         "Can only be sent or received as part of a reply keyboard, use keyboardButtonWebView¹ for inline keyboards."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps",
+        "https://core.telegram.org/api/bots/webapps",
         "https://core.telegram.org/method/messages.requestSimpleWebView",
         "https://core.telegram.org/constructor/keyboardButtonWebView"
       ],
@@ -11907,7 +11914,7 @@
           "name": "url",
           "description": "Web app URL¹",
           "links": [
-            "https://core.telegram.org/bots/webapps"
+            "https://core.telegram.org/api/bots/webapps"
           ]
         }
       }
@@ -12024,7 +12031,7 @@
         "Can only be sent or received as part of an inline keyboard, use keyboardButtonSimpleWebView¹ for reply keyboards."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps",
+        "https://core.telegram.org/api/bots/webapps",
         "https://core.telegram.org/method/messages.requestWebView",
         "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
       ],
@@ -12037,7 +12044,7 @@
           "name": "url",
           "description": "Web app url¹",
           "links": [
-            "https://core.telegram.org/bots/webapps"
+            "https://core.telegram.org/api/bots/webapps"
           ]
         }
       }
@@ -12907,7 +12914,7 @@
         "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (user side service message)."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps"
+        "https://core.telegram.org/api/bots/webapps"
       ],
       "fields": {
         "text": {
@@ -12925,7 +12932,7 @@
         "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (bot side service message)."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps"
+        "https://core.telegram.org/api/bots/webapps"
       ],
       "fields": {
         "data": {
@@ -16531,12 +16538,18 @@
     "payments.exportedInvoice": {
       "name": "payments.exportedInvoice",
       "description": [
-        "Exported invoice"
+        "Exported invoice deep link¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#invoice-links"
       ],
       "fields": {
         "url": {
           "name": "url",
-          "description": "Exported invoice URL"
+          "description": "Exported invoice deep link¹",
+          "links": [
+            "https://core.telegram.org/api/links#invoice-link"
+          ]
         }
       }
     },
@@ -20356,10 +20369,10 @@
     "updateAttachMenuBots": {
       "name": "updateAttachMenuBots",
       "description": [
-        "The list of added bot web apps »¹ has changed, use messages.getAttachMenuBots² to fetch the updated list."
+        "The list of installed attachment menu entries »¹ has changed, use messages.getAttachMenuBots² to fetch the updated list."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu",
+        "https://core.telegram.org/api/bots/attach",
         "https://core.telegram.org/method/messages.getAttachMenuBots"
       ]
     },
@@ -23468,7 +23481,7 @@
           "name": "attach_menu_enabled",
           "description": "Whether we installed the attachment menu web app¹ offered by this bot",
           "links": [
-            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+            "https://core.telegram.org/api/bots/attach"
           ]
         },
         "bot": {
@@ -23479,7 +23492,7 @@
           "name": "bot_attach_menu",
           "description": "Whether this bot offers an attachment menu web app¹",
           "links": [
-            "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+            "https://core.telegram.org/api/bots/attach"
           ]
         },
         "bot_chat_history": {
@@ -23996,9 +24009,10 @@
       "fields": {
         "background_color": {
           "name": "background_color",
-          "description": "Used for solid »¹, [gradient »]/api/wallpapers#gradient-fill) and freeform gradient »² fills.",
+          "description": "Used for solid »¹, gradient »² and freeform gradient »³ fills.",
           "links": [
             "https://core.telegram.org/api/wallpapers#solid-fill",
+            "https://core.telegram.org/api/wallpapers#gradient-fill",
             "https://core.telegram.org/api/wallpapers#freeform-gradient-fill"
           ]
         },
@@ -34768,7 +34782,7 @@
         "Returns attachment menu entry for a bot web app that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "parameters": {
         "bot": {
@@ -34790,7 +34804,7 @@
         "Returns installed attachment menu bot web apps »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "parameters": {
         "hash": {
@@ -37106,7 +37120,7 @@
           "name": "bot",
           "description": "Bot that owns the web app¹",
           "links": [
-            "https://core.telegram.org/bots/webapps"
+            "https://core.telegram.org/api/bots/webapps"
           ]
         },
         "flags": {
@@ -37579,7 +37593,7 @@
         "Open a bot web app¹."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps"
+        "https://core.telegram.org/api/bots/webapps"
       ],
       "parameters": {
         "bot": {
@@ -37655,7 +37669,7 @@
           "name": "bot",
           "description": "Bot that owns the web app¹",
           "links": [
-            "https://core.telegram.org/bots/webapps"
+            "https://core.telegram.org/api/bots/webapps"
           ]
         },
         "flags": {
@@ -37667,11 +37681,17 @@
         },
         "from_bot_menu": {
           "name": "from_bot_menu",
-          "description": "Whether the webview was opened after clicking on the bot's menu button."
+          "description": "Whether the webview was opened by clicking on the bot's menu button »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/menu"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": "Dialog where the web app is being opened"
+          "description": "Dialog where the web app is being opened, and where the resulting message will be sent (see the docs for more info »¹).",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps"
+          ]
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
@@ -37682,7 +37702,7 @@
         },
         "send_as": {
           "name": "send_as",
-          "description": "Open the web app as the specified peer"
+          "description": "Open the web app as the specified peer, sending the resulting the message as the specified peer."
         },
         "silent": {
           "name": "silent",
@@ -37706,7 +37726,7 @@
           "name": "url",
           "description": "Web app URL¹",
           "links": [
-            "https://core.telegram.org/bots/webapps"
+            "https://core.telegram.org/api/bots/webapps"
           ]
         }
       }
@@ -39429,7 +39449,8 @@
         },
         {
           "code": 400,
-          "type": "REACTIONS_TOO_MANY"
+          "type": "REACTIONS_TOO_MANY",
+          "description": "The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see the docs for more info »."
         },
         {
           "code": 400,
@@ -39584,7 +39605,7 @@
         "Used by the user to relay data from an opened reply keyboard bot web app¹ to the bot that owns it."
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps"
+        "https://core.telegram.org/api/bots/webapps"
       ],
       "parameters": {
         "bot": {
@@ -40467,7 +40488,7 @@
         "Enable or disable web bot attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/api/bots/attach"
       ],
       "parameters": {
         "bot": {
@@ -41075,7 +41096,10 @@
     "payments.exportInvoice": {
       "name": "payments.exportInvoice",
       "description": [
-        "Export invoice"
+        "Generate an invoice deep link¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#invoice-links"
       ],
       "parameters": {
         "invoice_media": {
@@ -45167,7 +45191,8 @@
     },
     "REACTIONS_TOO_MANY": {
       "code": 400,
-      "type": "REACTIONS_TOO_MANY"
+      "type": "REACTIONS_TOO_MANY",
+      "description": "The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see the docs for more info »."
     },
     "REACTION_EMPTY": {
       "code": 400,
