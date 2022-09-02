@@ -11350,9 +11350,13 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": "Wallpaper¹",
+          "description": "inputWallPaper¹ or inputWallPaperSlug² when passing wallpaper files for image³ or pattern⁴ wallpapers, inputWallPaperNoFile⁵ with id=0 otherwise.",
           "links": [
-            "https://core.telegram.org/api/wallpapers"
+            "https://core.telegram.org/constructor/inputWallPaper",
+            "https://core.telegram.org/constructor/inputWallPaper",
+            "https://core.telegram.org/api/wallpapers#image-wallpapers",
+            "https://core.telegram.org/api/wallpapers#pattern-wallpapers",
+            "https://core.telegram.org/constructor/inputWallPaperNoFile"
           ]
         },
         "wallpaper_settings": {
@@ -22475,7 +22479,7 @@
         },
         "popup": {
           "name": "popup",
-          "description": "(boolTrue) if the message must be displayed in a popup."
+          "description": "If set, the message must be displayed in a popup."
         },
         "type": {
           "name": "type",
@@ -28595,9 +28599,9 @@
       "parameters": {
         "file": {
           "name": "file",
-          "description": "Theme file uploaded as described in files »¹",
+          "description": "Previously uploaded¹ theme file with platform-specific colors for UI components, can be left unset when creating themes that only modify the wallpaper or accent colors.",
           "links": [
-            "https://core.telegram.org/api/files"
+            "https://core.telegram.org/api/themes#uploading-theme-files"
           ]
         },
         "file_name": {
