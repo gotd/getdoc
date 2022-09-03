@@ -27043,7 +27043,10 @@
         },
         "slug": {
           "name": "slug",
-          "description": "Unique theme ID"
+          "description": "Unique theme ID used to generate theme deep links¹, can be empty to autogenerate a random ID.",
+          "links": [
+            "https://core.telegram.org/api/links#theme-links"
+          ]
         },
         "title": {
           "name": "title",
