@@ -33629,6 +33629,11 @@
         },
         {
           "code": 400,
+          "type": "MIN_DATE_INVALID",
+          "description": "The specified minimum date is invalid."
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -35439,6 +35444,11 @@
           "code": 400,
           "type": "ADMIN_ID_INVALID",
           "description": "The specified admin ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
         },
         {
           "code": 400,
@@ -40179,6 +40189,11 @@
         },
         {
           "code": 400,
+          "type": "START_PARAM_EMPTY",
+          "description": "The start parameter is empty."
+        },
+        {
+          "code": 400,
           "type": "START_PARAM_INVALID",
           "description": "Start parameter invalid."
         },
@@ -40933,18 +40948,14 @@
         },
         "peer": {
           "name": "peer",
-          "description": "The chat, can be an inputPeerEmpty¹ for bots",
+          "description": "The chat, can be inputPeerEmpty¹ for bots and inputPeerSelf² for users.",
           "links": [
-            "https://core.telegram.org/constructor/inputPeerEmpty"
+            "https://core.telegram.org/constructor/inputPeerEmpty",
+            "https://core.telegram.org/constructor/inputPeerSelf"
           ]
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "This method can only be run by a bot."
-        },
         {
           "code": 400,
           "type": "CHANNEL_INVALID",
@@ -41117,8 +41128,23 @@
       "errors": [
         {
           "code": 400,
+          "type": "CURRENCY_TOTAL_AMOUNT_INVALID",
+          "description": "The total amount of all prices is invalid."
+        },
+        {
+          "code": 400,
+          "type": "INVOICE_PAYLOAD_INVALID",
+          "description": "The specified invoice payload is invalid."
+        },
+        {
+          "code": 400,
           "type": "MEDIA_INVALID",
           "description": "Media invalid."
+        },
+        {
+          "code": 400,
+          "type": "PAYMENT_PROVIDER_INVALID",
+          "description": "The specified payment provider is invalid."
         }
       ],
       "bot_can_use": true
@@ -41658,7 +41684,14 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "PUBLIC_CHANNEL_MISSING",
+          "description": "You can only export group call invite links for public chats or channels."
+        }
+      ]
     },
     "phone.getCallConfig": {
       "name": "phone.getCallConfig",
@@ -42748,11 +42781,6 @@
       "errors": [
         {
           "code": 400,
-          "type": "BOT_MISSING",
-          "description": "This method can only be run by a bot."
-        },
-        {
-          "code": 400,
           "type": "STICKERPACK_STICKERS_TOO_MUCH",
           "description": "There are too many stickers in this stickerpack, you can't add any more."
         },
@@ -42795,11 +42823,6 @@
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "This method can only be run by a bot."
-        },
         {
           "code": 400,
           "type": "STICKER_INVALID",
@@ -42855,7 +42878,7 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Short name of sticker set, to be used in sticker deep links »¹. Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and must end in \"_by_\u003cbot_username\u003e\". \u003cbot_username\u003e is case insensitive. 1-64 characters.",
+          "description": "Short name of sticker set, to be used in sticker deep links »¹. Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and, if called by a bot, must end in \"_by_\u003cbot_username\u003e\". \u003cbot_username\u003e is case insensitive. 1-64 characters.",
           "links": [
             "https://core.telegram.org/api/links#stickerset-links"
           ]
@@ -42889,11 +42912,6 @@
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "This method can only be run by a bot."
-        },
         {
           "code": 400,
           "type": "PACK_SHORT_NAME_INVALID",
@@ -42999,11 +43017,6 @@
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "This method can only be run by a bot."
-        },
         {
           "code": 400,
           "type": "STICKER_INVALID",
@@ -43246,6 +43259,16 @@
           "code": 400,
           "type": "PERSISTENT_TIMESTAMP_INVALID",
           "description": "Persistent timestamp invalid."
+        },
+        {
+          "code": 500,
+          "type": "RANDOM_ID_DUPLICATE",
+          "description": "You provided a random ID that was already used."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_INVALID",
+          "description": "The provided username is not valid."
         }
       ],
       "bot_can_use": true
@@ -43865,11 +43888,6 @@
       "code": 400,
       "type": "BOT_INVALID",
       "description": "This is not a valid bot."
-    },
-    "BOT_MISSING": {
-      "code": 400,
-      "type": "BOT_MISSING",
-      "description": "This method can only be run by a bot."
     },
     "BOT_ONESIDE_NOT_AVAIL": {
       "code": 400,
@@ -44631,6 +44649,11 @@
       "type": "INVITE_REVOKED_MISSING",
       "description": "The specified invite link was already revoked or is invalid."
     },
+    "INVOICE_PAYLOAD_INVALID": {
+      "code": 400,
+      "type": "INVOICE_PAYLOAD_INVALID",
+      "description": "The specified invoice payload is invalid."
+    },
     "JOIN_AS_PEER_INVALID": {
       "code": 400,
       "type": "JOIN_AS_PEER_INVALID",
@@ -44785,6 +44808,11 @@
       "code": 400,
       "type": "METHOD_INVALID",
       "description": "The specified method is invalid."
+    },
+    "MIN_DATE_INVALID": {
+      "code": 400,
+      "type": "MIN_DATE_INVALID",
+      "description": "The specified minimum date is invalid."
     },
     "MSG_ID_INVALID": {
       "code": 400,
@@ -45125,6 +45153,11 @@
       "code": 400,
       "type": "PRIVACY_VALUE_INVALID",
       "description": "The specified privacy rule combination is invalid."
+    },
+    "PUBLIC_CHANNEL_MISSING": {
+      "code": 403,
+      "type": "PUBLIC_CHANNEL_MISSING",
+      "description": "You can only export group call invite links for public chats or channels."
     },
     "PUBLIC_KEY_REQUIRED": {
       "code": 400,
