@@ -12235,8 +12235,11 @@
     "maskCoords": {
       "name": "maskCoords",
       "description": [
-        "Position on a photo where a mask should be placed",
+        "Position on a photo where a mask should be placed when attaching stickers to media »¹",
         "The n position indicates where the mask should be placed:"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers#attached-stickers"
       ],
       "fields": {
         "n": {
@@ -12249,7 +12252,7 @@
         },
         "y": {
           "name": "y",
-          "description": "Shift by Y-axis measured in widths of the mask scaled to the face size, from left to right. (For example, -1.0 will place the mask just to the left of the default mask position)"
+          "description": "Shift by Y-axis measured in widths of the mask scaled to the face size, from left to right. (For example, -1.0 will place the mask just below the default mask position)"
         },
         "zoom": {
           "name": "zoom",
@@ -16855,11 +16858,11 @@
         },
         "show_previews": {
           "name": "show_previews",
-          "description": "Display text in notifications"
+          "description": "(Ternary value) If set, indicates whether or not to display previews of messages in notifications; otherwise the default behavior should be used."
         },
         "silent": {
           "name": "silent",
-          "description": "Mute peer?"
+          "description": "(Ternary value) If set, indicates whether to mute or unmute the peer; otherwise the default behavior should be used."
         }
       }
     },
@@ -27039,7 +27042,7 @@
         },
         "settings": {
           "name": "settings",
-          "description": "Theme settings"
+          "description": "Theme settings, multiple values can be provided for the different base themes (day/night mode, etc)."
         },
         "slug": {
           "name": "slug",
@@ -32667,12 +32670,18 @@
     "help.getRecentMeUrls": {
       "name": "help.getRecentMeUrls",
       "description": [
-        "Get recently used t.me links"
+        "Get recently used t.me links.",
+        "When installing official applications from \"Download Telegram\" buttons present in t.me¹ pages, a referral parameter is passed to applications after installation.",
+        "If, after downloading the application, the user creates a new account (instead of logging into an existing one), the referral parameter should be imported using this method, which returns the t.me² pages the user recently opened, before installing Telegram."
+      ],
+      "links": [
+        "https://t.me",
+        "https://t.me"
       ],
       "parameters": {
         "referer": {
           "name": "referer",
-          "description": "Referer"
+          "description": "Referrer"
         }
       }
     },
@@ -42781,6 +42790,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOT_MISSING",
+          "description": "Only bots can call this method, please use @stickers if you're a user."
+        },
+        {
+          "code": 400,
           "type": "STICKERPACK_STICKERS_TOO_MUCH",
           "description": "There are too many stickers in this stickerpack, you can't add any more."
         },
@@ -43019,6 +43033,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOT_MISSING",
+          "description": "Only bots can call this method, please use @stickers if you're a user."
+        },
+        {
+          "code": 400,
           "type": "STICKER_INVALID",
           "description": "The provided sticker is invalid."
         }
@@ -43234,6 +43253,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
         },
         {
           "code": 403,
@@ -43888,6 +43912,11 @@
       "code": 400,
       "type": "BOT_INVALID",
       "description": "This is not a valid bot."
+    },
+    "BOT_MISSING": {
+      "code": 400,
+      "type": "BOT_MISSING",
+      "description": "Only bots can call this method, please use @stickers if you're a user."
     },
     "BOT_ONESIDE_NOT_AVAIL": {
       "code": 400,
