@@ -9641,7 +9641,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/links#invoice-links",
-        "https://core.telegram.org/api/config#client-configuration"
+        "https://core.telegram.org/api/config#premium-invoice-slug"
       ],
       "fields": {
         "slug": {
@@ -12741,7 +12741,7 @@
           "description": "An invoice slug taken from an invoice deep link¹ or from the premium_invoice_slug app config parameter »²",
           "links": [
             "https://core.telegram.org/api/links#invoice-links",
-            "https://core.telegram.org/api/config#client-configuration"
+            "https://core.telegram.org/api/config#premium-invoice-slug"
           ]
         },
         "recurring_init": {
@@ -35883,9 +35883,11 @@
     "messages.getMessageReadParticipants": {
       "name": "messages.getMessageReadParticipants",
       "description": [
-        "Get which users read a specific message: only available for groups and supergroups with less than chat_read_mark_size_threshold members, read receipts will be stored for chat_read_mark_expire_period seconds after the message was sent, see client configuration for more info »¹."
+        "Get which users read a specific message: only available for groups and supergroups with less than chat_read_mark_size_threshold members¹, read receipts will be stored for chat_read_mark_expire_period seconds after the message was sent², see client configuration for more info »³."
       ],
       "links": [
+        "https://core.telegram.org/api/config#chat-read-mark-size-threshold",
+        "https://core.telegram.org/api/config#chat-read-mark-expire-period",
         "https://core.telegram.org/api/config#client-configuration"
       ],
       "parameters": {
@@ -39897,7 +39899,7 @@
         "Change default emoji reaction to use in the quick reaction menu: the value is synced across devices and can be fetched using help.getAppConfig, reactions_default field¹."
       ],
       "links": [
-        "https://core.telegram.org/api/config#client-configuration"
+        "https://core.telegram.org/api/config#reactions-default"
       ],
       "parameters": {
         "reaction": {
