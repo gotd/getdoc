@@ -13118,8 +13118,9 @@
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": "Document ID of the custom emoji, use messages.getCustomEmojiDocuments¹ to fetch the emoji animation and the actual emoji it represents.",
+          "description": "Document ID of the custom emoji¹, use messages.getCustomEmojiDocuments² to fetch the emoji animation and the actual emoji it represents.",
           "links": [
+            "https://core.telegram.org/api/custom-emoji",
             "https://core.telegram.org/method/messages.getCustomEmojiDocuments"
           ]
         },
@@ -19851,9 +19852,10 @@
       "name": "stickerSetFullCovered",
       "description": [
         "Stickerset preview with all stickers of the stickerset included.",
-        "Currently used only for custom emoji stickersets, to avoid a further call to messages.getStickerSet¹."
+        "Currently used only for custom emoji stickersets¹, to avoid a further call to messages.getStickerSet²."
       ],
       "links": [
+        "https://core.telegram.org/api/custom-emoji",
         "https://core.telegram.org/method/messages.getStickerSet"
       ],
       "fields": {
@@ -22307,7 +22309,10 @@
     "updateReadFeaturedEmojiStickers": {
       "name": "updateReadFeaturedEmojiStickers",
       "description": [
-        "Some featured emoji stickers were marked as read"
+        "Some featured custom emoji stickers¹ were marked as read"
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
       ]
     },
     "updateReadFeaturedStickers": {
@@ -34768,7 +34773,10 @@
       "parameters": {
         "emojis": {
           "name": "emojis",
-          "description": "Get custom emoji stickers"
+          "description": "Get custom emoji stickers¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -34786,7 +34794,10 @@
         },
         "masks": {
           "name": "masks",
-          "description": "Get mask stickers"
+          "description": "Get mask stickers¹",
+          "links": [
+            "https://core.telegram.org/api/stickers#mask-stickers"
+          ]
         },
         "offset_id": {
           "name": "offset_id",
@@ -35099,18 +35110,20 @@
     "messages.getCustomEmojiDocuments": {
       "name": "messages.getCustomEmojiDocuments",
       "description": [
-        "Fetch info about custom emojis.",
+        "Fetch custom emoji stickers »¹.",
         "Returns a list of documents¹ with the animated custom emoji in TGS format, and a documentAttributeCustomEmoji² attribute with the original emoji and info about the emoji stickerset this custom emoji belongs to."
       ],
       "links": [
+        "https://core.telegram.org/api/custom-emoji",
         "https://core.telegram.org/constructor/document",
         "https://core.telegram.org/constructor/documentAttributeCustomEmoji"
       ],
       "parameters": {
         "document_id": {
           "name": "document_id",
-          "description": "Custom emoji IDs from a messageEntityCustomEmoji¹.",
+          "description": "Custom emoji¹ IDs from a messageEntityCustomEmoji².",
           "links": [
+            "https://core.telegram.org/api/custom-emoji",
             "https://core.telegram.org/constructor/messageEntityCustomEmoji"
           ]
         }
@@ -35339,7 +35352,10 @@
     "messages.getEmojiStickers": {
       "name": "messages.getEmojiStickers",
       "description": [
-        "Gets the list of currently installed custom emoji stickersets."
+        "Gets the list of currently installed custom emoji stickersets¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
       ],
       "parameters": {
         "hash": {
@@ -37474,7 +37490,10 @@
       "parameters": {
         "emojis": {
           "name": "emojis",
-          "description": "Reorder custom emoji stickersets"
+          "description": "Reorder custom emoji stickersets¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "flags": {
           "name": "flags",
