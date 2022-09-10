@@ -6997,7 +6997,10 @@
         },
         "waveform": {
           "name": "waveform",
-          "description": "Waveform"
+          "description": "Waveform: consists in a series of bitpacked 5-bit values. Example implementation: android¹.",
+          "links": [
+            "https://github.com/DrKLO/Telegram/blob/96dce2c9aabc33b87db61d830aa087b6b03fe397/TMessagesProj/jni/audio.c#L546"
+          ]
         }
       }
     },
@@ -17894,7 +17897,7 @@
         },
         "min": {
           "name": "min",
-          "description": "Similar to min¹ objects, used for poll constructors that are the same for all users so they don't have option chosen by the current user (you can use messages.getPollResults² to get the full poll results).",
+          "description": "Similar to min¹ objects, used for poll constructors that are the same for all users so they don't have the option chosen by the current user (you can use messages.getPollResults² to get the full poll results).",
           "links": [
             "https://core.telegram.org/api/min",
             "https://core.telegram.org/method/messages.getPollResults"
@@ -41109,7 +41112,7 @@
     "payments.canPurchasePremium": {
       "name": "payments.canPurchasePremium",
       "description": [
-        "Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase."
+        "Checks whether Telegram Premium purchase is possible. Must be called before in-store Premium purchase, official apps only."
       ],
       "parameters": {
         "purpose": {
