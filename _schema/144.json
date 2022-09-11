@@ -2417,7 +2417,7 @@
           "name": "has_settings",
           "description": "True, if the bot supports the \"settings_button_pressed\" event »¹",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#settings_button_pressed"
+            "https://core.telegram.org/api/bots/webapps#settings-button-pressed"
           ]
         },
         "icons": {
@@ -6460,10 +6460,7 @@
         },
         "retry_contacts": {
           "name": "retry_contacts",
-          "description": "List of contact ids that could not be imported due to system limitation and will need to be imported at a later date.Parameter added in Layer 13¹",
-          "links": [
-            "https://core.telegram.org/api/layers#layer-13"
-          ]
+          "description": "List of contact ids that could not be imported due to system limitation and will need to be imported at a later date."
         },
         "users": {
           "name": "users",
@@ -9926,7 +9923,7 @@
           "name": "start_param",
           "description": "Unique bot deep links start parameter¹. If present, forwarded copies of the sent message will have a URL button with a deep link² to the bot (instead of a Pay button), with the value used as the start parameter. If absent, forwarded copies of the sent message will have a Pay button, allowing multiple users to pay directly from the forwarded message, using the same invoice.",
           "links": [
-            "https://core.telegram.org/api/links#not-invoice",
+            "https://core.telegram.org/api/links#bot-links",
             "https://core.telegram.org/api/links#bot-links"
           ]
         },
@@ -16559,7 +16556,7 @@
           "name": "url",
           "description": "Exported invoice deep link¹",
           "links": [
-            "https://core.telegram.org/api/links#invoice-link"
+            "https://core.telegram.org/api/links#invoice-links"
           ]
         }
       }
@@ -20481,7 +20478,7 @@
         "The command set¹ of a certain bot in a certain chat has changed."
       ],
       "links": [
-        "https://core.telegram.org/bots/api#june-25-2021"
+        "https://core.telegram.org/api/bots/commands"
       ],
       "fields": {
         "bot_id": {
@@ -21156,10 +21153,7 @@
       "fields": {
         "action": {
           "name": "action",
-          "description": "Type of actionParameter added in Layer 17¹.",
-          "links": [
-            "https://core.telegram.org/api/layers#layer-17"
-          ]
+          "description": "Type of action"
         },
         "chat_id": {
           "name": "chat_id",
@@ -22873,10 +22867,7 @@
         },
         "username": {
           "name": "username",
-          "description": "New username.Parameter added in Layer 18¹.",
-          "links": [
-            "https://core.telegram.org/api/layers#layer-18"
-          ]
+          "description": "New username."
         }
       }
     },
@@ -22947,10 +22938,7 @@
       "fields": {
         "action": {
           "name": "action",
-          "description": "Action typeParam added in Layer 17¹.",
-          "links": [
-            "https://core.telegram.org/api/layers#layer-17"
-          ]
+          "description": "Action type"
         },
         "user_id": {
           "name": "user_id",
@@ -23783,10 +23771,7 @@
         },
         "photo_id": {
           "name": "photo_id",
-          "description": "Identifier of the respective photoParameter added in Layer 2¹",
-          "links": [
-            "https://core.telegram.org/api/layers#layer-2"
-          ]
+          "description": "Identifier of the respective photo"
         },
         "stripped_thumb": {
           "name": "stripped_thumb",
@@ -23959,7 +23944,7 @@
           "name": "pattern",
           "description": "Whether this is a pattern wallpaper »¹",
           "links": [
-            "https://core.telegram.org/api/wallpapers#pattern-wallpaper"
+            "https://core.telegram.org/api/wallpapers#pattern-wallpapers"
           ]
         },
         "settings": {
@@ -32666,7 +32651,7 @@
     "help.getPremiumPromo": {
       "name": "help.getPremiumPromo",
       "description": [
-        "Get Telegram Premim promotion information"
+        "Get Telegram Premium promotion information"
       ]
     },
     "help.getPromoData": {
@@ -39673,7 +39658,7 @@
           "name": "data",
           "description": "Data to relay to the bot, obtained from a web_app_data_send JS event¹.",
           "links": [
-            "https://core.telegram.org/api/web-events#web_app_data_send"
+            "https://core.telegram.org/api/web-events#web-app-data-send"
           ]
         },
         "random_id": {
@@ -40332,10 +40317,7 @@
       "parameters": {
         "action": {
           "name": "action",
-          "description": "Type of actionParameter added in Layer 17¹.",
-          "links": [
-            "https://core.telegram.org/api/layers#layer-17"
-          ]
+          "description": "Type of action"
         },
         "flags": {
           "name": "flags",
@@ -41699,7 +41681,7 @@
         "Get an invite link¹ for a group call or livestream"
       ],
       "links": [
-        "https://core.telegram.org/api/links#voice-chat-video-chat-livestream-links"
+        "https://core.telegram.org/api/links#voice-chatvideo-chatlivestream-links"
       ],
       "parameters": {
         "call": {
@@ -41926,7 +41908,7 @@
           "name": "invite_hash",
           "description": "The invitation hash from the invite link »¹, if provided allows speaking in a livestream or muted group chat.",
           "links": [
-            "https://core.telegram.org/api/links#video-chat-video-chat-livestream-links"
+            "https://core.telegram.org/api/links#voice-chatvideo-chatlivestream-links"
           ]
         },
         "join_as": {
