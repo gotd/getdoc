@@ -27842,6 +27842,19 @@
       ],
       "links": [
         "https://core.telegram.org/api/srp#password-reset"
+      ],
+      "parameters": {
+        "400": {
+          "name": "400",
+          "description": "The provided password is empty."
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PASSWORD_EMPTY",
+          "description": "The provided password is empty."
+        }
       ]
     },
     "account.resetWallPapers": {
@@ -29568,6 +29581,13 @@
           "description": "Command scope"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "LANG_CODE_INVALID",
+          "description": "The specified language code is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "bots.sendCustomRequest": {
@@ -29662,6 +29682,11 @@
           "code": 400,
           "type": "LANG_CODE_INVALID",
           "description": "The specified language code is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -40684,6 +40709,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "INPUT_TEXT_EMPTY",
+          "description": "The specified text is empty."
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -42677,6 +42707,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -44648,6 +44683,11 @@
       "code": 400,
       "type": "INPUT_FILTER_INVALID",
       "description": "The specified filter is invalid."
+    },
+    "INPUT_TEXT_EMPTY": {
+      "code": 400,
+      "type": "INPUT_TEXT_EMPTY",
+      "description": "The specified text is empty."
     },
     "INPUT_USER_DEACTIVATED": {
       "code": 400,
