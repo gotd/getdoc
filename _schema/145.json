@@ -2053,41 +2053,68 @@
     },
     "account.emailVerified": {
       "name": "account.emailVerified",
+      "description": [
+        "The email was verified correctly."
+      ],
       "fields": {
         "email": {
           "name": "email",
-          "description": " "
+          "description": "The verified email address."
         }
       }
     },
     "account.emailVerifiedLogin": {
       "name": "account.emailVerifiedLogin",
+      "description": [
+        "The email was verified correctly, and a login code was just sent to it."
+      ],
       "fields": {
         "email": {
           "name": "email",
-          "description": " "
+          "description": "The verified email address."
         },
         "sent_code": {
           "name": "sent_code",
-          "description": " "
+          "description": "Info about the sent login code¹",
+          "links": [
+            "https://core.telegram.org/api/auth"
+          ]
         }
       }
     },
     "account.emojiStatuses": {
       "name": "account.emojiStatuses",
+      "description": [
+        "A list of emoji statuses¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "fields": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         },
         "statuses": {
           "name": "statuses",
-          "description": " "
+          "description": "Emoji statuses¹",
+          "links": [
+            "https://core.telegram.org/api/emoji-status"
+          ]
         }
       }
     },
     "account.emojiStatusesNotModified": {
-      "name": "account.emojiStatusesNotModified"
+      "name": "account.emojiStatusesNotModified",
+      "description": [
+        "The server-side list of emoji statuses¹ hasn't changed"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ]
     },
     "account.password": {
       "name": "account.password",
@@ -2138,7 +2165,10 @@
         },
         "login_email_pattern": {
           "name": "login_email_pattern",
-          "description": " "
+          "description": "A verified login email with the specified pattern¹ is configured",
+          "links": [
+            "https://core.telegram.org/api/pattern"
+          ]
         },
         "new_algo": {
           "name": "new_algo",
@@ -2921,14 +2951,20 @@
     },
     "auth.sentCodeTypeEmailCode": {
       "name": "auth.sentCodeTypeEmailCode",
+      "description": [
+        "The code was sent via email"
+      ],
       "fields": {
         "apple_signin_allowed": {
           "name": "apple_signin_allowed",
-          "description": " "
+          "description": "Whether authorization through Apple ID is allowed"
         },
         "email_pattern": {
           "name": "email_pattern",
-          "description": " "
+          "description": "Pattern¹ of the email",
+          "links": [
+            "https://core.telegram.org/api/pattern"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -2939,15 +2975,15 @@
         },
         "google_signin_allowed": {
           "name": "google_signin_allowed",
-          "description": " "
+          "description": "Whether authorization through Google ID is allowed"
         },
         "length": {
           "name": "length",
-          "description": " "
+          "description": "Length of the sent verification code"
         },
         "next_phone_login_date": {
           "name": "next_phone_login_date",
-          "description": " "
+          "description": "If set, contains an absolute UNIX timestamp indicating when will the user be able to authorize with a code sent to the user's phone number"
         }
       }
     },
@@ -2984,10 +3020,13 @@
     },
     "auth.sentCodeTypeSetUpEmailRequired": {
       "name": "auth.sentCodeTypeSetUpEmailRequired",
+      "description": [
+        "The user should add and verify an email address in order to login"
+      ],
       "fields": {
         "apple_signin_allowed": {
           "name": "apple_signin_allowed",
-          "description": " "
+          "description": "Whether authorization through Apple ID is allowed"
         },
         "flags": {
           "name": "flags",
@@ -2998,7 +3037,7 @@
         },
         "google_signin_allowed": {
           "name": "google_signin_allowed",
-          "description": " "
+          "description": "Whether authorization through Google ID is allowed"
         }
       }
     },
@@ -6152,10 +6191,13 @@
     },
     "chatReactionsAll": {
       "name": "chatReactionsAll",
+      "description": [
+        "All reactions or all non-custom reactions are allowed"
+      ],
       "fields": {
         "allow_custom": {
           "name": "allow_custom",
-          "description": " "
+          "description": "Whether to allow custom reactions"
         },
         "flags": {
           "name": "flags",
@@ -6167,14 +6209,20 @@
       }
     },
     "chatReactionsNone": {
-      "name": "chatReactionsNone"
+      "name": "chatReactionsNone",
+      "description": [
+        "No reactions are allowed"
+      ]
     },
     "chatReactionsSome": {
       "name": "chatReactionsSome",
+      "description": [
+        "Some reactions are allowed"
+      ],
       "fields": {
         "reactions": {
           "name": "reactions",
-          "description": " "
+          "description": "Allowed reactions"
         }
       }
     },
@@ -6431,7 +6479,10 @@
         },
         "reactions_default": {
           "name": "reactions_default",
-          "description": " "
+          "description": "Default message reaction¹",
+          "links": [
+            "https://core.telegram.org/api/reactions"
+          ]
         },
         "revoke_pm_inbox": {
           "name": "revoke_pm_inbox",
@@ -7377,36 +7428,51 @@
     },
     "emailVerificationApple": {
       "name": "emailVerificationApple",
+      "description": [
+        "Apple ID email verification token"
+      ],
       "fields": {
         "token": {
           "name": "token",
-          "description": " "
+          "description": "Token"
         }
       }
     },
     "emailVerificationCode": {
       "name": "emailVerificationCode",
+      "description": [
+        "Email verification code"
+      ],
       "fields": {
         "code": {
           "name": "code",
-          "description": " "
+          "description": "Received verification code"
         }
       }
     },
     "emailVerificationGoogle": {
       "name": "emailVerificationGoogle",
+      "description": [
+        "Google ID email verification token"
+      ],
       "fields": {
         "token": {
           "name": "token",
-          "description": " "
+          "description": "Token"
         }
       }
     },
     "emailVerifyPurposeLoginChange": {
-      "name": "emailVerifyPurposeLoginChange"
+      "name": "emailVerifyPurposeLoginChange",
+      "description": [
+        "Email verification purpose: change login email"
+      ]
     },
     "emailVerifyPurposeLoginSetup": {
       "name": "emailVerifyPurposeLoginSetup",
+      "description": [
+        "Email verification purpose: setup login email"
+      ],
       "fields": {
         "phone_code_hash": {
           "name": "phone_code_hash",
@@ -7419,7 +7485,13 @@
       }
     },
     "emailVerifyPurposePassport": {
-      "name": "emailVerifyPurposePassport"
+      "name": "emailVerifyPurposePassport",
+      "description": [
+        "Verify an email for use in telegram passport¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/passport"
+      ]
     },
     "emojiKeyword": {
       "name": "emojiKeyword",
@@ -7491,26 +7563,47 @@
     },
     "emojiStatus": {
       "name": "emojiStatus",
+      "description": [
+        "An emoji status¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Custom emoji document ID¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
     "emojiStatusEmpty": {
-      "name": "emojiStatusEmpty"
+      "name": "emojiStatusEmpty",
+      "description": [
+        "No emoji status is set"
+      ]
     },
     "emojiStatusUntil": {
       "name": "emojiStatusUntil",
+      "description": [
+        "An emoji status¹ valid until the specified date"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Custom emoji document ID¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "until": {
           "name": "until",
-          "description": " "
+          "description": "This status is valid until this date"
         }
       }
     },
@@ -8467,7 +8560,7 @@
       "fields": {
         "period_options": {
           "name": "period_options",
-          "description": " "
+          "description": "Telegram Premium subscription options"
         },
         "status_entities": {
           "name": "status_entities",
@@ -11369,10 +11462,22 @@
       }
     },
     "inputStickerSetEmojiDefaultStatuses": {
-      "name": "inputStickerSetEmojiDefaultStatuses"
+      "name": "inputStickerSetEmojiDefaultStatuses",
+      "description": [
+        "Default custom emoji status¹ stickerset"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ]
     },
     "inputStickerSetEmojiGenericAnimations": {
-      "name": "inputStickerSetEmojiGenericAnimations"
+      "name": "inputStickerSetEmojiGenericAnimations",
+      "description": [
+        "Generic animation stickerset containing animations to play when reacting to messages using a normal emoji without a custom animation¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ]
     },
     "inputStickerSetEmpty": {
       "name": "inputStickerSetEmpty",
@@ -15411,19 +15516,34 @@
     },
     "messages.reactions": {
       "name": "messages.reactions",
+      "description": [
+        "List of message reactions¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ],
       "fields": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         },
         "reactions": {
           "name": "reactions",
-          "description": " "
+          "description": "Reactions"
         }
       }
     },
     "messages.reactionsNotModified": {
-      "name": "messages.reactionsNotModified"
+      "name": "messages.reactionsNotModified",
+      "description": [
+        "The server-side list of message reactions¹ hasn't changed"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ]
     },
     "messages.recentStickers": {
       "name": "messages.recentStickers",
@@ -18277,14 +18397,23 @@
     },
     "premiumSubscriptionOption": {
       "name": "premiumSubscriptionOption",
+      "description": [
+        "Describes a Telegram Premium subscription option"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "bot_url": {
           "name": "bot_url",
-          "description": " "
+          "description": "Deep link¹ used to initiate payment",
+          "links": [
+            "https://core.telegram.org/api/links"
+          ]
         },
         "can_purchase_upgrade": {
           "name": "can_purchase_upgrade",
@@ -18292,7 +18421,10 @@
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "current": {
           "name": "current",
@@ -18307,11 +18439,11 @@
         },
         "months": {
           "name": "months",
-          "description": " "
+          "description": "Duration of subscription in months"
         },
         "store_product": {
           "name": "store_product",
-          "description": " "
+          "description": "Store product ID, only for official apps"
         }
       }
     },
@@ -18473,24 +18605,39 @@
     },
     "reactionCustomEmoji": {
       "name": "reactionCustomEmoji",
+      "description": [
+        "Custom emoji¹ message reaction"
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Custom emoji document ID¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
     "reactionEmoji": {
       "name": "reactionEmoji",
+      "description": [
+        "Normal emoji message reaction"
+      ],
       "fields": {
         "emoticon": {
           "name": "emoticon",
-          "description": " "
+          "description": "Emoji"
         }
       }
     },
     "reactionEmpty": {
-      "name": "reactionEmpty"
+      "name": "reactionEmpty",
+      "description": [
+        "No reaction"
+      ]
     },
     "receivedNotifyMessage": {
       "name": "receivedNotifyMessage",
@@ -19421,6 +19568,9 @@
     },
     "sendAsPeer": {
       "name": "sendAsPeer",
+      "description": [
+        "Indicates a peer that can be used to send messages"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -19431,11 +19581,11 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer"
         },
         "premium_required": {
           "name": "premium_required",
-          "description": " "
+          "description": "Whether a Telegram Premium account is required to send messages as this peer"
         }
       }
     },
@@ -22789,10 +22939,22 @@
       }
     },
     "updateRecentEmojiStatuses": {
-      "name": "updateRecentEmojiStatuses"
+      "name": "updateRecentEmojiStatuses",
+      "description": [
+        "The list of recent emoji statuses¹ has changed"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ]
     },
     "updateRecentReactions": {
-      "name": "updateRecentReactions"
+      "name": "updateRecentReactions",
+      "description": [
+        "The list of recent message reactions¹ has changed"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ]
     },
     "updateRecentStickers": {
       "name": "updateRecentStickers",
@@ -23123,15 +23285,18 @@
     "updateStickerSets": {
       "name": "updateStickerSets",
       "description": [
-        "Installed stickersets have changed, the client should refetch them using messages.getAllStickers¹"
+        "Installed stickersets have changed, the client should refetch them as described in the docs¹."
       ],
       "links": [
-        "https://core.telegram.org/method/messages.getAllStickers"
+        "https://core.telegram.org/api/stickers#installing-stickersets"
       ],
       "fields": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "Whether the list of installed custom emoji stickersets¹ has changed",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -23142,7 +23307,7 @@
         },
         "masks": {
           "name": "masks",
-          "description": " "
+          "description": "Whether mask stickersets have changed"
         }
       }
     },
@@ -23229,14 +23394,23 @@
     },
     "updateUserEmojiStatus": {
       "name": "updateUserEmojiStatus",
+      "description": [
+        "The emoji status¹ of a certain user has changed"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "fields": {
         "emoji_status": {
           "name": "emoji_status",
-          "description": " "
+          "description": "New emoji status¹",
+          "links": [
+            "https://core.telegram.org/api/emoji-status"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID"
         }
       }
     },
@@ -23930,7 +24104,10 @@
         },
         "emoji_status": {
           "name": "emoji_status",
-          "description": " "
+          "description": "Emoji status¹",
+          "links": [
+            "https://core.telegram.org/api/emoji-status"
+          ]
         },
         "fake": {
           "name": "fake",
@@ -25133,7 +25310,10 @@
       ]
     },
     "ChatReactions": {
-      "name": "ChatReactions"
+      "name": "ChatReactions",
+      "description": [
+        "Available chat reactions"
+      ]
     },
     "CodeSettings": {
       "name": "CodeSettings",
@@ -25235,10 +25415,16 @@
       ]
     },
     "EmailVerification": {
-      "name": "EmailVerification"
+      "name": "EmailVerification",
+      "description": [
+        "Email verification code or token"
+      ]
     },
     "EmailVerifyPurpose": {
-      "name": "EmailVerifyPurpose"
+      "name": "EmailVerifyPurpose",
+      "description": [
+        "Email verification purpose"
+      ]
     },
     "EmojiKeyword": {
       "name": "EmojiKeyword",
@@ -25259,7 +25445,13 @@
       ]
     },
     "EmojiStatus": {
-      "name": "EmojiStatus"
+      "name": "EmojiStatus",
+      "description": [
+        "Emoji status¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ]
     },
     "EmojiURL": {
       "name": "EmojiURL",
@@ -26236,7 +26428,10 @@
       ]
     },
     "PremiumSubscriptionOption": {
-      "name": "PremiumSubscriptionOption"
+      "name": "PremiumSubscriptionOption",
+      "description": [
+        "Telegram Premium subscription option"
+      ]
     },
     "PrivacyKey": {
       "name": "PrivacyKey",
@@ -26251,7 +26446,13 @@
       ]
     },
     "Reaction": {
-      "name": "Reaction"
+      "name": "Reaction",
+      "description": [
+        "Message reaction¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ]
     },
     "ReactionCount": {
       "name": "ReactionCount",
@@ -26400,7 +26601,10 @@
       ]
     },
     "SendAsPeer": {
-      "name": "SendAsPeer"
+      "name": "SendAsPeer",
+      "description": [
+        "Indicates a peer that can be used to send messages"
+      ]
     },
     "SendMessageAction": {
       "name": "SendMessageAction",
@@ -26670,10 +26874,19 @@
       ]
     },
     "account.EmailVerified": {
-      "name": "account.EmailVerified"
+      "name": "account.EmailVerified",
+      "description": [
+        "Email verification status"
+      ]
     },
     "account.EmojiStatuses": {
-      "name": "account.EmojiStatuses"
+      "name": "account.EmojiStatuses",
+      "description": [
+        "A list of emoji statuses¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ]
     },
     "account.Password": {
       "name": "account.Password",
@@ -27046,7 +27259,13 @@
       ]
     },
     "messages.Reactions": {
-      "name": "messages.Reactions"
+      "name": "messages.Reactions",
+      "description": [
+        "A set of message reactions¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ]
     },
     "messages.SearchResultsCalendar": {
       "name": "messages.SearchResultsCalendar",
@@ -27384,7 +27603,12 @@
     },
     "account.clearRecentEmojiStatuses": {
       "name": "account.clearRecentEmojiStatuses",
-      "bot_can_use": true
+      "description": [
+        "Clears list of recently used emoji statuses¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ]
     },
     "account.confirmPasswordEmail": {
       "name": "account.confirmPasswordEmail",
@@ -27686,13 +27910,21 @@
     },
     "account.getDefaultEmojiStatuses": {
       "name": "account.getDefaultEmojiStatuses",
+      "description": [
+        "Get a list of default suggested emoji statuses¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getGlobalPrivacySettings": {
       "name": "account.getGlobalPrivacySettings",
@@ -27812,13 +28044,21 @@
     },
     "account.getRecentEmojiStatuses": {
       "name": "account.getRecentEmojiStatuses",
+      "description": [
+        "Get recently used emoji statuses¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getSavedRingtones": {
       "name": "account.getSavedRingtones",
@@ -28562,19 +28802,16 @@
     "account.sendVerifyEmailCode": {
       "name": "account.sendVerifyEmailCode",
       "description": [
-        "Send the verification email code for telegram passport¹."
-      ],
-      "links": [
-        "https://core.telegram.org/passport"
+        "Send an email verification code."
       ],
       "parameters": {
         "email": {
           "name": "email",
-          "description": "The email where to send the code"
+          "description": "The email where to send the code."
         },
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Verification purpose."
         }
       },
       "errors": [
@@ -28789,13 +29026,21 @@
     },
     "account.updateEmojiStatus": {
       "name": "account.updateEmojiStatus",
+      "description": [
+        "Set an emoji status¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status"
+      ],
       "parameters": {
         "emoji_status": {
           "name": "emoji_status",
-          "description": " "
+          "description": "Emoji status¹ to set",
+          "links": [
+            "https://core.telegram.org/api/emoji-status"
+          ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.updateNotifySettings": {
       "name": "account.updateNotifySettings",
@@ -29153,19 +29398,16 @@
     "account.verifyEmail": {
       "name": "account.verifyEmail",
       "description": [
-        "Verify an email address for telegram passport¹."
-      ],
-      "links": [
-        "https://core.telegram.org/passport"
+        "Verify an email address."
       ],
       "parameters": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Verification purpose"
         },
         "verification": {
           "name": "verification",
-          "description": " "
+          "description": "Email verification code or token"
         }
       },
       "errors": [
@@ -29842,7 +30084,7 @@
       "parameters": {
         "email_verification": {
           "name": "email_verification",
-          "description": " "
+          "description": "Email verification code or token"
         },
         "flags": {
           "name": "flags",
@@ -33887,7 +34129,12 @@
     },
     "messages.clearRecentReactions": {
       "name": "messages.clearRecentReactions",
-      "bot_can_use": true
+      "description": [
+        "Clear recently used message reactions¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ]
     },
     "messages.clearRecentStickers": {
       "name": "messages.clearRecentStickers",
@@ -36777,17 +37024,28 @@
     },
     "messages.getRecentReactions": {
       "name": "messages.getRecentReactions",
+      "description": [
+        "Get recently used message reactions¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         },
         "limit": {
           "name": "limit",
-          "description": " "
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getRecentStickers": {
       "name": "messages.getRecentStickers",
@@ -37149,17 +37407,28 @@
     },
     "messages.getTopReactions": {
       "name": "messages.getTopReactions",
+      "description": [
+        "Got popular message reactions¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         },
         "limit": {
           "name": "limit",
-          "description": " "
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getUnreadMentions": {
       "name": "messages.getUnreadMentions",
@@ -38106,21 +38375,26 @@
     },
     "messages.reportReaction": {
       "name": "messages.reportReaction",
+      "description": [
+        "Report a message reaction¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the message was sent"
         },
         "reaction_peer": {
           "name": "reaction_peer",
-          "description": " "
+          "description": "Peer that sent the reaction"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.reportSpam": {
       "name": "messages.reportSpam",
@@ -38211,7 +38485,7 @@
         },
         "platform": {
           "name": "platform",
-          "description": " "
+          "description": "Short name of the application; 0-64 English letters, digits, and underscores"
         },
         "theme_params": {
           "name": "theme_params",
@@ -38301,7 +38575,7 @@
         },
         "platform": {
           "name": "platform",
-          "description": " "
+          "description": "Short name of the application; 0-64 English letters, digits, and underscores"
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
@@ -40006,7 +40280,7 @@
       "parameters": {
         "add_to_recent": {
           "name": "add_to_recent",
-          "description": " "
+          "description": "Add this reaction to the recent reactions list"
         },
         "big": {
           "name": "big",
