@@ -2952,7 +2952,10 @@
     "auth.sentCodeTypeEmailCode": {
       "name": "auth.sentCodeTypeEmailCode",
       "description": [
-        "The code was sent via email"
+        "The code was sent via the previously configured login email »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#email-verification"
       ],
       "fields": {
         "apple_signin_allowed": {
@@ -3021,7 +3024,10 @@
     "auth.sentCodeTypeSetUpEmailRequired": {
       "name": "auth.sentCodeTypeSetUpEmailRequired",
       "description": [
-        "The user should add and verify an email address in order to login"
+        "The user should add and verify an email address in order to login as described here »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#email-verification"
       ],
       "fields": {
         "apple_signin_allowed": {
@@ -7476,11 +7482,14 @@
       "fields": {
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "Phone code hash as specified by the documentation¹",
+          "links": [
+            "https://core.telegram.org/api/auth#email-verification"
+          ]
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Phone number"
         }
       }
     },
@@ -8555,7 +8564,10 @@
     "help.premiumPromo": {
       "name": "help.premiumPromo",
       "description": [
-        "Telegram Premium promotion information"
+        "Telegram Premium promotion information",
+        "Note that the video_sections+videos fields are a list of videos, and the corresponding premium feature identifiers.",
+        "They're equivalent to a section =\u003e video dictionary, with keys from video_section and values from videos.",
+        "The keys in video_sections correspond to a specific feature identifier, and the associated promotional video should be shown when the associated feature row is clicked."
       ],
       "fields": {
         "period_options": {
