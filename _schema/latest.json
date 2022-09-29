@@ -18427,20 +18427,12 @@
             "https://core.telegram.org/api/links"
           ]
         },
-        "can_purchase_upgrade": {
-          "name": "can_purchase_upgrade",
-          "description": " "
-        },
         "currency": {
           "name": "currency",
           "description": "Three-letter ISO 4217 currency¹ code",
           "links": [
             "https://core.telegram.org/bots/payments#supported-currencies"
           ]
-        },
-        "current": {
-          "name": "current",
-          "description": " "
         },
         "flags": {
           "name": "flags",
@@ -18596,7 +18588,7 @@
       "fields": {
         "chosen_order": {
           "name": "chosen_order",
-          "description": " "
+          "description": "If set, indicates that the current user also sent this reaction. The integer value indicates when was the reaction added: the bigger the value, the newer the reaction."
         },
         "count": {
           "name": "count",
@@ -22288,10 +22280,19 @@
     },
     "updateMoveStickerSetToTop": {
       "name": "updateMoveStickerSetToTop",
+      "description": [
+        "A stickerset was just moved to top, see here for more info »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers#recent-stickersets"
+      ],
       "fields": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "This update is referring to a custom emoji stickerset¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -22302,11 +22303,17 @@
         },
         "masks": {
           "name": "masks",
-          "description": " "
+          "description": "This update is referring to a mask stickerset¹",
+          "links": [
+            "https://core.telegram.org/api/stickers#mask-stickers"
+          ]
         },
         "stickerset": {
           "name": "stickerset",
-          "description": " "
+          "description": "Stickerset¹ ID",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         }
       }
     },
@@ -28831,6 +28838,16 @@
           "code": 400,
           "type": "EMAIL_INVALID",
           "description": "The specified email is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PHONE_HASH_EXPIRED",
+          "description": "An invalid or expired phone_code_hash was provided."
+        },
+        {
+          "code": 400,
+          "type": "PHONE_NUMBER_INVALID",
+          "description": "The phone number is invalid."
         }
       ]
     },
@@ -34391,6 +34408,11 @@
         },
         {
           "code": 400,
+          "type": "CHAT_REVOKE_DATE_UNSUPPORTED",
+          "description": "min_date and max_date are not available for using with non-user peers."
+        },
+        {
+          "code": 400,
           "type": "MAX_DATE_INVALID",
           "description": "The specified maximum date is invalid."
         },
@@ -35166,6 +35188,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "CHANNEL_PRIVATE",
@@ -39522,7 +39549,10 @@
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
-          "description": " "
+          "description": "Whether to move used stickersets to top, see here for more info on this flag »¹",
+          "links": [
+            "https://core.telegram.org/api/stickers#recent-stickersets"
+          ]
         }
       },
       "errors": [
@@ -39935,7 +39965,10 @@
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
-          "description": " "
+          "description": "Whether to move used stickersets to top, see here for more info on this flag »¹",
+          "links": [
+            "https://core.telegram.org/api/stickers#recent-stickersets"
+          ]
         }
       },
       "errors": [
@@ -40197,7 +40230,10 @@
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
-          "description": " "
+          "description": "Whether to move used stickersets to top, see here for more info on this flag »¹",
+          "links": [
+            "https://core.telegram.org/api/stickers#recent-stickersets"
+          ]
         }
       },
       "errors": [
@@ -40790,7 +40826,14 @@
           "name": "reaction",
           "description": "New emoji reaction"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "REACTION_INVALID",
+          "description": "The specified reaction is invalid."
+        }
+      ]
     },
     "messages.setEncryptedTyping": {
       "name": "messages.setEncryptedTyping",
@@ -45031,6 +45074,11 @@
       "type": "CHAT_RESTRICTED",
       "description": "You can't send messages in this chat, you were restricted."
     },
+    "CHAT_REVOKE_DATE_UNSUPPORTED": {
+      "code": 400,
+      "type": "CHAT_REVOKE_DATE_UNSUPPORTED",
+      "description": "min_date and max_date are not available for using with non-user peers."
+    },
     "CHAT_SEND_GAME_FORBIDDEN": {
       "code": 403,
       "type": "CHAT_SEND_GAME_FORBIDDEN",
@@ -45925,6 +45973,11 @@
       "code": 400,
       "type": "PHONE_CODE_INVALID",
       "description": "The provided phone code is invalid."
+    },
+    "PHONE_HASH_EXPIRED": {
+      "code": 400,
+      "type": "PHONE_HASH_EXPIRED",
+      "description": "An invalid or expired phone_code_hash was provided."
     },
     "PHONE_NOT_OCCUPIED": {
       "code": 400,
