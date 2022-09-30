@@ -6228,7 +6228,10 @@
       "fields": {
         "reactions": {
           "name": "reactions",
-          "description": "Allowed reactions"
+          "description": "Allowed set of reactions: the reactions_in_chat_max¹ configuration field indicates the maximum number of reactions that can be specified in this field.",
+          "links": [
+            "https://core.telegram.org/api/config#reactions-in-chat-max"
+          ]
         }
       }
     },
@@ -40199,7 +40202,10 @@
         },
         "multi_media": {
           "name": "multi_media",
-          "description": "The medias to send"
+          "description": "The medias to send: note that they must be separately uploaded using messages.uploadMedia¹ first, using raw inputMediaUploaded* constructors is not supported.",
+          "links": [
+            "https://core.telegram.org/method/messages.uploadMedia"
+          ]
         },
         "noforwards": {
           "name": "noforwards",
