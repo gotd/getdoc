@@ -6372,7 +6372,7 @@
         },
         "force_try_ipv6": {
           "name": "force_try_ipv6",
-          "description": "Whether to forcefully try connecting using IPv6 dcOptions¹",
+          "description": "Whether to forcefully connect using IPv6 dcOptions¹, even if the client knows that IPv4 is available.",
           "links": [
             "https://core.telegram.org/type/DcOption"
           ]
@@ -6830,7 +6830,7 @@
         },
         "this_port_only": {
           "name": "this_port_only",
-          "description": " "
+          "description": "If set, clients must connect using only the specified port, without trying any other port."
         }
       }
     },
