@@ -28121,7 +28121,7 @@
       "parameters": {
         "document_id": {
           "name": "document_id",
-          "description": "Document ID"
+          "description": "Deprecated: should always be 0"
         },
         "format": {
           "name": "format",
@@ -40822,10 +40822,10 @@
     "messages.setDefaultReaction": {
       "name": "messages.setDefaultReaction",
       "description": [
-        "Change default emoji reaction to use in the quick reaction menu: the value is synced across devices and can be fetched using help.getAppConfig, reactions_default field¹."
+        "Change default emoji reaction to use in the quick reaction menu: the value is synced across devices and can be fetched using help.getConfig, reactions_default field¹."
       ],
       "links": [
-        "https://core.telegram.org/api/config#reactions-default"
+        "https://core.telegram.org/method/help.getConfig"
       ],
       "parameters": {
         "reaction": {
