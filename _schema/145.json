@@ -14365,10 +14365,6 @@
             "https://core.telegram.org/api/threads"
           ]
         },
-        "reply_to_scheduled": {
-          "name": "reply_to_scheduled",
-          "description": "Whether this message replies to a scheduled message"
-        },
         "reply_to_top_id": {
           "name": "reply_to_top_id",
           "description": "ID of the message that started this message thread¹",
