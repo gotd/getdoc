@@ -42613,7 +42613,7 @@
         "Get an invite link¹ for a group call or livestream"
       ],
       "links": [
-        "https://core.telegram.org/api/links#voice-chatvideo-chatlivestream-links"
+        "https://core.telegram.org/api/links#video-chatlivestream-links"
       ],
       "parameters": {
         "call": {
@@ -42840,7 +42840,7 @@
           "name": "invite_hash",
           "description": "The invitation hash from the invite link »¹, if provided allows speaking in a livestream or muted group chat.",
           "links": [
-            "https://core.telegram.org/api/links#voice-chatvideo-chatlivestream-links"
+            "https://core.telegram.org/api/links#video-chatlivestream-links"
           ]
         },
         "join_as": {
