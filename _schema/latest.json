@@ -13475,7 +13475,11 @@
     "messageEntityCustomEmoji": {
       "name": "messageEntityCustomEmoji",
       "description": [
-        "Represents a custom emoji"
+        "Represents a custom emoji.",
+        "Note that this entity must wrap exactly one regular emoji (the one contained in documentAttributeCustomEmoji¹.alt) in the related text, otherwise the server will ignore it."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/documentAttributeCustomEmoji"
       ],
       "fields": {
         "document_id": {
@@ -40336,7 +40340,10 @@
       "parameters": {
         "add_to_recent": {
           "name": "add_to_recent",
-          "description": "Add this reaction to the recent reactions list"
+          "description": "Add this reaction to the recent reactions list »¹.",
+          "links": [
+            "https://core.telegram.org/api/reactions#recent-reactions"
+          ]
         },
         "big": {
           "name": "big",
