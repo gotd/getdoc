@@ -2671,7 +2671,7 @@
     "attachMenuPeerTypeBotPM": {
       "name": "attachMenuPeerTypeBotPM",
       "description": [
-        "The bot attachment menu entry is available in private chats with other bots"
+        "The bot attachment menu entry is available in private chats with other bots (excluding the bot that offers the current attachment menu)"
       ]
     },
     "attachMenuPeerTypeBroadcast": {
@@ -2692,7 +2692,7 @@
     "attachMenuPeerTypePM": {
       "name": "attachMenuPeerTypePM",
       "description": [
-        "The bot attachment menu entry is available in private chats with other users"
+        "The bot attachment menu entry is available in private chats with other users (not bots)"
       ]
     },
     "attachMenuPeerTypeSameBotPM": {
@@ -13280,7 +13280,8 @@
     "messageActionWebViewDataSent": {
       "name": "messageActionWebViewDataSent",
       "description": [
-        "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (user side service message)."
+        "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (user side service message).",
+        "Clients should display a service message with the text Data from the «$text» button was transferred to the bot."
       ],
       "links": [
         "https://core.telegram.org/api/bots/webapps"
@@ -38011,7 +38012,8 @@
     "messages.prolongWebView": {
       "name": "messages.prolongWebView",
       "description": [
-        "Indicate to the server (from the user side) that the user is still using a web app."
+        "Indicate to the server (from the user side) that the user is still using a web app.",
+        "If the method returns a QUERY_ID_INVALID error, the webview must be closed."
       ],
       "parameters": {
         "bot": {
@@ -38537,7 +38539,10 @@
         },
         "theme_params": {
           "name": "theme_params",
-          "description": "Theme parameters"
+          "description": "Theme parameters »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#theme-parameters"
+          ]
         },
         "url": {
           "name": "url",
@@ -38652,7 +38657,10 @@
         },
         "theme_params": {
           "name": "theme_params",
-          "description": "Theme parameters for the web app"
+          "description": "Theme parameters »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#theme-parameters"
+          ]
         },
         "url": {
           "name": "url",
