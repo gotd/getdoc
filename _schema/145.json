@@ -2543,7 +2543,7 @@
         },
         "icons": {
           "name": "icons",
-          "description": "Attachment menu icon"
+          "description": "List of platform-specific static icons and animations to use for the attachment menu button"
         },
         "inactive": {
           "name": "inactive",
@@ -2554,7 +2554,7 @@
         },
         "peer_types": {
           "name": "peer_types",
-          "description": "List of peer types where this attachment should be shown"
+          "description": "List of dialog types where this attachment menu entry should be shown"
         },
         "short_name": {
           "name": "short_name",
@@ -18048,7 +18048,10 @@
         },
         "type": {
           "name": "type",
-          "description": "Thumbnail type"
+          "description": "Thumbnail type »¹",
+          "links": [
+            "https://core.telegram.org/api/files#image-thumbnail-types"
+          ]
         },
         "w": {
           "name": "w",
@@ -18064,9 +18067,9 @@
       "fields": {
         "type": {
           "name": "type",
-          "description": "Thumbnail type (see. photoSize¹)",
+          "description": "Thumbnail type »¹",
           "links": [
-            "https://core.telegram.org/constructor/photoSize"
+            "https://core.telegram.org/api/files#image-thumbnail-types"
           ]
         }
       }
@@ -18087,7 +18090,10 @@
         },
         "type": {
           "name": "type",
-          "description": "Photosize type"
+          "description": "Photosize type »¹",
+          "links": [
+            "https://core.telegram.org/api/files#image-thumbnail-types"
+          ]
         },
         "w": {
           "name": "w",
