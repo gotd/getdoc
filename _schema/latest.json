@@ -3239,7 +3239,7 @@
         },
         "select_animation": {
           "name": "select_animation",
-          "description": "The animated sticker to show when the user selects this reaction"
+          "description": "The animated sticker to show when the user hovers over the reaction"
         },
         "static_icon": {
           "name": "static_icon",
