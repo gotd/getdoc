@@ -95,6 +95,7 @@
           "botMenuButton",
           "botMenuButtonCommands",
           "botMenuButtonDefault",
+          "bots.premiumGiftsOptions",
           "cdnConfig",
           "cdnPublicKey",
           "channel",
@@ -1789,6 +1790,7 @@
           "auth.PasswordRecovery",
           "auth.SentCode",
           "auth.SentCodeType",
+          "bots.PremiumGiftsOptions",
           "bytes",
           "channels.AdminLogResults",
           "channels.ChannelParticipant",
@@ -1916,6 +1918,9 @@
           "description": "Offset from where to start computing SHA-256 hash"
         }
       }
+    },
+    "Page not found": {
+      "name": "Page not found"
     },
     "Updates": {
       "name": "Updates",
@@ -26224,6 +26229,9 @@
       "links": [
         "https://instantview.telegram.org"
       ]
+    },
+    "Page not found": {
+      "name": "Page not found"
     },
     "PageBlock": {
       "name": "PageBlock",
