@@ -10944,15 +10944,16 @@
     "inputPhoneContact": {
       "name": "inputPhoneContact",
       "description": [
-        "Phone contact. The client_id is just an arbitrary contact ID: it should be set, for example, to an incremental number when using contacts.importContacts¹, in order to retry importing only the contacts that weren't imported successfully."
-      ],
-      "links": [
-        "https://core.telegram.org/method/contacts.importContacts"
+        "Phone contact."
       ],
       "fields": {
         "client_id": {
           "name": "client_id",
-          "description": "User identifier on the client"
+          "description": "An arbitrary 64-bit integer: it should be set, for example, to an incremental number when using contacts.importContacts¹, in order to retry importing only the contacts that weren't imported successfully, according to the client_ids returned in contacts.importedContacts².retry_contacts.",
+          "links": [
+            "https://core.telegram.org/method/contacts.importContacts",
+            "https://core.telegram.org/constructor/contacts.importedContacts"
+          ]
         },
         "first_name": {
           "name": "first_name",
