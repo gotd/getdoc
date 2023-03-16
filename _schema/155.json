@@ -29020,6 +29020,16 @@
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_OCCUPIED",
+          "description": "The provided username is already occupied."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_PURCHASE_AVAILABLE",
+          "description": "The specified username can be purchased on https://fragment.com."
         }
       ]
     },
@@ -29398,7 +29408,14 @@
             "https://core.telegram.org/api/wallpapers"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "WALLPAPER_INVALID",
+          "description": "The specified wallpaper is invalid."
+        }
+      ]
     },
     "account.getNotifyExceptions": {
       "name": "account.getNotifyExceptions",
@@ -29843,8 +29860,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "TOKEN_EMPTY",
+          "description": "The specified token is empty."
+        },
+        {
+          "code": 400,
           "type": "TOKEN_INVALID",
           "description": "The provided token is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TOKEN_TYPE_INVALID",
+          "description": "The specified token type is invalid."
         },
         {
           "code": 400,
@@ -30812,6 +30839,11 @@
           "code": 400,
           "type": "USERNAME_OCCUPIED",
           "description": "The provided username is already occupied."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_PURCHASE_AVAILABLE",
+          "description": "The specified username can be purchased on https://fragment.com."
         }
       ]
     },
@@ -31245,6 +31277,11 @@
           "code": 400,
           "type": "API_ID_INVALID",
           "description": "API ID invalid."
+        },
+        {
+          "code": 400,
+          "type": "API_ID_PUBLISHED_FLOOD",
+          "description": "This API id was published somewhere, you can't use it now."
         }
       ]
     },
@@ -31677,6 +31714,11 @@
       },
       "errors": [
         {
+          "code": 500,
+          "type": "AUTH_RESTART",
+          "description": "Restart the authorization process."
+        },
+        {
           "code": 400,
           "type": "PHONE_CODE_EMPTY",
           "description": "phone_code is missing."
@@ -31985,8 +32027,18 @@
         },
         {
           "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
         }
       ],
       "bot_can_use": true
@@ -32011,6 +32063,11 @@
           "code": 400,
           "type": "RIGHTS_NOT_MODIFIED",
           "description": "The new admin rights are equal to the old rights, no change was made."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -32063,6 +32120,11 @@
           "code": 400,
           "type": "BUTTON_TEXT_INVALID",
           "description": "The specified button text is invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUTTON_URL_INVALID",
+          "description": "Button URL invalid."
         }
       ],
       "bot_can_use": true
@@ -32110,6 +32172,16 @@
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_OCCUPIED",
+          "description": "The provided username is already occupied."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_PURCHASE_AVAILABLE",
+          "description": "The specified username can be purchased on https://fragment.com."
         }
       ]
     },
@@ -32321,7 +32393,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -32397,6 +32469,10 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_TOO_BIG"
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         }
@@ -32430,7 +32506,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -32585,7 +32661,7 @@
           "description": "You do not have the rights to do this."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -32689,12 +32765,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -32918,7 +32994,7 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -32931,6 +33007,11 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
+        },
+        {
+          "code": 400,
+          "type": "FILE_PARTS_INVALID",
+          "description": "The number of file parts is invalid."
         },
         {
           "code": 400,
@@ -32985,7 +33066,7 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -33124,12 +33205,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -33212,7 +33293,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -33264,6 +33345,18 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_FORUM_MISSING",
+          "description": "This supergroup is not a forum."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.getForumTopicsByID": {
@@ -33316,6 +33409,10 @@
           "code": 403,
           "type": "CHANNEL_PUBLIC_GROUP_NA",
           "description": "channel/supergroup not available."
+        },
+        {
+          "code": 500,
+          "type": "CHAT_FROM_USERNAME_CHANGED"
         },
         {
           "code": 400,
@@ -33400,7 +33497,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -33413,6 +33510,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -33447,12 +33548,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -33525,12 +33626,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         }
@@ -33627,12 +33728,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -33726,7 +33827,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -33754,6 +33855,10 @@
           "code": 400,
           "type": "INVITE_REQUEST_SENT",
           "description": "You have successfully requested to join this chat or channel."
+        },
+        {
+          "code": 500,
+          "type": "MEMBER_CHAT_ADD_FAILED"
         },
         {
           "code": 400,
@@ -33806,7 +33911,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -33866,7 +33971,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -33905,7 +34010,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -34125,6 +34230,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_DISCUSSION_UNALLOWED",
+          "description": "You can't enable forum topics in a discussion group linked to a channel."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.toggleJoinRequest": {
@@ -34144,7 +34256,23 @@
           "name": "enabled",
           "description": "Toggle"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_PUBLIC_REQUIRED"
+        }
+      ]
     },
     "channels.toggleJoinToSend": {
       "name": "channels.toggleJoinToSend",
@@ -34167,8 +34295,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
         }
       ]
     },
@@ -34293,6 +34431,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -34376,7 +34519,7 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -34404,6 +34547,11 @@
           "code": 400,
           "type": "USERNAME_OCCUPIED",
           "description": "The provided username is already occupied."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_PURCHASE_AVAILABLE",
+          "description": "The specified username can be purchased on https://fragment.com."
         }
       ]
     },
@@ -35072,7 +35220,14 @@
           "name": "id",
           "description": "ID of terms of service"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "DATA_JSON_INVALID",
+          "description": "The provided JSON data is invalid."
+        }
+      ]
     },
     "help.dismissSuggestion": {
       "name": "help.dismissSuggestion",
@@ -35128,7 +35283,7 @@
           "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "USER_INVALID",
           "description": "Invalid user provided."
         }
@@ -35567,7 +35722,7 @@
           "description": "The provided API id is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "INVITE_HASH_EXPIRED",
           "description": "The invite link has expired."
         }
@@ -35871,6 +36026,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOT_GROUPS_BLOCKED",
+          "description": "This bot can't be added to groups."
+        },
+        {
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -35957,6 +36117,10 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
+          "code": 500,
+          "type": "CHAT_MEMBERS_CHANNEL"
+        },
+        {
           "code": 400,
           "type": "INVITE_HASH_EMPTY",
           "description": "The invite hash is empty."
@@ -36015,6 +36179,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -36117,7 +36286,7 @@
           "description": "Not enough users (to create a chat, for example)."
         },
         {
-          "code": 403,
+          "code": 406,
           "type": "USER_RESTRICTED",
           "description": "You're spamreported, you can't create channels or chats."
         }
@@ -36768,13 +36937,28 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
           "type": "CHAT_INVITE_PERMANENT",
           "description": "You can't set an expiration date on permanent invite links."
         },
         {
           "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
+          "code": 403,
           "type": "EDIT_BOT_INVITE_FORBIDDEN",
           "description": "Normal users can't edit invites that were created by bots."
+        },
+        {
+          "code": 400,
+          "type": "INVITE_HASH_EXPIRED",
+          "description": "The invite link has expired."
         },
         {
           "code": 400,
@@ -36904,6 +37088,16 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOT_DOMAIN_INVALID",
+          "description": "Bot domain invalid."
+        },
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
           "type": "BUTTON_DATA_INVALID",
           "description": "The data of one or more of the buttons you provided is invalid."
         },
@@ -36923,7 +37117,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -36939,8 +37133,18 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_GIFS_FORBIDDEN",
+          "description": "You can't send gifs in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
+        },
+        {
+          "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
         },
         {
           "code": 400,
@@ -36966,6 +37170,11 @@
           "code": 400,
           "type": "MEDIA_CAPTION_TOO_LONG",
           "description": "The caption is too long."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_EMPTY",
+          "description": "The provided media object is invalid."
         },
         {
           "code": 400,
@@ -37226,12 +37435,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -37252,6 +37461,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_AUDIOS_FORBIDDEN",
+          "description": "You can't send audio messages in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_GAME_FORBIDDEN",
           "description": "You can't send a game to this chat."
         },
@@ -37267,6 +37481,16 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_PHOTOS_FORBIDDEN",
+          "description": "You can't send photos in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_PLAIN_FORBIDDEN",
+          "description": "You can't send non-media (text) messages in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_POLL_FORBIDDEN",
           "description": "You can't send polls in this chat."
         },
@@ -37274,6 +37498,11 @@
           "code": 403,
           "type": "CHAT_SEND_STICKERS_FORBIDDEN",
           "description": "You can't send stickers in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_VIDEOS_FORBIDDEN",
+          "description": "You can't send videos in this chat."
         },
         {
           "code": 403,
@@ -37354,6 +37583,16 @@
           "code": 400,
           "type": "SLOWMODE_MULTI_MSGS_DISABLED",
           "description": "Slowmode is enabled, you cannot forward multiple messages to this group."
+        },
+        {
+          "code": 406,
+          "type": "TOPIC_CLOSED",
+          "description": "This topic was closed, you can't send messages to it anymore."
+        },
+        {
+          "code": 406,
+          "type": "TOPIC_DELETED",
+          "description": "The specified topic was deleted."
         },
         {
           "code": 400,
@@ -37727,6 +37966,10 @@
           "description": "The invite link has expired."
         },
         {
+          "code": 500,
+          "type": "INVITE_HASH_UNSYNC"
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -37928,9 +38171,18 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "FOLDER_ID_INVALID",
           "description": "Invalid folder ID."
+        },
+        {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -37981,6 +38233,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_ID_INVALID",
+          "description": "The specified topic ID is invalid."
         }
       ]
     },
@@ -38130,6 +38387,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -38202,6 +38464,11 @@
           "code": 400,
           "type": "ADMIN_ID_INVALID",
           "description": "The specified admin ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
         },
         {
           "code": 400,
@@ -38401,7 +38668,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -38414,6 +38681,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -38478,7 +38749,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -38715,7 +38986,14 @@
           "name": "peer",
           "description": "Peer"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        }
+      ]
     },
     "messages.getMessagesViews": {
       "name": "messages.getMessagesViews",
@@ -38746,7 +39024,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -38840,7 +39118,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -38848,6 +39126,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -38877,6 +39159,11 @@
           "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         },
         {
           "code": 400,
@@ -39741,8 +40028,33 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "HIDE_REQUESTER_MISSING",
+          "description": "The join request was missing or was already handled."
+        },
+        {
+          "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_ALREADY_PARTICIPANT",
+          "description": "The user is already in the group."
+        },
+        {
+          "code": 403,
+          "type": "USER_CHANNELS_TOO_MUCH",
+          "description": "One of the users you tried to add is already in too many channels/supergroups."
         },
         {
           "code": 400,
@@ -39912,7 +40224,7 @@
       },
       "errors": [
         {
-          "code": 400,
+          "code": 406,
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
         }
@@ -40550,6 +40862,11 @@
         },
         {
           "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -40967,7 +41284,7 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -41129,7 +41446,14 @@
           "name": "q",
           "description": "Optional search query"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
+        }
+      ]
     },
     "messages.searchStickerSets": {
       "name": "messages.searchStickerSets",
@@ -41463,9 +41787,19 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 403,
+          "type": "CHAT_GUEST_SEND_FORBIDDEN",
+          "description": "You join the discussion group before commenting, see here » for more info."
+        },
+        {
           "code": 400,
           "type": "CHAT_RESTRICTED",
           "description": "You can't send messages in this chat, you were restricted."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_AUDIOS_FORBIDDEN",
+          "description": "You can't send audio messages in this chat."
         },
         {
           "code": 403,
@@ -41489,8 +41823,18 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_PHOTOS_FORBIDDEN",
+          "description": "You can't send photos in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_STICKERS_FORBIDDEN",
           "description": "You can't send stickers in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_VOICES_FORBIDDEN",
+          "description": "You can't send voice recordings in this chat."
         },
         {
           "code": 403,
@@ -41556,6 +41900,11 @@
           "code": 420,
           "type": "SLOWMODE_WAIT_%d",
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_DELETED",
+          "description": "The specified topic was deleted."
         },
         {
           "code": 400,
@@ -41702,12 +42051,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -41728,6 +42077,16 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_AUDIOS_FORBIDDEN",
+          "description": "You can't send audio messages in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_DOCS_FORBIDDEN",
+          "description": "You can't send documents in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_GIFS_FORBIDDEN",
           "description": "You can't send gifs in this chat."
         },
@@ -41738,6 +42097,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_PHOTOS_FORBIDDEN",
+          "description": "You can't send photos in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_POLL_FORBIDDEN",
           "description": "You can't send polls in this chat."
         },
@@ -41745,6 +42109,16 @@
           "code": 403,
           "type": "CHAT_SEND_STICKERS_FORBIDDEN",
           "description": "You can't send stickers in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_VIDEOS_FORBIDDEN",
+          "description": "You can't send videos in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_VOICES_FORBIDDEN",
+          "description": "You can't send voice recordings in this chat."
         },
         {
           "code": 403,
@@ -41957,6 +42331,16 @@
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
         },
         {
+          "code": 406,
+          "type": "TOPIC_CLOSED",
+          "description": "This topic was closed, you can't send messages to it anymore."
+        },
+        {
+          "code": 406,
+          "type": "TOPIC_DELETED",
+          "description": "The specified topic was deleted."
+        },
+        {
           "code": 400,
           "type": "TTL_MEDIA_INVALID",
           "description": "Invalid media Time To Live was provided."
@@ -41980,6 +42364,11 @@
           "code": 400,
           "type": "VIDEO_CONTENT_TYPE_INVALID",
           "description": "The video's content type is invalid."
+        },
+        {
+          "code": 400,
+          "type": "VOICE_MESSAGES_FORBIDDEN",
+          "description": "This user's privacy settings forbid you from sending voice messages."
         },
         {
           "code": 400,
@@ -42127,12 +42516,12 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -42150,6 +42539,11 @@
           "code": 400,
           "type": "CHAT_RESTRICTED",
           "description": "You can't send messages in this chat, you were restricted."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_PLAIN_FORBIDDEN",
+          "description": "You can't send non-media (text) messages in this chat."
         },
         {
           "code": 403,
@@ -42200,6 +42594,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 406,
+          "type": "PAYMENT_UNSUPPORTED"
         },
         {
           "code": 400,
@@ -42260,6 +42658,16 @@
           "code": 420,
           "type": "SLOWMODE_WAIT_%d",
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
+        },
+        {
+          "code": 406,
+          "type": "TOPIC_CLOSED",
+          "description": "This topic was closed, you can't send messages to it anymore."
+        },
+        {
+          "code": 406,
+          "type": "TOPIC_DELETED",
+          "description": "The specified topic was deleted."
         },
         {
           "code": 400,
@@ -42380,6 +42788,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_MEDIA_FORBIDDEN",
+          "description": "You can't send media in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
         },
@@ -42442,6 +42855,16 @@
           "code": 420,
           "type": "SLOWMODE_WAIT_%d",
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_DELETED",
+          "description": "The specified topic was deleted."
+        },
+        {
+          "code": 400,
+          "type": "USER_BANNED_IN_CHANNEL",
+          "description": "You're banned from sending messages in supergroups/channels."
         }
       ],
       "bot_can_use": true
@@ -42788,6 +43211,11 @@
           "code": 400,
           "type": "URL_INVALID",
           "description": "Invalid URL provided."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -43413,7 +43841,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -43647,6 +44075,10 @@
         },
         {
           "code": 400,
+          "type": "PEER_HISTORY_EMPTY"
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         },
@@ -43674,7 +44106,19 @@
           "name": "peer",
           "description": "The chat or channel"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "The pinned message wasn't modified."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.togglePeerTranslations": {
       "name": "messages.togglePeerTranslations",
@@ -43745,7 +44189,19 @@
           "name": "peer",
           "description": "Peer ID where the voice message was sent"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
+          "code": 400,
+          "type": "TRANSCRIPTION_FAILED",
+          "description": "Audio transcription failed."
+        }
+      ]
     },
     "messages.translateText": {
       "name": "messages.translateText",
@@ -43813,7 +44269,7 @@
       },
       "errors": [
         {
-          "code": 400,
+          "code": 406,
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
         }
@@ -44692,6 +45148,16 @@
           "code": 400,
           "type": "GROUPCALL_ALREADY_DISCARDED",
           "description": "The group call was already discarded."
+        },
+        {
+          "code": 403,
+          "type": "GROUPCALL_FORBIDDEN",
+          "description": "The group call has already ended."
+        },
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
         }
       ]
     },
@@ -45688,6 +46154,10 @@
         },
         {
           "code": 400,
+          "type": "STICKER_MIME_INVALID"
+        },
+        {
+          "code": 400,
           "type": "VIDEO_FILE_INVALID",
           "description": "The specified video file is invalid."
         }
@@ -45735,7 +46205,7 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         }
@@ -45776,7 +46246,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -45982,7 +46452,7 @@
           "description": "There are too many stickers in this stickerpack, you can't add any more."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
         },
@@ -46396,7 +46866,7 @@
           "description": "The provided channel is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -46419,6 +46889,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -46530,6 +47004,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
+        },
+        {
           "code": 400,
           "type": "PERSISTENT_TIMESTAMP_EMPTY",
           "description": "Persistent timestamp empty."
@@ -46548,6 +47026,11 @@
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
+        },
+        {
+          "code": 400,
+          "type": "USER_NOT_PARTICIPANT",
+          "description": "You're not a member of this supergroup/channel."
         }
       ],
       "bot_can_use": true
@@ -46797,6 +47280,11 @@
         },
         {
           "code": 400,
+          "type": "FILE_TOKEN_INVALID",
+          "description": "The specified file token is invalid."
+        },
+        {
+          "code": 400,
           "type": "RSA_DECRYPT_FAILED",
           "description": "Internal RSA decryption failed."
         }
@@ -46959,6 +47447,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -47288,6 +47780,11 @@
       "type": "CHANNELS_TOO_MUCH",
       "description": "You have joined too many channels/supergroups."
     },
+    "CHANNEL_FORUM_MISSING": {
+      "code": 400,
+      "type": "CHANNEL_FORUM_MISSING",
+      "description": "This supergroup is not a forum."
+    },
     "CHANNEL_ID_INVALID": {
       "code": 400,
       "type": "CHANNEL_ID_INVALID",
@@ -47312,6 +47809,10 @@
       "code": 403,
       "type": "CHANNEL_PUBLIC_GROUP_NA",
       "description": "channel/supergroup not available."
+    },
+    "CHANNEL_TOO_BIG": {
+      "code": 400,
+      "type": "CHANNEL_TOO_BIG"
     },
     "CHANNEL_TOO_LARGE": {
       "code": 406,
@@ -47338,10 +47839,19 @@
       "type": "CHAT_ADMIN_REQUIRED",
       "description": "You must be an admin in this chat to do this."
     },
+    "CHAT_DISCUSSION_UNALLOWED": {
+      "code": 400,
+      "type": "CHAT_DISCUSSION_UNALLOWED",
+      "description": "You can't enable forum topics in a discussion group linked to a channel."
+    },
     "CHAT_FORWARDS_RESTRICTED": {
       "code": 400,
       "type": "CHAT_FORWARDS_RESTRICTED",
       "description": "You can't forward messages from a protected chat."
+    },
+    "CHAT_FROM_USERNAME_CHANGED": {
+      "code": 500,
+      "type": "CHAT_FROM_USERNAME_CHANGED"
     },
     "CHAT_GUEST_SEND_FORBIDDEN": {
       "code": 403,
@@ -47378,10 +47888,18 @@
       "type": "CHAT_LINK_EXISTS",
       "description": "The chat is public, you can't hide the history to new users."
     },
+    "CHAT_MEMBERS_CHANNEL": {
+      "code": 500,
+      "type": "CHAT_MEMBERS_CHANNEL"
+    },
     "CHAT_NOT_MODIFIED": {
       "code": 400,
       "type": "CHAT_NOT_MODIFIED",
       "description": "The pinned message wasn't modified."
+    },
+    "CHAT_PUBLIC_REQUIRED": {
+      "code": 400,
+      "type": "CHAT_PUBLIC_REQUIRED"
     },
     "CHAT_RESTRICTED": {
       "code": 400,
@@ -47392,6 +47910,16 @@
       "code": 400,
       "type": "CHAT_REVOKE_DATE_UNSUPPORTED",
       "description": "min_date and max_date are not available for using with non-user peers."
+    },
+    "CHAT_SEND_AUDIOS_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_AUDIOS_FORBIDDEN",
+      "description": "You can't send audio messages in this chat."
+    },
+    "CHAT_SEND_DOCS_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_DOCS_FORBIDDEN",
+      "description": "You can't send documents in this chat."
     },
     "CHAT_SEND_GAME_FORBIDDEN": {
       "code": 403,
@@ -47413,6 +47941,16 @@
       "type": "CHAT_SEND_MEDIA_FORBIDDEN",
       "description": "You can't send media in this chat."
     },
+    "CHAT_SEND_PHOTOS_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_PHOTOS_FORBIDDEN",
+      "description": "You can't send photos in this chat."
+    },
+    "CHAT_SEND_PLAIN_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_PLAIN_FORBIDDEN",
+      "description": "You can't send non-media (text) messages in this chat."
+    },
     "CHAT_SEND_POLL_FORBIDDEN": {
       "code": 403,
       "type": "CHAT_SEND_POLL_FORBIDDEN",
@@ -47422,6 +47960,16 @@
       "code": 403,
       "type": "CHAT_SEND_STICKERS_FORBIDDEN",
       "description": "You can't send stickers in this chat."
+    },
+    "CHAT_SEND_VIDEOS_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_VIDEOS_FORBIDDEN",
+      "description": "You can't send videos in this chat."
+    },
+    "CHAT_SEND_VOICES_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_VOICES_FORBIDDEN",
+      "description": "You can't send voice recordings in this chat."
     },
     "CHAT_TITLE_EMPTY": {
       "code": 400,
@@ -47723,6 +48271,11 @@
       "type": "FILE_TITLE_EMPTY",
       "description": "An empty file title was specified."
     },
+    "FILE_TOKEN_INVALID": {
+      "code": 400,
+      "type": "FILE_TOKEN_INVALID",
+      "description": "The specified file token is invalid."
+    },
     "FILTER_ID_INVALID": {
       "code": 400,
       "type": "FILTER_ID_INVALID",
@@ -47933,6 +48486,10 @@
       "type": "INVITE_HASH_INVALID",
       "description": "The invite hash is invalid."
     },
+    "INVITE_HASH_UNSYNC": {
+      "code": 500,
+      "type": "INVITE_HASH_UNSYNC"
+    },
     "INVITE_REQUEST_SENT": {
       "code": 400,
       "type": "INVITE_REQUEST_SENT",
@@ -48053,6 +48610,10 @@
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
     },
+    "MEMBER_CHAT_ADD_FAILED": {
+      "code": 500,
+      "type": "MEMBER_CHAT_ADD_FAILED"
+    },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
       "type": "MESSAGE_AUTHOR_REQUIRED",
@@ -48127,6 +48688,10 @@
       "code": 400,
       "type": "MULTI_MEDIA_TOO_LONG",
       "description": "Too many media files for album."
+    },
+    "NEED_DOC_INVALID": {
+      "code": 500,
+      "type": "NEED_DOC_INVALID"
     },
     "NEW_SALT_INVALID": {
       "code": 400,
@@ -48242,6 +48807,14 @@
       "code": 400,
       "type": "PAYMENT_PROVIDER_INVALID",
       "description": "The specified payment provider is invalid."
+    },
+    "PAYMENT_UNSUPPORTED": {
+      "code": 406,
+      "type": "PAYMENT_UNSUPPORTED"
+    },
+    "PEER_HISTORY_EMPTY": {
+      "code": 400,
+      "type": "PEER_HISTORY_EMPTY"
     },
     "PEER_ID_INVALID": {
       "code": 400,
@@ -48808,6 +49381,10 @@
       "type": "STICKER_INVALID",
       "description": "The provided sticker is invalid."
     },
+    "STICKER_MIME_INVALID": {
+      "code": 400,
+      "type": "STICKER_MIME_INVALID"
+    },
     "STICKER_PNG_DIMENSIONS": {
       "code": 400,
       "type": "STICKER_PNG_DIMENSIONS",
@@ -48913,15 +49490,45 @@
       "type": "TMP_PASSWORD_DISABLED",
       "description": "The temporary password is disabled."
     },
+    "TOKEN_EMPTY": {
+      "code": 400,
+      "type": "TOKEN_EMPTY",
+      "description": "The specified token is empty."
+    },
     "TOKEN_INVALID": {
       "code": 400,
       "type": "TOKEN_INVALID",
       "description": "The provided token is invalid."
     },
+    "TOKEN_TYPE_INVALID": {
+      "code": 400,
+      "type": "TOKEN_TYPE_INVALID",
+      "description": "The specified token type is invalid."
+    },
+    "TOPIC_CLOSED": {
+      "code": 406,
+      "type": "TOPIC_CLOSED",
+      "description": "This topic was closed, you can't send messages to it anymore."
+    },
+    "TOPIC_DELETED": {
+      "code": 400,
+      "type": "TOPIC_DELETED",
+      "description": "The specified topic was deleted."
+    },
+    "TOPIC_ID_INVALID": {
+      "code": 400,
+      "type": "TOPIC_ID_INVALID",
+      "description": "The specified topic ID is invalid."
+    },
     "TO_LANG_INVALID": {
       "code": 400,
       "type": "TO_LANG_INVALID",
       "description": "The specified destination language is invalid."
+    },
+    "TRANSCRIPTION_FAILED": {
+      "code": 400,
+      "type": "TRANSCRIPTION_FAILED",
+      "description": "Audio transcription failed."
     },
     "TTL_DAYS_INVALID": {
       "code": 400,
@@ -48982,6 +49589,11 @@
       "code": 400,
       "type": "USERNAME_OCCUPIED",
       "description": "The provided username is already occupied."
+    },
+    "USERNAME_PURCHASE_AVAILABLE": {
+      "code": 400,
+      "type": "USERNAME_PURCHASE_AVAILABLE",
+      "description": "The specified username can be purchased on https://fragment.com."
     },
     "USERPIC_PRIVACY_REQUIRED": {
       "code": 406,
@@ -49099,7 +49711,7 @@
       "description": "The user's privacy settings do not allow you to do this."
     },
     "USER_RESTRICTED": {
-      "code": 403,
+      "code": 406,
       "type": "USER_RESTRICTED",
       "description": "You're spamreported, you can't create channels or chats."
     },
