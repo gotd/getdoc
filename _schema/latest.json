@@ -8379,14 +8379,23 @@
     },
     "exportedContactToken": {
       "name": "exportedContactToken",
+      "description": [
+        "Describes a temporary profile link¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#temporary-profile-links"
+      ],
       "fields": {
         "expires": {
           "name": "expires",
-          "description": " "
+          "description": "Its expiry date"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The temporary profile link¹.",
+          "links": [
+            "https://core.telegram.org/api/links#temporary-profile-links"
+          ]
         }
       }
     },
@@ -8496,11 +8505,14 @@
         },
         "icon_color": {
           "name": "icon_color",
-          "description": " "
+          "description": "If no custom emoji icon is specified, specifies the color of the fallback topic icon (RGB), one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ used as topic icon.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "id": {
           "name": "id",
@@ -14063,15 +14075,18 @@
         },
         "icon_color": {
           "name": "icon_color",
-          "description": " "
+          "description": "If no custom emoji icon is specified, specifies the color of the fallback topic icon (RGB), one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ used as topic icon.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Topic name."
         }
       }
     },
@@ -26867,7 +26882,13 @@
       ]
     },
     "ExportedContactToken": {
-      "name": "ExportedContactToken"
+      "name": "ExportedContactToken",
+      "description": [
+        "Describes a temporary profile link¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#temporary-profile-links"
+      ]
     },
     "ExportedMessageLink": {
       "name": "ExportedMessageLink",
@@ -29217,8 +29238,7 @@
       ]
     },
     "account.deleteAutoSaveExceptions": {
-      "name": "account.deleteAutoSaveExceptions",
-      "bot_can_use": true
+      "name": "account.deleteAutoSaveExceptions"
     },
     "account.deleteSecureValue": {
       "name": "account.deleteSecureValue",
@@ -29319,6 +29339,9 @@
     },
     "account.getAutoSaveSettings": {
       "name": "account.getAutoSaveSettings",
+      "description": [
+        "Get autosave settings"
+      ],
       "bot_can_use": true
     },
     "account.getChatThemes": {
@@ -29892,10 +29915,13 @@
     },
     "account.reorderUsernames": {
       "name": "account.reorderUsernames",
+      "description": [
+        "Reorder usernames associated with the currently logged-in user."
+      ],
       "parameters": {
         "order": {
           "name": "order",
-          "description": " "
+          "description": "The new order for active usernames. All active usernames must be specified."
         }
       },
       "bot_can_use": true
@@ -30112,14 +30138,20 @@
     },
     "account.saveAutoSaveSettings": {
       "name": "account.saveAutoSaveSettings",
+      "description": [
+        "Modify autosave settings"
+      ],
       "parameters": {
         "broadcasts": {
           "name": "broadcasts",
-          "description": " "
+          "description": "Whether the new settings should affect all channels¹",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Whether the new settings should affect all groups"
         },
         "flags": {
           "name": "flags",
@@ -30130,15 +30162,15 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Whether the new settings should affect a specific peer"
         },
         "settings": {
           "name": "settings",
-          "description": " "
+          "description": "The new autosave settings"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Whether the new settings should affect all private chats"
         }
       },
       "bot_can_use": true
@@ -30412,6 +30444,11 @@
           "code": 406,
           "type": "FRESH_RESET_AUTHORISATION_FORBIDDEN",
           "description": "You can't logout other sessions if less than 24 hours have passed since you logged on the current session."
+        },
+        {
+          "code": 400,
+          "type": "TTL_DAYS_INVALID",
+          "description": "The provided TTL is invalid."
         }
       ]
     },
@@ -30507,14 +30544,20 @@
     },
     "account.toggleUsername": {
       "name": "account.toggleUsername",
+      "description": [
+        "Associate or dissociate a purchased fragment.com¹ username to the currently logged-in user."
+      ],
+      "links": [
+        "https://fragment.com"
+      ],
       "parameters": {
         "active": {
           "name": "active",
-          "description": " "
+          "description": "Whether to associate or dissociate it"
         },
         "username": {
           "name": "username",
-          "description": " "
+          "description": "Username"
         }
       },
       "bot_can_use": true
@@ -31876,12 +31919,28 @@
     },
     "bots.getBotInfo": {
       "name": "bots.getBotInfo",
+      "description": [
+        "Get our about text and description (bots only)",
+        "Returns a vector of strings: the first string will be the about text, the second string will be the description."
+      ],
       "parameters": {
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "Language code, if left empty this method will return the fallback about text and description."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "LANG_CODE_INVALID",
+          "description": "The specified language code is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
+        }
+      ],
       "bot_can_use": true
     },
     "bots.getBotMenuButton": {
@@ -32074,14 +32133,17 @@
     },
     "bots.setBotInfo": {
       "name": "bots.setBotInfo",
+      "description": [
+        "Set our about text and description (bots only)"
+      ],
       "parameters": {
         "about": {
           "name": "about",
-          "description": " "
+          "description": "New about text"
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "New description"
         },
         "flags": {
           "name": "flags",
@@ -32092,7 +32154,7 @@
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "Language code, if left empty update the fallback about text and description"
         }
       },
       "bot_can_use": true
@@ -32272,7 +32334,10 @@
         },
         "forum": {
           "name": "forum",
-          "description": " "
+          "description": "Whether to create a forum¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         },
         "geo_point": {
           "name": "geo_point",
@@ -32291,7 +32356,10 @@
         },
         "ttl_period": {
           "name": "ttl_period",
-          "description": " "
+          "description": "Time-to-live of all messages that will be sent in the supergroup: once message.date+message.ttl_period === time(), the message will be deleted on the server, and must be deleted locally as well. You can use messages.setDefaultHistoryTTL¹ to edit this value later.",
+          "links": [
+            "https://core.telegram.org/method/messages.setDefaultHistoryTTL"
+          ]
         }
       },
       "errors": [
@@ -32324,10 +32392,19 @@
     },
     "channels.createForumTopic": {
       "name": "channels.createForumTopic",
+      "description": [
+        "Create a forum topic¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The forum¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -32338,33 +32415,41 @@
         },
         "icon_color": {
           "name": "icon_color",
-          "description": " "
+          "description": "If no custom emoji icon is specified, specifies the color of the fallback topic icon (RGB), one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ used as topic icon. Telegram Premium² users can use any custom emoji, other users can only use the custom emojis contained in the inputStickerSetEmojiDefaultTopicIcons³ emoji pack.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji",
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/inputStickerSetEmojiDefaultTopicIcons"
+          ]
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Unique client message ID to prevent duplicate sending of the same event"
         },
         "send_as": {
           "name": "send_as",
-          "description": " "
+          "description": "Create the topic as the specified peer"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Topic title"
         }
       },
       "bot_can_use": true
     },
     "channels.deactivateAllUsernames": {
       "name": "channels.deactivateAllUsernames",
+      "description": [
+        "Disable all purchased usernames of a supergroup or channel"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup or channel"
         }
       },
       "bot_can_use": true
@@ -32573,14 +32658,20 @@
     },
     "channels.deleteTopicHistory": {
       "name": "channels.deleteTopicHistory",
+      "description": [
+        "Delete message history of a forum topic¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Forum"
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Topic ID"
         }
       },
       "bot_can_use": true
@@ -32889,14 +32980,20 @@
     },
     "channels.editForumTopic": {
       "name": "channels.editForumTopic",
+      "description": [
+        "Edit forum topic¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup"
         },
         "closed": {
           "name": "closed",
-          "description": " "
+          "description": "If present, will update the open/closed status of the topic."
         },
         "flags": {
           "name": "flags",
@@ -32907,19 +33004,24 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "If present, will hide/unhide the topic."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "If present, updates the custom emoji¹ used as topic icon. Telegram Premium² users can use any custom emoji, other users can only use the custom emojis contained in the inputStickerSetEmojiDefaultTopicIcons³ emoji pack. Pass 0 to switch to the fallback topic icon.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji",
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/inputStickerSetEmojiDefaultTopicIcons"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "If present, will update the topic title."
         },
         "topic_id": {
           "name": "topic_id",
-          "description": " "
+          "description": "Topic ID"
         }
       },
       "bot_can_use": true
@@ -33312,10 +33414,16 @@
     },
     "channels.getForumTopics": {
       "name": "channels.getForumTopics",
+      "description": [
+        "Get topics of a forum¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup"
         },
         "flags": {
           "name": "flags",
@@ -33326,23 +33434,35 @@
         },
         "limit": {
           "name": "limit",
-          "description": " "
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "offset_date": {
           "name": "offset_date",
-          "description": " "
+          "description": "Offsets for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "offset_id": {
           "name": "offset_id",
-          "description": " "
+          "description": "Offsets for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "offset_topic": {
           "name": "offset_topic",
-          "description": " "
+          "description": "Offsets for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "q": {
           "name": "q",
-          "description": " "
+          "description": "Search query"
         }
       },
       "errors": [
@@ -33361,14 +33481,17 @@
     },
     "channels.getForumTopicsByID": {
       "name": "channels.getForumTopicsByID",
+      "description": [
+        "Get forum topics by their ID"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Forum"
         },
         "topics": {
           "name": "topics",
-          "description": " "
+          "description": "Topic IDs"
         }
       },
       "bot_can_use": true
@@ -34023,10 +34146,13 @@
     },
     "channels.reorderPinnedForumTopics": {
       "name": "channels.reorderPinnedForumTopics",
+      "description": [
+        "Reorder pinned forum topics"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup ID"
         },
         "flags": {
           "name": "flags",
@@ -34037,39 +34163,55 @@
         },
         "force": {
           "name": "force",
-          "description": " "
+          "description": "If set, topics pinned server-side but not present in the order field will be unpinned."
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "Topic IDs »¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         }
       },
       "bot_can_use": true
     },
     "channels.reorderUsernames": {
       "name": "channels.reorderUsernames",
+      "description": [
+        "Reorder active usernames"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The supergroup or channel"
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "The new order for active usernames. All active usernames must be specified."
         }
       },
       "bot_can_use": true
     },
     "channels.reportAntiSpamFalsePositive": {
       "name": "channels.reportAntiSpamFalsePositive",
+      "description": [
+        "Report a native antispam¹ false positive"
+      ],
+      "links": [
+        "https://core.telegram.org/api/antispam"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup ID"
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID that was mistakenly deleted by the native antispam¹ system, taken from the admin log²",
+          "links": [
+            "https://core.telegram.org/api/antispam",
+            "https://core.telegram.org/api/recent-actions"
+          ]
         }
       },
       "bot_can_use": true
@@ -34206,28 +34348,40 @@
     },
     "channels.toggleAntiSpam": {
       "name": "channels.toggleAntiSpam",
+      "description": [
+        "Enable or disable the native antispam system¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/antispam"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup ID"
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Enable or disable the native antispam system."
         }
       },
       "bot_can_use": true
     },
     "channels.toggleForum": {
       "name": "channels.toggleForum",
+      "description": [
+        "Enable or disable forum functionality¹ in a supergroup."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup ID"
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Enable or disable forum functionality"
         }
       },
       "errors": [
@@ -34312,14 +34466,17 @@
     },
     "channels.toggleParticipantsHidden": {
       "name": "channels.toggleParticipantsHidden",
+      "description": [
+        "Hide or display the participants list in a supergroup"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup ID"
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "If true, will hide the participants list; otherwise will unhide it."
         }
       },
       "bot_can_use": true
@@ -34453,36 +34610,55 @@
     },
     "channels.toggleUsername": {
       "name": "channels.toggleUsername",
+      "description": [
+        "Associate or dissociate a purchased fragment.com¹ username to a supergroup or channel²."
+      ],
+      "links": [
+        "https://fragment.com",
+        "https://core.telegram.org/api/channel"
+      ],
       "parameters": {
         "active": {
           "name": "active",
-          "description": " "
+          "description": "Whether to associate or dissociate the username"
         },
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup or channel¹",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "username": {
           "name": "username",
-          "description": " "
+          "description": "Username"
         }
       },
       "bot_can_use": true
     },
     "channels.updatePinnedForumTopic": {
       "name": "channels.updatePinnedForumTopic",
+      "description": [
+        "Pin or unpin forum topics¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Supergroup ID"
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether to pin or unpin the topic"
         },
         "topic_id": {
           "name": "topic_id",
-          "description": " "
+          "description": "Forum topic ID¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         }
       },
       "bot_can_use": true
@@ -34773,6 +34949,12 @@
     },
     "contacts.exportContactToken": {
       "name": "contacts.exportContactToken",
+      "description": [
+        "Generates a temporary profile link¹ for the currently logged-in user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#temporary-profile-links"
+      ],
       "bot_can_use": true
     },
     "contacts.getBlocked": {
@@ -34968,10 +35150,19 @@
     },
     "contacts.importContactToken": {
       "name": "contacts.importContactToken",
+      "description": [
+        "Obtain user info from a temporary profile link¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#temporary-profile-links"
+      ],
       "parameters": {
         "token": {
           "name": "token",
-          "description": " "
+          "description": "The token extracted from the temporary profile link¹.",
+          "links": [
+            "https://core.telegram.org/api/links#temporary-profile-links"
+          ]
         }
       },
       "bot_can_use": true
@@ -35317,7 +35508,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
@@ -36252,7 +36446,10 @@
         },
         "ttl_period": {
           "name": "ttl_period",
-          "description": " "
+          "description": "Time-to-live of all messages that will be sent in the chat: once message.date+message.ttl_period === time(), the message will be deleted on the server, and must be deleted locally as well. You can use messages.setDefaultHistoryTTL¹ to edit this value later.",
+          "links": [
+            "https://core.telegram.org/method/messages.setDefaultHistoryTTL"
+          ]
         },
         "users": {
           "name": "users",
