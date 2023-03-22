@@ -28,6 +28,6 @@ func (c *ZipReadonly) Get(key string) ([]byte, error) {
 	return data, nil
 }
 
-func (c *ZipReadonly) Set(key string, value []byte) error {
+func (c *ZipReadonly) Set(_ string, _ []byte) error {
 	return fmt.Errorf("unsupported operation: set")
 }

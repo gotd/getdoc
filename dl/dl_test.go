@@ -9,7 +9,7 @@ import (
 
 type unusableHTTPClient struct{}
 
-func (u unusableHTTPClient) Do(req *http.Request) (*http.Response, error) {
+func (u unusableHTTPClient) Do(_ *http.Request) (*http.Response, error) {
 	panic("should not be called")
 }
 
