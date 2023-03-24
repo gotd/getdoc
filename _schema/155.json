@@ -6762,7 +6762,10 @@
       "fields": {
         "autologin_token": {
           "name": "autologin_token",
-          "description": " "
+          "description": "Autologin token, click here for more info on URL authorization »¹.",
+          "links": [
+            "https://core.telegram.org/api/url-authorization#link-url-authorization"
+          ]
         },
         "autoupdate_url_prefix": {
           "name": "autoupdate_url_prefix",
@@ -29341,8 +29344,7 @@
       "name": "account.getAutoSaveSettings",
       "description": [
         "Get autosave settings"
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getChatThemes": {
       "name": "account.getChatThemes",
@@ -29396,8 +29398,7 @@
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getDefaultProfilePhotoEmojis": {
       "name": "account.getDefaultProfilePhotoEmojis",
@@ -29406,8 +29407,7 @@
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getGlobalPrivacySettings": {
       "name": "account.getGlobalPrivacySettings",
@@ -29924,7 +29924,12 @@
           "description": "The new order for active usernames. All active usernames must be specified."
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "ORDER_INVALID"
+        }
+      ]
     },
     "account.reportPeer": {
       "name": "account.reportPeer",
@@ -30173,6 +30178,13 @@
           "description": "Whether the new settings should affect all private chats"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "account.saveRingtone": {
@@ -30560,7 +30572,13 @@
           "description": "Username"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "USERNAME_INVALID",
+          "description": "The provided username is not valid."
+        }
+      ]
     },
     "account.unregisterDevice": {
       "name": "account.unregisterDevice",
@@ -31468,7 +31486,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "API_ID_INVALID",
+          "description": "API ID invalid."
+        }
+      ]
     },
     "auth.logOut": {
       "name": "auth.logOut",
@@ -31543,6 +31567,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PHONE_NUMBER_INVALID",
+          "description": "The phone number is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "auth.requestPasswordRecovery": {
@@ -32157,6 +32188,13 @@
           "description": "Language code, if left empty update the fallback about text and description"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
+        }
+      ],
       "bot_can_use": true
     },
     "bots.setBotMenuButton": {
@@ -32439,6 +32477,13 @@
           "description": "Topic title"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.deactivateAllUsernames": {
@@ -34190,6 +34235,13 @@
           "description": "The new order for active usernames. All active usernames must be specified."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.reportAntiSpamFalsePositive": {
@@ -35165,6 +35217,13 @@
           ]
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "IMPORT_TOKEN_INVALID",
+          "description": "The specified token is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "contacts.importContacts": {
@@ -37613,7 +37672,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Destination message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         },
         "with_my_score": {
           "name": "with_my_score",
@@ -38006,6 +38068,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_APP_INVALID",
+          "description": "The specified bot app is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "messages.getBotCallbackAnswer": {
@@ -39733,7 +39802,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, consider only messages within the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -39974,7 +40046,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, considers only messages within the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -40048,7 +40123,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, considers only reactions to messages within the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       }
     },
@@ -40549,7 +40627,11 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified message thread/forum topic².",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage",
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       }
     },
@@ -40707,7 +40789,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Mark as read only mentions within the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -40767,7 +40852,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Mark as read only reactions to messages within the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -41224,7 +41312,11 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified message thread/forum topic²",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage",
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         },
         "url": {
           "name": "url",
@@ -41304,7 +41396,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Message thread/forum topic¹ where the message will be sent",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -41534,16 +41629,32 @@
     },
     "messages.searchCustomEmoji": {
       "name": "messages.searchCustomEmoji",
+      "description": [
+        "Look for custom emojis¹ associated to a UTF8 emoji"
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
+      ],
       "parameters": {
         "emoticon": {
           "name": "emoticon",
-          "description": " "
+          "description": "The emoji"
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "EMOTICON_EMPTY",
+          "description": "The emoji is empty."
+        }
+      ],
       "bot_can_use": true
     },
     "messages.searchGlobal": {
@@ -41964,7 +42075,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, sends the message to the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -42206,7 +42320,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, sends the media to the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -42666,7 +42783,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, sends the message to the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -42957,7 +43077,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, sends the media to the specified message thread/forum topic¹",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -44319,10 +44442,16 @@
     },
     "messages.togglePeerTranslations": {
       "name": "messages.togglePeerTranslations",
+      "description": [
+        "Toggle real-time chat translation¹ for a certain chat"
+      ],
+      "links": [
+        "https://core.telegram.org/api/translation"
+      ],
       "parameters": {
         "disabled": {
           "name": "disabled",
-          "description": " "
+          "description": "Whether to disable or enable real-time chat translation"
         },
         "flags": {
           "name": "flags",
@@ -44333,7 +44462,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where to enable or disable real-time chat translation"
         }
       },
       "bot_can_use": true
@@ -44415,7 +44544,7 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "A list of message IDs to translate"
         },
         "peer": {
           "name": "peer",
@@ -44494,7 +44623,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Message thread/forum topic¹ where to unpin",
+          "links": [
+            "https://core.telegram.org/api/threads#message-threads"
+          ]
         }
       },
       "errors": [
@@ -46232,7 +46364,7 @@
       "parameters": {
         "file": {
           "name": "file",
-          "description": " "
+          "description": "Profile photo"
         },
         "flags": {
           "name": "flags",
@@ -46255,7 +46387,10 @@
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "Animated profile picture¹ video",
+          "links": [
+            "https://core.telegram.org/api/files#animated-profile-pictures"
+          ]
         },
         "video_emoji_markup": {
           "name": "video_emoji_markup",
@@ -46263,9 +46398,16 @@
         },
         "video_start_ts": {
           "name": "video_start_ts",
-          "description": " "
+          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video that should be used as static preview."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "photos.uploadProfilePhoto": {
@@ -46280,10 +46422,7 @@
         },
         "file": {
           "name": "file",
-          "description": "File saved in parts by means of upload.saveFilePart¹ method",
-          "links": [
-            "https://core.telegram.org/method/upload.saveFilePart"
-          ]
+          "description": "Profile photo"
         },
         "flags": {
           "name": "flags",
@@ -46351,7 +46490,8 @@
         },
         {
           "code": 400,
-          "type": "STICKER_MIME_INVALID"
+          "type": "STICKER_MIME_INVALID",
+          "description": "The specified sticker MIME type is invalid."
         },
         {
           "code": 400,
@@ -46673,10 +46813,16 @@
     },
     "stickers.changeSticker": {
       "name": "stickers.changeSticker",
+      "description": [
+        "Update the keywords, emojis or mask coordinates¹ of a sticker"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers#mask-stickers"
+      ],
       "parameters": {
         "emoji": {
           "name": "emoji",
-          "description": " "
+          "description": "If set, updates the emoji list associated to the sticker"
         },
         "flags": {
           "name": "flags",
@@ -46687,17 +46833,32 @@
         },
         "keywords": {
           "name": "keywords",
-          "description": " "
+          "description": "If set, updates the sticker keywords (separated by commas)."
         },
         "mask_coords": {
           "name": "mask_coords",
-          "description": " "
+          "description": "If set, updates the mask coordinates¹",
+          "links": [
+            "https://core.telegram.org/api/stickers#mask-stickers"
+          ]
         },
         "sticker": {
           "name": "sticker",
-          "description": " "
+          "description": "The sticker"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_MISSING",
+          "description": "Only bots can call this method, please use @stickers if you're a user."
+        },
+        {
+          "code": 400,
+          "type": "STICKER_INVALID",
+          "description": "The provided sticker is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "stickers.changeStickerPosition": {
@@ -46760,7 +46921,10 @@
         },
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "Whether this is a custom emoji¹ stickerset.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -46908,12 +47072,27 @@
     },
     "stickers.deleteStickerSet": {
       "name": "stickers.deleteStickerSet",
+      "description": [
+        "Deletes a stickerset we created, bots only."
+      ],
       "parameters": {
         "stickerset": {
           "name": "stickerset",
-          "description": " "
+          "description": "Stickerset to delete"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_MISSING",
+          "description": "Only bots can call this method, please use @stickers if you're a user."
+        },
+        {
+          "code": 400,
+          "type": "STICKERSET_INVALID",
+          "description": "The provided sticker set is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "stickers.removeStickerFromSet": {
@@ -46943,16 +47122,26 @@
     },
     "stickers.renameStickerSet": {
       "name": "stickers.renameStickerSet",
+      "description": [
+        "Renames a stickerset, bots only."
+      ],
       "parameters": {
         "stickerset": {
           "name": "stickerset",
-          "description": " "
+          "description": "Stickerset to rename"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "New stickerset title"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "STICKERSET_INVALID",
+          "description": "The provided sticker set is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "stickers.setStickerSetThumb": {
@@ -47822,6 +48011,11 @@
       "type": "BOTS_TOO_MUCH",
       "description": "There are too many bots in this chat/channel."
     },
+    "BOT_APP_INVALID": {
+      "code": 400,
+      "type": "BOT_APP_INVALID",
+      "description": "The specified bot app is invalid."
+    },
     "BOT_CHANNELS_NA": {
       "code": 400,
       "type": "BOT_CHANNELS_NA",
@@ -48638,6 +48832,11 @@
       "type": "IMPORT_ID_INVALID",
       "description": "The specified import ID is invalid."
     },
+    "IMPORT_TOKEN_INVALID": {
+      "code": 400,
+      "type": "IMPORT_TOKEN_INVALID",
+      "description": "The specified token is invalid."
+    },
     "INLINE_BOT_REQUIRED": {
       "code": 403,
       "type": "INLINE_BOT_REQUIRED",
@@ -48929,6 +49128,10 @@
       "code": 400,
       "type": "OPTION_INVALID",
       "description": "Invalid option selected."
+    },
+    "ORDER_INVALID": {
+      "code": 400,
+      "type": "ORDER_INVALID"
     },
     "PACK_SHORT_NAME_INVALID": {
       "code": 400,
@@ -49580,7 +49783,8 @@
     },
     "STICKER_MIME_INVALID": {
       "code": 400,
-      "type": "STICKER_MIME_INVALID"
+      "type": "STICKER_MIME_INVALID",
+      "description": "The specified sticker MIME type is invalid."
     },
     "STICKER_PNG_DIMENSIONS": {
       "code": 400,
