@@ -5966,7 +5966,10 @@
         },
         "manage_topics": {
           "name": "manage_topics",
-          "description": " "
+          "description": "If set, allows the admin to create, delete or modify forum topics »¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "other": {
           "name": "other",
@@ -6052,7 +6055,10 @@
         },
         "manage_topics": {
           "name": "manage_topics",
-          "description": " "
+          "description": "If set, does not allow any user to create, delete or modify forum topics »¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "pin_messages": {
           "name": "pin_messages",
@@ -6063,11 +6069,17 @@
         },
         "send_audios": {
           "name": "send_audios",
-          "description": " "
+          "description": "If set, does not allow a user to send audio files in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "send_docs": {
           "name": "send_docs",
-          "description": " "
+          "description": "If set, does not allow a user to send documents in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "send_games": {
           "name": "send_games",
@@ -6085,7 +6097,7 @@
         },
         "send_inline": {
           "name": "send_inline",
-          "description": "If set, does not allow a user to use inline bots in a supergroup/chat¹",
+          "description": "If set, does not allow a user to use inline bots in a supergroup/chat¹.",
           "links": [
             "https://core.telegram.org/api/channel"
           ]
@@ -6106,11 +6118,17 @@
         },
         "send_photos": {
           "name": "send_photos",
-          "description": " "
+          "description": "If set, does not allow a user to send photos in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "send_plain": {
           "name": "send_plain",
-          "description": " "
+          "description": "If set, does not allow a user to send text messages in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "send_polls": {
           "name": "send_polls",
@@ -6121,7 +6139,10 @@
         },
         "send_roundvideos": {
           "name": "send_roundvideos",
-          "description": " "
+          "description": "If set, does not allow a user to send round videos in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "send_stickers": {
           "name": "send_stickers",
@@ -6132,11 +6153,17 @@
         },
         "send_videos": {
           "name": "send_videos",
-          "description": " "
+          "description": "If set, does not allow a user to send videos in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "send_voices": {
           "name": "send_voices",
-          "description": " "
+          "description": "If set, does not allow a user to send voice messages in a supergroup/chat¹.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "until_date": {
           "name": "until_date",
@@ -15258,7 +15285,10 @@
         },
         "forum_topic": {
           "name": "forum_topic",
-          "description": " "
+          "description": "Whether this message was sent in a forum topic¹ (except for the General topic).",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
@@ -15273,7 +15303,7 @@
         },
         "reply_to_scheduled": {
           "name": "reply_to_scheduled",
-          "description": " "
+          "description": "This is a reply to a scheduled message."
         },
         "reply_to_top_id": {
           "name": "reply_to_top_id",
@@ -32431,10 +32461,11 @@
     "channels.createForumTopic": {
       "name": "channels.createForumTopic",
       "description": [
-        "Create a forum topic¹."
+        "Create a forum topic¹; requires manage_topics rights²."
       ],
       "links": [
-        "https://core.telegram.org/api/forum"
+        "https://core.telegram.org/api/forum",
+        "https://core.telegram.org/api/rights"
       ],
       "parameters": {
         "channel": {
@@ -32474,7 +32505,7 @@
         },
         "title": {
           "name": "title",
-          "description": "Topic title"
+          "description": "Topic title (maximum UTF-8 length: 128)"
         }
       },
       "errors": [
@@ -33026,10 +33057,11 @@
     "channels.editForumTopic": {
       "name": "channels.editForumTopic",
       "description": [
-        "Edit forum topic¹"
+        "Edit forum topic¹; requires manage_topics rights²."
       ],
       "links": [
-        "https://core.telegram.org/api/forum"
+        "https://core.telegram.org/api/forum",
+        "https://core.telegram.org/api/rights"
       ],
       "parameters": {
         "channel": {
@@ -33062,7 +33094,7 @@
         },
         "title": {
           "name": "title",
-          "description": "If present, will update the topic title."
+          "description": "If present, will update the topic title (maximum UTF-8 length: 128)."
         },
         "topic_id": {
           "name": "topic_id",
@@ -37672,9 +37704,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Destination message thread/forum topic¹",
+          "description": "Destination forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "with_my_score": {
@@ -39802,9 +39834,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, consider only messages within the specified message thread/forum topic¹",
+          "description": "If set, consider only messages within the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
@@ -40046,9 +40078,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, considers only messages within the specified message thread/forum topic¹",
+          "description": "If set, considers only messages within the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
@@ -40123,9 +40155,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, considers only reactions to messages within the specified message thread/forum topic¹",
+          "description": "If set, considers only reactions to messages within the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       }
@@ -40627,10 +40659,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified message thread/forum topic².",
+          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified forum topic².",
           "links": [
             "https://core.telegram.org/method/messages.sendWebViewResultMessage",
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       }
@@ -40789,9 +40821,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Mark as read only mentions within the specified message thread/forum topic¹",
+          "description": "Mark as read only mentions within the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
@@ -40852,9 +40884,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Mark as read only reactions to messages within the specified message thread/forum topic¹",
+          "description": "Mark as read only reactions to messages within the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
@@ -41082,10 +41114,23 @@
     },
     "messages.requestAppWebView": {
       "name": "messages.requestAppWebView",
+      "description": [
+        "Open a bot web app¹ from a bot web app deep link², sending over user information after user confirmation.",
+        "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
+      ],
+      "links": [
+        "https://core.telegram.org/bots/webapps",
+        "https://core.telegram.org/api/links#bot-web-app-links",
+        "https://core.telegram.org/method/messages.prolongWebView"
+      ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": " "
+          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the bot web app deep link² docs.",
+          "links": [
+            "https://core.telegram.org/method/messages.getBotApp",
+            "https://core.telegram.org/api/links#bot-web-app-links"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -41096,23 +41141,32 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "If the client has clicked on the link in a Telegram chat, pass the chat's peer information; otherwise pass the bot's peer information, instead."
         },
         "platform": {
           "name": "platform",
-          "description": " "
+          "description": "Short name of the application; 0-64 English letters, digits, and underscores"
         },
         "start_param": {
           "name": "start_param",
-          "description": " "
+          "description": "If the startapp query string parameter is present in the bot web app deep link¹, pass it to start_param.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-web-app-links"
+          ]
         },
         "theme_params": {
           "name": "theme_params",
-          "description": " "
+          "description": "Theme parameters »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#theme-parameters"
+          ]
         },
         "write_allowed": {
           "name": "write_allowed",
-          "description": " "
+          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the bot web app deep link¹ docs, and the user agreed.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-web-app-links"
+          ]
         }
       },
       "bot_can_use": true
@@ -41312,10 +41366,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified message thread/forum topic²",
+          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified forum topic²",
           "links": [
             "https://core.telegram.org/method/messages.sendWebViewResultMessage",
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "url": {
@@ -41396,9 +41450,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Message thread/forum topic¹ where the message will be sent",
+          "description": "Forum topic¹ where the message will be sent",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
@@ -42075,9 +42129,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the message to the specified message thread/forum topic¹",
+          "description": "If set, sends the message to the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
@@ -42320,9 +42374,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the media to the specified message thread/forum topic¹",
+          "description": "If set, sends the media to the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "update_stickersets_order": {
@@ -42783,9 +42837,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the message to the specified message thread/forum topic¹",
+          "description": "If set, sends the message to the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "update_stickersets_order": {
@@ -43077,9 +43131,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the media to the specified message thread/forum topic¹",
+          "description": "If set, sends the media to the specified forum topic¹",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "update_stickersets_order": {
@@ -44623,9 +44677,9 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Message thread/forum topic¹ where to unpin",
+          "description": "Forum topic¹ where to unpin",
           "links": [
-            "https://core.telegram.org/api/threads#message-threads"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       },
