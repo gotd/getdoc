@@ -1309,7 +1309,6 @@
           "contacts.search",
           "contacts.toggleTopPeers",
           "contacts.unblock",
-          "folders.deleteFolder",
           "folders.editPeerFolders",
           "help.acceptTermsOfService",
           "help.dismissSuggestion",
@@ -7318,7 +7317,10 @@
       "fields": {
         "draft": {
           "name": "draft",
-          "description": "Message draft"
+          "description": "Message draft¹",
+          "links": [
+            "https://core.telegram.org/api/drafts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -7367,7 +7369,7 @@
         },
         "ttl_period": {
           "name": "ttl_period",
-          "description": " "
+          "description": "Time-to-live of all messages sent in this dialog"
         },
         "unread_count": {
           "name": "unread_count",
@@ -8505,18 +8507,27 @@
     },
     "forumTopic": {
       "name": "forumTopic",
+      "description": [
+        "Represents a forum topic¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "closed": {
           "name": "closed",
-          "description": " "
+          "description": "Whether the topic is closed (no messages can be sent to it)"
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Topic creation date"
         },
         "draft": {
           "name": "draft",
-          "description": " "
+          "description": "Message draft¹",
+          "links": [
+            "https://core.telegram.org/api/drafts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -8527,11 +8538,11 @@
         },
         "from_id": {
           "name": "from_id",
-          "description": " "
+          "description": "ID of the peer that created the topic"
         },
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "Whether the topic is hidden (only valid for the \"General\" topic, id=1)"
         },
         "icon_color": {
           "name": "icon_color",
@@ -8546,27 +8557,30 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Topic ID¹",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "my": {
           "name": "my",
-          "description": " "
+          "description": "Whether the topic was created by the current user"
         },
         "notify_settings": {
           "name": "notify_settings",
-          "description": " "
+          "description": "Notification settings"
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether the topic is pinned"
         },
         "read_inbox_max_id": {
           "name": "read_inbox_max_id",
-          "description": " "
+          "description": "Position up to which all incoming messages are read."
         },
         "read_outbox_max_id": {
           "name": "read_outbox_max_id",
-          "description": " "
+          "description": "Position up to which all outgoing messages are read."
         },
         "short": {
           "name": "short",
@@ -8574,23 +8588,26 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Topic title"
         },
         "top_message": {
           "name": "top_message",
-          "description": " "
+          "description": "ID of the last message that was sent to this topic"
         },
         "unread_count": {
           "name": "unread_count",
-          "description": " "
+          "description": "Number of unread messages"
         },
         "unread_mentions_count": {
           "name": "unread_mentions_count",
-          "description": " "
+          "description": "Number of unread mentions¹",
+          "links": [
+            "https://core.telegram.org/api/mentions"
+          ]
         },
         "unread_reactions_count": {
           "name": "unread_reactions_count",
-          "description": " "
+          "description": "Number of unread reactions to messages you sent"
         }
       }
     },
@@ -35435,36 +35452,6 @@
         }
       ]
     },
-    "folders.deleteFolder": {
-      "name": "folders.deleteFolder",
-      "description": [
-        "Delete a peer folder¹"
-      ],
-      "links": [
-        "https://core.telegram.org/api/folders#peer-folders"
-      ],
-      "parameters": {
-        "folder_id": {
-          "name": "folder_id",
-          "description": "Peer folder ID, for more info click here¹",
-          "links": [
-            "https://core.telegram.org/api/folders#peer-folders"
-          ]
-        }
-      },
-      "errors": [
-        {
-          "code": 400,
-          "type": "FOLDER_ID_EMPTY",
-          "description": "An empty folder ID was specified."
-        },
-        {
-          "code": 400,
-          "type": "FOLDER_ID_INVALID",
-          "description": "Invalid folder ID."
-        }
-      ]
-    },
     "folders.editPeerFolders": {
       "name": "folders.editPeerFolders",
       "description": [
@@ -48745,11 +48732,6 @@
       "code": 400,
       "type": "FIRSTNAME_INVALID",
       "description": "The first name is invalid."
-    },
-    "FOLDER_ID_EMPTY": {
-      "code": 400,
-      "type": "FOLDER_ID_EMPTY",
-      "description": "An empty folder ID was specified."
     },
     "FOLDER_ID_INVALID": {
       "code": 400,
