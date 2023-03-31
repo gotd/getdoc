@@ -2151,6 +2151,9 @@
     },
     "account.autoSaveSettings": {
       "name": "account.autoSaveSettings",
+      "description": [
+        "Contains media autosave settings"
+      ],
       "fields": {
         "broadcasts_settings": {
           "name": "broadcasts_settings",
@@ -2666,10 +2669,16 @@
     },
     "appWebViewResultUrl": {
       "name": "appWebViewResultUrl",
+      "description": [
+        "Contains the link that must be used to open a bot web app¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The URL to open"
         }
       }
     },
@@ -2717,7 +2726,7 @@
         },
         "request_write_access": {
           "name": "request_write_access",
-          "description": " "
+          "description": "Whether the bot would like to send messages to the user."
         },
         "short_name": {
           "name": "short_name",
@@ -2879,7 +2888,10 @@
         },
         "future_auth_token": {
           "name": "future_auth_token",
-          "description": " "
+          "description": "A future auth token¹",
+          "links": [
+            "https://core.telegram.org/api/auth#future-auth-tokens"
+          ]
         },
         "otherwise_relogin_days": {
           "name": "otherwise_relogin_days",
@@ -2970,10 +2982,10 @@
     "auth.loggedOut": {
       "name": "auth.loggedOut",
       "description": [
-        "Logout token »¹ to be used on subsequent authorizations"
+        "Future auth token »¹ to be used on subsequent authorizations"
       ],
       "links": [
-        "https://core.telegram.org/api/auth#logout-tokens"
+        "https://core.telegram.org/api/auth#future-auth-tokens"
       ],
       "fields": {
         "flags": {
@@ -2985,9 +2997,9 @@
         },
         "future_auth_token": {
           "name": "future_auth_token",
-          "description": "Logout token »¹ to be used on subsequent authorizations",
+          "description": "Future auth token »¹ to be used on subsequent authorizations",
           "links": [
-            "https://core.telegram.org/api/auth#logout-tokens"
+            "https://core.telegram.org/api/auth#future-auth-tokens"
           ]
         }
       }
@@ -3568,18 +3580,24 @@
     },
     "botApp": {
       "name": "botApp",
+      "description": [
+        "Contains information about a bot web app¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ],
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": " "
+          "description": "Bot web app access hash"
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Bot web app description."
         },
         "document": {
           "name": "document",
-          "description": " "
+          "description": "Bot web app animation."
         },
         "flags": {
           "name": "flags",
@@ -3590,28 +3608,37 @@
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash to pass to messages.getBotApp¹, to avoid refetching bot app info if it hasn't changed.",
+          "links": [
+            "https://core.telegram.org/method/messages.getBotApp"
+          ]
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Bot web app ID"
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Bot web app photo."
         },
         "short_name": {
           "name": "short_name",
-          "description": " "
+          "description": "Bot web app short name, used to generate bot web app deep links¹.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-web-app-links"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Bot web app title."
         }
       }
     },
     "botAppNotModified": {
-      "name": "botAppNotModified"
+      "name": "botAppNotModified",
+      "description": [
+        "Bot app info hasn't changed."
+      ]
     },
     "botCommand": {
       "name": "botCommand",
@@ -6769,9 +6796,9 @@
         },
         "logout_tokens": {
           "name": "logout_tokens",
-          "description": "Previously stored logout tokens, see the documentation for more info »¹",
+          "description": "Previously stored future auth tokens, see the documentation for more info »¹",
           "links": [
-            "https://core.telegram.org/api/auth#logout-tokens"
+            "https://core.telegram.org/api/auth#future-auth-tokens"
           ]
         },
         "token": {
@@ -7302,10 +7329,13 @@
     },
     "defaultHistoryTTL": {
       "name": "defaultHistoryTTL",
+      "description": [
+        "Contains info about the default value of the Time-To-Live setting, applied to all new chats."
+      ],
       "fields": {
         "period": {
           "name": "period",
-          "description": " "
+          "description": "Time-To-Live setting applied to all new chats."
         }
       }
     },
@@ -26440,7 +26470,13 @@
       ]
     },
     "AppWebViewResult": {
-      "name": "AppWebViewResult"
+      "name": "AppWebViewResult",
+      "description": [
+        "Contains the link that must be used to open a bot web app¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ]
     },
     "AttachMenuBot": {
       "name": "AttachMenuBot",
@@ -26545,7 +26581,13 @@
       ]
     },
     "BotApp": {
-      "name": "BotApp"
+      "name": "BotApp",
+      "description": [
+        "Contains information about a bot web app¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ]
     },
     "BotCommand": {
       "name": "BotCommand",
@@ -26797,7 +26839,10 @@
       ]
     },
     "DefaultHistoryTTL": {
-      "name": "DefaultHistoryTTL"
+      "name": "DefaultHistoryTTL",
+      "description": [
+        "Contains info about the default value of the Time-To-Live setting, applied to all new chats."
+      ]
     },
     "Dialog": {
       "name": "Dialog",
@@ -26965,7 +27010,13 @@
       ]
     },
     "ForumTopic": {
-      "name": "ForumTopic"
+      "name": "ForumTopic",
+      "description": [
+        "Contains information about a forum topic¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ]
     },
     "Game": {
       "name": "Game",
@@ -27091,7 +27142,13 @@
       ]
     },
     "InputBotApp": {
-      "name": "InputBotApp"
+      "name": "InputBotApp",
+      "description": [
+        "Used to fetch information about a bot web app¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ]
     },
     "InputBotInlineMessage": {
       "name": "InputBotInlineMessage",
@@ -27924,7 +27981,10 @@
       ]
     },
     "ReadParticipantDate": {
-      "name": "ReadParticipantDate"
+      "name": "ReadParticipantDate",
+      "description": [
+        "Contains info about when a certain participant has read a message"
+      ]
     },
     "ReceivedNotifyMessage": {
       "name": "ReceivedNotifyMessage",
@@ -27951,7 +28011,10 @@
       ]
     },
     "RequestPeerType": {
-      "name": "RequestPeerType"
+      "name": "RequestPeerType",
+      "description": [
+        "Type of requested peer"
+      ]
     },
     "RestrictionReason": {
       "name": "RestrictionReason",
@@ -28163,7 +28226,10 @@
       ]
     },
     "StickerKeyword": {
-      "name": "StickerKeyword"
+      "name": "StickerKeyword",
+      "description": [
+        "Keywords for a certain sticker"
+      ]
     },
     "StickerPack": {
       "name": "StickerPack",
@@ -28184,7 +28250,13 @@
       ]
     },
     "TextWithEntities": {
-      "name": "TextWithEntities"
+      "name": "TextWithEntities",
+      "description": [
+        "Styled text with message entities¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/entities"
+      ]
     },
     "Theme": {
       "name": "Theme",
@@ -28274,7 +28346,10 @@
       ]
     },
     "Username": {
-      "name": "Username"
+      "name": "Username",
+      "description": [
+        "Contains information about a username"
+      ]
     },
     "Vector t": {
       "name": "Vector t",
@@ -28346,7 +28421,10 @@
       ]
     },
     "account.AutoSaveSettings": {
-      "name": "account.AutoSaveSettings"
+      "name": "account.AutoSaveSettings",
+      "description": [
+        "Contains media autosave settings"
+      ]
     },
     "account.ContentSettings": {
       "name": "account.ContentSettings",
@@ -28441,10 +28519,10 @@
     "auth.LoggedOut": {
       "name": "auth.LoggedOut",
       "description": [
-        "Logout token »¹ to be used on subsequent authorizations"
+        "Future auth token »¹ to be used on subsequent authorizations"
       ],
       "links": [
-        "https://core.telegram.org/api/auth#logout-tokens"
+        "https://core.telegram.org/api/auth#future-auth-tokens"
       ]
     },
     "auth.LoginToken": {
@@ -28531,7 +28609,13 @@
       ]
     },
     "help.AppConfig": {
-      "name": "help.AppConfig"
+      "name": "help.AppConfig",
+      "description": [
+        "Contains various client configuration parameters¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#client-configuration"
+      ]
     },
     "help.AppUpdate": {
       "name": "help.AppUpdate",
@@ -28629,7 +28713,13 @@
       ]
     },
     "messages.BotApp": {
-      "name": "messages.BotApp"
+      "name": "messages.BotApp",
+      "description": [
+        "Contains information about a bot web app¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-app"
+      ]
     },
     "messages.BotResults": {
       "name": "messages.BotResults",
@@ -28704,7 +28794,13 @@
       ]
     },
     "messages.ForumTopics": {
-      "name": "messages.ForumTopics"
+      "name": "messages.ForumTopics",
+      "description": [
+        "Contains information about multiple forum topics¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ]
     },
     "messages.HistoryImport": {
       "name": "messages.HistoryImport",
@@ -29974,7 +30070,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "ORDER_INVALID"
+          "type": "ORDER_INVALID",
+          "description": "The specified username order is invalid."
         }
       ]
     },
@@ -33118,6 +33215,18 @@
           "description": "Topic ID"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "TOPIC_ID_INVALID",
+          "description": "The specified topic ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_NOT_MODIFIED",
+          "description": "The updated topic info is equal to the current topic info, nothing was changed."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.editLocation": {
@@ -38077,14 +38186,26 @@
     },
     "messages.getBotApp": {
       "name": "messages.getBotApp",
+      "description": [
+        "Obtain information about a bot web app¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": " "
+          "description": "Bot app information obtained from a bot web app deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-web-app-links"
+          ]
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       },
       "errors": [
@@ -38354,6 +38475,9 @@
     },
     "messages.getDefaultHistoryTTL": {
       "name": "messages.getDefaultHistoryTTL",
+      "description": [
+        "Gets the default value of the Time-To-Live setting, applied to all new chats."
+      ],
       "bot_can_use": true
     },
     "messages.getDhConfig": {
@@ -43733,10 +43857,13 @@
     },
     "messages.setDefaultHistoryTTL": {
       "name": "messages.setDefaultHistoryTTL",
+      "description": [
+        "Changes the default value of the Time-To-Live setting, applied to all new chats."
+      ],
       "parameters": {
         "period": {
           "name": "period",
-          "description": " "
+          "description": "The new default Time-To-Live of all messages sent in new chats."
         }
       },
       "bot_can_use": true
@@ -44402,7 +44529,10 @@
         },
         "write_allowed": {
           "name": "write_allowed",
-          "description": " "
+          "description": "Whether the user authorizes the bot to write messages to them, if requested by attachMenuBot¹.request_write_access",
+          "links": [
+            "https://core.telegram.org/constructor/attachMenuBot"
+          ]
         }
       }
     },
@@ -49167,7 +49297,8 @@
     },
     "ORDER_INVALID": {
       "code": 400,
-      "type": "ORDER_INVALID"
+      "type": "ORDER_INVALID",
+      "description": "The specified username order is invalid."
     },
     "PACK_SHORT_NAME_INVALID": {
       "code": 400,
@@ -49956,6 +50087,11 @@
       "code": 400,
       "type": "TOPIC_ID_INVALID",
       "description": "The specified topic ID is invalid."
+    },
+    "TOPIC_NOT_MODIFIED": {
+      "code": 400,
+      "type": "TOPIC_NOT_MODIFIED",
+      "description": "The updated topic info is equal to the current topic info, nothing was changed."
     },
     "TO_LANG_INVALID": {
       "code": 400,
