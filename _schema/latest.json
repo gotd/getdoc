@@ -2157,27 +2157,33 @@
       "fields": {
         "broadcasts_settings": {
           "name": "broadcasts_settings",
-          "description": " "
+          "description": "Default media autosave settings for channels¹",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Chats mentioned in the peer-specific granular autosave settings"
         },
         "chats_settings": {
           "name": "chats_settings",
-          "description": " "
+          "description": "Default media autosave settings for groups and supergroups¹",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "exceptions": {
           "name": "exceptions",
-          "description": " "
+          "description": "Peer-specific granular autosave settings"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the peer-specific granular autosave settings"
         },
         "users_settings": {
           "name": "users_settings",
-          "description": " "
+          "description": "Default media autosave settings for private chats"
         }
       }
     },
@@ -2949,7 +2955,13 @@
       ]
     },
     "auth.codeTypeFragmentSms": {
-      "name": "auth.codeTypeFragmentSms"
+      "name": "auth.codeTypeFragmentSms",
+      "description": [
+        "The next time, the authentication code will be delivered via fragment.com¹"
+      ],
+      "links": [
+        "https://fragment.com"
+      ]
     },
     "auth.codeTypeMissedCall": {
       "name": "auth.codeTypeMissedCall",
@@ -3426,19 +3438,25 @@
     },
     "autoSaveException": {
       "name": "autoSaveException",
+      "description": [
+        "Peer-specific media autosave settings"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer"
         },
         "settings": {
           "name": "settings",
-          "description": " "
+          "description": "Media autosave settings"
         }
       }
     },
     "autoSaveSettings": {
       "name": "autoSaveSettings",
+      "description": [
+        "Media autosave settings"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -3449,15 +3467,15 @@
         },
         "photos": {
           "name": "photos",
-          "description": " "
+          "description": "Whether photos should be autosaved to the gallery."
         },
         "video_max_size": {
           "name": "video_max_size",
-          "description": " "
+          "description": "If set, specifies a size limit for autosavable videos"
         },
         "videos": {
           "name": "videos",
-          "description": " "
+          "description": "Whether videos should be autosaved to the gallery."
         }
       }
     },
@@ -4258,11 +4276,17 @@
         },
         "flags2": {
           "name": "flags2",
-          "description": " "
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
         },
         "forum": {
           "name": "forum",
-          "description": " "
+          "description": "Whether this supergroup is a forum¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         },
         "gigagroup": {
           "name": "gigagroup",
@@ -4359,7 +4383,7 @@
         },
         "usernames": {
           "name": "usernames",
-          "description": " "
+          "description": "Additional usernames"
         },
         "verified": {
           "name": "verified",
@@ -4540,23 +4564,35 @@
     },
     "channelAdminLogEventActionChangeUsernames": {
       "name": "channelAdminLogEventActionChangeUsernames",
+      "description": [
+        "The list of usernames associated with the channel was changed"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "New set of usernames"
         },
         "prev_value": {
           "name": "prev_value",
-          "description": " "
+          "description": "Previous set of usernames"
         }
       }
     },
     "channelAdminLogEventActionCreateTopic": {
       "name": "channelAdminLogEventActionCreateTopic",
+      "description": [
+        "A forum topic¹ was created"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "topic": {
           "name": "topic",
-          "description": " "
+          "description": "The forum topic¹ that was created",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         }
       }
     },
@@ -4596,10 +4632,19 @@
     },
     "channelAdminLogEventActionDeleteTopic": {
       "name": "channelAdminLogEventActionDeleteTopic",
+      "description": [
+        "A forum topic¹ was deleted"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "topic": {
           "name": "topic",
-          "description": " "
+          "description": "The forum topic¹ that was deleted",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         }
       }
     },
@@ -4633,14 +4678,20 @@
     },
     "channelAdminLogEventActionEditTopic": {
       "name": "channelAdminLogEventActionEditTopic",
+      "description": [
+        "A forum topic¹ was edited"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "new_topic": {
           "name": "new_topic",
-          "description": " "
+          "description": "New topic information"
         },
         "prev_topic": {
           "name": "prev_topic",
-          "description": " "
+          "description": "Previous topic information"
         }
       }
     },
@@ -4818,6 +4869,12 @@
     },
     "channelAdminLogEventActionPinTopic": {
       "name": "channelAdminLogEventActionPinTopic",
+      "description": [
+        "A forum topic¹ was pinned or unpinned"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -4828,11 +4885,11 @@
         },
         "new_topic": {
           "name": "new_topic",
-          "description": " "
+          "description": "New topic information"
         },
         "prev_topic": {
           "name": "prev_topic",
-          "description": " "
+          "description": "Previous topic information"
         }
       }
     },
@@ -4874,19 +4931,34 @@
     },
     "channelAdminLogEventActionToggleAntiSpam": {
       "name": "channelAdminLogEventActionToggleAntiSpam",
+      "description": [
+        "Native antispam¹ functionality was enabled or disabled."
+      ],
+      "links": [
+        "https://core.telegram.org/api/antispam"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "Whether antispam functionality was enabled or disabled."
         }
       }
     },
     "channelAdminLogEventActionToggleForum": {
       "name": "channelAdminLogEventActionToggleForum",
+      "description": [
+        "Forum¹ functionality was enabled or disabled."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "Whether forum¹ functionality was enabled or disabled.",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         }
       }
     },
@@ -5027,7 +5099,10 @@
         },
         "forums": {
           "name": "forums",
-          "description": " "
+          "description": "Forum¹-related events",
+          "links": [
+            "https://core.telegram.org/api/forum#forum"
+          ]
         },
         "group_call": {
           "name": "group_call",
@@ -5182,7 +5257,10 @@
         },
         "antispam": {
           "name": "antispam",
-          "description": " "
+          "description": "Whether native antispam¹ functionality is enabled in this supergroup.",
+          "links": [
+            "https://core.telegram.org/api/antispam"
+          ]
         },
         "available_min_id": {
           "name": "available_min_id",
@@ -5345,7 +5423,7 @@
         },
         "participants_hidden": {
           "name": "participants_hidden",
-          "description": " "
+          "description": "Whether the participant list is hidden."
         },
         "pending_suggestions": {
           "name": "pending_suggestions",
@@ -5410,7 +5488,10 @@
         },
         "translations_disabled": {
           "name": "translations_disabled",
-          "description": " "
+          "description": "Whether real-time chat translation¹ is disabled.",
+          "links": [
+            "https://core.telegram.org/api/translation"
+          ]
         },
         "ttl_period": {
           "name": "ttl_period",
@@ -6336,7 +6417,10 @@
         },
         "translations_disabled": {
           "name": "translations_disabled",
-          "description": " "
+          "description": "Whether real-time chat translation¹ is disabled.",
+          "links": [
+            "https://core.telegram.org/api/translation"
+          ]
         },
         "ttl_period": {
           "name": "ttl_period",
@@ -8643,10 +8727,13 @@
     },
     "forumTopicDeleted": {
       "name": "forumTopicDeleted",
+      "description": [
+        "Represents a deleted forum topic."
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The ID of the deleted forum topic."
         }
       }
     },
@@ -9030,19 +9117,34 @@
     },
     "help.appConfig": {
       "name": "help.appConfig",
+      "description": [
+        "Contains various client configuration parameters¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#client-configuration"
+      ],
       "fields": {
         "config": {
           "name": "config",
-          "description": " "
+          "description": "Client configuration parameters¹",
+          "links": [
+            "https://core.telegram.org/api/config#client-configuration"
+          ]
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
     "help.appConfigNotModified": {
-      "name": "help.appConfigNotModified"
+      "name": "help.appConfigNotModified",
+      "description": [
+        "The client configuration parameters haven't changed"
+      ]
     },
     "help.appUpdate": {
       "name": "help.appUpdate",
@@ -9651,27 +9753,48 @@
     },
     "inputBotAppID": {
       "name": "inputBotAppID",
+      "description": [
+        "Used to fetch information about a bot web app¹ by its ID"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ],
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": " "
+          "description": "Access hash, obtained from the botApp¹ constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/botApp"
+          ]
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Bot web app¹ ID.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+          ]
         }
       }
     },
     "inputBotAppShortName": {
       "name": "inputBotAppShortName",
+      "description": [
+        "Used to fetch information about a bot web app¹ by its short name"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "ID of the bot that owns the bot web app"
         },
         "short_name": {
           "name": "short_name",
-          "description": " "
+          "description": "Short name, obtained from a bot web app deep link¹",
+          "links": [
+            "https://core.telegram.org/api/links#bot-web-app-links"
+          ]
         }
       }
     },
@@ -10864,7 +10987,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -10887,7 +11010,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -11053,7 +11176,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -11076,7 +11199,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -11160,7 +11283,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "stickers": {
           "name": "stickers",
@@ -11198,7 +11321,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "stickers": {
           "name": "stickers",
@@ -11453,14 +11576,24 @@
     },
     "inputNotifyForumTopic": {
       "name": "inputNotifyForumTopic",
+      "description": [
+        "Notifications generated by a topic¹ in a forum²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics",
+        "https://core.telegram.org/api/forum"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Forum ID"
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Topic ID¹",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         }
       }
     },
@@ -12273,7 +12406,14 @@
       ]
     },
     "inputStickerSetEmojiDefaultTopicIcons": {
-      "name": "inputStickerSetEmojiDefaultTopicIcons"
+      "name": "inputStickerSetEmojiDefaultTopicIcons",
+      "description": [
+        "Default custom emoji¹ stickerset for forum topic icons²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji",
+        "https://core.telegram.org/api/forum#forum-topics"
+      ]
     },
     "inputStickerSetEmojiGenericAnimations": {
       "name": "inputStickerSetEmojiGenericAnimations",
@@ -12329,7 +12469,7 @@
         },
         "keywords": {
           "name": "keywords",
-          "description": " "
+          "description": "Set of keywords, separated by commas"
         },
         "mask_coords": {
           "name": "mask_coords",
@@ -13013,18 +13153,27 @@
     },
     "keyboardButtonRequestPeer": {
       "name": "keyboardButtonRequestPeer",
+      "description": [
+        "Prompts the user to select and share a peer with the bot using messages.sendBotRequestedPeer¹"
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+      ],
       "fields": {
         "button_id": {
           "name": "button_id",
-          "description": " "
+          "description": "Button ID, to be passed to messages.sendBotRequestedPeer¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+          ]
         },
         "peer_type": {
           "name": "peer_type",
-          "description": " "
+          "description": "Filtering criteria to use for the peer selection list shown to the user."
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Button text"
         }
       }
     },
@@ -14045,14 +14194,23 @@
     },
     "messageActionRequestedPeer": {
       "name": "messageActionRequestedPeer",
+      "description": [
+        "Contains info about a peer that the user shared with the bot after clicking on a keyboardButtonRequestPeer¹ button."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+      ],
       "fields": {
         "button_id": {
           "name": "button_id",
-          "description": " "
+          "description": "button_id contained in the keyboardButtonRequestPeer¹",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The shared peer"
         }
       }
     },
@@ -14142,6 +14300,12 @@
     },
     "messageActionTopicCreate": {
       "name": "messageActionTopicCreate",
+      "description": [
+        "A forum topic¹ was created."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -14169,10 +14333,16 @@
     },
     "messageActionTopicEdit": {
       "name": "messageActionTopicEdit",
+      "description": [
+        "Forum topic¹ information was edited."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "closed": {
           "name": "closed",
-          "description": " "
+          "description": "Whether the topic was closed."
         },
         "flags": {
           "name": "flags",
@@ -14183,15 +14353,18 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "Whether the topic was hidden."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ used as topic icon.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Topic title."
         }
       }
     },
@@ -14927,7 +15100,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -15089,7 +15262,7 @@
         },
         "spoiler": {
           "name": "spoiler",
-          "description": " "
+          "description": "Whether this media should be hidden behind a spoiler warning"
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
@@ -15178,7 +15351,7 @@
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was this reaction added"
         },
         "flags": {
           "name": "flags",
@@ -15663,10 +15836,16 @@
     },
     "messages.botApp": {
       "name": "messages.botApp",
+      "description": [
+        "Contains information about a bot web app¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#bot-web-app"
+      ],
       "fields": {
         "app": {
           "name": "app",
-          "description": " "
+          "description": "Bot app information"
         },
         "flags": {
           "name": "flags",
@@ -15677,11 +15856,14 @@
         },
         "inactive": {
           "name": "inactive",
-          "description": " "
+          "description": "Whether the web app was never used by the user, and confirmation must be asked from the user before opening it."
         },
         "request_write_access": {
           "name": "request_write_access",
-          "description": " "
+          "description": "The bot is asking permission to send messages to the user: if the user agrees, set the write_allowed flag when invoking messages.requestAppWebView¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.requestAppWebView"
+          ]
         }
       }
     },
@@ -15813,7 +15995,10 @@
         },
         "topics": {
           "name": "topics",
-          "description": " "
+          "description": "Forum topic¹ information",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "users": {
           "name": "users",
@@ -16246,6 +16431,12 @@
     },
     "messages.forumTopics": {
       "name": "messages.forumTopics",
+      "description": [
+        "Contains information about multiple forum topics¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
@@ -16272,11 +16463,14 @@
         },
         "pts": {
           "name": "pts",
-          "description": " "
+          "description": "Event count after generation¹",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         },
         "topics": {
           "name": "topics",
-          "description": " "
+          "description": "Forum topics"
         },
         "users": {
           "name": "users",
@@ -16849,7 +17043,10 @@
       }
     },
     "messages.sponsoredMessagesEmpty": {
-      "name": "messages.sponsoredMessagesEmpty"
+      "name": "messages.sponsoredMessagesEmpty",
+      "description": [
+        "No sponsored messages are available."
+      ]
     },
     "messages.stickerSet": {
       "name": "messages.stickerSet",
@@ -17080,14 +17277,24 @@
     },
     "notifyForumTopic": {
       "name": "notifyForumTopic",
+      "description": [
+        "Notifications generated by a topic¹ in a forum²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics",
+        "https://core.telegram.org/api/forum"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Forum ID"
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Topic ID¹",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         }
       }
     },
@@ -19759,14 +19966,17 @@
     },
     "readParticipantDate": {
       "name": "readParticipantDate",
+      "description": [
+        "Contains info about when a certain participant has read a message"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When the user read the message"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID"
         }
       }
     },
@@ -19961,14 +20171,17 @@
     },
     "requestPeerTypeBroadcast": {
       "name": "requestPeerTypeBroadcast",
+      "description": [
+        "Choose a channel"
+      ],
       "fields": {
         "bot_admin_rights": {
           "name": "bot_admin_rights",
-          "description": " "
+          "description": "If specified, allows only choosing channels where the bot is an admin with at least the specified admin rights."
         },
         "creator": {
           "name": "creator",
-          "description": " "
+          "description": "Whether to allow only choosing channels that were created by the current user."
         },
         "flags": {
           "name": "flags",
@@ -19979,28 +20192,34 @@
         },
         "has_username": {
           "name": "has_username",
-          "description": " "
+          "description": "If specified, allows only choosing channels with or without a username, according to the value of Bool¹.",
+          "links": [
+            "https://core.telegram.org/type/Bool"
+          ]
         },
         "user_admin_rights": {
           "name": "user_admin_rights",
-          "description": " "
+          "description": "If specified, allows only choosing channels where the current user is an admin with at least the specified admin rights."
         }
       }
     },
     "requestPeerTypeChat": {
       "name": "requestPeerTypeChat",
+      "description": [
+        "Choose a chat or supergroup"
+      ],
       "fields": {
         "bot_admin_rights": {
           "name": "bot_admin_rights",
-          "description": " "
+          "description": "If specified, allows only choosing chats or supergroups where the bot is an admin with at least the specified admin rights."
         },
         "bot_participant": {
           "name": "bot_participant",
-          "description": " "
+          "description": "Whether to allow only choosing chats or supergroups where the bot is a participant."
         },
         "creator": {
           "name": "creator",
-          "description": " "
+          "description": "Whether to allow only choosing chats or supergroups that were created by the current user."
         },
         "flags": {
           "name": "flags",
@@ -20011,24 +20230,34 @@
         },
         "forum": {
           "name": "forum",
-          "description": " "
+          "description": "If specified, allows only choosing chats or supergroups that are or aren't forums¹, according to the value of Bool².",
+          "links": [
+            "https://core.telegram.org/api/forum",
+            "https://core.telegram.org/type/Bool"
+          ]
         },
         "has_username": {
           "name": "has_username",
-          "description": " "
+          "description": "If specified, allows only choosing channels with or without a username, according to the value of Bool¹.",
+          "links": [
+            "https://core.telegram.org/type/Bool"
+          ]
         },
         "user_admin_rights": {
           "name": "user_admin_rights",
-          "description": " "
+          "description": "If specified, allows only choosing chats or supergroups where the current user is an admin with at least the specified admin rights."
         }
       }
     },
     "requestPeerTypeUser": {
       "name": "requestPeerTypeUser",
+      "description": [
+        "Choose a user."
+      ],
       "fields": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Whether to allow choosing only bots."
         },
         "flags": {
           "name": "flags",
@@ -20039,7 +20268,10 @@
         },
         "premium": {
           "name": "premium",
-          "description": " "
+          "description": "Whether to allow choosing only Premium¹ users.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         }
       }
     },
@@ -21445,14 +21677,17 @@
     },
     "stickerKeyword": {
       "name": "stickerKeyword",
+      "description": [
+        "Keywords for a certain sticker"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Sticker ID"
         },
         "keyword": {
           "name": "keyword",
-          "description": " "
+          "description": "Keywords"
         }
       }
     },
@@ -21923,14 +22158,23 @@
     },
     "textWithEntities": {
       "name": "textWithEntities",
+      "description": [
+        "Styled text with message entities¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/entities"
+      ],
       "fields": {
         "entities": {
           "name": "entities",
-          "description": " "
+          "description": "Message entities for styled text¹",
+          "links": [
+            "https://core.telegram.org/api/entities"
+          ]
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Text"
         }
       }
     },
@@ -22145,7 +22389,13 @@
       ]
     },
     "updateAutoSaveSettings": {
-      "name": "updateAutoSaveSettings"
+      "name": "updateAutoSaveSettings",
+      "description": [
+        "Media autosave settings have changed and must be refetched using account.getAutoSaveSettings¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/account.getAutoSaveSettings"
+      ]
     },
     "updateBotCallbackQuery": {
       "name": "updateBotCallbackQuery",
@@ -22611,10 +22861,16 @@
     },
     "updateChannelPinnedTopic": {
       "name": "updateChannelPinnedTopic",
+      "description": [
+        "A forum topic »¹ was pinned or unpinned."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "channel_id": {
           "name": "channel_id",
-          "description": " "
+          "description": "The forum ID"
         },
         "flags": {
           "name": "flags",
@@ -22625,20 +22881,26 @@
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether the topic was pinned or unpinned"
         },
         "topic_id": {
           "name": "topic_id",
-          "description": " "
+          "description": "The topic ID"
         }
       }
     },
     "updateChannelPinnedTopics": {
       "name": "updateChannelPinnedTopics",
+      "description": [
+        "The pinned topics¹ of a forum have changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics"
+      ],
       "fields": {
         "channel_id": {
           "name": "channel_id",
-          "description": " "
+          "description": "Forum ID."
         },
         "flags": {
           "name": "flags",
@@ -22649,7 +22911,7 @@
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "Ordered list containing the IDs of all pinned topics."
         }
       }
     },
@@ -22682,7 +22944,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Forum topic ID¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         }
       }
     },
@@ -23222,7 +23487,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "ID of the forum topic¹ to which the draft is associated",
+          "links": [
+            "https://core.telegram.org/api/topic#forum-topics"
+          ]
         }
       }
     },
@@ -23646,7 +23914,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Forum topic ID¹",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         }
       }
     },
@@ -24840,7 +25111,7 @@
         },
         "usernames": {
           "name": "usernames",
-          "description": " "
+          "description": "Usernames."
         }
       }
     },
@@ -25499,7 +25770,10 @@
         },
         "flags2": {
           "name": "flags2",
-          "description": " "
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
         },
         "id": {
           "name": "id",
@@ -25566,7 +25840,7 @@
         },
         "usernames": {
           "name": "usernames",
-          "description": " "
+          "description": "Additional usernames"
         },
         "verified": {
           "name": "verified",
@@ -25815,14 +26089,20 @@
     },
     "username": {
       "name": "username",
+      "description": [
+        "Contains information about a username."
+      ],
       "fields": {
         "active": {
           "name": "active",
-          "description": " "
+          "description": "Whether the username is active."
         },
         "editable": {
           "name": "editable",
-          "description": " "
+          "description": "Whether the username is editable, meaning it wasn't bought on fragment¹.",
+          "links": [
+            "https://fragment.com"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -25833,7 +26113,7 @@
         },
         "username": {
           "name": "username",
-          "description": " "
+          "description": "The username."
         }
       }
     },
@@ -26551,10 +26831,16 @@
       ]
     },
     "AutoSaveException": {
-      "name": "AutoSaveException"
+      "name": "AutoSaveException",
+      "description": [
+        "Peer-specific autosave settings"
+      ]
     },
     "AutoSaveSettings": {
-      "name": "AutoSaveSettings"
+      "name": "AutoSaveSettings",
+      "description": [
+        "Media autosave settings"
+      ]
     },
     "AvailableReaction": {
       "name": "AvailableReaction",
@@ -28013,7 +28299,7 @@
     "RequestPeerType": {
       "name": "RequestPeerType",
       "description": [
-        "Type of requested peer"
+        "Filtering criteria to use for the peer selection list shown to the user."
       ]
     },
     "RestrictionReason": {
@@ -29384,7 +29670,10 @@
       ]
     },
     "account.deleteAutoSaveExceptions": {
-      "name": "account.deleteAutoSaveExceptions"
+      "name": "account.deleteAutoSaveExceptions",
+      "description": [
+        "Clear all peer-specific autosave settings."
+      ]
     },
     "account.deleteSecureValue": {
       "name": "account.deleteSecureValue",
@@ -41960,22 +42249,37 @@
     },
     "messages.sendBotRequestedPeer": {
       "name": "messages.sendBotRequestedPeer",
+      "description": [
+        "Send a chosen peer, as requested by a keyboardButtonRequestPeer¹ button."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+      ],
       "parameters": {
         "button_id": {
           "name": "button_id",
-          "description": " "
+          "description": "The button_id field from the keyboardButtonRequestPeer¹ constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+          ]
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "ID of the message that contained the reply keyboard with the keyboardButtonRequestPeer¹ button.",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The bot that sent the keyboardButtonRequestPeer¹ button.",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+          ]
         },
         "requested_peer": {
           "name": "requested_peer",
-          "description": " "
+          "description": "The chosen peer."
         }
       },
       "bot_can_use": true
@@ -46985,7 +47289,7 @@
     "stickers.changeSticker": {
       "name": "stickers.changeSticker",
       "description": [
-        "Update the keywords, emojis or mask coordinates¹ of a sticker"
+        "Update the keywords, emojis or mask coordinates¹ of a sticker, bots only."
       ],
       "links": [
         "https://core.telegram.org/api/stickers#mask-stickers"
@@ -47334,11 +47638,14 @@
         },
         "thumb": {
           "name": "thumb",
-          "description": "Thumbnail"
+          "description": "Thumbnail (only for normal stickersets, not custom emoji stickersets)."
         },
         "thumb_document_id": {
           "name": "thumb_document_id",
-          "description": " "
+          "description": "Only for custom emoji stickersets¹, ID of a custom emoji present in the set to use as thumbnail; pass 0 to fallback to the first custom emoji of the set.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       },
       "errors": [
