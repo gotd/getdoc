@@ -7859,7 +7859,7 @@
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Whether the color of this TGS custom emoji should be changed to the text color when used in messages, the accent color if used as emoji status, white on chat photos, or another appropriate color based on context."
         }
       }
     },
@@ -10302,7 +10302,8 @@
     "inputChatUploadedPhoto": {
       "name": "inputChatUploadedPhoto",
       "description": [
-        "New photo to be set as group profile photo."
+        "New photo to be set as group profile photo.",
+        "The file, video and video_emoji_markup flags are mutually exclusive."
       ],
       "fields": {
         "file": {
@@ -10325,11 +10326,15 @@
         },
         "video_emoji_markup": {
           "name": "video_emoji_markup",
-          "description": " "
+          "description": "Animated sticker profile picture, must contain either a videoSizeEmojiMarkup¹ or a videoSizeStickerMarkup² constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/videoSizeEmojiMarkup",
+            "https://core.telegram.org/constructor/videoSizeStickerMarkup"
+          ]
         },
         "video_start_ts": {
           "name": "video_start_ts",
-          "description": "Timestamp that should be shown as static preview to the user (seconds)"
+          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video/sticker that should be used as static preview; can only be used if video or video_emoji_markup is set."
         }
       }
     },
@@ -12469,7 +12474,7 @@
         },
         "keywords": {
           "name": "keywords",
-          "description": "Set of keywords, separated by commas"
+          "description": "Set of keywords, separated by commas (can't be provided for mask stickers)"
         },
         "mask_coords": {
           "name": "mask_coords",
@@ -14291,10 +14296,16 @@
     },
     "messageActionSuggestProfilePhoto": {
       "name": "messageActionSuggestProfilePhoto",
+      "description": [
+        "A new profile picture was suggested using photos.uploadContactProfilePhoto¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/photos.uploadContactProfilePhoto"
+      ],
       "fields": {
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "The photo that the user suggested we set as profile picture."
         }
       }
     },
@@ -17060,7 +17071,7 @@
         },
         "keywords": {
           "name": "keywords",
-          "description": " "
+          "description": "Keywords for some or every sticker in the stickerset."
         },
         "packs": {
           "name": "packs",
@@ -21833,7 +21844,7 @@
         },
         "keywords": {
           "name": "keywords",
-          "description": " "
+          "description": "Keywords for some or every sticker in the stickerset."
         },
         "packs": {
           "name": "packs",
@@ -21863,10 +21874,13 @@
     },
     "stickerSetNoCovered": {
       "name": "stickerSetNoCovered",
+      "description": [
+        "Just the stickerset information, with no previews."
+      ],
       "fields": {
         "set": {
           "name": "set",
-          "description": " "
+          "description": "Stickerset information."
         }
       }
     },
@@ -23489,7 +23503,7 @@
           "name": "top_msg_id",
           "description": "ID of the forum topic¹ to which the draft is associated",
           "links": [
-            "https://core.telegram.org/api/topic#forum-topics"
+            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       }
@@ -25056,10 +25070,16 @@
     },
     "updateUser": {
       "name": "updateUser",
+      "description": [
+        "User information was updated, it must be refetched using users.getFullUser¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/users.getFullUser"
+      ],
       "fields": {
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID"
         }
       }
     },
@@ -25904,7 +25924,7 @@
         },
         "fallback_photo": {
           "name": "fallback_photo",
-          "description": " "
+          "description": "Fallback profile photo, displayed if no photo is present in profile_photo or personal_photo, due to privacy settings."
         },
         "flags": {
           "name": "flags",
@@ -25937,7 +25957,7 @@
         },
         "personal_photo": {
           "name": "personal_photo",
-          "description": " "
+          "description": "Personal profile photo, to be shown instead of profile_photo."
         },
         "phone_calls_available": {
           "name": "phone_calls_available",
@@ -26146,7 +26166,7 @@
     "videoSize": {
       "name": "videoSize",
       "description": [
-        "Animated profile picture¹ in MPEG4 format"
+        "An animated profile picture¹ in MPEG4 format"
       ],
       "links": [
         "https://core.telegram.org/api/files#animated-profile-pictures"
@@ -26183,31 +26203,54 @@
     },
     "videoSizeEmojiMarkup": {
       "name": "videoSizeEmojiMarkup",
+      "description": [
+        "An animated profile picture¹ based on a custom emoji sticker²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/files#animated-profile-pictures",
+        "https://core.telegram.org/api/custom-emoji"
+      ],
       "fields": {
         "background_colors": {
           "name": "background_colors",
-          "description": " "
+          "description": "1, 2, 3 or 4 RBG-24 colors used to generate a solid (1), gradient (2) or freeform gradient (3, 4) background, similar to how fill wallpapers¹ are generated. The rotation angle for gradient backgrounds is 0.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#fill-types"
+          ]
         },
         "emoji_id": {
           "name": "emoji_id",
-          "description": " "
+          "description": "Custom emoji ID¹: the custom emoji sticker is shown at the center of the profile picture and occupies at most 67% of it.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
     "videoSizeStickerMarkup": {
       "name": "videoSizeStickerMarkup",
+      "description": [
+        "An animated profile picture¹ based on a sticker²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/files#animated-profile-pictures",
+        "https://core.telegram.org/api/stickers"
+      ],
       "fields": {
         "background_colors": {
           "name": "background_colors",
-          "description": " "
+          "description": "1, 2, 3 or 4 RBG-24 colors used to generate a solid (1), gradient (2) or freeform gradient (3, 4) background, similar to how fill wallpapers¹ are generated. The rotation angle for gradient backgrounds is 0.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#fill-types"
+          ]
         },
         "sticker_id": {
           "name": "sticker_id",
-          "description": " "
+          "description": "Sticker ID"
         },
         "stickerset": {
           "name": "stickerset",
-          "description": " "
+          "description": "Stickerset"
         }
       }
     },
@@ -46782,7 +46825,7 @@
       "parameters": {
         "fallback": {
           "name": "fallback",
-          "description": " "
+          "description": "If set, the chosen profile photo will be shown to users that can't display your main profile photo due to your privacy settings."
         },
         "flags": {
           "name": "flags",
@@ -46836,6 +46879,10 @@
     },
     "photos.uploadContactProfilePhoto": {
       "name": "photos.uploadContactProfilePhoto",
+      "description": [
+        "Upload a custom profile picture for a contact, or suggest a new profile picture to a contact.",
+        "The file, video and video_emoji_markup flags are mutually exclusive."
+      ],
       "parameters": {
         "file": {
           "name": "file",
@@ -46850,15 +46897,22 @@
         },
         "save": {
           "name": "save",
-          "description": " "
+          "description": "If set, removes a previously set personal profile picture (does not affect suggested profile pictures, to remove them simply deleted the messageActionSuggestProfilePhoto¹ service message with messages.deleteMessages²).",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionSuggestProfilePhoto",
+            "https://core.telegram.org/method/messages.deleteMessages"
+          ]
         },
         "suggest": {
           "name": "suggest",
-          "description": " "
+          "description": "If set, will send a messageActionSuggestProfilePhoto¹ service message to user_id, suggesting them to use the specified profile picture; otherwise, will set a personal profile picture for the user (only visible to the current user).",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionSuggestProfilePhoto"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The contact"
         },
         "video": {
           "name": "video",
@@ -46869,11 +46923,15 @@
         },
         "video_emoji_markup": {
           "name": "video_emoji_markup",
-          "description": " "
+          "description": "Animated sticker profile picture, must contain either a videoSizeEmojiMarkup¹ or a videoSizeStickerMarkup² constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/videoSizeEmojiMarkup",
+            "https://core.telegram.org/constructor/videoSizeStickerMarkup"
+          ]
         },
         "video_start_ts": {
           "name": "video_start_ts",
-          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video that should be used as static preview."
+          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video/sticker that should be used as static preview; can only be used if video or video_emoji_markup is set."
         }
       },
       "errors": [
@@ -46888,12 +46946,13 @@
     "photos.uploadProfilePhoto": {
       "name": "photos.uploadProfilePhoto",
       "description": [
-        "Updates current user profile photo."
+        "Updates current user profile photo.",
+        "The file, video and video_emoji_markup flags are mutually exclusive."
       ],
       "parameters": {
         "fallback": {
           "name": "fallback",
-          "description": " "
+          "description": "If set, the chosen profile photo will be shown to users that can't display your main profile photo due to your privacy settings."
         },
         "file": {
           "name": "file",
@@ -46915,11 +46974,15 @@
         },
         "video_emoji_markup": {
           "name": "video_emoji_markup",
-          "description": " "
+          "description": "Animated sticker profile picture, must contain either a videoSizeEmojiMarkup¹ or a videoSizeStickerMarkup² constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/videoSizeEmojiMarkup",
+            "https://core.telegram.org/constructor/videoSizeStickerMarkup"
+          ]
         },
         "video_start_ts": {
           "name": "video_start_ts",
-          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video that should be used as static preview."
+          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video/sticker that should be used as static preview; can only be used if video or video_emoji_markup is set."
         }
       },
       "errors": [
@@ -47308,7 +47371,7 @@
         },
         "keywords": {
           "name": "keywords",
-          "description": "If set, updates the sticker keywords (separated by commas)."
+          "description": "If set, updates the sticker keywords (separated by commas). Can't be provided for mask stickers."
         },
         "mask_coords": {
           "name": "mask_coords",
@@ -47432,7 +47495,7 @@
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Whether the color of TGS custom emojis contained in this set should be changed to the text color when used in messages, the accent color if used as emoji status, white on chat photos, or another appropriate color based on context. For custom emoji stickersets only."
         },
         "thumb": {
           "name": "thumb",
