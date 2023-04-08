@@ -8107,18 +8107,24 @@
     },
     "emojiGroup": {
       "name": "emojiGroup",
+      "description": [
+        "Represents an emoji category¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+      ],
       "fields": {
         "emoticons": {
           "name": "emoticons",
-          "description": " "
+          "description": "A list of UTF-8 emojis, matching the category."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "A single custom emoji used as preview for the category."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Category name, i.e. \"Animals\", \"Flags\", \"Faces\" and so on..."
         }
       }
     },
@@ -8192,19 +8198,34 @@
     },
     "emojiList": {
       "name": "emojiList",
+      "description": [
+        "Represents a list of custom emojis¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "Custom emoji IDs"
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
     "emojiListNotModified": {
-      "name": "emojiListNotModified"
+      "name": "emojiListNotModified",
+      "description": [
+        "The list of custom emojis¹ hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
+      ]
     },
     "emojiStatus": {
       "name": "emojiStatus",
@@ -13751,10 +13772,7 @@
     "messageActionBotAllowed": {
       "name": "messageActionBotAllowed",
       "description": [
-        "The domain name of the website on which the user has logged in. More about Telegram Login »¹"
-      ],
-      "links": [
-        "https://core.telegram.org/widgets/login"
+        "The user has given the bot permission to do something."
       ],
       "fields": {
         "app": {
@@ -13767,7 +13785,10 @@
         },
         "domain": {
           "name": "domain",
-          "description": "The domain name of the website on which the user has logged in."
+          "description": "The domain name of the website on which the user has logged in. More about Telegram Login »¹",
+          "links": [
+            "https://core.telegram.org/widgets/login"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -16291,19 +16312,37 @@
     },
     "messages.emojiGroups": {
       "name": "messages.emojiGroups",
+      "description": [
+        "Represents a list of emoji categories¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+      ],
       "fields": {
         "groups": {
           "name": "groups",
-          "description": " "
+          "description": "A list of emoji categories¹.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji#emoji-categories"
+          ]
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
     "messages.emojiGroupsNotModified": {
-      "name": "messages.emojiGroupsNotModified"
+      "name": "messages.emojiGroupsNotModified",
+      "description": [
+        "The list of emoji categories¹ hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+      ]
     },
     "messages.exportedChatInvite": {
       "name": "messages.exportedChatInvite",
@@ -27237,7 +27276,13 @@
       ]
     },
     "EmojiGroup": {
-      "name": "EmojiGroup"
+      "name": "EmojiGroup",
+      "description": [
+        "Represents an emoji category¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+      ]
     },
     "EmojiKeyword": {
       "name": "EmojiKeyword",
@@ -27258,7 +27303,13 @@
       ]
     },
     "EmojiList": {
-      "name": "EmojiList"
+      "name": "EmojiList",
+      "description": [
+        "Represents a list of custom emojis¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji"
+      ]
     },
     "EmojiStatus": {
       "name": "EmojiStatus",
@@ -29108,7 +29159,13 @@
       ]
     },
     "messages.EmojiGroups": {
-      "name": "messages.EmojiGroups"
+      "name": "messages.EmojiGroups",
+      "description": [
+        "Represents a list of emoji categories¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+      ]
     },
     "messages.ExportedChatInvite": {
       "name": "messages.ExportedChatInvite",
@@ -29868,19 +29925,39 @@
     },
     "account.getDefaultGroupPhotoEmojis": {
       "name": "account.getDefaultGroupPhotoEmojis",
+      "description": [
+        "Get a set of suggested custom emoji stickers¹ that can be used as group picture²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji",
+        "https://core.telegram.org/api/files#sticker-profile-pictures"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
     "account.getDefaultProfilePhotoEmojis": {
       "name": "account.getDefaultProfilePhotoEmojis",
+      "description": [
+        "Get a set of suggested custom emoji stickers¹ that can be used as profile picture²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji",
+        "https://core.telegram.org/api/files#sticker-profile-pictures"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       }
     },
@@ -39012,10 +39089,20 @@
     },
     "messages.getEmojiGroups": {
       "name": "messages.getEmojiGroups",
+      "description": [
+        "Represents a list of emoji categories¹, to be used when selecting custom emojis²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories",
+        "https://core.telegram.org/api/custom-emoji"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       },
       "bot_can_use": true
@@ -39062,20 +39149,40 @@
     },
     "messages.getEmojiProfilePhotoGroups": {
       "name": "messages.getEmojiProfilePhotoGroups",
+      "description": [
+        "Represents a list of emoji categories¹, to be used when selecting custom emojis to set as profile picture²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories",
+        "https://core.telegram.org/api/files#sticker-profile-pictures"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       },
       "bot_can_use": true
     },
     "messages.getEmojiStatusGroups": {
       "name": "messages.getEmojiStatusGroups",
+      "description": [
+        "Represents a list of emoji categories¹, to be used when selecting custom emojis to set as custom emoji status²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-categories",
+        "https://core.telegram.org/api"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
         }
       },
       "bot_can_use": true
