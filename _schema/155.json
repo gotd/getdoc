@@ -5488,7 +5488,7 @@
         },
         "translations_disabled": {
           "name": "translations_disabled",
-          "description": "Whether real-time chat translation¹ is disabled.",
+          "description": "Whether the real-time chat translation popup¹ should be hidden.",
           "links": [
             "https://core.telegram.org/api/translation"
           ]
@@ -6417,7 +6417,7 @@
         },
         "translations_disabled": {
           "name": "translations_disabled",
-          "description": "Whether real-time chat translation¹ is disabled.",
+          "description": "Whether the real-time chat translation popup¹ should be hidden.",
           "links": [
             "https://core.telegram.org/api/translation"
           ]
@@ -26035,7 +26035,10 @@
         },
         "translations_disabled": {
           "name": "translations_disabled",
-          "description": " "
+          "description": "Whether the real-time chat translation popup¹ should be hidden.",
+          "links": [
+            "https://core.telegram.org/api/translation"
+          ]
         },
         "ttl_period": {
           "name": "ttl_period",
@@ -45068,7 +45071,7 @@
     "messages.togglePeerTranslations": {
       "name": "messages.togglePeerTranslations",
       "description": [
-        "Toggle real-time chat translation¹ for a certain chat"
+        "Show or hide the real-time chat translation popup¹ for a certain chat"
       ],
       "links": [
         "https://core.telegram.org/api/translation"
@@ -45076,7 +45079,7 @@
       "parameters": {
         "disabled": {
           "name": "disabled",
-          "description": "Whether to disable or enable real-time chat translation"
+          "description": "Whether to disable or enable the real-time chat translation popup"
         },
         "flags": {
           "name": "flags",
@@ -45087,7 +45090,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": "Peer where to enable or disable real-time chat translation"
+          "description": "The peer"
         }
       },
       "bot_can_use": true
@@ -45157,7 +45160,12 @@
     "messages.translateText": {
       "name": "messages.translateText",
       "description": [
-        "Translate a given text"
+        "Translate a given text.",
+        "Styled text entities¹ will only be preserved for Telegram Premium² users."
+      ],
+      "links": [
+        "https://core.telegram.org/api/entities",
+        "https://core.telegram.org/api/premium"
       ],
       "parameters": {
         "flags": {
@@ -45177,7 +45185,7 @@
         },
         "text": {
           "name": "text",
-          "description": "The text to translate"
+          "description": "A list of styled messages to translate"
         },
         "to_lang": {
           "name": "to_lang",
