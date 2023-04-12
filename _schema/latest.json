@@ -5101,7 +5101,7 @@
           "name": "forums",
           "description": "Forum¹-related events",
           "links": [
-            "https://core.telegram.org/api/forum#forum"
+            "https://core.telegram.org/api/forum"
           ]
         },
         "group_call": {
@@ -9698,14 +9698,20 @@
     },
     "inlineBotWebView": {
       "name": "inlineBotWebView",
+      "description": [
+        "Specifies a bot web app¹ button, shown on top of the inline query results list."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+      ],
       "fields": {
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Text of the button"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Webapp URL"
         }
       }
     },
@@ -13777,15 +13783,21 @@
       "fields": {
         "app": {
           "name": "app",
-          "description": " "
+          "description": "We just gave the specified bot web app¹ permission to send us messages.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps"
+          ]
         },
         "attach_menu": {
           "name": "attach_menu",
-          "description": " "
+          "description": "We just installed the bot's attachment menu¹, thus giving the bot permission to send us messages.",
+          "links": [
+            "https://core.telegram.org/api/bots/attach"
+          ]
         },
         "domain": {
           "name": "domain",
-          "description": "The domain name of the website on which the user has logged in. More about Telegram Login »¹",
+          "description": "The user has logged in via Telegram Login »¹; this field contains the domain name of the website on which the user has logged in.",
           "links": [
             "https://core.telegram.org/widgets/login"
           ]
@@ -15872,7 +15884,7 @@
         "Contains information about a bot web app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-app"
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
       ],
       "fields": {
         "app": {
@@ -15973,11 +15985,14 @@
         },
         "switch_pm": {
           "name": "switch_pm",
-          "description": "Whether the bot requested the user to message them in private"
+          "description": "Shown as a button on top of the remaining inline result list; if clicked, redirects the user to a private chat with the bot with the specified start parameter."
         },
         "switch_webview": {
           "name": "switch_webview",
-          "description": " "
+          "description": "Shown as a button on top of the remaining inline result list; if clicked, opens the specified bot web app¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+          ]
         },
         "users": {
           "name": "users",
@@ -16490,11 +16505,14 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Related chats"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of topics matching query; may be less than the topics contained in topics, in which case pagination¹ is required.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -16505,11 +16523,19 @@
         },
         "messages": {
           "name": "messages",
-          "description": " "
+          "description": "Related messages (contains the messages mentioned by forumTopic¹.top_message).",
+          "links": [
+            "https://core.telegram.org/constructor/forumTopic"
+          ]
         },
         "order_by_create_date": {
           "name": "order_by_create_date",
-          "description": " "
+          "description": "Whether the returned topics are ordered by creation date; if set, pagination by next_offset should use forumTopic¹.date; otherwise topics are ordered by the last message date, so paginate by the date of the message² referenced by forumTopic³.top_message.",
+          "links": [
+            "https://core.telegram.org/constructor/forumTopic",
+            "https://core.telegram.org/type/Message",
+            "https://core.telegram.org/constructor/forumTopic"
+          ]
         },
         "pts": {
           "name": "pts",
@@ -16524,7 +16550,7 @@
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Related users"
         }
       }
     },
@@ -17084,7 +17110,7 @@
         },
         "posts_between": {
           "name": "posts_between",
-          "description": " "
+          "description": "If set, specifies the minimum number of messages between shown sponsored messages; otherwise, only one sponsored message must be shown after all ordinary messages."
         },
         "users": {
           "name": "users",
@@ -17206,10 +17232,19 @@
     },
     "messages.translateResult": {
       "name": "messages.translateResult",
+      "description": [
+        "Translated text with entities¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/entities"
+      ],
       "fields": {
         "result": {
           "name": "result",
-          "description": " "
+          "description": "Text+entities¹, for each input message.",
+          "links": [
+            "https://core.telegram.org/api/entities"
+          ]
         }
       }
     },
@@ -19788,7 +19823,7 @@
         },
         "can_purchase_upgrade": {
           "name": "can_purchase_upgrade",
-          "description": " "
+          "description": "Whether this subscription option can be used to upgrade the existing Telegram Premium subscription."
         },
         "currency": {
           "name": "currency",
@@ -19799,7 +19834,7 @@
         },
         "current": {
           "name": "current",
-          "description": " "
+          "description": "Whether this subscription option is currently in use."
         },
         "flags": {
           "name": "flags",
@@ -19818,7 +19853,7 @@
         },
         "transaction": {
           "name": "transaction",
-          "description": " "
+          "description": "Identifier of the last in-store transaction for the currently used subscription."
         }
       }
     },
@@ -20195,7 +20230,7 @@
         },
         "persistent": {
           "name": "persistent",
-          "description": " "
+          "description": "Requests clients to always show the keyboard when the regular keyboard is hidden."
         },
         "placeholder": {
           "name": "placeholder",
@@ -21306,7 +21341,7 @@
       "fields": {
         "additional_info": {
           "name": "additional_info",
-          "description": " "
+          "description": "If set, contains additional information about the sponsored message to be shown along with the message."
         },
         "channel_post": {
           "name": "channel_post",
@@ -21356,7 +21391,7 @@
         },
         "sponsor_info": {
           "name": "sponsor_info",
-          "description": " "
+          "description": "If set, contains additional information about the sponsor to be shown along with the message."
         },
         "start_param": {
           "name": "start_param",
@@ -23768,10 +23803,19 @@
     },
     "updateGroupInvitePrivacyForbidden": {
       "name": "updateGroupInvitePrivacyForbidden",
+      "description": [
+        "0-N updates of this type may be returned only when invoking messages.addChatUser¹, channels.inviteToChannel² or messages.createChat³: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link⁴ can be shared with the user, instead."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.addChatUser",
+        "https://core.telegram.org/method/channels.inviteToChannel",
+        "https://core.telegram.org/method/messages.createChat",
+        "https://core.telegram.org/api/invites"
+      ],
       "fields": {
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user we couldn't add."
         }
       }
     },
@@ -26080,7 +26124,10 @@
         },
         "personal": {
           "name": "personal",
-          "description": " "
+          "description": "Whether this profile photo is only visible to us (i.e. it was set using photos.uploadContactProfilePhoto¹).",
+          "links": [
+            "https://core.telegram.org/method/photos.uploadContactProfilePhoto"
+          ]
         },
         "photo_id": {
           "name": "photo_id",
@@ -27510,7 +27557,13 @@
       ]
     },
     "InlineBotWebView": {
-      "name": "InlineBotWebView"
+      "name": "InlineBotWebView",
+      "description": [
+        "Specifies a bot web app¹ button, shown on top of the inline query results list."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+      ]
     },
     "InlineQueryPeerType": {
       "name": "InlineQueryPeerType",
@@ -29278,7 +29331,10 @@
     "messages.TranslatedText": {
       "name": "messages.TranslatedText",
       "description": [
-        "Translated text, or no result"
+        "Translated text with entities¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/entities"
       ]
     },
     "messages.VotesList": {
@@ -34437,7 +34493,12 @@
     "channels.inviteToChannel": {
       "name": "channels.inviteToChannel",
       "description": [
-        "Invite users to a channel/supergroup"
+        "Invite users to a channel/supergroup",
+        "May also return 0-N updates of type updateGroupInvitePrivacyForbidden¹: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link² can be shared with the user, instead."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateGroupInvitePrivacyForbidden",
+        "https://core.telegram.org/api/invites"
       ],
       "parameters": {
         "channel": {
@@ -36800,7 +36861,12 @@
     "messages.addChatUser": {
       "name": "messages.addChatUser",
       "description": [
-        "Adds a user to a chat and sends a service message on it."
+        "Adds a user to a chat and sends a service message on it.",
+        "May also return 0-N updates of type updateGroupInvitePrivacyForbidden¹: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link² can be shared with the user, instead."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateGroupInvitePrivacyForbidden",
+        "https://core.telegram.org/api/invites"
       ],
       "parameters": {
         "chat_id": {
@@ -37029,7 +37095,12 @@
     "messages.createChat": {
       "name": "messages.createChat",
       "description": [
-        "Creates a new chat."
+        "Creates a new chat.",
+        "May also return 0-N updates of type updateGroupInvitePrivacyForbidden¹: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link² can be shared with the user, instead."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateGroupInvitePrivacyForbidden",
+        "https://core.telegram.org/api/invites"
       ],
       "parameters": {
         "flags": {
@@ -41786,7 +41857,10 @@
         },
         "from_switch_webview": {
           "name": "from_switch_webview",
-          "description": " "
+          "description": "Whether the webapp was opened by clicking on the switch_webview button shown on top of the inline results list returned by messages.getInlineBotResults¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.getInlineBotResults"
+          ]
         },
         "platform": {
           "name": "platform",
@@ -44508,11 +44582,14 @@
         },
         "switch_pm": {
           "name": "switch_pm",
-          "description": "If passed, clients will display a button with specified text that switches the user to a private chat with the bot and sends the bot a start message with a certain parameter."
+          "description": "If passed, clients will display a button on top of the remaining inline result list with the specified text, that switches the user to a private chat with the bot and sends the bot a start message with a certain parameter."
         },
         "switch_webview": {
           "name": "switch_webview",
-          "description": " "
+          "description": "If passed, clients will display a button on top of the remaining inline result list with the specified text, that switches the user to the specified bot web app¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+          ]
         }
       },
       "errors": [
