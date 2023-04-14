@@ -29154,7 +29154,7 @@
         "Contains information about a bot web app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-app"
+        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
       ]
     },
     "messages.BotResults": {
@@ -35040,7 +35040,10 @@
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": "Supergroup ID"
+          "description": "Supergroup ID. The specified supergroup must have at least telegram_antispam_group_size_min members to enable antispam functionality, as specified by the client configuration parameters¹.",
+          "links": [
+            "https://core.telegram.org/api/config#client-configuration"
+          ]
         },
         "enabled": {
           "name": "enabled",
