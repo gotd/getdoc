@@ -3195,6 +3195,12 @@
     },
     "auth.sentCodeTypeFirebaseSms": {
       "name": "auth.sentCodeTypeFirebaseSms",
+      "description": [
+        "An authentication code should be delivered via SMS after SafetyNet/Firebase attestation, as described in the auth documentation »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -3205,11 +3211,15 @@
         },
         "length": {
           "name": "length",
-          "description": " "
+          "description": "Length of the code that will be delivered."
         },
         "nonce": {
           "name": "nonce",
-          "description": " "
+          "description": "Nonce to be passed to the SafetyNet Attestation API¹, as described in the auth documentation »²",
+          "links": [
+            "https://developer.android.com/training/safetynet/attestation",
+            "https://core.telegram.org/api/auth"
+          ]
         },
         "push_timeout": {
           "name": "push_timeout",
@@ -3238,14 +3248,23 @@
     },
     "auth.sentCodeTypeFragmentSms": {
       "name": "auth.sentCodeTypeFragmentSms",
+      "description": [
+        "The code was delivered via fragment.com¹."
+      ],
+      "links": [
+        "https://fragment.com"
+      ],
       "fields": {
         "length": {
           "name": "length",
-          "description": " "
+          "description": "Length of the delivered code."
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Open the specified URL to log into fragment.com¹ with the wallet that owns the specified phone number and view the code.",
+          "links": [
+            "https://fragment.com"
+          ]
         }
       }
     },
@@ -6847,7 +6866,7 @@
         },
         "allow_firebase": {
           "name": "allow_firebase",
-          "description": " "
+          "description": "Whether SafetyNet/Firebase attestation is supported"
         },
         "allow_flashcall": {
           "name": "allow_flashcall",
@@ -32154,6 +32173,9 @@
     },
     "auth.requestFirebaseSms": {
       "name": "auth.requestFirebaseSms",
+      "description": [
+        "Request an SMS code with a SafetyNet/Firebase attestation."
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -32168,15 +32190,21 @@
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "Phone code hash returned by auth.sendCode¹",
+          "links": [
+            "https://core.telegram.org/method/auth.sendCode"
+          ]
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Phone number"
         },
         "safety_net_token": {
           "name": "safety_net_token",
-          "description": " "
+          "description": "SafetyNet JWS object, obtained as described in the auth documentation »¹",
+          "links": [
+            "https://core.telegram.org/api/auth"
+          ]
         }
       },
       "errors": [
@@ -32577,6 +32605,11 @@
           "code": 400,
           "type": "LANG_CODE_INVALID",
           "description": "The specified language code is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_INVALID",
+          "description": "This method can only be called by a bot."
         },
         {
           "code": 400,
@@ -34979,6 +35012,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "LINK_NOT_MODIFIED",
           "description": "Discussion link not modified."
@@ -35110,6 +35148,11 @@
         },
         {
           "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "The pinned message wasn't modified."
+        },
+        {
+          "code": 400,
           "type": "CHAT_PUBLIC_REQUIRED"
         }
       ]
@@ -35153,7 +35196,12 @@
     "channels.toggleParticipantsHidden": {
       "name": "channels.toggleParticipantsHidden",
       "description": [
-        "Hide or display the participants list in a supergroup"
+        "Hide or display the participants list in a supergroup¹.",
+        "The supergroup must have at least hidden_members_group_size_min participants in order to use this method, as specified by the client configuration parameters »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/api/config#client-configuration"
       ],
       "parameters": {
         "channel": {
@@ -35320,6 +35368,13 @@
           "description": "Username"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USERNAME_INVALID",
+          "description": "The provided username is not valid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.updatePinnedForumTopic": {
@@ -40911,6 +40966,11 @@
           "code": 400,
           "type": "HIDE_REQUESTER_MISSING",
           "description": "The join request was missing or was already handled."
+        },
+        {
+          "code": 400,
+          "type": "INVITE_HASH_EXPIRED",
+          "description": "The invite link has expired."
         },
         {
           "code": 400,
@@ -47188,6 +47248,10 @@
         },
         {
           "code": 400,
+          "type": "EMOJI_MARKUP_INVALID"
+        },
+        {
+          "code": 400,
           "type": "FILE_PARTS_INVALID",
           "description": "The number of file parts is invalid."
         },
@@ -49242,6 +49306,10 @@
       "code": 400,
       "type": "EMOJI_INVALID",
       "description": "The specified theme emoji is valid."
+    },
+    "EMOJI_MARKUP_INVALID": {
+      "code": 400,
+      "type": "EMOJI_MARKUP_INVALID"
     },
     "EMOJI_NOT_MODIFIED": {
       "code": 400,
