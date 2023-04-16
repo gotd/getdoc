@@ -2676,10 +2676,10 @@
     "appWebViewResultUrl": {
       "name": "appWebViewResultUrl",
       "description": [
-        "Contains the link that must be used to open a bot web app¹."
+        "Contains the link that must be used to open a named bot web app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ],
       "fields": {
         "url": {
@@ -3618,10 +3618,10 @@
     "botApp": {
       "name": "botApp",
       "description": [
-        "Contains information about a bot web app¹."
+        "Contains information about a named bot web app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ],
       "fields": {
         "access_hash": {
@@ -3660,9 +3660,9 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Bot web app short name, used to generate bot web app deep links¹.",
+          "description": "Bot web app short name, used to generate named bot web app deep links¹.",
           "links": [
-            "https://core.telegram.org/api/links#bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         },
         "title": {
@@ -9800,10 +9800,10 @@
     "inputBotAppID": {
       "name": "inputBotAppID",
       "description": [
-        "Used to fetch information about a bot web app¹ by its ID"
+        "Used to fetch information about a named bot web app¹ by its ID"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ],
       "fields": {
         "access_hash": {
@@ -9815,9 +9815,9 @@
         },
         "id": {
           "name": "id",
-          "description": "Bot web app¹ ID.",
+          "description": "named bot web app¹ ID.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+            "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
           ]
         }
       }
@@ -9825,10 +9825,10 @@
     "inputBotAppShortName": {
       "name": "inputBotAppShortName",
       "description": [
-        "Used to fetch information about a bot web app¹ by its short name"
+        "Used to fetch information about a named bot web app¹ by its short name"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ],
       "fields": {
         "bot_id": {
@@ -9837,9 +9837,9 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Short name, obtained from a bot web app deep link¹",
+          "description": "Short name, obtained from a named bot web app deep link¹",
           "links": [
-            "https://core.telegram.org/api/links#bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         }
       }
@@ -12640,7 +12640,7 @@
         },
         "upgrade": {
           "name": "upgrade",
-          "description": " "
+          "description": "Pass true if this is an upgrade from a monthly subscription to a yearly subscription; only for App Store"
         }
       }
     },
@@ -14416,7 +14416,7 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": "Whether the topic was hidden."
+          "description": "Whether the topic was hidden (only valid for the \"General\" topic, id=1)."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
@@ -15900,10 +15900,10 @@
     "messages.botApp": {
       "name": "messages.botApp",
       "description": [
-        "Contains information about a bot web app¹"
+        "Contains information about a named bot web app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ],
       "fields": {
         "app": {
@@ -26903,10 +26903,10 @@
     "AppWebViewResult": {
       "name": "AppWebViewResult",
       "description": [
-        "Contains the link that must be used to open a bot web app¹."
+        "Contains the link that must be used to open a named bot web app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ]
     },
     "AttachMenuBot": {
@@ -27020,10 +27020,10 @@
     "BotApp": {
       "name": "BotApp",
       "description": [
-        "Contains information about a bot web app¹."
+        "Contains information about a named bot web app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ]
     },
     "BotCommand": {
@@ -27599,10 +27599,10 @@
     "InputBotApp": {
       "name": "InputBotApp",
       "description": [
-        "Used to fetch information about a bot web app¹"
+        "Used to fetch information about a named bot web app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ]
     },
     "InputBotInlineMessage": {
@@ -29170,10 +29170,10 @@
     "messages.BotApp": {
       "name": "messages.BotApp",
       "description": [
-        "Contains information about a bot web app¹"
+        "Contains information about a named bot web app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ]
     },
     "messages.BotResults": {
@@ -33696,7 +33696,7 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": "If present, will hide/unhide the topic."
+          "description": "If present, will hide/unhide the topic (only valid for the \"General\" topic, id=1)."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
@@ -35213,6 +35213,13 @@
           "description": "If true, will hide the participants list; otherwise will unhide it."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PARTICIPANTS_TOO_FEW",
+          "description": "Not enough participants."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.togglePreHistoryHidden": {
@@ -38728,17 +38735,17 @@
     "messages.getBotApp": {
       "name": "messages.getBotApp",
       "description": [
-        "Obtain information about a bot web app¹"
+        "Obtain information about a named bot web app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "Bot app information obtained from a bot web app deep link »¹.",
+          "description": "Bot app information obtained from a named bot web app deep link »¹.",
           "links": [
-            "https://core.telegram.org/api/links#bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         },
         "hash": {
@@ -41802,21 +41809,21 @@
     "messages.requestAppWebView": {
       "name": "messages.requestAppWebView",
       "description": [
-        "Open a bot web app¹ from a bot web app deep link², sending over user information after user confirmation.",
+        "Open a bot web app¹ from a named bot web app deep link², sending over user information after user confirmation.",
         "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
       ],
       "links": [
         "https://core.telegram.org/bots/webapps",
-        "https://core.telegram.org/api/links#bot-web-app-links",
+        "https://core.telegram.org/api/links#named-bot-web-app-links",
         "https://core.telegram.org/method/messages.prolongWebView"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the bot web app deep link² docs.",
+          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the named bot web app deep link² docs.",
           "links": [
             "https://core.telegram.org/method/messages.getBotApp",
-            "https://core.telegram.org/api/links#bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         },
         "flags": {
@@ -41836,9 +41843,9 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "If the startapp query string parameter is present in the bot web app deep link¹, pass it to start_param.",
+          "description": "If the startapp query string parameter is present in the named bot web app deep link¹, pass it to start_param.",
           "links": [
-            "https://core.telegram.org/api/links#bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         },
         "theme_params": {
@@ -41850,9 +41857,9 @@
         },
         "write_allowed": {
           "name": "write_allowed",
-          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the bot web app deep link¹ docs, and the user agreed.",
+          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the named bot web app deep link¹ docs, and the user agreed.",
           "links": [
-            "https://core.telegram.org/api/links#bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         }
       },
@@ -47248,7 +47255,8 @@
         },
         {
           "code": 400,
-          "type": "EMOJI_MARKUP_INVALID"
+          "type": "EMOJI_MARKUP_INVALID",
+          "description": "The specified video_emoji_markup was invalid."
         },
         {
           "code": 400,
@@ -49309,7 +49317,8 @@
     },
     "EMOJI_MARKUP_INVALID": {
       "code": 400,
-      "type": "EMOJI_MARKUP_INVALID"
+      "type": "EMOJI_MARKUP_INVALID",
+      "description": "The specified video_emoji_markup was invalid."
     },
     "EMOJI_NOT_MODIFIED": {
       "code": 400,
