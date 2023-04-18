@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
-	github.com/cenkalti/backoff/v4 v4.2.0
+	github.com/cenkalti/backoff/v4 v4.2.1
 	github.com/go-faster/errors v0.6.1
 	github.com/stretchr/testify v1.8.2
 	go.uber.org/ratelimit v0.2.0
