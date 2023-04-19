@@ -3196,7 +3196,7 @@
     "auth.sentCodeTypeFirebaseSms": {
       "name": "auth.sentCodeTypeFirebaseSms",
       "description": [
-        "An authentication code should be delivered via SMS after SafetyNet/Firebase attestation, as described in the auth documentation »¹."
+        "An authentication code should be delivered via SMS after Firebase attestation, as described in the auth documentation »¹."
       ],
       "links": [
         "https://core.telegram.org/api/auth"
@@ -3215,9 +3215,8 @@
         },
         "nonce": {
           "name": "nonce",
-          "description": "Nonce to be passed to the SafetyNet Attestation API¹, as described in the auth documentation »²",
+          "description": "On Android, the nonce to be used as described in the auth documentation »¹",
           "links": [
-            "https://developer.android.com/training/safetynet/attestation",
             "https://core.telegram.org/api/auth"
           ]
         },
@@ -6866,7 +6865,7 @@
         },
         "allow_firebase": {
           "name": "allow_firebase",
-          "description": "Whether SafetyNet/Firebase attestation is supported"
+          "description": "Whether Firebase auth is supported"
         },
         "allow_flashcall": {
           "name": "allow_flashcall",
@@ -8738,7 +8737,12 @@
         },
         "short": {
           "name": "short",
-          "description": " "
+          "description": "Whether this constructor is a reduced version of the full topic information. If set, only the my, closed, id, date, title, icon_color, icon_emoji_id and from_id parameters will contain valid information. Reduced info is usually only returned in topic-related admin log events »¹ and in the messages.channelMessages² constructor: if needed, full information can be fetched using channels.getForumTopicsByID³.",
+          "links": [
+            "https://core.telegram.org/api/recent-actions",
+            "https://core.telegram.org/constructor/messages.channelMessages",
+            "https://core.telegram.org/method/channels.getForumTopicsByID"
+          ]
         },
         "title": {
           "name": "title",
@@ -14331,7 +14335,10 @@
       "fields": {
         "auto_setting_from": {
           "name": "auto_setting_from",
-          "description": " "
+          "description": "If set, the chat TTL setting was set not due to a manual change by one of participants, but automatically because one of the participants has the default TTL settings enabled »¹. For example, when a user writes to us for the first time and we have set a default messages TTL of 1 week, this service message (with auto_setting_from=our_userid) will be emitted before our first message.",
+          "links": [
+            "https://core.telegram.org/method/messages.setDefaultHistoryTTL"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -14342,7 +14349,7 @@
         },
         "period": {
           "name": "period",
-          "description": "New Time-To-Live"
+          "description": "New Time-To-Live of all messages sent in this chat; if 0, autodeletion was disabled."
         }
       }
     },
@@ -19842,7 +19849,7 @@
         },
         "can_purchase_upgrade": {
           "name": "can_purchase_upgrade",
-          "description": "Whether this subscription option can be used to upgrade the existing Telegram Premium subscription."
+          "description": "Whether this subscription option can be used to upgrade the existing Telegram Premium subscription. When upgrading Telegram Premium subscriptions bought through stores, make sure that the store transaction ID is equal to transaction, to avoid upgrading someone else's account, if the client is currently logged into multiple accounts."
         },
         "currency": {
           "name": "currency",
@@ -19872,7 +19879,7 @@
         },
         "transaction": {
           "name": "transaction",
-          "description": "Identifier of the last in-store transaction for the currently used subscription."
+          "description": "Identifier of the last in-store transaction for the currently used subscription on the current account."
         }
       }
     },
@@ -31206,6 +31213,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "USERNAMES_ACTIVE_TOO_MUCH",
+          "description": "The maximum number of active usernames was reached."
+        },
+        {
+          "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
         }
@@ -32103,18 +32115,27 @@
     },
     "auth.importWebTokenAuthorization": {
       "name": "auth.importWebTokenAuthorization",
+      "description": [
+        "Login by importing an authorization token"
+      ],
       "parameters": {
         "api_hash": {
           "name": "api_hash",
-          "description": " "
+          "description": "API hash¹",
+          "links": [
+            "https://core.telegram.org/api/obtaining_api_id"
+          ]
         },
         "api_id": {
           "name": "api_id",
-          "description": " "
+          "description": "API ID¹",
+          "links": [
+            "https://core.telegram.org/api/obtaining_api_id"
+          ]
         },
         "web_auth_token": {
           "name": "web_auth_token",
-          "description": " "
+          "description": "The authorization token"
         }
       },
       "errors": [
@@ -32174,7 +32195,7 @@
     "auth.requestFirebaseSms": {
       "name": "auth.requestFirebaseSms",
       "description": [
-        "Request an SMS code with a SafetyNet/Firebase attestation."
+        "Request an SMS code via Firebase."
       ],
       "parameters": {
         "flags": {
@@ -32201,7 +32222,7 @@
         },
         "safety_net_token": {
           "name": "safety_net_token",
-          "description": "SafetyNet JWS object, obtained as described in the auth documentation »¹",
+          "description": "On Android, a JWS object obtained as described in the auth documentation »¹",
           "links": [
             "https://core.telegram.org/api/auth"
           ]
@@ -34238,10 +34259,6 @@
           "description": "channel/supergroup not available."
         },
         {
-          "code": 500,
-          "type": "CHAT_FROM_USERNAME_CHANGED"
-        },
-        {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "The pinned message wasn't modified."
@@ -34337,10 +34354,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -34687,10 +34700,6 @@
           "code": 400,
           "type": "INVITE_REQUEST_SENT",
           "description": "You have successfully requested to join this chat or channel."
-        },
-        {
-          "code": 500,
-          "type": "MEMBER_CHAT_ADD_FAILED"
         },
         {
           "code": 400,
@@ -35153,7 +35162,8 @@
         },
         {
           "code": 400,
-          "type": "CHAT_PUBLIC_REQUIRED"
+          "type": "CHAT_PUBLIC_REQUIRED",
+          "description": "You can only enable join requests in public groups."
         }
       ]
     },
@@ -35376,6 +35386,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "USERNAMES_ACTIVE_TOO_MUCH",
+          "description": "The maximum number of active usernames was reached."
+        },
         {
           "code": 400,
           "type": "USERNAME_INVALID",
@@ -37039,10 +37054,6 @@
           "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
-        },
-        {
-          "code": 500,
-          "type": "CHAT_MEMBERS_CHANNEL"
         },
         {
           "code": 400,
@@ -38920,10 +38931,6 @@
           "description": "The invite link has expired."
         },
         {
-          "code": 500,
-          "type": "INVITE_HASH_UNSYNC"
-        },
-        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -39136,10 +39143,6 @@
           "code": 400,
           "type": "FOLDER_ID_INVALID",
           "description": "Invalid folder ID."
-        },
-        {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -39670,10 +39673,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
-        },
-        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -40113,10 +40112,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -41353,9 +41348,8 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified forum topic².",
+          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
           "links": [
-            "https://core.telegram.org/method/messages.sendWebViewResultMessage",
             "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
@@ -42063,9 +42057,8 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ will be sent to the specified forum topic²",
+          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
           "links": [
-            "https://core.telegram.org/method/messages.sendWebViewResultMessage",
             "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
@@ -42841,7 +42834,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the message to the specified forum topic¹",
+          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
@@ -43086,7 +43079,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the media to the specified forum topic¹",
+          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
@@ -43549,7 +43542,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the message to the specified forum topic¹",
+          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
@@ -43680,7 +43673,8 @@
         },
         {
           "code": 406,
-          "type": "PAYMENT_UNSUPPORTED"
+          "type": "PAYMENT_UNSUPPORTED",
+          "description": "A detailed description of the error will be received separately as described here »."
         },
         {
           "code": 400,
@@ -43843,7 +43837,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "If set, sends the media to the specified forum topic¹",
+          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
@@ -44920,7 +44914,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Thread ID¹",
+          "description": "Topic ID¹",
           "links": [
             "https://core.telegram.org/api/threads"
           ]
@@ -45170,7 +45164,8 @@
         },
         {
           "code": 400,
-          "type": "PEER_HISTORY_EMPTY"
+          "type": "PEER_HISTORY_EMPTY",
+          "description": "You can't pin an empty chat with a user."
         },
         {
           "code": 400,
@@ -48085,10 +48080,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
-        },
-        {
           "code": 400,
           "type": "PERSISTENT_TIMESTAMP_EMPTY",
           "description": "Persistent timestamp empty."
@@ -48196,10 +48187,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -48643,10 +48630,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
-        },
-        {
           "code": 400,
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
@@ -49048,10 +49031,6 @@
       "type": "CHAT_FORWARDS_RESTRICTED",
       "description": "You can't forward messages from a protected chat."
     },
-    "CHAT_FROM_USERNAME_CHANGED": {
-      "code": 500,
-      "type": "CHAT_FROM_USERNAME_CHANGED"
-    },
     "CHAT_GUEST_SEND_FORBIDDEN": {
       "code": 403,
       "type": "CHAT_GUEST_SEND_FORBIDDEN",
@@ -49087,10 +49066,6 @@
       "type": "CHAT_LINK_EXISTS",
       "description": "The chat is public, you can't hide the history to new users."
     },
-    "CHAT_MEMBERS_CHANNEL": {
-      "code": 500,
-      "type": "CHAT_MEMBERS_CHANNEL"
-    },
     "CHAT_NOT_MODIFIED": {
       "code": 400,
       "type": "CHAT_NOT_MODIFIED",
@@ -49098,7 +49073,8 @@
     },
     "CHAT_PUBLIC_REQUIRED": {
       "code": 400,
-      "type": "CHAT_PUBLIC_REQUIRED"
+      "type": "CHAT_PUBLIC_REQUIRED",
+      "description": "You can only enable join requests in public groups."
     },
     "CHAT_RESTRICTED": {
       "code": 400,
@@ -49690,10 +49666,6 @@
       "type": "INVITE_HASH_INVALID",
       "description": "The invite hash is invalid."
     },
-    "INVITE_HASH_UNSYNC": {
-      "code": 500,
-      "type": "INVITE_HASH_UNSYNC"
-    },
     "INVITE_REQUEST_SENT": {
       "code": 400,
       "type": "INVITE_REQUEST_SENT",
@@ -49814,10 +49786,6 @@
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
     },
-    "MEMBER_CHAT_ADD_FAILED": {
-      "code": 500,
-      "type": "MEMBER_CHAT_ADD_FAILED"
-    },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
       "type": "MESSAGE_AUTHOR_REQUIRED",
@@ -49892,10 +49860,6 @@
       "code": 400,
       "type": "MULTI_MEDIA_TOO_LONG",
       "description": "Too many media files for album."
-    },
-    "NEED_DOC_INVALID": {
-      "code": 500,
-      "type": "NEED_DOC_INVALID"
     },
     "NEW_SALT_INVALID": {
       "code": 400,
@@ -50019,11 +49983,13 @@
     },
     "PAYMENT_UNSUPPORTED": {
       "code": 406,
-      "type": "PAYMENT_UNSUPPORTED"
+      "type": "PAYMENT_UNSUPPORTED",
+      "description": "A detailed description of the error will be received separately as described here »."
     },
     "PEER_HISTORY_EMPTY": {
       "code": 400,
-      "type": "PEER_HISTORY_EMPTY"
+      "type": "PEER_HISTORY_EMPTY",
+      "description": "You can't pin an empty chat with a user."
     },
     "PEER_ID_INVALID": {
       "code": 400,
@@ -50784,6 +50750,11 @@
       "code": 400,
       "type": "USAGE_LIMIT_INVALID",
       "description": "The specified usage limit is invalid."
+    },
+    "USERNAMES_ACTIVE_TOO_MUCH": {
+      "code": 400,
+      "type": "USERNAMES_ACTIVE_TOO_MUCH",
+      "description": "The maximum number of active usernames was reached."
     },
     "USERNAME_INVALID": {
       "code": 400,
