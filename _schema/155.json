@@ -13801,26 +13801,27 @@
     "messageActionBotAllowed": {
       "name": "messageActionBotAllowed",
       "description": [
-        "The user has given the bot permission to do something."
+        "We have given the bot permission to send us direct messages.",
+        "The optional fields specify how did we authorize the bot to send us messages."
       ],
       "fields": {
         "app": {
           "name": "app",
-          "description": "We just gave the specified bot web app¹ permission to send us messages.",
+          "description": "We have authorized the bot to send us messages by opening the specified bot web app¹.",
           "links": [
             "https://core.telegram.org/api/bots/webapps"
           ]
         },
         "attach_menu": {
           "name": "attach_menu",
-          "description": "We just installed the bot's attachment menu¹, thus giving the bot permission to send us messages.",
+          "description": "We have authorized the bot to send us messages by installing the bot's attachment menu¹.",
           "links": [
             "https://core.telegram.org/api/bots/attach"
           ]
         },
         "domain": {
           "name": "domain",
-          "description": "The user has logged in via Telegram Login »¹; this field contains the domain name of the website on which the user has logged in.",
+          "description": "We have authorized the bot to send us messages by logging into a website via Telegram Login »¹; this field contains the domain name of the website on which the user has logged in.",
           "links": [
             "https://core.telegram.org/widgets/login"
           ]
@@ -21413,7 +21414,7 @@
         },
         "show_peer_photo": {
           "name": "show_peer_photo",
-          "description": " "
+          "description": "Whether a profile photo bubble should be displayed for this message, like for messages sent in groups. The photo shown in the bubble is obtained either from the peer contained in from_id, or from chat_invite."
         },
         "sponsor_info": {
           "name": "sponsor_info",
@@ -39252,7 +39253,10 @@
     "messages.getEmojiKeywords": {
       "name": "messages.getEmojiKeywords",
       "description": [
-        "Get localized emoji keywords"
+        "Get localized emoji keywords »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-keywords"
       ],
       "parameters": {
         "lang_code": {
@@ -39264,12 +39268,15 @@
     "messages.getEmojiKeywordsDifference": {
       "name": "messages.getEmojiKeywordsDifference",
       "description": [
-        "Get changed emoji keywords"
+        "Get changed emoji keywords »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-keywords"
       ],
       "parameters": {
         "from_version": {
           "name": "from_version",
-          "description": "Previous emoji keyword localization version"
+          "description": "Previous stored emoji keyword list version"
         },
         "lang_code": {
           "name": "lang_code",
@@ -39280,12 +39287,16 @@
     "messages.getEmojiKeywordsLanguages": {
       "name": "messages.getEmojiKeywordsLanguages",
       "description": [
-        "Get info about an emoji keyword localization"
+        "Obtain a list of related languages that must be used when fetching emoji keyword lists »¹.",
+        "Usually the method will return the passed language codes (if localized) + en + some language codes for similar languages (if applicable)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-keywords"
       ],
       "parameters": {
         "lang_codes": {
           "name": "lang_codes",
-          "description": "Language codes"
+          "description": "The user's language codes"
         }
       }
     },
@@ -39350,12 +39361,15 @@
     "messages.getEmojiURL": {
       "name": "messages.getEmojiURL",
       "description": [
-        "Returns an HTTP URL which can be used to automatically log in into translation platform and suggest new emoji replacements. The URL will be valid for 30 seconds after generation"
+        "Returns an HTTP URL which can be used to automatically log in into translation platform and suggest new emoji keywords »¹. The URL will be valid for 30 seconds after generation."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji#emoji-keywords"
       ],
       "parameters": {
         "lang_code": {
           "name": "lang_code",
-          "description": "Language code for which the emoji replacements will be suggested"
+          "description": "Language code for which the emoji keywords will be suggested"
         }
       }
     },
