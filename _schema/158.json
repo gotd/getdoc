@@ -4226,18 +4226,21 @@
     },
     "bots.botInfo": {
       "name": "bots.botInfo",
+      "description": [
+        "Localized information about a bot."
+      ],
       "fields": {
         "about": {
           "name": "about",
-          "description": " "
+          "description": "Bot about text"
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Bot description"
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "Bot name"
         }
       }
     },
@@ -7056,7 +7059,7 @@
         },
         "app_sandbox": {
           "name": "app_sandbox",
-          "description": " "
+          "description": "Used only by official iOS apps for firebase auth: whether a sandbox-certificate will be used during transmission of the push notification."
         },
         "current_number": {
           "name": "current_number",
@@ -7078,7 +7081,7 @@
         },
         "token": {
           "name": "token",
-          "description": " "
+          "description": "Used only by official iOS apps for Firebase auth: device token for apple push."
         }
       }
     },
@@ -9972,12 +9975,15 @@
       }
     },
     "inlineQueryPeerTypeBotPM": {
-      "name": "inlineQueryPeerTypeBotPM"
+      "name": "inlineQueryPeerTypeBotPM",
+      "description": [
+        "Peer type: private chat with a bot."
+      ]
     },
     "inlineQueryPeerTypeBroadcast": {
       "name": "inlineQueryPeerTypeBroadcast",
       "description": [
-        "The inline query was sent in a channel¹"
+        "Peer type: channel¹"
       ],
       "links": [
         "https://core.telegram.org/api/channel"
@@ -9986,7 +9992,7 @@
     "inlineQueryPeerTypeChat": {
       "name": "inlineQueryPeerTypeChat",
       "description": [
-        "The inline query was sent in a chat¹"
+        "Peer type: chat¹"
       ],
       "links": [
         "https://core.telegram.org/api/channel"
@@ -9995,7 +10001,7 @@
     "inlineQueryPeerTypeMegagroup": {
       "name": "inlineQueryPeerTypeMegagroup",
       "description": [
-        "The inline query was sent in a supergroup¹"
+        "Peer type: supergroup¹"
       ],
       "links": [
         "https://core.telegram.org/api/channel"
@@ -10004,13 +10010,13 @@
     "inlineQueryPeerTypePM": {
       "name": "inlineQueryPeerTypePM",
       "description": [
-        "The inline query was sent in a private chat"
+        "Peer type: private chat"
       ]
     },
     "inlineQueryPeerTypeSameBotPM": {
       "name": "inlineQueryPeerTypeSameBotPM",
       "description": [
-        "The inline query was sent in a private chat with the bot itself"
+        "Peer type: private chat with the bot itself"
       ]
     },
     "inputAppEvent": {
@@ -13552,7 +13558,7 @@
     "keyboardButtonSwitchInline": {
       "name": "keyboardButtonSwitchInline",
       "description": [
-        "Button to force a user to switch to inline mode Pressing the button will prompt the user to select one of their chats, open that chat and insert the bot's username and the specified inline query in the input field."
+        "Button to force a user to switch to inline mode: pressing the button will prompt the user to select one of their chats, open that chat and insert the bot's username and the specified inline query in the input field."
       ],
       "fields": {
         "flags": {
@@ -13564,7 +13570,7 @@
         },
         "peer_types": {
           "name": "peer_types",
-          "description": " "
+          "description": "Filter to use when selecting chats."
         },
         "query": {
           "name": "query",
@@ -14296,11 +14302,11 @@
         },
         "crypto_amount": {
           "name": "crypto_amount",
-          "description": " "
+          "description": "If the gift was bought using a cryptocurrency, price of the gift in the smallest units of a cryptocurrency."
         },
         "crypto_currency": {
           "name": "crypto_currency",
-          "description": " "
+          "description": "If the gift was bought using a cryptocurrency, the cryptocurrency name."
         },
         "currency": {
           "name": "currency",
@@ -14594,10 +14600,19 @@
     },
     "messageActionSetChatWallPaper": {
       "name": "messageActionSetChatWallPaper",
+      "description": [
+        "The wallpaper »¹ of the current chat was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
+      ],
       "fields": {
         "wallpaper": {
           "name": "wallpaper",
-          "description": " "
+          "description": "New wallpaper¹",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
@@ -14632,7 +14647,10 @@
       "fields": {
         "wallpaper": {
           "name": "wallpaper",
-          "description": " "
+          "description": "New wallpaper¹",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
@@ -24758,7 +24776,7 @@
         },
         "broadcast_post": {
           "name": "broadcast_post",
-          "description": "If set, contains the ID of the channel post that started the the comment thread¹",
+          "description": "If set, contains the ID of the channel post that started the comment thread¹",
           "links": [
             "https://core.telegram.org/api/threads"
           ]
@@ -26133,7 +26151,7 @@
         },
         "bot_can_edit": {
           "name": "bot_can_edit",
-          "description": " "
+          "description": "Whether we can edit the profile picture, name, about text and description of this bot because we own it."
         },
         "bot_chat_history": {
           "name": "bot_chat_history",
@@ -26380,7 +26398,7 @@
         },
         "private_forward_name": {
           "name": "private_forward_name",
-          "description": "Anonymized text to be shown instead of the the user's name on forwarded messages"
+          "description": "Anonymized text to be shown instead of the user's name on forwarded messages"
         },
         "profile_photo": {
           "name": "profile_photo",
@@ -26415,7 +26433,10 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": " "
+          "description": "Wallpaper¹ to use in the private chat with the user.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers"
+          ]
         }
       }
     },
@@ -27892,7 +27913,7 @@
     "InlineQueryPeerType": {
       "name": "InlineQueryPeerType",
       "description": [
-        "Type of the chat from which the inline query was sent."
+        "Inline query peer type."
       ]
     },
     "InputAppEvent": {
@@ -31511,7 +31532,7 @@
     "account.toggleUsername": {
       "name": "account.toggleUsername",
       "description": [
-        "Associate or dissociate a purchased fragment.com¹ username to the currently logged-in user."
+        "Activate or deactivate a purchased fragment.com¹ username associated to the currently logged-in user."
       ],
       "links": [
         "https://fragment.com"
@@ -31519,7 +31540,7 @@
       "parameters": {
         "active": {
           "name": "active",
-          "description": "Whether to associate or dissociate it"
+          "description": "Whether to activate or deactivate it"
         },
         "username": {
           "name": "username",
@@ -32534,7 +32555,7 @@
         },
         "ios_push_secret": {
           "name": "ios_push_secret",
-          "description": " "
+          "description": "Secret token received via an apple push notification"
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
@@ -32671,7 +32692,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PHONE_NUMBER_INVALID",
+          "description": "The phone number is invalid."
+        }
+      ]
     },
     "auth.sendCode": {
       "name": "auth.sendCode",
@@ -32921,7 +32948,7 @@
         {
           "code": 403,
           "type": "USER_BOT_INVALID",
-          "description": "This method can only be called by a bot."
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
       ],
       "bot_can_use": true
@@ -32945,7 +32972,7 @@
         {
           "code": 400,
           "type": "USER_BOT_INVALID",
-          "description": "This method can only be called by a bot."
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
       ],
       "bot_can_use": true
@@ -32953,13 +32980,12 @@
     "bots.getBotInfo": {
       "name": "bots.getBotInfo",
       "description": [
-        "Get our about text and description (bots only)",
-        "Returns a vector of strings: the first string will be the about text, the second string will be the description."
+        "Get localized name, about text and description of a bot (or of the current account, if called by a bot)."
       ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "If called by a user, must contain the peer of a bot we own."
         },
         "flags": {
           "name": "flags",
@@ -32982,12 +33008,7 @@
         {
           "code": 400,
           "type": "USER_BOT_INVALID",
-          "description": "This method can only be called by a bot."
-        },
-        {
-          "code": 400,
-          "type": "USER_BOT_REQUIRED",
-          "description": "This method can only be called by a bot."
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
       ],
       "bot_can_use": true
@@ -33018,16 +33039,26 @@
     },
     "bots.reorderUsernames": {
       "name": "bots.reorderUsernames",
+      "description": [
+        "Reorder usernames associated to a bot we own."
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot"
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "The new order for active usernames. All active usernames must be specified."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ],
       "bot_can_use": true
     },
     "bots.resetBotCommands": {
@@ -33083,7 +33114,7 @@
         {
           "code": 403,
           "type": "USER_BOT_INVALID",
-          "description": "This method can only be called by a bot."
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
       ],
       "bot_can_use": true
@@ -33197,7 +33228,7 @@
     "bots.setBotInfo": {
       "name": "bots.setBotInfo",
       "description": [
-        "Set our about text and description (bots only)"
+        "Set localized name, about text and description of a bot (or of the current account, if called by a bot)."
       ],
       "parameters": {
         "about": {
@@ -33206,7 +33237,7 @@
         },
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "If called by a user, must contain the peer of a bot we own."
         },
         "description": {
           "name": "description",
@@ -33225,14 +33256,14 @@
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "New bot name"
         }
       },
       "errors": [
         {
           "code": 400,
-          "type": "USER_BOT_REQUIRED",
-          "description": "This method can only be called by a bot."
+          "type": "USER_BOT_INVALID",
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
       ],
       "bot_can_use": true
@@ -33271,20 +33302,33 @@
     },
     "bots.toggleUsername": {
       "name": "bots.toggleUsername",
+      "description": [
+        "Activate or deactivate a purchased fragment.com¹ username associated to a bot we own."
+      ],
+      "links": [
+        "https://fragment.com"
+      ],
       "parameters": {
         "active": {
           "name": "active",
-          "description": " "
+          "description": "Whether to activate or deactivate it"
         },
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot"
         },
         "username": {
           "name": "username",
-          "description": " "
+          "description": "Username"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.checkUsername": {
@@ -35755,7 +35799,7 @@
     "channels.toggleUsername": {
       "name": "channels.toggleUsername",
       "description": [
-        "Associate or dissociate a purchased fragment.com¹ username to a supergroup or channel²."
+        "Activate or deactivate a purchased fragment.com¹ username associated to a supergroup or channel² we own."
       ],
       "links": [
         "https://fragment.com",
@@ -35764,7 +35808,7 @@
       "parameters": {
         "active": {
           "name": "active",
-          "description": "Whether to associate or dissociate the username"
+          "description": "Whether to activate or deactivate the username"
         },
         "channel": {
           "name": "channel",
@@ -35918,6 +35962,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "INVITE_SLUG_EMPTY",
+          "description": "The specified invite slug is empty."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.deleteExportedInvite": {
@@ -35932,6 +35983,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.editExportedInvite": {
@@ -35961,6 +36019,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.exportChatlistInvite": {
@@ -35979,7 +36044,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        }
+      ]
     },
     "chatlists.getChatlistUpdates": {
       "name": "chatlists.getChatlistUpdates",
@@ -36033,6 +36104,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "INVITE_SLUG_EMPTY",
+          "description": "The specified invite slug is empty."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.joinChatlistUpdates": {
@@ -45029,6 +45107,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "messages.setDefaultHistoryTTL": {
@@ -45391,7 +45476,7 @@
         {
           "code": 403,
           "type": "USER_BOT_INVALID",
-          "description": "This method can only be called by a bot."
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         },
         {
           "code": 400,
@@ -47663,7 +47748,7 @@
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Can contain info of a bot we own, to change the profile photo of that bot, instead of the current user."
         },
         "fallback": {
           "name": "fallback",
@@ -47794,7 +47879,7 @@
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Can contain info of a bot we own, to change the profile photo of that bot, instead of the current user."
         },
         "fallback": {
           "name": "fallback",
@@ -49249,7 +49334,7 @@
         {
           "code": 403,
           "type": "USER_BOT_INVALID",
-          "description": "This method can only be called by a bot."
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         },
         {
           "code": 400,
@@ -50265,6 +50350,11 @@
       "code": 400,
       "type": "INVITE_REVOKED_MISSING",
       "description": "The specified invite link was already revoked or is invalid."
+    },
+    "INVITE_SLUG_EMPTY": {
+      "code": 400,
+      "type": "INVITE_SLUG_EMPTY",
+      "description": "The specified invite slug is empty."
     },
     "INVOICE_PAYLOAD_INVALID": {
       "code": 400,
@@ -51424,7 +51514,7 @@
     "USER_BOT_INVALID": {
       "code": 403,
       "type": "USER_BOT_INVALID",
-      "description": "This method can only be called by a bot."
+      "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
     },
     "USER_BOT_REQUIRED": {
       "code": 400,
