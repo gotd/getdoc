@@ -3154,10 +3154,16 @@
     },
     "auth.sentCodeSuccess": {
       "name": "auth.sentCodeSuccess",
+      "description": [
+        "The user successfully authorized using future auth tokens¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#future-auth-tokens"
+      ],
       "fields": {
         "authorization": {
           "name": "authorization",
-          "description": " "
+          "description": "Authorization info"
         }
       }
     },
@@ -3259,11 +3265,14 @@
         },
         "push_timeout": {
           "name": "push_timeout",
-          "description": " "
+          "description": "On iOS: if a push notification with the ios_push_secret isn't received within push_timeout seconds, the next_type authentication method must be used, with auth.resendCode¹.",
+          "links": [
+            "https://core.telegram.org/method/auth.resendCode"
+          ]
         },
         "receipt": {
           "name": "receipt",
-          "description": " "
+          "description": "On iOS, must be compared with the receipt extracted from the received push notification."
         }
       }
     },
@@ -4853,7 +4862,10 @@
         },
         "via_chatlist": {
           "name": "via_chatlist",
-          "description": " "
+          "description": "The participant joined by importing a chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       }
     },
@@ -6701,7 +6713,10 @@
         },
         "via_chatlist": {
           "name": "via_chatlist",
-          "description": " "
+          "description": "The participant joined by importing a chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       }
     },
@@ -6919,10 +6934,16 @@
     },
     "chatlists.chatlistInvite": {
       "name": "chatlists.chatlistInvite",
+      "description": [
+        "Info about a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Related chat information"
         },
         "emoticon": {
           "name": "emoticon",
@@ -6937,87 +6958,117 @@
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "Supergroups and channels to join"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Name of the link"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Related user information"
         }
       }
     },
     "chatlists.chatlistInviteAlready": {
       "name": "chatlists.chatlistInviteAlready",
+      "description": [
+        "Updated info about a chat folder deep link »¹ we already imported."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "already_peers": {
           "name": "already_peers",
-          "description": " "
+          "description": "Peers that were already imported"
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Related chat information"
         },
         "filter_id": {
           "name": "filter_id",
-          "description": " "
+          "description": "ID of the imported folder"
         },
         "missing_peers": {
           "name": "missing_peers",
-          "description": " "
+          "description": "New peers to be imported"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Related user information"
         }
       }
     },
     "chatlists.chatlistUpdates": {
       "name": "chatlists.chatlistUpdates",
+      "description": [
+        "Updated information about a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Related chat information"
         },
         "missing_peers": {
           "name": "missing_peers",
-          "description": " "
+          "description": "New peers to join"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Related user information"
         }
       }
     },
     "chatlists.exportedChatlistInvite": {
       "name": "chatlists.exportedChatlistInvite",
+      "description": [
+        "Info about an exported chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "filter": {
           "name": "filter",
-          "description": " "
+          "description": "Folder ID"
         },
         "invite": {
           "name": "invite",
-          "description": " "
+          "description": "The exported chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       }
     },
     "chatlists.exportedInvites": {
       "name": "chatlists.exportedInvites",
+      "description": [
+        "Info about multiple chat folder deep links »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Related chat information"
         },
         "invites": {
           "name": "invites",
-          "description": " "
+          "description": "The chat folder deep links »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Related user information"
         }
       }
     },
@@ -7818,6 +7869,12 @@
     },
     "dialogFilterChatlist": {
       "name": "dialogFilterChatlist",
+      "description": [
+        "A folder imported using a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "emoticon": {
           "name": "emoticon",
@@ -7836,7 +7893,7 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "ID of the folder"
         },
         "include_peers": {
           "name": "include_peers",
@@ -7848,7 +7905,7 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Name of the folder"
         }
       }
     },
@@ -8776,6 +8833,12 @@
     },
     "exportedChatlistInvite": {
       "name": "exportedChatlistInvite",
+      "description": [
+        "Exported chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -8786,15 +8849,18 @@
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "Peers to import"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Name of the link"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       }
     },
@@ -10632,10 +10698,16 @@
     },
     "inputChatlistDialogFilter": {
       "name": "inputChatlistDialogFilter",
+      "description": [
+        "Folder ID"
+      ],
       "fields": {
         "filter_id": {
           "name": "filter_id",
-          "description": " "
+          "description": "Folder¹ ID",
+          "links": [
+            "https://core.telegram.org/api/folders"
+          ]
         }
       }
     },
@@ -11417,7 +11489,7 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Extended media"
         },
         "flags": {
           "name": "flags",
@@ -14644,10 +14716,17 @@
     },
     "messageActionSetSameChatWallPaper": {
       "name": "messageActionSetSameChatWallPaper",
+      "description": [
+        "The user applied a wallpaper »¹ previously sent by the other user in a messageActionSetChatWallPaper² message."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers",
+        "https://core.telegram.org/constructor/messageActionSetChatWallPaper"
+      ],
       "fields": {
         "wallpaper": {
           "name": "wallpaper",
-          "description": "New wallpaper¹",
+          "description": "The wallpaper¹",
           "links": [
             "https://core.telegram.org/api/wallpapers"
           ]
@@ -15289,15 +15368,21 @@
     },
     "messageExtendedMedia": {
       "name": "messageExtendedMedia",
+      "description": [
+        "Extended media"
+      ],
       "fields": {
         "media": {
           "name": "media",
-          "description": " "
+          "description": "Media"
         }
       }
     },
     "messageExtendedMediaPreview": {
       "name": "messageExtendedMediaPreview",
+      "description": [
+        "Extended media preview"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -15308,19 +15393,19 @@
         },
         "h": {
           "name": "h",
-          "description": " "
+          "description": "Height"
         },
         "thumb": {
           "name": "thumb",
-          "description": " "
+          "description": "Thumbnail"
         },
         "video_duration": {
           "name": "video_duration",
-          "description": " "
+          "description": "Video duration"
         },
         "w": {
           "name": "w",
-          "description": " "
+          "description": "Width"
         }
       }
     },
@@ -15568,7 +15653,7 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Extended media"
         },
         "flags": {
           "name": "flags",
@@ -23274,7 +23359,10 @@
         },
         "via_chatlist": {
           "name": "via_chatlist",
-          "description": " "
+          "description": "Whether the participant joined using a chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       }
     },
@@ -24224,18 +24312,21 @@
     },
     "updateMessageExtendedMedia": {
       "name": "updateMessageExtendedMedia",
+      "description": [
+        "Extended media update"
+      ],
       "fields": {
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Extended media"
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer"
         }
       }
     },
@@ -27749,7 +27840,13 @@
       ]
     },
     "ExportedChatlistInvite": {
-      "name": "ExportedChatlistInvite"
+      "name": "ExportedChatlistInvite",
+      "description": [
+        "An exported chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ]
     },
     "ExportedContactToken": {
       "name": "ExportedContactToken",
@@ -27962,7 +28059,10 @@
       ]
     },
     "InputChatlist": {
-      "name": "InputChatlist"
+      "name": "InputChatlist",
+      "description": [
+        "Represents a folder"
+      ]
     },
     "InputCheckPasswordSRP": {
       "name": "InputCheckPasswordSRP",
@@ -28285,7 +28385,10 @@
       ]
     },
     "MessageExtendedMedia": {
-      "name": "MessageExtendedMedia"
+      "name": "MessageExtendedMedia",
+      "description": [
+        "Extended media"
+      ]
     },
     "MessageFwdHeader": {
       "name": "MessageFwdHeader",
@@ -29338,7 +29441,10 @@
       ]
     },
     "bots.BotInfo": {
-      "name": "bots.BotInfo"
+      "name": "bots.BotInfo",
+      "description": [
+        "Localized name, about text and description of a bot."
+      ]
     },
     "bytes": {
       "name": "bytes",
@@ -29362,16 +29468,40 @@
       ]
     },
     "chatlists.ChatlistInvite": {
-      "name": "chatlists.ChatlistInvite"
+      "name": "chatlists.ChatlistInvite",
+      "description": [
+        "Info about a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ]
     },
     "chatlists.ChatlistUpdates": {
-      "name": "chatlists.ChatlistUpdates"
+      "name": "chatlists.ChatlistUpdates",
+      "description": [
+        "Updated info about a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ]
     },
     "chatlists.ExportedChatlistInvite": {
-      "name": "chatlists.ExportedChatlistInvite"
+      "name": "chatlists.ExportedChatlistInvite",
+      "description": [
+        "Exported chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ]
     },
     "chatlists.ExportedInvites": {
-      "name": "chatlists.ExportedInvites"
+      "name": "chatlists.ExportedInvites",
+      "description": [
+        "A list of exported chat folder deep links »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ]
     },
     "contacts.Blocked": {
       "name": "contacts.Blocked",
@@ -31360,6 +31490,11 @@
         },
         {
           "code": 400,
+          "type": "EMAIL_NOT_SETUP",
+          "description": "In order to change the login email with emailVerifyPurposeLoginChange, an existing login email must already be set using emailVerifyPurposeLoginSetup."
+        },
+        {
+          "code": 400,
           "type": "PHONE_HASH_EXPIRED",
           "description": "An invalid or expired phone_code_hash was provided."
         },
@@ -31974,7 +32109,10 @@
         },
         "for_chat": {
           "name": "for_chat",
-          "description": " "
+          "description": "Set this flag when uploading wallpapers to be passed to messages.setChatWallPaper¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.setChatWallPaper"
+          ]
         },
         "mime_type": {
           "name": "mime_type",
@@ -32682,14 +32820,23 @@
     },
     "auth.resetLoginEmail": {
       "name": "auth.resetLoginEmail",
+      "description": [
+        "Reset the login email »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#email-verification"
+      ],
       "parameters": {
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "Phone code hash, obtained as described in the documentation »¹",
+          "links": [
+            "https://core.telegram.org/api/auth"
+          ]
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Phone number of the account"
         }
       },
       "errors": [
@@ -32697,6 +32844,11 @@
           "code": 400,
           "type": "PHONE_NUMBER_INVALID",
           "description": "The phone number is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TASK_ALREADY_EXISTS",
+          "description": "An email reset was already requested."
         }
       ]
     },
@@ -35956,10 +36108,19 @@
     },
     "chatlists.checkChatlistInvite": {
       "name": "chatlists.checkChatlistInvite",
+      "description": [
+        "Obtain information about a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "slug obtained from the chat folder deep link »¹",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       },
       "errors": [
@@ -35973,14 +36134,23 @@
     },
     "chatlists.deleteExportedInvite": {
       "name": "chatlists.deleteExportedInvite",
+      "description": [
+        "Delete a previously created chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "The related folder"
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "slug obtained from the chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       },
       "errors": [
@@ -35994,10 +36164,16 @@
     },
     "chatlists.editExportedInvite": {
       "name": "chatlists.editExportedInvite",
+      "description": [
+        "Edit a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "Folder ID"
         },
         "flags": {
           "name": "flags",
@@ -36008,15 +36184,18 @@
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "If set, changes the list of peers shared with the link"
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "slug obtained from the chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "If set, sets a new name for the link"
         }
       },
       "errors": [
@@ -36030,18 +36209,28 @@
     },
     "chatlists.exportChatlistInvite": {
       "name": "chatlists.exportChatlistInvite",
+      "description": [
+        "Export a folder »¹, creating a chat folder deep link »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/folders",
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "The folder to export"
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "The list of channels, group and supergroups to share with the link. Basic groups will automatically be converted to supergroups¹ when invoking the method.",
+          "links": [
+            "https://core.telegram.org/api/channel#migration"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "An optional name for the link"
         }
       },
       "errors": [
@@ -36049,25 +36238,48 @@
           "code": 400,
           "type": "FILTER_ID_INVALID",
           "description": "The specified filter ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
+        },
+        {
+          "code": 400,
+          "type": "PEERS_LIST_EMPTY",
+          "description": "The specified list of peers is empty."
         }
       ]
     },
     "chatlists.getChatlistUpdates": {
       "name": "chatlists.getChatlistUpdates",
+      "description": [
+        "Fetch new chats associated with an imported chat folder deep link »¹. Must be invoked at most every chatlist_update_period seconds (as per the related client configuration parameter »²)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links",
+        "https://core.telegram.org/api/config#chatlist-update-period"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "The folder"
         }
       },
       "bot_can_use": true
     },
     "chatlists.getExportedInvites": {
       "name": "chatlists.getExportedInvites",
+      "description": [
+        "List all chat folder deep links »¹ associated to a folder"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "The folder"
         }
       },
       "bot_can_use": true
@@ -36084,24 +36296,43 @@
     },
     "chatlists.hideChatlistUpdates": {
       "name": "chatlists.hideChatlistUpdates",
+      "description": [
+        "Dismiss new pending peers recently added to a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "The folder"
         }
       },
       "bot_can_use": true
     },
     "chatlists.joinChatlistInvite": {
       "name": "chatlists.joinChatlistInvite",
+      "description": [
+        "Import a chat folder deep link »¹, joining some or all the chats in the folder."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "List of new chats to join, fetched using chatlists.checkChatlistInvite¹ and filtered as specified in the documentation »².",
+          "links": [
+            "https://core.telegram.org/method/chatlists.checkChatlistInvite",
+            "https://core.telegram.org/api/folders#sharing-folders"
+          ]
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "slug obtained from a chat folder deep link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         }
       },
       "errors": [
@@ -36115,14 +36346,24 @@
     },
     "chatlists.joinChatlistUpdates": {
       "name": "chatlists.joinChatlistUpdates",
+      "description": [
+        "Join channels and supergroups recently added to a chat folder deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "The folder"
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "List of new chats to join, fetched using chatlists.getChatlistUpdates¹ and filtered as specified in the documentation »².",
+          "links": [
+            "https://core.telegram.org/method/chatlists.getChatlistUpdates",
+            "https://core.telegram.org/api/folders#sharing-folders"
+          ]
         }
       },
       "bot_can_use": true
@@ -40109,14 +40350,17 @@
     },
     "messages.getExtendedMedia": {
       "name": "messages.getExtendedMedia",
+      "description": [
+        "Get information about extended media"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Message IDs"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer"
         }
       }
     },
@@ -45082,6 +45326,12 @@
     },
     "messages.setChatWallPaper": {
       "name": "messages.setChatWallPaper",
+      "description": [
+        "Set a custom wallpaper »¹ in a specific private chat with another user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -45092,19 +45342,31 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "If the wallpaper was obtained from a messageActionSetChatWallPaper¹ service message, must contain the ID of that message.",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionSetChatWallPaper"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The private chat where the wallpaper will be set"
         },
         "settings": {
           "name": "settings",
-          "description": " "
+          "description": "Wallpaper settings, obtained as described in the wallpaper documentation »¹ or from messageActionSetChatWallPaper².wallpaper.settings.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers#uploading-wallpapers",
+            "https://core.telegram.org/constructor/messageActionSetChatWallPaper"
+          ]
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": " "
+          "description": "The wallpaper »¹, obtained as described in the wallpaper documentation »² or from a messageActionSetChatWallPaper³ service message.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers",
+            "https://core.telegram.org/api/wallpapers#uploading-wallpapers",
+            "https://core.telegram.org/constructor/messageActionSetChatWallPaper"
+          ]
         }
       },
       "errors": [
@@ -45112,6 +45374,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "WALLPAPER_INVALID",
+          "description": "The specified wallpaper is invalid."
         }
       ],
       "bot_can_use": true
@@ -47802,7 +48069,8 @@
           "type": "PHOTO_ID_INVALID",
           "description": "Photo ID invalid."
         }
-      ]
+      ],
+      "bot_can_use": true
     },
     "photos.uploadContactProfilePhoto": {
       "name": "photos.uploadContactProfilePhoto",
@@ -47972,7 +48240,8 @@
           "type": "VIDEO_FILE_INVALID",
           "description": "The specified video file is invalid."
         }
-      ]
+      ],
+      "bot_can_use": true
     },
     "stats.getBroadcastStats": {
       "name": "stats.getBroadcastStats",
@@ -49946,6 +50215,11 @@
       "type": "EMAIL_INVALID",
       "description": "The specified email is invalid."
     },
+    "EMAIL_NOT_SETUP": {
+      "code": 400,
+      "type": "EMAIL_NOT_SETUP",
+      "description": "In order to change the login email with emailVerifyPurposeLoginChange, an existing login email must already be set using emailVerifyPurposeLoginSetup."
+    },
     "EMAIL_UNCONFIRMED": {
       "code": 400,
       "type": "EMAIL_UNCONFIRMED",
@@ -50666,6 +50940,11 @@
       "type": "PAYMENT_UNSUPPORTED",
       "description": "A detailed description of the error will be received separately as described here »."
     },
+    "PEERS_LIST_EMPTY": {
+      "code": 400,
+      "type": "PEERS_LIST_EMPTY",
+      "description": "The specified list of peers is empty."
+    },
     "PEER_HISTORY_EMPTY": {
       "code": 400,
       "type": "PEER_HISTORY_EMPTY",
@@ -51300,6 +51579,11 @@
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
       "description": "A takeout session has to be initialized, first."
+    },
+    "TASK_ALREADY_EXISTS": {
+      "code": 400,
+      "type": "TASK_ALREADY_EXISTS",
+      "description": "An email reset was already requested."
     },
     "TEMP_AUTH_KEY_ALREADY_BOUND": {
       "code": 400,
