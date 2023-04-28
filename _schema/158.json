@@ -3228,11 +3228,14 @@
         },
         "reset_available_period": {
           "name": "reset_available_period",
-          "description": " "
+          "description": "The login email can be reset by invoking auth.resetLoginEmail¹ and waiting for the specified amount of seconds.",
+          "links": [
+            "https://core.telegram.org/method/auth.resetLoginEmail"
+          ]
         },
         "reset_pending_date": {
           "name": "reset_pending_date",
-          "description": " "
+          "description": "An email reset was already requested, and will occur at the specified date."
         }
       }
     },
@@ -6947,7 +6950,7 @@
         },
         "emoticon": {
           "name": "emoticon",
-          "description": " "
+          "description": "Emoji to use as icon for the folder."
         },
         "flags": {
           "name": "flags",
@@ -7783,10 +7786,7 @@
         },
         "emoticon": {
           "name": "emoticon",
-          "description": "Folder¹ emoticon",
-          "links": [
-            "https://core.telegram.org/api/folders"
-          ]
+          "description": "Emoji to use as icon for the folder."
         },
         "exclude_archived": {
           "name": "exclude_archived",
@@ -7878,7 +7878,7 @@
       "fields": {
         "emoticon": {
           "name": "emoticon",
-          "description": " "
+          "description": "Emoji to use as icon for the folder."
         },
         "flags": {
           "name": "flags",
@@ -7889,7 +7889,10 @@
         },
         "has_my_invites": {
           "name": "has_my_invites",
-          "description": " "
+          "description": "Whether the current user has created some chat folder deep links »¹ to share the folder as well.",
+          "links": [
+            "https://core.telegram.org/api/links#chat-folder-links"
+          ]
         },
         "id": {
           "name": "id",
@@ -7897,11 +7900,14 @@
         },
         "include_peers": {
           "name": "include_peers",
-          "description": " "
+          "description": "Chats to include in the folder"
         },
         "pinned_peers": {
           "name": "pinned_peers",
-          "description": " "
+          "description": "Pinned chats, folders¹ can have unlimited pinned chats",
+          "links": [
+            "https://core.telegram.org/api/folders"
+          ]
         },
         "title": {
           "name": "title",
@@ -15815,6 +15821,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "my": {
+          "name": "my",
+          "description": " "
         },
         "peer_id": {
           "name": "peer_id",
@@ -32775,6 +32785,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "PHONE_CODE_EMPTY",
+          "description": "phone_code is missing."
+        },
+        {
+          "code": 400,
           "type": "PHONE_CODE_EXPIRED",
           "description": "The phone code you provided has expired."
         },
@@ -36246,6 +36261,11 @@
         },
         {
           "code": 400,
+          "type": "INVITES_TOO_MUCH",
+          "description": "The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium client configuration parameters » was reached."
+        },
+        {
+          "code": 400,
           "type": "PEERS_LIST_EMPTY",
           "description": "The specified list of peers is empty."
         }
@@ -36286,10 +36306,16 @@
     },
     "chatlists.getLeaveChatlistSuggestions": {
       "name": "chatlists.getLeaveChatlistSuggestions",
+      "description": [
+        "Returns identifiers of pinned or always included chats from a chat folder imported using a chat folder deep link »¹, which are suggested to be left when the chat folder is deleted."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "Folder ID"
         }
       },
       "bot_can_use": true
@@ -36324,7 +36350,7 @@
           "description": "List of new chats to join, fetched using chatlists.checkChatlistInvite¹ and filtered as specified in the documentation »².",
           "links": [
             "https://core.telegram.org/method/chatlists.checkChatlistInvite",
-            "https://core.telegram.org/api/folders#sharing-folders"
+            "https://core.telegram.org/api/folders#shared-folders"
           ]
         },
         "slug": {
@@ -36362,7 +36388,7 @@
           "description": "List of new chats to join, fetched using chatlists.getChatlistUpdates¹ and filtered as specified in the documentation »².",
           "links": [
             "https://core.telegram.org/method/chatlists.getChatlistUpdates",
-            "https://core.telegram.org/api/folders#sharing-folders"
+            "https://core.telegram.org/api/folders#shared-folders"
           ]
         }
       },
@@ -36370,14 +36396,20 @@
     },
     "chatlists.leaveChatlist": {
       "name": "chatlists.leaveChatlist",
+      "description": [
+        "Delete a folder imported using a chat folder deep link »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#chat-folder-links"
+      ],
       "parameters": {
         "chatlist": {
           "name": "chatlist",
-          "description": " "
+          "description": "Folder ID"
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "Also leave the specified channels and groups"
         }
       },
       "bot_can_use": true
@@ -39314,6 +39346,11 @@
           "code": 403,
           "type": "CHAT_SEND_VIDEOS_FORBIDDEN",
           "description": "You can't send videos in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_VOICES_FORBIDDEN",
+          "description": "You can't send voice recordings in this chat."
         },
         {
           "code": 403,
@@ -50594,6 +50631,11 @@
       "code": 400,
       "type": "INPUT_USER_DEACTIVATED",
       "description": "The specified user was deleted."
+    },
+    "INVITES_TOO_MUCH": {
+      "code": 400,
+      "type": "INVITES_TOO_MUCH",
+      "description": "The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium client configuration parameters » was reached."
     },
     "INVITE_FORBIDDEN_WITH_JOINAS": {
       "code": 400,
