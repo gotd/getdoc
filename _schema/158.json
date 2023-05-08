@@ -37356,7 +37356,7 @@
     "help.getUserInfo": {
       "name": "help.getUserInfo",
       "description": [
-        "Internal use"
+        "Can only be used by TSF members to obtain internal information."
       ],
       "parameters": {
         "user_id": {
@@ -44889,7 +44889,7 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": "Reaction (a UTF8 emoji)"
+          "description": "A list of reactions"
         }
       },
       "errors": [
