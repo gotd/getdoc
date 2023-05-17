@@ -3228,9 +3228,10 @@
         },
         "reset_available_period": {
           "name": "reset_available_period",
-          "description": "The login email can be reset by invoking auth.resetLoginEmail¹ and waiting for the specified amount of seconds.",
+          "description": "Clients should wait for the specified amount of seconds before allowing the user to invoke auth.resetLoginEmail¹ (will be 0 for Premium² users).",
           "links": [
-            "https://core.telegram.org/method/auth.resetLoginEmail"
+            "https://core.telegram.org/method/auth.resetLoginEmail",
+            "https://core.telegram.org/api/premium"
           ]
         },
         "reset_pending_date": {
@@ -15824,7 +15825,11 @@
         },
         "my": {
           "name": "my",
-          "description": " "
+          "description": "Starting from layer 159, messages.sendReaction¹ will send reactions from the peer (user or channel) specified using messages.saveDefaultSendAs². If set, this flag indicates that this reaction was sent by us, even if the peer doesn't point to the current account.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendReaction",
+            "https://core.telegram.org/method/messages.saveDefaultSendAs"
+          ]
         },
         "peer_id": {
           "name": "peer_id",
@@ -44858,7 +44863,11 @@
     "messages.sendReaction": {
       "name": "messages.sendReaction",
       "description": [
-        "React to message"
+        "React to message.",
+        "Starting from layer 159, the reaction will be sent from the peer specified using messages.saveDefaultSendAs¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.saveDefaultSendAs"
       ],
       "parameters": {
         "add_to_recent": {
