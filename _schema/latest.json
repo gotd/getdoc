@@ -15274,12 +15274,14 @@
     "messageEntityTextUrl": {
       "name": "messageEntityTextUrl",
       "description": [
-        "Message entity representing a text url¹: for in-text urls like https://google.com² use messageEntityUrl³."
+        "Message entity representing a text url¹: for in-text urls like https://google.com² use messageEntityUrl³.",
+        "Note that an additional confirmation popup with the full URL must be displayed to the user before opening this link, unless the domain is one of the whitelisted domains specified in the whitelisted_domains client configuration parameter »¹."
       ],
       "links": [
         "https://google.com",
         "https://google.com",
-        "https://core.telegram.org/constructor/messageEntityUrl"
+        "https://core.telegram.org/constructor/messageEntityUrl",
+        "https://core.telegram.org/api/config#whitelisted-domains"
       ],
       "fields": {
         "length": {
@@ -36038,7 +36040,7 @@
     "channels.updateUsername": {
       "name": "channels.updateUsername",
       "description": [
-        "Change the username of a supergroup/channel"
+        "Change or remove the username of a supergroup/channel"
       ],
       "parameters": {
         "channel": {
@@ -36047,7 +36049,7 @@
         },
         "username": {
           "name": "username",
-          "description": "New username"
+          "description": "New username, pass an empty string to remove the username"
         }
       },
       "errors": [
@@ -45407,7 +45409,7 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": "The wallpaper »¹, obtained as described in the wallpaper documentation »² or from a messageActionSetChatWallPaper³ service message.",
+          "description": "The wallpaper »¹, obtained as described in the wallpaper documentation »²; must not be provided when installing a wallpaper obtained from a messageActionSetChatWallPaper³ service message (id must be provided, instead).",
           "links": [
             "https://core.telegram.org/api/wallpapers",
             "https://core.telegram.org/api/wallpapers#uploading-wallpapers",
