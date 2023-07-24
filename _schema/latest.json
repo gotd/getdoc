@@ -32954,6 +32954,10 @@
           "code": 400,
           "type": "SMS_CODE_CREATE_FAILED",
           "description": "An error occurred while creating the SMS code."
+        },
+        {
+          "code": 400,
+          "type": "Sorry, too many invalid attempts to enter your password. Please try again later."
         }
       ]
     },
@@ -33689,6 +33693,10 @@
           "description": "You have joined too many channels/supergroups."
         },
         {
+          "code": 500,
+          "type": "CHANNEL_ID_GENERATE_FAILED"
+        },
+        {
           "code": 400,
           "type": "CHAT_ABOUT_TOO_LONG",
           "description": "Chat about too long."
@@ -33697,6 +33705,11 @@
           "code": 400,
           "type": "CHAT_TITLE_EMPTY",
           "description": "No chat title provided."
+        },
+        {
+          "code": 400,
+          "type": "TTL_PERIOD_INVALID",
+          "description": "The specified TTL period is invalid."
         },
         {
           "code": 406,
@@ -33760,6 +33773,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
         }
       ],
       "bot_can_use": true
@@ -33818,7 +33836,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 403,
@@ -33998,6 +34016,18 @@
           "description": "Topic ID"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_ID_INVALID",
+          "description": "The specified topic ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.editAdmin": {
@@ -34266,6 +34296,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -34394,7 +34429,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -34440,7 +34475,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 403,
@@ -34471,6 +34506,11 @@
           "code": 400,
           "type": "PHOTO_INVALID",
           "description": "Photo invalid."
+        },
+        {
+          "code": 400,
+          "type": "STICKER_MIME_INVALID",
+          "description": "The specified sticker MIME type is invalid."
         }
       ],
       "bot_can_use": true
@@ -34512,7 +34552,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -34813,8 +34853,7 @@
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getForumTopicsByID": {
       "name": "channels.getForumTopicsByID",
@@ -34831,6 +34870,22 @@
           "description": "Topic IDs"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_FORUM_MISSING",
+          "description": "This supergroup is not a forum."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TOPICS_EMPTY"
+        }
+      ],
       "bot_can_use": true
     },
     "channels.getFullChannel": {
@@ -34873,7 +34928,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -35312,6 +35367,10 @@
           "code": 400,
           "type": "INVITE_REQUEST_SENT",
           "description": "You have successfully requested to join this chat or channel."
+        },
+        {
+          "code": 500,
+          "type": "MEMBER_CHAT_ADD_FAILED"
         },
         {
           "code": 400,
@@ -35770,7 +35829,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -35888,7 +35947,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
       ]
     },
@@ -35926,7 +35985,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
       ]
     },
@@ -35962,7 +36021,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -35998,6 +36057,16 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
         {
           "code": 400,
           "type": "USERNAMES_ACTIVE_TOO_MUCH",
@@ -36077,7 +36146,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 403,
@@ -36126,6 +36195,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
         }
       ]
     },
@@ -36294,6 +36368,12 @@
           "description": "The folder"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "INPUT_CHATLIST_INVALID"
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.getExportedInvites": {
@@ -37034,6 +37114,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
         {
           "code": 400,
           "type": "CHAT_ID_INVALID",
@@ -37961,6 +38046,10 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
+          "code": 500,
+          "type": "CHAT_MEMBERS_CHANNEL"
+        },
+        {
           "code": 400,
           "type": "INVITE_HASH_EMPTY",
           "description": "The invite hash is empty."
@@ -38540,7 +38629,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 403,
@@ -38631,8 +38720,13 @@
         },
         {
           "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 403,
@@ -38676,7 +38770,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -38725,7 +38819,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -38783,6 +38877,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
         {
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
@@ -39005,6 +39104,11 @@
           "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
+          "code": 400,
+          "type": "IMAGE_PROCESS_FAILED",
+          "description": "Failure while processing image."
+        },
+        {
           "code": 403,
           "type": "INLINE_BOT_REQUIRED",
           "description": "Only the inline bot can edit message."
@@ -39038,6 +39142,11 @@
           "code": 400,
           "type": "MEDIA_PREV_INVALID",
           "description": "Previous media invalid."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_TTL_INVALID",
+          "description": "The specified media TTL is invalid."
         },
         {
           "code": 403,
@@ -39299,6 +39408,11 @@
           "code": 406,
           "type": "CHAT_FORWARDS_RESTRICTED",
           "description": "You can't forward messages from a protected chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_GUEST_SEND_FORBIDDEN",
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -39671,8 +39785,7 @@
           "type": "BOT_APP_INVALID",
           "description": "The specified bot app is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getBotCallbackAnswer": {
       "name": "messages.getBotCallbackAnswer",
@@ -39808,6 +39921,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "CHANNEL_PRIVATE",
@@ -41329,6 +41447,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_ID_INVALID",
+          "description": "The specified topic ID is invalid."
         }
       ]
     },
@@ -41865,6 +41988,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNELS_TOO_MUCH",
+          "description": "You have joined too many channels/supergroups."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -41938,8 +42066,23 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNELS_TOO_MUCH",
+          "description": "You have joined too many channels/supergroups."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
         },
         {
           "code": 400,
@@ -41950,6 +42093,11 @@
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         },
         {
           "code": 400,
@@ -42531,7 +42679,7 @@
           "description": "The specified max_qts is invalid."
         },
         {
-          "code": 400,
+          "code": 500,
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error."
         }
@@ -42630,6 +42778,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -42680,7 +42833,19 @@
           "name": "reaction_peer",
           "description": "Peer that sent the reaction"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
+        }
+      ]
     },
     "messages.reportSpam": {
       "name": "messages.reportSpam",
@@ -42770,8 +42935,7 @@
             "https://core.telegram.org/api/links#named-bot-web-app-links"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.requestEncryption": {
       "name": "messages.requestEncryption",
@@ -43658,7 +43822,7 @@
           "description": "The provided secret chat ID is invalid."
         },
         {
-          "code": 400,
+          "code": 500,
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error."
         },
@@ -44542,6 +44706,11 @@
         },
         {
           "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
+        },
+        {
+          "code": 400,
           "type": "ENCRYPTION_DECLINED",
           "description": "The secret chat was declined."
         },
@@ -44584,6 +44753,11 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "MSG_WAIT_FAILED",
+          "description": "A waiting call returned an error."
         },
         {
           "code": 406,
@@ -44784,6 +44958,16 @@
           "code": 403,
           "type": "CHAT_SEND_MEDIA_FORBIDDEN",
           "description": "You can't send media in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_PHOTOS_FORBIDDEN",
+          "description": "You can't send photos in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_VIDEOS_FORBIDDEN",
+          "description": "You can't send videos in this chat."
         },
         {
           "code": 403,
@@ -45328,7 +45512,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -45580,7 +45764,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -46183,7 +46367,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 400,
@@ -46395,7 +46579,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
       ],
       "bot_can_use": true
@@ -46432,6 +46616,10 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHATLIST_EXCLUDE_INVALID"
+        },
         {
           "code": 400,
           "type": "CHAT_ID_INVALID",
@@ -46525,7 +46713,7 @@
         {
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
-          "description": "The pinned message wasn't modified."
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
         {
           "code": 403,
@@ -46600,7 +46788,14 @@
           "name": "peer",
           "description": "The Telegram chat where the media will be imported"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        }
+      ]
     },
     "messages.uploadMedia": {
       "name": "messages.uploadMedia",
@@ -46659,6 +46854,10 @@
           "code": 400,
           "type": "FILE_PARTS_INVALID",
           "description": "The number of file parts is invalid."
+        },
+        {
+          "code": 500,
+          "type": "FILE_WRITE_EMPTY"
         },
         {
           "code": 400,
@@ -47345,7 +47544,7 @@
         "Get an invite link¹ for a group call or livestream"
       ],
       "links": [
-        "https://core.telegram.org/api/links#video-chatlivestream-links"
+        "https://core.telegram.org/api/links#video-chat-livestream-links"
       ],
       "parameters": {
         "call": {
@@ -47397,6 +47596,11 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "GROUPCALL_FORBIDDEN",
+          "description": "The group call has already ended."
+        },
         {
           "code": 400,
           "type": "GROUPCALL_INVALID",
@@ -47572,7 +47776,7 @@
           "name": "invite_hash",
           "description": "The invitation hash from the invite link »¹, if provided allows speaking in a livestream or muted group chat.",
           "links": [
-            "https://core.telegram.org/api/links#video-chatlivestream-links"
+            "https://core.telegram.org/api/links#video-chat-livestream-links"
           ]
         },
         "join_as": {
@@ -48092,6 +48296,10 @@
           "code": 400,
           "type": "FILE_PARTS_INVALID",
           "description": "The number of file parts is invalid."
+        },
+        {
+          "code": 500,
+          "type": "FILE_WRITE_EMPTY"
         },
         {
           "code": 400,
@@ -49583,6 +49791,15 @@
         },
         {
           "code": 400,
+          "type": "USERNAME_OCCUPIED",
+          "description": "The provided username is already occupied."
+        },
+        {
+          "code": 500,
+          "type": "USERNAME_UNSYNCHRONIZED"
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -49959,6 +50176,10 @@
       "type": "CHANNEL_FORUM_MISSING",
       "description": "This supergroup is not a forum."
     },
+    "CHANNEL_ID_GENERATE_FAILED": {
+      "code": 500,
+      "type": "CHANNEL_ID_GENERATE_FAILED"
+    },
     "CHANNEL_ID_INVALID": {
       "code": 400,
       "type": "CHANNEL_ID_INVALID",
@@ -49993,6 +50214,10 @@
       "code": 406,
       "type": "CHANNEL_TOO_LARGE",
       "description": "Channel is too large to be deleted; this error is issued when trying to delete channels with more than 1000 members (subject to change)."
+    },
+    "CHATLIST_EXCLUDE_INVALID": {
+      "code": 400,
+      "type": "CHATLIST_EXCLUDE_INVALID"
     },
     "CHAT_ABOUT_NOT_MODIFIED": {
       "code": 400,
@@ -50059,10 +50284,14 @@
       "type": "CHAT_LINK_EXISTS",
       "description": "The chat is public, you can't hide the history to new users."
     },
+    "CHAT_MEMBERS_CHANNEL": {
+      "code": 500,
+      "type": "CHAT_MEMBERS_CHANNEL"
+    },
     "CHAT_NOT_MODIFIED": {
       "code": 400,
       "type": "CHAT_NOT_MODIFIED",
-      "description": "The pinned message wasn't modified."
+      "description": "No changes were made to chat information because the new information you passed is identical to the current information."
     },
     "CHAT_PUBLIC_REQUIRED": {
       "code": 400,
@@ -50454,6 +50683,10 @@
       "type": "FILE_TOKEN_INVALID",
       "description": "The specified file token is invalid."
     },
+    "FILE_WRITE_EMPTY": {
+      "code": 500,
+      "type": "FILE_WRITE_EMPTY"
+    },
     "FILTER_ID_INVALID": {
       "code": 400,
       "type": "FILTER_ID_INVALID",
@@ -50629,6 +50862,10 @@
       "type": "INLINE_RESULT_EXPIRED",
       "description": "The inline query expired."
     },
+    "INPUT_CHATLIST_INVALID": {
+      "code": 400,
+      "type": "INPUT_CHATLIST_INVALID"
+    },
     "INPUT_FILTER_INVALID": {
       "code": 400,
       "type": "INPUT_FILTER_INVALID",
@@ -50779,6 +51016,11 @@
       "type": "MEDIA_PREV_INVALID",
       "description": "Previous media invalid."
     },
+    "MEDIA_TTL_INVALID": {
+      "code": 400,
+      "type": "MEDIA_TTL_INVALID",
+      "description": "The specified media TTL is invalid."
+    },
     "MEGAGROUP_ID_INVALID": {
       "code": 400,
       "type": "MEGAGROUP_ID_INVALID",
@@ -50793,6 +51035,10 @@
       "code": 400,
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
+    },
+    "MEMBER_CHAT_ADD_FAILED": {
+      "code": 500,
+      "type": "MEMBER_CHAT_ADD_FAILED"
     },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
@@ -50860,7 +51106,7 @@
       "description": "chat_read_mark_expire_period seconds have passed since the message was sent, read receipts were deleted."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -51624,6 +51870,10 @@
       "type": "SWITCH_PM_TEXT_EMPTY",
       "description": "The switch_pm.text field was empty."
     },
+    "Sorry, too many invalid attempts to enter your password. Please try again later.": {
+      "code": 400,
+      "type": "Sorry, too many invalid attempts to enter your password. Please try again later."
+    },
     "TAKEOUT_INIT_DELAY_%d": {
       "code": 420,
       "type": "TAKEOUT_INIT_DELAY_%d",
@@ -51698,6 +51948,10 @@
       "code": 400,
       "type": "TOKEN_TYPE_INVALID",
       "description": "The specified token type is invalid."
+    },
+    "TOPICS_EMPTY": {
+      "code": 400,
+      "type": "TOPICS_EMPTY"
     },
     "TOPIC_CLOSED": {
       "code": 406,
@@ -51798,6 +52052,10 @@
       "code": 400,
       "type": "USERNAME_PURCHASE_AVAILABLE",
       "description": "The specified username can be purchased on https://fragment.com."
+    },
+    "USERNAME_UNSYNCHRONIZED": {
+      "code": 500,
+      "type": "USERNAME_UNSYNCHRONIZED"
     },
     "USERPIC_PRIVACY_REQUIRED": {
       "code": 406,
