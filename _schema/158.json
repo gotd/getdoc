@@ -40136,7 +40136,7 @@
         },
         "offset_id": {
           "name": "offset_id",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹ (top_message ID used for pagination)",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
@@ -49737,7 +49737,7 @@
       "parameters": {
         "bytes": {
           "name": "bytes",
-          "description": "Binary data, contend of a part"
+          "description": "Binary data, content of a part"
         },
         "file_id": {
           "name": "file_id",
