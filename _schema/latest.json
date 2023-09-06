@@ -31657,11 +31657,11 @@
       "parameters": {
         "key": {
           "name": "key",
-          "description": "Peers to which the privacy rules apply"
+          "description": "New privacy rule"
         },
         "rules": {
           "name": "rules",
-          "description": "New privacy rules"
+          "description": "Peers to which the privacy rule will apply."
         }
       },
       "errors": [
