@@ -14799,7 +14799,7 @@
       "fields": {
         "closed": {
           "name": "closed",
-          "description": "Whether the topic was closed."
+          "description": "Whether the topic was opened or closed."
         },
         "flags": {
           "name": "flags",
@@ -14810,18 +14810,18 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": "Whether the topic was hidden (only valid for the \"General\" topic, id=1)."
+          "description": "Whether the topic was hidden or unhidden (only valid for the \"General\" topic, id=1)."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": "ID of the custom emoji¹ used as topic icon.",
+          "description": "ID of the new custom emoji¹ used as topic icon, or if it was removed.",
           "links": [
             "https://core.telegram.org/api/custom-emoji"
           ]
         },
         "title": {
           "name": "title",
-          "description": "Topic title."
+          "description": "New topic title."
         }
       }
     },
