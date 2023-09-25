@@ -2165,9 +2165,6 @@
         }
       }
     },
-    "Page not found": {
-      "name": "Page not found"
-    },
     "Updates": {
       "name": "Updates",
       "description": [
@@ -2867,6 +2864,18 @@
         "short_name": {
           "name": "short_name",
           "description": "Attachment menu item name"
+        },
+        "show_in_attach_menu": {
+          "name": "show_in_attach_menu",
+          "description": " "
+        },
+        "show_in_side_menu": {
+          "name": "show_in_side_menu",
+          "description": " "
+        },
+        "side_menu_disclaimer_needed": {
+          "name": "side_menu_disclaimer_needed",
+          "description": " "
         }
       }
     },
@@ -3551,6 +3560,10 @@
         "system_version": {
           "name": "system_version",
           "description": "System version"
+        },
+        "unconfirmed": {
+          "name": "unconfirmed",
+          "description": " "
         }
       }
     },
@@ -3579,6 +3592,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "large_queue_active_operations_max": {
+          "name": "large_queue_active_operations_max",
+          "description": " "
+        },
         "phonecalls_less_data": {
           "name": "phonecalls_less_data",
           "description": "Whether to enable data saving mode in phone calls"
@@ -3586,6 +3603,14 @@
         "photo_size_max": {
           "name": "photo_size_max",
           "description": "Maximum size of photos to preload"
+        },
+        "small_queue_active_operations_max": {
+          "name": "small_queue_active_operations_max",
+          "description": " "
+        },
+        "stories_preload": {
+          "name": "stories_preload",
+          "description": " "
         },
         "video_preload_large": {
           "name": "video_preload_large",
@@ -3760,6 +3785,19 @@
       "description": [
         "The constructor can be interpreted as a booleantrue value."
       ]
+    },
+    "booster": {
+      "name": "booster",
+      "fields": {
+        "expires": {
+          "name": "expires",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      }
     },
     "botApp": {
       "name": "botApp",
@@ -4557,6 +4595,22 @@
         "slowmode_enabled": {
           "name": "slowmode_enabled",
           "description": "Whether slow mode is enabled for groups to prevent flood in chat"
+        },
+        "stories_hidden": {
+          "name": "stories_hidden",
+          "description": " "
+        },
+        "stories_hidden_min": {
+          "name": "stories_hidden_min",
+          "description": " "
+        },
+        "stories_max_id": {
+          "name": "stories_max_id",
+          "description": " "
+        },
+        "stories_unavailable": {
+          "name": "stories_unavailable",
+          "description": " "
         },
         "title": {
           "name": "title",
@@ -5681,6 +5735,14 @@
           "name": "stickerset",
           "description": "Associated stickerset"
         },
+        "stories": {
+          "name": "stories",
+          "description": " "
+        },
+        "stories_pinned_available": {
+          "name": "stories_pinned_available",
+          "description": " "
+        },
         "theme_emoticon": {
           "name": "theme_emoticon",
           "description": "Emoji representing a specific chat theme"
@@ -6245,12 +6307,20 @@
             "https://core.telegram.org/api/channel"
           ]
         },
+        "delete_stories": {
+          "name": "delete_stories",
+          "description": " "
+        },
         "edit_messages": {
           "name": "edit_messages",
           "description": "If set, allows the admin to also edit messages from other admins in the channel¹",
           "links": [
             "https://core.telegram.org/api/channel"
           ]
+        },
+        "edit_stories": {
+          "name": "edit_stories",
+          "description": " "
         },
         "flags": {
           "name": "flags",
@@ -6299,6 +6369,10 @@
           "links": [
             "https://core.telegram.org/api/channel"
           ]
+        },
+        "post_stories": {
+          "name": "post_stories",
+          "description": " "
         }
       }
     },
@@ -6652,6 +6726,10 @@
             "https://core.telegram.org/api/channel"
           ]
         },
+        "fake": {
+          "name": "fake",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -6692,9 +6770,17 @@
             "https://core.telegram.org/api/invites#join-requests"
           ]
         },
+        "scam": {
+          "name": "scam",
+          "description": " "
+        },
         "title": {
           "name": "title",
           "description": "Chat/supergroup/channel title"
+        },
+        "verified": {
+          "name": "verified",
+          "description": " "
         }
       }
     },
@@ -8340,6 +8426,14 @@
           "name": "h",
           "description": "Video height"
         },
+        "nosound": {
+          "name": "nosound",
+          "description": " "
+        },
+        "preload_prefix_size": {
+          "name": "preload_prefix_size",
+          "description": " "
+        },
         "round_message": {
           "name": "round_message",
           "description": "Whether this is a round video"
@@ -9006,6 +9100,15 @@
         }
       }
     },
+    "exportedStoryLink": {
+      "name": "exportedStoryLink",
+      "fields": {
+        "link": {
+          "name": "link",
+          "description": " "
+        }
+      }
+    },
     "folder": {
       "name": "folder",
       "description": [
@@ -9283,6 +9386,14 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "keep_archived_folders": {
+          "name": "keep_archived_folders",
+          "description": " "
+        },
+        "keep_archived_unmuted": {
+          "name": "keep_archived_unmuted",
+          "description": " "
         }
       }
     },
@@ -11407,6 +11518,23 @@
         }
       }
     },
+    "inputMediaAreaVenue": {
+      "name": "inputMediaAreaVenue",
+      "fields": {
+        "coordinates": {
+          "name": "coordinates",
+          "description": " "
+        },
+        "query_id": {
+          "name": "query_id",
+          "description": " "
+        },
+        "result_id": {
+          "name": "result_id",
+          "description": " "
+        }
+      }
+    },
     "inputMediaContact": {
       "name": "inputMediaContact",
       "description": [
@@ -11724,6 +11852,19 @@
           "links": [
             "https://core.telegram.org/api/entities"
           ]
+        }
+      }
+    },
+    "inputMediaStory": {
+      "name": "inputMediaStory",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
         }
       }
     },
@@ -12248,6 +12389,18 @@
         "sound": {
           "name": "sound",
           "description": "Name of an audio file for notification"
+        },
+        "stories_hide_sender": {
+          "name": "stories_hide_sender",
+          "description": " "
+        },
+        "stories_muted": {
+          "name": "stories_muted",
+          "description": " "
+        },
+        "stories_sound": {
+          "name": "stories_sound",
+          "description": " "
         }
       }
     },
@@ -12474,6 +12627,9 @@
         }
       }
     },
+    "inputPrivacyKeyAbout": {
+      "name": "inputPrivacyKeyAbout"
+    },
     "inputPrivacyKeyAddedByPhone": {
       "name": "inputPrivacyKeyAddedByPhone",
       "description": [
@@ -12549,6 +12705,9 @@
         }
       }
     },
+    "inputPrivacyValueAllowCloseFriends": {
+      "name": "inputPrivacyValueAllowCloseFriends"
+    },
     "inputPrivacyValueAllowContacts": {
       "name": "inputPrivacyValueAllowContacts",
       "description": [
@@ -12600,6 +12759,39 @@
         "users": {
           "name": "users",
           "description": "Users to disallow"
+        }
+      }
+    },
+    "inputReplyToMessage": {
+      "name": "inputReplyToMessage",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "reply_to_msg_id": {
+          "name": "reply_to_msg_id",
+          "description": " "
+        },
+        "top_msg_id": {
+          "name": "top_msg_id",
+          "description": " "
+        }
+      }
+    },
+    "inputReplyToStory": {
+      "name": "inputReplyToStory",
+      "fields": {
+        "story_id": {
+          "name": "story_id",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
         }
       }
     },
@@ -13452,10 +13644,6 @@
           "name": "recurring",
           "description": "Whether this is a recurring payment"
         },
-        "recurring_terms_url": {
-          "name": "recurring_terms_url",
-          "description": "Terms of service URL for the recurring payment"
-        },
         "shipping_address_requested": {
           "name": "shipping_address_requested",
           "description": "Set this flag if you require the user's shipping address to complete the order"
@@ -13463,6 +13651,10 @@
         "suggested_tip_amounts": {
           "name": "suggested_tip_amounts",
           "description": "A vector of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
+        },
+        "terms_url": {
+          "name": "terms_url",
+          "description": " "
         },
         "test": {
           "name": "test",
@@ -14072,6 +14264,105 @@
         }
       }
     },
+    "mediaAreaCoordinates": {
+      "name": "mediaAreaCoordinates",
+      "fields": {
+        "h": {
+          "name": "h",
+          "description": " "
+        },
+        "rotation": {
+          "name": "rotation",
+          "description": " "
+        },
+        "w": {
+          "name": "w",
+          "description": " "
+        },
+        "x": {
+          "name": "x",
+          "description": " "
+        },
+        "y": {
+          "name": "y",
+          "description": " "
+        }
+      }
+    },
+    "mediaAreaGeoPoint": {
+      "name": "mediaAreaGeoPoint",
+      "fields": {
+        "coordinates": {
+          "name": "coordinates",
+          "description": " "
+        },
+        "geo": {
+          "name": "geo",
+          "description": " "
+        }
+      }
+    },
+    "mediaAreaSuggestedReaction": {
+      "name": "mediaAreaSuggestedReaction",
+      "fields": {
+        "coordinates": {
+          "name": "coordinates",
+          "description": " "
+        },
+        "dark": {
+          "name": "dark",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "flipped": {
+          "name": "flipped",
+          "description": " "
+        },
+        "reaction": {
+          "name": "reaction",
+          "description": " "
+        }
+      }
+    },
+    "mediaAreaVenue": {
+      "name": "mediaAreaVenue",
+      "fields": {
+        "address": {
+          "name": "address",
+          "description": " "
+        },
+        "coordinates": {
+          "name": "coordinates",
+          "description": " "
+        },
+        "geo": {
+          "name": "geo",
+          "description": " "
+        },
+        "provider": {
+          "name": "provider",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        },
+        "venue_id": {
+          "name": "venue_id",
+          "description": " "
+        },
+        "venue_type": {
+          "name": "venue_type",
+          "description": " "
+        }
+      }
+    },
     "message": {
       "name": "message",
       "description": [
@@ -14263,6 +14554,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "from_request": {
+          "name": "from_request",
+          "description": " "
         }
       }
     },
@@ -15646,6 +15941,10 @@
         "Document (video, audio, voice, sticker, any media type except photo)"
       ],
       "fields": {
+        "alt_document": {
+          "name": "alt_document",
+          "description": " "
+        },
         "document": {
           "name": "document",
           "description": "Attached document"
@@ -15849,6 +16148,34 @@
         }
       }
     },
+    "messageMediaStory": {
+      "name": "messageMediaStory",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "story": {
+          "name": "story",
+          "description": " "
+        },
+        "via_mention": {
+          "name": "via_mention",
+          "description": " "
+        }
+      }
+    },
     "messageMediaUnsupported": {
       "name": "messageMediaUnsupported",
       "description": [
@@ -15942,6 +16269,53 @@
         "unread": {
           "name": "unread",
           "description": "Whether the reaction wasn't yet marked as read by the current user"
+        }
+      }
+    },
+    "messagePeerVote": {
+      "name": "messagePeerVote",
+      "fields": {
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "option": {
+          "name": "option",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      }
+    },
+    "messagePeerVoteInputOption": {
+      "name": "messagePeerVoteInputOption",
+      "fields": {
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      }
+    },
+    "messagePeerVoteMultiple": {
+      "name": "messagePeerVoteMultiple",
+      "fields": {
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "options": {
+          "name": "options",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
         }
       }
     },
@@ -16102,6 +16476,19 @@
           "links": [
             "https://core.telegram.org/api/threads"
           ]
+        }
+      }
+    },
+    "messageReplyStoryHeader": {
+      "name": "messageReplyStoryHeader",
+      "fields": {
+        "story_id": {
+          "name": "story_id",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
         }
       }
     },
@@ -16365,6 +16752,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "has_settings": {
+          "name": "has_settings",
+          "description": " "
         },
         "inactive": {
           "name": "inactive",
@@ -17722,6 +18113,10 @@
         "How users voted in a poll"
       ],
       "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
         "count": {
           "name": "count",
           "description": "Total number of votes for all options (or only for the chosen option, if provided to messages.getPollVotes¹)",
@@ -19110,6 +19505,26 @@
         "silent": {
           "name": "silent",
           "description": "(Ternary value) If set, indicates whether to mute or unmute the peer; otherwise the default behavior should be used."
+        },
+        "stories_android_sound": {
+          "name": "stories_android_sound",
+          "description": " "
+        },
+        "stories_hide_sender": {
+          "name": "stories_hide_sender",
+          "description": " "
+        },
+        "stories_ios_sound": {
+          "name": "stories_ios_sound",
+          "description": " "
+        },
+        "stories_muted": {
+          "name": "stories_muted",
+          "description": " "
+        },
+        "stories_other_sound": {
+          "name": "stories_other_sound",
+          "description": " "
         }
       }
     },
@@ -19195,6 +19610,30 @@
         "share_contact": {
           "name": "share_contact",
           "description": "Whether we can share the user's contact"
+        }
+      }
+    },
+    "peerStories": {
+      "name": "peerStories",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "max_read_id": {
+          "name": "max_read_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "stories": {
+          "name": "stories",
+          "description": " "
         }
       }
     },
@@ -20325,6 +20764,9 @@
         }
       }
     },
+    "privacyKeyAbout": {
+      "name": "privacyKeyAbout"
+    },
     "privacyKeyAddedByPhone": {
       "name": "privacyKeyAddedByPhone",
       "description": [
@@ -20399,6 +20841,9 @@
           "description": "Allowed chats"
         }
       }
+    },
+    "privacyValueAllowCloseFriends": {
+      "name": "privacyValueAllowCloseFriends"
     },
     "privacyValueAllowContacts": {
       "name": "privacyValueAllowContacts",
@@ -21864,6 +22309,34 @@
         "start_param": {
           "name": "start_param",
           "description": "Parameter for the bot start message if the sponsored chat is a chat with a bot."
+        },
+        "webpage": {
+          "name": "webpage",
+          "description": " "
+        }
+      }
+    },
+    "sponsoredWebPage": {
+      "name": "sponsoredWebPage",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "photo": {
+          "name": "photo",
+          "description": " "
+        },
+        "site_name": {
+          "name": "site_name",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
         }
       }
     },
@@ -22497,6 +22970,445 @@
       "description": [
         "WEBP image. MIME type: image/webp."
       ]
+    },
+    "stories.allStories": {
+      "name": "stories.allStories",
+      "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "has_more": {
+          "name": "has_more",
+          "description": " "
+        },
+        "peer_stories": {
+          "name": "peer_stories",
+          "description": " "
+        },
+        "state": {
+          "name": "state",
+          "description": " "
+        },
+        "stealth_mode": {
+          "name": "stealth_mode",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "stories.allStoriesNotModified": {
+      "name": "stories.allStoriesNotModified",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "state": {
+          "name": "state",
+          "description": " "
+        },
+        "stealth_mode": {
+          "name": "stealth_mode",
+          "description": " "
+        }
+      }
+    },
+    "stories.boostersList": {
+      "name": "stories.boostersList",
+      "fields": {
+        "boosters": {
+          "name": "boosters",
+          "description": " "
+        },
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "next_offset": {
+          "name": "next_offset",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "stories.boostsStatus": {
+      "name": "stories.boostsStatus",
+      "fields": {
+        "boosts": {
+          "name": "boosts",
+          "description": " "
+        },
+        "current_level_boosts": {
+          "name": "current_level_boosts",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "level": {
+          "name": "level",
+          "description": " "
+        },
+        "my_boost": {
+          "name": "my_boost",
+          "description": " "
+        },
+        "next_level_boosts": {
+          "name": "next_level_boosts",
+          "description": " "
+        },
+        "premium_audience": {
+          "name": "premium_audience",
+          "description": " "
+        }
+      }
+    },
+    "stories.canApplyBoostOk": {
+      "name": "stories.canApplyBoostOk"
+    },
+    "stories.canApplyBoostReplace": {
+      "name": "stories.canApplyBoostReplace",
+      "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "current_boost": {
+          "name": "current_boost",
+          "description": " "
+        }
+      }
+    },
+    "stories.peerStories": {
+      "name": "stories.peerStories",
+      "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "stories": {
+          "name": "stories",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "stories.stories": {
+      "name": "stories.stories",
+      "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "stories": {
+          "name": "stories",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "stories.storyViews": {
+      "name": "stories.storyViews",
+      "fields": {
+        "users": {
+          "name": "users",
+          "description": " "
+        },
+        "views": {
+          "name": "views",
+          "description": " "
+        }
+      }
+    },
+    "stories.storyViewsList": {
+      "name": "stories.storyViewsList",
+      "fields": {
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "next_offset": {
+          "name": "next_offset",
+          "description": " "
+        },
+        "reactions_count": {
+          "name": "reactions_count",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        },
+        "views": {
+          "name": "views",
+          "description": " "
+        }
+      }
+    },
+    "storiesStealthMode": {
+      "name": "storiesStealthMode",
+      "fields": {
+        "active_until_date": {
+          "name": "active_until_date",
+          "description": " "
+        },
+        "cooldown_until_date": {
+          "name": "cooldown_until_date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        }
+      }
+    },
+    "storyItem": {
+      "name": "storyItem",
+      "fields": {
+        "caption": {
+          "name": "caption",
+          "description": " "
+        },
+        "close_friends": {
+          "name": "close_friends",
+          "description": " "
+        },
+        "contacts": {
+          "name": "contacts",
+          "description": " "
+        },
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "edited": {
+          "name": "edited",
+          "description": " "
+        },
+        "entities": {
+          "name": "entities",
+          "description": "Message entities for styled text¹",
+          "links": [
+            "https://core.telegram.org/api/entities"
+          ]
+        },
+        "expire_date": {
+          "name": "expire_date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "media": {
+          "name": "media",
+          "description": " "
+        },
+        "media_areas": {
+          "name": "media_areas",
+          "description": " "
+        },
+        "min": {
+          "name": "min",
+          "description": " "
+        },
+        "noforwards": {
+          "name": "noforwards",
+          "description": " "
+        },
+        "out": {
+          "name": "out",
+          "description": " "
+        },
+        "pinned": {
+          "name": "pinned",
+          "description": " "
+        },
+        "privacy": {
+          "name": "privacy",
+          "description": " "
+        },
+        "public": {
+          "name": "public",
+          "description": " "
+        },
+        "selected_contacts": {
+          "name": "selected_contacts",
+          "description": " "
+        },
+        "sent_reaction": {
+          "name": "sent_reaction",
+          "description": " "
+        },
+        "views": {
+          "name": "views",
+          "description": " "
+        }
+      }
+    },
+    "storyItemDeleted": {
+      "name": "storyItemDeleted",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      }
+    },
+    "storyItemSkipped": {
+      "name": "storyItemSkipped",
+      "fields": {
+        "close_friends": {
+          "name": "close_friends",
+          "description": " "
+        },
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "expire_date": {
+          "name": "expire_date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      }
+    },
+    "storyView": {
+      "name": "storyView",
+      "fields": {
+        "blocked": {
+          "name": "blocked",
+          "description": " "
+        },
+        "blocked_my_stories_from": {
+          "name": "blocked_my_stories_from",
+          "description": " "
+        },
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "reaction": {
+          "name": "reaction",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      }
+    },
+    "storyViews": {
+      "name": "storyViews",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "forwards_count": {
+          "name": "forwards_count",
+          "description": " "
+        },
+        "has_viewers": {
+          "name": "has_viewers",
+          "description": " "
+        },
+        "reactions": {
+          "name": "reactions",
+          "description": " "
+        },
+        "reactions_count": {
+          "name": "reactions_count",
+          "description": " "
+        },
+        "recent_viewers": {
+          "name": "recent_viewers",
+          "description": " "
+        },
+        "views_count": {
+          "name": "views_count",
+          "description": " "
+        }
+      }
     },
     "textAnchor": {
       "name": "textAnchor",
@@ -24442,6 +25354,10 @@
           "name": "options",
           "description": "Chosen option(s)"
         },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
         "poll_id": {
           "name": "poll_id",
           "description": "Poll ID"
@@ -24452,10 +25368,6 @@
           "links": [
             "https://core.telegram.org/api/updates"
           ]
-        },
-        "user_id": {
-          "name": "user_id",
-          "description": "User ID"
         }
       }
     },
@@ -24541,10 +25453,6 @@
         "Authorized to the current user's account through an unknown device."
       ],
       "fields": {
-        "auth_key_id": {
-          "name": "auth_key_id",
-          "description": "Identifier of an authorization key to which the account is linked"
-        },
         "date": {
           "name": "date",
           "description": "Authorization date"
@@ -24553,9 +25461,27 @@
           "name": "device",
           "description": "Name of device, for example Android"
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "hash": {
+          "name": "hash",
+          "description": "Hash for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets#hash-generation"
+          ]
+        },
         "location": {
           "name": "location",
           "description": "Location, for example USA, NY (IP=1.2.3.4)"
+        },
+        "unconfirmed": {
+          "name": "unconfirmed",
+          "description": " "
         }
       }
     },
@@ -24682,6 +25608,17 @@
         "blocked": {
           "name": "blocked",
           "description": "Whether the peer was blocked or unblocked"
+        },
+        "blocked_my_stories_from": {
+          "name": "blocked_my_stories_from",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
         },
         "peer_id": {
           "name": "peer_id",
@@ -25179,6 +26116,17 @@
         "https://core.telegram.org/api/updates"
       ],
       "fields": {
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "messages": {
           "name": "messages",
           "description": "IDs of read messages"
@@ -25196,6 +26144,19 @@
           "links": [
             "https://core.telegram.org/api/updates"
           ]
+        }
+      }
+    },
+    "updateReadStories": {
+      "name": "updateReadStories",
+      "fields": {
+        "max_id": {
+          "name": "max_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
         }
       }
     },
@@ -25240,6 +26201,23 @@
       "links": [
         "https://core.telegram.org/method/account.getSavedRingtones"
       ]
+    },
+    "updateSentStoryReaction": {
+      "name": "updateSentStoryReaction",
+      "fields": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "reaction": {
+          "name": "reaction",
+          "description": " "
+        },
+        "story_id": {
+          "name": "story_id",
+          "description": " "
+        }
+      }
     },
     "updateServiceNotification": {
       "name": "updateServiceNotification",
@@ -25596,6 +26574,41 @@
         "order": {
           "name": "order",
           "description": "New sticker order by sticker ID"
+        }
+      }
+    },
+    "updateStoriesStealthMode": {
+      "name": "updateStoriesStealthMode",
+      "fields": {
+        "stealth_mode": {
+          "name": "stealth_mode",
+          "description": " "
+        }
+      }
+    },
+    "updateStory": {
+      "name": "updateStory",
+      "fields": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "story": {
+          "name": "story",
+          "description": " "
+        }
+      }
+    },
+    "updateStoryID": {
+      "name": "updateStoryID",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "random_id": {
+          "name": "random_id",
+          "description": " "
         }
       }
     },
@@ -26347,6 +27360,10 @@
           "name": "bot_nochats",
           "description": "Can the bot be added to groups?"
         },
+        "close_friend": {
+          "name": "close_friend",
+          "description": " "
+        },
         "contact": {
           "name": "contact",
           "description": "Whether this user is a contact"
@@ -26439,6 +27456,18 @@
           "name": "status",
           "description": "Online status of user"
         },
+        "stories_hidden": {
+          "name": "stories_hidden",
+          "description": " "
+        },
+        "stories_max_id": {
+          "name": "stories_max_id",
+          "description": " "
+        },
+        "stories_unavailable": {
+          "name": "stories_unavailable",
+          "description": " "
+        },
         "support": {
           "name": "support",
           "description": "Whether this is an official support user"
@@ -26482,6 +27511,10 @@
         "blocked": {
           "name": "blocked",
           "description": "Whether you have blocked this user"
+        },
+        "blocked_my_stories_from": {
+          "name": "blocked_my_stories_from",
+          "description": " "
         },
         "bot_broadcast_admin_rights": {
           "name": "bot_broadcast_admin_rights",
@@ -26578,6 +27611,14 @@
         "settings": {
           "name": "settings",
           "description": "Peer settings"
+        },
+        "stories": {
+          "name": "stories",
+          "description": " "
+        },
+        "stories_pinned_available": {
+          "name": "stories_pinned_available",
+          "description": " "
         },
         "theme_emoticon": {
           "name": "theme_emoticon",
@@ -27220,6 +28261,30 @@
         }
       }
     },
+    "webPageAttributeStory": {
+      "name": "webPageAttributeStory",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "story": {
+          "name": "story",
+          "description": " "
+        }
+      }
+    },
     "webPageAttributeTheme": {
       "name": "webPageAttributeTheme",
       "description": [
@@ -27510,6 +28575,9 @@
       "description": [
         "Boolean type."
       ]
+    },
+    "Booster": {
+      "name": "Booster"
     },
     "BotApp": {
       "name": "BotApp",
@@ -27943,6 +29011,9 @@
         "HTTP link and embed info of channel message"
       ]
     },
+    "ExportedStoryLink": {
+      "name": "ExportedStoryLink"
+    },
     "FileHash": {
       "name": "FileHash",
       "description": [
@@ -28294,6 +29365,9 @@
         "Privacy rule"
       ]
     },
+    "InputReplyTo": {
+      "name": "InputReplyTo"
+    },
     "InputSecureFile": {
       "name": "InputSecureFile",
       "description": [
@@ -28446,6 +29520,12 @@
         "Mask coordinates (if this is a mask sticker, attached to a photo)"
       ]
     },
+    "MediaArea": {
+      "name": "MediaArea"
+    },
+    "MediaAreaCoordinates": {
+      "name": "MediaAreaCoordinates"
+    },
     "Message": {
       "name": "Message",
       "description": [
@@ -28493,6 +29573,9 @@
       "description": [
         "How a certain peer reacted to the message"
       ]
+    },
+    "MessagePeerVote": {
+      "name": "MessagePeerVote"
     },
     "MessageRange": {
       "name": "MessageRange",
@@ -28677,9 +29760,6 @@
         "https://instantview.telegram.org"
       ]
     },
-    "Page not found": {
-      "name": "Page not found"
-    },
     "PageBlock": {
       "name": "PageBlock",
       "description": [
@@ -28823,6 +29903,9 @@
       "description": [
         "List of actions that are possible when interacting with this user, to be shown as suggested actions in the chat bar"
       ]
+    },
+    "PeerStories": {
+      "name": "PeerStories"
     },
     "Phone.PhoneCall": {
       "name": "Phone.PhoneCall",
@@ -29126,6 +30209,9 @@
         "A sponsored message"
       ]
     },
+    "SponsoredWebPage": {
+      "name": "SponsoredWebPage"
+    },
     "Stats.BroadcastStats": {
       "name": "Stats.BroadcastStats",
       "description": [
@@ -29212,6 +30298,18 @@
       "description": [
         "Stickerset preview"
       ]
+    },
+    "StoriesStealthMode": {
+      "name": "StoriesStealthMode"
+    },
+    "StoryItem": {
+      "name": "StoryItem"
+    },
+    "StoryView": {
+      "name": "StoryView"
+    },
+    "StoryViews": {
+      "name": "StoryViews"
     },
     "TextWithEntities": {
       "name": "TextWithEntities",
@@ -29997,6 +31095,30 @@
         "Object describes the file type."
       ]
     },
+    "stories.AllStories": {
+      "name": "stories.AllStories"
+    },
+    "stories.BoostersList": {
+      "name": "stories.BoostersList"
+    },
+    "stories.BoostsStatus": {
+      "name": "stories.BoostsStatus"
+    },
+    "stories.CanApplyBoostResult": {
+      "name": "stories.CanApplyBoostResult"
+    },
+    "stories.PeerStories": {
+      "name": "stories.PeerStories"
+    },
+    "stories.Stories": {
+      "name": "stories.Stories"
+    },
+    "stories.StoryViews": {
+      "name": "stories.StoryViews"
+    },
+    "stories.StoryViewsList": {
+      "name": "stories.StoryViewsList"
+    },
     "string": {
       "name": "string",
       "description": [
@@ -30050,9 +31172,6 @@
     }
   },
   "methods": {
-    "Page not found": {
-      "name": "Page not found"
-    },
     "account.acceptAuthorization": {
       "name": "account.acceptAuthorization",
       "description": [
@@ -30112,6 +31231,10 @@
         "call_requests_disabled": {
           "name": "call_requests_disabled",
           "description": "Whether to enable or disable receiving calls: if the flag is not set, the previous setting is not changed"
+        },
+        "confirmed": {
+          "name": "confirmed",
+          "description": " "
         },
         "encrypted_requests_disabled": {
           "name": "encrypted_requests_disabled",
@@ -30634,6 +31757,10 @@
           "name": "compare_sound",
           "description": "If true, chats with non-default sound will also be returned"
         },
+        "compare_stories": {
+          "name": "compare_stories",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -31013,6 +32140,16 @@
           "description": "The specified wallpaper is invalid."
         }
       ]
+    },
+    "account.invalidateSignInCodes": {
+      "name": "account.invalidateSignInCodes",
+      "parameters": {
+        "codes": {
+          "name": "codes",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "account.registerDevice": {
       "name": "account.registerDevice",
@@ -31842,7 +32979,14 @@
             "https://core.telegram.org/api/emoji-status"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
+        }
+      ]
     },
     "account.updateNotifySettings": {
       "name": "account.updateNotifySettings",
@@ -31997,6 +33141,10 @@
           "code": 400,
           "type": "FIRSTNAME_INVALID",
           "description": "The first name is invalid."
+        },
+        {
+          "code": -505,
+          "type": "Nothing stored"
         }
       ]
     },
@@ -33160,6 +34308,16 @@
         }
       ]
     },
+    "bots.allowSendMessage": {
+      "name": "bots.allowSendMessage",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "bots.answerWebhookJSONQuery": {
       "name": "bots.answerWebhookJSONQuery",
       "description": [
@@ -33192,6 +34350,16 @@
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
       ],
+      "bot_can_use": true
+    },
+    "bots.canSendMessage": {
+      "name": "bots.canSendMessage",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        }
+      },
       "bot_can_use": true
     },
     "bots.getBotCommands": {
@@ -33276,6 +34444,24 @@
           "description": "This method can only be called by a bot."
         }
       ],
+      "bot_can_use": true
+    },
+    "bots.invokeWebViewCustomMethod": {
+      "name": "bots.invokeWebViewCustomMethod",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "custom_method": {
+          "name": "custom_method",
+          "description": " "
+        },
+        "params": {
+          "name": "params",
+          "description": " "
+        }
+      },
       "bot_can_use": true
     },
     "bots.reorderUsernames": {
@@ -33628,6 +34814,20 @@
         }
       ]
     },
+    "channels.clickSponsoredMessage": {
+      "name": "channels.clickSponsoredMessage",
+      "parameters": {
+        "channel": {
+          "name": "channel",
+          "description": " "
+        },
+        "random_id": {
+          "name": "random_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "channels.convertToGigagroup": {
       "name": "channels.convertToGigagroup",
       "description": [
@@ -33667,6 +34867,10 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
+        },
+        {
+          "code": 400,
+          "type": "FORUM_ENABLED"
         },
         {
           "code": 400,
@@ -33831,6 +35035,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_FORUM_MISSING",
+          "description": "This supergroup is not a forum."
+        },
         {
           "code": 400,
           "type": "CHANNEL_INVALID",
@@ -34297,6 +35506,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "PARTICIPANT_ID_INVALID",
           "description": "The specified participant ID is invalid."
@@ -34447,6 +35660,20 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_FORUM_MISSING",
+          "description": "This supergroup is not a forum."
+        },
+        {
+          "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
+        },
+        {
+          "code": 400,
+          "type": "GENERAL_MODIFY_ICON_FORBIDDEN"
+        },
         {
           "code": 400,
           "type": "TOPIC_ID_INVALID",
@@ -34914,6 +36141,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
         }
       ]
     },
@@ -35203,6 +36435,11 @@
           "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         }
       ],
       "bot_can_use": true
@@ -35440,6 +36677,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -35493,6 +36734,11 @@
           "code": 403,
           "type": "CHANNEL_PUBLIC_GROUP_NA",
           "description": "channel/supergroup not available."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_INVALID",
+          "description": "Invalid chat."
         },
         {
           "code": 400,
@@ -35711,6 +36957,11 @@
         },
         {
           "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -35830,6 +37081,13 @@
           "description": "Enable or disable the native antispam system."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.toggleForum": {
@@ -35855,6 +37113,11 @@
           "code": 400,
           "type": "CHAT_DISCUSSION_UNALLOWED",
           "description": "You can't enable forum topics in a discussion group linked to a channel."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
       ],
       "bot_can_use": true
@@ -35959,6 +37222,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
           "type": "PARTICIPANTS_TOO_FEW",
           "description": "Not enough participants."
         }
@@ -36010,6 +37278,10 @@
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "FORUM_ENABLED"
         }
       ]
     },
@@ -36216,6 +37488,10 @@
           "description": "You can't write in this chat."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
@@ -36287,6 +37563,10 @@
           "code": 400,
           "type": "INVITE_SLUG_EMPTY",
           "description": "The specified invite slug is empty."
+        },
+        {
+          "code": 400,
+          "type": "INVITE_SLUG_EXPIRED"
         }
       ],
       "bot_can_use": true
@@ -36431,6 +37711,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        },
         {
           "code": 400,
           "type": "INPUT_CHATLIST_INVALID"
@@ -36668,12 +37953,28 @@
         "Adds the user to the blacklist."
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "id": {
           "name": "id",
           "description": "User ID"
+        },
+        "my_stories_from": {
+          "name": "my_stories_from",
+          "description": " "
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
         {
           "code": 400,
           "type": "CONTACT_ID_INVALID",
@@ -36757,6 +38058,16 @@
         }
       }
     },
+    "contacts.editCloseFriends": {
+      "name": "contacts.editCloseFriends",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "contacts.exportContactToken": {
       "name": "contacts.exportContactToken",
       "description": [
@@ -36773,9 +38084,20 @@
         "Returns the list of blocked users."
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "limit": {
           "name": "limit",
           "description": "The number of list elements to be returned"
+        },
+        "my_stories_from": {
+          "name": "my_stories_from",
+          "description": " "
         },
         "offset": {
           "name": "offset",
@@ -37112,6 +38434,34 @@
         }
       ]
     },
+    "contacts.setBlocked": {
+      "name": "contacts.setBlocked",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "my_stories_from": {
+          "name": "my_stories_from",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "contacts.toggleTopPeers": {
       "name": "contacts.toggleTopPeers",
       "description": [
@@ -37133,9 +38483,20 @@
         "Deletes the user from the blacklist."
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "id": {
           "name": "id",
           "description": "User ID"
+        },
+        "my_stories_from": {
+          "name": "my_stories_from",
+          "description": " "
         }
       },
       "errors": [
@@ -38280,6 +39641,10 @@
           "description": "The specified user was deleted."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "USERS_TOO_FEW",
           "description": "Not enough users (to create a chat, for example)."
@@ -38626,6 +39991,11 @@
         },
         {
           "code": 400,
+          "type": "ENCRYPTION_ALREADY_ACCEPTED",
+          "description": "Secret chat already accepted."
+        },
+        {
+          "code": 400,
           "type": "ENCRYPTION_ALREADY_DECLINED",
           "description": "The secret chat was already declined."
         },
@@ -38833,6 +40203,11 @@
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "IMAGE_PROCESS_FAILED",
+          "description": "Failure while processing image."
         },
         {
           "code": 400,
@@ -39167,6 +40542,11 @@
         },
         {
           "code": 400,
+          "type": "FILE_PARTS_INVALID",
+          "description": "The number of file parts is invalid."
+        },
+        {
+          "code": 400,
           "type": "IMAGE_PROCESS_FAILED",
           "description": "Failure while processing image."
         },
@@ -39194,6 +40574,11 @@
           "code": 400,
           "type": "MEDIA_GROUPED_INVALID",
           "description": "You tried to send media of different types in an album."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_INVALID",
+          "description": "Media invalid."
         },
         {
           "code": 400,
@@ -39244,6 +40629,11 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 500,
+          "type": "MSG_WAIT_FAILED",
+          "description": "A waiting call returned an error."
         },
         {
           "code": 400,
@@ -39336,6 +40726,11 @@
           "code": 400,
           "type": "EXPIRE_DATE_INVALID",
           "description": "The specified expiration date is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         },
         {
           "code": 400,
@@ -39493,6 +40888,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_DOCS_FORBIDDEN",
+          "description": "You can't send documents in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_GAME_FORBIDDEN",
           "description": "You can't send a game to this chat."
         },
@@ -39572,6 +40972,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -39640,6 +41044,11 @@
           "code": 400,
           "type": "USER_IS_BOT",
           "description": "Bots can't send messages to other bots."
+        },
+        {
+          "code": 403,
+          "type": "VOICE_MESSAGES_FORBIDDEN",
+          "description": "This user's privacy settings forbid you from sending voice messages."
         },
         {
           "code": 400,
@@ -39958,7 +41367,7 @@
         },
         "offset_user": {
           "name": "offset_user",
-          "description": "User ID for pagination¹: if set, offset_date must also be set.",
+          "description": "User ID for pagination¹: if set, offset_date    must also be set.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
@@ -42260,6 +43669,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -42452,12 +43865,9 @@
             "https://core.telegram.org/method/messages.requestWebView"
           ]
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent in reply to this message ID.",
-          "links": [
-            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
-          ]
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         },
         "send_as": {
           "name": "send_as",
@@ -42468,13 +43878,6 @@
           "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent silently (no notifications for the receivers).",
           "links": [
             "https://core.telegram.org/method/messages.sendWebViewResultMessage"
-          ]
-        },
-        "top_msg_id": {
-          "name": "top_msg_id",
-          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
-          "links": [
-            "https://core.telegram.org/api/forum#forum-topics"
           ]
         }
       }
@@ -42529,6 +43932,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
         {
           "code": 400,
           "type": "MSG_ID_INVALID",
@@ -43059,6 +44467,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "from_side_menu": {
+          "name": "from_side_menu",
+          "description": " "
+        },
         "from_switch_webview": {
           "name": "from_switch_webview",
           "description": "Whether the webapp was opened by clicking on the switch_webview button shown on top of the inline results list returned by messages.getInlineBotResults¹.",
@@ -43069,6 +44481,10 @@
         "platform": {
           "name": "platform",
           "description": "Short name of the application; 0-64 English letters, digits, and underscores"
+        },
+        "start_param": {
+          "name": "start_param",
+          "description": " "
         },
         "theme_params": {
           "name": "theme_params",
@@ -43163,12 +44579,9 @@
           "name": "platform",
           "description": "Short name of the application; 0-64 English letters, digits, and underscores"
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent in reply to this message ID.",
-          "links": [
-            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
-          ]
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         },
         "send_as": {
           "name": "send_as",
@@ -43193,13 +44606,6 @@
           "description": "Theme parameters »¹",
           "links": [
             "https://core.telegram.org/api/bots/webapps#theme-parameters"
-          ]
-        },
-        "top_msg_id": {
-          "name": "top_msg_id",
-          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
-          "links": [
-            "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "url": {
@@ -43769,7 +45175,7 @@
           "description": "The secret chat was declined."
         },
         {
-          "code": 400,
+          "code": 500,
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error."
         },
@@ -43820,6 +45226,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
           "type": "DATA_TOO_LONG",
           "description": "Data too long."
         },
@@ -43868,6 +45279,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
         {
           "code": 400,
           "type": "DATA_INVALID",
@@ -43956,9 +45372,9 @@
           "name": "random_id",
           "description": "Random ID to avoid resending the same query"
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "ID of the message this message should reply to"
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -43971,13 +45387,6 @@
         "silent": {
           "name": "silent",
           "description": "Whether to send the message silently (no notification will be triggered on the other client)"
-        },
-        "top_msg_id": {
-          "name": "top_msg_id",
-          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
-          "links": [
-            "https://core.telegram.org/api/forum#forum-topics"
-          ]
         }
       },
       "errors": [
@@ -44098,6 +45507,11 @@
         },
         {
           "code": 400,
+          "type": "RESULT_ID_INVALID",
+          "description": "One of the specified result IDs is invalid."
+        },
+        {
+          "code": 400,
           "type": "SCHEDULE_DATE_TOO_LATE",
           "description": "You can't schedule a message this far in the future."
         },
@@ -44198,9 +45612,9 @@
           "name": "reply_markup",
           "description": "Reply markup for bot keyboards"
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "Message ID to which this message should reply to"
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -44216,13 +45630,6 @@
         "silent": {
           "name": "silent",
           "description": "Send message silently (no notification should be triggered)"
-        },
-        "top_msg_id": {
-          "name": "top_msg_id",
-          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
-          "links": [
-            "https://core.telegram.org/api/forum#forum-topics"
-          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -44661,9 +46068,9 @@
           "name": "reply_markup",
           "description": "Reply markup for sending bot buttons"
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "The message ID to which this message will reply to"
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -44679,13 +46086,6 @@
         "silent": {
           "name": "silent",
           "description": "Send this message silently (no notifications for the receivers)"
-        },
-        "top_msg_id": {
-          "name": "top_msg_id",
-          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
-          "links": [
-            "https://core.telegram.org/api/forum#forum-topics"
-          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -44858,6 +46258,10 @@
         },
         {
           "code": 400,
+          "type": "REPLY_TO_INVALID"
+        },
+        {
+          "code": 400,
           "type": "SCHEDULE_BOT_NOT_ALLOWED",
           "description": "Bots cannot schedule messages."
         },
@@ -44969,9 +46373,9 @@
           "name": "peer",
           "description": "The destination chat"
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "The message to reply to"
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -44984,13 +46388,6 @@
         "silent": {
           "name": "silent",
           "description": "Whether to send the album silently (no notification triggered)"
-        },
-        "top_msg_id": {
-          "name": "top_msg_id",
-          "description": "This field must contain the topic ID only when replying to messages in forum topics¹ different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic.",
-          "links": [
-            "https://core.telegram.org/api/forum#forum-topics"
-          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -45098,6 +46495,11 @@
         },
         {
           "code": 400,
+          "type": "TOPIC_CLOSED",
+          "description": "This topic was closed, you can't send messages to it anymore."
+        },
+        {
+          "code": 400,
           "type": "TOPIC_DELETED",
           "description": "The specified topic was deleted."
         },
@@ -45151,6 +46553,10 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "ANONYMOUS_REACTIONS_DISABLED"
+        },
         {
           "code": 400,
           "type": "CHANNEL_INVALID",
@@ -45255,9 +46661,9 @@
           "name": "random_id",
           "description": "Random ID to avoid message resending"
         },
-        "reply_to_msg_id": {
-          "name": "reply_to_msg_id",
-          "description": "ID of message that was screenshotted, can be 0"
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
         }
       },
       "errors": [
@@ -46918,6 +48324,11 @@
           "description": "The number of file parts is invalid."
         },
         {
+          "code": 400,
+          "type": "FILE_PART_LENGTH_INVALID",
+          "description": "The length of a file part is invalid."
+        },
+        {
           "code": 500,
           "type": "FILE_WRITE_EMPTY"
         },
@@ -47285,6 +48696,10 @@
           "code": 400,
           "type": "CALL_PEER_INVALID",
           "description": "The provided call peer object is invalid."
+        },
+        {
+          "code": 406,
+          "type": "CALL_PROTOCOL_COMPAT_LAYER_INVALID"
         },
         {
           "code": 400,
@@ -47863,6 +49278,10 @@
           "code": 400,
           "type": "DATA_JSON_INVALID",
           "description": "The provided JSON data is invalid."
+        },
+        {
+          "code": 500,
+          "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
         },
         {
           "code": 403,
@@ -48508,6 +49927,11 @@
           "code": 400,
           "type": "ALBUM_PHOTOS_TOO_MANY",
           "description": "You have uploaded too many profile photos, delete some before retrying."
+        },
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
         },
         {
           "code": 400,
@@ -49273,6 +50697,575 @@
         }
       ]
     },
+    "stories.activateStealthMode": {
+      "name": "stories.activateStealthMode",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "future": {
+          "name": "future",
+          "description": " "
+        },
+        "past": {
+          "name": "past",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.applyBoost": {
+      "name": "stories.applyBoost",
+      "parameters": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.canApplyBoost": {
+      "name": "stories.canApplyBoost",
+      "parameters": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.canSendStory": {
+      "name": "stories.canSendStory",
+      "parameters": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.deleteStories": {
+      "name": "stories.deleteStories",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.editStory": {
+      "name": "stories.editStory",
+      "parameters": {
+        "caption": {
+          "name": "caption",
+          "description": " "
+        },
+        "entities": {
+          "name": "entities",
+          "description": "Message entities for styled text¹",
+          "links": [
+            "https://core.telegram.org/api/entities"
+          ]
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "media": {
+          "name": "media",
+          "description": " "
+        },
+        "media_areas": {
+          "name": "media_areas",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "privacy_rules": {
+          "name": "privacy_rules",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.exportStoryLink": {
+      "name": "stories.exportStoryLink",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getAllReadPeerStories": {
+      "name": "stories.getAllReadPeerStories",
+      "bot_can_use": true
+    },
+    "stories.getAllStories": {
+      "name": "stories.getAllStories",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "hidden": {
+          "name": "hidden",
+          "description": " "
+        },
+        "next": {
+          "name": "next",
+          "description": " "
+        },
+        "state": {
+          "name": "state",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getBoostersList": {
+      "name": "stories.getBoostersList",
+      "parameters": {
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset": {
+          "name": "offset",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
+    },
+    "stories.getBoostsStatus": {
+      "name": "stories.getBoostsStatus",
+      "parameters": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      }
+    },
+    "stories.getChatsToSend": {
+      "name": "stories.getChatsToSend",
+      "bot_can_use": true
+    },
+    "stories.getPeerMaxIDs": {
+      "name": "stories.getPeerMaxIDs",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getPeerStories": {
+      "name": "stories.getPeerStories",
+      "parameters": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getPinnedStories": {
+      "name": "stories.getPinnedStories",
+      "parameters": {
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset_id": {
+          "name": "offset_id",
+          "description": "Offsets for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getStoriesArchive": {
+      "name": "stories.getStoriesArchive",
+      "parameters": {
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset_id": {
+          "name": "offset_id",
+          "description": "Offsets for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getStoriesByID": {
+      "name": "stories.getStoriesByID",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "STORIES_NEVER_CREATED"
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_EMPTY"
+        }
+      ]
+    },
+    "stories.getStoriesViews": {
+      "name": "stories.getStoriesViews",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.getStoryViewsList": {
+      "name": "stories.getStoryViewsList",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "just_contacts": {
+          "name": "just_contacts",
+          "description": " "
+        },
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset": {
+          "name": "offset",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "q": {
+          "name": "q",
+          "description": " "
+        },
+        "reactions_first": {
+          "name": "reactions_first",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.incrementStoryViews": {
+      "name": "stories.incrementStoryViews",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.readStories": {
+      "name": "stories.readStories",
+      "parameters": {
+        "max_id": {
+          "name": "max_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MAX_ID_INVALID",
+          "description": "The provided max ID is invalid."
+        }
+      ],
+      "bot_can_use": true
+    },
+    "stories.report": {
+      "name": "stories.report",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "message": {
+          "name": "message",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "reason": {
+          "name": "reason",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.sendReaction": {
+      "name": "stories.sendReaction",
+      "parameters": {
+        "add_to_recent": {
+          "name": "add_to_recent",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "reaction": {
+          "name": "reaction",
+          "description": " "
+        },
+        "story_id": {
+          "name": "story_id",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "REACTION_INVALID",
+          "description": "The specified reaction is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_EMPTY"
+        }
+      ],
+      "bot_can_use": true
+    },
+    "stories.sendStory": {
+      "name": "stories.sendStory",
+      "parameters": {
+        "caption": {
+          "name": "caption",
+          "description": " "
+        },
+        "entities": {
+          "name": "entities",
+          "description": "Message entities for styled text¹",
+          "links": [
+            "https://core.telegram.org/api/entities"
+          ]
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "media": {
+          "name": "media",
+          "description": " "
+        },
+        "media_areas": {
+          "name": "media_areas",
+          "description": " "
+        },
+        "noforwards": {
+          "name": "noforwards",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "period": {
+          "name": "period",
+          "description": " "
+        },
+        "pinned": {
+          "name": "pinned",
+          "description": " "
+        },
+        "privacy_rules": {
+          "name": "privacy_rules",
+          "description": " "
+        },
+        "random_id": {
+          "name": "random_id",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "IMAGE_PROCESS_FAILED",
+          "description": "Failure while processing image."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_EMPTY",
+          "description": "The provided media object is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_FILE_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_TYPE_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_VIDEO_STORY_MISSING"
+        },
+        {
+          "code": 400,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
+          "code": 400,
+          "type": "STORY_PERIOD_INVALID"
+        }
+      ],
+      "bot_can_use": true
+    },
+    "stories.toggleAllStoriesHidden": {
+      "name": "stories.toggleAllStoriesHidden",
+      "parameters": {
+        "hidden": {
+          "name": "hidden",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.togglePeerStoriesHidden": {
+      "name": "stories.togglePeerStoriesHidden",
+      "parameters": {
+        "hidden": {
+          "name": "hidden",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "stories.togglePinned": {
+      "name": "stories.togglePinned",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "pinned": {
+          "name": "pinned",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "updates.getChannelDifference": {
       "name": "updates.getChannelDifference",
       "description": [
@@ -49342,6 +51335,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "PERSISTENT_TIMESTAMP_EMPTY",
           "description": "Persistent timestamp empty."
@@ -49404,6 +51401,10 @@
             "https://core.telegram.org/api/updates"
           ]
         },
+        "pts_limit": {
+          "name": "pts_limit",
+          "description": " "
+        },
         "pts_total_limit": {
           "name": "pts_total_limit",
           "description": "For fast updating: if provided and pts + pts_total_limit \u003c remote pts, updates.differenceTooLong¹ will be returned.Simply tells the server to not return the difference if it is bigger than pts_total_limitIf the remote pts is too big (\u003e ~4000000), this field will default to 1000000",
@@ -49417,6 +51418,10 @@
           "links": [
             "https://core.telegram.org/api/updates"
           ]
+        },
+        "qts_limit": {
+          "name": "qts_limit",
+          "description": " "
         }
       },
       "errors": [
@@ -49449,6 +51454,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -505,
+          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -49578,6 +51587,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CDN_METHOD_INVALID",
+          "description": "You can't call this method in a CDN DC."
+        },
         {
           "code": 400,
           "type": "CHANNEL_INVALID",
@@ -49852,6 +51866,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -505,
+          "type": "Nothing stored"
+        },
+        {
           "code": 400,
           "type": "USERNAME_OCCUPIED",
           "description": "The provided username is already occupied."
@@ -49899,6 +51917,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -505,
+          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -49992,6 +52014,10 @@
       "code": 400,
       "type": "ALBUM_PHOTOS_TOO_MANY",
       "description": "You have uploaded too many profile photos, delete some before retrying."
+    },
+    "ANONYMOUS_REACTIONS_DISABLED": {
+      "code": 403,
+      "type": "ANONYMOUS_REACTIONS_DISABLED"
     },
     "API_ID_INVALID": {
       "code": 400,
@@ -50202,6 +52228,10 @@
       "code": 400,
       "type": "CALL_PEER_INVALID",
       "description": "The provided call peer object is invalid."
+    },
+    "CALL_PROTOCOL_COMPAT_LAYER_INVALID": {
+      "code": 406,
+      "type": "CALL_PROTOCOL_COMPAT_LAYER_INVALID"
     },
     "CALL_PROTOCOL_FLAGS_INVALID": {
       "code": 400,
@@ -50779,6 +52809,10 @@
       "type": "FOLDER_ID_INVALID",
       "description": "Invalid folder ID."
     },
+    "FORUM_ENABLED": {
+      "code": 400,
+      "type": "FORUM_ENABLED"
+    },
     "FRESH_CHANGE_ADMINS_FORBIDDEN": {
       "code": 406,
       "type": "FRESH_CHANGE_ADMINS_FORBIDDEN",
@@ -50809,6 +52843,10 @@
       "type": "GAME_BOT_INVALID",
       "description": "Bots can't send another bot's game."
     },
+    "GENERAL_MODIFY_ICON_FORBIDDEN": {
+      "code": 400,
+      "type": "GENERAL_MODIFY_ICON_FORBIDDEN"
+    },
     "GEO_POINT_INVALID": {
       "code": 400,
       "type": "GEO_POINT_INVALID",
@@ -50838,6 +52876,10 @@
       "code": 400,
       "type": "GRAPH_OUTDATED_RELOAD",
       "description": "The graph is outdated, please get a new async token using stats.getBroadcastStats."
+    },
+    "GROUPCALL_ADD_PARTICIPANTS_FAILED": {
+      "code": 500,
+      "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
     },
     "GROUPCALL_ALREADY_DISCARDED": {
       "code": 400,
@@ -50983,6 +53025,10 @@
       "type": "INVITE_SLUG_EMPTY",
       "description": "The specified invite slug is empty."
     },
+    "INVITE_SLUG_EXPIRED": {
+      "code": 400,
+      "type": "INVITE_SLUG_EXPIRED"
+    },
     "INVOICE_PAYLOAD_INVALID": {
       "code": 400,
       "type": "INVOICE_PAYLOAD_INVALID",
@@ -51058,6 +53104,10 @@
       "type": "MEDIA_EMPTY",
       "description": "The provided media object is invalid."
     },
+    "MEDIA_FILE_INVALID": {
+      "code": 400,
+      "type": "MEDIA_FILE_INVALID"
+    },
     "MEDIA_GROUPED_INVALID": {
       "code": 400,
       "type": "MEDIA_GROUPED_INVALID",
@@ -51082,6 +53132,14 @@
       "code": 400,
       "type": "MEDIA_TTL_INVALID",
       "description": "The specified media TTL is invalid."
+    },
+    "MEDIA_TYPE_INVALID": {
+      "code": 400,
+      "type": "MEDIA_TYPE_INVALID"
+    },
+    "MEDIA_VIDEO_STORY_MISSING": {
+      "code": 400,
+      "type": "MEDIA_VIDEO_STORY_MISSING"
     },
     "MEGAGROUP_ID_INVALID": {
       "code": 400,
@@ -51196,6 +53254,10 @@
       "code": 400,
       "type": "NEXT_OFFSET_INVALID",
       "description": "The specified offset is longer than 64 bytes."
+    },
+    "Nothing stored": {
+      "code": -505,
+      "type": "Nothing stored"
     },
     "OFFSET_INVALID": {
       "code": 400,
@@ -51503,7 +53565,7 @@
       "description": "Cast a vote in the poll before calling this method."
     },
     "PREMIUM_ACCOUNT_REQUIRED": {
-      "code": 403,
+      "code": 400,
       "type": "PREMIUM_ACCOUNT_REQUIRED",
       "description": "A premium account is required to execute this action."
     },
@@ -51631,6 +53693,10 @@
       "code": 400,
       "type": "REPLY_MARKUP_TOO_LONG",
       "description": "The specified reply_markup is too long."
+    },
+    "REPLY_TO_INVALID": {
+      "code": 400,
+      "type": "REPLY_TO_INVALID"
     },
     "RESET_REQUEST_MISSING": {
       "code": 400,
@@ -51927,6 +53993,18 @@
       "type": "STICKER_VIDEO_NOWEBM",
       "description": "The specified video sticker is not in webm format."
     },
+    "STORIES_NEVER_CREATED": {
+      "code": 400,
+      "type": "STORIES_NEVER_CREATED"
+    },
+    "STORY_ID_EMPTY": {
+      "code": 400,
+      "type": "STORY_ID_EMPTY"
+    },
+    "STORY_PERIOD_INVALID": {
+      "code": 400,
+      "type": "STORY_PERIOD_INVALID"
+    },
     "SWITCH_PM_TEXT_EMPTY": {
       "code": 400,
       "type": "SWITCH_PM_TEXT_EMPTY",
@@ -52016,7 +54094,7 @@
       "type": "TOPICS_EMPTY"
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
