@@ -31225,7 +31225,7 @@
     "account.changeAuthorizationSettings": {
       "name": "account.changeAuthorizationSettings",
       "description": [
-        "Change authorization settings"
+        "Change settings related to the current session."
       ],
       "parameters": {
         "call_requests_disabled": {
@@ -41367,7 +41367,7 @@
         },
         "offset_user": {
           "name": "offset_user",
-          "description": "User ID for pagination¹: if set, offset_date    must also be set.",
+          "description": "User ID for pagination¹: if set, offset_date must also be set.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
