@@ -20911,7 +20911,7 @@
         },
         "count": {
           "name": "count",
-          "description": "NUmber of users that reacted with this emoji"
+          "description": "Number of users that reacted with this emoji."
         },
         "flags": {
           "name": "flags",
@@ -20922,7 +20922,7 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": "Reaction (a UTF8 emoji)"
+          "description": "The reaction."
         }
       }
     },
@@ -32148,8 +32148,7 @@
           "name": "codes",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.registerDevice": {
       "name": "account.registerDevice",
@@ -33141,10 +33140,6 @@
           "code": 400,
           "type": "FIRSTNAME_INVALID",
           "description": "The first name is invalid."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         }
       ]
     },
@@ -33824,6 +33819,10 @@
           "code": 400,
           "type": "AUTH_TOKEN_INVALIDX",
           "description": "The specified auth token is invalid."
+        },
+        {
+          "code": 500,
+          "type": "MEMBER_NOT_FOUND"
         }
       ]
     },
@@ -34164,10 +34163,6 @@
           "code": 400,
           "type": "SMS_CODE_CREATE_FAILED",
           "description": "An error occurred while creating the SMS code."
-        },
-        {
-          "code": 400,
-          "type": "Sorry, too many invalid attempts to enter your password. Please try again later."
         }
       ]
     },
@@ -34316,7 +34311,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ]
     },
     "bots.answerWebhookJSONQuery": {
       "name": "bots.answerWebhookJSONQuery",
@@ -34360,7 +34361,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ]
     },
     "bots.getBotCommands": {
       "name": "bots.getBotCommands",
@@ -34462,7 +34469,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ]
     },
     "bots.reorderUsernames": {
       "name": "bots.reorderUsernames",
@@ -34826,7 +34839,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.convertToGigagroup": {
       "name": "channels.convertToGigagroup",
@@ -35049,6 +35068,11 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_TITLE_EMPTY",
+          "description": "The specified topic title is empty."
         }
       ],
       "bot_can_use": true
@@ -35506,10 +35530,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": -505,
-          "type": "Nothing stored"
-        },
-        {
           "code": 400,
           "type": "PARTICIPANT_ID_INVALID",
           "description": "The specified participant ID is invalid."
@@ -35672,7 +35692,16 @@
         },
         {
           "code": 400,
-          "type": "GENERAL_MODIFY_ICON_FORBIDDEN"
+          "type": "GENERAL_MODIFY_ICON_FORBIDDEN",
+          "description": "You can't modify the icon of the \"General\" topic."
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_CLOSE_SEPARATELY"
+        },
+        {
+          "code": 400,
+          "type": "TOPIC_HIDE_SEPARATELY"
         },
         {
           "code": 400,
@@ -36177,7 +36206,8 @@
         },
         {
           "code": 400,
-          "type": "TOPICS_EMPTY"
+          "type": "TOPICS_EMPTY",
+          "description": "You specified no topic IDs."
         }
       ],
       "bot_can_use": true
@@ -36675,10 +36705,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -37196,6 +37222,11 @@
           "code": 400,
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
       ]
     },
@@ -37488,10 +37519,6 @@
           "description": "You can't write in this chat."
         },
         {
-          "code": -505,
-          "type": "Nothing stored"
-        },
-        {
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
@@ -37566,7 +37593,8 @@
         },
         {
           "code": 400,
-          "type": "INVITE_SLUG_EXPIRED"
+          "type": "INVITE_SLUG_EXPIRED",
+          "description": "The specified chat folder link has expired."
         }
       ],
       "bot_can_use": true
@@ -37718,7 +37746,8 @@
         },
         {
           "code": 400,
-          "type": "INPUT_CHATLIST_INVALID"
+          "type": "INPUT_CHATLIST_INVALID",
+          "description": "The specified folder is invalid."
         }
       ],
       "bot_can_use": true
@@ -37799,8 +37828,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "FILTER_INCLUDE_EMPTY",
+          "description": "The include_peers vector of the filter is empty."
+        },
+        {
+          "code": 400,
           "type": "INVITE_SLUG_EMPTY",
           "description": "The specified invite slug is empty."
+        },
+        {
+          "code": 400,
+          "type": "INVITE_SLUG_EXPIRED",
+          "description": "The specified chat folder link has expired."
         }
       ],
       "bot_can_use": true
@@ -38065,8 +38104,7 @@
           "name": "id",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.exportContactToken": {
       "name": "contacts.exportContactToken",
@@ -38459,8 +38497,7 @@
           "name": "my_stories_from",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "contacts.toggleTopPeers": {
       "name": "contacts.toggleTopPeers",
@@ -39639,10 +39676,6 @@
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -40970,10 +41003,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -42393,7 +42422,7 @@
         {
           "code": 403,
           "type": "BROADCAST_FORBIDDEN",
-          "description": "Participants of polls in channels should stay anonymous."
+          "description": "Channel poll voters and reactions cannot be fetched to prevent deanonymization."
         },
         {
           "code": 400,
@@ -42749,7 +42778,7 @@
         {
           "code": 403,
           "type": "BROADCAST_FORBIDDEN",
-          "description": "Participants of polls in channels should stay anonymous."
+          "description": "Channel poll voters and reactions cannot be fetched to prevent deanonymization."
         },
         {
           "code": 400,
@@ -43464,6 +43493,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -43669,10 +43703,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": -505,
-          "type": "Nothing stored"
-        },
-        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -43815,6 +43845,10 @@
           "code": 400,
           "type": "CHANNELS_TOO_MUCH",
           "description": "You have joined too many channels/supergroups."
+        },
+        {
+          "code": 500,
+          "type": "CHANNEL_ID_GENERATE_FAILED"
         },
         {
           "code": 403,
@@ -46258,7 +46292,8 @@
         },
         {
           "code": 400,
-          "type": "REPLY_TO_INVALID"
+          "type": "REPLY_TO_INVALID",
+          "description": "The specified reply_to field is invalid."
         },
         {
           "code": 400,
@@ -47834,6 +47869,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
@@ -48699,7 +48739,8 @@
         },
         {
           "code": 406,
-          "type": "CALL_PROTOCOL_COMPAT_LAYER_INVALID"
+          "type": "CALL_PROTOCOL_COMPAT_LAYER_INVALID",
+          "description": "The other side of the call does not support any of the VoIP protocols supported by the local client, as specified by the protocol.layer and protocol.library_versions fields."
         },
         {
           "code": 400,
@@ -50715,8 +50756,7 @@
           "name": "past",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "stories.applyBoost": {
       "name": "stories.applyBoost",
@@ -50726,7 +50766,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.canApplyBoost": {
       "name": "stories.canApplyBoost",
@@ -50736,7 +50782,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.canSendStory": {
       "name": "stories.canSendStory",
@@ -50746,21 +50798,39 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.deleteStories": {
       "name": "stories.deleteStories",
+      "description": [
+        "Deletes some posted stories¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of stories to delete."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel/user from where to delete stories."
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.editStory": {
       "name": "stories.editStory",
@@ -50804,7 +50874,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.exportStoryLink": {
       "name": "stories.exportStoryLink",
@@ -50818,11 +50894,16 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.getAllReadPeerStories": {
-      "name": "stories.getAllReadPeerStories",
-      "bot_can_use": true
+      "name": "stories.getAllReadPeerStories"
     },
     "stories.getAllStories": {
       "name": "stories.getAllStories",
@@ -50846,8 +50927,7 @@
           "name": "state",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "stories.getBoostersList": {
       "name": "stories.getBoostersList",
@@ -50873,6 +50953,16 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -50883,11 +50973,17 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.getChatsToSend": {
-      "name": "stories.getChatsToSend",
-      "bot_can_use": true
+      "name": "stories.getChatsToSend"
     },
     "stories.getPeerMaxIDs": {
       "name": "stories.getPeerMaxIDs",
@@ -50896,8 +50992,7 @@
           "name": "id",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "stories.getPeerStories": {
       "name": "stories.getPeerStories",
@@ -50907,7 +51002,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.getPinnedStories": {
       "name": "stories.getPinnedStories",
@@ -50931,7 +51032,18 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
+        }
+      ]
     },
     "stories.getStoriesArchive": {
       "name": "stories.getStoriesArchive",
@@ -50955,7 +51067,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.getStoriesByID": {
       "name": "stories.getStoriesByID",
@@ -50972,11 +51090,17 @@
       "errors": [
         {
           "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
           "type": "STORIES_NEVER_CREATED"
         },
         {
           "code": 400,
-          "type": "STORY_ID_EMPTY"
+          "type": "STORY_ID_EMPTY",
+          "description": "You specified no story IDs."
         }
       ]
     },
@@ -50992,7 +51116,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.getStoryViewsList": {
       "name": "stories.getStoryViewsList",
@@ -51036,21 +51166,36 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.incrementStoryViews": {
       "name": "stories.incrementStoryViews",
+      "description": [
+        "Increment the view counter of one or more stories."
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of the stories."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the stories were posted."
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.readStories": {
       "name": "stories.readStories",
@@ -51061,7 +51206,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer whose stories should be marked as read."
         }
       },
       "errors": [
@@ -51069,31 +51214,44 @@
           "code": 400,
           "type": "MAX_ID_INVALID",
           "description": "The provided max ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stories.report": {
       "name": "stories.report",
+      "description": [
+        "Report a story."
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of the stories to report."
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Comment for report moderation"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that uploaded the story."
         },
         "reason": {
           "name": "reason",
-          "description": " "
+          "description": "Why are these storeis being reported."
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.sendReaction": {
       "name": "stories.sendReaction",
@@ -51125,22 +51283,33 @@
       "errors": [
         {
           "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
           "type": "REACTION_INVALID",
           "description": "The specified reaction is invalid."
         },
         {
           "code": 400,
-          "type": "STORY_ID_EMPTY"
+          "type": "STORY_ID_EMPTY",
+          "description": "You specified no story IDs."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stories.sendStory": {
       "name": "stories.sendStory",
+      "description": [
+        "Uploads a Telegram Story¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "caption": {
           "name": "caption",
-          "description": " "
+          "description": "Story caption."
         },
         "entities": {
           "name": "entities",
@@ -51158,7 +51327,7 @@
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The media file."
         },
         "media_areas": {
           "name": "media_areas",
@@ -51166,7 +51335,7 @@
         },
         "noforwards": {
           "name": "noforwards",
-          "description": " "
+          "description": "If set, disables forwards and story download functionality."
         },
         "peer": {
           "name": "peer",
@@ -51186,7 +51355,7 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Unique client message ID required to prevent message resending."
         }
       },
       "errors": [
@@ -51202,15 +51371,22 @@
         },
         {
           "code": 400,
-          "type": "MEDIA_FILE_INVALID"
+          "type": "MEDIA_FILE_INVALID",
+          "description": "The specified media file is invalid."
         },
         {
           "code": 400,
-          "type": "MEDIA_TYPE_INVALID"
+          "type": "MEDIA_TYPE_INVALID",
+          "description": "The specified media type cannot be used in stories."
         },
         {
           "code": 400,
           "type": "MEDIA_VIDEO_STORY_MISSING"
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         },
         {
           "code": 400,
@@ -51221,8 +51397,7 @@
           "code": 400,
           "type": "STORY_PERIOD_INVALID"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stories.toggleAllStoriesHidden": {
       "name": "stories.toggleAllStoriesHidden",
@@ -51231,8 +51406,7 @@
           "name": "hidden",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "stories.togglePeerStoriesHidden": {
       "name": "stories.togglePeerStoriesHidden",
@@ -51246,7 +51420,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.togglePinned": {
       "name": "stories.togglePinned",
@@ -51264,7 +51444,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "updates.getChannelDifference": {
       "name": "updates.getChannelDifference",
@@ -51333,10 +51519,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -51454,10 +51636,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -51866,17 +52044,9 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": -505,
-          "type": "Nothing stored"
-        },
-        {
           "code": 400,
           "type": "USERNAME_OCCUPIED",
           "description": "The provided username is already occupied."
-        },
-        {
-          "code": 500,
-          "type": "USERNAME_UNSYNCHRONIZED"
         },
         {
           "code": 400,
@@ -51917,10 +52087,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": -505,
-          "type": "Nothing stored"
         },
         {
           "code": 400,
@@ -52167,7 +52333,7 @@
     "BROADCAST_FORBIDDEN": {
       "code": 403,
       "type": "BROADCAST_FORBIDDEN",
-      "description": "Participants of polls in channels should stay anonymous."
+      "description": "Channel poll voters and reactions cannot be fetched to prevent deanonymization."
     },
     "BROADCAST_ID_INVALID": {
       "code": 400,
@@ -52231,7 +52397,8 @@
     },
     "CALL_PROTOCOL_COMPAT_LAYER_INVALID": {
       "code": 406,
-      "type": "CALL_PROTOCOL_COMPAT_LAYER_INVALID"
+      "type": "CALL_PROTOCOL_COMPAT_LAYER_INVALID",
+      "description": "The other side of the call does not support any of the VoIP protocols supported by the local client, as specified by the protocol.layer and protocol.library_versions fields."
     },
     "CALL_PROTOCOL_FLAGS_INVALID": {
       "code": 400,
@@ -52845,7 +53012,8 @@
     },
     "GENERAL_MODIFY_ICON_FORBIDDEN": {
       "code": 400,
-      "type": "GENERAL_MODIFY_ICON_FORBIDDEN"
+      "type": "GENERAL_MODIFY_ICON_FORBIDDEN",
+      "description": "You can't modify the icon of the \"General\" topic."
     },
     "GEO_POINT_INVALID": {
       "code": 400,
@@ -52968,7 +53136,8 @@
     },
     "INPUT_CHATLIST_INVALID": {
       "code": 400,
-      "type": "INPUT_CHATLIST_INVALID"
+      "type": "INPUT_CHATLIST_INVALID",
+      "description": "The specified folder is invalid."
     },
     "INPUT_FILTER_INVALID": {
       "code": 400,
@@ -53027,7 +53196,8 @@
     },
     "INVITE_SLUG_EXPIRED": {
       "code": 400,
-      "type": "INVITE_SLUG_EXPIRED"
+      "type": "INVITE_SLUG_EXPIRED",
+      "description": "The specified chat folder link has expired."
     },
     "INVOICE_PAYLOAD_INVALID": {
       "code": 400,
@@ -53106,7 +53276,8 @@
     },
     "MEDIA_FILE_INVALID": {
       "code": 400,
-      "type": "MEDIA_FILE_INVALID"
+      "type": "MEDIA_FILE_INVALID",
+      "description": "The specified media file is invalid."
     },
     "MEDIA_GROUPED_INVALID": {
       "code": 400,
@@ -53135,7 +53306,8 @@
     },
     "MEDIA_TYPE_INVALID": {
       "code": 400,
-      "type": "MEDIA_TYPE_INVALID"
+      "type": "MEDIA_TYPE_INVALID",
+      "description": "The specified media type cannot be used in stories."
     },
     "MEDIA_VIDEO_STORY_MISSING": {
       "code": 400,
@@ -53159,6 +53331,10 @@
     "MEMBER_CHAT_ADD_FAILED": {
       "code": 500,
       "type": "MEMBER_CHAT_ADD_FAILED"
+    },
+    "MEMBER_NOT_FOUND": {
+      "code": 500,
+      "type": "MEMBER_NOT_FOUND"
     },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
@@ -53254,10 +53430,6 @@
       "code": 400,
       "type": "NEXT_OFFSET_INVALID",
       "description": "The specified offset is longer than 64 bytes."
-    },
-    "Nothing stored": {
-      "code": -505,
-      "type": "Nothing stored"
     },
     "OFFSET_INVALID": {
       "code": 400,
@@ -53696,7 +53868,8 @@
     },
     "REPLY_TO_INVALID": {
       "code": 400,
-      "type": "REPLY_TO_INVALID"
+      "type": "REPLY_TO_INVALID",
+      "description": "The specified reply_to field is invalid."
     },
     "RESET_REQUEST_MISSING": {
       "code": 400,
@@ -53999,7 +54172,8 @@
     },
     "STORY_ID_EMPTY": {
       "code": 400,
-      "type": "STORY_ID_EMPTY"
+      "type": "STORY_ID_EMPTY",
+      "description": "You specified no story IDs."
     },
     "STORY_PERIOD_INVALID": {
       "code": 400,
@@ -54009,10 +54183,6 @@
       "code": 400,
       "type": "SWITCH_PM_TEXT_EMPTY",
       "description": "The switch_pm.text field was empty."
-    },
-    "Sorry, too many invalid attempts to enter your password. Please try again later.": {
-      "code": 400,
-      "type": "Sorry, too many invalid attempts to enter your password. Please try again later."
     },
     "TAKEOUT_INIT_DELAY_%d": {
       "code": 420,
@@ -54091,17 +54261,26 @@
     },
     "TOPICS_EMPTY": {
       "code": 400,
-      "type": "TOPICS_EMPTY"
+      "type": "TOPICS_EMPTY",
+      "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
       "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
+    "TOPIC_CLOSE_SEPARATELY": {
+      "code": 400,
+      "type": "TOPIC_CLOSE_SEPARATELY"
+    },
     "TOPIC_DELETED": {
       "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
+    },
+    "TOPIC_HIDE_SEPARATELY": {
+      "code": 400,
+      "type": "TOPIC_HIDE_SEPARATELY"
     },
     "TOPIC_ID_INVALID": {
       "code": 400,
@@ -54112,6 +54291,11 @@
       "code": 400,
       "type": "TOPIC_NOT_MODIFIED",
       "description": "The updated topic info is equal to the current topic info, nothing was changed."
+    },
+    "TOPIC_TITLE_EMPTY": {
+      "code": 400,
+      "type": "TOPIC_TITLE_EMPTY",
+      "description": "The specified topic title is empty."
     },
     "TO_LANG_INVALID": {
       "code": 400,
@@ -54192,10 +54376,6 @@
       "code": 400,
       "type": "USERNAME_PURCHASE_AVAILABLE",
       "description": "The specified username can be purchased on https://fragment.com."
-    },
-    "USERNAME_UNSYNCHRONIZED": {
-      "code": 500,
-      "type": "USERNAME_UNSYNCHRONIZED"
     },
     "USERPIC_PRIVACY_REQUIRED": {
       "code": 406,
