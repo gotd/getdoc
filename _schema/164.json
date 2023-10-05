@@ -23196,14 +23196,20 @@
     },
     "storiesStealthMode": {
       "name": "storiesStealthMode",
+      "description": [
+        "Information about the current stealth mode¹ session."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#stealth-mode"
+      ],
       "fields": {
         "active_until_date": {
           "name": "active_until_date",
-          "description": " "
+          "description": "The date up to which stealth mode will be active."
         },
         "cooldown_until_date": {
           "name": "cooldown_until_date",
-          "description": " "
+          "description": "The date starting from which the user will be allowed to re-enable stealth mode again."
         },
         "flags": {
           "name": "flags",
@@ -26579,10 +26585,19 @@
     },
     "updateStoriesStealthMode": {
       "name": "updateStoriesStealthMode",
+      "description": [
+        "Indicates that stories stealth mode¹ was activated."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#stealth-mode"
+      ],
       "fields": {
         "stealth_mode": {
           "name": "stealth_mode",
-          "description": " "
+          "description": "Information about the current stealth mode¹ session.",
+          "links": [
+            "https://core.telegram.org/api/stories#stealth-mode"
+          ]
         }
       }
     },
@@ -46558,7 +46573,7 @@
       "parameters": {
         "add_to_recent": {
           "name": "add_to_recent",
-          "description": "Add this reaction to the recent reactions list »¹.",
+          "description": "Whether to add this reaction to the recent reactions list »¹.",
           "links": [
             "https://core.telegram.org/api/reactions#recent-reactions"
           ]
@@ -50740,6 +50755,15 @@
     },
     "stories.activateStealthMode": {
       "name": "stories.activateStealthMode",
+      "description": [
+        "Activates stories stealth mode¹, see here »² for more info.",
+        "Will return an updateStoriesStealthMode¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#stealth-mode",
+        "https://core.telegram.org/api/stories#stealth-mode",
+        "https://core.telegram.org/constructor/updateStoriesStealthMode"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -50750,11 +50774,19 @@
         },
         "future": {
           "name": "future",
-          "description": " "
+          "description": "Whether to hide future story views for the next stories_stealth_future_period seconds »¹, as specified by the client configuration².",
+          "links": [
+            "https://core.telegram.org/api/config#stories-stealth-future-period",
+            "https://core.telegram.org/api/config#client-configuration"
+          ]
         },
         "past": {
           "name": "past",
-          "description": " "
+          "description": "Whether to erase views from any stories opened in the past stories_stealth_past_period seconds »¹, as specified by the client configuration².",
+          "links": [
+            "https://core.telegram.org/api/config#stories-stealth-past-period",
+            "https://core.telegram.org/api/config#client-configuration"
+          ]
         }
       }
     },
@@ -51255,10 +51287,16 @@
     },
     "stories.sendReaction": {
       "name": "stories.sendReaction",
+      "description": [
+        "React to a story."
+      ],
       "parameters": {
         "add_to_recent": {
           "name": "add_to_recent",
-          "description": " "
+          "description": "Whether to add this reaction to the recent reactions list »¹.",
+          "links": [
+            "https://core.telegram.org/api/reactions#recent-reactions"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -51269,15 +51307,15 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that sent the story"
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "Reaction"
         },
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": "ID of the story to react to"
         }
       },
       "errors": [
@@ -51339,7 +51377,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer to send the story as."
         },
         "period": {
           "name": "period",
