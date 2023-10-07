@@ -3166,7 +3166,7 @@
       "fields": {
         "expires": {
           "name": "expires",
-          "description": "Expiry date of QR code"
+          "description": "Expiration date of QR code"
         },
         "token": {
           "name": "token",
@@ -3788,14 +3788,20 @@
     },
     "booster": {
       "name": "booster",
+      "description": [
+        "Info about a boost¹ made by a specific user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ],
       "fields": {
         "expires": {
           "name": "expires",
-          "description": " "
+          "description": "Default expiration date of the boost."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that made the boost."
         }
       }
     },
@@ -6309,7 +6315,11 @@
         },
         "delete_stories": {
           "name": "delete_stories",
-          "description": " "
+          "description": "If set, allows the admin to delete stories¹ posted by the other admins of the channel².",
+          "links": [
+            "https://core.telegram.org/api/stories#channel-stories",
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "edit_messages": {
           "name": "edit_messages",
@@ -6320,7 +6330,11 @@
         },
         "edit_stories": {
           "name": "edit_stories",
-          "description": " "
+          "description": "If set, allows the admin to edit stories¹ posted by the other admins of the channel².",
+          "links": [
+            "https://core.telegram.org/api/stories#channel-stories",
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -6372,7 +6386,11 @@
         },
         "post_stories": {
           "name": "post_stories",
-          "description": " "
+          "description": "If set, allows the admin to post stories¹ as the channel².",
+          "links": [
+            "https://core.telegram.org/api/stories#channel-stories",
+            "https://core.telegram.org/api/channel"
+          ]
         }
       }
     },
@@ -9073,7 +9091,7 @@
       "fields": {
         "expires": {
           "name": "expires",
-          "description": "Its expiry date"
+          "description": "Its expiration date"
         },
         "url": {
           "name": "url",
@@ -23033,14 +23051,20 @@
     },
     "stories.boostersList": {
       "name": "stories.boostersList",
+      "description": [
+        "Info about the users currently boosting¹ the channel."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ],
       "fields": {
         "boosters": {
           "name": "boosters",
-          "description": " "
+          "description": "Info about the automatic expiration date of every user's boost."
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of boosters."
         },
         "flags": {
           "name": "flags",
@@ -23051,24 +23075,33 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Next offset for pagination¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Info about the users mentioned in the boosters field."
         }
       }
     },
     "stories.boostsStatus": {
       "name": "stories.boostsStatus",
+      "description": [
+        "The current boost status »¹ of a channel."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ],
       "fields": {
         "boosts": {
           "name": "boosts",
-          "description": " "
+          "description": "Total number of boosts acquired so far."
         },
         "current_level_boosts": {
           "name": "current_level_boosts",
-          "description": " "
+          "description": "The number of boosts acquired so far in the current level."
         },
         "flags": {
           "name": "flags",
@@ -23079,35 +23112,41 @@
         },
         "level": {
           "name": "level",
-          "description": " "
+          "description": "The current boost level of the channel."
         },
         "my_boost": {
           "name": "my_boost",
-          "description": " "
+          "description": "Whether we're currently boosting this channel."
         },
         "next_level_boosts": {
           "name": "next_level_boosts",
-          "description": " "
+          "description": "Total number of boosts needed to reach the next level; if absent, the next level isn't available."
         },
         "premium_audience": {
           "name": "premium_audience",
-          "description": " "
+          "description": "Only returned to channel admins: contains the approximated number of Premium users subscribed to the channel, related to the total number of subscribers."
         }
       }
     },
     "stories.canApplyBoostOk": {
-      "name": "stories.canApplyBoostOk"
+      "name": "stories.canApplyBoostOk",
+      "description": [
+        "We're not boosting any channel, and we can freely boost the specified channel."
+      ]
     },
     "stories.canApplyBoostReplace": {
       "name": "stories.canApplyBoostReplace",
+      "description": [
+        "We're boosting another channel, but we can freely boost the specified channel."
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Channel information."
         },
         "current_boost": {
           "name": "current_boost",
-          "description": " "
+          "description": "The channel we're currently boosting."
         }
       }
     },
@@ -28592,7 +28631,13 @@
       ]
     },
     "Booster": {
-      "name": "Booster"
+      "name": "Booster",
+      "description": [
+        "Info about a boost¹ made by a specific user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ]
     },
     "BotApp": {
       "name": "BotApp",
@@ -31114,13 +31159,31 @@
       "name": "stories.AllStories"
     },
     "stories.BoostersList": {
-      "name": "stories.BoostersList"
+      "name": "stories.BoostersList",
+      "description": [
+        "Info about the users currently boosting¹ the channel."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ]
     },
     "stories.BoostsStatus": {
-      "name": "stories.BoostsStatus"
+      "name": "stories.BoostsStatus",
+      "description": [
+        "The current boost status »¹ of a channel."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ]
     },
     "stories.CanApplyBoostResult": {
-      "name": "stories.CanApplyBoostResult"
+      "name": "stories.CanApplyBoostResult",
+      "description": [
+        "Whether the specified channel can be boosted, see here for more info »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ]
     },
     "stories.PeerStories": {
       "name": "stories.PeerStories"
@@ -34904,7 +34967,8 @@
         },
         {
           "code": 400,
-          "type": "FORUM_ENABLED"
+          "type": "FORUM_ENABLED",
+          "description": "You can't execute the specified action because the group is a forum, disable forum functionality to continue."
         },
         {
           "code": 400,
@@ -34991,10 +35055,6 @@
           "code": 400,
           "type": "CHANNELS_TOO_MUCH",
           "description": "You have joined too many channels/supergroups."
-        },
-        {
-          "code": 500,
-          "type": "CHANNEL_ID_GENERATE_FAILED"
         },
         {
           "code": 400,
@@ -37327,7 +37387,8 @@
         },
         {
           "code": 400,
-          "type": "FORUM_ENABLED"
+          "type": "FORUM_ENABLED",
+          "description": "You can't execute the specified action because the group is a forum, disable forum functionality to continue."
         }
       ]
     },
@@ -39694,6 +39755,11 @@
         },
         {
           "code": 400,
+          "type": "TTL_PERIOD_INVALID",
+          "description": "The specified TTL period is invalid."
+        },
+        {
+          "code": 400,
           "type": "USERS_TOO_FEW",
           "description": "Not enough users (to create a chat, for example)."
         },
@@ -41018,6 +41084,11 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 406,
+          "type": "PAYMENT_UNSUPPORTED",
+          "description": "A detailed description of the error will be received separately as described here »."
         },
         {
           "code": 400,
@@ -43860,10 +43931,6 @@
           "code": 400,
           "type": "CHANNELS_TOO_MUCH",
           "description": "You have joined too many channels/supergroups."
-        },
-        {
-          "code": 500,
-          "type": "CHANNEL_ID_GENERATE_FAILED"
         },
         {
           "code": 403,
@@ -48384,10 +48451,6 @@
           "description": "The length of a file part is invalid."
         },
         {
-          "code": 500,
-          "type": "FILE_WRITE_EMPTY"
-        },
-        {
           "code": 400,
           "type": "IMAGE_PROCESS_FAILED",
           "description": "Failure while processing image."
@@ -49835,10 +49898,6 @@
           "description": "The number of file parts is invalid."
         },
         {
-          "code": 500,
-          "type": "FILE_WRITE_EMPTY"
-        },
-        {
           "code": 400,
           "type": "IMAGE_PROCESS_FAILED",
           "description": "Failure while processing image."
@@ -50792,49 +50851,113 @@
     },
     "stories.applyBoost": {
       "name": "stories.applyBoost",
+      "description": [
+        "Boost »¹ a channel², leveling it up and granting it permission to post stories »³."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts",
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel to boost."
         }
       },
       "errors": [
         {
           "code": 400,
+          "type": "BOOST_NOT_MODIFIED",
+          "description": "You're already boosting the specified channel."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
     "stories.canApplyBoost": {
       "name": "stories.canApplyBoost",
+      "description": [
+        "Check whether a channel can be boosted, see here for more info »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel to boost."
         }
       },
       "errors": [
         {
           "code": 400,
+          "type": "BOOST_NOT_MODIFIED",
+          "description": "You're already boosting the specified channel."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
     "stories.canSendStory": {
       "name": "stories.canSendStory",
+      "description": [
+        "Check whether we can post stories as the specified peer."
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer from which we wish to post stories."
         }
       },
       "errors": [
         {
           "code": 400,
+          "type": "BOOSTS_REQUIRED",
+          "description": "The specified channel must first be boosted by its users in order to be able to post stories."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
+          "code": 400,
+          "type": "STORIES_TOO_MUCH"
+        },
+        {
+          "code": 400,
+          "type": "STORY_SEND_FLOOD_MONTHLY_%d"
+        },
+        {
+          "code": 400,
+          "type": "STORY_SEND_FLOOD_WEEKLY_%d"
         }
       ]
     },
@@ -50869,11 +50992,11 @@
       "parameters": {
         "caption": {
           "name": "caption",
-          "description": " "
+          "description": "If specified, replaces the story caption."
         },
         "entities": {
           "name": "entities",
-          "description": "Message entities for styled text¹",
+          "description": "Message entities for styled text in the caption¹",
           "links": [
             "https://core.telegram.org/api/entities"
           ]
@@ -50887,11 +51010,11 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "ID of story to edit."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "If specified, replaces the story media."
         },
         "media_areas": {
           "name": "media_areas",
@@ -50899,11 +51022,11 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the story was posted."
         },
         "privacy_rules": {
           "name": "privacy_rules",
-          "description": " "
+          "description": "If specified, alters the privacy settings of the story."
         }
       },
       "errors": [
@@ -50911,6 +51034,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORY_NOT_MODIFIED",
+          "description": "The new story information you passed is equal to the previous story information, thus it wasn't modified."
         }
       ]
     },
@@ -50931,6 +51059,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_PUBLIC_MISSING"
         }
       ]
     },
@@ -50963,6 +51095,13 @@
     },
     "stories.getBoostersList": {
       "name": "stories.getBoostersList",
+      "description": [
+        "Obtain info about the users currently boosting¹ a channel, see here »² for more info about boosts."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts",
+        "https://core.telegram.org/api/stories#boosts"
+      ],
       "parameters": {
         "limit": {
           "name": "limit",
@@ -50973,11 +51112,15 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Next offset for pagination¹, obtained from the next_offset field of stories.boostersList².",
+          "links": [
+            "https://core.telegram.org/api/offsets",
+            "https://core.telegram.org/constructor/stories.boostersList"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel."
         }
       },
       "errors": [
@@ -51000,10 +51143,17 @@
     },
     "stories.getBoostsStatus": {
       "name": "stories.getBoostsStatus",
+      "description": [
+        "Get the current boost status¹ of a channel, see here »² for more info on boosts."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#boosts",
+        "https://core.telegram.org/api/stories#boosts"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel"
         }
       },
       "errors": [
@@ -51434,6 +51584,10 @@
         {
           "code": 400,
           "type": "STORY_PERIOD_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "VENUE_ID_INVALID"
         }
       ]
     },
@@ -52298,6 +52452,16 @@
       "type": "BANNED_RIGHTS_INVALID",
       "description": "You provided some invalid flags in the banned rights."
     },
+    "BOOSTS_REQUIRED": {
+      "code": 400,
+      "type": "BOOSTS_REQUIRED",
+      "description": "The specified channel must first be boosted by its users in order to be able to post stories."
+    },
+    "BOOST_NOT_MODIFIED": {
+      "code": 400,
+      "type": "BOOST_NOT_MODIFIED",
+      "description": "You're already boosting the specified channel."
+    },
     "BOTS_TOO_MUCH": {
       "code": 400,
       "type": "BOTS_TOO_MUCH",
@@ -52472,10 +52636,6 @@
       "code": 400,
       "type": "CHANNEL_FORUM_MISSING",
       "description": "This supergroup is not a forum."
-    },
-    "CHANNEL_ID_GENERATE_FAILED": {
-      "code": 500,
-      "type": "CHANNEL_ID_GENERATE_FAILED"
     },
     "CHANNEL_ID_INVALID": {
       "code": 400,
@@ -52980,10 +53140,6 @@
       "type": "FILE_TOKEN_INVALID",
       "description": "The specified file token is invalid."
     },
-    "FILE_WRITE_EMPTY": {
-      "code": 500,
-      "type": "FILE_WRITE_EMPTY"
-    },
     "FILTER_ID_INVALID": {
       "code": 400,
       "type": "FILTER_ID_INVALID",
@@ -53016,7 +53172,8 @@
     },
     "FORUM_ENABLED": {
       "code": 400,
-      "type": "FORUM_ENABLED"
+      "type": "FORUM_ENABLED",
+      "description": "You can't execute the specified action because the group is a forum, disable forum functionality to continue."
     },
     "FRESH_CHANGE_ADMINS_FORBIDDEN": {
       "code": 406,
@@ -54208,14 +54365,31 @@
       "code": 400,
       "type": "STORIES_NEVER_CREATED"
     },
+    "STORIES_TOO_MUCH": {
+      "code": 400,
+      "type": "STORIES_TOO_MUCH"
+    },
     "STORY_ID_EMPTY": {
       "code": 400,
       "type": "STORY_ID_EMPTY",
       "description": "You specified no story IDs."
     },
+    "STORY_NOT_MODIFIED": {
+      "code": 400,
+      "type": "STORY_NOT_MODIFIED",
+      "description": "The new story information you passed is equal to the previous story information, thus it wasn't modified."
+    },
     "STORY_PERIOD_INVALID": {
       "code": 400,
       "type": "STORY_PERIOD_INVALID"
+    },
+    "STORY_SEND_FLOOD_MONTHLY_%d": {
+      "code": 400,
+      "type": "STORY_SEND_FLOOD_MONTHLY_%d"
+    },
+    "STORY_SEND_FLOOD_WEEKLY_%d": {
+      "code": 400,
+      "type": "STORY_SEND_FLOOD_WEEKLY_%d"
     },
     "SWITCH_PM_TEXT_EMPTY": {
       "code": 400,
@@ -54530,6 +54704,10 @@
       "type": "USER_PRIVACY_RESTRICTED",
       "description": "The user's privacy settings do not allow you to do this."
     },
+    "USER_PUBLIC_MISSING": {
+      "code": 400,
+      "type": "USER_PUBLIC_MISSING"
+    },
     "USER_RESTRICTED": {
       "code": 406,
       "type": "USER_RESTRICTED",
@@ -54539,6 +54717,10 @@
       "code": 400,
       "type": "USER_VOLUME_INVALID",
       "description": "The specified user volume is invalid."
+    },
+    "VENUE_ID_INVALID": {
+      "code": 400,
+      "type": "VENUE_ID_INVALID"
     },
     "VIDEO_CONTENT_TYPE_INVALID": {
       "code": 400,
