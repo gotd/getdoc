@@ -583,7 +583,6 @@
           "messageActionWebViewDataSentMe",
           "messageEmpty",
           "messageEntityBankCard",
-          "messageEntityBlockquote",
           "messageEntityBold",
           "messageEntityBotCommand",
           "messageEntityCashtag",
@@ -15303,28 +15302,6 @@
       "name": "messageEntityBankCard",
       "description": [
         "Indicates a credit card number"
-      ],
-      "fields": {
-        "length": {
-          "name": "length",
-          "description": "Length of message entity within message (in UTF-16 code units¹)",
-          "links": [
-            "https://core.telegram.org/api/entities#entity-length"
-          ]
-        },
-        "offset": {
-          "name": "offset",
-          "description": "Offset of message entity within message (in UTF-16 code units¹)",
-          "links": [
-            "https://core.telegram.org/api/entities#entity-length"
-          ]
-        }
-      }
-    },
-    "messageEntityBlockquote": {
-      "name": "messageEntityBlockquote",
-      "description": [
-        "Message entity representing a block quote."
       ],
       "fields": {
         "length": {
