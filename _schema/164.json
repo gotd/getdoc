@@ -4231,7 +4231,7 @@
         },
         "provider": {
           "name": "provider",
-          "description": "Venue provider: currently only \"foursquare\" needs to be supported"
+          "description": "Venue provider: currently only \"foursquare\" and \"gplaces\" (Google Places) need to be supported"
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -10630,7 +10630,7 @@
         },
         "provider": {
           "name": "provider",
-          "description": "Venue provider: currently only \"foursquare\" needs to be supported"
+          "description": "Venue provider: currently only \"foursquare\" and \"gplaces\" (Google Places) need to be supported"
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -11989,7 +11989,7 @@
         },
         "provider": {
           "name": "provider",
-          "description": "Venue provider: currently only \"foursquare\" needs to be supported"
+          "description": "Venue provider: currently only \"foursquare\" and \"gplaces\" (Google Places) need to be supported"
         },
         "title": {
           "name": "title",
@@ -14283,52 +14283,64 @@
     },
     "mediaAreaCoordinates": {
       "name": "mediaAreaCoordinates",
+      "description": [
+        "Coordinates and size of a clicable rectangular area on top of a story."
+      ],
       "fields": {
         "h": {
           "name": "h",
-          "description": " "
+          "description": "The height of the rectangle, as a percentage of the media height (0-100)."
         },
         "rotation": {
           "name": "rotation",
-          "description": " "
+          "description": "Clockwise rotation angle of the rectangle, in degrees (0-360)."
         },
         "w": {
           "name": "w",
-          "description": " "
+          "description": "The width of the rectangle, as a percentage of the media width (0-100)."
         },
         "x": {
           "name": "x",
-          "description": " "
+          "description": "The abscissa of the rectangle's center, as a percentage of the media width (0-100)."
         },
         "y": {
           "name": "y",
-          "description": " "
+          "description": "The ordinate of the rectangle's center, as a percentage of the media height (0-100)."
         }
       }
     },
     "mediaAreaGeoPoint": {
       "name": "mediaAreaGeoPoint",
+      "description": [
+        "Represents a geolocation tag attached to a story¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/story"
+      ],
       "fields": {
         "coordinates": {
           "name": "coordinates",
-          "description": " "
+          "description": "The size and position of the media area corresponding to the location sticker on top of the story media."
         },
         "geo": {
           "name": "geo",
-          "description": " "
+          "description": "Coordinates of the geolocation tag."
         }
       }
     },
     "mediaAreaSuggestedReaction": {
       "name": "mediaAreaSuggestedReaction",
+      "description": [
+        "Represents a reaction bubble."
+      ],
       "fields": {
         "coordinates": {
           "name": "coordinates",
-          "description": " "
+          "description": "The coordinates of the media area corresponding to the reaction button."
         },
         "dark": {
           "name": "dark",
-          "description": " "
+          "description": "Whether the reaction bubble has a dark background."
         },
         "flags": {
           "name": "flags",
@@ -14339,44 +14351,53 @@
         },
         "flipped": {
           "name": "flipped",
-          "description": " "
+          "description": "Whether the reaction bubble is mirrored (see here »¹ for more info).",
+          "links": [
+            "https://core.telegram.org/api/stories#reactions"
+          ]
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "The reaction that should be sent when this area is clicked."
         }
       }
     },
     "mediaAreaVenue": {
       "name": "mediaAreaVenue",
+      "description": [
+        "Represents a location tag attached to a story¹, with additional venue information."
+      ],
+      "links": [
+        "https://core.telegram.org/api/story"
+      ],
       "fields": {
         "address": {
           "name": "address",
-          "description": " "
+          "description": "Address"
         },
         "coordinates": {
           "name": "coordinates",
-          "description": " "
+          "description": "The size and location of the media area corresponding to the location sticker on top of the story media."
         },
         "geo": {
           "name": "geo",
-          "description": " "
+          "description": "Coordinates of the venue"
         },
         "provider": {
           "name": "provider",
-          "description": " "
+          "description": "Venue provider: currently only \"foursquare\" needs to be supported."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Venue name"
         },
         "venue_id": {
           "name": "venue_id",
-          "description": " "
+          "description": "Venue ID in the provider's database"
         },
         "venue_type": {
           "name": "venue_type",
-          "description": " "
+          "description": "Venue type in the provider's database"
         }
       }
     },
@@ -14468,7 +14489,7 @@
         },
         "noforwards": {
           "name": "noforwards",
-          "description": "Whether this message is protected¹ and thus cannot be forwarded",
+          "description": "Whether this message is protected¹ and thus cannot be forwarded; clients should also prevent users from saving attached media (i.e. videos should only be streamed, photos should be kept in RAM, et cetera).",
           "links": [
             "https://telegram.org/blog/protected-content-delete-by-date-and-more"
           ]
@@ -16193,7 +16214,7 @@
         },
         "provider": {
           "name": "provider",
-          "description": "Venue provider: currently only \"foursquare\" needs to be supported"
+          "description": "Venue provider: currently only \"foursquare\" and \"gplaces\" (Google Places) need to be supported"
         },
         "title": {
           "name": "title",
@@ -23238,10 +23259,16 @@
     },
     "storyItem": {
       "name": "storyItem",
+      "description": [
+        "Represents a story¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/story"
+      ],
       "fields": {
         "caption": {
           "name": "caption",
-          "description": " "
+          "description": "Story caption."
         },
         "close_friends": {
           "name": "close_friends",
@@ -23253,11 +23280,11 @@
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the story posted."
         },
         "edited": {
           "name": "edited",
-          "description": " "
+          "description": "Indicates whether the story was edited."
         },
         "entities": {
           "name": "entities",
@@ -23268,7 +23295,7 @@
         },
         "expire_date": {
           "name": "expire_date",
-          "description": " "
+          "description": "When does the story expire."
         },
         "flags": {
           "name": "flags",
@@ -23279,15 +23306,18 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "ID of the story."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "Story media."
         },
         "media_areas": {
           "name": "media_areas",
-          "description": " "
+          "description": "List of media areas, see here »¹ for more info on media areas.",
+          "links": [
+            "https://core.telegram.org/api/stories#media-areas"
+          ]
         },
         "min": {
           "name": "min",
@@ -23295,11 +23325,14 @@
         },
         "noforwards": {
           "name": "noforwards",
-          "description": " "
+          "description": "Whether this story is protected¹ and thus cannot be forwarded; clients should also prevent users from saving attached media (i.e. videos should only be streamed, photos should be kept in RAM, et cetera).",
+          "links": [
+            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+          ]
         },
         "out": {
           "name": "out",
-          "description": " "
+          "description": "indicates whether we sent this story."
         },
         "pinned": {
           "name": "pinned",
@@ -23319,7 +23352,7 @@
         },
         "sent_reaction": {
           "name": "sent_reaction",
-          "description": " "
+          "description": "The reaction we sent."
         },
         "views": {
           "name": "views",
@@ -29393,13 +29426,26 @@
     "InputPrivacyKey": {
       "name": "InputPrivacyKey",
       "description": [
-        "Privacy key"
+        "Privacy keys together with privacy rules »¹ indicate what can or can't someone do and are specified by a PrivacyKey² constructor, and its input counterpart InputPrivacyKey³.",
+        "See the privacy documentation »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy-rules#privacy-rules",
+        "https://core.telegram.org/type/PrivacyKey",
+        "https://core.telegram.org/type/InputPrivacyKey",
+        "https://core.telegram.org/api/privacy"
       ]
     },
     "InputPrivacyRule": {
       "name": "InputPrivacyRule",
       "description": [
-        "Privacy rule"
+        "Privacy rules indicate who can or can't do something and are specified by a PrivacyRule¹, and its input counterpart InputPrivacyRule².",
+        "See the privacy documentation »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/type/PrivacyRule",
+        "https://core.telegram.org/type/InputPrivacyRule",
+        "https://core.telegram.org/api/privacy"
       ]
     },
     "InputReplyTo": {
@@ -29561,7 +29607,10 @@
       "name": "MediaArea"
     },
     "MediaAreaCoordinates": {
-      "name": "MediaAreaCoordinates"
+      "name": "MediaAreaCoordinates",
+      "description": [
+        "Coordinates and size of a clicable rectangular area on top of a story."
+      ]
     },
     "Message": {
       "name": "Message",
@@ -30040,13 +30089,27 @@
     "PrivacyKey": {
       "name": "PrivacyKey",
       "description": [
-        "Privacy key"
+        "Privacy keys together with privacy rules »¹ indicate what can or can't someone do and are specified by a PrivacyKey² constructor, and its input counterpart InputPrivacyKey³.",
+        "See the privacy documentation »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy-rules#privacy-rules",
+        "https://core.telegram.org/type/PrivacyKey",
+        "https://core.telegram.org/type/InputPrivacyKey",
+        "https://core.telegram.org/api/privacy"
       ]
     },
     "PrivacyRule": {
       "name": "PrivacyRule",
       "description": [
-        "Privacy rule"
+        "Privacy rules together with privacy¹ indicate what can or can't someone do and are specified by a PrivacyKey² constructor, and its input counterpart InputPrivacyKey³.",
+        "See the privacy documentation »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy-rules#privacy-rules",
+        "https://core.telegram.org/type/PrivacyKey",
+        "https://core.telegram.org/type/InputPrivacyKey",
+        "https://core.telegram.org/api/privacy"
       ]
     },
     "Reaction": {
@@ -38013,7 +38076,7 @@
         },
         "phone": {
           "name": "phone",
-          "description": "User's phone number"
+          "description": "User's phone number, may be omitted to simply add the user to the contact list, without a phone number."
         }
       },
       "errors": [
@@ -50995,7 +51058,11 @@
         },
         "media_areas": {
           "name": "media_areas",
-          "description": " "
+          "description": "Media areas¹ associated to the story, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/stories#media-areas",
+            "https://core.telegram.org/api/stories#media-areas"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -51003,7 +51070,10 @@
         },
         "privacy_rules": {
           "name": "privacy_rules",
-          "description": "If specified, alters the privacy settings of the story."
+          "description": "If specified, alters the privacy settings »¹ of the story, changing who can or can't view the story.",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         }
       },
       "errors": [
@@ -51492,15 +51562,19 @@
         },
         "media": {
           "name": "media",
-          "description": "The media file."
+          "description": "The story media."
         },
         "media_areas": {
           "name": "media_areas",
-          "description": " "
+          "description": "Media areas¹ associated to the story, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/stories#media-areas",
+            "https://core.telegram.org/api/stories#media-areas"
+          ]
         },
         "noforwards": {
           "name": "noforwards",
-          "description": "If set, disables forwards and story download functionality."
+          "description": "If set, disables forwards, screenshots, and downloads."
         },
         "peer": {
           "name": "peer",
@@ -51508,15 +51582,21 @@
         },
         "period": {
           "name": "period",
-          "description": " "
+          "description": "Period after which the story is moved to archive (and to the profile if pinned is set), in seconds; must be one of 6 * 3600, 12 * 3600, 86400, or 2 * 86400 for Telegram Premium users, and 86400 otherwise."
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether to add the story to the profile automatically upon expiration. If not set, the story will only be added to the archive, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "privacy_rules": {
           "name": "privacy_rules",
-          "description": " "
+          "description": "Privacy rules¹ for the story, indicating who can or can't view the story.",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         },
         "random_id": {
           "name": "random_id",
