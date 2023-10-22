@@ -14315,7 +14315,7 @@
         "Represents a geolocation tag attached to a story¹."
       ],
       "links": [
-        "https://core.telegram.org/api/story"
+        "https://core.telegram.org/api/stories"
       ],
       "fields": {
         "coordinates": {
@@ -14368,7 +14368,7 @@
         "Represents a location tag attached to a story¹, with additional venue information."
       ],
       "links": [
-        "https://core.telegram.org/api/story"
+        "https://core.telegram.org/api/stories"
       ],
       "fields": {
         "address": {
@@ -23263,7 +23263,7 @@
         "Represents a story¹."
       ],
       "links": [
-        "https://core.telegram.org/api/story"
+        "https://core.telegram.org/api/stories"
       ],
       "fields": {
         "caption": {
@@ -29430,7 +29430,7 @@
         "See the privacy documentation »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/privacy-rules#privacy-rules",
+        "https://core.telegram.org/api/privacy#privacy-rules",
         "https://core.telegram.org/type/PrivacyKey",
         "https://core.telegram.org/type/InputPrivacyKey",
         "https://core.telegram.org/api/privacy"
@@ -30093,7 +30093,7 @@
         "See the privacy documentation »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/privacy-rules#privacy-rules",
+        "https://core.telegram.org/api/privacy#privacy-rules",
         "https://core.telegram.org/type/PrivacyKey",
         "https://core.telegram.org/type/InputPrivacyKey",
         "https://core.telegram.org/api/privacy"
@@ -30106,7 +30106,7 @@
         "See the privacy documentation »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/privacy-rules#privacy-rules",
+        "https://core.telegram.org/api/privacy#privacy-rules",
         "https://core.telegram.org/type/PrivacyKey",
         "https://core.telegram.org/type/InputPrivacyKey",
         "https://core.telegram.org/api/privacy"
@@ -43973,6 +43973,10 @@
           "description": "You have joined too many channels/supergroups."
         },
         {
+          "code": 500,
+          "type": "CHANNEL_ID_GENERATE_FAILED"
+        },
+        {
           "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
@@ -50989,15 +50993,18 @@
         },
         {
           "code": 400,
-          "type": "STORIES_TOO_MUCH"
+          "type": "STORIES_TOO_MUCH",
+          "description": "You have hit the maximum active stories limit as specified by the story_expiring_limit_* client configuration parameters: you should buy a Premium subscription, delete an active story, or wait for the oldest story to expire."
         },
         {
           "code": 400,
-          "type": "STORY_SEND_FLOOD_MONTHLY_%d"
+          "type": "STORY_SEND_FLOOD_MONTHLY_%d",
+          "description": "You've hit the monthly story limit as specified by the stories_sent_monthly_limit_* client configuration parameters: wait for the specified number of seconds before posting a new story."
         },
         {
           "code": 400,
-          "type": "STORY_SEND_FLOOD_WEEKLY_%d"
+          "type": "STORY_SEND_FLOOD_WEEKLY_%d",
+          "description": "You've hit the weekly story limit as specified by the stories_sent_weekly_limit_* client configuration parameters: wait for the specified number of seconds before posting a new story."
         }
       ]
     },
@@ -51317,6 +51324,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -51640,7 +51652,13 @@
         },
         {
           "code": 400,
-          "type": "STORY_PERIOD_INVALID"
+          "type": "STORIES_TOO_MUCH",
+          "description": "You have hit the maximum active stories limit as specified by the story_expiring_limit_* client configuration parameters: you should buy a Premium subscription, delete an active story, or wait for the oldest story to expire."
+        },
+        {
+          "code": 400,
+          "type": "STORY_PERIOD_INVALID",
+          "description": "The specified story period is invalid for this account."
         },
         {
           "code": 400,
@@ -52693,6 +52711,10 @@
       "code": 400,
       "type": "CHANNEL_FORUM_MISSING",
       "description": "This supergroup is not a forum."
+    },
+    "CHANNEL_ID_GENERATE_FAILED": {
+      "code": 500,
+      "type": "CHANNEL_ID_GENERATE_FAILED"
     },
     "CHANNEL_ID_INVALID": {
       "code": 400,
@@ -54424,7 +54446,8 @@
     },
     "STORIES_TOO_MUCH": {
       "code": 400,
-      "type": "STORIES_TOO_MUCH"
+      "type": "STORIES_TOO_MUCH",
+      "description": "You have hit the maximum active stories limit as specified by the story_expiring_limit_* client configuration parameters: you should buy a Premium subscription, delete an active story, or wait for the oldest story to expire."
     },
     "STORY_ID_EMPTY": {
       "code": 400,
@@ -54438,15 +54461,18 @@
     },
     "STORY_PERIOD_INVALID": {
       "code": 400,
-      "type": "STORY_PERIOD_INVALID"
+      "type": "STORY_PERIOD_INVALID",
+      "description": "The specified story period is invalid for this account."
     },
     "STORY_SEND_FLOOD_MONTHLY_%d": {
       "code": 400,
-      "type": "STORY_SEND_FLOOD_MONTHLY_%d"
+      "type": "STORY_SEND_FLOOD_MONTHLY_%d",
+      "description": "You've hit the monthly story limit as specified by the stories_sent_monthly_limit_* client configuration parameters: wait for the specified number of seconds before posting a new story."
     },
     "STORY_SEND_FLOOD_WEEKLY_%d": {
       "code": 400,
-      "type": "STORY_SEND_FLOOD_WEEKLY_%d"
+      "type": "STORY_SEND_FLOOD_WEEKLY_%d",
+      "description": "You've hit the weekly story limit as specified by the stories_sent_weekly_limit_* client configuration parameters: wait for the specified number of seconds before posting a new story."
     },
     "SWITCH_PM_TEXT_EMPTY": {
       "code": 400,
