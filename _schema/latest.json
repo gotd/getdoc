@@ -25657,7 +25657,10 @@
     "updatePeerBlocked": {
       "name": "updatePeerBlocked",
       "description": [
-        "A peer was blocked"
+        "We blocked a peer, see here »¹ for more info on blocklists."
+      ],
+      "links": [
+        "https://core.telegram.org/api/block"
       ],
       "fields": {
         "blocked": {
@@ -25666,7 +25669,10 @@
         },
         "blocked_my_stories_from": {
           "name": "blocked_my_stories_from",
-          "description": " "
+          "description": "Whether the peer was added/removed to/from the story blocklist; if not set, this update affects the main blocklist, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -25677,7 +25683,7 @@
         },
         "peer_id": {
           "name": "peer_id",
-          "description": "The blocked peer"
+          "description": "The (un)blocked peer"
         }
       }
     },
@@ -35032,7 +35038,10 @@
         },
         "address": {
           "name": "address",
-          "description": "Geogroup address"
+          "description": "Geogroup address, see here »¹ for more info on geogroups.",
+          "links": [
+            "https://core.telegram.org/api/nearby"
+          ]
         },
         "broadcast": {
           "name": "broadcast",
@@ -35064,7 +35073,10 @@
         },
         "geo_point": {
           "name": "geo_point",
-          "description": "Geogroup location"
+          "description": "Geogroup location, see here »¹ for more info on geogroups.",
+          "links": [
+            "https://core.telegram.org/api/nearby"
+          ]
         },
         "megagroup": {
           "name": "megagroup",
@@ -35834,7 +35846,10 @@
     "channels.editLocation": {
       "name": "channels.editLocation",
       "description": [
-        "Edit location of geogroup"
+        "Edit location of geogroup, see here »¹ for more info on geogroups."
+      ],
+      "links": [
+        "https://core.telegram.org/api/nearby"
       ],
       "parameters": {
         "address": {
@@ -38105,7 +38120,10 @@
     "contacts.block": {
       "name": "contacts.block",
       "description": [
-        "Adds the user to the blacklist."
+        "Adds a peer to a blocklist, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/block"
       ],
       "parameters": {
         "flags": {
@@ -38117,11 +38135,14 @@
         },
         "id": {
           "name": "id",
-          "description": "User ID"
+          "description": "Peer"
         },
         "my_stories_from": {
           "name": "my_stories_from",
-          "description": " "
+          "description": "Whether the peer should be added to the story blocklist; if not set, the peer will be added to the main blocklist, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         }
       },
       "errors": [
@@ -38293,7 +38314,10 @@
     "contacts.getLocated": {
       "name": "contacts.getLocated",
       "description": [
-        "Get contacts near you"
+        "Get users and geochats near you, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/nearby"
       ],
       "parameters": {
         "background": {
@@ -38633,7 +38657,10 @@
     "contacts.unblock": {
       "name": "contacts.unblock",
       "description": [
-        "Deletes the user from the blacklist."
+        "Deletes a peer from a blocklist, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/block"
       ],
       "parameters": {
         "flags": {
@@ -38645,11 +38672,14 @@
         },
         "id": {
           "name": "id",
-          "description": "User ID"
+          "description": "Peer"
         },
         "my_stories_from": {
           "name": "my_stories_from",
-          "description": " "
+          "description": "Whether the peer should be removed from the story blocklist; if not set, the peer will be removed from the main blocklist, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         }
       },
       "errors": [
