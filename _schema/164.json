@@ -12781,6 +12781,9 @@
     },
     "inputReplyToMessage": {
       "name": "inputReplyToMessage",
+      "description": [
+        "Reply to a message."
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -12791,24 +12794,27 @@
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
-          "description": " "
+          "description": "The message ID to reply to."
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "This field must contain the topic ID only when replying to messages in forum topics different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1).  If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic."
         }
       }
     },
     "inputReplyToStory": {
       "name": "inputReplyToStory",
+      "description": [
+        "Reply to a story."
+      ],
       "fields": {
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": "ID of the story to reply to."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that posted the story."
         }
       }
     },
@@ -19559,7 +19565,11 @@
     "peerSettings": {
       "name": "peerSettings",
       "description": [
-        "List of actions that are possible when interacting with this user, to be shown as suggested actions in the chat bar"
+        "List of actions that are possible when interacting with this user, to be shown as suggested actions in the chat action bar »¹, see here »² for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/action-bar",
+        "https://core.telegram.org/api/action-bar"
       ],
       "fields": {
         "add_contact": {
@@ -24258,7 +24268,7 @@
     "updateChannel": {
       "name": "updateChannel",
       "description": [
-        "A new channel is available"
+        "A new channel or supergroup is available, or info about an existing channel has changed and must be refeteched."
       ],
       "fields": {
         "channel_id": {
@@ -29455,7 +29465,10 @@
       ]
     },
     "InputReplyTo": {
-      "name": "InputReplyTo"
+      "name": "InputReplyTo",
+      "description": [
+        "Contains info about a message or story to reply to."
+      ]
     },
     "InputSecureFile": {
       "name": "InputSecureFile",
@@ -38022,10 +38035,10 @@
     "contacts.acceptContact": {
       "name": "contacts.acceptContact",
       "description": [
-        "If the peer settings¹ of a new user allow us to add them as contact, add that user as contact"
+        "If the add contact action bar is active¹, add that user as contact"
       ],
       "links": [
-        "https://core.telegram.org/constructor/peerSettings"
+        "https://core.telegram.org/api/action-bar#add-contact"
       ],
       "parameters": {
         "id": {
@@ -38236,10 +38249,19 @@
     },
     "contacts.editCloseFriends": {
       "name": "contacts.editCloseFriends",
+      "description": [
+        "Edit the close friends list, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Full list of user IDs of close friends, see here¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         }
       }
     },
@@ -38272,7 +38294,10 @@
         },
         "my_stories_from": {
           "name": "my_stories_from",
-          "description": " "
+          "description": "Whether to fetch the story blocklist; if not set, will fetch the main blocklist. See here »¹ for differences between the two.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         },
         "offset": {
           "name": "offset",
@@ -38614,6 +38639,12 @@
     },
     "contacts.setBlocked": {
       "name": "contacts.setBlocked",
+      "description": [
+        "Replace the contents of an entire blocklist, see here for more info »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/contacts"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -38624,7 +38655,7 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Full content of the blocklist."
         },
         "limit": {
           "name": "limit",
@@ -38635,7 +38666,10 @@
         },
         "my_stories_from": {
           "name": "my_stories_from",
-          "description": " "
+          "description": "Whether to edit the story blocklist; if not set, will edit the main blocklist. See here »¹ for differences between the two.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         }
       }
     },
@@ -43786,10 +43820,11 @@
     "messages.hidePeerSettingsBar": {
       "name": "messages.hidePeerSettingsBar",
       "description": [
-        "Should be called after the user hides the report spam/add as contact bar of a new chat, effectively prevents the user from executing the actions specified in the peer's settings¹."
+        "Should be called after the user hides the report spam/add as contact bar¹ of a new chat, effectively prevents the user from executing the actions specified in the action bar »²."
       ],
       "links": [
-        "https://core.telegram.org/constructor/peerSettings"
+        "https://core.telegram.org/api/action-bar",
+        "https://core.telegram.org/api/action-bar"
       ],
       "parameters": {
         "peer": {
@@ -44057,7 +44092,10 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent in reply to the specified message or story.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+          ]
         },
         "send_as": {
           "name": "send_as",
@@ -44771,7 +44809,10 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the inline message that will be sent by the bot on behalf of the user once the web app interaction is terminated¹ should be sent in reply to the specified message or story.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendWebViewResultMessage"
+          ]
         },
         "send_as": {
           "name": "send_as",
@@ -45564,7 +45605,7 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the message should be sent in reply to the specified message or story."
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -45804,7 +45845,7 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the message should be sent in reply to the specified message or story."
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -46260,7 +46301,7 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the message should be sent in reply to the specified message or story."
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -46566,7 +46607,7 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the message should be sent in reply to the specified message or story."
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -46854,7 +46895,7 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "Indicates the message that was screenshotted (the specified message ID can also be 0 to avoid indicating any specific message)."
         }
       },
       "errors": [
