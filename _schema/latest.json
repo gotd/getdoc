@@ -27538,7 +27538,10 @@
         },
         "stories_hidden": {
           "name": "stories_hidden",
-          "description": " "
+          "description": "Whether we have hidden »¹ all active stories of this user.",
+          "links": [
+            "https://core.telegram.org/api/stories#hiding-stories-of-other-users"
+          ]
         },
         "stories_max_id": {
           "name": "stories_max_id",
@@ -30121,13 +30124,13 @@
     "PrivacyRule": {
       "name": "PrivacyRule",
       "description": [
-        "Privacy rules together with privacy¹ indicate what can or can't someone do and are specified by a PrivacyKey² constructor, and its input counterpart InputPrivacyKey³.",
+        "Privacy rules together with privacy keys¹ indicate what can or can't someone do and are specified by a PrivacyRule² constructor, and its input counterpart InputPrivacyRule³.",
         "See the privacy documentation »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/privacy#privacy-rules",
-        "https://core.telegram.org/type/PrivacyKey",
-        "https://core.telegram.org/type/InputPrivacyKey",
+        "https://core.telegram.org/api/privacy#privacy-keys",
+        "https://core.telegram.org/type/PrivacyRule",
+        "https://core.telegram.org/type/InputPrivacyRule",
         "https://core.telegram.org/api/privacy"
       ]
     },
@@ -51748,14 +51751,20 @@
     },
     "stories.togglePeerStoriesHidden": {
       "name": "stories.togglePeerStoriesHidden",
+      "description": [
+        "Hide the active stories of a user, preventing them from being displayed on the action bar on the homescreen, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#hiding-stories-of-other-users"
+      ],
       "parameters": {
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "Whether to hide or unhide stories."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer whose stories should be (un)hidden."
         }
       },
       "errors": [
