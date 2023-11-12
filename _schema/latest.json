@@ -3791,7 +3791,7 @@
         "Info about a boost¹ made by a specific user."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ],
       "fields": {
         "expires": {
@@ -5766,6 +5766,10 @@
         "unread_count": {
           "name": "unread_count",
           "description": "Count of unread messages"
+        },
+        "view_forum_as_messages": {
+          "name": "view_forum_as_messages",
+          "description": " "
         }
       }
     },
@@ -7952,6 +7956,10 @@
         "unread_reactions_count": {
           "name": "unread_reactions_count",
           "description": "Number of unread reactions to messages you sent"
+        },
+        "view_forum_as_messages": {
+          "name": "view_forum_as_messages",
+          "description": " "
         }
       }
     },
@@ -23063,7 +23071,7 @@
         "Info about the users currently boosting¹ the channel."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ],
       "fields": {
         "boosters": {
@@ -23100,7 +23108,7 @@
         "The current boost status »¹ of a channel."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ],
       "fields": {
         "boosts": {
@@ -26275,18 +26283,24 @@
     },
     "updateSentStoryReaction": {
       "name": "updateSentStoryReaction",
+      "description": [
+        "Indicates we reacted to a story »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#reactions"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that sent the story"
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "The reaction that was sent"
         },
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": "ID of the story we reacted to"
         }
       }
     },
@@ -26668,14 +26682,17 @@
     },
     "updateStory": {
       "name": "updateStory",
+      "description": [
+        "A new story was posted."
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "ID of the poster."
         },
         "story": {
           "name": "story",
-          "description": " "
+          "description": "The story that was posted."
         }
       }
     },
@@ -28665,7 +28682,7 @@
         "Info about a boost¹ made by a specific user."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ]
     },
     "BotApp": {
@@ -31226,7 +31243,7 @@
         "Info about the users currently boosting¹ the channel."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ]
     },
     "stories.BoostsStatus": {
@@ -31235,7 +31252,7 @@
         "The current boost status »¹ of a channel."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ]
     },
     "stories.CanApplyBoostResult": {
@@ -31244,7 +31261,7 @@
         "Whether the specified channel can be boosted, see here for more info »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ]
     },
     "stories.PeerStories": {
@@ -50973,7 +50990,7 @@
         "Boost »¹ a channel², leveling it up and granting it permission to post stories »³."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts",
+        "https://core.telegram.org/api/boost",
         "https://core.telegram.org/api/channel",
         "https://core.telegram.org/api/stories"
       ],
@@ -51007,7 +51024,7 @@
         "Check whether a channel can be boosted, see here for more info »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost"
       ],
       "parameters": {
         "peer": {
@@ -51227,8 +51244,8 @@
         "Obtain info about the users currently boosting¹ a channel, see here »² for more info about boosts."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts",
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/boost"
       ],
       "parameters": {
         "limit": {
@@ -51275,8 +51292,8 @@
         "Get the current boost status¹ of a channel, see here »² for more info on boosts."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#boosts",
-        "https://core.telegram.org/api/stories#boosts"
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/boost"
       ],
       "parameters": {
         "peer": {
@@ -51497,7 +51514,7 @@
       "parameters": {
         "id": {
           "name": "id",
-          "description": "IDs of the stories."
+          "description": "IDs of the stories (maximum 200 at a time)."
         },
         "peer": {
           "name": "peer",
