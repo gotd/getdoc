@@ -29118,7 +29118,13 @@
       ]
     },
     "ExportedStoryLink": {
-      "name": "ExportedStoryLink"
+      "name": "ExportedStoryLink",
+      "description": [
+        "Represents a story deep link¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#story-links"
+      ]
     },
     "FileHash": {
       "name": "FileHash",
@@ -29643,7 +29649,13 @@
       ]
     },
     "MediaArea": {
-      "name": "MediaArea"
+      "name": "MediaArea",
+      "description": [
+        "Represents a story media area »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#media-areas"
+      ]
     },
     "MediaAreaCoordinates": {
       "name": "MediaAreaCoordinates",
@@ -29700,7 +29712,10 @@
       ]
     },
     "MessagePeerVote": {
-      "name": "MessagePeerVote"
+      "name": "MessagePeerVote",
+      "description": [
+        "How a user voted in a poll"
+      ]
     },
     "MessageRange": {
       "name": "MessageRange",
@@ -30030,7 +30045,13 @@
       ]
     },
     "PeerStories": {
-      "name": "PeerStories"
+      "name": "PeerStories",
+      "description": [
+        "Stories¹ associated to a peer"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "Phone.PhoneCall": {
       "name": "Phone.PhoneCall",
@@ -30439,16 +30460,40 @@
       ]
     },
     "StoriesStealthMode": {
-      "name": "StoriesStealthMode"
+      "name": "StoriesStealthMode",
+      "description": [
+        "Story stealth mode status¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#stealth-mode"
+      ]
     },
     "StoryItem": {
-      "name": "StoryItem"
+      "name": "StoryItem",
+      "description": [
+        "Represents a Telegram Story¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "StoryView": {
-      "name": "StoryView"
+      "name": "StoryView",
+      "description": [
+        "Story¹ view date and reaction information"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "StoryViews": {
-      "name": "StoryViews"
+      "name": "StoryViews",
+      "description": [
+        "View date and reaction information of multiple stories¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "TextWithEntities": {
       "name": "TextWithEntities",
@@ -31235,7 +31280,13 @@
       ]
     },
     "stories.AllStories": {
-      "name": "stories.AllStories"
+      "name": "stories.AllStories",
+      "description": [
+        "Full list of active (or active and hidden) stories¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ]
     },
     "stories.BoostersList": {
       "name": "stories.BoostersList",
@@ -31265,16 +31316,40 @@
       ]
     },
     "stories.PeerStories": {
-      "name": "stories.PeerStories"
+      "name": "stories.PeerStories",
+      "description": [
+        "Active story list¹ of a specific peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ]
     },
     "stories.Stories": {
-      "name": "stories.Stories"
+      "name": "stories.Stories",
+      "description": [
+        "List of stories¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+      ]
     },
     "stories.StoryViews": {
-      "name": "stories.StoryViews"
+      "name": "stories.StoryViews",
+      "description": [
+        "Reaction and view counters for a list of stories¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "stories.StoryViewsList": {
-      "name": "stories.StoryViewsList"
+      "name": "stories.StoryViewsList",
+      "description": [
+        "Reaction and view counters for a story¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "string": {
       "name": "string",
@@ -51127,6 +51202,12 @@
     },
     "stories.editStory": {
       "name": "stories.editStory",
+      "description": [
+        "Edit an uploaded story¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "caption": {
           "name": "caption",
@@ -51189,14 +51270,20 @@
     },
     "stories.exportStoryLink": {
       "name": "stories.exportStoryLink",
+      "description": [
+        "Generate a story deep link¹ for a specific story"
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#story-links"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the story was posted"
         }
       },
       "errors": [
@@ -51212,10 +51299,23 @@
       ]
     },
     "stories.getAllReadPeerStories": {
-      "name": "stories.getAllReadPeerStories"
+      "name": "stories.getAllReadPeerStories",
+      "description": [
+        "Obtain the latest read story ID for all peers when first logging in, returned as a list of updateReadStories¹ updates, see here »² for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateReadStories",
+        "https://core.telegram.org/api/stories#watching-stories"
+      ]
     },
     "stories.getAllStories": {
       "name": "stories.getAllStories",
+      "description": [
+        "Fetch the List of active (or active and hidden) stories, see here »¹ for more info on watching stories."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -51226,15 +51326,24 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "If set, fetches the hidden active story list, otherwise fetches the active story list, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/stories#watching-stories"
+          ]
         },
         "next": {
           "name": "next",
-          "description": " "
+          "description": "If next and state are both set, uses the passed state to paginate to the next results; if neither state nor next are set, fetches the initial page; if state is set and next is not set, check for changes in the active/hidden peerset, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/stories#watching-stories"
+          ]
         },
         "state": {
           "name": "state",
-          "description": " "
+          "description": "If next and state are both set, uses the passed state to paginate to the next results; if neither state nor next are set, fetches the initial page; if state is set and next is not set, check for changes in the active/hidden peerset, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/stories#watching-stories"
+          ]
         }
       }
     },
@@ -51310,7 +51419,13 @@
       ]
     },
     "stories.getChatsToSend": {
-      "name": "stories.getChatsToSend"
+      "name": "stories.getChatsToSend",
+      "description": [
+        "Obtain a list of channels where the user can post stories¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "stories.getPeerMaxIDs": {
       "name": "stories.getPeerMaxIDs",
@@ -51323,10 +51438,16 @@
     },
     "stories.getPeerStories": {
       "name": "stories.getPeerStories",
+      "description": [
+        "Fetch the full active story list¹ of a specific peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer whose stories should be fetched"
         }
       },
       "errors": [
@@ -51339,6 +51460,12 @@
     },
     "stories.getPinnedStories": {
       "name": "stories.getPinnedStories",
+      "description": [
+        "Fetch the stories¹ pinned on a peer's profile."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+      ],
       "parameters": {
         "limit": {
           "name": "limit",
@@ -51356,7 +51483,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer whose pinned stories should be fetched"
         }
       },
       "errors": [
@@ -51374,6 +51501,12 @@
     },
     "stories.getStoriesArchive": {
       "name": "stories.getStoriesArchive",
+      "description": [
+        "Fetch the story archive »¹ of a peer we control."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+      ],
       "parameters": {
         "limit": {
           "name": "limit",
@@ -51391,7 +51524,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer whose archived stories should be fetched"
         }
       },
       "errors": [
@@ -51404,14 +51537,20 @@
     },
     "stories.getStoriesByID": {
       "name": "stories.getStoriesByID",
+      "description": [
+        "Obtain full info about a set of stories¹ by their IDs."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story IDs"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the stories were posted"
         }
       },
       "errors": [
@@ -51438,14 +51577,20 @@
     },
     "stories.getStoriesViews": {
       "name": "stories.getStoriesViews",
+      "description": [
+        "Obtain info about the view count, forward count, reactions and recent viewers of one or more stories¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story IDs"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer whose stories should be fetched"
         }
       },
       "errors": [
@@ -51458,6 +51603,12 @@
     },
     "stories.getStoryViewsList": {
       "name": "stories.getStoryViewsList",
+      "description": [
+        "Obtain the list of users that have viewed a specific story we posted¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -51468,11 +51619,14 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         },
         "just_contacts": {
           "name": "just_contacts",
-          "description": " "
+          "description": "Whether to only fetch view reaction/views made by our contacts¹",
+          "links": [
+            "https://core.telegram.org/api/contacts"
+          ]
         },
         "limit": {
           "name": "limit",
@@ -51483,15 +51637,18 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination, obtained from stories.storyViewsList¹.next_offset",
+          "links": [
+            "https://core.telegram.org/constructor/stories.storyViewsList"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the story was posted"
         },
         "q": {
           "name": "q",
-          "description": " "
+          "description": "Search for specific peers"
         },
         "reactions_first": {
           "name": "reactions_first",
@@ -51531,10 +51688,16 @@
     },
     "stories.readStories": {
       "name": "stories.readStories",
+      "description": [
+        "Mark all stories up to a certain ID as read, for a given peer; will emit an updateReadStories¹ update to all logged-in sessions."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateReadStories"
+      ],
       "parameters": {
         "max_id": {
           "name": "max_id",
-          "description": " "
+          "description": "Mark all stories up to and including this ID as read"
         },
         "peer": {
           "name": "peer",
@@ -51759,10 +51922,13 @@
     },
     "stories.toggleAllStoriesHidden": {
       "name": "stories.toggleAllStoriesHidden",
+      "description": [
+        "Hide the active stories of a specific peer, preventing them from being displayed on the action bar on the homescreen."
+      ],
       "parameters": {
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "Whether to hide or unhide all active stories of the peer"
         }
       }
     },
@@ -51794,18 +51960,21 @@
     },
     "stories.togglePinned": {
       "name": "stories.togglePinned",
+      "description": [
+        "Pin or unpin one or more stories"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of stories to pin or unpin"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where to pin or unpin stories"
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether to pin or unpin the stories"
         }
       },
       "errors": [
