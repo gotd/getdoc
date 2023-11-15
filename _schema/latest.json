@@ -5742,7 +5742,10 @@
         },
         "stories": {
           "name": "stories",
-          "description": " "
+          "description": "Channel stories¹",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "stories_pinned_available": {
           "name": "stories_pinned_available",
@@ -6749,7 +6752,7 @@
         },
         "fake": {
           "name": "fake",
-          "description": " "
+          "description": "If set, this chat was reported by many users as a fake or scam: be careful when interacting with it."
         },
         "flags": {
           "name": "flags",
@@ -6793,7 +6796,7 @@
         },
         "scam": {
           "name": "scam",
-          "description": " "
+          "description": "This chat is probably a scam"
         },
         "title": {
           "name": "title",
@@ -6801,7 +6804,7 @@
         },
         "verified": {
           "name": "verified",
-          "description": " "
+          "description": "Is this chat or channel verified by Telegram?"
         }
       }
     },
@@ -9127,10 +9130,19 @@
     },
     "exportedStoryLink": {
       "name": "exportedStoryLink",
+      "description": [
+        "Represents a story deep link¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#story-links"
+      ],
       "fields": {
         "link": {
           "name": "link",
-          "description": " "
+          "description": "The story deep link¹.",
+          "links": [
+            "https://core.telegram.org/api/stories#story-links"
+          ]
         }
       }
     },
@@ -11545,18 +11557,32 @@
     },
     "inputMediaAreaVenue": {
       "name": "inputMediaAreaVenue",
+      "description": [
+        "Represents a location tag¹ attached to a story², with additional venue information."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#media-areas",
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "coordinates": {
           "name": "coordinates",
-          "description": " "
+          "description": "The size and location of the media area corresponding to the location sticker on top of the story media."
         },
         "query_id": {
           "name": "query_id",
-          "description": " "
+          "description": "The query_id from messages.botResults¹, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/constructor/messages.botResults",
+            "https://core.telegram.org/api/stories#media-areas"
+          ]
         },
         "result_id": {
           "name": "result_id",
-          "description": " "
+          "description": "The id of the chosen result, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/stories#media-areas"
+          ]
         }
       }
     },
@@ -11882,14 +11908,17 @@
     },
     "inputMediaStory": {
       "name": "inputMediaStory",
+      "description": [
+        "Forwarded story"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the story was posted"
         }
       }
     },
@@ -12653,7 +12682,10 @@
       }
     },
     "inputPrivacyKeyAbout": {
-      "name": "inputPrivacyKeyAbout"
+      "name": "inputPrivacyKeyAbout",
+      "description": [
+        "Whether people can see your bio"
+      ]
     },
     "inputPrivacyKeyAddedByPhone": {
       "name": "inputPrivacyKeyAddedByPhone",
@@ -12731,7 +12763,13 @@
       }
     },
     "inputPrivacyValueAllowCloseFriends": {
-      "name": "inputPrivacyValueAllowCloseFriends"
+      "name": "inputPrivacyValueAllowCloseFriends",
+      "description": [
+        "Allow only close friends »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy"
+      ]
     },
     "inputPrivacyValueAllowContacts": {
       "name": "inputPrivacyValueAllowContacts",
@@ -13685,7 +13723,7 @@
         },
         "terms_url": {
           "name": "terms_url",
-          "description": " "
+          "description": "Terms of service URL"
         },
         "test": {
           "name": "test",
@@ -16304,48 +16342,60 @@
     },
     "messagePeerVote": {
       "name": "messagePeerVote",
+      "description": [
+        "How a peer voted in a poll"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When did the peer cast the vote"
         },
         "option": {
           "name": "option",
-          "description": " "
+          "description": "The option chosen by the peer"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer ID"
         }
       }
     },
     "messagePeerVoteInputOption": {
       "name": "messagePeerVoteInputOption",
+      "description": [
+        "How a peer voted in a poll (reduced constructor, returned if an option was provided to messages.getPollVotes¹)"
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.getPollVotes"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When did the peer cast the vote"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that voted for the queried option"
         }
       }
     },
     "messagePeerVoteMultiple": {
       "name": "messagePeerVoteMultiple",
+      "description": [
+        "How a peer voted in a multiple-choice poll"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When did the peer cast their votes"
         },
         "options": {
           "name": "options",
-          "description": " "
+          "description": "Options chosen by the peer"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer ID"
         }
       }
     },
@@ -16511,14 +16561,20 @@
     },
     "messageReplyStoryHeader": {
       "name": "messageReplyStoryHeader",
+      "description": [
+        "Represents a reply to a story¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": "Story ID"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that posted a story"
         }
       }
     },
@@ -18145,7 +18201,7 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "count": {
           "name": "count",
@@ -19649,6 +19705,12 @@
     },
     "peerStories": {
       "name": "peerStories",
+      "description": [
+        "Stories¹ associated to a peer"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -19659,15 +19721,15 @@
         },
         "max_read_id": {
           "name": "max_read_id",
-          "description": " "
+          "description": "If set, contains the ID of the maximum read story"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer"
         },
         "stories": {
           "name": "stories",
-          "description": " "
+          "description": "Stories"
         }
       }
     },
@@ -20799,7 +20861,10 @@
       }
     },
     "privacyKeyAbout": {
-      "name": "privacyKeyAbout"
+      "name": "privacyKeyAbout",
+      "description": [
+        "Whether people can see your bio"
+      ]
     },
     "privacyKeyAddedByPhone": {
       "name": "privacyKeyAddedByPhone",
@@ -20877,7 +20942,13 @@
       }
     },
     "privacyValueAllowCloseFriends": {
-      "name": "privacyValueAllowCloseFriends"
+      "name": "privacyValueAllowCloseFriends",
+      "description": [
+        "Allow only close friends »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy"
+      ]
     },
     "privacyValueAllowContacts": {
       "name": "privacyValueAllowContacts",
@@ -23007,14 +23078,20 @@
     },
     "stories.allStories": {
       "name": "stories.allStories",
+      "description": [
+        "Full list of active (or active and hidden) stories¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of active (or active and hidden) stories"
         },
         "flags": {
           "name": "flags",
@@ -23025,28 +23102,40 @@
         },
         "has_more": {
           "name": "has_more",
-          "description": " "
+          "description": "Whether more results can be fetched as described here »¹.",
+          "links": [
+            "https://core.telegram.org/api/stories#watching-stories"
+          ]
         },
         "peer_stories": {
           "name": "peer_stories",
-          "description": " "
+          "description": "Stories"
         },
         "state": {
           "name": "state",
-          "description": " "
+          "description": "State to use for pagination"
         },
         "stealth_mode": {
           "name": "stealth_mode",
-          "description": " "
+          "description": "Current stealth mode¹ information",
+          "links": [
+            "https://core.telegram.org/api/stories#stealth-mode"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "stories.allStoriesNotModified": {
       "name": "stories.allStoriesNotModified",
+      "description": [
+        "The list of active (or active and hidden) stories¹ has not changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -23057,11 +23146,14 @@
         },
         "state": {
           "name": "state",
-          "description": " "
+          "description": "State to use to ask for updates"
         },
         "stealth_mode": {
           "name": "stealth_mode",
-          "description": " "
+          "description": "Current stealth mode¹ information",
+          "links": [
+            "https://core.telegram.org/api/stories#stealth-mode"
+          ]
         }
       }
     },
@@ -23168,61 +23260,85 @@
     },
     "stories.peerStories": {
       "name": "stories.peerStories",
+      "description": [
+        "Active story list¹ of a specific peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#watching-stories"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "stories": {
           "name": "stories",
-          "description": " "
+          "description": "Stories"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "stories.stories": {
       "name": "stories.stories",
+      "description": [
+        "List of stories¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of stories that can be fetched"
         },
         "stories": {
           "name": "stories",
-          "description": " "
+          "description": "Stories"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "stories.storyViews": {
       "name": "stories.storyViews",
+      "description": [
+        "Reaction and view counters for a list of stories¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         },
         "views": {
           "name": "views",
-          "description": " "
+          "description": "View date and reaction information of multiple stories"
         }
       }
     },
     "stories.storyViewsList": {
       "name": "stories.storyViewsList",
+      "description": [
+        "Reaction and view counters for a story¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results that can be fetched"
         },
         "flags": {
           "name": "flags",
@@ -23233,7 +23349,7 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset for pagination"
         },
         "reactions_count": {
           "name": "reactions_count",
@@ -23241,11 +23357,11 @@
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         },
         "views": {
           "name": "views",
-          "description": " "
+          "description": "Story view date and reaction information"
         }
       }
     },
@@ -23354,15 +23470,18 @@
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether this story is pinned on the user's profile"
         },
         "privacy": {
           "name": "privacy",
-          "description": " "
+          "description": "Privacy rules¹ indicating who can and can't view this story",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         },
         "public": {
           "name": "public",
-          "description": " "
+          "description": "Whether this story is public"
         },
         "selected_contacts": {
           "name": "selected_contacts",
@@ -23374,21 +23493,30 @@
         },
         "views": {
           "name": "views",
-          "description": " "
+          "description": "View date and reaction information"
         }
       }
     },
     "storyItemDeleted": {
       "name": "storyItemDeleted",
+      "description": [
+        "Represents a previously active story, that was deleted"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         }
       }
     },
     "storyItemSkipped": {
       "name": "storyItemSkipped",
+      "description": [
+        "Represents an active story, whose full information was omitted for space and performance reasons; use stories.getStoriesByID¹ to fetch full info about the skipped story when and if needed."
+      ],
+      "links": [
+        "https://core.telegram.org/method/stories.getStoriesByID"
+      ],
       "fields": {
         "close_friends": {
           "name": "close_friends",
@@ -23396,11 +23524,11 @@
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the story posted."
         },
         "expire_date": {
           "name": "expire_date",
-          "description": " "
+          "description": "When does the story expire."
         },
         "flags": {
           "name": "flags",
@@ -23411,12 +23539,18 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         }
       }
     },
     "storyView": {
       "name": "storyView",
+      "description": [
+        "Story¹ view date and reaction information"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "blocked": {
           "name": "blocked",
@@ -23428,7 +23562,7 @@
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When did the user view the story"
         },
         "flags": {
           "name": "flags",
@@ -23439,16 +23573,22 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "If present, contains the reaction that the user left on the story"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user that viewed the story"
         }
       }
     },
     "storyViews": {
       "name": "storyViews",
+      "description": [
+        "Aggregated view and reaction information of a story¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -23459,7 +23599,7 @@
         },
         "forwards_count": {
           "name": "forwards_count",
-          "description": " "
+          "description": "Forward counter of the story"
         },
         "has_viewers": {
           "name": "has_viewers",
@@ -23467,7 +23607,7 @@
         },
         "reactions": {
           "name": "reactions",
-          "description": " "
+          "description": "All reactions sent to this story"
         },
         "reactions_count": {
           "name": "reactions_count",
@@ -23475,11 +23615,11 @@
         },
         "recent_viewers": {
           "name": "recent_viewers",
-          "description": " "
+          "description": "User IDs of some recent viewers of the story"
         },
         "views_count": {
           "name": "views_count",
-          "description": " "
+          "description": "View counter of the story"
         }
       }
     },
@@ -26228,14 +26368,17 @@
     },
     "updateReadStories": {
       "name": "updateReadStories",
+      "description": [
+        "Stories of a specific peer were marked as read."
+      ],
       "fields": {
         "max_id": {
           "name": "max_id",
-          "description": " "
+          "description": "ID of the last story that was marked as read"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer"
         }
       }
     },
@@ -26698,14 +26841,26 @@
     },
     "updateStoryID": {
       "name": "updateStoryID",
+      "description": [
+        "A story was successfully uploaded.",
+        "Once a story is successfully uploaded, an updateStoryID¹ will be returned, indicating the story ID (id) that was attributed to the story (like for messages, random_id indicates the random_id that was passed to stories.sendStory²: this way, you can tell which story was assigned a specific id by checking which stories.sendStory³ call has the returned random_id)."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateStoryID",
+        "https://core.telegram.org/constructor/stories.sendStory",
+        "https://core.telegram.org/constructor/stories.sendStory"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The id that was attributed to the story."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "The random_id that was passed to stories.sendStory¹.",
+          "links": [
+            "https://core.telegram.org/constructor/stories.sendStory"
+          ]
         }
       }
     },
@@ -30489,7 +30644,7 @@
     "StoryViews": {
       "name": "StoryViews",
       "description": [
-        "View date and reaction information of multiple stories¹"
+        "Aggregated view and reaction information of a story¹"
       ],
       "links": [
         "https://core.telegram.org/api/stories"
