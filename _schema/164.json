@@ -3562,7 +3562,10 @@
         },
         "unconfirmed": {
           "name": "unconfirmed",
-          "description": " "
+          "description": "Whether the session is unconfirmed, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/auth#confirming-login"
+          ]
         }
       }
     },
@@ -25694,7 +25697,10 @@
         },
         "unconfirmed": {
           "name": "unconfirmed",
-          "description": " "
+          "description": "Whether the session is unconfirmed, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/auth#confirming-login"
+          ]
         }
       }
     },
@@ -31612,7 +31618,7 @@
     "account.changeAuthorizationSettings": {
       "name": "account.changeAuthorizationSettings",
       "description": [
-        "Change settings related to the current session."
+        "Change settings related to a session."
       ],
       "parameters": {
         "call_requests_disabled": {
@@ -31621,7 +31627,10 @@
         },
         "confirmed": {
           "name": "confirmed",
-          "description": " "
+          "description": "If set, confirms a newly logged in session »¹.",
+          "links": [
+            "https://core.telegram.org/api/auth#confirming-login"
+          ]
         },
         "encrypted_requests_disabled": {
           "name": "encrypted_requests_disabled",
