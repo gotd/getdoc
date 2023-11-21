@@ -22426,6 +22426,9 @@
     },
     "sponsoredWebPage": {
       "name": "sponsoredWebPage",
+      "description": [
+        "Represents a sponsored website."
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -22436,15 +22439,15 @@
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Optional image preview."
         },
         "site_name": {
           "name": "site_name",
-          "description": " "
+          "description": "Website name."
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Web page URL."
         }
       }
     },
@@ -30531,7 +30534,10 @@
       ]
     },
     "SponsoredWebPage": {
-      "name": "SponsoredWebPage"
+      "name": "SponsoredWebPage",
+      "description": [
+        "Represents a sponsored website."
+      ]
     },
     "Stats.BroadcastStats": {
       "name": "Stats.BroadcastStats",
@@ -32151,11 +32157,11 @@
       "parameters": {
         "compare_sound": {
           "name": "compare_sound",
-          "description": "If true, chats with non-default sound will also be returned"
+          "description": "If set, chats with non-default sound will be returned"
         },
         "compare_stories": {
           "name": "compare_stories",
-          "description": " "
+          "description": "If set, chats with non-default notification settings for stories will be returned"
         },
         "flags": {
           "name": "flags",
@@ -51379,9 +51385,10 @@
         },
         "entities": {
           "name": "entities",
-          "description": "Message entities for styled text in the caption¹",
+          "description": "Message entities for styled text in the caption¹, if allowed by the stories_entities client configuration parameter »².",
           "links": [
-            "https://core.telegram.org/api/entities"
+            "https://core.telegram.org/api/entities",
+            "https://core.telegram.org/api/config#stories-entities"
           ]
         },
         "flags": {
@@ -51978,9 +51985,10 @@
         },
         "entities": {
           "name": "entities",
-          "description": "Message entities for styled text¹",
+          "description": "Message entities for styled text¹, if allowed by the stories_entities client configuration parameter »².",
           "links": [
-            "https://core.telegram.org/api/entities"
+            "https://core.telegram.org/api/entities",
+            "https://core.telegram.org/api/config#stories-entities"
           ]
         },
         "flags": {
