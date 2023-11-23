@@ -26856,8 +26856,8 @@
       ],
       "links": [
         "https://core.telegram.org/constructor/updateStoryID",
-        "https://core.telegram.org/constructor/stories.sendStory",
-        "https://core.telegram.org/constructor/stories.sendStory"
+        "https://core.telegram.org/method/stories.sendStory",
+        "https://core.telegram.org/method/stories.sendStory"
       ],
       "fields": {
         "id": {
@@ -26868,7 +26868,7 @@
           "name": "random_id",
           "description": "The random_id that was passed to stories.sendStory¹.",
           "links": [
-            "https://core.telegram.org/constructor/stories.sendStory"
+            "https://core.telegram.org/method/stories.sendStory"
           ]
         }
       }
@@ -32545,10 +32545,16 @@
     },
     "account.invalidateSignInCodes": {
       "name": "account.invalidateSignInCodes",
+      "description": [
+        "Invalidate the specified login codes, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#invalidating-login-codes"
+      ],
       "parameters": {
         "codes": {
           "name": "codes",
-          "description": " "
+          "description": "The login codes to invalidate."
         }
       }
     },
@@ -33456,11 +33462,6 @@
       "errors": [
         {
           "code": 400,
-          "type": "EMAIL_UNCONFIRMED_%d",
-          "description": "The provided email isn't confirmed, %d is the length of the verification code that was just sent to the email: use account.verifyEmail to enter the received verification code and enable the recovery email."
-        },
-        {
-          "code": 400,
           "type": "EMAIL_INVALID",
           "description": "The specified email is invalid."
         },
@@ -33468,6 +33469,11 @@
           "code": 400,
           "type": "EMAIL_UNCONFIRMED",
           "description": "Email unconfirmed."
+        },
+        {
+          "code": 400,
+          "type": "EMAIL_UNCONFIRMED_%d",
+          "description": "The provided email isn't confirmed, %d is the length of the verification code that was just sent to the email: use account.verifyEmail to enter the received verification code and enable the recovery email."
         },
         {
           "code": 400,
@@ -41495,14 +41501,14 @@
           "description": "You can't send messages as the specified peer."
         },
         {
-          "code": 420,
-          "type": "SLOWMODE_WAIT_%d",
-          "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
-        },
-        {
           "code": 400,
           "type": "SLOWMODE_MULTI_MSGS_DISABLED",
           "description": "Slowmode is enabled, you cannot forward multiple messages to this group."
+        },
+        {
+          "code": 420,
+          "type": "SLOWMODE_WAIT_%d",
+          "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
         },
         {
           "code": 406,
@@ -52486,11 +52492,6 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
-          "code": 400,
-          "type": "FILE_REFERENCE_*",
-          "description": "The file reference expired, it must be refreshed."
-        },
-        {
           "code": 406,
           "type": "FILEREF_UPGRADE_NEEDED",
           "description": "The client has to be updated in order to support file references."
@@ -52499,6 +52500,11 @@
           "code": 400,
           "type": "FILE_ID_INVALID",
           "description": "The provided file id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILE_REFERENCE_*",
+          "description": "The file reference expired, it must be refreshed."
         },
         {
           "code": 400,
