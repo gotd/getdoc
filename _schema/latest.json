@@ -2802,10 +2802,10 @@
     "appWebViewResultUrl": {
       "name": "appWebViewResultUrl",
       "description": [
-        "Contains the link that must be used to open a named bot web app¹."
+        "Contains the link that must be used to open a named bot mini app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ],
       "fields": {
         "url": {
@@ -2817,7 +2817,7 @@
     "attachMenuBot": {
       "name": "attachMenuBot",
       "description": [
-        "Represents a bot web app that can be launched from the attachment menu »¹"
+        "Represents a bot mini app that can be launched from the attachment menu »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -2881,7 +2881,7 @@
     "attachMenuBotIcon": {
       "name": "attachMenuBotIcon",
       "description": [
-        "Represents an attachment menu icon for bot web apps »¹"
+        "Represents an attachment menu icon for bot mini apps »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -2904,14 +2904,14 @@
         },
         "name": {
           "name": "name",
-          "description": "One of the following values: note that animated icons must be played when the user clicks on the button, activating the bot web app. default_static - Default attachment menu icon in SVG format placeholder_static - Default placeholder for opened Web Apps in SVG format ios_static - Attachment menu icon in SVG format for the official iOS app ios_animated - Animated attachment menu icon in TGS format for the official iOS app android_animated - Animated attachment menu icon in TGS format for the official Android app macos_animated - Animated attachment menu icon in TGS format for the official native Mac OS app"
+          "description": "One of the following values: note that animated icons must be played when the user clicks on the button, activating the bot mini app. default_static - Default attachment menu icon in SVG format placeholder_static - Default placeholder for opened Web Apps in SVG format ios_static - Attachment menu icon in SVG format for the official iOS app ios_animated - Animated attachment menu icon in TGS format for the official iOS app android_animated - Animated attachment menu icon in TGS format for the official Android app macos_animated - Animated attachment menu icon in TGS format for the official native Mac OS app"
         }
       }
     },
     "attachMenuBotIconColor": {
       "name": "attachMenuBotIconColor",
       "description": [
-        "Represents an attachment menu icon color for bot web apps »¹"
+        "Represents an attachment menu icon color for bot mini apps »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -2930,7 +2930,7 @@
     "attachMenuBots": {
       "name": "attachMenuBots",
       "description": [
-        "Represents a list of bot web apps that can be launched from the attachment menu »¹"
+        "Represents a list of bot mini apps that can be launched from the attachment menu »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -2938,7 +2938,7 @@
       "fields": {
         "bots": {
           "name": "bots",
-          "description": "List of bot web apps that can be launched from the attachment menu »¹",
+          "description": "List of bot mini apps that can be launched from the attachment menu »¹",
           "links": [
             "https://core.telegram.org/api/bots/attach"
           ]
@@ -2959,7 +2959,7 @@
     "attachMenuBotsBot": {
       "name": "attachMenuBotsBot",
       "description": [
-        "Represents a bot web app that can be launched from the attachment menu »¹"
+        "Represents a bot mini app that can be launched from the attachment menu »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -2967,7 +2967,7 @@
       "fields": {
         "bot": {
           "name": "bot",
-          "description": "Represents a bot web app that can be launched from the attachment menu »¹",
+          "description": "Represents a bot mini app that can be launched from the attachment menu »¹",
           "links": [
             "https://core.telegram.org/api/bots/attach"
           ]
@@ -2981,7 +2981,7 @@
     "attachMenuBotsNotModified": {
       "name": "attachMenuBotsNotModified",
       "description": [
-        "The list of bot web apps hasn't changed"
+        "The list of bot mini apps hasn't changed"
       ]
     },
     "attachMenuPeerTypeBotPM": {
@@ -3612,7 +3612,11 @@
         },
         "stories_preload": {
           "name": "stories_preload",
-          "description": " "
+          "description": "Whether to preload stories¹; in particular, the first documentAttributeVideo².preload_prefix_size bytes of story videos should be preloaded.",
+          "links": [
+            "https://core.telegram.org/api/stories",
+            "https://core.telegram.org/constructor/documentAttributeVideo"
+          ]
         },
         "video_preload_large": {
           "name": "video_preload_large",
@@ -3810,23 +3814,23 @@
     "botApp": {
       "name": "botApp",
       "description": [
-        "Contains information about a named bot web app¹."
+        "Contains information about a named bot mini app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ],
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Bot web app access hash"
+          "description": "bot mini app access hash"
         },
         "description": {
           "name": "description",
-          "description": "Bot web app description."
+          "description": "bot mini app description."
         },
         "document": {
           "name": "document",
-          "description": "Bot web app animation."
+          "description": "bot mini app animation."
         },
         "flags": {
           "name": "flags",
@@ -3844,22 +3848,22 @@
         },
         "id": {
           "name": "id",
-          "description": "Bot web app ID"
+          "description": "bot mini app ID"
         },
         "photo": {
           "name": "photo",
-          "description": "Bot web app photo."
+          "description": "bot mini app photo."
         },
         "short_name": {
           "name": "short_name",
-          "description": "Bot web app short name, used to generate named bot web app deep links¹.",
+          "description": "bot mini app short name, used to generate named bot mini app deep links¹.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-mini-app-links"
           ]
         },
         "title": {
           "name": "title",
-          "description": "Bot web app title."
+          "description": "bot mini app title."
         }
       }
     },
@@ -6326,7 +6330,7 @@
           "name": "delete_stories",
           "description": "If set, allows the admin to delete stories¹ posted by the other admins of the channel².",
           "links": [
-            "https://core.telegram.org/api/stories#channel-stories",
+            "https://core.telegram.org/api/stories",
             "https://core.telegram.org/api/channel"
           ]
         },
@@ -6341,7 +6345,7 @@
           "name": "edit_stories",
           "description": "If set, allows the admin to edit stories¹ posted by the other admins of the channel².",
           "links": [
-            "https://core.telegram.org/api/stories#channel-stories",
+            "https://core.telegram.org/api/stories",
             "https://core.telegram.org/api/channel"
           ]
         },
@@ -6397,7 +6401,7 @@
           "name": "post_stories",
           "description": "If set, allows the admin to post stories¹ as the channel².",
           "links": [
-            "https://core.telegram.org/api/stories#channel-stories",
+            "https://core.telegram.org/api/stories",
             "https://core.telegram.org/api/channel"
           ]
         }
@@ -8459,11 +8463,14 @@
         },
         "nosound": {
           "name": "nosound",
-          "description": " "
+          "description": "Whether the specified document is a video file with no audio tracks (a GIF animation (even as MPEG4), for example)"
         },
         "preload_prefix_size": {
           "name": "preload_prefix_size",
-          "description": " "
+          "description": "Number of bytes to preload when preloading videos (particularly video stories¹).",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "round_message": {
           "name": "round_message",
@@ -9429,11 +9436,14 @@
         },
         "keep_archived_folders": {
           "name": "keep_archived_folders",
-          "description": " "
+          "description": "Whether unmuted chats that are always included or pinned in a folder¹, will be kept in the Archive chat list when they get a new message. Ignored if keep_archived_unmuted is set.",
+          "links": [
+            "https://core.telegram.org/api/folders"
+          ]
         },
         "keep_archived_unmuted": {
           "name": "keep_archived_unmuted",
-          "description": " "
+          "description": "Whether unmuted chats will be kept in the Archive chat list when they get a new message."
         }
       }
     },
@@ -10279,10 +10289,10 @@
     "inlineBotWebView": {
       "name": "inlineBotWebView",
       "description": [
-        "Specifies a bot web app¹ button, shown on top of the inline query results list."
+        "Specifies a bot mini app¹ button, shown on top of the inline query results list."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+        "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
       ],
       "fields": {
         "text": {
@@ -10367,10 +10377,10 @@
     "inputBotAppID": {
       "name": "inputBotAppID",
       "description": [
-        "Used to fetch information about a named bot web app¹ by its ID"
+        "Used to fetch information about a named bot mini app¹ by its ID"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ],
       "fields": {
         "access_hash": {
@@ -10382,9 +10392,9 @@
         },
         "id": {
           "name": "id",
-          "description": "named bot web app¹ ID.",
+          "description": "named bot mini app¹ ID.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+            "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
           ]
         }
       }
@@ -10392,21 +10402,21 @@
     "inputBotAppShortName": {
       "name": "inputBotAppShortName",
       "description": [
-        "Used to fetch information about a named bot web app¹ by its short name"
+        "Used to fetch information about a named bot mini app¹ by its short name"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": "ID of the bot that owns the bot web app"
+          "description": "ID of the bot that owns the bot mini app"
         },
         "short_name": {
           "name": "short_name",
-          "description": "Short name, obtained from a named bot web app deep link¹",
+          "description": "Short name, obtained from a named bot mini app deep link¹",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-mini-app-links"
           ]
         }
       }
@@ -12445,19 +12455,19 @@
         },
         "sound": {
           "name": "sound",
-          "description": "Name of an audio file for notification"
+          "description": "Identifier of an audio file to play for notifications."
         },
         "stories_hide_sender": {
           "name": "stories_hide_sender",
-          "description": " "
+          "description": "Whether the sender name should be displayed in story notifications."
         },
         "stories_muted": {
           "name": "stories_muted",
-          "description": " "
+          "description": "Whether story notifications should be disabled."
         },
         "stories_sound": {
           "name": "stories_sound",
-          "description": " "
+          "description": "Identifier of an audio file to play for story notifications."
         }
       }
     },
@@ -13973,7 +13983,7 @@
     "keyboardButtonSimpleWebView": {
       "name": "keyboardButtonSimpleWebView",
       "description": [
-        "Button to open a bot web app¹ using messages.requestSimpleWebView², without sending user information to the web app.",
+        "Button to open a bot mini app¹ using messages.requestSimpleWebView², without sending user information to the web app.",
         "Can only be sent or received as part of a reply keyboard, use keyboardButtonWebView¹ for inline keyboards."
       ],
       "links": [
@@ -14107,7 +14117,7 @@
     "keyboardButtonWebView": {
       "name": "keyboardButtonWebView",
       "description": [
-        "Button to open a bot web app¹ using messages.requestWebView², sending over user information after user confirmation.",
+        "Button to open a bot mini app¹ using messages.requestWebView², sending over user information after user confirmation.",
         "Can only be sent or received as part of an inline keyboard, use keyboardButtonSimpleWebView¹ for reply keyboards."
       ],
       "links": [
@@ -14622,7 +14632,7 @@
       "fields": {
         "app": {
           "name": "app",
-          "description": "We have authorized the bot to send us messages by opening the specified bot web app¹.",
+          "description": "We have authorized the bot to send us messages by opening the specified bot mini app¹.",
           "links": [
             "https://core.telegram.org/api/bots/webapps"
           ]
@@ -15313,7 +15323,7 @@
     "messageActionWebViewDataSent": {
       "name": "messageActionWebViewDataSent",
       "description": [
-        "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (user side service message).",
+        "Data from an opened reply keyboard bot mini app¹ was relayed to the bot that owns it (user side service message).",
         "Clients should display a service message with the text Data from the «$text» button was transferred to the bot."
       ],
       "links": [
@@ -15332,7 +15342,7 @@
     "messageActionWebViewDataSentMe": {
       "name": "messageActionWebViewDataSentMe",
       "description": [
-        "Data from an opened reply keyboard bot web app¹ was relayed to the bot that owns it (bot side service message)."
+        "Data from an opened reply keyboard bot mini app¹ was relayed to the bot that owns it (bot side service message)."
       ],
       "links": [
         "https://core.telegram.org/api/bots/webapps"
@@ -16014,7 +16024,7 @@
       "fields": {
         "alt_document": {
           "name": "alt_document",
-          "description": " "
+          "description": "Currently only used for story videos, may contain an alternative version of the story video, explicitly encoded using H.264 (in MPEG4 transport) at a lower resolution than document."
         },
         "document": {
           "name": "document",
@@ -16825,10 +16835,10 @@
     "messages.botApp": {
       "name": "messages.botApp",
       "description": [
-        "Contains information about a named bot web app¹"
+        "Contains information about a named bot mini app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ],
       "fields": {
         "app": {
@@ -16937,9 +16947,9 @@
         },
         "switch_webview": {
           "name": "switch_webview",
-          "description": "Shown as a button on top of the remaining inline result list; if clicked, opens the specified bot web app¹.",
+          "description": "Shown as a button on top of the remaining inline result list; if clicked, opens the specified bot mini app¹.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+            "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
           ]
         },
         "users": {
@@ -19597,23 +19607,23 @@
         },
         "stories_android_sound": {
           "name": "stories_android_sound",
-          "description": " "
+          "description": "Sound for story notifications on the official Android application"
         },
         "stories_hide_sender": {
           "name": "stories_hide_sender",
-          "description": " "
+          "description": "Whether the sender name should be displayed in story notifications."
         },
         "stories_ios_sound": {
           "name": "stories_ios_sound",
-          "description": " "
+          "description": "Sound for story notifications on the official iOS application"
         },
         "stories_muted": {
           "name": "stories_muted",
-          "description": " "
+          "description": "Whether story notifications should be disabled."
         },
         "stories_other_sound": {
           "name": "stories_other_sound",
-          "description": " "
+          "description": "Sound for story notifications on other applications"
         }
       }
     },
@@ -22420,7 +22430,7 @@
         },
         "webpage": {
           "name": "webpage",
-          "description": " "
+          "description": "Sponsored website"
         }
       }
     },
@@ -23293,7 +23303,7 @@
         "List of stories¹"
       ],
       "links": [
-        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+        "https://core.telegram.org/api/stories#pinned-or-archived-stories"
       ],
       "fields": {
         "chats": {
@@ -25566,7 +25576,7 @@
     "updateMessagePollVote": {
       "name": "updateMessagePollVote",
       "description": [
-        "A specific user has voted in a poll"
+        "A specific peer has voted in a poll"
       ],
       "fields": {
         "options": {
@@ -25575,7 +25585,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that voted in the poll"
         },
         "poll_id": {
           "name": "poll_id",
@@ -25669,7 +25679,7 @@
     "updateNewAuthorization": {
       "name": "updateNewAuthorization",
       "description": [
-        "Authorized to the current user's account through an unknown device."
+        "A new session logged into the current user's account through an unknown device."
       ],
       "fields": {
         "date": {
@@ -28726,64 +28736,64 @@
     "AppWebViewResult": {
       "name": "AppWebViewResult",
       "description": [
-        "Contains the link that must be used to open a named bot web app¹."
+        "Contains the link that must be used to open a named bot mini app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ]
     },
     "AttachMenuBot": {
       "name": "AttachMenuBot",
       "description": [
-        "Represents a bot web app that can be launched from the attachment menu »¹"
+        "Represents a bot mini app that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu"
       ]
     },
     "AttachMenuBotIcon": {
       "name": "AttachMenuBotIcon",
       "description": [
-        "Represents an attachment menu icon for bot web apps »¹"
+        "Represents an attachment menu icon for bot mini apps »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu"
       ]
     },
     "AttachMenuBotIconColor": {
       "name": "AttachMenuBotIconColor",
       "description": [
-        "Represents an attachment menu icon color for bot web apps »¹"
+        "Represents an attachment menu icon color for bot mini apps »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu"
       ]
     },
     "AttachMenuBots": {
       "name": "AttachMenuBots",
       "description": [
-        "Represents a list of bot web apps that can be launched from the attachment menu »¹"
+        "Represents a list of bot mini apps that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu"
       ]
     },
     "AttachMenuBotsBot": {
       "name": "AttachMenuBotsBot",
       "description": [
-        "Represents a bot web app that can be launched from the attachment menu »¹"
+        "Represents a bot mini app that can be launched from the attachment menu »¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu"
       ]
     },
     "AttachMenuPeerType": {
       "name": "AttachMenuPeerType",
       "description": [
-        "Indicates a supported peer type for a bot web app attachment menu¹"
+        "Indicates a supported peer type for a bot mini app attachment menu¹"
       ],
       "links": [
-        "https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu"
+        "https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu"
       ]
     },
     "Auth.ExportedAuthorization": {
@@ -28852,10 +28862,10 @@
     "BotApp": {
       "name": "BotApp",
       "description": [
-        "Contains information about a named bot web app¹."
+        "Contains information about a named bot mini app¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ]
     },
     "BotCommand": {
@@ -29428,10 +29438,10 @@
     "InlineBotWebView": {
       "name": "InlineBotWebView",
       "description": [
-        "Specifies a bot web app¹ button, shown on top of the inline query results list."
+        "Specifies a bot mini app¹ button, shown on top of the inline query results list."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+        "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
       ]
     },
     "InlineQueryPeerType": {
@@ -29449,10 +29459,10 @@
     "InputBotApp": {
       "name": "InputBotApp",
       "description": [
-        "Used to fetch information about a named bot web app¹"
+        "Used to fetch information about a named bot mini app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ]
     },
     "InputBotInlineMessage": {
@@ -31170,10 +31180,10 @@
     "messages.BotApp": {
       "name": "messages.BotApp",
       "description": [
-        "Contains information about a named bot web app¹"
+        "Contains information about a named bot mini app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ]
     },
     "messages.BotResults": {
@@ -31497,7 +31507,7 @@
         "List of stories¹"
       ],
       "links": [
-        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+        "https://core.telegram.org/api/stories#pinned-or-archived-stories"
       ]
     },
     "stories.StoryViews": {
@@ -32476,7 +32486,7 @@
         {
           "code": 420,
           "type": "TAKEOUT_INIT_DELAY_%d",
-          "description": "Wait %d seconds before initializing takeout."
+          "description": "Sorry, for security reasons, you will be able to begin downloading your data in %d seconds. We have notified all your devices about the export request to make sure it's authorized and to give you time to react if it's not."
         }
       ]
     },
@@ -34355,8 +34365,7 @@
           "type": "PHONE_NUMBER_INVALID",
           "description": "The phone number is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.requestPasswordRecovery": {
       "name": "auth.requestPasswordRecovery",
@@ -35237,14 +35246,17 @@
     },
     "channels.clickSponsoredMessage": {
       "name": "channels.clickSponsoredMessage",
+      "description": [
+        "Informs the server that the user has either:"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Channel where the sponsored message was posted"
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Message ID"
         }
       },
       "errors": [
@@ -35382,6 +35394,10 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "ADDRESS_INVALID"
+        },
         {
           "code": 400,
           "type": "CHANNELS_ADMIN_LOCATED_TOO_MUCH",
@@ -36097,6 +36113,11 @@
           "description": "This supergroup is not a forum."
         },
         {
+          "code": 403,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
           "code": 400,
           "type": "DOCUMENT_INVALID",
           "description": "The specified document is invalid."
@@ -36162,6 +36183,10 @@
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "MEGAGROUP_GEO_REQUIRED"
         },
         {
           "code": 400,
@@ -38914,7 +38939,7 @@
         "Replace the contents of an entire blocklist, see here for more info »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/contacts"
+        "https://core.telegram.org/api/block"
       ],
       "parameters": {
         "flags": {
@@ -41649,7 +41674,7 @@
     "messages.getAttachMenuBot": {
       "name": "messages.getAttachMenuBot",
       "description": [
-        "Returns attachment menu entry for a bot web app that can be launched from the attachment menu »¹"
+        "Returns attachment menu entry for a bot mini app that can be launched from the attachment menu »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -41671,7 +41696,7 @@
     "messages.getAttachMenuBots": {
       "name": "messages.getAttachMenuBots",
       "description": [
-        "Returns installed attachment menu bot web apps »¹"
+        "Returns installed attachment menu bot mini apps »¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -41719,17 +41744,17 @@
     "messages.getBotApp": {
       "name": "messages.getBotApp",
       "description": [
-        "Obtain information about a named bot web app¹"
+        "Obtain information about a named bot mini app¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-web-apps"
+        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "Bot app information obtained from a named bot web app deep link »¹.",
+          "description": "Bot app information obtained from a named bot mini app deep link »¹.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-mini-app-links"
           ]
         },
         "hash": {
@@ -44323,6 +44348,11 @@
           "description": "The provided chat id is invalid."
         },
         {
+          "code": 500,
+          "type": "CHAT_INVALID",
+          "description": "Invalid chat."
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -44851,21 +44881,21 @@
     "messages.requestAppWebView": {
       "name": "messages.requestAppWebView",
       "description": [
-        "Open a bot web app¹ from a named bot web app deep link², sending over user information after user confirmation.",
+        "Open a bot mini app¹ from a named bot mini app deep link², sending over user information after user confirmation.",
         "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
       ],
       "links": [
         "https://core.telegram.org/bots/webapps",
-        "https://core.telegram.org/api/links#named-bot-web-app-links",
+        "https://core.telegram.org/api/links#named-bot-mini-app-links",
         "https://core.telegram.org/method/messages.prolongWebView"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the named bot web app deep link² docs.",
+          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the named bot mini app deep link² docs.",
           "links": [
             "https://core.telegram.org/method/messages.getBotApp",
-            "https://core.telegram.org/api/links#named-bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-mini-app-links"
           ]
         },
         "flags": {
@@ -44885,9 +44915,9 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "If the startapp query string parameter is present in the named bot web app deep link¹, pass it to start_param.",
+          "description": "If the startapp query string parameter is present in the named bot mini app deep link¹, pass it to start_param.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-mini-app-links"
           ]
         },
         "theme_params": {
@@ -44899,9 +44929,9 @@
         },
         "write_allowed": {
           "name": "write_allowed",
-          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the named bot web app deep link¹ docs, and the user agreed.",
+          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the named bot mini app deep link¹ docs, and the user agreed.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-web-app-links"
+            "https://core.telegram.org/api/links#named-bot-mini-app-links"
           ]
         }
       }
@@ -44949,7 +44979,7 @@
     "messages.requestSimpleWebView": {
       "name": "messages.requestSimpleWebView",
       "description": [
-        "Open a bot web app¹."
+        "Open a bot mini app¹."
       ],
       "links": [
         "https://core.telegram.org/api/bots/webapps"
@@ -44957,7 +44987,7 @@
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": "Bot that owns the webapp"
+          "description": "Bot that owns the mini app"
         },
         "flags": {
           "name": "flags",
@@ -45038,7 +45068,7 @@
     "messages.requestWebView": {
       "name": "messages.requestWebView",
       "description": [
-        "Open a bot web app¹, sending over user information after user confirmation.",
+        "Open a bot mini app¹, sending over user information after user confirmation.",
         "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
       ],
       "links": [
@@ -46023,6 +46053,10 @@
           "description": "There are too many scheduled messages."
         },
         {
+          "code": 500,
+          "type": "SEND_MEDIA_INVALID"
+        },
+        {
           "code": 420,
           "type": "SLOWMODE_WAIT_%d",
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
@@ -46765,6 +46799,10 @@
         },
         {
           "code": 400,
+          "type": "REPLY_TO_USER_INVALID"
+        },
+        {
+          "code": 400,
           "type": "SCHEDULE_BOT_NOT_ALLOWED",
           "description": "Bots cannot schedule messages."
         },
@@ -46792,6 +46830,10 @@
           "code": 420,
           "type": "SLOWMODE_WAIT_%d",
           "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_INVALID"
         },
         {
           "code": 406,
@@ -47182,6 +47224,10 @@
         },
         {
           "code": 400,
+          "type": "STORY_ID_INVALID"
+        },
+        {
+          "code": 400,
           "type": "YOU_BLOCKED_USER",
           "description": "You blocked this user."
         }
@@ -47260,7 +47306,7 @@
     "messages.sendWebViewData": {
       "name": "messages.sendWebViewData",
       "description": [
-        "Used by the user to relay data from an opened reply keyboard bot web app¹ to the bot that owns it."
+        "Used by the user to relay data from an opened reply keyboard bot mini app¹ to the bot that owns it."
       ],
       "links": [
         "https://core.telegram.org/api/bots/webapps"
@@ -47787,9 +47833,9 @@
         },
         "switch_webview": {
           "name": "switch_webview",
-          "description": "If passed, clients will display a button on top of the remaining inline result list with the specified text, that switches the user to the specified bot web app¹.",
+          "description": "If passed, clients will display a button on top of the remaining inline result list with the specified text, that switches the user to the specified bot mini app¹.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#simple-web-apps"
+            "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
           ]
         }
       },
@@ -51630,6 +51676,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -51641,7 +51692,7 @@
         "Fetch the stories¹ pinned on a peer's profile."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+        "https://core.telegram.org/api/stories#pinned-or-archived-stories"
       ],
       "parameters": {
         "limit": {
@@ -51682,7 +51733,7 @@
         "Fetch the story archive »¹ of a peer we control."
       ],
       "links": [
-        "https://core.telegram.org/api/stories#pinnedarchived-stories"
+        "https://core.telegram.org/api/stories#pinned-or-archived-stories"
       ],
       "parameters": {
         "limit": {
@@ -51705,6 +51756,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -51771,6 +51827,16 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -51860,6 +51926,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_EMPTY",
+          "description": "You specified no story IDs."
         }
       ]
     },
@@ -52620,6 +52691,15 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "AES_DECRYPT_FAILED"
+        },
+        {
+          "code": 400,
+          "type": "CDN_METHOD_INVALID",
+          "description": "You can't call this method in a CDN DC."
+        },
+        {
           "code": 500,
           "type": "CDN_UPLOAD_TIMEOUT",
           "description": "A server-side timeout occurred while reuploading the file to the CDN DC."
@@ -52867,6 +52947,10 @@
       "type": "ACCESS_TOKEN_INVALID",
       "description": "Access token invalid."
     },
+    "ADDRESS_INVALID": {
+      "code": 400,
+      "type": "ADDRESS_INVALID"
+    },
     "ADMINS_TOO_MUCH": {
       "code": 400,
       "type": "ADMINS_TOO_MUCH",
@@ -52886,6 +52970,10 @@
       "code": 400,
       "type": "ADMIN_RANK_INVALID",
       "description": "The specified admin rank is invalid."
+    },
+    "AES_DECRYPT_FAILED": {
+      "code": 400,
+      "type": "AES_DECRYPT_FAILED"
     },
     "ALBUM_PHOTOS_TOO_MANY": {
       "code": 400,
@@ -53250,7 +53338,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 400,
+      "code": 500,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -54031,6 +54119,10 @@
       "code": 400,
       "type": "MEDIA_VIDEO_STORY_MISSING"
     },
+    "MEGAGROUP_GEO_REQUIRED": {
+      "code": 400,
+      "type": "MEGAGROUP_GEO_REQUIRED"
+    },
     "MEGAGROUP_ID_INVALID": {
       "code": 400,
       "type": "MEGAGROUP_ID_INVALID",
@@ -54589,6 +54681,10 @@
       "type": "REPLY_TO_INVALID",
       "description": "The specified reply_to field is invalid."
     },
+    "REPLY_TO_USER_INVALID": {
+      "code": 400,
+      "type": "REPLY_TO_USER_INVALID"
+    },
     "RESET_REQUEST_MISSING": {
       "code": 400,
       "type": "RESET_REQUEST_MISSING",
@@ -54693,6 +54789,10 @@
       "code": 406,
       "type": "SEND_CODE_UNAVAILABLE",
       "description": "Returned when all available options for this type of number were already used (e.g. flash-call, then SMS, then this error might be returned to trigger a second resend)."
+    },
+    "SEND_MEDIA_INVALID": {
+      "code": 500,
+      "type": "SEND_MEDIA_INVALID"
     },
     "SEND_MESSAGE_MEDIA_INVALID": {
       "code": 400,
@@ -54898,6 +54998,10 @@
       "type": "STORY_ID_EMPTY",
       "description": "You specified no story IDs."
     },
+    "STORY_ID_INVALID": {
+      "code": 400,
+      "type": "STORY_ID_INVALID"
+    },
     "STORY_NOT_MODIFIED": {
       "code": 400,
       "type": "STORY_NOT_MODIFIED",
@@ -54926,7 +55030,7 @@
     "TAKEOUT_INIT_DELAY_%d": {
       "code": 420,
       "type": "TAKEOUT_INIT_DELAY_%d",
-      "description": "Wait %d seconds before initializing takeout."
+      "description": "Sorry, for security reasons, you will be able to begin downloading your data in %d seconds. We have notified all your devices about the export request to make sure it's authorized and to give you time to react if it's not."
     },
     "TAKEOUT_REQUIRED": {
       "code": 403,
