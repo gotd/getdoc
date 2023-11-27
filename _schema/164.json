@@ -34722,10 +34722,13 @@
     },
     "bots.allowSendMessage": {
       "name": "bots.allowSendMessage",
+      "description": [
+        "Allow the specified bot to send us messages"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot"
         }
       },
       "errors": [
@@ -34772,10 +34775,13 @@
     },
     "bots.canSendMessage": {
       "name": "bots.canSendMessage",
+      "description": [
+        "Check whether the specified bot can send us messages"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot"
         }
       },
       "errors": [
@@ -34872,18 +34878,27 @@
     },
     "bots.invokeWebViewCustomMethod": {
       "name": "bots.invokeWebViewCustomMethod",
+      "description": [
+        "Send a custom request from a mini bot app¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Identifier of the bot associated to the mini bot app¹",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps"
+          ]
         },
         "custom_method": {
           "name": "custom_method",
-          "description": " "
+          "description": "Identifier of the custom method to invoke"
         },
         "params": {
           "name": "params",
-          "description": " "
+          "description": "Method parameters"
         }
       },
       "errors": [
