@@ -3,11 +3,33 @@ package getdoc
 import (
 	"errors"
 	"fmt"
+	"strconv"
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
+
+func TestSchemas(t *testing.T) {
+	files, err := data.ReadDir("_schema")
+	require.NoError(t, err)
+	var latest int
+	for _, file := range files {
+		layer, err := strconv.Atoi(strings.TrimSuffix(file.Name(), ".json"))
+		if err != nil {
+			continue
+		}
+		assert.Contains(t, Layers, layer, "layer should be in Layers list")
+		if layer > latest {
+			latest = layer
+		}
+	}
+	if latest == 0 {
+		t.Fatal("no layers found")
+	}
+	require.Equal(t, latest, LayerLatest, "maximum layer should be latest")
+}
 
 func TestLoad(t *testing.T) {
 	for _, layer := range append(Layers, LayerLatest) {

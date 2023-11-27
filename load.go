@@ -21,10 +21,11 @@ var Layers = []int{
 	145,
 	155,
 	158,
+	164,
 }
 
 // LayerLatest is id of the latest layer.
-const LayerLatest = 158
+const LayerLatest = 164
 
 // LayerExists returns true if layer is included in package.
 func LayerExists(layer int) bool {
