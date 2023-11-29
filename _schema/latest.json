@@ -2817,7 +2817,8 @@
     "attachMenuBot": {
       "name": "attachMenuBot",
       "description": [
-        "Represents a bot mini app that can be launched from the attachment menu »¹"
+        "Represents a bot mini app that can be launched from the attachment/side menu »¹",
+        "At least one of the show_in_attach_menu or the show_in_side_menu flags will always be set."
       ],
       "links": [
         "https://core.telegram.org/api/bots/attach"
@@ -2847,7 +2848,7 @@
         },
         "inactive": {
           "name": "inactive",
-          "description": "Whether this bot attachment menu entry should be shown in the attachment menu (toggle using messages.toggleBotInAttachMenu¹)",
+          "description": "If set, before launching the mini app the client should ask the user to add the mini app to the attachment/side menu, and only if the user accepts, after invoking messages.toggleBotInAttachMenu¹ the app should be opened.",
           "links": [
             "https://core.telegram.org/method/messages.toggleBotInAttachMenu"
           ]
@@ -2866,15 +2867,19 @@
         },
         "show_in_attach_menu": {
           "name": "show_in_attach_menu",
-          "description": " "
+          "description": "Whether, when installed, an attachment menu entry should be shown for the Mini App."
         },
         "show_in_side_menu": {
           "name": "show_in_side_menu",
-          "description": " "
+          "description": "Whether, when installed, an entry in the main view side menu should be shown for the Mini App."
         },
         "side_menu_disclaimer_needed": {
           "name": "side_menu_disclaimer_needed",
-          "description": " "
+          "description": "If inactive if set and the user hasn't previously accepted the third-party mini apps Terms of Service¹ for this bot, when showing the mini app installation prompt, an additional mandatory checkbox to accept the mini apps TOS² and a disclaimer indicating that this Mini App is not affiliated to Telegram should be shown.",
+          "links": [
+            "https://telegram.org/tos/mini-apps",
+            "https://telegram.org/tos/mini-apps"
+          ]
         }
       }
     },
@@ -2904,7 +2909,7 @@
         },
         "name": {
           "name": "name",
-          "description": "One of the following values: note that animated icons must be played when the user clicks on the button, activating the bot mini app. default_static - Default attachment menu icon in SVG format placeholder_static - Default placeholder for opened Web Apps in SVG format ios_static - Attachment menu icon in SVG format for the official iOS app ios_animated - Animated attachment menu icon in TGS format for the official iOS app android_animated - Animated attachment menu icon in TGS format for the official Android app macos_animated - Animated attachment menu icon in TGS format for the official native Mac OS app"
+          "description": "One of the following values: note that animated icons must be played when the user clicks on the button, activating the bot mini app. default_static - Default attachment menu icon in SVG format placeholder_static - Default placeholder for opened Web Apps in SVG format ios_static - Attachment menu icon in SVG format for the official iOS app ios_animated - Animated attachment menu icon in TGS format for the official iOS app android_animated - Animated attachment menu icon in TGS format for the official Android app macos_animated - Animated attachment menu icon in TGS format for the official native Mac OS app ios_side_menu_static - Side menu icon in PNG format for the official iOS app android_side_menu_static - Side menu icon in SVG format for the official android app macos_side_menu_static - Side menu icon in PNG format for the official native Mac OS app"
         }
       }
     },
@@ -45145,7 +45150,7 @@
           "name": "start_param",
           "description": "If the web app was opened from the attachment menu using a attachment menu deep link¹, start_param should contain the data from the startattach parameter.",
           "links": [
-            "https://core.telegram.org/api/links#bot-attachment-menu-links"
+            "https://core.telegram.org/api/links#bot-attachment-or-side-menu-links"
           ]
         },
         "theme_params": {
