@@ -45018,7 +45018,11 @@
         },
         "from_side_menu": {
           "name": "from_side_menu",
-          "description": " "
+          "description": "Set this flag if opening the Mini App from the installed side menu entry »¹ or from a startapp link »².",
+          "links": [
+            "https://core.telegram.org/api/bots/attach",
+            "https://core.telegram.org/api/links#open-anywhere"
+          ]
         },
         "from_switch_webview": {
           "name": "from_switch_webview",
@@ -45033,7 +45037,10 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": " "
+          "description": "Start parameter, if opening from a startapp link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#open-anywhere"
+          ]
         },
         "theme_params": {
           "name": "theme_params",
@@ -45044,7 +45051,7 @@
         },
         "url": {
           "name": "url",
-          "description": "Web app URL"
+          "description": "Web app URL, if opening from a keyboard button or inline result"
         }
       }
     },
