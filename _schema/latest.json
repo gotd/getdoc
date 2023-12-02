@@ -2802,10 +2802,10 @@
     "appWebViewResultUrl": {
       "name": "appWebViewResultUrl",
       "description": [
-        "Contains the link that must be used to open a named bot mini app¹."
+        "Contains the link that must be used to open a named Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ],
       "fields": {
         "url": {
@@ -3819,10 +3819,10 @@
     "botApp": {
       "name": "botApp",
       "description": [
-        "Contains information about a named bot mini app¹."
+        "Contains information about a named Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ],
       "fields": {
         "access_hash": {
@@ -3861,9 +3861,9 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "bot mini app short name, used to generate named bot mini app deep links¹.",
+          "description": "bot mini app short name, used to generate named Mini App deep links¹.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-mini-app-links"
+            "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         },
         "title": {
@@ -4615,15 +4615,24 @@
         },
         "stories_hidden": {
           "name": "stories_hidden",
-          "description": " "
+          "description": "Whether we have hidden all stories posted by this channel »¹.",
+          "links": [
+            "https://core.telegram.org/api/stories#hiding-stories-of-other-users"
+          ]
         },
         "stories_hidden_min": {
           "name": "stories_hidden_min",
-          "description": " "
+          "description": "If set, indicates that the stories_hidden flag was not populated, and its value must cannot be relied on; use the previously cached value, or re-fetch the constructor using channels.getChannels¹ to obtain the latest value of the stories_hidden flag.",
+          "links": [
+            "https://core.telegram.org/method/channels.getChannels"
+          ]
         },
         "stories_max_id": {
           "name": "stories_max_id",
-          "description": " "
+          "description": "ID of the maximum read story¹.",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "stories_unavailable": {
           "name": "stories_unavailable",
@@ -5761,7 +5770,10 @@
         },
         "stories_pinned_available": {
           "name": "stories_pinned_available",
-          "description": " "
+          "description": "Whether this user has some pinned stories¹.",
+          "links": [
+            "https://core.telegram.org/api/stories#pinned-or-archived-stories"
+          ]
         },
         "theme_emoticon": {
           "name": "theme_emoticon",
@@ -10294,10 +10306,10 @@
     "inlineBotWebView": {
       "name": "inlineBotWebView",
       "description": [
-        "Specifies a bot mini app¹ button, shown on top of the inline query results list."
+        "Specifies an inline mode mini app¹ button, shown on top of the inline query results list."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps"
       ],
       "fields": {
         "text": {
@@ -10382,10 +10394,10 @@
     "inputBotAppID": {
       "name": "inputBotAppID",
       "description": [
-        "Used to fetch information about a named bot mini app¹ by its ID"
+        "Used to fetch information about a named Mini App¹ by its ID"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ],
       "fields": {
         "access_hash": {
@@ -10397,9 +10409,9 @@
         },
         "id": {
           "name": "id",
-          "description": "named bot mini app¹ ID.",
+          "description": "named Mini App¹ ID.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+            "https://core.telegram.org/api/bots/webapps#named-mini-apps"
           ]
         }
       }
@@ -10407,10 +10419,10 @@
     "inputBotAppShortName": {
       "name": "inputBotAppShortName",
       "description": [
-        "Used to fetch information about a named bot mini app¹ by its short name"
+        "Used to fetch information about a named Mini App¹ by its short name"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ],
       "fields": {
         "bot_id": {
@@ -10419,9 +10431,9 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Short name, obtained from a named bot mini app deep link¹",
+          "description": "Short name, obtained from a named Mini App deep link¹",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-mini-app-links"
+            "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         }
       }
@@ -14665,7 +14677,10 @@
         },
         "from_request": {
           "name": "from_request",
-          "description": " "
+          "description": "We have allowed the bot to send us messages using bots.allowSendMessage »¹.",
+          "links": [
+            "https://core.telegram.org/method/bots.allowSendMessage"
+          ]
         }
       }
     },
@@ -16840,10 +16855,10 @@
     "messages.botApp": {
       "name": "messages.botApp",
       "description": [
-        "Contains information about a named bot mini app¹"
+        "Contains information about a named Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ],
       "fields": {
         "app": {
@@ -16952,9 +16967,9 @@
         },
         "switch_webview": {
           "name": "switch_webview",
-          "description": "Shown as a button on top of the remaining inline result list; if clicked, opens the specified bot mini app¹.",
+          "description": "Shown as a button on top of the remaining inline result list; if clicked, opens the specified inline mode mini app¹.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
+            "https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps"
           ]
         },
         "users": {
@@ -23374,7 +23389,7 @@
         },
         "reactions_count": {
           "name": "reactions_count",
-          "description": " "
+          "description": "Number of reactions that were added to the story"
         },
         "users": {
           "name": "users",
@@ -23427,11 +23442,14 @@
         },
         "close_friends": {
           "name": "close_friends",
-          "description": " "
+          "description": "Whether this story can only be viewed by our close friends, see here »¹ for more info",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         },
         "contacts": {
           "name": "contacts",
-          "description": " "
+          "description": "Whether this story can only be viewed by our contacts"
         },
         "date": {
           "name": "date",
@@ -23476,7 +23494,10 @@
         },
         "min": {
           "name": "min",
-          "description": " "
+          "description": "Full information about this story was omitted for space and performance reasons; use stories.getStoriesByID¹ to fetch full info about this story when and if needed.",
+          "links": [
+            "https://core.telegram.org/method/stories.getStoriesByID"
+          ]
         },
         "noforwards": {
           "name": "noforwards",
@@ -23502,11 +23523,11 @@
         },
         "public": {
           "name": "public",
-          "description": "Whether this story is public"
+          "description": "Whether this story is public and can be viewed by everyone"
         },
         "selected_contacts": {
           "name": "selected_contacts",
-          "description": " "
+          "description": "Whether this story can only be viewed by a select list of our contacts"
         },
         "sent_reaction": {
           "name": "sent_reaction",
@@ -23541,7 +23562,10 @@
       "fields": {
         "close_friends": {
           "name": "close_friends",
-          "description": " "
+          "description": "Whether this story can only be viewed by our close friends, see here »¹ for more info",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         },
         "date": {
           "name": "date",
@@ -23575,11 +23599,17 @@
       "fields": {
         "blocked": {
           "name": "blocked",
-          "description": " "
+          "description": "Whether we have completely blocked¹ this user, including from viewing more of our stories.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         },
         "blocked_my_stories_from": {
           "name": "blocked_my_stories_from",
-          "description": " "
+          "description": "Whether we have blocked¹ this user from viewing more of our stories.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         },
         "date": {
           "name": "date",
@@ -23632,7 +23662,7 @@
         },
         "reactions_count": {
           "name": "reactions_count",
-          "description": " "
+          "description": "Number of reactions added to the story"
         },
         "recent_viewers": {
           "name": "recent_viewers",
@@ -27638,7 +27668,10 @@
         },
         "close_friend": {
           "name": "close_friend",
-          "description": " "
+          "description": "Whether we marked this user as a close friend, see here » for more info¹",
+          "links": [
+            "https://core.telegram.org/api/privacy"
+          ]
         },
         "contact": {
           "name": "contact",
@@ -27741,7 +27774,10 @@
         },
         "stories_max_id": {
           "name": "stories_max_id",
-          "description": " "
+          "description": "ID of the maximum read story¹.",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "stories_unavailable": {
           "name": "stories_unavailable",
@@ -27793,7 +27829,10 @@
         },
         "blocked_my_stories_from": {
           "name": "blocked_my_stories_from",
-          "description": " "
+          "description": "Whether we've blocked this user, preventing them from seeing our stories »¹.",
+          "links": [
+            "https://core.telegram.org/api/block"
+          ]
         },
         "bot_broadcast_admin_rights": {
           "name": "bot_broadcast_admin_rights",
@@ -27893,11 +27932,17 @@
         },
         "stories": {
           "name": "stories",
-          "description": " "
+          "description": "Active stories »¹",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "stories_pinned_available": {
           "name": "stories_pinned_available",
-          "description": " "
+          "description": "Whether this user has some pinned stories¹.",
+          "links": [
+            "https://core.telegram.org/api/stories#pinned-or-archived-stories"
+          ]
         },
         "theme_emoticon": {
           "name": "theme_emoticon",
@@ -28552,11 +28597,14 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID¹",
+          "links": [
+            "https://core.telegram.org/api/stories#watching-stories"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer that posted the story"
         },
         "story": {
           "name": "story",
@@ -28741,10 +28789,10 @@
     "AppWebViewResult": {
       "name": "AppWebViewResult",
       "description": [
-        "Contains the link that must be used to open a named bot mini app¹."
+        "Contains the link that must be used to open a named Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ]
     },
     "AttachMenuBot": {
@@ -28867,10 +28915,10 @@
     "BotApp": {
       "name": "BotApp",
       "description": [
-        "Contains information about a named bot mini app¹."
+        "Contains information about a named Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ]
     },
     "BotCommand": {
@@ -29443,10 +29491,10 @@
     "InlineBotWebView": {
       "name": "InlineBotWebView",
       "description": [
-        "Specifies a bot mini app¹ button, shown on top of the inline query results list."
+        "Specifies an inline mode mini app¹ button, shown on top of the inline query results list."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps"
       ]
     },
     "InlineQueryPeerType": {
@@ -29464,10 +29512,10 @@
     "InputBotApp": {
       "name": "InputBotApp",
       "description": [
-        "Used to fetch information about a named bot mini app¹"
+        "Used to fetch information about a named Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ]
     },
     "InputBotInlineMessage": {
@@ -31185,10 +31233,10 @@
     "messages.BotApp": {
       "name": "messages.BotApp",
       "description": [
-        "Contains information about a named bot mini app¹"
+        "Contains information about a named Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ]
     },
     "messages.BotResults": {
@@ -41764,17 +41812,17 @@
     "messages.getBotApp": {
       "name": "messages.getBotApp",
       "description": [
-        "Obtain information about a named bot mini app¹"
+        "Obtain information about a named Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-bot-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "Bot app information obtained from a named bot mini app deep link »¹.",
+          "description": "Bot app information obtained from a named Mini App deep link »¹.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-mini-app-links"
+            "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         },
         "hash": {
@@ -44901,21 +44949,21 @@
     "messages.requestAppWebView": {
       "name": "messages.requestAppWebView",
       "description": [
-        "Open a bot mini app¹ from a named bot mini app deep link², sending over user information after user confirmation.",
+        "Open a bot mini app¹ from a named Mini App deep link², sending over user information after user confirmation.",
         "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
       ],
       "links": [
         "https://core.telegram.org/bots/webapps",
-        "https://core.telegram.org/api/links#named-bot-mini-app-links",
+        "https://core.telegram.org/api/links#named-mini-app-links",
         "https://core.telegram.org/method/messages.prolongWebView"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the named bot mini app deep link² docs.",
+          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the named Mini App deep link² docs.",
           "links": [
             "https://core.telegram.org/method/messages.getBotApp",
-            "https://core.telegram.org/api/links#named-bot-mini-app-links"
+            "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         },
         "flags": {
@@ -44935,9 +44983,9 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "If the startapp query string parameter is present in the named bot mini app deep link¹, pass it to start_param.",
+          "description": "If the startapp query string parameter is present in the named Mini App deep link¹, pass it to start_param.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-mini-app-links"
+            "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         },
         "theme_params": {
@@ -44949,9 +44997,9 @@
         },
         "write_allowed": {
           "name": "write_allowed",
-          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the named bot mini app deep link¹ docs, and the user agreed.",
+          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the named Mini App deep link¹ docs, and the user agreed.",
           "links": [
-            "https://core.telegram.org/api/links#named-bot-mini-app-links"
+            "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         }
       }
@@ -45018,10 +45066,10 @@
         },
         "from_side_menu": {
           "name": "from_side_menu",
-          "description": "Set this flag if opening the Mini App from the installed side menu entry »¹ or from a startapp link »².",
+          "description": "Set this flag if opening the Mini App from the installed side menu entry »¹ or from a Mini App link »².",
           "links": [
             "https://core.telegram.org/api/bots/attach",
-            "https://core.telegram.org/api/links#open-anywhere"
+            "https://core.telegram.org/api/links#mini-app-links"
           ]
         },
         "from_switch_webview": {
@@ -45037,9 +45085,9 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "Start parameter, if opening from a startapp link »¹.",
+          "description": "Start parameter, if opening from a Mini App link »¹.",
           "links": [
-            "https://core.telegram.org/api/links#open-anywhere"
+            "https://core.telegram.org/api/links#mini-app-links"
           ]
         },
         "theme_params": {
@@ -47860,9 +47908,9 @@
         },
         "switch_webview": {
           "name": "switch_webview",
-          "description": "If passed, clients will display a button on top of the remaining inline result list with the specified text, that switches the user to the specified bot mini app¹.",
+          "description": "If passed, clients will display a button on top of the remaining inline result list with the specified text, that switches the user to the specified inline mode mini app¹.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#simple-mini-apps"
+            "https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps"
           ]
         }
       },
