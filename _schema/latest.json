@@ -5389,7 +5389,7 @@
         },
         "info": {
           "name": "info",
-          "description": "Info change events (when about¹, linked chat², location³, photo⁴, stickerset⁵, title⁶ or username⁷ data of a channel gets modified)",
+          "description": "Info change events (when about¹, linked chat², location³, photo⁴, stickerset⁵, title⁶ or username⁷, slowmode⁸, history TTL⁹ settings of a channel gets modified)",
           "links": [
             "https://core.telegram.org/constructor/channelAdminLogEventActionChangeAbout",
             "https://core.telegram.org/constructor/channelAdminLogEventActionChangeLinkedChat",
@@ -5397,7 +5397,9 @@
             "https://core.telegram.org/constructor/channelAdminLogEventActionChangePhoto",
             "https://core.telegram.org/constructor/channelAdminLogEventActionChangeStickerSet",
             "https://core.telegram.org/constructor/channelAdminLogEventActionChangeTitle",
-            "https://core.telegram.org/constructor/channelAdminLogEventActionChangeUsername"
+            "https://core.telegram.org/constructor/channelAdminLogEventActionChangeUsername",
+            "https://core.telegram.org/constructor/channelAdminLogEventActionToggleSlowMode",
+            "https://core.telegram.org/constructor/channelAdminLogEventActionChangeHistoryTTL"
           ]
         },
         "invite": {
@@ -5413,9 +5415,11 @@
         },
         "join": {
           "name": "join",
-          "description": "Join events¹",
+          "description": "Join events¹, including joins using invite links² and join requests³.",
           "links": [
-            "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantJoin"
+            "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantJoin",
+            "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantJoinByInvite",
+            "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantJoinByRequest"
           ]
         },
         "kick": {
@@ -5452,12 +5456,13 @@
         },
         "settings": {
           "name": "settings",
-          "description": "Settings change events (invites¹, hidden prehistory², signatures³, default banned rights⁴)",
+          "description": "Settings change events (invites¹, hidden prehistory², signatures³, default banned rights⁴, forum toggle events⁵)",
           "links": [
             "https://core.telegram.org/constructor/channelAdminLogEventActionToggleInvites",
             "https://core.telegram.org/constructor/channelAdminLogEventActionTogglePreHistoryHidden",
             "https://core.telegram.org/constructor/channelAdminLogEventActionToggleSignatures",
-            "https://core.telegram.org/constructor/channelAdminLogEventActionDefaultBannedRights"
+            "https://core.telegram.org/constructor/channelAdminLogEventActionDefaultBannedRights",
+            "https://core.telegram.org/constructor/channelAdminLogEventActionToggleForum"
           ]
         },
         "unban": {
@@ -16251,6 +16256,12 @@
     },
     "messageMediaStory": {
       "name": "messageMediaStory",
+      "description": [
+        "Represents a forwarded story¹ or a story mention."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -16261,19 +16272,22 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer that posted the story."
         },
         "story": {
           "name": "story",
-          "description": " "
+          "description": "The story itself, if absent fetch it using stories.getStoriesByID¹ and the peer/id parameters specified above.",
+          "links": [
+            "https://core.telegram.org/method/stories.getStoriesByID"
+          ]
         },
         "via_mention": {
           "name": "via_mention",
-          "description": " "
+          "description": "If set, indicates that this someone has mentioned us in this story (i.e. by tagging us in the description) or vice versa, we have mentioned the other peer (if the message is outgoing)."
         }
       }
     },
@@ -17487,7 +17501,7 @@
         },
         "count": {
           "name": "count",
-          "description": "Total number of topics matching query; may be less than the topics contained in topics, in which case pagination¹ is required.",
+          "description": "Total number of topics matching query; may be more than the topics contained in topics, in which case pagination¹ is required.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
@@ -17508,7 +17522,7 @@
         },
         "order_by_create_date": {
           "name": "order_by_create_date",
-          "description": "Whether the returned topics are ordered by creation date; if set, pagination by next_offset should use forumTopic¹.date; otherwise topics are ordered by the last message date, so paginate by the date of the message² referenced by forumTopic³.top_message.",
+          "description": "Whether the returned topics are ordered by creation date; if set, pagination by offset_date should use forumTopic¹.date; otherwise topics are ordered by the last message date, so paginate by the date of the message² referenced by forumTopic³.top_message.",
           "links": [
             "https://core.telegram.org/constructor/forumTopic",
             "https://core.telegram.org/type/Message",
@@ -28587,6 +28601,9 @@
     },
     "webPageAttributeStory": {
       "name": "webPageAttributeStory",
+      "description": [
+        "Webpage preview of a Telegram story"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -28608,7 +28625,10 @@
         },
         "story": {
           "name": "story",
-          "description": " "
+          "description": "May contain the story, if not the story should be fetched when and if needed using stories.getStoriesByID¹ with the above id and peer.",
+          "links": [
+            "https://core.telegram.org/method/stories.getStoriesByID"
+          ]
         }
       }
     },
@@ -36636,28 +36656,28 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
+          "description": "Maximum number of results to return, see pagination¹. For optimal performance, the number of returned topics is chosen by the server and can be smaller than the specified limit.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_date": {
           "name": "offset_date",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹, date of the last message of the last found topic. Use 0 or any date in the future to get results from the last topic.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_id": {
           "name": "offset_id",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹, ID of the last message of the last found topic (or initially 0).",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_topic": {
           "name": "offset_topic",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹, ID of the last found topic (or initially 0).",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
@@ -37393,7 +37413,7 @@
         },
         "force": {
           "name": "force",
-          "description": "If set, topics pinned server-side but not present in the order field will be unpinned."
+          "description": "If not set, the order of only the topics present both server-side and in order will be changed (i.e. mentioning topics not pinned server-side in order will not pin them, and not mentioning topics pinned server-side will not unpin them).  If set, the entire server-side pinned topic list will be replaced with order (i.e. mentioning topics not pinned server-side in order will pin them, and not mentioning topics pinned server-side will unpin them)"
         },
         "order": {
           "name": "order",
@@ -45377,7 +45397,7 @@
     "messages.search": {
       "name": "messages.search",
       "description": [
-        "Returns found messages"
+        "Search for messages."
       ],
       "parameters": {
         "add_offset": {
@@ -45444,9 +45464,11 @@
         },
         "peer": {
           "name": "peer",
-          "description": "User or chat, histories with which are searched, or (inputPeerEmpty)¹ constructor for global search",
+          "description": "User or chat, histories with which are searched, or (inputPeerEmpty)¹ constructor to search in all private chats and normal groups (not channels) »². Use messages.searchGlobal³ to search globally in all chats, groups, supergroups and channels.",
           "links": [
-            "https://core.telegram.org/constructor/inputPeerEmpty"
+            "https://core.telegram.org/constructor/inputPeerEmpty",
+            "https://core.telegram.org/api/channel",
+            "https://core.telegram.org/method/messages.searchGlobal"
           ]
         },
         "q": {
@@ -50337,7 +50359,11 @@
         },
         "max_id": {
           "name": "max_id",
-          "description": "If a positive value was transferred, the method will return only photos with IDs less than the set one"
+          "description": "If a positive value was transferred, the method will return only photos with IDs less than the set one. This parameter is often useful when refetching file references »¹, as in conjuction with limit=1 and offset=-1 the photo² object with the id specified in max_id can be fetched.",
+          "links": [
+            "https://core.telegram.org/api/file_reference",
+            "https://core.telegram.org/constructor/photo"
+          ]
         },
         "offset": {
           "name": "offset",
@@ -51970,7 +51996,10 @@
         },
         "reactions_first": {
           "name": "reactions_first",
-          "description": " "
+          "description": "Whether to return storyView¹ info about users that reacted to the story (i.e. if set, the server will also sort results based on the presence of a reaction, after sorting it by date as usual).",
+          "links": [
+            "https://core.telegram.org/constructor/storyView"
+          ]
         }
       },
       "errors": [
