@@ -4565,7 +4565,7 @@
         },
         "left": {
           "name": "left",
-          "description": "Whether the current user has left this channel"
+          "description": "Whether the current user has left or is not a member of this channel"
         },
         "megagroup": {
           "name": "megagroup",
@@ -35484,7 +35484,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "ADDRESS_INVALID"
+          "type": "ADDRESS_INVALID",
+          "description": "The specified geopoint address is invalid."
         },
         {
           "code": 400,
@@ -35500,6 +35501,11 @@
           "code": 400,
           "type": "CHAT_ABOUT_TOO_LONG",
           "description": "Chat about too long."
+        },
+        {
+          "code": 500,
+          "type": "CHAT_INVALID",
+          "description": "Invalid chat."
         },
         {
           "code": 400,
@@ -35583,6 +35589,11 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         },
         {
           "code": 400,
@@ -36217,11 +36228,13 @@
         },
         {
           "code": 400,
-          "type": "TOPIC_CLOSE_SEPARATELY"
+          "type": "TOPIC_CLOSE_SEPARATELY",
+          "description": "The close flag cannot be provided together with any of the other flags."
         },
         {
           "code": 400,
-          "type": "TOPIC_HIDE_SEPARATELY"
+          "type": "TOPIC_HIDE_SEPARATELY",
+          "description": "The hide flag cannot be provided together with any of the other flags."
         },
         {
           "code": 400,
@@ -40068,10 +40081,6 @@
           "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
-        },
-        {
-          "code": 500,
-          "type": "CHAT_MEMBERS_CHANNEL"
         },
         {
           "code": 400,
@@ -44422,10 +44431,6 @@
           "description": "You have joined too many channels/supergroups."
         },
         {
-          "code": 500,
-          "type": "CHANNEL_ID_GENERATE_FAILED"
-        },
-        {
           "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
@@ -48573,6 +48578,11 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
           "code": 403,
           "type": "PREMIUM_ACCOUNT_REQUIRED",
           "description": "A premium account is required to execute this action."
@@ -51782,6 +51792,11 @@
         },
         {
           "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -51942,6 +51957,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_EMPTY",
+          "description": "You specified no story IDs."
         }
       ]
     },
@@ -52607,6 +52627,11 @@
         },
         {
           "code": 400,
+          "type": "FILE_TOKEN_INVALID",
+          "description": "The specified file token is invalid."
+        },
+        {
+          "code": 400,
           "type": "RSA_DECRYPT_FAILED",
           "description": "Internal RSA decryption failed."
         }
@@ -53053,7 +53078,8 @@
     },
     "ADDRESS_INVALID": {
       "code": 400,
-      "type": "ADDRESS_INVALID"
+      "type": "ADDRESS_INVALID",
+      "description": "The specified geopoint address is invalid."
     },
     "ADMINS_TOO_MUCH": {
       "code": 400,
@@ -53348,10 +53374,6 @@
       "type": "CHANNEL_FORUM_MISSING",
       "description": "This supergroup is not a forum."
     },
-    "CHANNEL_ID_GENERATE_FAILED": {
-      "code": 500,
-      "type": "CHANNEL_ID_GENERATE_FAILED"
-    },
     "CHANNEL_ID_INVALID": {
       "code": 400,
       "type": "CHANNEL_ID_INVALID",
@@ -53455,10 +53477,6 @@
       "code": 400,
       "type": "CHAT_LINK_EXISTS",
       "description": "The chat is public, you can't hide the history to new users."
-    },
-    "CHAT_MEMBERS_CHANNEL": {
-      "code": 500,
-      "type": "CHAT_MEMBERS_CHANNEL"
     },
     "CHAT_NOT_MODIFIED": {
       "code": 400,
@@ -55218,7 +55236,8 @@
     },
     "TOPIC_CLOSE_SEPARATELY": {
       "code": 400,
-      "type": "TOPIC_CLOSE_SEPARATELY"
+      "type": "TOPIC_CLOSE_SEPARATELY",
+      "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
       "code": 400,
@@ -55227,7 +55246,8 @@
     },
     "TOPIC_HIDE_SEPARATELY": {
       "code": 400,
-      "type": "TOPIC_HIDE_SEPARATELY"
+      "type": "TOPIC_HIDE_SEPARATELY",
+      "description": "The hide flag cannot be provided together with any of the other flags."
     },
     "TOPIC_ID_INVALID": {
       "code": 400,
