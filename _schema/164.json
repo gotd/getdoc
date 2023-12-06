@@ -38586,10 +38586,10 @@
     "contacts.blockFromReplies": {
       "name": "contacts.blockFromReplies",
       "description": [
-        "Stop getting notifications about thread replies¹ of a certain user in @replies"
+        "Stop getting notifications about discussion replies¹ of a certain user in @replies"
       ],
       "links": [
-        "https://core.telegram.org/api/threads"
+        "https://core.telegram.org/api/discussion"
       ],
       "parameters": {
         "delete_history": {
@@ -38611,7 +38611,7 @@
           "name": "msg_id",
           "description": "ID of the message in the @replies¹ chat",
           "links": [
-            "https://core.telegram.org/api/threads#replies"
+            "https://core.telegram.org/api/discussion#replies"
           ]
         },
         "report_spam": {
