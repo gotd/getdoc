@@ -10200,18 +10200,24 @@
     },
     "help.peerColorOption": {
       "name": "help.peerColorOption",
+      "description": [
+        "Contains info about a color palette »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "color_id": {
           "name": "color_id",
-          "description": " "
+          "description": "Palette ID."
         },
         "colors": {
           "name": "colors",
-          "description": " "
+          "description": "Light mode palette"
         },
         "dark_colors": {
           "name": "dark_colors",
-          "description": " "
+          "description": "Dark mode palette"
         },
         "flags": {
           "name": "flags",
@@ -10222,42 +10228,63 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "Whether this palette should not be displayed as an option to the user when choosing a palette to apply to profile pages or message accents."
         }
       }
     },
     "help.peerColorProfileSet": {
       "name": "help.peerColorProfileSet",
+      "description": [
+        "Represents a color palette that can be used in profile pages »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "bg_colors": {
           "name": "bg_colors",
-          "description": " "
+          "description": "A list of 1-2 colors in RGB format describing the colors used to generate the actual background used in the profile page."
         },
         "palette_colors": {
           "name": "palette_colors",
-          "description": " "
+          "description": "A list of 1-2 colors in RGB format, shown in the color palette settings to describe the current palette."
         },
         "story_colors": {
           "name": "story_colors",
-          "description": " "
+          "description": "A list of 2 colors in RGB format describing the colors of the gradient used for the unread active story indicator around the profile photo."
         }
       }
     },
     "help.peerColorSet": {
       "name": "help.peerColorSet",
+      "description": [
+        "Represents a color palette that can be used in message accents »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "colors": {
           "name": "colors",
-          "description": " "
+          "description": ""
         }
       }
     },
     "help.peerColors": {
       "name": "help.peerColors",
+      "description": [
+        "Contains info about multiple color palettes »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "colors": {
           "name": "colors",
-          "description": " "
+          "description": "Usable color palettes¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "hash": {
           "name": "hash",
@@ -10269,7 +10296,10 @@
       }
     },
     "help.peerColorsNotModified": {
-      "name": "help.peerColorsNotModified"
+      "name": "help.peerColorsNotModified",
+      "description": [
+        "The list of color palettes has not changed."
+      ]
     },
     "help.premiumPromo": {
       "name": "help.premiumPromo",
@@ -30597,13 +30627,31 @@
       ]
     },
     "Help.PeerColorOption": {
-      "name": "Help.PeerColorOption"
+      "name": "Help.PeerColorOption",
+      "description": [
+        "Contains info about a color palette »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ]
     },
     "Help.PeerColorSet": {
-      "name": "Help.PeerColorSet"
+      "name": "Help.PeerColorSet",
+      "description": [
+        "Contains info about a color palette »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ]
     },
     "Help.PeerColors": {
-      "name": "Help.PeerColors"
+      "name": "Help.PeerColors",
+      "description": [
+        "Contains info about multiple color palettes »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ]
     },
     "Help.RecentMeUrls": {
       "name": "Help.RecentMeUrls",
@@ -40740,7 +40788,7 @@
     "help.getPeerColors": {
       "name": "help.getPeerColors",
       "description": [
-        "Get the set of accent color palettes »¹ that can be used for messages"
+        "Get the set of accent color palettes »¹ that can be used for message accents."
       ],
       "links": [
         "https://core.telegram.org/api/colors"
@@ -40758,7 +40806,7 @@
     "help.getPeerProfileColors": {
       "name": "help.getPeerProfileColors",
       "description": [
-        "Get the set of accent color palettes »¹ that can be used for profiles"
+        "Get the set of accent color palettes »¹ that can be used in profile page backgrounds."
       ],
       "links": [
         "https://core.telegram.org/api/colors"
