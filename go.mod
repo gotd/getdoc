@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/cenkalti/backoff/v4 v4.2.1
-	github.com/go-faster/errors v0.7.0
+	github.com/go-faster/errors v0.7.1
 	github.com/stretchr/testify v1.8.4
 	go.uber.org/ratelimit v0.3.0
 )
