@@ -4876,6 +4876,13 @@
     },
     "channelAdminLogEventActionChangeBackgroundEmoji": {
       "name": "channelAdminLogEventActionChangeBackgroundEmoji",
+      "description": [
+        "The custom emoji¹ used to generate the pattern of the background profile color »² of a channel was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji",
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
@@ -4889,6 +4896,12 @@
     },
     "channelAdminLogEventActionChangeColor": {
       "name": "channelAdminLogEventActionChangeColor",
+      "description": [
+        "The background profile color »¹ of a channel was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
@@ -15758,11 +15771,18 @@
         },
         "for_both": {
           "name": "for_both",
-          "description": " "
+          "description": "If set, indicates the wallpaper was forcefully applied for both sides, without explicit confirmation from the other side. If the message is incoming, and we did not like the new wallpaper the other user has chosen for us, we can re-set our previous wallpaper just on our side, by invoking messages.setChatWallPaper¹, providing only the revert flag (and obviously the peer parameter).",
+          "links": [
+            "https://core.telegram.org/method/messages.setChatWallPaper"
+          ]
         },
         "same": {
           "name": "same",
-          "description": " "
+          "description": "If set, indicates the user applied a wallpaper »¹ previously sent by the other user in a messageActionSetChatWallPaper² message.",
+          "links": [
+            "https://core.telegram.org/api/wallpapers",
+            "https://core.telegram.org/constructor/messageActionSetChatWallPaper"
+          ]
         },
         "wallpaper": {
           "name": "wallpaper",
@@ -20392,14 +20412,26 @@
     },
     "peerColor": {
       "name": "peerColor",
+      "description": [
+        "Represents a color palette »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ],
       "fields": {
         "background_emoji_id": {
           "name": "background_emoji_id",
-          "description": " "
+          "description": "Custom emoji ID¹ used to generate the pattern.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "color": {
           "name": "color",
-          "description": " "
+          "description": "Color palette ID, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -22077,23 +22109,35 @@
     },
     "publicForwardMessage": {
       "name": "publicForwardMessage",
+      "description": [
+        "Contains info about a forward of a story¹ as a message."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Info about the message with the reposted story."
         }
       }
     },
     "publicForwardStory": {
       "name": "publicForwardStory",
+      "description": [
+        "Contains info about a forward of a story¹ as a repost by a public channel."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel that reposted the story."
         },
         "story": {
           "name": "story",
-          "description": " "
+          "description": "The reposted story (may be different from the original story)."
         }
       }
     },
@@ -23745,6 +23789,12 @@
     },
     "stats.publicForwards": {
       "name": "stats.publicForwards",
+      "description": [
+        "Contains info about the forwards of a story¹ as a message to public chats and reposts by public channels."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
@@ -23752,7 +23802,7 @@
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results"
         },
         "flags": {
           "name": "flags",
@@ -23763,11 +23813,14 @@
         },
         "forwards": {
           "name": "forwards",
-          "description": " "
+          "description": "Info about the forwards of a story."
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset used for pagination¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "users": {
           "name": "users",
@@ -23777,14 +23830,21 @@
     },
     "stats.storyStats": {
       "name": "stats.storyStats",
+      "description": [
+        "Contains statistics¹ about a story²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stats",
+        "https://core.telegram.org/api/stories"
+      ],
       "fields": {
         "reactions_by_emotion_graph": {
           "name": "reactions_by_emotion_graph",
-          "description": " "
+          "description": "A bar graph containing the number of story reactions categorized by \"emotion\" (i.e. Positive, Negative, Other, etc...)"
         },
         "views_graph": {
           "name": "views_graph",
-          "description": " "
+          "description": "A graph containing the number of story views and shares"
         }
       }
     },
@@ -24477,6 +24537,9 @@
     },
     "storyFwdHeader": {
       "name": "storyFwdHeader",
+      "description": [
+        "Contains info about the original poster of a reposted story."
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -24487,19 +24550,19 @@
         },
         "from": {
           "name": "from",
-          "description": " "
+          "description": "Peer that originally posted the story; will be empty for stories forwarded from a user with forwards privacy enabled, in which case from_name will be set, instead."
         },
         "from_name": {
           "name": "from_name",
-          "description": " "
+          "description": "Will be set for stories forwarded from a user with forwards privacy enabled, in which case from will also be empty."
         },
         "modified": {
           "name": "modified",
-          "description": " "
+          "description": "Whether the story media was modified before reposting it (for example by overlaying a round video with a reaction)."
         },
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": ", contains the story ID"
         }
       }
     },
@@ -24555,7 +24618,10 @@
         },
         "fwd_from": {
           "name": "fwd_from",
-          "description": " "
+          "description": "For reposted stories »¹, contains info about the original story.",
+          "links": [
+            "https://core.telegram.org/api/stories#reposting-stories"
+          ]
         },
         "id": {
           "name": "id",
@@ -31634,7 +31700,13 @@
       ]
     },
     "PublicForward": {
-      "name": "PublicForward"
+      "name": "PublicForward",
+      "description": [
+        "Contains info about the forwards of a story¹ as a message to public chats and reposts by public channels."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "Reaction": {
       "name": "Reaction",
@@ -31849,7 +31921,14 @@
       "name": "Stats.PublicForwards"
     },
     "Stats.StoryStats": {
-      "name": "Stats.StoryStats"
+      "name": "Stats.StoryStats",
+      "description": [
+        "Contains statistics¹ about a story²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stats",
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "StatsAbsValueAndPrev": {
       "name": "StatsAbsValueAndPrev",
@@ -52539,10 +52618,19 @@
     },
     "stats.getStoryPublicForwards": {
       "name": "stats.getStoryPublicForwards",
+      "description": [
+        "Obtain forwards of a story¹ as a message to public chats and reposts by public channels."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story¹ ID",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         },
         "limit": {
           "name": "limit",
@@ -52553,11 +52641,14 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination, from stats.PublicForwards¹.next_offset.",
+          "links": [
+            "https://core.telegram.org/constructor/stats.publicForwards"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the story was originally posted"
         }
       },
       "errors": [
@@ -52570,10 +52661,17 @@
     },
     "stats.getStoryStats": {
       "name": "stats.getStoryStats",
+      "description": [
+        "Get statistics¹ for a certain story²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stats",
+        "https://core.telegram.org/api/stories"
+      ],
       "parameters": {
         "dark": {
           "name": "dark",
-          "description": " "
+          "description": "Whether to enable the dark theme for graph colors"
         },
         "flags": {
           "name": "flags",
@@ -52584,11 +52682,11 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Story ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that posted the story"
         }
       },
       "errors": [
@@ -53809,15 +53907,15 @@
         },
         "fwd_from_id": {
           "name": "fwd_from_id",
-          "description": " "
+          "description": "If set, indicates that this story is a repost of story with ID fwd_from_story posted by the peer in fwd_from_id."
         },
         "fwd_from_story": {
           "name": "fwd_from_story",
-          "description": " "
+          "description": "If set, indicates that this story is a repost of story with ID fwd_from_story posted by the peer in fwd_from_id."
         },
         "fwd_modified": {
           "name": "fwd_modified",
-          "description": " "
+          "description": "Set this flag when reposting stories with fwd_from_id+fwd_from_id, if the media was modified before reposting."
         },
         "media": {
           "name": "media",
