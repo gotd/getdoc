@@ -3862,14 +3862,20 @@
     },
     "boost": {
       "name": "boost",
+      "description": [
+        "Info about one or more boosts¹ applied by a specific user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the boost applied"
         },
         "expires": {
           "name": "expires",
-          "description": " "
+          "description": "When does the boost expire"
         },
         "flags": {
           "name": "flags",
@@ -3892,11 +3898,11 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Unique ID for this set of boosts."
         },
         "multiplier": {
           "name": "multiplier",
-          "description": " "
+          "description": "If set, this boost counts as multiplier boosts, otherwise it counts as a single boost."
         },
         "unclaimed": {
           "name": "unclaimed",
@@ -3908,7 +3914,7 @@
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that applied the boost."
         }
       }
     },
@@ -18869,11 +18875,18 @@
         },
         "trial_remains_num": {
           "name": "trial_remains_num",
-          "description": " "
+          "description": "For non-Premium¹ users, this flag will be set, indicating the remaining transcriptions in the free trial period.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "trial_remains_until_date": {
           "name": "trial_remains_until_date",
-          "description": " "
+          "description": "For non-Premium¹ users, this flag will be set, indicating the date when the trial_remains_num counter will be reset to the maximum value of transcribe_audio_trial_weekly_number².",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/api/config#transcribe-audio-trial-weekly-number"
+          ]
         }
       }
     },
@@ -18955,18 +18968,24 @@
     },
     "myBoost": {
       "name": "myBoost",
+      "description": [
+        "Contains information about a single boost slot »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "cooldown_until_date": {
           "name": "cooldown_until_date",
-          "description": " "
+          "description": "If peer is set, indicates the (unixtime) date after which this boost can be reassigned to another channel."
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When (unixtime) we started boosting the peer, 0 otherwise."
         },
         "expires": {
           "name": "expires",
-          "description": " "
+          "description": "Indicates the (unixtime) expiration date of the boost in peer (0 if peer is not set)."
         },
         "flags": {
           "name": "flags",
@@ -18977,11 +18996,17 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "If set, indicates this slot is currently occupied, i.e. we are boosting¹ this peer.  Note that we can assign multiple boost slots to the same peer.",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         },
         "slot": {
           "name": "slot",
-          "description": " "
+          "description": "Boost slot ID »¹",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         }
       }
     },
@@ -21669,56 +21694,71 @@
     },
     "postInteractionCountersMessage": {
       "name": "postInteractionCountersMessage",
+      "description": [
+        "Interaction counters for a message."
+      ],
       "fields": {
         "forwards": {
           "name": "forwards",
-          "description": " "
+          "description": "Number of forwards to public channels"
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         },
         "reactions": {
           "name": "reactions",
-          "description": " "
+          "description": "Number of reactions"
         },
         "views": {
           "name": "views",
-          "description": " "
+          "description": "Number of views"
         }
       }
     },
     "postInteractionCountersStory": {
       "name": "postInteractionCountersStory",
+      "description": [
+        "Interaction counters for a story."
+      ],
       "fields": {
         "forwards": {
           "name": "forwards",
-          "description": " "
+          "description": "Number of forwards and reposts to public chats and channels"
         },
         "reactions": {
           "name": "reactions",
-          "description": " "
+          "description": "Number of reactions"
         },
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": "Story ID"
         },
         "views": {
           "name": "views",
-          "description": " "
+          "description": "Number of views"
         }
       }
     },
     "premium.boostsList": {
       "name": "premium.boostsList",
+      "description": [
+        "List of boosts¹ that were applied to a peer by multiple users."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "boosts": {
           "name": "boosts",
-          "description": " "
+          "description": "Boosts¹",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results"
         },
         "flags": {
           "name": "flags",
@@ -21729,28 +21769,40 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset that can be used for pagination¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "premium.boostsStatus": {
       "name": "premium.boostsStatus",
+      "description": [
+        "Contains info about the current boost status¹ of a peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "boost_url": {
           "name": "boost_url",
-          "description": " "
+          "description": "Boost deep link »¹ that can be used to boost the chat.",
+          "links": [
+            "https://core.telegram.org/api/links#boost-links"
+          ]
         },
         "boosts": {
           "name": "boosts",
-          "description": " "
+          "description": "Total number of boosts acquired so far."
         },
         "current_level_boosts": {
           "name": "current_level_boosts",
-          "description": " "
+          "description": "The number of boosts acquired so far in the current level."
         },
         "flags": {
           "name": "flags",
@@ -21761,48 +21813,65 @@
         },
         "gift_boosts": {
           "name": "gift_boosts",
-          "description": " "
+          "description": "The number of boosts acquired from created Telegram Premium gift codes¹ and giveaways²; only returned to channel admins.",
+          "links": [
+            "https://core.telegram.org/api/giveaways",
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "level": {
           "name": "level",
-          "description": " "
+          "description": "The current boost level of the channel."
         },
         "my_boost": {
           "name": "my_boost",
-          "description": " "
+          "description": "Whether we're currently boosting this channel, my_boost_slots will also be set."
         },
         "my_boost_slots": {
           "name": "my_boost_slots",
-          "description": " "
+          "description": "Indicates which of our boost slots¹ we've assigned to this peer (populated if my_boost is set).",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         },
         "next_level_boosts": {
           "name": "next_level_boosts",
-          "description": " "
+          "description": "Total number of boosts needed to reach the next level; if absent, the next level isn't available."
         },
         "premium_audience": {
           "name": "premium_audience",
-          "description": " "
+          "description": "Only returned to channel admins: contains the approximated number of Premium users subscribed to the channel, related to the total number of subscribers."
         },
         "prepaid_giveaways": {
           "name": "prepaid_giveaways",
-          "description": " "
+          "description": "A list of prepaid giveaways¹ available for the chat; only returned to channel admins.",
+          "links": [
+            "https://core.telegram.org/api/giveaways"
+          ]
         }
       }
     },
     "premium.myBoosts": {
       "name": "premium.myBoosts",
+      "description": [
+        "A list of peers we are currently boosting¹, and how many boost slots² we have left."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Referenced chats"
         },
         "my_boosts": {
           "name": "my_boosts",
-          "description": " "
+          "description": "Info about boosted peers and remaining boost slots."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Referenced users"
         }
       }
     },
@@ -27128,6 +27197,12 @@
     },
     "updatePeerWallpaper": {
       "name": "updatePeerWallpaper",
+      "description": [
+        "The wallpaper »¹ of a given peer has changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/wallpapers"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -27138,7 +27213,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where the wallpaper has changed."
         },
         "wallpaper": {
           "name": "wallpaper",
@@ -30156,7 +30231,13 @@
       ]
     },
     "Boost": {
-      "name": "Boost"
+      "name": "Boost",
+      "description": [
+        "Info about one or more boosts¹ applied by a specific user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ]
     },
     "BotApp": {
       "name": "BotApp",
@@ -31356,7 +31437,10 @@
       ]
     },
     "Messages.WebPage": {
-      "name": "Messages.WebPage"
+      "name": "Messages.WebPage",
+      "description": [
+        "Contains an instant view webpage."
+      ]
     },
     "MessagesFilter": {
       "name": "MessagesFilter",
@@ -31365,7 +31449,13 @@
       ]
     },
     "MyBoost": {
-      "name": "MyBoost"
+      "name": "MyBoost",
+      "description": [
+        "Contains information about a single boost slot »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ]
     },
     "NearestDc": {
       "name": "NearestDc",
@@ -31485,10 +31575,22 @@
       ]
     },
     "Payments.CheckedGiftCode": {
-      "name": "Payments.CheckedGiftCode"
+      "name": "Payments.CheckedGiftCode",
+      "description": [
+        "Info about a Telegram Premium Giftcode¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ]
     },
     "Payments.GiveawayInfo": {
-      "name": "Payments.GiveawayInfo"
+      "name": "Payments.GiveawayInfo",
+      "description": [
+        "Info about a Telegram Premium Giveaway¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ]
     },
     "Payments.PaymentForm": {
       "name": "Payments.PaymentForm",
@@ -31533,7 +31635,13 @@
       ]
     },
     "PeerColor": {
-      "name": "PeerColor"
+      "name": "PeerColor",
+      "description": [
+        "Represents a color palette »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors"
+      ]
     },
     "PeerLocated": {
       "name": "PeerLocated",
@@ -31644,16 +31752,38 @@
       ]
     },
     "PostInteractionCounters": {
-      "name": "PostInteractionCounters"
+      "name": "PostInteractionCounters",
+      "description": [
+        "Interaction counters"
+      ]
     },
     "Premium.BoostsList": {
-      "name": "Premium.BoostsList"
+      "name": "Premium.BoostsList",
+      "description": [
+        "List of boosts¹ that were applied to a peer by multiple users."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ]
     },
     "Premium.BoostsStatus": {
-      "name": "Premium.BoostsStatus"
+      "name": "Premium.BoostsStatus",
+      "description": [
+        "Contains info about the current boost status¹ of a peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ]
     },
     "Premium.MyBoosts": {
-      "name": "Premium.MyBoosts"
+      "name": "Premium.MyBoosts",
+      "description": [
+        "A list of peers we are currently boosting¹, and how many boost slots² we have left."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/boost"
+      ]
     },
     "PremiumGiftCodeOption": {
       "name": "PremiumGiftCodeOption"
@@ -31918,7 +32048,13 @@
       ]
     },
     "Stats.PublicForwards": {
-      "name": "Stats.PublicForwards"
+      "name": "Stats.PublicForwards",
+      "description": [
+        "Contains info about the forwards of a story¹ as a message to public chats and reposts by public channels."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories"
+      ]
     },
     "Stats.StoryStats": {
       "name": "Stats.StoryStats",
@@ -32021,7 +32157,10 @@
       ]
     },
     "StoryFwdHeader": {
-      "name": "StoryFwdHeader"
+      "name": "StoryFwdHeader",
+      "description": [
+        "Contains info about the original poster of a reposted story."
+      ]
     },
     "StoryItem": {
       "name": "StoryItem",
@@ -37963,10 +38102,13 @@
     },
     "channels.getChannelRecommendations": {
       "name": "channels.getChannelRecommendations",
+      "description": [
+        "Obtain a list of similarly themed public channels, selected based on similarities in their subscriber bases."
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The method will return channels related to the passed channel."
         }
       },
       "errors": [
@@ -50605,10 +50747,16 @@
     },
     "payments.applyGiftCode": {
       "name": "payments.applyGiftCode",
+      "description": [
+        "Apply a Telegram Premium giftcode »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ],
       "parameters": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "The code to apply"
         }
       },
       "errors": [
@@ -50664,10 +50812,16 @@
     },
     "payments.checkGiftCode": {
       "name": "payments.checkGiftCode",
+      "description": [
+        "Obtain information about a Telegram Premium giftcode »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ],
       "parameters": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "The giftcode to check"
         }
       },
       "errors": [
@@ -50759,14 +50913,23 @@
     },
     "payments.getGiveawayInfo": {
       "name": "payments.getGiveawayInfo",
+      "description": [
+        "Obtain information about a Telegram Premium giveaway »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID of the messageActionGiveawayLaunch¹ service message",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionGiveawayLaunch"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where the giveaway was posted."
         }
       },
       "errors": [
@@ -50832,6 +50995,12 @@
     },
     "payments.getPremiumGiftCodeOptions": {
       "name": "payments.getPremiumGiftCodeOptions",
+      "description": [
+        "Obtain a list of Telegram Premium giveaway/gift code »¹ options."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ],
       "parameters": {
         "boost_peer": {
           "name": "boost_peer",
@@ -50854,18 +51023,24 @@
     },
     "payments.launchPrepaidGiveaway": {
       "name": "payments.launchPrepaidGiveaway",
+      "description": [
+        "Launch a prepaid giveaway »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ],
       "parameters": {
         "giveaway_id": {
           "name": "giveaway_id",
-          "description": " "
+          "description": "The prepaid giveaway ID."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where to launch the giveaway."
         },
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Giveway parameters"
         }
       },
       "errors": [
@@ -52297,6 +52472,12 @@
     },
     "premium.applyBoost": {
       "name": "premium.applyBoost",
+      "description": [
+        "Apply one or more boosts »¹ to a peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -52307,11 +52488,14 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer to boost."
         },
         "slots": {
           "name": "slots",
-          "description": " "
+          "description": "Which boost slots¹ to assign to this peer.",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         }
       },
       "errors": [
@@ -52324,6 +52508,9 @@
     },
     "premium.getBoostsList": {
       "name": "premium.getBoostsList",
+      "description": [
+        "Obtains info about the boosts that were applied to a certain channel (admins only)"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -52334,7 +52521,10 @@
         },
         "gifts": {
           "name": "gifts",
-          "description": " "
+          "description": "Whether to return only info about boosts received from gift codes and giveaways created by the channel »¹",
+          "links": [
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "limit": {
           "name": "limit",
@@ -52345,11 +52535,14 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination, obtained from premium.boostsList¹.next_offset",
+          "links": [
+            "https://core.telegram.org/constructor/premium.boostsList"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel"
         }
       },
       "errors": [
@@ -52362,10 +52555,16 @@
     },
     "premium.getBoostsStatus": {
       "name": "premium.getBoostsStatus",
+      "description": [
+        "Gets the current boost status¹ of a peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer."
         }
       },
       "errors": [
@@ -52377,18 +52576,28 @@
       ]
     },
     "premium.getMyBoosts": {
-      "name": "premium.getMyBoosts"
+      "name": "premium.getMyBoosts",
+      "description": [
+        "Obtain which peers are we currently boosting¹, and how many boost slots² we have left."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/boost"
+      ]
     },
     "premium.getUserBoosts": {
       "name": "premium.getUserBoosts",
+      "description": [
+        "Returns the lists of boost that were applied to a channel by a specific user (admins only)"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user"
         }
       },
       "errors": [
