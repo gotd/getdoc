@@ -3886,15 +3886,24 @@
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "Whether this boost was applied because the channel directly gifted a subscription to the user¹.",
+          "links": [
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "giveaway": {
           "name": "giveaway",
-          "description": " "
+          "description": "Whether this boost was applied because the user was chosen in a giveaway started by the channel¹.",
+          "links": [
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "giveaway_msg_id": {
           "name": "giveaway_msg_id",
-          "description": " "
+          "description": "The message ID of the giveaway¹",
+          "links": [
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "id": {
           "name": "id",
@@ -3906,11 +3915,15 @@
         },
         "unclaimed": {
           "name": "unclaimed",
-          "description": " "
+          "description": "If set, the user hasn't yet invoked payments.applyGiftCode¹ to claim a subscription gifted directly or in a giveaway by the channel².",
+          "links": [
+            "https://core.telegram.org/method/payments.applyGiftCode",
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "used_gift_slug": {
           "name": "used_gift_slug",
-          "description": " "
+          "description": "The created Telegram Premium gift code, only set if either gift or giveaway are set AND it is either a gift code for the currently logged in user or if it was already claimed."
         },
         "user_id": {
           "name": "user_id",
@@ -4371,6 +4384,9 @@
     },
     "botInlineMessageMediaWebPage": {
       "name": "botInlineMessageMediaWebPage",
+      "description": [
+        "Specifies options that will be used to generate the link preview for the message, or even a standalone link preview without an attached message."
+      ],
       "fields": {
         "entities": {
           "name": "entities",
@@ -4388,11 +4404,11 @@
         },
         "force_large_media": {
           "name": "force_large_media",
-          "description": " "
+          "description": "If set, specifies that a large media preview should be used."
         },
         "force_small_media": {
           "name": "force_small_media",
-          "description": " "
+          "description": "If set, specifies that a small media preview should be used."
         },
         "invert_media": {
           "name": "invert_media",
@@ -4404,7 +4420,7 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "The message, can be empty."
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -4416,7 +4432,7 @@
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The URL to use for the link preview."
         }
       }
     },
@@ -4648,7 +4664,10 @@
         },
         "color": {
           "name": "color",
-          "description": " "
+          "description": "The channel's accent color¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "creator": {
           "name": "creator",
@@ -4892,11 +4911,17 @@
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "New custom emoji ID¹ (or 0 if none)",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "prev_value": {
           "name": "prev_value",
-          "description": " "
+          "description": "Old custom emoji ID¹ (or 0 if none)",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
@@ -4911,11 +4936,17 @@
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "The old color palette ID¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "prev_value": {
           "name": "prev_value",
-          "description": " "
+          "description": "The old color palette ID¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         }
       }
     },
@@ -6985,7 +7016,10 @@
         },
         "color": {
           "name": "color",
-          "description": " "
+          "description": "Profile color palette ID¹",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "fake": {
           "name": "fake",
@@ -8761,7 +8795,7 @@
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "Media."
         },
         "message": {
           "name": "message",
@@ -8773,7 +8807,7 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "If set, indicates that the message should be sent in reply to the specified message or story."
         }
       }
     },
@@ -11030,6 +11064,9 @@
     },
     "inputBotInlineMessageMediaWebPage": {
       "name": "inputBotInlineMessageMediaWebPage",
+      "description": [
+        "Specifies options that will be used to generate the link preview for the message, or even a standalone link preview without an attached message."
+      ],
       "fields": {
         "entities": {
           "name": "entities",
@@ -11047,11 +11084,11 @@
         },
         "force_large_media": {
           "name": "force_large_media",
-          "description": " "
+          "description": "If set, specifies that a large media preview should be used."
         },
         "force_small_media": {
           "name": "force_small_media",
-          "description": " "
+          "description": "If set, specifies that a small media preview should be used."
         },
         "invert_media": {
           "name": "invert_media",
@@ -11059,7 +11096,7 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "The message, can be empty."
         },
         "optional": {
           "name": "optional",
@@ -11067,11 +11104,11 @@
         },
         "reply_markup": {
           "name": "reply_markup",
-          "description": " "
+          "description": "Inline keyboard"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The URL to use for the link preview."
         }
       }
     },
@@ -12466,6 +12503,9 @@
     },
     "inputMediaWebPage": {
       "name": "inputMediaWebPage",
+      "description": [
+        "Specifies options that will be used to generate the link preview for the caption, or even a standalone link preview without an attached message."
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -12476,11 +12516,11 @@
         },
         "force_large_media": {
           "name": "force_large_media",
-          "description": " "
+          "description": "If set, specifies that a large media preview should be used."
         },
         "force_small_media": {
           "name": "force_small_media",
-          "description": " "
+          "description": "If set, specifies that a small media preview should be used."
         },
         "optional": {
           "name": "optional",
@@ -12488,7 +12528,7 @@
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The URL to use for the link preview."
         }
       }
     },
@@ -13309,7 +13349,7 @@
         },
         "reply_to_peer_id": {
           "name": "reply_to_peer_id",
-          "description": " "
+          "description": "Used to reply to messages sent to another chat (specified here), can only be used for non-protected chats and messages."
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -18951,18 +18991,21 @@
     },
     "messages.webPage": {
       "name": "messages.webPage",
+      "description": [
+        "Represents an Instant View webpage."
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Chats mentioned in the webpage."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the webpage."
         },
         "webpage": {
           "name": "webpage",
-          "description": " "
+          "description": "The instant view webpage."
         }
       }
     },
@@ -28954,7 +28997,10 @@
         },
         "color": {
           "name": "color",
-          "description": " "
+          "description": "The user's accent color¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "contact": {
           "name": "contact",
@@ -29030,7 +29076,10 @@
         },
         "profile_color": {
           "name": "profile_color",
-          "description": " "
+          "description": "The user's profile color¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "restricted": {
           "name": "restricted",
@@ -31786,7 +31835,13 @@
       ]
     },
     "PremiumGiftCodeOption": {
-      "name": "PremiumGiftCodeOption"
+      "name": "PremiumGiftCodeOption",
+      "description": [
+        "Giveaway¹ option."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ]
     },
     "PremiumGiftOption": {
       "name": "PremiumGiftOption",
@@ -31801,7 +31856,13 @@
       ]
     },
     "PrepaidGiveaway": {
-      "name": "PrepaidGiveaway"
+      "name": "PrepaidGiveaway",
+      "description": [
+        "Contains info about a prepaid giveaway »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways"
+      ]
     },
     "PrivacyKey": {
       "name": "PrivacyKey",
@@ -51004,7 +51065,7 @@
       "parameters": {
         "boost_peer": {
           "name": "boost_peer",
-          "description": " "
+          "description": "The channel that will start the giveaway"
         },
         "flags": {
           "name": "flags",
