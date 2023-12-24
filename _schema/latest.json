@@ -2900,10 +2900,7 @@
         },
         "has_settings": {
           "name": "has_settings",
-          "description": "True, if the bot supports the \"settings_button_pressed\" event »¹",
-          "links": [
-            "https://core.telegram.org/api/bots/webapps#settings-button-pressed"
-          ]
+          "description": "Deprecated flag, can be ignored."
         },
         "icons": {
           "name": "icons",
@@ -4385,7 +4382,7 @@
     "botInlineMessageMediaWebPage": {
       "name": "botInlineMessageMediaWebPage",
       "description": [
-        "Specifies options that will be used to generate the link preview for the message, or even a standalone link preview without an attached message."
+        "Specifies options that must be used to generate the link preview for the message, or even a standalone link preview without an attached message."
       ],
       "fields": {
         "entities": {
@@ -4416,7 +4413,10 @@
         },
         "manual": {
           "name": "manual",
-          "description": " "
+          "description": "If set, indicates that the URL used for the webpage preview was specified manually using inputMediaWebPage¹, and may not be related to any of the URLs specified in the message.",
+          "links": [
+            "https://core.telegram.org/constructor/inputMediaWebPage"
+          ]
         },
         "message": {
           "name": "message",
@@ -4428,7 +4428,7 @@
         },
         "safe": {
           "name": "safe",
-          "description": " "
+          "description": "If set, the link can be opened directly without user confirmation."
         },
         "url": {
           "name": "url",
@@ -11108,7 +11108,7 @@
         },
         "optional": {
           "name": "optional",
-          "description": " "
+          "description": "If not set, a WEBPAGE_NOT_FOUND RPC error will be emitted if a webpage preview cannot be generated for the specified url; otherwise, no error will be emitted (unless the provided message is also empty, in which case a MESSAGE_EMPTY will be emitted, instead)."
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -12550,7 +12550,7 @@
         },
         "optional": {
           "name": "optional",
-          "description": " "
+          "description": "If not set, a WEBPAGE_NOT_FOUND RPC error will be emitted if a webpage preview cannot be generated for the specified url; otherwise, no error will be emitted (unless the provided message is also empty, in which case a MESSAGE_EMPTY will be emitted, instead)."
         },
         "url": {
           "name": "url",
@@ -13356,18 +13356,21 @@
         },
         "quote_entities": {
           "name": "quote_entities",
-          "description": "Message entities for styled text¹",
+          "description": "Message entities for styled text¹ from the quote_text field.",
           "links": [
             "https://core.telegram.org/api/entities"
           ]
         },
         "quote_offset": {
           "name": "quote_offset",
-          "description": " "
+          "description": "Offset of the message quote_text within the original message (in UTF-16 code units¹).",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "quote_text": {
           "name": "quote_text",
-          "description": " "
+          "description": "Used to quote-reply to only a certain section (specified here) of the original message."
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
@@ -17103,19 +17106,22 @@
         },
         "force_large_media": {
           "name": "force_large_media",
-          "description": " "
+          "description": "If set, specifies that a large media preview should be used."
         },
         "force_small_media": {
           "name": "force_small_media",
-          "description": " "
+          "description": "If set, specifies that a small media preview should be used."
         },
         "manual": {
           "name": "manual",
-          "description": " "
+          "description": "If set, indicates that the URL used for the webpage preview was specified manually using inputMediaWebPage¹, and may not be related to any of the URLs specified in the message.",
+          "links": [
+            "https://core.telegram.org/constructor/inputMediaWebPage"
+          ]
         },
         "safe": {
           "name": "safe",
-          "description": " "
+          "description": "If set, the webpage can be opened directly without user confirmation; otherwise, user confirmation is required, showing the exact URL that will be opened."
         },
         "webpage": {
           "name": "webpage",
@@ -17366,30 +17372,33 @@
         },
         "quote": {
           "name": "quote",
-          "description": " "
+          "description": "Whether this message is quoting a part of another message."
         },
         "quote_entities": {
           "name": "quote_entities",
-          "description": "Message entities for styled text¹",
+          "description": "Message entities for styled text¹ from the quote_text field.",
           "links": [
             "https://core.telegram.org/api/entities"
           ]
         },
         "quote_offset": {
           "name": "quote_offset",
-          "description": " "
+          "description": "Offset of the message quote_text within the original message (in UTF-16 code units¹).",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "quote_text": {
           "name": "quote_text",
-          "description": " "
+          "description": "Used to quote-reply to only a certain section (specified here) of the original message."
         },
         "reply_from": {
           "name": "reply_from",
-          "description": " "
+          "description": "When replying to a message sent by a certain peer to another chat, contains info about the peer that originally sent the message to that other chat."
         },
         "reply_media": {
           "name": "reply_media",
-          "description": " "
+          "description": "When replying to a media sent by a certain peer to another chat, contains the media of the replied-to message."
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
@@ -17697,7 +17706,7 @@
         },
         "has_settings": {
           "name": "has_settings",
-          "description": " "
+          "description": "Deprecated flag, can be ignored."
         },
         "inactive": {
           "name": "inactive",
@@ -23788,11 +23797,14 @@
         },
         "app": {
           "name": "app",
-          "description": " "
+          "description": "Mini App »¹ to open when the sponsored message is clicked.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps"
+          ]
         },
         "button_text": {
           "name": "button_text",
-          "description": " "
+          "description": "Text of the sponsored message button."
         },
         "channel_post": {
           "name": "channel_post",
@@ -24433,7 +24445,7 @@
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Whether the color of this TGS custom emoji stickerset should be changed to the text color when used in messages, the accent color if used as emoji status, white on chat photos, or another appropriate color based on context."
         },
         "thumb_dc_id": {
           "name": "thumb_dc_id",
@@ -25088,7 +25100,10 @@
         },
         "has_viewers": {
           "name": "has_viewers",
-          "description": " "
+          "description": "If set, indicates that the viewers list is currently viewable, and was not yet deleted because the story has expired while the user didn't have a Premium¹ account.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "reactions": {
           "name": "reactions",
@@ -25608,18 +25623,27 @@
     },
     "updateBotChatBoost": {
       "name": "updateBotChatBoost",
+      "description": [
+        "A channel boost¹ has changed (bots only)"
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "boost": {
           "name": "boost",
-          "description": " "
+          "description": "New boost information"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel"
         },
         "qts": {
           "name": "qts",
-          "description": " "
+          "description": "QTS¹ event sequence identifier",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         }
       }
     },
@@ -27446,11 +27470,15 @@
         },
         "wallpaper": {
           "name": "wallpaper",
-          "description": " "
+          "description": "The new wallpaper, if none the wallpaper was removed and the default wallpaper should be used."
         },
         "wallpaper_overridden": {
           "name": "wallpaper_overridden",
-          "description": " "
+          "description": "Whether the other user has chosen a custom wallpaper for us using messages.setChatWallPaper¹ and the for_both flag, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/method/messages.setChatWallPaper",
+            "https://core.telegram.org/api/wallpapers#installing-wallpapers-in-a-specific-chat"
+          ]
         }
       }
     },
@@ -30084,7 +30112,7 @@
         },
         "has_large_media": {
           "name": "has_large_media",
-          "description": " "
+          "description": "Whether the size of the media in the preview can be changed."
         },
         "hash": {
           "name": "hash",
@@ -30194,7 +30222,7 @@
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL of the webpage."
         }
       }
     },
@@ -30240,7 +30268,7 @@
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL of the webpage"
         }
       }
     },
@@ -35160,7 +35188,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "COLOR_INVALID"
+          "type": "COLOR_INVALID",
+          "description": "The specified color palette ID was invalid."
         }
       ]
     },
@@ -35352,11 +35381,6 @@
           "description": "About string too long."
         },
         {
-          "code": 403,
-          "type": "CHAT_WRITE_FORBIDDEN",
-          "description": "You can't write in this chat."
-        },
-        {
           "code": 400,
           "type": "FIRSTNAME_INVALID",
           "description": "The first name is invalid."
@@ -35377,14 +35401,7 @@
             "https://core.telegram.org/constructor/userStatusOffline"
           ]
         }
-      },
-      "errors": [
-        {
-          "code": 403,
-          "type": "CHAT_WRITE_FORBIDDEN",
-          "description": "You can't write in this chat."
-        }
-      ]
+      }
     },
     "account.updateTheme": {
       "name": "account.updateTheme",
@@ -38025,7 +38042,8 @@
         },
         {
           "code": 400,
-          "type": "MEGAGROUP_GEO_REQUIRED"
+          "type": "MEGAGROUP_GEO_REQUIRED",
+          "description": "This method can only be invoked on a geogroup."
         },
         {
           "code": 400,
@@ -38994,10 +39012,6 @@
           "code": 400,
           "type": "INVITE_REQUEST_SENT",
           "description": "You have successfully requested to join this chat or channel."
-        },
-        {
-          "code": 500,
-          "type": "MEMBER_CHAT_ADD_FAILED"
         },
         {
           "code": 400,
@@ -47138,7 +47152,19 @@
             "https://core.telegram.org/api/bots/webapps"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.saveDefaultSendAs": {
       "name": "messages.saveDefaultSendAs",
@@ -48289,6 +48315,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_PLAIN_FORBIDDEN",
+          "description": "You can't send non-media (text) messages in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_POLL_FORBIDDEN",
           "description": "You can't send polls in this chat."
         },
@@ -48391,6 +48422,11 @@
           "code": 400,
           "type": "MEDIA_INVALID",
           "description": "Media invalid."
+        },
+        {
+          "code": 400,
+          "type": "MESSAGE_EMPTY",
+          "description": "The provided message is empty."
         },
         {
           "code": 400,
@@ -48571,6 +48607,16 @@
           "code": 400,
           "type": "WEBPAGE_MEDIA_EMPTY",
           "description": "Webpage media empty."
+        },
+        {
+          "code": 400,
+          "type": "WEBPAGE_NOT_FOUND",
+          "description": "A preview for the specified webpage url could not be generated."
+        },
+        {
+          "code": 400,
+          "type": "WEBPAGE_URL_INVALID",
+          "description": "The specified webpage url is invalid."
         },
         {
           "code": 400,
@@ -48838,7 +48884,8 @@
         },
         {
           "code": 400,
-          "type": "REPLY_TO_USER_INVALID"
+          "type": "REPLY_TO_USER_INVALID",
+          "description": "The replied-to user is invalid."
         },
         {
           "code": 400,
@@ -48872,7 +48919,8 @@
         },
         {
           "code": 400,
-          "type": "STORY_ID_INVALID"
+          "type": "STORY_ID_INVALID",
+          "description": "The specified story ID is invalid."
         },
         {
           "code": 406,
@@ -49162,7 +49210,8 @@
         },
         {
           "code": 400,
-          "type": "CUSTOM_REACTIONS_TOO_MANY"
+          "type": "CUSTOM_REACTIONS_TOO_MANY",
+          "description": "Too many custom reactions were specified."
         },
         {
           "code": 400,
@@ -49271,7 +49320,8 @@
         },
         {
           "code": 400,
-          "type": "STORY_ID_INVALID"
+          "type": "STORY_ID_INVALID",
+          "description": "The specified story ID is invalid."
         },
         {
           "code": 400,
@@ -49690,7 +49740,8 @@
         },
         {
           "code": 400,
-          "type": "WALLPAPER_NOT_FOUND"
+          "type": "WALLPAPER_NOT_FOUND",
+          "description": "The specified wallpaper could not be found."
         }
       ],
       "bot_can_use": true
@@ -50707,7 +50758,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "CHATLIST_EXCLUDE_INVALID"
+          "type": "CHATLIST_EXCLUDE_INVALID",
+          "description": "The specified exclude_peers are invalid."
         },
         {
           "code": 400,
@@ -51084,7 +51136,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "GIFT_SLUG_INVALID"
+          "type": "GIFT_SLUG_INVALID",
+          "description": "The specified slug is invalid."
         }
       ]
     },
@@ -51222,8 +51275,23 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOOST_PEER_INVALID",
+          "description": "The specified boost_peer is invalid."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "SLUG_INVALID",
+          "description": "The specified invoice slug is invalid."
+        },
+        {
+          "code": 400,
+          "type": "UNTIL_DATE_INVALID",
+          "description": "Invalid until date provided."
         }
       ]
     },
@@ -52758,8 +52826,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOOSTS_EMPTY",
+          "description": "No boost slots were specified."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "SLOTS_EMPTY",
+          "description": "The specified slot list is empty."
         }
       ]
     },
@@ -52803,6 +52881,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -54202,6 +54285,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_INVALID",
+          "description": "The specified story ID is invalid."
         }
       ]
     },
@@ -54261,6 +54349,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORIES_NEVER_CREATED"
         }
       ]
     },
@@ -54476,7 +54568,8 @@
         },
         {
           "code": 400,
-          "type": "VENUE_ID_INVALID"
+          "type": "VENUE_ID_INVALID",
+          "description": "The specified venue ID is invalid."
         }
       ]
     },
@@ -54678,7 +54771,7 @@
         },
         "pts_limit": {
           "name": "pts_limit",
-          "description": " "
+          "description": "PTS limit"
         },
         "pts_total_limit": {
           "name": "pts_total_limit",
@@ -54696,7 +54789,7 @@
         },
         "qts_limit": {
           "name": "qts_limit",
-          "description": " "
+          "description": "QTS limit"
         }
       },
       "errors": [
@@ -55372,10 +55465,20 @@
       "type": "BANNED_RIGHTS_INVALID",
       "description": "You provided some invalid flags in the banned rights."
     },
+    "BOOSTS_EMPTY": {
+      "code": 400,
+      "type": "BOOSTS_EMPTY",
+      "description": "No boost slots were specified."
+    },
     "BOOSTS_REQUIRED": {
       "code": 400,
       "type": "BOOSTS_REQUIRED",
       "description": "The specified channel must first be boosted by its users in order to perform this action."
+    },
+    "BOOST_PEER_INVALID": {
+      "code": 400,
+      "type": "BOOST_PEER_INVALID",
+      "description": "The specified boost_peer is invalid."
     },
     "BOTS_TOO_MUCH": {
       "code": 400,
@@ -55589,7 +55692,8 @@
     },
     "CHATLIST_EXCLUDE_INVALID": {
       "code": 400,
-      "type": "CHATLIST_EXCLUDE_INVALID"
+      "type": "CHATLIST_EXCLUDE_INVALID",
+      "description": "The specified exclude_peers are invalid."
     },
     "CHAT_ABOUT_NOT_MODIFIED": {
       "code": 400,
@@ -55768,7 +55872,8 @@
     },
     "COLOR_INVALID": {
       "code": 400,
-      "type": "COLOR_INVALID"
+      "type": "COLOR_INVALID",
+      "description": "The specified color palette ID was invalid."
     },
     "CONNECTION_API_ID_INVALID": {
       "code": 400,
@@ -55817,7 +55922,8 @@
     },
     "CUSTOM_REACTIONS_TOO_MANY": {
       "code": 400,
-      "type": "CUSTOM_REACTIONS_TOO_MANY"
+      "type": "CUSTOM_REACTIONS_TOO_MANY",
+      "description": "Too many custom reactions were specified."
     },
     "DATA_INVALID": {
       "code": 400,
@@ -56140,7 +56246,8 @@
     },
     "GIFT_SLUG_INVALID": {
       "code": 400,
-      "type": "GIFT_SLUG_INVALID"
+      "type": "GIFT_SLUG_INVALID",
+      "description": "The specified slug is invalid."
     },
     "GIF_CONTENT_TYPE_INVALID": {
       "code": 400,
@@ -56437,7 +56544,8 @@
     },
     "MEGAGROUP_GEO_REQUIRED": {
       "code": 400,
-      "type": "MEGAGROUP_GEO_REQUIRED"
+      "type": "MEGAGROUP_GEO_REQUIRED",
+      "description": "This method can only be invoked on a geogroup."
     },
     "MEGAGROUP_ID_INVALID": {
       "code": 400,
@@ -56453,10 +56561,6 @@
       "code": 400,
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
-    },
-    "MEMBER_CHAT_ADD_FAILED": {
-      "code": 500,
-      "type": "MEMBER_CHAT_ADD_FAILED"
     },
     "MEMBER_NOT_FOUND": {
       "code": 500,
@@ -56999,7 +57103,8 @@
     },
     "REPLY_TO_USER_INVALID": {
       "code": 400,
-      "type": "REPLY_TO_USER_INVALID"
+      "type": "REPLY_TO_USER_INVALID",
+      "description": "The replied-to user is invalid."
     },
     "RESET_REQUEST_MISSING": {
       "code": 400,
@@ -57155,6 +57260,11 @@
       "type": "SIGN_IN_FAILED",
       "description": "Failure while signing in."
     },
+    "SLOTS_EMPTY": {
+      "code": 400,
+      "type": "SLOTS_EMPTY",
+      "description": "The specified slot list is empty."
+    },
     "SLOWMODE_MULTI_MSGS_DISABLED": {
       "code": 400,
       "type": "SLOWMODE_MULTI_MSGS_DISABLED",
@@ -57164,6 +57274,11 @@
       "code": 420,
       "type": "SLOWMODE_WAIT_%d",
       "description": "Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat."
+    },
+    "SLUG_INVALID": {
+      "code": 400,
+      "type": "SLUG_INVALID",
+      "description": "The specified invoice slug is invalid."
     },
     "SMS_CODE_CREATE_FAILED": {
       "code": 400,
@@ -57316,7 +57431,8 @@
     },
     "STORY_ID_INVALID": {
       "code": 400,
-      "type": "STORY_ID_INVALID"
+      "type": "STORY_ID_INVALID",
+      "description": "The specified story ID is invalid."
     },
     "STORY_NOT_MODIFIED": {
       "code": 400,
@@ -57669,7 +57785,8 @@
     },
     "VENUE_ID_INVALID": {
       "code": 400,
-      "type": "VENUE_ID_INVALID"
+      "type": "VENUE_ID_INVALID",
+      "description": "The specified venue ID is invalid."
     },
     "VIDEO_CONTENT_TYPE_INVALID": {
       "code": 400,
@@ -57708,7 +57825,8 @@
     },
     "WALLPAPER_NOT_FOUND": {
       "code": 400,
-      "type": "WALLPAPER_NOT_FOUND"
+      "type": "WALLPAPER_NOT_FOUND",
+      "description": "The specified wallpaper could not be found."
     },
     "WC_CONVERT_URL_INVALID": {
       "code": 400,
@@ -57744,6 +57862,16 @@
       "code": 400,
       "type": "WEBPAGE_MEDIA_EMPTY",
       "description": "Webpage media empty."
+    },
+    "WEBPAGE_NOT_FOUND": {
+      "code": 400,
+      "type": "WEBPAGE_NOT_FOUND",
+      "description": "A preview for the specified webpage url could not be generated."
+    },
+    "WEBPAGE_URL_INVALID": {
+      "code": 400,
+      "type": "WEBPAGE_URL_INVALID",
+      "description": "The specified webpage url is invalid."
     },
     "WEBPUSH_AUTH_INVALID": {
       "code": 400,
