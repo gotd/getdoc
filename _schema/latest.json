@@ -3661,7 +3661,7 @@
         },
         "large_queue_active_operations_max": {
           "name": "large_queue_active_operations_max",
-          "description": " "
+          "description": "A limit, specifying the maximum number of files that should be downloaded in parallel from the same DC, for files bigger than 20MB."
         },
         "phonecalls_less_data": {
           "name": "phonecalls_less_data",
@@ -3673,7 +3673,7 @@
         },
         "small_queue_active_operations_max": {
           "name": "small_queue_active_operations_max",
-          "description": " "
+          "description": "A limit, specifying the maximum number of files that should be downloaded in parallel from the same DC, for files smaller than 20MB."
         },
         "stories_preload": {
           "name": "stories_preload",
@@ -13370,7 +13370,10 @@
         },
         "quote_text": {
           "name": "quote_text",
-          "description": "Used to quote-reply to only a certain section (specified here) of the original message."
+          "description": "Used to quote-reply to only a certain section (specified here) of the original message. The maximum UTF-8 length for quotes is specified in the quote_length_max¹ config key.",
+          "links": [
+            "https://core.telegram.org/api/config#quote-length-max"
+          ]
         },
         "reply_to_msg_id": {
           "name": "reply_to_msg_id",
@@ -40553,7 +40556,8 @@
     "contacts.getContactIDs": {
       "name": "contacts.getContactIDs",
       "description": [
-        "Get contact by telegram IDs"
+        "Get the telegram IDs of all contacts.",
+        "Returns an array of Telegram user IDs for all contacts (0 if a contact does not have an associated Telegram account or have hidden their account using privacy settings)."
       ],
       "parameters": {
         "hash": {
@@ -40657,7 +40661,7 @@
     "contacts.getStatuses": {
       "name": "contacts.getStatuses",
       "description": [
-        "Returns the list of contact statuses."
+        "Use this method to obtain the online statuses of all contacts with an accessible associated Telegram account."
       ]
     },
     "contacts.getTopPeers": {
@@ -47169,7 +47173,7 @@
     "messages.saveDefaultSendAs": {
       "name": "messages.saveDefaultSendAs",
       "description": [
-        "Change the default peer that should be used when sending messages to a specific group"
+        "Change the default peer that should be used when sending messages, reactions, poll votes to a specific group"
       ],
       "parameters": {
         "peer": {
@@ -49333,10 +49337,12 @@
     "messages.sendVote": {
       "name": "messages.sendVote",
       "description": [
-        "Vote in a poll¹"
+        "Vote in a poll¹",
+        "Starting from layer 159, the vote will be sent from the peer specified using messages.saveDefaultSendAs¹."
       ],
       "links": [
-        "https://core.telegram.org/constructor/poll"
+        "https://core.telegram.org/constructor/poll",
+        "https://core.telegram.org/method/messages.saveDefaultSendAs"
       ],
       "parameters": {
         "msg_id": {
