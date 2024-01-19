@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"path"
-	"slices"
 
 	"github.com/go-faster/errors"
 )
@@ -32,7 +31,12 @@ const LayerLatest = 170
 
 // LayerExists returns true if layer is included in package.
 func LayerExists(layer int) bool {
-	return slices.Contains(Layers, layer)
+	for _, v := range Layers {
+		if v == layer {
+			return true
+		}
+	}
+	return false
 }
 
 // ErrNotFound means that current package version does not support requested layer.
