@@ -15416,7 +15416,11 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Messages fetched from a saved messages dialog »¹ will have peer=inputPeerSelf² and the saved_peer_id flag set to the ID of the saved dialog.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages",
+            "https://core.telegram.org/constructor/inputPeerSelf"
+          ]
         },
         "silent": {
           "name": "silent",
@@ -16891,7 +16895,10 @@
         },
         "saved_from_msg_id": {
           "name": "saved_from_msg_id",
-          "description": "Only for messages forwarded to the current user (inputPeerSelf), ID of the message that was forwarded from the original user/channel"
+          "description": "Only for messages forwarded to saved messages »¹, ID of the message that was forwarded from the original user/channel",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "saved_from_name": {
           "name": "saved_from_name",
@@ -16899,11 +16906,17 @@
         },
         "saved_from_peer": {
           "name": "saved_from_peer",
-          "description": "Only for messages forwarded to the current user (inputPeerSelf), full info about the user/channel that originally sent the message"
+          "description": "Only for messages forwarded to saved messages »¹, full info about the user/channel that originally sent the message",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "saved_out": {
           "name": "saved_out",
-          "description": " "
+          "description": "Only for messages forwarded to saved messages »¹, set if the original message was outgoing.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         }
       }
     },
@@ -19039,56 +19052,77 @@
     },
     "messages.savedDialogs": {
       "name": "messages.savedDialogs",
+      "description": [
+        "Represents some saved message dialogs »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "dialogs": {
           "name": "dialogs",
-          "description": " "
+          "description": "Saved message dialogs »¹.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "messages": {
           "name": "messages",
-          "description": " "
+          "description": "List of last messages from each saved dialog"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "messages.savedDialogsNotModified": {
       "name": "messages.savedDialogsNotModified",
+      "description": [
+        "The saved dialogs haven't changed"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Number of saved dialogs¹ found server-side by the query",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         }
       }
     },
     "messages.savedDialogsSlice": {
       "name": "messages.savedDialogsSlice",
+      "description": [
+        "Incomplete list of saved message dialogs »¹ with messages and auxiliary data."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of saved message dialogs"
         },
         "dialogs": {
           "name": "dialogs",
-          "description": " "
+          "description": "List of saved message dialogs"
         },
         "messages": {
           "name": "messages",
-          "description": " "
+          "description": "List of last messages from dialogs"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
@@ -23183,6 +23217,12 @@
     },
     "savedDialog": {
       "name": "savedDialog",
+      "description": [
+        "Represents a saved dialog »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -23193,15 +23233,15 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The dialog"
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Is the dialog pinned"
         },
         "top_message": {
           "name": "top_message",
-          "description": " "
+          "description": "The latest message ID"
         }
       }
     },
@@ -28266,6 +28306,12 @@
     },
     "updatePinnedSavedDialogs": {
       "name": "updatePinnedSavedDialogs",
+      "description": [
+        "Pinned saved dialogs »¹ were updated"
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -28276,7 +28322,7 @@
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "New order of pinned saved dialogs"
         }
       }
     },
@@ -28630,6 +28676,12 @@
     },
     "updateSavedDialogPinned": {
       "name": "updateSavedDialogPinned",
+      "description": [
+        "A saved message dialog¹ was pinned/unpinned"
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -28640,11 +28692,11 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The dialog"
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether the dialog was pinned"
         }
       }
     },
@@ -32843,7 +32895,13 @@
       ]
     },
     "SavedDialog": {
-      "name": "SavedDialog"
+      "name": "SavedDialog",
+      "description": [
+        "Represents a saved message dialog »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ]
     },
     "SearchResultsCalendarPeriod": {
       "name": "SearchResultsCalendarPeriod",
@@ -33789,7 +33847,13 @@
       ]
     },
     "messages.SavedDialogs": {
-      "name": "messages.SavedDialogs"
+      "name": "messages.SavedDialogs",
+      "description": [
+        "Represents some saved message dialogs »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ]
     },
     "messages.SearchResultsCalendar": {
       "name": "messages.SearchResultsCalendar",
@@ -34510,8 +34574,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getChannelRestrictedStatusEmojis": {
       "name": "account.getChannelRestrictedStatusEmojis",
@@ -34530,8 +34593,7 @@
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getChatThemes": {
       "name": "account.getChatThemes",
@@ -36779,10 +36841,6 @@
           "code": 400,
           "type": "AUTH_TOKEN_INVALIDX",
           "description": "The specified auth token is invalid."
-        },
-        {
-          "code": 500,
-          "type": "MEMBER_NOT_FOUND"
         }
       ]
     },
@@ -40110,6 +40168,11 @@
         },
         {
           "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
           "type": "PARTICIPANTS_TOO_FEW",
           "description": "Not enough participants."
         },
@@ -40288,6 +40351,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         },
@@ -40418,6 +40486,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
         },
         {
           "code": 400,
@@ -40585,7 +40658,13 @@
           ]
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.updatePinnedForumTopic": {
       "name": "channels.updatePinnedForumTopic",
@@ -43192,6 +43271,12 @@
     },
     "messages.deleteSavedHistory": {
       "name": "messages.deleteSavedHistory",
+      "description": [
+        "Deletes messages forwarded from a specific peer to saved messages »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -43202,22 +43287,31 @@
         },
         "max_date": {
           "name": "max_date",
-          "description": " "
+          "description": "Delete all messages older than this UNIX timestamp"
         },
         "max_id": {
           "name": "max_id",
-          "description": " "
+          "description": "Maximum ID of message to delete"
         },
         "min_date": {
           "name": "min_date",
-          "description": " "
+          "description": "Delete all messages newer than this UNIX timestamp"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer, whose messages will be deleted from saved messages »¹",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.deleteScheduledMessages": {
       "name": "messages.deleteScheduledMessages",
@@ -43622,6 +43716,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USAGE_LIMIT_INVALID",
+          "description": "The specified usage limit is invalid."
         }
       ],
       "bot_can_use": true
@@ -43926,6 +44025,11 @@
           "code": 400,
           "type": "REPLY_MARKUP_INVALID",
           "description": "The provided reply markup is invalid."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MARKUP_TOO_LONG",
+          "description": "The specified reply_markup is too long."
         },
         {
           "code": 400,
@@ -44277,6 +44381,11 @@
           "code": 400,
           "type": "RANDOM_ID_INVALID",
           "description": "A provided random ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "SCHEDULE_BOT_NOT_ALLOWED",
+          "description": "Bots cannot schedule messages."
         },
         {
           "code": 400,
@@ -45964,7 +46073,12 @@
     },
     "messages.getPinnedSavedDialogs": {
       "name": "messages.getPinnedSavedDialogs",
-      "bot_can_use": true
+      "description": [
+        "Get pinned saved dialogs, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ]
     },
     "messages.getPollResults": {
       "name": "messages.getPollResults",
@@ -46215,10 +46329,16 @@
     },
     "messages.getSavedDialogs": {
       "name": "messages.getSavedDialogs",
+      "description": [
+        "Returns the current saved dialog list, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "parameters": {
         "exclude_pinned": {
           "name": "exclude_pinned",
-          "description": " "
+          "description": "Exclude pinned dialogs"
         },
         "flags": {
           "name": "flags",
@@ -46236,10 +46356,7 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
-          "links": [
-            "https://core.telegram.org/api/offsets"
-          ]
+          "description": "Number of list elements to be returned"
         },
         "offset_date": {
           "name": "offset_date",
@@ -46250,17 +46367,19 @@
         },
         "offset_id": {
           "name": "offset_id",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹ (top_message ID used for pagination)",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_peer": {
           "name": "offset_peer",
-          "description": " "
+          "description": "Offset peer for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getSavedGifs": {
       "name": "messages.getSavedGifs",
@@ -46279,56 +46398,56 @@
     },
     "messages.getSavedHistory": {
       "name": "messages.getSavedHistory",
+      "description": [
+        "Returns saved messages »¹ forwarded from a specific peer"
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "parameters": {
         "add_offset": {
           "name": "add_offset",
-          "description": "Offsets for pagination, for more info click here¹",
-          "links": [
-            "https://core.telegram.org/api/offsets"
-          ]
+          "description": "Number of list elements to be skipped, negative values are also accepted."
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Result hash¹",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets"
           ]
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
-          "links": [
-            "https://core.telegram.org/api/offsets"
-          ]
+          "description": "Number of results to return"
         },
         "max_id": {
           "name": "max_id",
-          "description": " "
+          "description": "If a positive value was transferred, the method will return only messages with IDs less than max_id"
         },
         "min_id": {
           "name": "min_id",
-          "description": " "
+          "description": "If a positive value was transferred, the method will return only messages with IDs more than min_id"
         },
         "offset_date": {
           "name": "offset_date",
-          "description": "Offsets for pagination, for more info click here¹",
-          "links": [
-            "https://core.telegram.org/api/offsets"
-          ]
+          "description": "Only return messages sent before the specified date"
         },
         "offset_id": {
           "name": "offset_id",
-          "description": "Offsets for pagination, for more info click here¹",
-          "links": [
-            "https://core.telegram.org/api/offsets"
-          ]
+          "description": "Only return messages starting from the specified message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Target peer"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.getScheduledHistory": {
       "name": "messages.getScheduledHistory",
@@ -46415,7 +46534,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Search within the saved message dialog »¹ with this ID.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -46476,7 +46598,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Search within the saved message dialog »¹ with this ID.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         }
       },
       "errors": [
@@ -46529,7 +46654,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Search within the saved message dialog »¹ with this ID.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         }
       }
     },
@@ -47619,6 +47747,12 @@
     },
     "messages.reorderPinnedSavedDialogs": {
       "name": "messages.reorderPinnedSavedDialogs",
+      "description": [
+        "Reorder pinned saved message dialogs »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -47629,14 +47763,13 @@
         },
         "force": {
           "name": "force",
-          "description": " "
+          "description": "If set, dialogs pinned server-side but not present in the order field will be unpinned."
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "New dialog order"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.reorderStickerSets": {
       "name": "messages.reorderStickerSets",
@@ -47851,7 +47984,19 @@
             "https://core.telegram.org/api/links#named-mini-app-links"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_APP_INVALID",
+          "description": "The specified bot app is invalid."
+        },
+        {
+          "code": 400,
+          "type": "BOT_APP_SHORTNAME_INVALID",
+          "description": "The specified bot app short name is invalid."
+        }
+      ]
     },
     "messages.requestEncryption": {
       "name": "messages.requestEncryption",
@@ -48080,8 +48225,17 @@
         },
         {
           "code": 400,
+          "type": "BOT_WEBVIEW_DISABLED"
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "YOU_BLOCKED_USER",
+          "description": "You blocked this user."
         }
       ]
     },
@@ -48319,7 +48473,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Search within the saved message dialog »¹ with this ID.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -48625,8 +48782,7 @@
           "name": "requested_peers",
           "description": "The chosen peers."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.sendEncrypted": {
       "name": "messages.sendEncrypted",
@@ -48955,6 +49111,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_PLAIN_FORBIDDEN",
+          "description": "You can't send non-media (text) messages in this chat."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_STICKERS_FORBIDDEN",
           "description": "You can't send stickers in this chat."
         },
@@ -49030,7 +49191,8 @@
         },
         {
           "code": 500,
-          "type": "SEND_MEDIA_INVALID"
+          "type": "SEND_MEDIA_INVALID",
+          "description": "The specified media is invalid."
         },
         {
           "code": 420,
@@ -50135,6 +50297,11 @@
           "code": 400,
           "type": "CUSTOM_REACTIONS_TOO_MANY",
           "description": "Too many custom reactions were specified."
+        },
+        {
+          "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
         },
         {
           "code": 400,
@@ -51465,6 +51632,12 @@
     },
     "messages.toggleSavedDialogPin": {
       "name": "messages.toggleSavedDialogPin",
+      "description": [
+        "Pin or unpin a saved message dialog »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -51475,14 +51648,20 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The dialog to pin"
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether to pin or unpin the dialog"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.toggleStickerSets": {
       "name": "messages.toggleStickerSets",
@@ -51591,6 +51770,11 @@
           "code": 400,
           "type": "INPUT_TEXT_EMPTY",
           "description": "The specified text is empty."
+        },
+        {
+          "code": 400,
+          "type": "INPUT_TEXT_TOO_LONG",
+          "description": "The specified text is too long."
         },
         {
           "code": 400,
@@ -53033,10 +53217,6 @@
           "code": 400,
           "type": "DATA_JSON_INVALID",
           "description": "The provided JSON data is invalid."
-        },
-        {
-          "code": 500,
-          "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
         },
         {
           "code": 403,
@@ -55206,7 +55386,13 @@
           "description": "Get only reactions of this type"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "stories.getStoryViewsList": {
       "name": "stories.getStoryViewsList",
@@ -56221,6 +56407,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -56480,6 +56671,11 @@
       "type": "BOT_APP_INVALID",
       "description": "The specified bot app is invalid."
     },
+    "BOT_APP_SHORTNAME_INVALID": {
+      "code": 400,
+      "type": "BOT_APP_SHORTNAME_INVALID",
+      "description": "The specified bot app short name is invalid."
+    },
     "BOT_CHANNELS_NA": {
       "code": 400,
       "type": "BOT_CHANNELS_NA",
@@ -56539,6 +56735,10 @@
       "code": 400,
       "type": "BOT_SCORE_NOT_MODIFIED",
       "description": "The score wasn't modified."
+    },
+    "BOT_WEBVIEW_DISABLED": {
+      "code": 400,
+      "type": "BOT_WEBVIEW_DISABLED"
     },
     "BROADCAST_FORBIDDEN": {
       "code": 403,
@@ -57264,10 +57464,6 @@
       "type": "GRAPH_OUTDATED_RELOAD",
       "description": "The graph is outdated, please get a new async token using stats.getBroadcastStats."
     },
-    "GROUPCALL_ADD_PARTICIPANTS_FAILED": {
-      "code": 500,
-      "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
-    },
     "GROUPCALL_ALREADY_DISCARDED": {
       "code": 400,
       "type": "GROUPCALL_ALREADY_DISCARDED",
@@ -57367,6 +57563,11 @@
       "code": 400,
       "type": "INPUT_TEXT_EMPTY",
       "description": "The specified text is empty."
+    },
+    "INPUT_TEXT_TOO_LONG": {
+      "code": 400,
+      "type": "INPUT_TEXT_TOO_LONG",
+      "description": "The specified text is too long."
     },
     "INPUT_USER_DEACTIVATED": {
       "code": 400,
@@ -57551,10 +57752,6 @@
       "code": 400,
       "type": "MEGAGROUP_REQUIRED",
       "description": "You can only use this method on a supergroup."
-    },
-    "MEMBER_NOT_FOUND": {
-      "code": 500,
-      "type": "MEMBER_NOT_FOUND"
     },
     "MESSAGE_AUTHOR_REQUIRED": {
       "code": 403,
@@ -58203,7 +58400,8 @@
     },
     "SEND_MEDIA_INVALID": {
       "code": 500,
-      "type": "SEND_MEDIA_INVALID"
+      "type": "SEND_MEDIA_INVALID",
+      "description": "The specified media is invalid."
     },
     "SEND_MESSAGE_MEDIA_INVALID": {
       "code": 400,
