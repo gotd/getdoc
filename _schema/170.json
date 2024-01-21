@@ -16887,33 +16887,43 @@
         },
         "saved_date": {
           "name": "saved_date",
-          "description": " "
+          "description": "Only for forwarded messages reforwarded to saved messages »¹, indicates when was the original message sent (i.e. if user A sends a message @ unixtime 1, then user B forwards it somewhere @ unixtime 2, then user C saves it to saved messages @ unixtime 3, this field will contain 1, date will contain 2 and the date of the containing message² will contain 3).",
+          "links": [
+            "https://core.telegram.org/api/saved-messages",
+            "https://core.telegram.org/constructor/message"
+          ]
         },
         "saved_from_id": {
           "name": "saved_from_id",
-          "description": " "
+          "description": "Only for forwarded messages reforwarded to saved messages »¹, contains the sender of the original message (i.e. if user A sends a message, then user B forwards it somewhere, then user C saves it to saved messages, this field will contain the ID of user A and from_id will contain the ID of user B).",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "saved_from_msg_id": {
           "name": "saved_from_msg_id",
-          "description": "Only for messages forwarded to saved messages »¹, ID of the message that was forwarded from the original user/channel",
+          "description": "Only for messages forwarded to saved messages »¹, contains the original ID of the message in saved_from_peer.",
           "links": [
             "https://core.telegram.org/api/saved-messages"
           ]
         },
         "saved_from_name": {
           "name": "saved_from_name",
-          "description": " "
+          "description": "Only for forwarded messages from users with forward privacy enabled reforwarded to saved messages »¹, contains the sender of the original message (i.e. if user A (fwd privacy enabled) sends a message, then user B forwards it somewhere, then user C saves it to saved messages, this field will contain the name of user A and from_id will contain the ID of user B).",
+          "links": [
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "saved_from_peer": {
           "name": "saved_from_peer",
-          "description": "Only for messages forwarded to saved messages »¹, full info about the user/channel that originally sent the message",
+          "description": "Only for messages forwarded to saved messages »¹, contains the dialog where the message was originally sent.",
           "links": [
             "https://core.telegram.org/api/saved-messages"
           ]
         },
         "saved_out": {
           "name": "saved_out",
-          "description": "Only for messages forwarded to saved messages »¹, set if the original message was outgoing.",
+          "description": "Only for messages forwarded to saved messages »¹, set if the original message was outgoing (though the message may have been originally outgoing even if this flag is not set, if from_id points to the current user).",
           "links": [
             "https://core.telegram.org/api/saved-messages"
           ]
@@ -16997,7 +17007,7 @@
         },
         "round": {
           "name": "round",
-          "description": " "
+          "description": "Whether this is a round video."
         },
         "spoiler": {
           "name": "spoiler",
@@ -17009,11 +17019,11 @@
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "Whether this is a video."
         },
         "voice": {
           "name": "voice",
-          "description": " "
+          "description": "Whether this is a voice message."
         }
       }
     },
@@ -38889,6 +38899,11 @@
         },
         {
           "code": 400,
+          "type": "IMAGE_PROCESS_FAILED",
+          "description": "Failure while processing image."
+        },
+        {
+          "code": 400,
           "type": "PHOTO_CROP_SIZE_SMALL",
           "description": "Photo is too small."
         },
@@ -40269,6 +40284,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
         },
         {
           "code": 400,
@@ -45571,6 +45591,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "TAKEOUT_INVALID",
+          "description": "The specified takeout ID is invalid."
         }
       ]
     },
@@ -50276,7 +50301,8 @@
       "errors": [
         {
           "code": 403,
-          "type": "ANONYMOUS_REACTIONS_DISABLED"
+          "type": "ANONYMOUS_REACTIONS_DISABLED",
+          "description": "Sorry, anonymous administrators cannot leave reactions or participate in polls."
         },
         {
           "code": 400,
@@ -50407,6 +50433,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MESSAGE_ID_INVALID",
+          "description": "The specified reply-to message ID is invalid."
         },
         {
           "code": 400,
@@ -52202,6 +52233,21 @@
         {
           "code": 406,
           "type": "GIFTCODE_NOT_ALLOWED"
+        },
+        {
+          "code": 400,
+          "type": "GIFT_SLUG_EXPIRED",
+          "description": "The specified gift slug has expired."
+        },
+        {
+          "code": 400,
+          "type": "GIFT_SLUG_INVALID",
+          "description": "The specified slug is invalid."
+        },
+        {
+          "code": 420,
+          "type": "PREMIUM_SUB_ACTIVE_UNTIL_%d",
+          "description": "You already have an premium subscription active until unxtime %d."
         }
       ]
     },
@@ -55060,7 +55106,8 @@
         },
         {
           "code": 400,
-          "type": "USER_PUBLIC_MISSING"
+          "type": "USER_PUBLIC_MISSING",
+          "description": "Cannot generate a link to stories posted by a peer without a username."
         }
       ]
     },
@@ -55717,10 +55764,6 @@
           "code": 400,
           "type": "MEDIA_TYPE_INVALID",
           "description": "The specified media type cannot be used in stories."
-        },
-        {
-          "code": 400,
-          "type": "MEDIA_VIDEO_STORY_MISSING"
         },
         {
           "code": 400,
@@ -56569,7 +56612,8 @@
     },
     "ANONYMOUS_REACTIONS_DISABLED": {
       "code": 403,
-      "type": "ANONYMOUS_REACTIONS_DISABLED"
+      "type": "ANONYMOUS_REACTIONS_DISABLED",
+      "description": "Sorry, anonymous administrators cannot leave reactions or participate in polls."
     },
     "API_ID_INVALID": {
       "code": 400,
@@ -57434,6 +57478,11 @@
       "code": 406,
       "type": "GIFTCODE_NOT_ALLOWED"
     },
+    "GIFT_SLUG_EXPIRED": {
+      "code": 400,
+      "type": "GIFT_SLUG_EXPIRED",
+      "description": "The specified gift slug has expired."
+    },
     "GIFT_SLUG_INVALID": {
       "code": 400,
       "type": "GIFT_SLUG_INVALID",
@@ -57728,10 +57777,6 @@
       "code": 400,
       "type": "MEDIA_TYPE_INVALID",
       "description": "The specified media type cannot be used in stories."
-    },
-    "MEDIA_VIDEO_STORY_MISSING": {
-      "code": 400,
-      "type": "MEDIA_VIDEO_STORY_MISSING"
     },
     "MEGAGROUP_GEO_REQUIRED": {
       "code": 400,
@@ -58158,6 +58203,11 @@
       "type": "PREMIUM_ACCOUNT_REQUIRED",
       "description": "A premium account is required to execute this action."
     },
+    "PREMIUM_SUB_ACTIVE_UNTIL_%d": {
+      "code": 420,
+      "type": "PREMIUM_SUB_ACTIVE_UNTIL_%d",
+      "description": "You already have an premium subscription active until unxtime %d."
+    },
     "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN": {
       "code": 406,
       "type": "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN",
@@ -58282,6 +58332,11 @@
       "code": 400,
       "type": "REPLY_MARKUP_TOO_LONG",
       "description": "The specified reply_markup is too long."
+    },
+    "REPLY_MESSAGE_ID_INVALID": {
+      "code": 400,
+      "type": "REPLY_MESSAGE_ID_INVALID",
+      "description": "The specified reply-to message ID is invalid."
     },
     "REPLY_TO_INVALID": {
       "code": 400,
@@ -58652,6 +58707,11 @@
       "type": "TAKEOUT_INIT_DELAY_%d",
       "description": "Sorry, for security reasons, you will be able to begin downloading your data in %d seconds. We have notified all your devices about the export request to make sure it's authorized and to give you time to react if it's not."
     },
+    "TAKEOUT_INVALID": {
+      "code": 400,
+      "type": "TAKEOUT_INVALID",
+      "description": "The specified takeout ID is invalid."
+    },
     "TAKEOUT_REQUIRED": {
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
@@ -58959,7 +59019,8 @@
     },
     "USER_PUBLIC_MISSING": {
       "code": 400,
-      "type": "USER_PUBLIC_MISSING"
+      "type": "USER_PUBLIC_MISSING",
+      "description": "Cannot generate a link to stories posted by a peer without a username."
     },
     "USER_RESTRICTED": {
       "code": 406,
