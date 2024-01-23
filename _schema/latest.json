@@ -52247,7 +52247,7 @@
         {
           "code": 420,
           "type": "PREMIUM_SUB_ACTIVE_UNTIL_%d",
-          "description": "You already have an premium subscription active until unxtime %d."
+          "description": "You already have a premium subscription active until unixtime %d ."
         }
       ]
     },
@@ -58206,7 +58206,7 @@
     "PREMIUM_SUB_ACTIVE_UNTIL_%d": {
       "code": 420,
       "type": "PREMIUM_SUB_ACTIVE_UNTIL_%d",
-      "description": "You already have an premium subscription active until unxtime %d."
+      "description": "You already have a premium subscription active until unixtime %d ."
     },
     "PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN": {
       "code": 406,
