@@ -30247,7 +30247,7 @@
           "description": "Whether the other user has chosen a custom wallpaper for us using messages.setChatWallPaper¹ and the for_both flag, see here »² for more info.",
           "links": [
             "https://core.telegram.org/method/messages.setChatWallPaper",
-            "https://core.telegram.org/api/wallpapers#installing-wallpapers-in-a-specific-chator-channel"
+            "https://core.telegram.org/api/wallpapers#installing-wallpapers-in-a-specific-chat-or-channel"
           ]
         }
       }
@@ -41318,7 +41318,14 @@
           "name": "report_spam",
           "description": "Whether to also report this user for spam"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        }
+      ]
     },
     "contacts.deleteByPhones": {
       "name": "contacts.deleteByPhones",
@@ -43347,7 +43354,14 @@
           "name": "peer",
           "description": "Peer"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.discardEncryption": {
       "name": "messages.discardEncryption",
@@ -47545,6 +47559,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "MAX_DATE_INVALID",
+          "description": "The specified maximum date is invalid."
+        },
+        {
+          "code": 400,
           "type": "MSG_WAIT_FAILED",
           "description": "A waiting call returned an error."
         }
@@ -49825,7 +49844,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "ADMIN_RIGHTS_EMPTY"
+          "type": "ADMIN_RIGHTS_EMPTY",
+          "description": "The chatAdminRights constructor passed in keyboardButtonRequestPeer.peer_type.user_admin_rights has no rights set (i.e. flags is 0)."
         },
         {
           "code": 400,
@@ -49971,6 +49991,11 @@
           "code": 400,
           "type": "POLL_OPTION_INVALID",
           "description": "Invalid poll option provided."
+        },
+        {
+          "code": 406,
+          "type": "PRIVACY_PREMIUM_REQUIRED",
+          "description": "You need a Telegram Premium subscription to send a message to this user."
         },
         {
           "code": 500,
@@ -52230,10 +52255,6 @@
         }
       },
       "errors": [
-        {
-          "code": 406,
-          "type": "GIFTCODE_NOT_ALLOWED"
-        },
         {
           "code": 400,
           "type": "GIFT_SLUG_EXPIRED",
@@ -55106,6 +55127,11 @@
         },
         {
           "code": 400,
+          "type": "STORY_ID_EMPTY",
+          "description": "You specified no story IDs."
+        },
+        {
+          "code": 400,
           "type": "USER_PUBLIC_MISSING",
           "description": "Cannot generate a link to stories posted by a peer without a username."
         }
@@ -55331,7 +55357,8 @@
         },
         {
           "code": 400,
-          "type": "STORIES_NEVER_CREATED"
+          "type": "STORIES_NEVER_CREATED",
+          "description": "This peer hasn't ever posted any stories."
         },
         {
           "code": 400,
@@ -55575,7 +55602,8 @@
         },
         {
           "code": 400,
-          "type": "STORIES_NEVER_CREATED"
+          "type": "STORIES_NEVER_CREATED",
+          "description": "This peer hasn't ever posted any stories."
         }
       ]
     },
@@ -56603,7 +56631,8 @@
     },
     "ADMIN_RIGHTS_EMPTY": {
       "code": 400,
-      "type": "ADMIN_RIGHTS_EMPTY"
+      "type": "ADMIN_RIGHTS_EMPTY",
+      "description": "The chatAdminRights constructor passed in keyboardButtonRequestPeer.peer_type.user_admin_rights has no rights set (i.e. flags is 0)."
     },
     "ALBUM_PHOTOS_TOO_MANY": {
       "code": 400,
@@ -57474,10 +57503,6 @@
       "type": "GEO_POINT_INVALID",
       "description": "Invalid geoposition provided."
     },
-    "GIFTCODE_NOT_ALLOWED": {
-      "code": 406,
-      "type": "GIFTCODE_NOT_ALLOWED"
-    },
     "GIFT_SLUG_EXPIRED": {
       "code": 400,
       "type": "GIFT_SLUG_EXPIRED",
@@ -58218,6 +58243,11 @@
       "type": "PRIVACY_KEY_INVALID",
       "description": "The privacy key is invalid."
     },
+    "PRIVACY_PREMIUM_REQUIRED": {
+      "code": 406,
+      "type": "PRIVACY_PREMIUM_REQUIRED",
+      "description": "You need a Telegram Premium subscription to send a message to this user."
+    },
     "PRIVACY_TOO_LONG": {
       "code": 400,
       "type": "PRIVACY_TOO_LONG",
@@ -58660,7 +58690,8 @@
     },
     "STORIES_NEVER_CREATED": {
       "code": 400,
-      "type": "STORIES_NEVER_CREATED"
+      "type": "STORIES_NEVER_CREATED",
+      "description": "This peer hasn't ever posted any stories."
     },
     "STORIES_TOO_MUCH": {
       "code": 400,
