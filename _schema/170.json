@@ -34127,7 +34127,14 @@
           "name": "value_hashes",
           "description": "Types of values sent and their hashes"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PUBLIC_KEY_REQUIRED",
+          "description": "A public key is required."
+        }
+      ]
     },
     "account.cancelPasswordEmail": {
       "name": "account.cancelPasswordEmail",
@@ -37858,6 +37865,16 @@
         },
         {
           "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
         },
@@ -38756,6 +38773,11 @@
           "code": 400,
           "type": "CHANNEL_FORUM_MISSING",
           "description": "This supergroup is not a forum."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
         },
         {
           "code": 403,
@@ -40711,6 +40733,13 @@
           ]
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "TOPIC_ID_INVALID",
+          "description": "The specified topic ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "channels.updateUsername": {
@@ -40866,6 +40895,11 @@
           "code": 400,
           "type": "FILTER_ID_INVALID",
           "description": "The specified filter ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
         }
       ],
       "bot_can_use": true
@@ -40911,6 +40945,11 @@
           "code": 400,
           "type": "FILTER_ID_INVALID",
           "description": "The specified filter ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
         }
       ],
       "bot_can_use": true
@@ -40987,6 +41026,11 @@
         },
         {
           "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
+        },
+        {
+          "code": 400,
           "type": "INPUT_CHATLIST_INVALID",
           "description": "The specified folder is invalid."
         }
@@ -41023,6 +41067,18 @@
           "description": "Folder ID"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.hideChatlistUpdates": {
@@ -41039,6 +41095,18 @@
           "description": "The folder"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILTER_NOT_SUPPORTED",
+          "description": "The specified filter cannot be used in this context."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.joinChatlistInvite": {
@@ -41107,6 +41175,18 @@
           ]
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "FILTER_INCLUDE_EMPTY",
+          "description": "The include_peers vector of the filter is empty."
+        }
+      ],
       "bot_can_use": true
     },
     "chatlists.leaveChatlist": {
@@ -48269,7 +48349,13 @@
         },
         {
           "code": 400,
-          "type": "BOT_WEBVIEW_DISABLED"
+          "type": "BOT_WEBVIEW_DISABLED",
+          "description": "A webview cannot be opened in the specified conditions: emitted for example if from_bot_menu or url are set and peer is not the chat with the bot."
+        },
+        {
+          "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
         },
         {
           "code": 400,
@@ -50905,6 +50991,13 @@
           "description": "The new default Time-To-Live of all messages sent in new chats."
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "TTL_PERIOD_INVALID",
+          "description": "The specified TTL period is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "messages.setDefaultReaction": {
@@ -53872,6 +53965,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CONTACT_MISSING",
+          "description": "The specified user is not a contact."
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -55795,6 +55893,10 @@
         },
         {
           "code": 400,
+          "type": "MEDIA_VIDEO_STORY_MISSING"
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         },
@@ -56811,7 +56913,8 @@
     },
     "BOT_WEBVIEW_DISABLED": {
       "code": 400,
-      "type": "BOT_WEBVIEW_DISABLED"
+      "type": "BOT_WEBVIEW_DISABLED",
+      "description": "A webview cannot be opened in the specified conditions: emitted for example if from_bot_menu or url are set and peer is not the chat with the bot."
     },
     "BROADCAST_FORBIDDEN": {
       "code": 403,
@@ -57162,6 +57265,11 @@
       "code": 400,
       "type": "CONTACT_ID_INVALID",
       "description": "The provided contact ID is invalid."
+    },
+    "CONTACT_MISSING": {
+      "code": 400,
+      "type": "CONTACT_MISSING",
+      "description": "The specified user is not a contact."
     },
     "CONTACT_NAME_EMPTY": {
       "code": 400,
@@ -57802,6 +57910,10 @@
       "code": 400,
       "type": "MEDIA_TYPE_INVALID",
       "description": "The specified media type cannot be used in stories."
+    },
+    "MEDIA_VIDEO_STORY_MISSING": {
+      "code": 400,
+      "type": "MEDIA_VIDEO_STORY_MISSING"
     },
     "MEGAGROUP_GEO_REQUIRED": {
       "code": 400,
