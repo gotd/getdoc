@@ -41597,7 +41597,7 @@
     "contacts.getStatuses": {
       "name": "contacts.getStatuses",
       "description": [
-        "Use this method to obtain the online statuses of all contacts with an accessible associated Telegram account."
+        "Use this method to obtain the online statuses of all contacts with an accessible Telegram account."
       ]
     },
     "contacts.getTopPeers": {
