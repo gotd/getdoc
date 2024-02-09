@@ -2898,10 +2898,10 @@
     "appWebViewResultUrl": {
       "name": "appWebViewResultUrl",
       "description": [
-        "Contains the link that must be used to open a named Mini App¹."
+        "Contains the link that must be used to open a direct link Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ],
       "fields": {
         "url": {
@@ -3964,10 +3964,10 @@
     "botApp": {
       "name": "botApp",
       "description": [
-        "Contains information about a named Mini App¹."
+        "Contains information about a direct link Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ],
       "fields": {
         "access_hash": {
@@ -4006,9 +4006,9 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "bot mini app short name, used to generate named Mini App deep links¹.",
+          "description": "bot mini app short name, used to generate Direct Mini App deep links¹.",
           "links": [
-            "https://core.telegram.org/api/links#named-mini-app-links"
+            "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
         },
         "title": {
@@ -10853,10 +10853,10 @@
     "inputBotAppID": {
       "name": "inputBotAppID",
       "description": [
-        "Used to fetch information about a named Mini App¹ by its ID"
+        "Used to fetch information about a direct link Mini App¹ by its ID"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ],
       "fields": {
         "access_hash": {
@@ -10868,9 +10868,9 @@
         },
         "id": {
           "name": "id",
-          "description": "named Mini App¹ ID.",
+          "description": "direct link Mini App¹ ID.",
           "links": [
-            "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+            "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
           ]
         }
       }
@@ -10878,10 +10878,10 @@
     "inputBotAppShortName": {
       "name": "inputBotAppShortName",
       "description": [
-        "Used to fetch information about a named Mini App¹ by its short name"
+        "Used to fetch information about a direct link Mini App¹ by its short name"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ],
       "fields": {
         "bot_id": {
@@ -10890,9 +10890,9 @@
         },
         "short_name": {
           "name": "short_name",
-          "description": "Short name, obtained from a named Mini App deep link¹",
+          "description": "Short name, obtained from a Direct Mini App deep link¹",
           "links": [
-            "https://core.telegram.org/api/links#named-mini-app-links"
+            "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
         }
       }
@@ -16887,7 +16887,7 @@
         },
         "saved_date": {
           "name": "saved_date",
-          "description": "Only for forwarded messages reforwarded to saved messages »¹, indicates when was the original message sent (i.e. if user A sends a message @ unixtime 1, then user B forwards it somewhere @ unixtime 2, then user C saves it to saved messages @ unixtime 3, this field will contain 1, date will contain 2 and the date of the containing message² will contain 3).",
+          "description": "Only for forwarded messages reforwarded to saved messages »¹, indicates when was the original message sent (i.e. if user A sends a message @ unixtime 1, then user B forwards it somewhere @ unixtime 2, then user C saves it to saved messages @ unixtime 3, this field will contain 2, date will contain 1 and the date of the containing message² will contain 3).",
           "links": [
             "https://core.telegram.org/api/saved-messages",
             "https://core.telegram.org/constructor/message"
@@ -16895,7 +16895,7 @@
         },
         "saved_from_id": {
           "name": "saved_from_id",
-          "description": "Only for forwarded messages reforwarded to saved messages »¹, contains the sender of the original message (i.e. if user A sends a message, then user B forwards it somewhere, then user C saves it to saved messages, this field will contain the ID of user A and from_id will contain the ID of user B).",
+          "description": "Only for forwarded messages reforwarded to saved messages »¹, contains the sender of the original message (i.e. if user A sends a message, then user B forwards it somewhere, then user C saves it to saved messages, this field will contain the ID of user B and from_id will contain the ID of user A).",
           "links": [
             "https://core.telegram.org/api/saved-messages"
           ]
@@ -16909,7 +16909,7 @@
         },
         "saved_from_name": {
           "name": "saved_from_name",
-          "description": "Only for forwarded messages from users with forward privacy enabled reforwarded to saved messages »¹, contains the sender of the original message (i.e. if user A (fwd privacy enabled) sends a message, then user B forwards it somewhere, then user C saves it to saved messages, this field will contain the name of user A and from_id will contain the ID of user B).",
+          "description": "Only for forwarded messages from users with forward privacy enabled, sent by users with forward privacy enabled, reforwarded to saved messages »¹, contains the sender of the original message (i.e. if user A (fwd privacy enabled) sends a message, then user B (fwd privacy enabled) forwards it somewhere, then user C saves it to saved messages, this field will contain the name of user B and from_name will contain the name of user A).",
           "links": [
             "https://core.telegram.org/api/saved-messages"
           ]
@@ -18003,10 +18003,10 @@
     "messages.botApp": {
       "name": "messages.botApp",
       "description": [
-        "Contains information about a named Mini App¹"
+        "Contains information about a direct link Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ],
       "fields": {
         "app": {
@@ -31101,10 +31101,10 @@
     "AppWebViewResult": {
       "name": "AppWebViewResult",
       "description": [
-        "Contains the link that must be used to open a named Mini App¹."
+        "Contains the link that must be used to open a direct link Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ]
     },
     "AttachMenuBot": {
@@ -31227,10 +31227,10 @@
     "BotApp": {
       "name": "BotApp",
       "description": [
-        "Contains information about a named Mini App¹."
+        "Contains information about a direct link Mini App¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ]
     },
     "BotCommand": {
@@ -31851,10 +31851,10 @@
     "InputBotApp": {
       "name": "InputBotApp",
       "description": [
-        "Used to fetch information about a named Mini App¹"
+        "Used to fetch information about a direct link Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ]
     },
     "InputBotInlineMessage": {
@@ -33709,10 +33709,10 @@
     "messages.BotApp": {
       "name": "messages.BotApp",
       "description": [
-        "Contains information about a named Mini App¹"
+        "Contains information about a direct link Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ]
     },
     "messages.BotResults": {
@@ -43629,6 +43629,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -44735,17 +44740,17 @@
     "messages.getBotApp": {
       "name": "messages.getBotApp",
       "description": [
-        "Obtain information about a named Mini App¹"
+        "Obtain information about a direct link Mini App¹"
       ],
       "links": [
-        "https://core.telegram.org/api/bots/webapps#named-mini-apps"
+        "https://core.telegram.org/api/bots/webapps#direct-link-mini-apps"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "Bot app information obtained from a named Mini App deep link »¹.",
+          "description": "Bot app information obtained from a Direct Mini App deep link »¹.",
           "links": [
-            "https://core.telegram.org/api/links#named-mini-app-links"
+            "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
         },
         "hash": {
@@ -48055,21 +48060,21 @@
     "messages.requestAppWebView": {
       "name": "messages.requestAppWebView",
       "description": [
-        "Open a bot mini app¹ from a named Mini App deep link², sending over user information after user confirmation.",
+        "Open a bot mini app¹ from a direct Mini App deep link², sending over user information after user confirmation.",
         "After calling this method, until the user closes the webview, messages.prolongWebView¹ must be called every 60 seconds."
       ],
       "links": [
         "https://core.telegram.org/bots/webapps",
-        "https://core.telegram.org/api/links#named-mini-app-links",
+        "https://core.telegram.org/api/links#direct-mini-app-links",
         "https://core.telegram.org/method/messages.prolongWebView"
       ],
       "parameters": {
         "app": {
           "name": "app",
-          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the named Mini App deep link² docs.",
+          "description": "The app obtained by invoking messages.getBotApp¹ as specified in the direct Mini App deep link² docs.",
           "links": [
             "https://core.telegram.org/method/messages.getBotApp",
-            "https://core.telegram.org/api/links#named-mini-app-links"
+            "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
         },
         "flags": {
@@ -48089,9 +48094,9 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "If the startapp query string parameter is present in the named Mini App deep link¹, pass it to start_param.",
+          "description": "If the startapp query string parameter is present in the direct Mini App deep link¹, pass it to start_param.",
           "links": [
-            "https://core.telegram.org/api/links#named-mini-app-links"
+            "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
         },
         "theme_params": {
@@ -48103,9 +48108,9 @@
         },
         "write_allowed": {
           "name": "write_allowed",
-          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the named Mini App deep link¹ docs, and the user agreed.",
+          "description": "Set this flag if the bot is asking permission to send messages to the user as specified in the direct Mini App deep link¹ docs, and the user agreed.",
           "links": [
-            "https://core.telegram.org/api/links#named-mini-app-links"
+            "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
         }
       },
@@ -49957,6 +49962,11 @@
           "code": 400,
           "type": "BUTTON_URL_INVALID",
           "description": "Button URL invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUTTON_USER_INVALID",
+          "description": "The user_id passed to inputKeyboardButtonUserProfile is invalid!"
         },
         {
           "code": 400,
@@ -55893,7 +55903,8 @@
         },
         {
           "code": 400,
-          "type": "MEDIA_VIDEO_STORY_MISSING"
+          "type": "MEDIA_VIDEO_STORY_MISSING",
+          "description": "A non-story video cannot be repubblished as a story (emitted when trying to resend a non-story video as a story using inputDocument)."
         },
         {
           "code": 400,
@@ -56956,6 +56967,11 @@
       "type": "BUTTON_URL_INVALID",
       "description": "Button URL invalid."
     },
+    "BUTTON_USER_INVALID": {
+      "code": 400,
+      "type": "BUTTON_USER_INVALID",
+      "description": "The user_id passed to inputKeyboardButtonUserProfile is invalid!"
+    },
     "BUTTON_USER_PRIVACY_RESTRICTED": {
       "code": 400,
       "type": "BUTTON_USER_PRIVACY_RESTRICTED",
@@ -57913,7 +57929,8 @@
     },
     "MEDIA_VIDEO_STORY_MISSING": {
       "code": 400,
-      "type": "MEDIA_VIDEO_STORY_MISSING"
+      "type": "MEDIA_VIDEO_STORY_MISSING",
+      "description": "A non-story video cannot be repubblished as a story (emitted when trying to resend a non-story video as a story using inputDocument)."
     },
     "MEGAGROUP_GEO_REQUIRED": {
       "code": 400,
