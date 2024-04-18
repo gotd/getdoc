@@ -18,7 +18,7 @@ jobs:
         runner:
           - ubuntu-latest
         go:
-          - 1.21.x
+          - 1.22.x
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
