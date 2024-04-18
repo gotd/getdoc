@@ -1,10 +1,11 @@
 linters-settings:
-  govet:
-    check-shadowing: true
+  revive:
+    rules:
+      - name: unused-parameter
+        severity: warning
+        disabled: true
   gocyclo:
     min-complexity: 15
-  maligned:
-    suggest-new: true
   dupl:
     threshold: 120
   goconst:
