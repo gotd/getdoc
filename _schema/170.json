@@ -48753,6 +48753,10 @@
         "Search for messages and peers globally"
       ],
       "parameters": {
+        "broadcasts_only": {
+          "name": "broadcasts_only",
+          "description": " "
+        },
         "filter": {
           "name": "filter",
           "description": "Global search filter"
