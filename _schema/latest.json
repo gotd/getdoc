@@ -49859,6 +49859,12 @@
     },
     "messages.getSavedReactionTags": {
       "name": "messages.getSavedReactionTags",
+      "description": [
+        "Fetch the full list of saved message tags¹ created by the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -49876,7 +49882,10 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "If set, returns tags only used in the specified saved message dialog¹.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages#saved-message-dialogs"
+          ]
         }
       }
     },
@@ -55696,6 +55705,12 @@
     },
     "messages.updateSavedReactionTag": {
       "name": "messages.updateSavedReactionTag",
+      "description": [
+        "Update the description of a saved message tag¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -55706,11 +55721,14 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "Reaction¹ associated to the tag",
+          "links": [
+            "https://core.telegram.org/api/reactions"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Tag description, max 12 UTF-8 characters; to remove the description call the method without setting this flag."
         }
       },
       "errors": [
