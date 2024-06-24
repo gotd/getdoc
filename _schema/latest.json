@@ -9332,7 +9332,7 @@
         },
         "title": {
           "name": "title",
-          "description": "Folder¹ name",
+          "description": "Folder¹ name (max 12 UTF-8 chars)",
           "links": [
             "https://core.telegram.org/api/folders"
           ]
@@ -9387,7 +9387,7 @@
         },
         "title": {
           "name": "title",
-          "description": "Name of the folder"
+          "description": "Name of the folder (max 12 UTF-8 chars)"
         }
       }
     },
@@ -37165,9 +37165,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.emojiStatuses"
           ]
         }
       }
@@ -37184,9 +37185,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/emojiList"
           ]
         }
       }
@@ -37202,9 +37204,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.themes"
           ]
         }
       }
@@ -37236,9 +37239,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/emojiList"
           ]
         }
       }
@@ -37254,9 +37258,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.emojiStatuses"
           ]
         }
       }
@@ -37273,9 +37278,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/emojiList"
           ]
         }
       }
@@ -37292,9 +37298,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/emojiList"
           ]
         }
       }
@@ -37440,9 +37447,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.emojiStatuses"
           ]
         }
       }
@@ -37455,9 +37463,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.savedRingtones².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.savedRingtones"
           ]
         }
       }
@@ -37518,9 +37527,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.themes"
           ]
         }
       }
@@ -37589,9 +37599,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.wallPapers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/account.wallPapers"
           ]
         }
       }
@@ -44442,10 +44453,12 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "If there already is a full contact list on the client, a hash¹ of a the list of contact IDs in ascending order may be passed in this parameter. If the contact set was not changed, (contacts.contactsNotModified)² will be returned.",
+          "description": "Hash for pagination, for more info click here¹.Note that the hash is computed using the usual algorithm², passing to the algorithm first the previously returned contacts.contacts³.saved_count field, then max 100000 sorted user IDs from the contact list, including the ID of the currently logged in user if it is saved as a contact. Example: tdlib implementation⁴.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/contacts.contactsNotModified"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/contacts.contacts",
+            "https://github.com/tdlib/td/blob/63c7d0301825b78c30dc7307f1f1466be049eb79/td/telegram/UserManager.cpp#L5754"
           ]
         }
       }
@@ -45003,9 +45016,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.appConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/help.appConfig"
           ]
         }
       }
@@ -45094,9 +45108,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.countriesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/help.countriesList"
           ]
         },
         "lang_code": {
@@ -45143,9 +45158,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.passportConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/help.passportConfig"
           ]
         }
       }
@@ -45161,9 +45177,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/help.peerColors"
           ]
         }
       }
@@ -45179,9 +45196,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/help.peerColors"
           ]
         }
       }
@@ -45252,9 +45270,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.timezonesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/help.timezonesList"
           ]
         }
       }
@@ -47752,9 +47771,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.allStickers"
           ]
         }
       }
@@ -47835,9 +47855,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the attachMenuBots².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/attachMenuBots"
           ]
         }
       }
@@ -47859,9 +47880,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableEffects².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.availableEffects"
           ]
         }
       }
@@ -47877,9 +47899,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableReactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.availableReactions"
           ]
         }
       }
@@ -48192,12 +48215,19 @@
     },
     "messages.getDefaultTagReactions": {
       "name": "messages.getDefaultTagReactions",
+      "description": [
+        "Fetch a default recommended list of saved message tag reactions¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.reactions"
           ]
         }
       }
@@ -48408,9 +48438,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
       },
@@ -48478,9 +48509,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
       },
@@ -48498,9 +48530,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
       },
@@ -48511,9 +48544,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
       }
@@ -48529,9 +48563,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.allStickers"
           ]
         }
       }
@@ -48711,9 +48746,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.favedStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.favedStickers"
           ]
         }
       }
@@ -48726,9 +48762,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.featuredStickers"
           ]
         }
       }
@@ -48741,9 +48778,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.featuredStickers"
           ]
         }
       }
@@ -49006,9 +49044,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.allStickers"
           ]
         }
       }
@@ -49276,9 +49315,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.featuredStickers"
           ]
         },
         "limit": {
@@ -49609,9 +49649,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.reactions"
           ]
         },
         "limit": {
@@ -49642,9 +49683,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.recentStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.recentStickers"
           ]
         }
       }
@@ -49792,14 +49834,15 @@
     "messages.getSavedGifs": {
       "name": "messages.getSavedGifs",
       "description": [
-        "Get saved GIFs"
+        "Get saved GIFs."
       ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedGifs².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.savedGifs"
           ]
         }
       }
@@ -49875,9 +49918,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedReactionTags².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.savedReactionTags"
           ]
         },
         "peer": {
@@ -50151,9 +50195,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.stickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.stickers"
           ]
         }
       },
@@ -50185,9 +50230,10 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.reactions"
           ]
         },
         "limit": {
@@ -52081,9 +52127,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/emojiList"
           ]
         }
       },
@@ -52118,9 +52165,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.foundStickerSets"
           ]
         },
         "q": {
@@ -52263,9 +52311,10 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/messages.foundStickerSets"
           ]
         },
         "q": {
@@ -55706,7 +55755,7 @@
     "messages.updateSavedReactionTag": {
       "name": "messages.updateSavedReactionTag",
       "description": [
-        "Update the description of a saved message tag¹."
+        "Update the description of a saved message tag »¹."
       ],
       "links": [
         "https://core.telegram.org/api/saved-messages#tags"
