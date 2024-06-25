@@ -10791,7 +10791,12 @@
         },
         "hide_read_marks": {
           "name": "hide_read_marks",
-          "description": " "
+          "description": "If set, (only) users that cannot see our exact last online date due to the current value of the inputPrivacyKeyStatusTimestamp¹ key will receive a 403 USER_PRIVACY_RESTRICTED error when invoking messages.getOutboxReadDate² to fetch the exact read date of one of their messages. The userFull³.read_dates_private flag will be set for users that have this flag enabled.",
+          "links": [
+            "https://core.telegram.org/constructor/inputPrivacyKeyStatusTimestamp",
+            "https://core.telegram.org/method/messages.getOutboxReadDate",
+            "https://core.telegram.org/constructor/userFull"
+          ]
         },
         "keep_archived_folders": {
           "name": "keep_archived_folders",
@@ -10806,7 +10811,13 @@
         },
         "new_noncontact_peers_require_premium": {
           "name": "new_noncontact_peers_require_premium",
-          "description": " "
+          "description": "If set, only users that have a premium account, are in our contact list, or already have a private chat with us can write to us; a 403 PRIVACY_PREMIUM_REQUIRED error will be emitted otherwise.  The userFull¹.contact_require_premium flag will be set for users that have this flag enabled.  To check whether we can write to a user with this flag enabled, if we haven't yet cached all the required information (for example we don't have the userFull² or history of all users while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user. Premium⁴ users only, non-Premium users will receive a PREMIUM_ACCOUNT_REQUIRED error when trying to enable this flag.",
+          "links": [
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
+            "https://core.telegram.org/api/premium"
+          ]
         }
       }
     },
@@ -14626,7 +14637,11 @@
     "inputPrivacyKeyStatusTimestamp": {
       "name": "inputPrivacyKeyStatusTimestamp",
       "description": [
-        "Whether people will be able to see your exact last online timestamp"
+        "Whether people will be able to see our exact last online timestamp.",
+        "Note that if we decide to hide our exact last online timestamp to someone and we do not have a Premium¹ subscription, we won't be able to see the exact last online timestamp of any user, including those that do share it with us."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium"
       ]
     },
     "inputPrivacyKeyVoiceMessages": {
@@ -24370,7 +24385,11 @@
     "privacyKeyStatusTimestamp": {
       "name": "privacyKeyStatusTimestamp",
       "description": [
-        "Whether we can see the last online timestamp of this user"
+        "Whether we can see the last online timestamp of this user.",
+        "Note that if we decide to hide our exact last online timestamp to someone and we do not have a Premium¹ subscription, we won't be able to see the exact last online timestamp of any user, including those that do share it with us."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium"
       ]
     },
     "privacyKeyVoiceMessages": {
@@ -32382,7 +32401,13 @@
         },
         "contact_require_premium": {
           "name": "contact_require_premium",
-          "description": " "
+          "description": "If set, we can only write to this user if they have already sent some messages to us, if we are subscribed to Telegram Premium¹, or if they're a mutual contact (user².mutual_contact).  All the secondary conditions listed above must be checked separately to verify whether we can still write to the user, even if this flag is set (i.e. a mutual contact will have this flag set even if we can still write to them, and so on...); to avoid doing these extra checks if we haven't yet cached all the required information (for example while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked instead, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user. To set this flag for ourselves invoke account.setGlobalPrivacySettings⁴, setting the settings.new_noncontact_peers_require_premium flag.",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/user",
+            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
+            "https://core.telegram.org/method/account.setGlobalPrivacySettings"
+          ]
         },
         "fallback_photo": {
           "name": "fallback_photo",
@@ -32397,7 +32422,10 @@
         },
         "flags2": {
           "name": "flags2",
-          "description": " "
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
         },
         "folder_id": {
           "name": "folder_id",
@@ -32462,7 +32490,12 @@
         },
         "read_dates_private": {
           "name": "read_dates_private",
-          "description": " "
+          "description": "If set, we cannot fetch the exact read date of messages we send to this user using messages.getOutboxReadDate¹.  The exact read date of messages might still be unavailable for other reasons, see here »² for more info.  To set this flag for ourselves invoke account.setGlobalPrivacySettings³, setting the settings.hide_read_marks flag.",
+          "links": [
+            "https://core.telegram.org/method/messages.getOutboxReadDate",
+            "https://core.telegram.org/constructor/globalPrivacySettings",
+            "https://core.telegram.org/method/account.setGlobalPrivacySettings"
+          ]
         },
         "settings": {
           "name": "settings",
@@ -44519,6 +44552,10 @@
         "https://core.telegram.org/api/takeout"
       ],
       "parameters": {
+        "400": {
+          "name": "400",
+          "description": "The specified takeout ID is invalid."
+        },
         "403": {
           "name": "403",
           "description": "A takeout¹ session needs to be initialized first, see here » for more info².",
@@ -44529,6 +44566,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "TAKEOUT_INVALID",
+          "description": "The specified takeout ID is invalid."
+        },
         {
           "code": 403,
           "type": "TAKEOUT_REQUIRED",
@@ -49378,8 +49420,28 @@
       "errors": [
         {
           "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MESSAGE_TOO_OLD",
+          "description": "The message is too old, the requested information is not available."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 403,
+          "type": "USER_PRIVACY_RESTRICTED",
+          "description": "The user's privacy settings do not allow you to do this."
+        },
+        {
+          "code": 403,
+          "type": "YOUR_PRIVACY_RESTRICTED",
+          "description": "You cannot fetch the read date of this message because you have disallowed other users to do so for your messages; to fix, allow other users to see your exact last online date OR purchase a Telegram Premium subscription."
         }
       ]
     },
@@ -60608,10 +60670,27 @@
     },
     "users.getIsPremiumRequiredToContact": {
       "name": "users.getIsPremiumRequiredToContact",
+      "description": [
+        "Check whether we can write to the specified user (non-Premium¹ users only).",
+        "If a user enables their new_noncontact_peers_require_premium global privacy setting¹, represented in userFull².contact_require_premium, only users that have a premium account, are in our contact list, or already have a private chat with them can write to them in private.",
+        "To easily check whether we can write to a user with this flag enabled, if we haven't yet cached all the required information (for example we don't have the userFull¹ or history of all users while displaying the chat list in the sharing UI) this method may be invoked, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user.",
+        "This list may then be used, for example, to display a lock near the avatar of each user that we cannot write to, with an appropriate tooltip to purchase a Premium¹ subscription.",
+        "Note that this method should only be invoked if we don't have a Premium¹ subscription, only for users whose full info (userFull² + message history information) is not cached yet, as the same info can be computed locally if all the mentioned information is available, and updated automatically using the usual updates³."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/api/privacy#global-privacy-settings",
+        "https://core.telegram.org/constructor/userFull",
+        "https://core.telegram.org/constructor/userFull",
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/constructor/userFull",
+        "https://core.telegram.org/api/updates"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Users to fetch info about."
         }
       }
     },
@@ -62048,6 +62127,11 @@
       "type": "MESSAGE_TOO_LONG",
       "description": "The provided message is too long."
     },
+    "MESSAGE_TOO_OLD": {
+      "code": 400,
+      "type": "MESSAGE_TOO_OLD",
+      "description": "The message is too old, the requested information is not available."
+    },
     "METHOD_INVALID": {
       "code": 400,
       "type": "METHOD_INVALID",
@@ -63405,6 +63489,11 @@
       "code": 400,
       "type": "WEBPUSH_TOKEN_INVALID",
       "description": "The specified web push token is invalid."
+    },
+    "YOUR_PRIVACY_RESTRICTED": {
+      "code": 403,
+      "type": "YOUR_PRIVACY_RESTRICTED",
+      "description": "You cannot fetch the read date of this message because you have disallowed other users to do so for your messages; to fix, allow other users to see your exact last online date OR purchase a Telegram Premium subscription."
     },
     "YOU_BLOCKED_USER": {
       "code": 400,
