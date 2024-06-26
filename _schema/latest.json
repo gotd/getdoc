@@ -4310,14 +4310,14 @@
         },
         "gift": {
           "name": "gift",
-          "description": "Whether this boost was applied because the channel directly gifted a subscription to the user¹.",
+          "description": "Whether this boost was applied because the channel/supergroup directly gifted a subscription to the user¹.",
           "links": [
             "https://core.telegram.org/api/giveaways"
           ]
         },
         "giveaway": {
           "name": "giveaway",
-          "description": "Whether this boost was applied because the user was chosen in a giveaway started by the channel¹.",
+          "description": "Whether this boost was applied because the user was chosen in a giveaway started by the channel/supergroup¹.",
           "links": [
             "https://core.telegram.org/api/giveaways"
           ]
@@ -6677,7 +6677,10 @@
         },
         "boosts_applied": {
           "name": "boosts_applied",
-          "description": " "
+          "description": "The number of boosts¹ the current user has applied to the current supergroup.",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         },
         "boosts_unrestrict": {
           "name": "boosts_unrestrict",
@@ -11390,7 +11393,10 @@
         },
         "group_min_level": {
           "name": "group_min_level",
-          "description": " "
+          "description": "Supergroups can use this palette only after reaching at least the boost level¹ specified in this field.",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         },
         "hidden": {
           "name": "hidden",
@@ -13247,7 +13253,7 @@
     "inputInvoicePremiumGiftCode": {
       "name": "inputInvoicePremiumGiftCode",
       "description": [
-        "Used if the user wishes to start a channel giveaway¹ or send some giftcodes² to members of a channel, in exchange for boosts³."
+        "Used if the user wishes to start a channel/supergroup giveaway¹ or send some giftcodes² to members of a channel/supergroup, in exchange for boosts³."
       ],
       "links": [
         "https://core.telegram.org/api/giveaways",
@@ -15277,7 +15283,7 @@
     "inputStorePaymentPremiumGiftCode": {
       "name": "inputStorePaymentPremiumGiftCode",
       "description": [
-        "Used to gift Telegram Premium¹ subscriptions only to some specific subscribers of a channel or to some of our contacts, see here »² for more info on giveaways and gifts."
+        "Used to gift Telegram Premium¹ subscriptions only to some specific subscribers of a channel/supergroup or to some of our contacts, see here »² for more info on giveaways and gifts."
       ],
       "links": [
         "https://core.telegram.org/api/premium",
@@ -15293,7 +15299,7 @@
         },
         "boost_peer": {
           "name": "boost_peer",
-          "description": "If set, the gifts will be sent on behalf of a channel we are an admin of, which will also assign some boosts¹ to it. Otherwise, the gift will be sent directly from the currently logged in users, and we will gain some extra boost slots². See here »³ for more info on giveaways and gifts.",
+          "description": "If set, the gifts will be sent on behalf of a channel/supergroup we are an admin of, which will also assign some boosts¹ to it. Otherwise, the gift will be sent directly from the currently logged in user, and we will gain some extra boost slots². See here »³ for more info on giveaways and gifts.",
           "links": [
             "https://core.telegram.org/api/boost",
             "https://core.telegram.org/api/boost",
@@ -15345,7 +15351,7 @@
         },
         "boost_peer": {
           "name": "boost_peer",
-          "description": "The channel starting the giveaway, that the user must join to participate, that will receive the giveaway boosts¹; see here »² for more info on giveaways.",
+          "description": "The channel/supergroup starting the giveaway, that the user must join to participate, that will receive the giveaway boosts¹; see here »² for more info on giveaways.",
           "links": [
             "https://core.telegram.org/api/boost",
             "https://core.telegram.org/api/giveaways"
@@ -16643,7 +16649,11 @@
         },
         "from_boosts_applied": {
           "name": "from_boosts_applied",
-          "description": " "
+          "description": "Supergroups only, contains the number of boosts¹ this user has given the current supergroup, and should be shown in the UI in the header of the message. Only present for incoming messages from non-anonymous supergroup members that have boosted the supergroup. Note that this counter should be locally overridden for non-anonymous outgoing messages, according to the current value of channelFull².boosts_applied, to ensure the value is correct even for messages sent by the current user before a supergroup was boosted (or after a boost has expired or the number of boosts has changed); do not update this value for incoming messages from other users, even if their boosts have changed.",
+          "links": [
+            "https://core.telegram.org/api/boost",
+            "https://core.telegram.org/constructor/channelFull"
+          ]
         },
         "from_id": {
           "name": "from_id",
@@ -17058,7 +17068,7 @@
         },
         "boost_peer": {
           "name": "boost_peer",
-          "description": "Identifier of the channel that created the gift code either directly or through a giveaway¹: if we import this giftcode link, we will also automatically boost² this channel.",
+          "description": "Identifier of the channel/supergroup that created the gift code either directly or through a giveaway¹: if we import this giftcode link, we will also automatically boost² this channel/supergroup.",
           "links": [
             "https://core.telegram.org/api/giveaways",
             "https://core.telegram.org/api/boost"
@@ -17109,7 +17119,7 @@
         },
         "via_giveaway": {
           "name": "via_giveaway",
-          "description": "If set, this gift code was received from a giveaway »¹ started by a channel we're subscribed to.",
+          "description": "If set, this gift code was received from a giveaway »¹ started by a channel/supergroup we're subscribed to.",
           "links": [
             "https://core.telegram.org/api/giveaways"
           ]
@@ -18554,7 +18564,7 @@
         },
         "channel_id": {
           "name": "channel_id",
-          "description": "ID of the channel that was automatically boosted¹ by the winners of the giveaway for duration of the Premium subscription.",
+          "description": "ID of the channel/supergroup that was automatically boosted¹ by the winners of the giveaway for duration of the Premium subscription.",
           "links": [
             "https://core.telegram.org/api/boost"
           ]
@@ -24082,7 +24092,7 @@
         },
         "gift_boosts": {
           "name": "gift_boosts",
-          "description": "The number of boosts acquired from created Telegram Premium gift codes¹ and giveaways²; only returned to channel admins.",
+          "description": "The number of boosts acquired from created Telegram Premium gift codes¹ and giveaways²; only returned to channel/supergroup admins.",
           "links": [
             "https://core.telegram.org/api/giveaways",
             "https://core.telegram.org/api/giveaways"
@@ -24090,11 +24100,11 @@
         },
         "level": {
           "name": "level",
-          "description": "The current boost level of the channel."
+          "description": "The current boost level of the channel/supergroup."
         },
         "my_boost": {
           "name": "my_boost",
-          "description": "Whether we're currently boosting this channel, my_boost_slots will also be set."
+          "description": "Whether we're currently boosting this channel/supergroup, my_boost_slots will also be set."
         },
         "my_boost_slots": {
           "name": "my_boost_slots",
@@ -24109,11 +24119,11 @@
         },
         "premium_audience": {
           "name": "premium_audience",
-          "description": "Only returned to channel admins: contains the approximated number of Premium users subscribed to the channel, related to the total number of subscribers."
+          "description": "Only returned to channel/supergroup admins: contains the approximated number of Premium users subscribed to the channel/supergroup, related to the total number of subscribers."
         },
         "prepaid_giveaways": {
           "name": "prepaid_giveaways",
-          "description": "A list of prepaid giveaways¹ available for the chat; only returned to channel admins.",
+          "description": "A list of prepaid giveaways¹ available for the chat; only returned to channel/supergroup admins.",
           "links": [
             "https://core.telegram.org/api/giveaways"
           ]
@@ -28302,7 +28312,7 @@
     "updateBotChatBoost": {
       "name": "updateBotChatBoost",
       "description": [
-        "A channel boost¹ has changed (bots only)"
+        "A channel/supergroup boost¹ has changed (bots only)"
       ],
       "links": [
         "https://core.telegram.org/api/boost"
@@ -43651,7 +43661,7 @@
     "channels.updateEmojiStatus": {
       "name": "channels.updateEmojiStatus",
       "description": [
-        "Set an emoji status¹ for a channel."
+        "Set an emoji status¹ for a channel or supergroup."
       ],
       "links": [
         "https://core.telegram.org/api/emoji-status"
@@ -43659,9 +43669,10 @@
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": "The channel, must have at least channel_emoji_status_level_min boosts¹.",
+          "description": "The channel/supergroup, must have at least channel_emoji_status_level_min¹/group_emoji_status_level_min² boosts.",
           "links": [
-            "https://core.telegram.org/api/config#channel-emoji-status-level-min"
+            "https://core.telegram.org/api/config#channel-emoji-status-level-min",
+            "https://core.telegram.org/api/config#group-emoji-status-level-min"
           ]
         },
         "emoji_status": {
@@ -57948,7 +57959,7 @@
     "premium.getBoostsList": {
       "name": "premium.getBoostsList",
       "description": [
-        "Obtains info about the boosts that were applied to a certain channel (admins only)"
+        "Obtains info about the boosts that were applied to a certain channel or supergroup (admins only)"
       ],
       "parameters": {
         "flags": {
@@ -57960,7 +57971,7 @@
         },
         "gifts": {
           "name": "gifts",
-          "description": "Whether to return only info about boosts received from gift codes and giveaways created by the channel »¹",
+          "description": "Whether to return only info about boosts received from gift codes and giveaways created by the channel/supergroup »¹",
           "links": [
             "https://core.telegram.org/api/giveaways"
           ]
@@ -57981,7 +57992,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": "The channel"
+          "description": "The channel/supergroup"
         }
       },
       "errors": [
@@ -58000,7 +58011,7 @@
     "premium.getBoostsStatus": {
       "name": "premium.getBoostsStatus",
       "description": [
-        "Gets the current number of boosts¹ of a channel."
+        "Gets the current number of boosts¹ of a channel/supergroup."
       ],
       "links": [
         "https://core.telegram.org/api/boost"
@@ -58032,12 +58043,12 @@
     "premium.getUserBoosts": {
       "name": "premium.getUserBoosts",
       "description": [
-        "Returns the lists of boost that were applied to a channel by a specific user (admins only)"
+        "Returns the lists of boost that were applied to a channel/supergroup by a specific user (admins only)"
       ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": "The channel"
+          "description": "The channel/supergroup"
         },
         "user_id": {
           "name": "user_id",
