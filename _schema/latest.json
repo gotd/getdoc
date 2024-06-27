@@ -6738,7 +6738,12 @@
         },
         "emojiset": {
           "name": "emojiset",
-          "description": " "
+          "description": "Custom emoji stickerset¹ associated to the current supergroup, set using channels.setEmojiStickers² after reaching the appropriate boost level, see here »³ for more info.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji",
+            "https://core.telegram.org/method/channels.setEmojiStickers",
+            "https://core.telegram.org/api/boost#setting-a-custom-emoji-stickerset-for-supergroups"
+          ]
         },
         "exported_invite": {
           "name": "exported_invite",
@@ -26868,7 +26873,7 @@
         },
         "channel_emoji_status": {
           "name": "channel_emoji_status",
-          "description": "If set, this custom emoji stickerset can be used in channel emoji statuses¹.",
+          "description": "If set, this custom emoji stickerset can be used in channel/supergroup emoji statuses¹.",
           "links": [
             "https://core.telegram.org/api/emoji-status"
           ]
@@ -43642,7 +43647,10 @@
         },
         "for_profile": {
           "name": "for_profile",
-          "description": "Whether to change the accent color emoji pattern of the profile page; otherwise, the accent color and emoji pattern of messages will be changed."
+          "description": "Whether to change the accent color emoji pattern of the profile page; otherwise, the accent color and emoji pattern of messages will be changed. Channels can change both message and profile palettes; supergroups can only change the profile palette, of course after reaching the appropriate boost level¹.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         }
       },
       "errors": [
