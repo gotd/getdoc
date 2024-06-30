@@ -37070,7 +37070,14 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "account.editBusinessChatLink": {
       "name": "account.editBusinessChatLink",
@@ -38514,6 +38521,11 @@
           "code": 400,
           "type": "AUTOARCHIVE_NOT_AVAILABLE",
           "description": "The autoarchive setting is not available at this time: please check the value of the autoarchive_setting_available field in client config » before calling this method."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -38570,7 +38582,14 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "account.toggleSponsoredMessages": {
       "name": "account.toggleSponsoredMessages",
@@ -38743,7 +38762,13 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "TIMEZONE_INVALID"
+        }
+      ]
     },
     "account.updateColor": {
       "name": "account.updateColor",
@@ -39783,7 +39808,14 @@
           "name": "phone_number",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PHONE_NUMBER_INVALID",
+          "description": "The phone number is invalid."
+        }
+      ]
     },
     "auth.requestFirebaseSms": {
       "name": "auth.requestFirebaseSms",
@@ -43039,7 +43071,14 @@
           "name": "random_id",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.restrictSponsoredMessages": {
       "name": "channels.restrictSponsoredMessages",
@@ -43052,7 +43091,14 @@
           "name": "restricted",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.searchPosts": {
       "name": "channels.searchPosts",
@@ -43096,7 +43142,14 @@
           "name": "channel",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.setDiscussionGroup": {
       "name": "channels.setDiscussionGroup",
@@ -43168,7 +43221,14 @@
           "name": "stickerset",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.setStickers": {
       "name": "channels.setStickers",
@@ -46319,7 +46379,14 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.deleteHistory": {
       "name": "messages.deleteHistory",
@@ -47019,7 +47086,14 @@
           "name": "text",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.editInlineBotMessage": {
       "name": "messages.editInlineBotMessage",
@@ -48797,7 +48871,14 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.getFavedStickers": {
       "name": "messages.getFavedStickers",
@@ -53980,7 +54061,14 @@
           "name": "shortcut_id",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.sendReaction": {
       "name": "messages.sendReaction",
@@ -56365,7 +56453,14 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "payments.getStarsTopupOptions": {
       "name": "payments.getStarsTopupOptions"
@@ -56397,6 +56492,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "payments.launchPrepaidGiveaway": {
@@ -56441,6 +56543,18 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "payments.sendPaymentForm": {
@@ -56513,7 +56627,14 @@
           "name": "invoice",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "payments.validateRequestedInfo": {
       "name": "payments.validateRequestedInfo",
@@ -58220,7 +58341,14 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "stats.getBroadcastRevenueTransactions": {
       "name": "stats.getBroadcastRevenueTransactions",
@@ -58240,7 +58368,14 @@
           "name": "offset",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "stats.getBroadcastRevenueWithdrawalUrl": {
       "name": "stats.getBroadcastRevenueWithdrawalUrl",
@@ -58253,7 +58388,14 @@
           "name": "password",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PASSWORD_HASH_INVALID",
+          "description": "The provided password hash is invalid."
+        }
+      ]
     },
     "stats.getBroadcastStats": {
       "name": "stats.getBroadcastStats",
@@ -58970,6 +59112,13 @@
           "description": " "
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "STICKER_INVALID",
+          "description": "The provided sticker is invalid."
+        }
+      ],
       "bot_can_use": true
     },
     "stickers.setStickerSetThumb": {
@@ -60040,7 +60189,14 @@
           "name": "peer",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "updates.getChannelDifference": {
       "name": "updates.getChannelDifference",
@@ -63114,6 +63270,10 @@
       "code": 400,
       "type": "THEME_TITLE_INVALID",
       "description": "The specified theme title is invalid."
+    },
+    "TIMEZONE_INVALID": {
+      "code": 400,
+      "type": "TIMEZONE_INVALID"
     },
     "TITLE_INVALID": {
       "code": 400,
