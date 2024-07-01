@@ -5142,6 +5142,12 @@
     },
     "businessAwayMessage": {
       "name": "businessAwayMessage",
+      "description": [
+        "Describes a Telegram Business away message¹, automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -5152,40 +5158,62 @@
         },
         "offline_only": {
           "name": "offline_only",
-          "description": " "
+          "description": "If set, the messages will not be sent if the account was online in the last 10 minutes."
         },
         "recipients": {
           "name": "recipients",
-          "description": " "
+          "description": "Allowed recipients for the away messages."
         },
         "schedule": {
           "name": "schedule",
-          "description": " "
+          "description": "Specifies when should the away messages be sent."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "ID of a quick reply shorcut, containing the away messages to send, see here » for more info¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       }
     },
     "businessAwayMessageScheduleAlways": {
-      "name": "businessAwayMessageScheduleAlways"
+      "name": "businessAwayMessageScheduleAlways",
+      "description": [
+        "Always send Telegram Business away messages¹ to users writing to us in private."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ]
     },
     "businessAwayMessageScheduleCustom": {
       "name": "businessAwayMessageScheduleCustom",
+      "description": [
+        "Send Telegram Business away messages¹ to users writing to us in private in the specified time span."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ],
       "fields": {
         "end_date": {
           "name": "end_date",
-          "description": " "
+          "description": "End date (UNIX timestamp)."
         },
         "start_date": {
           "name": "start_date",
-          "description": " "
+          "description": "Start date (UNIX timestamp)."
         }
       }
     },
     "businessAwayMessageScheduleOutsideWorkHours": {
-      "name": "businessAwayMessageScheduleOutsideWorkHours"
+      "name": "businessAwayMessageScheduleOutsideWorkHours",
+      "description": [
+        "Send Telegram Business away messages¹ to users writing to us in private outside of the configured Telegram Business working hours²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#opening-hours"
+      ]
     },
     "businessBotRecipients": {
       "name": "businessBotRecipients",
@@ -5264,18 +5292,27 @@
     },
     "businessGreetingMessage": {
       "name": "businessGreetingMessage",
+      "description": [
+        "Describes a Telegram Business greeting¹, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#greeting-messages"
+      ],
       "fields": {
         "no_activity_days": {
           "name": "no_activity_days",
-          "description": " "
+          "description": "The number of days after which a private chat will be considered as inactive; currently, must be one of 7, 14, 21, or 28."
         },
         "recipients": {
           "name": "recipients",
-          "description": " "
+          "description": "Allowed recipients for the greeting messages."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "ID of a quick reply shorcut, containing the greeting messages to send, see here » for more info¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       }
     },
@@ -5325,18 +5362,28 @@
     },
     "businessRecipients": {
       "name": "businessRecipients",
+      "description": [
+        "Specifies the chats that can receive Telegram Business away »¹ and greeting »² messages.",
+        "If exclude_selected is set, specifies all chats that cannot receive Telegram Business away »¹ and greeting »² messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-message",
+        "https://core.telegram.org/api/business#greeting-message",
+        "https://core.telegram.org/api/business#away-message",
+        "https://core.telegram.org/api/business#greeting-message"
+      ],
       "fields": {
         "contacts": {
           "name": "contacts",
-          "description": " "
+          "description": "All private chats with contacts."
         },
         "exclude_selected": {
           "name": "exclude_selected",
-          "description": " "
+          "description": "If set, inverts the selection."
         },
         "existing_chats": {
           "name": "existing_chats",
-          "description": " "
+          "description": "All existing private chats."
         },
         "flags": {
           "name": "flags",
@@ -5347,33 +5394,49 @@
         },
         "new_chats": {
           "name": "new_chats",
-          "description": " "
+          "description": "All new private chats."
         },
         "non_contacts": {
           "name": "non_contacts",
-          "description": " "
+          "description": "All private chats with non-contacts."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Only private chats with the specified users."
         }
       }
     },
     "businessWeeklyOpen": {
       "name": "businessWeeklyOpen",
+      "description": [
+        "A time interval, indicating the opening hours of a business.",
+        "Note that opening hours specified by the user must be appropriately validated and transformed before uploading them to the server, as specified here »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ],
       "fields": {
         "end_minute": {
           "name": "end_minute",
-          "description": " "
+          "description": "End minute in minutes of the week, 1 to 8*24*60 inclusively (8 and not 7 because this allows to specify intervals that, for example, start on Sunday 21:00 and end on Monday 04:00 (6*24*60+21*60 to 7*24*60+4*60) without passing an invalid end_minute \u003c start_minute). See here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/business#opening-hours"
+          ]
         },
         "start_minute": {
           "name": "start_minute",
-          "description": " "
+          "description": "Start minute in minutes of the week, 0 to 7*24*60 inclusively."
         }
       }
     },
     "businessWorkHours": {
       "name": "businessWorkHours",
+      "description": [
+        "Specifies a set of Telegram Business opening hours¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -5384,15 +5447,28 @@
         },
         "open_now": {
           "name": "open_now",
-          "description": " "
+          "description": "Ignored if set while invoking account.updateBusinessWorkHours¹, only returned by the server in userFull².business_work_hours, indicating whether the business is currently open according to the current time and the values in weekly_open and timezone.",
+          "links": [
+            "https://core.telegram.org/method/account.updateBusinessWorkHours",
+            "https://core.telegram.org/constructor/userFull"
+          ]
         },
         "timezone_id": {
           "name": "timezone_id",
-          "description": " "
+          "description": "An ID of one of the timezones returned by help.getTimezonesList¹.    The timezone ID is contained timezone².id, a human-readable, localized name of the timezone is available in timezone³.name and the timezone⁴.utc_offset field contains the UTC offset in seconds, which may be displayed in hh:mm format by the client together with the human-readable name (i.e. $name UTC -01:00).",
+          "links": [
+            "https://core.telegram.org/method/help.getTimezonesList",
+            "https://core.telegram.org/constructor/timezone",
+            "https://core.telegram.org/constructor/timezone",
+            "https://core.telegram.org/constructor/timezone"
+          ]
         },
         "weekly_open": {
           "name": "weekly_open",
-          "description": " "
+          "description": "A list of time intervals (max 28) represented by businessWeeklyOpen »¹, indicating the opening hours of their business.",
+          "links": [
+            "https://core.telegram.org/constructor/businessWeeklyOpen"
+          ]
         }
       }
     },
@@ -12434,6 +12510,12 @@
     },
     "inputBusinessAwayMessage": {
       "name": "inputBusinessAwayMessage",
+      "description": [
+        "Describes a Telegram Business away message¹, automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -12444,19 +12526,22 @@
         },
         "offline_only": {
           "name": "offline_only",
-          "description": " "
+          "description": "If set, the messages will not be sent if the account was online in the last 10 minutes."
         },
         "recipients": {
           "name": "recipients",
-          "description": " "
+          "description": "Allowed recipients for the away messages."
         },
         "schedule": {
           "name": "schedule",
-          "description": " "
+          "description": "Specifies when should the away messages be sent."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "ID of a quick reply shorcut, containing the away messages to send, see here » for more info¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       }
     },
@@ -12529,18 +12614,27 @@
     },
     "inputBusinessGreetingMessage": {
       "name": "inputBusinessGreetingMessage",
+      "description": [
+        "Describes a Telegram Business greeting¹, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#greeting-messages"
+      ],
       "fields": {
         "no_activity_days": {
           "name": "no_activity_days",
-          "description": " "
+          "description": "The number of days after which a private chat will be considered as inactive; currently, must be one of 7, 14, 21, or 28."
         },
         "recipients": {
           "name": "recipients",
-          "description": " "
+          "description": "Allowed recipients for the greeting messages."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "ID of a quick reply shorcut, containing the greeting messages to send, see here » for more info¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       }
     },
@@ -12570,18 +12664,28 @@
     },
     "inputBusinessRecipients": {
       "name": "inputBusinessRecipients",
+      "description": [
+        "Specifies the chats that can receive Telegram Business away »¹ and greeting »² messages.",
+        "If exclude_selected is set, specifies all chats that cannot receive Telegram Business away »¹ and greeting »² messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-message",
+        "https://core.telegram.org/api/business#greeting-message",
+        "https://core.telegram.org/api/business#away-message",
+        "https://core.telegram.org/api/business#greeting-message"
+      ],
       "fields": {
         "contacts": {
           "name": "contacts",
-          "description": " "
+          "description": "All private chats with contacts."
         },
         "exclude_selected": {
           "name": "exclude_selected",
-          "description": " "
+          "description": "If set, inverts the selection."
         },
         "existing_chats": {
           "name": "existing_chats",
-          "description": " "
+          "description": "All existing private chats."
         },
         "flags": {
           "name": "flags",
@@ -12592,15 +12696,15 @@
         },
         "new_chats": {
           "name": "new_chats",
-          "description": " "
+          "description": "All new private chats."
         },
         "non_contacts": {
           "name": "non_contacts",
-          "description": " "
+          "description": "All private chats with non-contacts."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Only private chats with the specified users."
         }
       }
     },
@@ -38730,10 +38834,18 @@
     },
     "account.updateBusinessLocation": {
       "name": "account.updateBusinessLocation",
+      "description": [
+        "Businesses »¹ may advertise their location using this method, see here »² for more info.",
+        "To remove business location information invoke the method without setting any of the parameters."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#location",
+        "https://core.telegram.org/api/business#location"
+      ],
       "parameters": {
         "address": {
           "name": "address",
-          "description": " "
+          "description": "Mandatory when setting/updating the location, contains a textual description of the address (max 96 UTF-8 chars)."
         },
         "flags": {
           "name": "flags",
@@ -38744,16 +38856,27 @@
         },
         "geo_point": {
           "name": "geo_point",
-          "description": " "
+          "description": "Optional, contains a set of geographical coordinates."
         }
       }
     },
     "account.updateBusinessWorkHours": {
       "name": "account.updateBusinessWorkHours",
+      "description": [
+        "Specify a set of Telegram Business opening hours¹.",
+        "This info will be contained in userFull².business_work_hours.",
+        "To remove all opening hours, invoke the method without setting the business_work_hours field.",
+        "Note that the opening hours specified by the user must be appropriately validated and transformed before invoking the method, as specified here »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours",
+        "https://core.telegram.org/constructor/userFull",
+        "https://core.telegram.org/api/business#opening-hours"
+      ],
       "parameters": {
         "business_work_hours": {
           "name": "business_work_hours",
-          "description": " "
+          "description": "Opening hours (optional, if not set removes all opening hours)."
         },
         "flags": {
           "name": "flags",
@@ -46132,10 +46255,17 @@
     },
     "messages.checkQuickReplyShortcut": {
       "name": "messages.checkQuickReplyShortcut",
+      "description": [
+        "Before offering the user the choice to add a message to a quick reply shortcut¹, to make sure that none of the limits specified here »² were reached."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts",
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "parameters": {
         "shortcut": {
           "name": "shortcut",
-          "description": " "
+          "description": "Shorcut name (not ID!)."
         }
       }
     },
@@ -46531,14 +46661,24 @@
     },
     "messages.deleteQuickReplyMessages": {
       "name": "messages.deleteQuickReplyMessages",
+      "description": [
+        "Delete one or more messages from a quick reply shortcut¹. This will also emit an updateDeleteQuickReplyMessages² update."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts",
+        "https://core.telegram.org/constructor/updateDeleteQuickReplyMessages"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of shortcut messages to delete."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Shortcut ID¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       },
       "errors": [
@@ -46551,10 +46691,22 @@
     },
     "messages.deleteQuickReplyShortcut": {
       "name": "messages.deleteQuickReplyShortcut",
+      "description": [
+        "Completely delete a quick reply shortcut¹.",
+        "This will also emit an updateDeleteQuickReply² update to other logged-in sessions (and no updateDeleteQuickReplyMessages³ updates, even if all the messages in the shortcuts are also deleted by this method)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts",
+        "https://core.telegram.org/constructor/updateDeleteQuickReply",
+        "https://core.telegram.org/constructor/updateDeleteQuickReplyMessages"
+      ],
       "parameters": {
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Shortcut ID¹",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       },
       "errors": [
@@ -47425,14 +47577,25 @@
     },
     "messages.editQuickReplyShortcut": {
       "name": "messages.editQuickReplyShortcut",
+      "description": [
+        "Rename a quick reply shortcut¹.",
+        "This will emit an updateQuickReplies² update to other logged-in sessions."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts",
+        "https://core.telegram.org/constructor/updateQuickReplies"
+      ],
       "parameters": {
         "shortcut": {
           "name": "shortcut",
-          "description": " "
+          "description": "New shortcut name."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Shortcut ID¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       },
       "errors": [
@@ -49730,12 +49893,18 @@
     },
     "messages.getQuickReplies": {
       "name": "messages.getQuickReplies",
+      "description": [
+        "Fetch basic info about all existing quick reply shortcuts¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash for pagination, generated as specified here »¹ (not the usual algorithm used for hash generation.)",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
           ]
         }
       }
@@ -51452,10 +51621,21 @@
     },
     "messages.reorderQuickReplies": {
       "name": "messages.reorderQuickReplies",
+      "description": [
+        "Reorder quick reply shortcuts¹.",
+        "This will emit an updateQuickReplies¹ update to other logged-in sessions."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts",
+        "https://core.telegram.org/constructor/updateQuickReplies"
+      ],
       "parameters": {
         "order": {
           "name": "order",
-          "description": " "
+          "description": "IDs of all created quick reply shortcuts¹, in the desired order.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         }
       }
     },
