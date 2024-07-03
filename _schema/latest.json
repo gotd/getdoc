@@ -37169,10 +37169,18 @@
     },
     "account.disablePeerConnectedBot": {
       "name": "account.disablePeerConnectedBot",
+      "description": [
+        "Permanently disconnect a specific chat from all business bots »¹ (equivalent to specifying it in recipients.exclude_users during initial configuration with account.updateConnectedBot »²); to reconnect of a chat disconnected using this method the user must reconnect the entire bot by invoking account.updateConnectedBot »³."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/method/account.updateConnectedBot",
+        "https://core.telegram.org/method/account.updateConnectedBot"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The chat to disconnect"
         }
       },
       "errors": [
@@ -37295,10 +37303,27 @@
     },
     "account.getBotBusinessConnection": {
       "name": "account.getBotBusinessConnection",
+      "description": [
+        "Bots may invoke this method to re-fetch the updateBotBusinessConnect¹ constructor associated with a specific business connection_id, see here »² for more info on connected business bots.",
+        "This is needed for example for freshly logged in bots that are receiving some updateBotNewBusinessMessage³, etc. updates because some users have already connected to the bot before it could login.",
+        "In this case, the bot is receiving messages from the business connection, but it hasn't cached the associated updateBotBusinessConnect⁴ with info about the connection (can it reply to messages? etc.) yet, and cannot receive the old ones because they were sent when the bot wasn't logged into the session yet.",
+        "This method can be used to fetch info about a not-yet-cached business connection, and should not be invoked if the info is already cached or to fetch changes, as eventual changes will automatically be sent as new updateBotBusinessConnect⁵ updates to the bot using the usual update delivery methods »⁶."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateBotBusinessConnect",
+        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/constructor/updateBotNewBusinessMessage",
+        "https://core.telegram.org/constructor/updateBotBusinessConnect",
+        "https://core.telegram.org/constructor/updateBotBusinessConnect",
+        "https://core.telegram.org/api/updates"
+      ],
       "parameters": {
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Business connection ID »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         }
       },
       "errors": [
@@ -37372,7 +37397,13 @@
       }
     },
     "account.getConnectedBots": {
-      "name": "account.getConnectedBots"
+      "name": "account.getConnectedBots",
+      "description": [
+        "List all currently connected business bots »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "account.getContactSignUpNotification": {
       "name": "account.getContactSignUpNotification",
@@ -38677,14 +38708,20 @@
     },
     "account.toggleConnectedBotPaused": {
       "name": "account.toggleConnectedBotPaused",
+      "description": [
+        "Pause or unpause a specific chat, temporarily disconnecting it from all business bots »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "parameters": {
         "paused": {
           "name": "paused",
-          "description": " "
+          "description": "Whether to pause or unpause the chat"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The chat to pause"
         }
       },
       "errors": [
@@ -38786,6 +38823,12 @@
     },
     "account.updateBusinessAwayMessage": {
       "name": "account.updateBusinessAwayMessage",
+      "description": [
+        "Set a list of Telegram Business away messages¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -38796,12 +38839,18 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Away message configuration and contents."
         }
       }
     },
     "account.updateBusinessGreetingMessage": {
       "name": "account.updateBusinessGreetingMessage",
+      "description": [
+        "Set a list of Telegram Business greeting messages¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#greeting-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -38812,7 +38861,7 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Greeting message configuration and contents."
         }
       }
     },
@@ -38936,18 +38985,27 @@
     },
     "account.updateConnectedBot": {
       "name": "account.updateConnectedBot",
+      "description": [
+        "Connect a business bot »¹ to the current account, or to change the current connection settings."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot to connect or disconnect"
         },
         "can_reply": {
           "name": "can_reply",
-          "description": " "
+          "description": "Whether the bot can reply to messages it receives from us, on behalf of us using the business connection¹.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "deleted": {
           "name": "deleted",
-          "description": " "
+          "description": "Whether to fully disconnect the bot from the current account."
         },
         "flags": {
           "name": "flags",
@@ -38958,7 +39016,7 @@
         },
         "recipients": {
           "name": "recipients",
-          "description": " "
+          "description": "Configuration for the business connection"
         }
       }
     },
@@ -39970,7 +40028,10 @@
         },
         "play_integrity_token": {
           "name": "play_integrity_token",
-          "description": " "
+          "description": "On Android, an object obtained as described in the auth documentation »¹",
+          "links": [
+            "https://core.telegram.org/api/auth"
+          ]
         },
         "safety_net_token": {
           "name": "safety_net_token",
@@ -42725,12 +42786,7 @@
     "channels.inviteToChannel": {
       "name": "channels.inviteToChannel",
       "description": [
-        "Invite users to a channel/supergroup",
-        "May also return 0-N updates of type updateGroupInvitePrivacyForbidden¹: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link² can be shared with the user, instead."
-      ],
-      "links": [
-        "https://core.telegram.org/constructor/updateGroupInvitePrivacyForbidden",
-        "https://core.telegram.org/api/invites"
+        "Invite users to a channel/supergroup"
       ],
       "parameters": {
         "channel": {
@@ -43335,14 +43391,22 @@
     },
     "channels.setEmojiStickers": {
       "name": "channels.setEmojiStickers",
+      "description": [
+        "Set a custom emoji stickerset¹ for supergroups. Only usable after reaching at least the boost level »² specified in the group_emoji_stickers_level_min »³ config parameter."
+      ],
+      "links": [
+        "https://core.telegram.org/api/custom-emoji",
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/config#group-emoji-stickers-level-min"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The supergroup"
         },
         "stickerset": {
           "name": "stickerset",
-          "description": " "
+          "description": "The custom emoji stickerset to associate to the supergroup"
         }
       },
       "errors": [
@@ -45511,6 +45575,12 @@
     },
     "help.getTimezonesList": {
       "name": "help.getTimezonesList",
+      "description": [
+        "Returns timezone information that may be used elsewhere in the API, such as to set Telegram Business opening hours »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
@@ -45702,14 +45772,20 @@
     },
     "invokeWithBusinessConnection": {
       "name": "invokeWithBusinessConnection",
+      "description": [
+        "Invoke a method using a Telegram Business Bot connection, see here »¹, including a list of the methods that can be wrapped in this constructor."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "parameters": {
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Business connection ID."
         },
         "query": {
           "name": "query",
-          "description": " "
+          "description": "The actual query."
         }
       },
       "bot_can_use": true
@@ -46063,12 +46139,7 @@
     "messages.addChatUser": {
       "name": "messages.addChatUser",
       "description": [
-        "Adds a user to a chat and sends a service message on it.",
-        "May also return 0-N updates of type updateGroupInvitePrivacyForbidden¹: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link² can be shared with the user, instead."
-      ],
-      "links": [
-        "https://core.telegram.org/constructor/updateGroupInvitePrivacyForbidden",
-        "https://core.telegram.org/api/invites"
+        "Adds a user to a chat and sends a service message on it."
       ],
       "parameters": {
         "chat_id": {
@@ -46309,12 +46380,7 @@
     "messages.createChat": {
       "name": "messages.createChat",
       "description": [
-        "Creates a new chat.",
-        "May also return 0-N updates of type updateGroupInvitePrivacyForbidden¹: it indicates we couldn't add a user to a chat because of their privacy settings; if required, an invite link² can be shared with the user, instead."
-      ],
-      "links": [
-        "https://core.telegram.org/constructor/updateGroupInvitePrivacyForbidden",
-        "https://core.telegram.org/api/invites"
+        "Creates a new chat."
       ],
       "parameters": {
         "flags": {
@@ -47362,7 +47428,10 @@
         },
         "quick_reply_shortcut_id": {
           "name": "quick_reply_shortcut_id",
-          "description": " "
+          "description": "If specified, edits a quick reply shortcut message, instead »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -47758,7 +47827,10 @@
         },
         "quick_reply_shortcut": {
           "name": "quick_reply_shortcut",
-          "description": " "
+          "description": "Add the messages to the specified quick reply shortcut »¹, instead.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         },
         "random_id": {
           "name": "random_id",
@@ -49911,6 +49983,12 @@
     },
     "messages.getQuickReplyMessages": {
       "name": "messages.getQuickReplyMessages",
+      "description": [
+        "Fetch (a subset or all) messages in a quick reply shortcut »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -49928,11 +50006,11 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of the messages to fetch, if empty fetches all of them."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Quick reply shortcut ID."
         }
       },
       "errors": [
@@ -52951,7 +53029,10 @@
         },
         "quick_reply_shortcut": {
           "name": "quick_reply_shortcut",
-          "description": " "
+          "description": "Add the message to the specified quick reply shortcut »¹, instead.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         },
         "random_id": {
           "name": "random_id",
@@ -53209,7 +53290,10 @@
         },
         "quick_reply_shortcut": {
           "name": "quick_reply_shortcut",
-          "description": " "
+          "description": "Add the message to the specified quick reply shortcut »¹, instead.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         },
         "random_id": {
           "name": "random_id",
@@ -53716,7 +53800,10 @@
         },
         "quick_reply_shortcut": {
           "name": "quick_reply_shortcut",
-          "description": " "
+          "description": "Add the message to the specified quick reply shortcut »¹, instead.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         },
         "random_id": {
           "name": "random_id",
@@ -54077,7 +54164,10 @@
         },
         "quick_reply_shortcut": {
           "name": "quick_reply_shortcut",
-          "description": " "
+          "description": "Add the message to the specified quick reply shortcut »¹, instead.",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
+          ]
         },
         "reply_to": {
           "name": "reply_to",
@@ -54224,22 +54314,28 @@
     },
     "messages.sendQuickReplyMessages": {
       "name": "messages.sendQuickReplyMessages",
+      "description": [
+        "Send a quick reply shortcut »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Specify a subset of messages from the shortcut to send; if empty, defaults to all of them."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where to send the shortcut (users only, for now)."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Unique client IDs required to prevent message resending, one for each message we're sending, may be empty (but not recommended)."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "The ID of the quick reply shortcut to send."
         }
       },
       "errors": [
@@ -56199,7 +56295,10 @@
       "parameters": {
         "business_connection_id": {
           "name": "business_connection_id",
-          "description": " "
+          "description": "Whether the media will be used only in the specified business connection »¹, and not directly by the bot.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -58375,10 +58474,13 @@
     },
     "smsjobs.finishJob": {
       "name": "smsjobs.finishJob",
+      "description": [
+        "Finish an SMS job (official clients only)."
+      ],
       "parameters": {
         "error": {
           "name": "error",
-          "description": " "
+          "description": "If failed, the error."
         },
         "flags": {
           "name": "flags",
@@ -58389,7 +58491,7 @@
         },
         "job_id": {
           "name": "job_id",
-          "description": " "
+          "description": "Job ID."
         }
       },
       "errors": [
@@ -58402,6 +58504,9 @@
     },
     "smsjobs.getSmsJob": {
       "name": "smsjobs.getSmsJob",
+      "description": [
+        "Get info about an SMS job (official clients only)."
+      ],
       "parameters": {
         "job_id": {
           "name": "job_id",
@@ -58418,6 +58523,9 @@
     },
     "smsjobs.getStatus": {
       "name": "smsjobs.getStatus",
+      "description": [
+        "Get SMS jobs status (official clients only)."
+      ],
       "parameters": {
         "400": {
           "name": "400",
@@ -58434,6 +58542,9 @@
     },
     "smsjobs.isEligibleToJoin": {
       "name": "smsjobs.isEligibleToJoin",
+      "description": [
+        "Check if we can process SMS jobs (official clients only)."
+      ],
       "parameters": {
         "403": {
           "name": "403",
@@ -58450,6 +58561,9 @@
     },
     "smsjobs.join": {
       "name": "smsjobs.join",
+      "description": [
+        "Enable SMS jobs (official clients only)."
+      ],
       "parameters": {
         "400": {
           "name": "400",
@@ -58466,6 +58580,9 @@
     },
     "smsjobs.leave": {
       "name": "smsjobs.leave",
+      "description": [
+        "Disable SMS jobs (official clients only)."
+      ],
       "parameters": {
         "400": {
           "name": "400",
@@ -58482,10 +58599,13 @@
     },
     "smsjobs.updateSettings": {
       "name": "smsjobs.updateSettings",
+      "description": [
+        "Update SMS job settings (official clients only)."
+      ],
       "parameters": {
         "allow_international": {
           "name": "allow_international",
-          "description": " "
+          "description": "Allow international numbers?"
         },
         "flags": {
           "name": "flags",
