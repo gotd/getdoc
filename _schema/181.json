@@ -2661,14 +2661,20 @@
     },
     "account.connectedBots": {
       "name": "account.connectedBots",
+      "description": [
+        "Info about currently connected business bots¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "connected_bots": {
           "name": "connected_bots",
-          "description": " "
+          "description": "Info about the connected bots"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Bot information"
         }
       }
     },
@@ -3878,10 +3884,13 @@
     },
     "auth.sentCodeTypeSmsPhrase": {
       "name": "auth.sentCodeTypeSmsPhrase",
+      "description": [
+        "The code was sent via SMS as a secret phrase starting with the word specified in beginning,"
+      ],
       "fields": {
         "beginning": {
           "name": "beginning",
-          "description": " "
+          "description": "The secret phrase (and the SMS) starts with this word."
         },
         "flags": {
           "name": "flags",
@@ -3894,10 +3903,13 @@
     },
     "auth.sentCodeTypeSmsWord": {
       "name": "auth.sentCodeTypeSmsWord",
+      "description": [
+        "The code was sent via SMS as a secret word, starting with the letter specified in beginning"
+      ],
       "fields": {
         "beginning": {
           "name": "beginning",
-          "description": " "
+          "description": "The secret word in the sent SMS (which may contain multiple words) starts with this letter."
         },
         "flags": {
           "name": "flags",
@@ -4419,26 +4431,39 @@
     },
     "botBusinessConnection": {
       "name": "botBusinessConnection",
+      "description": [
+        "Contains info about a bot business connection¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "can_reply": {
           "name": "can_reply",
-          "description": " "
+          "description": "Whether the bot can reply on behalf of the user to messages it receives through the business connection"
         },
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Business connection ID, used to identify messages coming from the connection and to reply to them as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the connection created."
         },
         "dc_id": {
           "name": "dc_id",
-          "description": " "
+          "description": "ID of the datacenter where to send queries wrapped in a invokeWithBusinessConnection¹ as specified here »².",
+          "links": [
+            "https://core.telegram.org/method/invokeWithBusinessConnection",
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "disabled": {
           "name": "disabled",
-          "description": " "
+          "description": "Whether this business connection is currently disabled"
         },
         "flags": {
           "name": "flags",
@@ -4449,7 +4474,7 @@
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that the bot is connected to via this connection."
         }
       }
     },
@@ -5217,22 +5242,28 @@
     },
     "businessBotRecipients": {
       "name": "businessBotRecipients",
+      "description": [
+        "Specifies the private chats that a connected business bot »¹ may receive messages and interact with."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "contacts": {
           "name": "contacts",
-          "description": " "
+          "description": "Selects all private chats with contacts."
         },
         "exclude_selected": {
           "name": "exclude_selected",
-          "description": " "
+          "description": "If set, then all private chats except the selected ones are chosen. Otherwise, only the selected chats are chosen."
         },
         "exclude_users": {
           "name": "exclude_users",
-          "description": " "
+          "description": "Identifiers of private chats that are always excluded."
         },
         "existing_chats": {
           "name": "existing_chats",
-          "description": " "
+          "description": "Selects all existing private chats."
         },
         "flags": {
           "name": "flags",
@@ -5243,15 +5274,15 @@
         },
         "new_chats": {
           "name": "new_chats",
-          "description": " "
+          "description": "Selects all new private chats."
         },
         "non_contacts": {
           "name": "non_contacts",
-          "description": " "
+          "description": "Selects all private chats with non-contacts."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Explicitly selected private chats."
         }
       }
     },
@@ -5342,10 +5373,16 @@
     },
     "businessLocation": {
       "name": "businessLocation",
+      "description": [
+        "Represents the location of a Telegram Business »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#location"
+      ],
       "fields": {
         "address": {
           "name": "address",
-          "description": " "
+          "description": "Textual description of the address (mandatory)."
         },
         "flags": {
           "name": "flags",
@@ -5356,7 +5393,7 @@
         },
         "geo_point": {
           "name": "geo_point",
-          "description": " "
+          "description": "Geographical coordinates (optional)."
         }
       }
     },
@@ -5827,14 +5864,20 @@
     },
     "channelAdminLogEventActionChangeEmojiStickerSet": {
       "name": "channelAdminLogEventActionChangeEmojiStickerSet",
+      "description": [
+        "The supergroup's custom emoji stickerset¹ was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost#setting-a-custom-emoji-stickerset-for-supergroups"
+      ],
       "fields": {
         "new_stickerset": {
           "name": "new_stickerset",
-          "description": " "
+          "description": "New value"
         },
         "prev_stickerset": {
           "name": "prev_stickerset",
-          "description": " "
+          "description": "Old value"
         }
       }
     },
@@ -8874,14 +8917,20 @@
     },
     "connectedBot": {
       "name": "connectedBot",
+      "description": [
+        "Contains info about a connected business bot »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "ID of the connected bot"
         },
         "can_reply": {
           "name": "can_reply",
-          "description": " "
+          "description": "Whether the the bot can reply to messages it receives through the connection"
         },
         "flags": {
           "name": "flags",
@@ -8892,7 +8941,10 @@
         },
         "recipients": {
           "name": "recipients",
-          "description": " "
+          "description": "Specifies the private chats that a connected business bot »¹ may receive messages and interact with.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         }
       }
     },
@@ -8914,10 +8966,13 @@
     },
     "contactBirthday": {
       "name": "contactBirthday",
+      "description": [
+        "Birthday information of a contact."
+      ],
       "fields": {
         "birthday": {
           "name": "birthday",
-          "description": " "
+          "description": "Birthday information."
         },
         "contact_id": {
           "name": "contact_id",
@@ -8987,14 +9042,17 @@
     },
     "contacts.contactBirthdays": {
       "name": "contacts.contactBirthdays",
+      "description": [
+        "Birthday information of our contacts."
+      ],
       "fields": {
         "contacts": {
           "name": "contacts",
-          "description": " "
+          "description": "Birthday info"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "User information"
         }
       }
     },
@@ -11775,6 +11833,12 @@
     },
     "help.timezonesList": {
       "name": "help.timezonesList",
+      "description": [
+        "Timezone information that may be used elsewhere in the API, such as to set Telegram Business opening hours »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ],
       "fields": {
         "hash": {
           "name": "hash",
@@ -11785,12 +11849,15 @@
         },
         "timezones": {
           "name": "timezones",
-          "description": " "
+          "description": "Timezones"
         }
       }
     },
     "help.timezonesListNotModified": {
-      "name": "help.timezonesListNotModified"
+      "name": "help.timezonesListNotModified",
+      "description": [
+        "The timezone list has not changed."
+      ]
     },
     "help.userInfo": {
       "name": "help.userInfo",
@@ -12547,22 +12614,28 @@
     },
     "inputBusinessBotRecipients": {
       "name": "inputBusinessBotRecipients",
+      "description": [
+        "Specifies the private chats that a connected business bot »¹ may interact with."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "contacts": {
           "name": "contacts",
-          "description": " "
+          "description": "Selects all private chats with contacts."
         },
         "exclude_selected": {
           "name": "exclude_selected",
-          "description": " "
+          "description": "If set, then all private chats except the selected ones are chosen. Otherwise, only the selected chats are chosen."
         },
         "exclude_users": {
           "name": "exclude_users",
-          "description": " "
+          "description": "Identifiers of private chats that are always excluded."
         },
         "existing_chats": {
           "name": "existing_chats",
-          "description": " "
+          "description": "Selects all existing private chats."
         },
         "flags": {
           "name": "flags",
@@ -12573,15 +12646,15 @@
         },
         "new_chats": {
           "name": "new_chats",
-          "description": " "
+          "description": "Selects all new private chats."
         },
         "non_contacts": {
           "name": "non_contacts",
-          "description": " "
+          "description": "Selects all private chats with non-contacts."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Explicitly selected private chats."
         }
       }
     },
@@ -14851,19 +14924,31 @@
     },
     "inputQuickReplyShortcut": {
       "name": "inputQuickReplyShortcut",
+      "description": [
+        "Selects a quick reply shortcut¹ by name."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcut"
+      ],
       "fields": {
         "shortcut": {
           "name": "shortcut",
-          "description": " "
+          "description": "Shortcut name."
         }
       }
     },
     "inputQuickReplyShortcutId": {
       "name": "inputQuickReplyShortcutId",
+      "description": [
+        "Selects a quick reply shortcut¹ by its numeric ID."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcut"
+      ],
       "fields": {
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Shortcut ID."
         }
       }
     },
@@ -14923,7 +15008,7 @@
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Sender of the story"
         },
         "story_id": {
           "name": "story_id",
@@ -16750,7 +16835,10 @@
         },
         "flags2": {
           "name": "flags2",
-          "description": " "
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
         },
         "forwards": {
           "name": "forwards",
@@ -16854,7 +16942,10 @@
         },
         "quick_reply_shortcut_id": {
           "name": "quick_reply_shortcut_id",
-          "description": " "
+          "description": "If set, this message is a quick reply shortcut message »¹ (note that quick reply shortcut messages sent to a private chat will not have this field set).",
+          "links": [
+            "https://core.telegram.org/api/business#quick-reply-shortcut"
+          ]
         },
         "reactions": {
           "name": "reactions",
@@ -16901,7 +16992,10 @@
         },
         "via_business_bot_id": {
           "name": "via_business_bot_id",
-          "description": " "
+          "description": "Whether the message was sent by the business bot¹ specified in via_bot_id on behalf of the user.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "views": {
           "name": "views",
@@ -17832,7 +17926,7 @@
       "fields": {
         "collapsed": {
           "name": "collapsed",
-          "description": " "
+          "description": "Whether the quote is collapsed by default."
         },
         "flags": {
           "name": "flags",
@@ -19102,7 +19196,10 @@
         },
         "reactions_as_tags": {
           "name": "reactions_as_tags",
-          "description": " "
+          "description": "If set or if there are no reactions, all present and future reactions should be treated as message tags, see here » for more info¹.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages#tags"
+          ]
         },
         "recent_reactions": {
           "name": "recent_reactions",
@@ -19257,7 +19354,7 @@
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Sender of the story."
         },
         "story_id": {
           "name": "story_id",
@@ -20341,14 +20438,20 @@
     },
     "messages.invitedUsers": {
       "name": "messages.invitedUsers",
+      "description": [
+        "Contains info about successfully or unsuccessfully invited »¹ users."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#direct-invites"
+      ],
       "fields": {
         "missing_invitees": {
           "name": "missing_invitees",
-          "description": " "
+          "description": "A list of users that could not be invited, along with the reason why they couldn't be invited."
         },
         "updates": {
           "name": "updates",
-          "description": " "
+          "description": "List of updates about successfully invited users (and eventually info about the created group)"
         }
       }
     },
@@ -20573,27 +20676,39 @@
     },
     "messages.quickReplies": {
       "name": "messages.quickReplies",
+      "description": [
+        "Info about quick reply shortcuts »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "messages": {
           "name": "messages",
-          "description": " "
+          "description": "Messages mentioned in quick_replies."
         },
         "quick_replies": {
           "name": "quick_replies",
-          "description": " "
+          "description": "Quick reply shortcuts."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "messages.quickRepliesNotModified": {
-      "name": "messages.quickRepliesNotModified"
+      "name": "messages.quickRepliesNotModified",
+      "description": [
+        "Info about quick reply shortcuts »¹ hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ]
     },
     "messages.reactions": {
       "name": "messages.reactions",
@@ -20762,6 +20877,12 @@
     },
     "messages.savedReactionTags": {
       "name": "messages.savedReactionTags",
+      "description": [
+        "List of reaction tag »¹ names assigned by the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ],
       "fields": {
         "hash": {
           "name": "hash",
@@ -20772,12 +20893,18 @@
         },
         "tags": {
           "name": "tags",
-          "description": " "
+          "description": "Saved reaction tags."
         }
       }
     },
     "messages.savedReactionTagsNotModified": {
-      "name": "messages.savedReactionTagsNotModified"
+      "name": "messages.savedReactionTagsNotModified",
+      "description": [
+        "The list of reaction tag »¹ names assigned by the user hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ]
     },
     "messages.searchCounter": {
       "name": "messages.searchCounter",
@@ -21146,6 +21273,12 @@
     },
     "missingInvitee": {
       "name": "missingInvitee",
+      "description": [
+        "Info about why a specific user could not be invited »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#direct-invites"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -21156,15 +21289,24 @@
         },
         "premium_required_for_pm": {
           "name": "premium_required_for_pm",
-          "description": " "
+          "description": "If set, we could not add the user because of their privacy settings, and additionally, the current account needs to purchase a Telegram Premium¹ subscription to directly share an invite link with the user via a private message.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "premium_would_allow_invite": {
           "name": "premium_would_allow_invite",
-          "description": " "
+          "description": "If set, we could not add the user only because the current account needs to purchase a Telegram Premium¹ subscription to complete the operation.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user. If neither of the flags below are set, we could not add the user because of their privacy settings, and we can create and directly share an invite link¹ with them using a normal message, instead.",
+          "links": [
+            "https://core.telegram.org#invite-links"
+          ]
         }
       }
     },
@@ -22953,19 +23095,33 @@
         },
         "business_bot_can_reply": {
           "name": "business_bot_can_reply",
-          "description": " "
+          "description": "This flag is set if both business_bot_id and business_bot_manage_url are set and connected business bots »¹ can reply to messages in this chat, as specified by the settings during initial configuration².",
+          "links": [
+            "https://core.telegram.org/api/business#connected-business-bots",
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "business_bot_id": {
           "name": "business_bot_id",
-          "description": " "
+          "description": "Contains the ID of the business bot »¹ managing this chat, used to display info about the bot in the action bar.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "business_bot_manage_url": {
           "name": "business_bot_manage_url",
-          "description": " "
+          "description": "Contains a deep link »¹, used to open a management menu in the business bot. This flag is set if and only if business_bot_id is set.",
+          "links": [
+            "https://core.telegram.org/api/links"
+          ]
         },
         "business_bot_paused": {
           "name": "business_bot_paused",
-          "description": " "
+          "description": "This flag is set if both business_bot_id and business_bot_manage_url are set and all connected business bots »¹ were paused in this chat using account.toggleConnectedBotPaused »².",
+          "links": [
+            "https://core.telegram.org/api/business#connected-business-bots",
+            "https://core.telegram.org/method/account.toggleConnectedBotPaused"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -24637,22 +24793,28 @@
     },
     "quickReply": {
       "name": "quickReply",
+      "description": [
+        "A quick reply shortcut¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of messages in the shortcut."
         },
         "shortcut": {
           "name": "shortcut",
-          "description": " "
+          "description": "Shortcut name."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Unique shortcut ID."
         },
         "top_message": {
           "name": "top_message",
-          "description": " "
+          "description": "ID of the last message in the shortcut."
         }
       }
     },
@@ -25225,10 +25387,16 @@
     },
     "savedReactionTag": {
       "name": "savedReactionTag",
+      "description": [
+        "Info about a saved message reaction tag »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Number of messages tagged with this tag."
         },
         "flags": {
           "name": "flags",
@@ -25239,11 +25407,14 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "Reaction¹ associated to the tag.",
+          "links": [
+            "https://core.telegram.org/api/reactions"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Custom tag name assigned by the user (max 12 UTF-8 chars)."
         }
       }
     },
@@ -26168,40 +26339,49 @@
     },
     "smsJob": {
       "name": "smsJob",
+      "description": [
+        "Info about an SMS job."
+      ],
       "fields": {
         "job_id": {
           "name": "job_id",
-          "description": " "
+          "description": "Job ID"
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Destination phone number"
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Text"
         }
       }
     },
     "smsjobs.eligibleToJoin": {
       "name": "smsjobs.eligibleToJoin",
+      "description": [
+        "SMS jobs eligibility"
+      ],
       "fields": {
         "monthly_sent_sms": {
           "name": "monthly_sent_sms",
-          "description": " "
+          "description": "Monthly sent SMSes"
         },
         "terms_url": {
           "name": "terms_url",
-          "description": " "
+          "description": "Terms of service URL"
         }
       }
     },
     "smsjobs.status": {
       "name": "smsjobs.status",
+      "description": [
+        "Status"
+      ],
       "fields": {
         "allow_international": {
           "name": "allow_international",
-          "description": " "
+          "description": "Allow international numbers"
         },
         "flags": {
           "name": "flags",
@@ -26212,31 +26392,31 @@
         },
         "last_gift_slug": {
           "name": "last_gift_slug",
-          "description": " "
+          "description": "Last gift deep link"
         },
         "recent_remains": {
           "name": "recent_remains",
-          "description": " "
+          "description": "Remaining"
         },
         "recent_sent": {
           "name": "recent_sent",
-          "description": " "
+          "description": "Recently sent"
         },
         "recent_since": {
           "name": "recent_since",
-          "description": " "
+          "description": "Since"
         },
         "terms_url": {
           "name": "terms_url",
-          "description": " "
+          "description": "Terms of service URL"
         },
         "total_sent": {
           "name": "total_sent",
-          "description": " "
+          "description": "Total sent"
         },
         "total_since": {
           "name": "total_since",
-          "description": " "
+          "description": "Total since"
         }
       }
     },
@@ -26988,7 +27168,7 @@
         },
         "creator": {
           "name": "creator",
-          "description": " "
+          "description": "Whether we created this stickerset"
         },
         "emojis": {
           "name": "emojis",
@@ -27332,7 +27512,7 @@
         },
         "pinned_to_top": {
           "name": "pinned_to_top",
-          "description": " "
+          "description": "IDs of pinned stories."
         },
         "stories": {
           "name": "stories",
@@ -27563,7 +27743,7 @@
         },
         "from_id": {
           "name": "from_id",
-          "description": " "
+          "description": "Sender of the story."
         },
         "fwd_from": {
           "name": "fwd_from",
@@ -28232,18 +28412,21 @@
     },
     "timezone": {
       "name": "timezone",
+      "description": [
+        "Timezone information."
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Unique timezone ID."
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "Human-readable and localized timezone name."
         },
         "utc_offset": {
           "name": "utc_offset",
-          "description": " "
+          "description": "UTC offset in seconds, which may be displayed in hh:mm format by the client together with the human-readable name (i.e. $name UTC -01:00)."
         }
       }
     },
@@ -29526,23 +29709,36 @@
     },
     "updateDeleteQuickReply": {
       "name": "updateDeleteQuickReply",
+      "description": [
+        "A quick reply shortcut »¹ was deleted. This will not emit updateDeleteQuickReplyMessages² updates, even if all the messages in the shortcut are also deleted by this update."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts",
+        "https://core.telegram.org/constructor/updateDeleteQuickReplyMessages"
+      ],
       "fields": {
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "ID of the quick reply shortcut that was deleted."
         }
       }
     },
     "updateDeleteQuickReplyMessages": {
       "name": "updateDeleteQuickReplyMessages",
+      "description": [
+        "One or more messages in a quick reply shortcut »¹ were deleted."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "fields": {
         "messages": {
           "name": "messages",
-          "description": " "
+          "description": "IDs of the deleted messages."
         },
         "shortcut_id": {
           "name": "shortcut_id",
-          "description": " "
+          "description": "Quick reply shortcut ID."
         }
       }
     },
@@ -30284,10 +30480,16 @@
     },
     "updateNewQuickReply": {
       "name": "updateNewQuickReply",
+      "description": [
+        "A new quick reply shortcut »¹ was created."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "fields": {
         "quick_reply": {
           "name": "quick_reply",
-          "description": " "
+          "description": "Quick reply shortcut."
         }
       }
     },
@@ -30681,19 +30883,34 @@
     },
     "updateQuickReplies": {
       "name": "updateQuickReplies",
+      "description": [
+        "Info about or the order of quick reply shortcuts »¹ was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "fields": {
         "quick_replies": {
           "name": "quick_replies",
-          "description": " "
+          "description": "New quick reply shortcut order and information."
         }
       }
     },
     "updateQuickReplyMessage": {
       "name": "updateQuickReplyMessage",
+      "description": [
+        "A new message was added to a quick reply shortcut »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ],
       "fields": {
         "message": {
           "name": "message",
-          "description": " "
+          "description": "The message that was added (the message¹.quick_reply_shortcut_id field will contain the shortcut ID).",
+          "links": [
+            "https://core.telegram.org/constructor/message"
+          ]
         }
       }
     },
@@ -45773,10 +45990,12 @@
     "invokeWithBusinessConnection": {
       "name": "invokeWithBusinessConnection",
       "description": [
-        "Invoke a method using a Telegram Business Bot connection, see here »¹, including a list of the methods that can be wrapped in this constructor."
+        "Invoke a method using a Telegram Business Bot connection, see here » for more info, including a list of the methods that can be wrapped in this constructor¹.",
+        "Make sure to always send queries wrapped in a invokeWithBusinessConnection to the datacenter ID, specified in the dc_id field of the botBusinessConnection¹ that is being used."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/constructor/botBusinessConnection"
       ],
       "parameters": {
         "connection_id": {
