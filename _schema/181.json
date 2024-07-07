@@ -2644,18 +2644,24 @@
     },
     "account.businessChatLinks": {
       "name": "account.businessChatLinks",
+      "description": [
+        "Contains info about business chat deep links »¹ created by the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "links": {
           "name": "links",
-          "description": " "
+          "description": "Links"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
@@ -2986,10 +2992,16 @@
     },
     "account.resolvedBusinessChatLinks": {
       "name": "account.resolvedBusinessChatLinks",
+      "description": [
+        "Contains info about a single resolved business chat deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "entities": {
           "name": "entities",
@@ -3007,15 +3019,15 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message to pre-fill in the message input field."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Destination peer"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
@@ -4262,10 +4274,18 @@
     },
     "birthday": {
       "name": "birthday",
+      "description": [
+        "Birthday¹ information for a user.",
+        "Also used to invite users to gift Telegram Premium subscriptions »¹ to other users with birthdays within a +1/-1 day time range, related to the current day."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#birthday",
+        "https://core.telegram.org/api/premium#gifting-telegram-premium"
+      ],
       "fields": {
         "day": {
           "name": "day",
-          "description": " "
+          "description": "Birth day"
         },
         "flags": {
           "name": "flags",
@@ -4276,11 +4296,11 @@
         },
         "month": {
           "name": "month",
-          "description": " "
+          "description": "Birth month"
         },
         "year": {
           "name": "year",
-          "description": " "
+          "description": "(Optional) birth year."
         }
       }
     },
@@ -5255,7 +5275,7 @@
         },
         "exclude_selected": {
           "name": "exclude_selected",
-          "description": "If set, then all private chats except the selected ones are chosen. Otherwise, only the selected chats are chosen."
+          "description": "If set, then all private chats except the ones selected by existing_chats, new_chats, contacts, non_contacts and users are chosen. Note that if this flag is set, any values passed in exclude_users will be merged and moved into users by the server, thus exclude_users will always be empty."
         },
         "exclude_users": {
           "name": "exclude_users",
@@ -5288,6 +5308,12 @@
     },
     "businessChatLink": {
       "name": "businessChatLink",
+      "description": [
+        "Contains info about a business chat deep link »¹ created by the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "fields": {
         "entities": {
           "name": "entities",
@@ -5305,19 +5331,22 @@
         },
         "link": {
           "name": "link",
-          "description": " "
+          "description": "Business chat deep link¹.",
+          "links": [
+            "https://core.telegram.org/api/links#business-chat-links"
+          ]
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message to pre-fill in the message input field."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Human-readable name of the link, to simplify management in the UI (only visible to the creator of the link)."
         },
         "views": {
           "name": "views",
-          "description": " "
+          "description": "Number of times the link was resolved (clicked/scanned/etc...)."
         }
       }
     },
@@ -8976,7 +9005,7 @@
         },
         "contact_id": {
           "name": "contact_id",
-          "description": " "
+          "description": "User ID."
         }
       }
     },
@@ -12627,7 +12656,7 @@
         },
         "exclude_selected": {
           "name": "exclude_selected",
-          "description": "If set, then all private chats except the selected ones are chosen. Otherwise, only the selected chats are chosen."
+          "description": "If set, then all private chats except the ones selected by existing_chats, new_chats, contacts, non_contacts and users are chosen. Note that if this flag is set, any values passed in exclude_users will be merged and moved into users by the server."
         },
         "exclude_users": {
           "name": "exclude_users",
@@ -12660,6 +12689,12 @@
     },
     "inputBusinessChatLink": {
       "name": "inputBusinessChatLink",
+      "description": [
+        "Contains info about a business chat deep link »¹ to be created by the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "fields": {
         "entities": {
           "name": "entities",
@@ -12677,11 +12712,11 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message to pre-fill in the message input field."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Human-readable name of the link, to simplify management in the UI (only visible to the creator of the link)."
         }
       }
     },
@@ -14781,7 +14816,10 @@
       ]
     },
     "inputPrivacyKeyBirthday": {
-      "name": "inputPrivacyKeyBirthday"
+      "name": "inputPrivacyKeyBirthday",
+      "description": [
+        "Whether the user can see our birthday."
+      ]
     },
     "inputPrivacyKeyChatInvite": {
       "name": "inputPrivacyKeyChatInvite",
@@ -17005,10 +17043,19 @@
     },
     "messageActionBoostApply": {
       "name": "messageActionBoostApply",
+      "description": [
+        "Some boosts »¹ were applied to the channel or supergroup."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost"
+      ],
       "fields": {
         "boosts": {
           "name": "boosts",
-          "description": " "
+          "description": "Number of applied boosts¹.",
+          "links": [
+            "https://core.telegram.org/api/boost"
+          ]
         }
       }
     },
@@ -24616,7 +24663,10 @@
       ]
     },
     "privacyKeyBirthday": {
-      "name": "privacyKeyBirthday"
+      "name": "privacyKeyBirthday",
+      "description": [
+        "Whether the user can see our birthday."
+      ]
     },
     "privacyKeyChatInvite": {
       "name": "privacyKeyChatInvite",
@@ -31272,7 +31322,14 @@
       ]
     },
     "updateSavedReactionTags": {
-      "name": "updateSavedReactionTags"
+      "name": "updateSavedReactionTags",
+      "description": [
+        "The list of reaction tag »¹ names assigned by the user has changed and should be refetched using messages.getSavedReactionTags »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags",
+        "https://core.telegram.org/method/messages.getSavedReactionTags"
+      ]
     },
     "updateSavedRingtones": {
       "name": "updateSavedRingtones",
@@ -31802,9 +31859,11 @@
     "updateUser": {
       "name": "updateUser",
       "description": [
-        "User information was updated, it must be refetched using users.getFullUser¹."
+        "User (user¹ and/or userFull²) information was updated, it must be refetched using users.getFullUser³."
       ],
       "links": [
+        "https://core.telegram.org/constructor/user",
+        "https://core.telegram.org/constructor/userFull",
         "https://core.telegram.org/method/users.getFullUser"
       ],
       "fields": {
@@ -32787,11 +32846,19 @@
         },
         "personal_channel_id": {
           "name": "personal_channel_id",
-          "description": " "
+          "description": "ID of the associated personal channel »¹, that should be shown in the profile page².",
+          "links": [
+            "https://core.telegram.org/api/channel",
+            "https://core.telegram.org/api/profile#personal-channel"
+          ]
         },
         "personal_channel_message": {
           "name": "personal_channel_message",
-          "description": " "
+          "description": "ID of the latest message of the associated personal channel »¹, that should be previewed in the profile page².",
+          "links": [
+            "https://core.telegram.org/api/channel",
+            "https://core.telegram.org/api/profile#personal-channel"
+          ]
         },
         "personal_photo": {
           "name": "personal_photo",
@@ -37232,10 +37299,16 @@
     },
     "account.createBusinessChatLink": {
       "name": "account.createBusinessChatLink",
+      "description": [
+        "Create a business chat deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "parameters": {
         "link": {
           "name": "link",
-          "description": " "
+          "description": "Info about the link to create."
         }
       }
     },
@@ -37354,10 +37427,19 @@
     },
     "account.deleteBusinessChatLink": {
       "name": "account.deleteBusinessChatLink",
+      "description": [
+        "Delete a business chat deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "parameters": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Slug of the link, obtained as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#business-chat-links"
+          ]
         }
       },
       "errors": [
@@ -37410,14 +37492,23 @@
     },
     "account.editBusinessChatLink": {
       "name": "account.editBusinessChatLink",
+      "description": [
+        "Edit a created business chat deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "parameters": {
         "link": {
           "name": "link",
-          "description": " "
+          "description": "New link information."
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Slug of the link, obtained as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#business-chat-links"
+          ]
         }
       },
       "errors": [
@@ -37553,7 +37644,13 @@
       "bot_can_use": true
     },
     "account.getBusinessChatLinks": {
-      "name": "account.getBusinessChatLinks"
+      "name": "account.getBusinessChatLinks",
+      "description": [
+        "List all created business chat deep links »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ]
     },
     "account.getChannelDefaultEmojiStatuses": {
       "name": "account.getChannelDefaultEmojiStatuses",
@@ -38450,10 +38547,19 @@
     },
     "account.resolveBusinessChatLink": {
       "name": "account.resolveBusinessChatLink",
+      "description": [
+        "Resolve a business chat deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ],
       "parameters": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Slug of the link, obtained as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#business-chat-links"
+          ]
         }
       },
       "errors": [
@@ -39024,10 +39130,16 @@
     },
     "account.updateBirthday": {
       "name": "account.updateBirthday",
+      "description": [
+        "Update our birthday, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#birthday"
+      ],
       "parameters": {
         "birthday": {
           "name": "birthday",
-          "description": " "
+          "description": "Birthday."
         },
         "flags": {
           "name": "flags",
@@ -39394,10 +39506,22 @@
     },
     "account.updatePersonalChannel": {
       "name": "account.updatePersonalChannel",
+      "description": [
+        "Associate (or remove) a personal channel »¹, that will be listed on our personal profile page »².",
+        "Changing it will emit an updateUser¹ update."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/api/profile#personal-channel",
+        "https://core.telegram.org/constructor/updateUser"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel, pass inputChannelEmpty¹ to remove it.",
+          "links": [
+            "https://core.telegram.org/constructor/inputChannelEmpty"
+          ]
         }
       }
     },
@@ -44913,7 +45037,15 @@
       ]
     },
     "contacts.getBirthdays": {
-      "name": "contacts.getBirthdays"
+      "name": "contacts.getBirthdays",
+      "description": [
+        "Fetch all users with birthdays that fall within +1/-1 days, relative to the current day: this method should be invoked by clients every 6-8 hours, and if the result is non-empty, it should be used to appropriately update locally cached birthday information in user¹.birthday.",
+        "See here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/user",
+        "https://core.telegram.org/api/profile#birthday"
+      ]
     },
     "contacts.getBlocked": {
       "name": "contacts.getBlocked",
@@ -59621,14 +59753,20 @@
     },
     "stickers.replaceSticker": {
       "name": "stickers.replaceSticker",
+      "description": [
+        "Replace a sticker in a stickerset »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers"
+      ],
       "parameters": {
         "new_sticker": {
           "name": "new_sticker",
-          "description": " "
+          "description": "New sticker."
         },
         "sticker": {
           "name": "sticker",
-          "description": " "
+          "description": "Old sticker document."
         }
       },
       "errors": [
