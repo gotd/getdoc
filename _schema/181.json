@@ -5378,10 +5378,16 @@
     },
     "businessIntro": {
       "name": "businessIntro",
+      "description": [
+        "Telegram Business introduction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-introduction"
+      ],
       "fields": {
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Profile introduction"
         },
         "flags": {
           "name": "flags",
@@ -5392,11 +5398,14 @@
         },
         "sticker": {
           "name": "sticker",
-          "description": " "
+          "description": "Optional introduction sticker¹.",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title of the introduction message"
         }
       }
     },
@@ -12748,10 +12757,16 @@
     },
     "inputBusinessIntro": {
       "name": "inputBusinessIntro",
+      "description": [
+        "Telegram Business introduction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-introduction"
+      ],
       "fields": {
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Profile introduction"
         },
         "flags": {
           "name": "flags",
@@ -12762,11 +12777,14 @@
         },
         "sticker": {
           "name": "sticker",
-          "description": " "
+          "description": "Optional introduction sticker¹.",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title of the introduction message"
         }
       }
     },
@@ -24128,7 +24146,11 @@
         },
         "question": {
           "name": "question",
-          "description": "The question of the poll"
+          "description": "The question of the poll (Premium¹ users only, only custom emoji entities² are supported).",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "quiz": {
           "name": "quiz",
@@ -24151,7 +24173,11 @@
         },
         "text": {
           "name": "text",
-          "description": "Textual representation of the answer"
+          "description": "Textual representation of the answer (Premium¹ users only, only custom emoji entities² are supported).",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
@@ -28597,14 +28623,24 @@
     },
     "updateBotBusinessConnect": {
       "name": "updateBotBusinessConnect",
+      "description": [
+        "Connecting or disconnecting a business bot¹ or changing the connection settings will emit an updateBotBusinessConnect² update to the bot, with the new settings and a connection_id that will be used by the bot to handle updates from and send messages as the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/constructor/updateBotBusinessConnect"
+      ],
       "fields": {
         "connection": {
           "name": "connection",
-          "description": " "
+          "description": "Business connection settings"
         },
         "qts": {
           "name": "qts",
-          "description": " "
+          "description": "New qts value, see updates »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         }
       }
     },
@@ -28746,31 +28782,49 @@
     },
     "updateBotDeleteBusinessMessage": {
       "name": "updateBotDeleteBusinessMessage",
+      "description": [
+        "A message was deleted in a connected business chat »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Business connection ID."
         },
         "messages": {
           "name": "messages",
-          "description": " "
+          "description": "IDs of the messages that were deleted."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer¹ where the messages were deleted.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "qts": {
           "name": "qts",
-          "description": " "
+          "description": "New qts value, see updates »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         }
       }
     },
     "updateBotEditBusinessMessage": {
       "name": "updateBotEditBusinessMessage",
+      "description": [
+        "A message was edited in a connected business chat »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Business connection ID"
         },
         "flags": {
           "name": "flags",
@@ -28781,15 +28835,18 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "New message."
         },
         "qts": {
           "name": "qts",
-          "description": " "
+          "description": "New qts value, see updates »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         },
         "reply_to_message": {
           "name": "reply_to_message",
-          "description": " "
+          "description": "The message that message is replying to."
         }
       }
     },
@@ -28958,10 +29015,16 @@
     },
     "updateBotNewBusinessMessage": {
       "name": "updateBotNewBusinessMessage",
+      "description": [
+        "A message was received via a connected business chat »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Connection ID."
         },
         "flags": {
           "name": "flags",
@@ -28972,15 +29035,18 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "New message."
         },
         "qts": {
           "name": "qts",
-          "description": " "
+          "description": "New qts value, see updates »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         },
         "reply_to_message": {
           "name": "reply_to_message",
-          "description": " "
+          "description": "The message that message is replying to."
         }
       }
     },
@@ -29677,10 +29743,11 @@
     "updateConfig": {
       "name": "updateConfig",
       "description": [
-        "The server-side configuration has changed; the client should re-fetch the config using help.getConfig¹"
+        "The server-side configuration has changed; the client should re-fetch the config using help.getConfig¹ and help.getAppConfig²."
       ],
       "links": [
-        "https://core.telegram.org/method/help.getConfig"
+        "https://core.telegram.org/method/help.getConfig",
+        "https://core.telegram.org/method/help.getAppConfig"
       ]
     },
     "updateContactsReset": {
@@ -32733,7 +32800,10 @@
         },
         "birthday": {
           "name": "birthday",
-          "description": " "
+          "description": "Contains info about the user's birthday »¹.",
+          "links": [
+            "https://core.telegram.org/api/profile#birthday"
+          ]
         },
         "blocked": {
           "name": "blocked",
@@ -32768,23 +32838,38 @@
         },
         "business_away_message": {
           "name": "business_away_message",
-          "description": " "
+          "description": "Telegram Business away message »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#away-messages"
+          ]
         },
         "business_greeting_message": {
           "name": "business_greeting_message",
-          "description": " "
+          "description": "Telegram Business greeting message »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#greeting-messages"
+          ]
         },
         "business_intro": {
           "name": "business_intro",
-          "description": " "
+          "description": "Specifies a custom Telegram Business profile introduction »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#business-introduction"
+          ]
         },
         "business_location": {
           "name": "business_location",
-          "description": " "
+          "description": "Telegram Business location »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#location"
+          ]
         },
         "business_work_hours": {
           "name": "business_work_hours",
-          "description": " "
+          "description": "Telegram Business working hours »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#opening-hours"
+          ]
         },
         "can_pin_message": {
           "name": "can_pin_message",
@@ -35467,7 +35552,10 @@
     "Peer": {
       "name": "Peer",
       "description": [
-        "Chat partner or group."
+        "Identifier of a private chat, basic group, group or channel (see here »¹ for more info)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/peers"
       ]
     },
     "PeerBlocked": {
@@ -39196,6 +39284,12 @@
     },
     "account.updateBusinessIntro": {
       "name": "account.updateBusinessIntro",
+      "description": [
+        "Set or remove the Telegram Business introduction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-introduction"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -39206,7 +39300,7 @@
         },
         "intro": {
           "name": "intro",
-          "description": " "
+          "description": "Telegram Business introduction, to remove it call the method without setting this flag."
         }
       }
     },
@@ -52810,7 +52904,10 @@
         },
         "saved_reaction": {
           "name": "saved_reaction",
-          "description": " "
+          "description": "You may search for saved messages tagged »¹ with one or more reactions using this flag.",
+          "links": [
+            "https://core.telegram.org/api/saved-messages#tags"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
