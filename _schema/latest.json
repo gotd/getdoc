@@ -3897,7 +3897,7 @@
     "auth.sentCodeTypeSmsPhrase": {
       "name": "auth.sentCodeTypeSmsPhrase",
       "description": [
-        "The code was sent via SMS as a secret phrase starting with the word specified in beginning,"
+        "The code was sent via SMS as a secret phrase starting with the word specified in beginning"
       ],
       "fields": {
         "beginning": {
@@ -60934,14 +60934,23 @@
     },
     "stories.togglePinnedToTop": {
       "name": "stories.togglePinnedToTop",
+      "description": [
+        "Pin some stories to the top of the profile, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#pinned-or-archived-stories"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "IDs of the stories to pin (max stories_pinned_to_top_count_max¹).",
+          "links": [
+            "https://core.telegram.org/api/config#stories-pinned-to-top-count-max"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where to pin stories."
         }
       },
       "errors": [
