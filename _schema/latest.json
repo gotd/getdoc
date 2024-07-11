@@ -3902,7 +3902,7 @@
       "fields": {
         "beginning": {
           "name": "beginning",
-          "description": "The secret phrase (and the SMS) starts with this word."
+          "description": "If set, the secret phrase (and the SMS) starts with this word."
         },
         "flags": {
           "name": "flags",
@@ -3921,7 +3921,7 @@
       "fields": {
         "beginning": {
           "name": "beginning",
-          "description": "The secret word in the sent SMS (which may contain multiple words) starts with this letter."
+          "description": "If set, the secret word in the sent SMS (which may contain multiple words) starts with this letter."
         },
         "flags": {
           "name": "flags",
@@ -42726,7 +42726,7 @@
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": "The method will return channels related to the passed channel."
+          "description": "The method will return channels related to the passed channel. If not set, the method will returns channels related to channels the user has joined."
         },
         "flags": {
           "name": "flags",
@@ -43716,10 +43716,16 @@
     },
     "channels.searchPosts": {
       "name": "channels.searchPosts",
+      "description": [
+        "Globally search for posts from public channels »¹ (including those we aren't a member of) containing a specific hashtag."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel"
+      ],
       "parameters": {
         "hashtag": {
           "name": "hashtag",
-          "description": " "
+          "description": "The hashtag to search, without the # character."
         },
         "limit": {
           "name": "limit",
@@ -43737,11 +43743,17 @@
         },
         "offset_peer": {
           "name": "offset_peer",
-          "description": " "
+          "description": "Offsets for pagination, for more info click here¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "offset_rate": {
           "name": "offset_rate",
-          "description": " "
+          "description": "Initially 0, then set to the next_rate parameter of messages.messagesSlice¹",
+          "links": [
+            "https://core.telegram.org/constructor/messages.messagesSlice"
+          ]
         }
       }
     },
@@ -53053,7 +53065,10 @@
       "parameters": {
         "broadcasts_only": {
           "name": "broadcasts_only",
-          "description": " "
+          "description": "If set, only returns results from channels (used in the global channel search tab »¹).",
+          "links": [
+            "https://core.telegram.org/api/search#global-search"
+          ]
         },
         "filter": {
           "name": "filter",
