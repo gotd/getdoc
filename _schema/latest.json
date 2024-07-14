@@ -4133,18 +4133,38 @@
     },
     "availableEffect": {
       "name": "availableEffect",
+      "description": [
+        "Represents a message effect »¹.",
+        "All long IDs except for id are document¹.ids from the containing messages.availableEffects² constructor.",
+        "See here »¹ for more info on how to use following fields."
+      ],
+      "links": [
+        "https://core.telegram.org/api/effects",
+        "https://core.telegram.org/constructor/document",
+        "https://core.telegram.org/constructor/messages.availableEffects",
+        "https://core.telegram.org/api/effects"
+      ],
       "fields": {
         "effect_animation_id": {
           "name": "effect_animation_id",
-          "description": " "
+          "description": "If set, contains the actual animated effect (TGS format »)¹. If not set, the animated effect must be set equal to the premium animated sticker effect² associated to the animated sticker specified in effect_sticker_id (always different from the preview animation, fetched thanks to the videoSize³ of type f as specified here »⁴).",
+          "links": [
+            "https://core.telegram.org/api/stickers#animated-stickers",
+            "https://core.telegram.org/api/stickers#premium-animated-sticker-effects",
+            "https://core.telegram.org/constructor/videoSize",
+            "https://core.telegram.org/api/stickers#premium-animated-sticker-effects"
+          ]
         },
         "effect_sticker_id": {
           "name": "effect_sticker_id",
-          "description": " "
+          "description": "Contains the preview animation (TGS format »)¹, used for the effect selection menu.",
+          "links": [
+            "https://core.telegram.org/api/stickers#animated-stickers"
+          ]
         },
         "emoticon": {
           "name": "emoticon",
-          "description": " "
+          "description": "Emoji corresponding to the effect, to be used as icon for the effect if static_icon_id is not set."
         },
         "flags": {
           "name": "flags",
@@ -4155,15 +4175,18 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Unique effect ID."
         },
         "premium_required": {
           "name": "premium_required",
-          "description": " "
+          "description": "Whether a Premium¹ subscription is required to use this effect.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "static_icon_id": {
           "name": "static_icon_id",
-          "description": " "
+          "description": "ID of the document containing the static icon (WEBP) of the effect."
         }
       }
     },
@@ -24958,13 +24981,25 @@
       ]
     },
     "reactionNotificationsFromAll": {
-      "name": "reactionNotificationsFromAll"
+      "name": "reactionNotificationsFromAll",
+      "description": [
+        "Receive notifications about reactions made by any user."
+      ]
     },
     "reactionNotificationsFromContacts": {
-      "name": "reactionNotificationsFromContacts"
+      "name": "reactionNotificationsFromContacts",
+      "description": [
+        "Receive notifications about reactions made only by our contacts."
+      ]
     },
     "reactionsNotifySettings": {
       "name": "reactionsNotifySettings",
+      "description": [
+        "Reaction notification settings, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#notifications-about-reactions"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -24975,19 +25010,25 @@
         },
         "messages_notify_from": {
           "name": "messages_notify_from",
-          "description": " "
+          "description": "Message reaction notification settings, if not set completely disables notifications/updates about message reactions."
         },
         "show_previews": {
           "name": "show_previews",
-          "description": " "
+          "description": "If false, push notifications »¹ about message/story reactions will only be of type REACT_HIDDEN/REACT_STORY_HIDDEN, without any information about the reacted-to story or the reaction itself.",
+          "links": [
+            "https://core.telegram.org/api/push-updates"
+          ]
         },
         "sound": {
           "name": "sound",
-          "description": " "
+          "description": "Notification sound for reactions »¹",
+          "links": [
+            "https://core.telegram.org/api/ringtones"
+          ]
         },
         "stories_notify_from": {
           "name": "stories_notify_from",
-          "description": " "
+          "description": "Story reaction notification settings, if not set completely disables notifications/updates about reactions to stories."
         }
       }
     },
