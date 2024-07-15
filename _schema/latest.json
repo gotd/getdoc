@@ -38067,7 +38067,13 @@
       ]
     },
     "account.getReactionsNotifySettings": {
-      "name": "account.getReactionsNotifySettings"
+      "name": "account.getReactionsNotifySettings",
+      "description": [
+        "Get the current reaction notification settings »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#notifications-about-reactions"
+      ]
     },
     "account.getRecentEmojiStatuses": {
       "name": "account.getRecentEmojiStatuses",
@@ -39151,10 +39157,16 @@
     },
     "account.setReactionsNotifySettings": {
       "name": "account.setReactionsNotifySettings",
+      "description": [
+        "Change the reaction notification settings »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#notifications-about-reactions"
+      ],
       "parameters": {
         "settings": {
           "name": "settings",
-          "description": " "
+          "description": "New reaction notification settings."
         }
       }
     },
