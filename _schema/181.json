@@ -5119,69 +5119,94 @@
     },
     "broadcastRevenueBalances": {
       "name": "broadcastRevenueBalances",
+      "description": [
+        "Describes channel ad revenue balances »¹.",
+        "Note that all balances are in the smallest unit of the chosen cryptocurrency (currently nanotons for TONs, so to obtain a value in USD divide the chosen amount by 10^9, and then divide by usd_rate)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "fields": {
         "available_balance": {
           "name": "available_balance",
-          "description": " "
+          "description": "Amount of withdrawable cryptocurrency, out of the currently available balance (available_balance \u003c= current_balance)."
         },
         "current_balance": {
           "name": "current_balance",
-          "description": " "
+          "description": "Amount of not-yet-withdrawn cryptocurrency."
         },
         "overall_revenue": {
           "name": "overall_revenue",
-          "description": " "
+          "description": "Total amount of earned cryptocurrency."
         }
       }
     },
     "broadcastRevenueTransactionProceeds": {
       "name": "broadcastRevenueTransactionProceeds",
+      "description": [
+        "Describes earnings from sponsored messages in a channel in some time frame, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Amount in the smallest unit of the cryptocurrency."
         },
         "from_date": {
           "name": "from_date",
-          "description": " "
+          "description": "Start unixtime for the timeframe."
         },
         "to_date": {
           "name": "to_date",
-          "description": " "
+          "description": "End unixtime for the timeframe."
         }
       }
     },
     "broadcastRevenueTransactionRefund": {
       "name": "broadcastRevenueTransactionRefund",
+      "description": [
+        "Describes a refund for failed withdrawal of ad earnings »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue#withdrawing-funds"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Amount refunded."
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Date of refund."
         },
         "provider": {
           "name": "provider",
-          "description": " "
+          "description": "Payment provider name."
         }
       }
     },
     "broadcastRevenueTransactionWithdrawal": {
       "name": "broadcastRevenueTransactionWithdrawal",
+      "description": [
+        "Describes a withdrawal of ad earnings »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue#withdrawing-funds"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Amount withdrawn"
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Withdrawal date"
         },
         "failed": {
           "name": "failed",
-          "description": " "
+          "description": "Whether the withdrawal has failed"
         },
         "flags": {
           "name": "flags",
@@ -5192,19 +5217,19 @@
         },
         "pending": {
           "name": "pending",
-          "description": " "
+          "description": "Whether the withdrawal is currently pending"
         },
         "provider": {
           "name": "provider",
-          "description": " "
+          "description": "Payment provider name"
         },
         "transaction_date": {
           "name": "transaction_date",
-          "description": " "
+          "description": "If neither pending nor failed are set, the transaction was completed successfully, and this field will contain the point in time (Unix timestamp) when the withdrawal was completed successfully."
         },
         "transaction_url": {
           "name": "transaction_url",
-          "description": " "
+          "description": "If neither pending nor failed are set, the transaction was completed successfully, and this field will contain a URL where the withdrawal transaction can be viewed."
         }
       }
     },
@@ -5465,10 +5490,10 @@
         "If exclude_selected is set, specifies all chats that cannot receive Telegram Business away »¹ and greeting »² messages."
       ],
       "links": [
-        "https://core.telegram.org/api/business#away-message",
-        "https://core.telegram.org/api/business#greeting-message",
-        "https://core.telegram.org/api/business#away-message",
-        "https://core.telegram.org/api/business#greeting-message"
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages",
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages"
       ],
       "fields": {
         "contacts": {
@@ -6899,7 +6924,10 @@
         },
         "can_view_revenue": {
           "name": "can_view_revenue",
-          "description": " "
+          "description": "If set, this user can view ad revenue statistics »¹ for this channel.",
+          "links": [
+            "https://core.telegram.org/api/revenue"
+          ]
         },
         "can_view_stats": {
           "name": "can_view_stats",
@@ -7064,7 +7092,10 @@
         },
         "restricted_sponsored": {
           "name": "restricted_sponsored",
-          "description": " "
+          "description": "Whether ads on this channel were disabled as specified here »¹ (this flag is only visible to the owner of the channel).",
+          "links": [
+            "https://core.telegram.org/api/boost#disable-ads-on-the-channel"
+          ]
         },
         "slowmode_next_send_date": {
           "name": "slowmode_next_send_date",
@@ -10102,7 +10133,7 @@
         "Represents an emoji category¹."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+        "https://core.telegram.org/api/emoji-categories"
       ],
       "fields": {
         "emoticons": {
@@ -10121,31 +10152,49 @@
     },
     "emojiGroupGreeting": {
       "name": "emojiGroupGreeting",
+      "description": [
+        "Represents an emoji category¹, that should be moved to the top of the list when choosing a sticker for a business introduction²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-categories",
+        "https://core.telegram.org/api/business#business-introduction"
+      ],
       "fields": {
         "emoticons": {
           "name": "emoticons",
-          "description": " "
+          "description": "A list of UTF-8 emojis, matching the category."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "A single custom emoji used as preview for the category."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Category name, i.e. \"Animals\", \"Flags\", \"Faces\" and so on..."
         }
       }
     },
     "emojiGroupPremium": {
       "name": "emojiGroupPremium",
+      "description": [
+        "An emoji category¹, used to select all Premium²-only stickers (i.e. those with a Premium effect »³)/Premium⁴-only custom emojis⁵ (i.e. those where the documentAttributeCustomEmoji⁶.free flag is not set)"
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-categories",
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/api/stickers#premium-animated-sticker-effects",
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/api/custom-emoji",
+        "https://core.telegram.org/constructor/documentAttributeCustomEmoji"
+      ],
       "fields": {
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "A single custom emoji used as preview for the category."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Category name, i.e. \"Animals\", \"Flags\", \"Faces\" and so on..."
         }
       }
     },
@@ -12818,10 +12867,10 @@
         "If exclude_selected is set, specifies all chats that cannot receive Telegram Business away »¹ and greeting »² messages."
       ],
       "links": [
-        "https://core.telegram.org/api/business#away-message",
-        "https://core.telegram.org/api/business#greeting-message",
-        "https://core.telegram.org/api/business#away-message",
-        "https://core.telegram.org/api/business#greeting-message"
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages",
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages"
       ],
       "fields": {
         "contacts": {
@@ -15007,7 +15056,7 @@
         "Selects a quick reply shortcut¹ by name."
       ],
       "links": [
-        "https://core.telegram.org/api/business#quick-reply-shortcut"
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
       ],
       "fields": {
         "shortcut": {
@@ -15022,7 +15071,7 @@
         "Selects a quick reply shortcut¹ by its numeric ID."
       ],
       "links": [
-        "https://core.telegram.org/api/business#quick-reply-shortcut"
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
       ],
       "fields": {
         "shortcut_id": {
@@ -16892,7 +16941,10 @@
         },
         "effect": {
           "name": "effect",
-          "description": " "
+          "description": "A message effect that should be played as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/effects"
+          ]
         },
         "entities": {
           "name": "entities",
@@ -17023,7 +17075,7 @@
           "name": "quick_reply_shortcut_id",
           "description": "If set, this message is a quick reply shortcut message »¹ (note that quick reply shortcut messages sent to a private chat will not have this field set).",
           "links": [
-            "https://core.telegram.org/api/business#quick-reply-shortcut"
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
           ]
         },
         "reactions": {
@@ -19662,14 +19714,20 @@
     },
     "messages.availableEffects": {
       "name": "messages.availableEffects",
+      "description": [
+        "The full list of usable animated message effects »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/effects"
+      ],
       "fields": {
         "documents": {
           "name": "documents",
-          "description": " "
+          "description": "Documents specified in the effects constructors."
         },
         "effects": {
           "name": "effects",
-          "description": " "
+          "description": "Message effects"
         },
         "hash": {
           "name": "hash",
@@ -19681,7 +19739,13 @@
       }
     },
     "messages.availableEffectsNotModified": {
-      "name": "messages.availableEffectsNotModified"
+      "name": "messages.availableEffectsNotModified",
+      "description": [
+        "The full list of usable animated message effects »¹ hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/effects"
+      ]
     },
     "messages.availableReactions": {
       "name": "messages.availableReactions",
@@ -20191,14 +20255,14 @@
         "Represents a list of emoji categories¹."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+        "https://core.telegram.org/api/emoji-categories"
       ],
       "fields": {
         "groups": {
           "name": "groups",
           "description": "A list of emoji categories¹.",
           "links": [
-            "https://core.telegram.org/api/custom-emoji#emoji-categories"
+            "https://core.telegram.org/api/emoji-categories"
           ]
         },
         "hash": {
@@ -20216,7 +20280,7 @@
         "The list of emoji categories¹ hasn't changed."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+        "https://core.telegram.org/api/emoji-categories"
       ]
     },
     "messages.exportedChatInvite": {
@@ -23185,7 +23249,7 @@
           "name": "business_bot_can_reply",
           "description": "This flag is set if both business_bot_id and business_bot_manage_url are set and connected business bots »¹ can reply to messages in this chat, as specified by the settings during initial configuration².",
           "links": [
-            "https://core.telegram.org/api/business#connected-business-bots",
+            "https://core.telegram.org/api/business#connected-bots",
             "https://core.telegram.org/api/business#connected-bots"
           ]
         },
@@ -23207,7 +23271,7 @@
           "name": "business_bot_paused",
           "description": "This flag is set if both business_bot_id and business_bot_manage_url are set and all connected business bots »¹ were paused in this chat using account.toggleConnectedBotPaused »².",
           "links": [
-            "https://core.telegram.org/api/business#connected-business-bots",
+            "https://core.telegram.org/api/business#connected-bots",
             "https://core.telegram.org/method/account.toggleConnectedBotPaused"
           ]
         },
@@ -34091,7 +34155,13 @@
       ]
     },
     "AvailableEffect": {
-      "name": "AvailableEffect"
+      "name": "AvailableEffect",
+      "description": [
+        "Describes a message effect »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/effects"
+      ]
     },
     "AvailableReaction": {
       "name": "AvailableReaction",
@@ -34112,7 +34182,13 @@
       ]
     },
     "Birthday": {
-      "name": "Birthday"
+      "name": "Birthday",
+      "description": [
+        "Birthday¹ information for a user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#birthday"
+      ]
     },
     "Bool": {
       "name": "Bool",
@@ -34139,7 +34215,13 @@
       ]
     },
     "BotBusinessConnection": {
-      "name": "BotBusinessConnection"
+      "name": "BotBusinessConnection",
+      "description": [
+        "Contains info about a bot business connection¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "BotCommand": {
       "name": "BotCommand",
@@ -34181,40 +34263,113 @@
       ]
     },
     "BroadcastRevenueBalances": {
-      "name": "BroadcastRevenueBalances"
+      "name": "BroadcastRevenueBalances",
+      "description": [
+        "Channel ad revenue balance »¹ information."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ]
     },
     "BroadcastRevenueTransaction": {
-      "name": "BroadcastRevenueTransaction"
+      "name": "BroadcastRevenueTransaction",
+      "description": [
+        "A channel ad revenue »¹ transaction."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ]
     },
     "BusinessAwayMessage": {
-      "name": "BusinessAwayMessage"
+      "name": "BusinessAwayMessage",
+      "description": [
+        "Describes a Telegram Business away message¹, automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ]
     },
     "BusinessAwayMessageSchedule": {
-      "name": "BusinessAwayMessageSchedule"
+      "name": "BusinessAwayMessageSchedule",
+      "description": [
+        "Specifies when should the Telegram Business away messages¹ be sent."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ]
     },
     "BusinessBotRecipients": {
-      "name": "BusinessBotRecipients"
+      "name": "BusinessBotRecipients",
+      "description": [
+        "Specifies the private chats that a connected business bot »¹ may receive messages and interact with."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "BusinessChatLink": {
-      "name": "BusinessChatLink"
+      "name": "BusinessChatLink",
+      "description": [
+        "Contains info about a business chat deep link »¹ created by the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ]
     },
     "BusinessGreetingMessage": {
-      "name": "BusinessGreetingMessage"
+      "name": "BusinessGreetingMessage",
+      "description": [
+        "Describes a Telegram Business greeting¹, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#greeting-messages"
+      ]
     },
     "BusinessIntro": {
-      "name": "BusinessIntro"
+      "name": "BusinessIntro",
+      "description": [
+        "Telegram Business introduction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-introduction"
+      ]
     },
     "BusinessLocation": {
-      "name": "BusinessLocation"
+      "name": "BusinessLocation",
+      "description": [
+        "Represents the location of a Telegram Business »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#location"
+      ]
     },
     "BusinessRecipients": {
-      "name": "BusinessRecipients"
+      "name": "BusinessRecipients",
+      "description": [
+        "Specifies the chats that can receive Telegram Business away »¹ and greeting »² messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages"
+      ]
     },
     "BusinessWeeklyOpen": {
-      "name": "BusinessWeeklyOpen"
+      "name": "BusinessWeeklyOpen",
+      "description": [
+        "A time interval, indicating the opening hours of a Telegram Business¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ]
     },
     "BusinessWorkHours": {
-      "name": "BusinessWorkHours"
+      "name": "BusinessWorkHours",
+      "description": [
+        "Specifies a set of Telegram Business opening hours¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ]
     },
     "CdnConfig": {
       "name": "CdnConfig",
@@ -34391,7 +34546,13 @@
       ]
     },
     "ConnectedBot": {
-      "name": "ConnectedBot"
+      "name": "ConnectedBot",
+      "description": [
+        "Contains info about a connected business bot »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "Contact": {
       "name": "Contact",
@@ -34400,7 +34561,10 @@
       ]
     },
     "ContactBirthday": {
-      "name": "ContactBirthday"
+      "name": "ContactBirthday",
+      "description": [
+        "Birthday information of a contact."
+      ]
     },
     "ContactStatus": {
       "name": "ContactStatus",
@@ -34507,7 +34671,7 @@
         "Represents an emoji category¹."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+        "https://core.telegram.org/api/emoji-categories"
       ]
     },
     "EmojiKeyword": {
@@ -34829,22 +34993,62 @@
       ]
     },
     "InputBusinessAwayMessage": {
-      "name": "InputBusinessAwayMessage"
+      "name": "InputBusinessAwayMessage",
+      "description": [
+        "Describes a Telegram Business away message¹, automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages"
+      ]
     },
     "InputBusinessBotRecipients": {
-      "name": "InputBusinessBotRecipients"
+      "name": "InputBusinessBotRecipients",
+      "description": [
+        "Specifies the private chats that a connected business bot »¹ may interact with."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "InputBusinessChatLink": {
-      "name": "InputBusinessChatLink"
+      "name": "InputBusinessChatLink",
+      "description": [
+        "Contains info about a business chat deep link »¹ to be created by the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ]
     },
     "InputBusinessGreetingMessage": {
-      "name": "InputBusinessGreetingMessage"
+      "name": "InputBusinessGreetingMessage",
+      "description": [
+        "Describes a Telegram Business greeting¹, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#greeting-messages"
+      ]
     },
     "InputBusinessIntro": {
-      "name": "InputBusinessIntro"
+      "name": "InputBusinessIntro",
+      "description": [
+        "Telegram Business introduction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-introduction"
+      ]
     },
     "InputBusinessRecipients": {
-      "name": "InputBusinessRecipients"
+      "name": "InputBusinessRecipients",
+      "description": [
+        "Specifies the chats that can receive Telegram Business away »¹ and greeting »² messages.",
+        "If exclude_selected is set, specifies all chats that cannot receive Telegram Business away »¹ and greeting »² messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages",
+        "https://core.telegram.org/api/business#away-messages",
+        "https://core.telegram.org/api/business#greeting-messages"
+      ]
     },
     "InputChannel": {
       "name": "InputChannel",
@@ -34867,10 +35071,12 @@
     "InputCheckPasswordSRP": {
       "name": "InputCheckPasswordSRP",
       "description": [
-        "Constructors for checking the validity of a 2FA SRP password¹"
+        "Constructors for checking the validity of a 2FA SRP password¹.",
+        "See here »¹ for more info on the 2FA authentication flow for methods that require it, before and after login."
       ],
       "links": [
-        "https://core.telegram.org/api/srp"
+        "https://core.telegram.org/api/srp",
+        "https://core.telegram.org/api/srp#using-the-2fa-password"
       ]
     },
     "InputClientProxy": {
@@ -35031,7 +35237,13 @@
       ]
     },
     "InputQuickReplyShortcut": {
-      "name": "InputQuickReplyShortcut"
+      "name": "InputQuickReplyShortcut",
+      "description": [
+        "Represents a quick reply shortcut »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ]
     },
     "InputReplyTo": {
       "name": "InputReplyTo",
@@ -35411,7 +35623,13 @@
       ]
     },
     "MissingInvitee": {
-      "name": "MissingInvitee"
+      "name": "MissingInvitee",
+      "description": [
+        "Info about why a specific user could not be invited »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#direct-invites"
+      ]
     },
     "MyBoost": {
       "name": "MyBoost",
@@ -35822,7 +36040,13 @@
       ]
     },
     "QuickReply": {
-      "name": "QuickReply"
+      "name": "QuickReply",
+      "description": [
+        "A quick reply shortcut¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ]
     },
     "Reaction": {
       "name": "Reaction",
@@ -35840,10 +36064,19 @@
       ]
     },
     "ReactionNotificationsFrom": {
-      "name": "ReactionNotificationsFrom"
+      "name": "ReactionNotificationsFrom",
+      "description": [
+        "Reaction notification settings"
+      ]
     },
     "ReactionsNotifySettings": {
-      "name": "ReactionsNotifySettings"
+      "name": "ReactionsNotifySettings",
+      "description": [
+        "Reaction notification settings, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#notifications-about-reactions"
+      ]
     },
     "ReadParticipantDate": {
       "name": "ReadParticipantDate",
@@ -35912,7 +36145,13 @@
       ]
     },
     "SavedReactionTag": {
-      "name": "SavedReactionTag"
+      "name": "SavedReactionTag",
+      "description": [
+        "Info about a saved message reaction tag »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ]
     },
     "SearchResultsCalendarPeriod": {
       "name": "SearchResultsCalendarPeriod",
@@ -36037,7 +36276,10 @@
       ]
     },
     "SmsJob": {
-      "name": "SmsJob"
+      "name": "SmsJob",
+      "description": [
+        "Info about an SMS job."
+      ]
     },
     "SponsoredMessage": {
       "name": "SponsoredMessage",
@@ -36233,7 +36475,10 @@
       ]
     },
     "Timezone": {
-      "name": "Timezone"
+      "name": "Timezone",
+      "description": [
+        "Timezone information."
+      ]
     },
     "TopPeer": {
       "name": "TopPeer",
@@ -36392,10 +36637,22 @@
       ]
     },
     "account.BusinessChatLinks": {
-      "name": "account.BusinessChatLinks"
+      "name": "account.BusinessChatLinks",
+      "description": [
+        "Contains info about business chat deep links »¹ created by the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ]
     },
     "account.ConnectedBots": {
-      "name": "account.ConnectedBots"
+      "name": "account.ConnectedBots",
+      "description": [
+        "Info about currently connected business bots¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "account.ContentSettings": {
       "name": "account.ContentSettings",
@@ -36452,7 +36709,13 @@
       ]
     },
     "account.ResolvedBusinessChatLinks": {
-      "name": "account.ResolvedBusinessChatLinks"
+      "name": "account.ResolvedBusinessChatLinks",
+      "description": [
+        "Contains info about a single resolved business chat deep link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#business-chat-links"
+      ]
     },
     "account.SavedRingtone": {
       "name": "account.SavedRingtone",
@@ -36600,7 +36863,10 @@
       ]
     },
     "contacts.ContactBirthdays": {
-      "name": "contacts.ContactBirthdays"
+      "name": "contacts.ContactBirthdays",
+      "description": [
+        "Birthday information of our contacts."
+      ]
     },
     "contacts.Contacts": {
       "name": "contacts.Contacts",
@@ -36697,7 +36963,13 @@
       ]
     },
     "help.TimezonesList": {
-      "name": "help.TimezonesList"
+      "name": "help.TimezonesList",
+      "description": [
+        "Timezone information that may be used elsewhere in the API, such as to set Telegram Business opening hours »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#opening-hours"
+      ]
     },
     "int": {
       "name": "int",
@@ -36732,7 +37004,13 @@
       ]
     },
     "messages.AvailableEffects": {
-      "name": "messages.AvailableEffects"
+      "name": "messages.AvailableEffects",
+      "description": [
+        "Full list of usable animated message effects »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/effects"
+      ]
     },
     "messages.AvailableReactions": {
       "name": "messages.AvailableReactions",
@@ -36818,7 +37096,7 @@
         "Represents a list of emoji categories¹."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories"
+        "https://core.telegram.org/api/emoji-categories"
       ]
     },
     "messages.ExportedChatInvite": {
@@ -36864,7 +37142,13 @@
       ]
     },
     "messages.InvitedUsers": {
-      "name": "messages.InvitedUsers"
+      "name": "messages.InvitedUsers",
+      "description": [
+        "Contains info about successfully or unsuccessfully invited »¹ users."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#direct-invites"
+      ]
     },
     "messages.MessageReactionsList": {
       "name": "messages.MessageReactionsList",
@@ -37026,10 +37310,16 @@
       ]
     },
     "smsjobs.EligibilityToJoin": {
-      "name": "smsjobs.EligibilityToJoin"
+      "name": "smsjobs.EligibilityToJoin",
+      "description": [
+        "SMS jobs eligibility"
+      ]
     },
     "smsjobs.Status": {
-      "name": "smsjobs.Status"
+      "name": "smsjobs.Status",
+      "description": [
+        "Status"
+      ]
     },
     "stats.BroadcastRevenueStats": {
       "name": "stats.BroadcastRevenueStats"
@@ -39198,10 +39488,18 @@
     },
     "account.toggleSponsoredMessages": {
       "name": "account.toggleSponsoredMessages",
+      "description": [
+        "Disable or re-enable Telegram ads for the current Premium¹ account.",
+        "Useful for business owners that may want to launch and view their own Telegram ads via the Telegram ad platform »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium",
+        "https://ads.telegram.org"
+      ],
       "parameters": {
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Enable or disable ads."
         }
       }
     },
@@ -42755,7 +43053,11 @@
         },
         "for_personal": {
           "name": "for_personal",
-          "description": " "
+          "description": "Set this flag to only fetch the full list of channels that may be passed to account.updatePersonalChannel¹ to display them on our profile page².",
+          "links": [
+            "https://core.telegram.org/method/account.updatePersonalChannel",
+            "https://core.telegram.org/api/profile#personal-channel"
+          ]
         }
       },
       "errors": [
@@ -43749,14 +44051,22 @@
     },
     "channels.restrictSponsoredMessages": {
       "name": "channels.restrictSponsoredMessages",
+      "description": [
+        "Disable ads on the specified channel, for all users.",
+        "Available only after reaching at least the boost level »¹ specified in the channel_restrict_sponsored_level_min »² config parameter."
+      ],
+      "links": [
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/api/config#channel-restrict-sponsored-level-min"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel."
         },
         "restricted": {
           "name": "restricted",
-          "description": " "
+          "description": "Whether to disable or re-enable ads."
         }
       },
       "errors": [
@@ -48757,6 +49067,12 @@
     },
     "messages.getAvailableEffects": {
       "name": "messages.getAvailableEffects",
+      "description": [
+        "Fetch the full list of usable animated message effects »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/effects"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
@@ -49309,11 +49625,10 @@
     "messages.getEmojiGroups": {
       "name": "messages.getEmojiGroups",
       "description": [
-        "Represents a list of emoji categories¹, to be used when selecting custom emojis²."
+        "Represents a list of emoji categories¹."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories",
-        "https://core.telegram.org/api/custom-emoji"
+        "https://core.telegram.org/api/emoji-categories"
       ],
       "parameters": {
         "hash": {
@@ -49383,7 +49698,7 @@
         "Represents a list of emoji categories¹, to be used when selecting custom emojis to set as profile picture²."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories",
+        "https://core.telegram.org/api/emoji-categories",
         "https://core.telegram.org/api/files#sticker-profile-pictures"
       ],
       "parameters": {
@@ -49404,7 +49719,7 @@
         "Represents a list of emoji categories¹, to be used when selecting custom emojis to set as custom emoji status²."
       ],
       "links": [
-        "https://core.telegram.org/api/custom-emoji#emoji-categories",
+        "https://core.telegram.org/api/emoji-categories",
         "https://core.telegram.org/api"
       ],
       "parameters": {
@@ -49421,6 +49736,12 @@
     },
     "messages.getEmojiStickerGroups": {
       "name": "messages.getEmojiStickerGroups",
+      "description": [
+        "Represents a list of emoji categories¹, to be used when choosing a sticker."
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-categories"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
@@ -53765,7 +54086,10 @@
         },
         "effect": {
           "name": "effect",
-          "description": " "
+          "description": "Specifies a message effect »¹ to use for the message.",
+          "links": [
+            "https://core.telegram.org/api/effects"
+          ]
         },
         "entities": {
           "name": "entities",
@@ -54275,7 +54599,10 @@
         },
         "effect": {
           "name": "effect",
-          "description": " "
+          "description": "Specifies a message effect »¹ to use for the message.",
+          "links": [
+            "https://core.telegram.org/api/effects"
+          ]
         },
         "entities": {
           "name": "entities",
@@ -54647,7 +54974,10 @@
         },
         "effect": {
           "name": "effect",
-          "description": " "
+          "description": "Specifies a message effect »¹ to use for the message.",
+          "links": [
+            "https://core.telegram.org/api/effects"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -59026,7 +59356,7 @@
       "parameters": {
         "job_id": {
           "name": "job_id",
-          "description": " "
+          "description": "Job ID"
         }
       },
       "errors": [
@@ -59141,14 +59471,20 @@
     },
     "stats.getBroadcastRevenueStats": {
       "name": "stats.getBroadcastRevenueStats",
+      "description": [
+        "Get channel ad revenue statistics »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel"
         },
         "dark": {
           "name": "dark",
-          "description": " "
+          "description": "Whether to enable dark theme for graph colors"
         },
         "flags": {
           "name": "flags",
@@ -59168,10 +59504,16 @@
     },
     "stats.getBroadcastRevenueTransactions": {
       "name": "stats.getBroadcastRevenueTransactions",
+      "description": [
+        "Fetch channel ad revenue transaction history »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel"
         },
         "limit": {
           "name": "limit",
@@ -59182,7 +59524,10 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
       },
       "errors": [
@@ -59195,14 +59540,23 @@
     },
     "stats.getBroadcastRevenueWithdrawalUrl": {
       "name": "stats.getBroadcastRevenueWithdrawalUrl",
+      "description": [
+        "Withdraw funds from a channel's ad revenue balance »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel"
         },
         "password": {
           "name": "password",
-          "description": " "
+          "description": "2FA password, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/srp#using-the-2fa-password"
+          ]
         }
       },
       "errors": [
