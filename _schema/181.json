@@ -2749,7 +2749,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -3060,7 +3060,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -3116,7 +3116,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -3160,7 +3160,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -3359,7 +3359,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -3788,7 +3788,7 @@
         },
         "play_integrity_nonce": {
           "name": "play_integrity_nonce",
-          "description": " "
+          "description": "Play Integrity API nonce"
         },
         "push_timeout": {
           "name": "push_timeout",
@@ -6889,7 +6889,11 @@
         },
         "boosts_unrestrict": {
           "name": "boosts_unrestrict",
-          "description": " "
+          "description": "The number of boosts¹ this supergroup requires to bypass slowmode and other restrictions, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/boost",
+            "https://core.telegram.org/api/boost#bypass-slowmode-and-chat-restrictions"
+          ]
         },
         "bot_info": {
           "name": "bot_info",
@@ -7069,7 +7073,10 @@
         },
         "reactions_limit": {
           "name": "reactions_limit",
-          "description": " "
+          "description": "This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of appConfig.reactions_uniq_max¹).",
+          "links": [
+            "https://core.telegram.org/api/config#reactions-uniq-max"
+          ]
         },
         "read_inbox_max_id": {
           "name": "read_inbox_max_id",
@@ -7576,23 +7583,35 @@
       }
     },
     "channels.sponsoredMessageReportResultAdsHidden": {
-      "name": "channels.sponsoredMessageReportResultAdsHidden"
+      "name": "channels.sponsoredMessageReportResultAdsHidden",
+      "description": [
+        "Sponsored messages were hidden for the user in all chats."
+      ]
     },
     "channels.sponsoredMessageReportResultChooseOption": {
       "name": "channels.sponsoredMessageReportResultChooseOption",
+      "description": [
+        "The user must choose a report option from the localized options available in options, and after selection, channels.reportSponsoredMessage¹ must be invoked again, passing the option's option field to the option param of the method."
+      ],
+      "links": [
+        "https://core.telegram.org/method/channels.reportSponsoredMessage"
+      ],
       "fields": {
         "options": {
           "name": "options",
-          "description": " "
+          "description": "Localized list of options."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title of the option selection popup."
         }
       }
     },
     "channels.sponsoredMessageReportResultReported": {
-      "name": "channels.sponsoredMessageReportResultReported"
+      "name": "channels.sponsoredMessageReportResultReported",
+      "description": [
+        "The sponsored message was reported successfully."
+      ]
     },
     "chat": {
       "name": "chat",
@@ -8105,7 +8124,10 @@
         },
         "reactions_limit": {
           "name": "reactions_limit",
-          "description": " "
+          "description": "This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of appConfig.reactions_uniq_max¹).",
+          "links": [
+            "https://core.telegram.org/api/config#reactions-uniq-max"
+          ]
         },
         "recent_requesters": {
           "name": "recent_requesters",
@@ -8764,7 +8786,7 @@
         },
         "unknown_number": {
           "name": "unknown_number",
-          "description": " "
+          "description": "Set this flag if there is a SIM card in the current device, but it is not possible to check whether the specified phone number matches the SIM's phone number."
         }
       }
     },
@@ -10281,7 +10303,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -10705,10 +10727,16 @@
     },
     "factCheck": {
       "name": "factCheck",
+      "description": [
+        "Represents a fact-check »¹ created by an independent fact-checker."
+      ],
+      "links": [
+        "https://core.telegram.org/api/factcheck"
+      ],
       "fields": {
         "country": {
           "name": "country",
-          "description": " "
+          "description": "A two-letter ISO 3166-1 alpha-2 country code of the country for which the fact-check should be shown."
         },
         "flags": {
           "name": "flags",
@@ -10719,7 +10747,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -10730,7 +10758,7 @@
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "The fact-check."
         }
       }
     },
@@ -10917,30 +10945,45 @@
     },
     "fragment.collectibleInfo": {
       "name": "fragment.collectibleInfo",
+      "description": [
+        "Info about a fragment collectible¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/fragment"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "crypto_amount": {
           "name": "crypto_amount",
-          "description": " "
+          "description": "Price, in the smallest units of the cryptocurrency."
         },
         "crypto_currency": {
           "name": "crypto_currency",
-          "description": " "
+          "description": "Cryptocurrency name."
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code for amount",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "purchase_date": {
           "name": "purchase_date",
-          "description": " "
+          "description": "Purchase date (unixtime)"
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Fragment¹ URL with more info about the collectible",
+          "links": [
+            "https://fragment.com"
+          ]
         }
       }
     },
@@ -11370,7 +11413,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -11445,7 +11488,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -11592,7 +11635,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -11709,7 +11752,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -11952,7 +11995,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -13085,19 +13128,31 @@
     },
     "inputCollectiblePhone": {
       "name": "inputCollectiblePhone",
+      "description": [
+        "Represents a phone number fragment collectible¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/fragment"
+      ],
       "fields": {
         "phone": {
           "name": "phone",
-          "description": " "
+          "description": "Phone number"
         }
       }
     },
     "inputCollectibleUsername": {
       "name": "inputCollectibleUsername",
+      "description": [
+        "Represents a username fragment collectible¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/fragment"
+      ],
       "fields": {
         "username": {
           "name": "username",
-          "description": " "
+          "description": "Username"
         }
       }
     },
@@ -13606,10 +13661,19 @@
     },
     "inputInvoiceStars": {
       "name": "inputInvoiceStars",
+      "description": [
+        "Used to top up the current account's Telegram Stars¹ balance."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Top up option, obtained as described here »¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#buying-stars"
+          ]
         }
       }
     },
@@ -15000,7 +15064,14 @@
       ]
     },
     "inputPrivacyValueAllowPremium": {
-      "name": "inputPrivacyValueAllowPremium"
+      "name": "inputPrivacyValueAllowPremium",
+      "description": [
+        "Allow only users with a Premium subscription »¹, currently only usable for inputPrivacyKeyChatInvite²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/constructor/inputPrivacyKeyChatInvite"
+      ]
     },
     "inputPrivacyValueAllowUsers": {
       "name": "inputPrivacyValueAllowUsers",
@@ -15754,14 +15825,26 @@
     },
     "inputStorePaymentStars": {
       "name": "inputStorePaymentStars",
+      "description": [
+        "Used to top up the Telegram Stars balance¹ using the Play Store/App Store flow (official apps only)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -15772,7 +15855,7 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of stars to topup"
         }
       }
     },
@@ -16955,7 +17038,10 @@
         },
         "factcheck": {
           "name": "factcheck",
-          "description": " "
+          "description": "Represents a fact-check »¹.",
+          "links": [
+            "https://core.telegram.org/api/factcheck"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -19679,7 +19765,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -19731,7 +19817,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -19758,7 +19844,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -20112,10 +20198,16 @@
     },
     "messages.dialogFilters": {
       "name": "messages.dialogFilters",
+      "description": [
+        "Folder¹ information"
+      ],
+      "links": [
+        "https://core.telegram.org/api/folders"
+      ],
       "fields": {
         "filters": {
           "name": "filters",
-          "description": " "
+          "description": "Folders."
         },
         "flags": {
           "name": "flags",
@@ -20267,7 +20359,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -20347,7 +20439,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -20387,7 +20479,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -20486,7 +20578,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -20764,14 +20856,20 @@
     },
     "messages.myStickers": {
       "name": "messages.myStickers",
+      "description": [
+        "The list of stickersets owned by the current account »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of owned stickersets."
         },
         "sets": {
           "name": "sets",
-          "description": " "
+          "description": "Stickersets"
         }
       }
     },
@@ -20873,7 +20971,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -20905,7 +21003,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -21014,7 +21112,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -21038,7 +21136,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -21279,7 +21377,7 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -22811,14 +22909,20 @@
     },
     "payments.paymentFormStars": {
       "name": "payments.paymentFormStars",
+      "description": [
+        "Represents a payment form, for payments to be using Telegram Stars, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "Bot ID."
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Description"
         },
         "flags": {
           "name": "flags",
@@ -22829,23 +22933,23 @@
         },
         "form_id": {
           "name": "form_id",
-          "description": " "
+          "description": "Form ID."
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Product photo"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Form title"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Info about users mentioned in the other fields."
         }
       }
     },
@@ -22928,10 +23032,16 @@
     },
     "payments.paymentReceiptStars": {
       "name": "payments.paymentReceiptStars",
+      "description": [
+        "Receipt for payment made using Telegram Stars¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "Bot ID"
         },
         "currency": {
           "name": "currency",
@@ -22939,11 +23049,11 @@
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Date of generation"
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Description"
         },
         "flags": {
           "name": "flags",
@@ -22954,15 +23064,15 @@
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Product photo"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title"
         },
         "total_amount": {
           "name": "total_amount",
@@ -22970,11 +23080,11 @@
         },
         "transaction_id": {
           "name": "transaction_id",
-          "description": " "
+          "description": "Transaction ID"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Info about users mentioned in the other fields."
         }
       }
     },
@@ -23027,14 +23137,20 @@
     },
     "payments.starsStatus": {
       "name": "payments.starsStatus",
+      "description": [
+        "Info about the current Telegram Star balance and transaction history »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#balance-and-transaction-history"
+      ],
       "fields": {
         "balance": {
           "name": "balance",
-          "description": " "
+          "description": "Current Telegram Star balance."
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Chats mentioned in history."
         },
         "flags": {
           "name": "flags",
@@ -23045,15 +23161,18 @@
         },
         "history": {
           "name": "history",
-          "description": " "
+          "description": "List of Telegram Star transactions (partial if next_offset is set)."
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset to use to fetch more transactions from the transaction history using payments.getStarsTransactions¹.",
+          "links": [
+            "https://core.telegram.org/method/payments.getStarsTransactions"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in history."
         }
       }
     },
@@ -24870,7 +24989,14 @@
       ]
     },
     "privacyValueAllowPremium": {
-      "name": "privacyValueAllowPremium"
+      "name": "privacyValueAllowPremium",
+      "description": [
+        "Allow only users with a Premium subscription »¹, currently only usable for inputPrivacyKeyChatInvite²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/constructor/inputPrivacyKeyChatInvite"
+      ]
     },
     "privacyValueAllowUsers": {
       "name": "privacyValueAllowUsers",
@@ -26626,11 +26752,17 @@
         },
         "can_report": {
           "name": "can_report",
-          "description": " "
+          "description": "Whether this message can be reported as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-message#reporting-sponsored-messages"
+          ]
         },
         "color": {
           "name": "color",
-          "description": " "
+          "description": "If set, the sponsored message should use the message accent color »¹ specified in color.",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "entities": {
           "name": "entities",
@@ -26652,7 +26784,7 @@
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "If set, contains a custom profile photo bubble that should be displayed for the sponsored message, like for messages sent in groups."
         },
         "random_id": {
           "name": "random_id",
@@ -26668,41 +26800,62 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "If set, contains a custom sender name should be displayed for the sponsored message, like for messages sent in groups."
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "If set, contains a URL to open when the user clicks on the sponsored message."
         }
       }
     },
     "sponsoredMessageReportOption": {
       "name": "sponsoredMessageReportOption",
+      "description": [
+        "A report option for a sponsored message »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
+      ],
       "fields": {
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Option identifier to pass to channels.reportSponsoredMessage¹.",
+          "links": [
+            "https://core.telegram.org/method/channels.reportSponsoredMessage"
+          ]
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Localized description of the option."
         }
       }
     },
     "starsTopupOption": {
       "name": "starsTopupOption",
+      "description": [
+        "Telegram Stars topup option¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "extended": {
           "name": "extended",
-          "description": " "
+          "description": "If set, the option must only be shown in the full list of topup options."
         },
         "flags": {
           "name": "flags",
@@ -26713,24 +26866,30 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of Telegram stars."
         },
         "store_product": {
           "name": "store_product",
-          "description": " "
+          "description": "Identifier of the store product associated with the option, official apps only."
         }
       }
     },
     "starsTransaction": {
       "name": "starsTransaction",
+      "description": [
+        "Represents a Telegram Stars transaction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Date of the transaction (unixtime)."
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "For transactions with bots, description of the bought product."
         },
         "flags": {
           "name": "flags",
@@ -26741,94 +26900,145 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Transaction ID."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Source of the incoming transaction, or its recipient for outgoing transactions."
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "For transactions with bots, photo of the bought product."
         },
         "refund": {
           "name": "refund",
-          "description": " "
+          "description": "Whether this transaction is a refund."
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of Stars (negative for outgoing transactions)."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "For transactions with bots, title of the bought product."
         }
       }
     },
     "starsTransactionPeer": {
       "name": "starsTransactionPeer",
+      "description": [
+        "Describes a Telegram Star¹ transaction with another peer (usually a bot or a channel)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer."
         }
       }
     },
     "starsTransactionPeerAppStore": {
-      "name": "starsTransactionPeerAppStore"
+      "name": "starsTransactionPeerAppStore",
+      "description": [
+        "Describes a Telegram Star¹ transaction with the App Store, used when purchasing Telegram Stars through the App Store."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "starsTransactionPeerFragment": {
-      "name": "starsTransactionPeerFragment"
+      "name": "starsTransactionPeerFragment",
+      "description": [
+        "Describes a Telegram Star¹ transaction with Fragment², used when purchasing Telegram Stars through Fragment³."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://fragment.com",
+        "https://fragment.com"
+      ]
     },
     "starsTransactionPeerPlayMarket": {
-      "name": "starsTransactionPeerPlayMarket"
+      "name": "starsTransactionPeerPlayMarket",
+      "description": [
+        "Describes a Telegram Star¹ transaction with the Play Store, used when purchasing Telegram Stars through the Play Store."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "starsTransactionPeerPremiumBot": {
       "name": "starsTransactionPeerPremiumBot"
     },
     "starsTransactionPeerUnsupported": {
-      "name": "starsTransactionPeerUnsupported"
+      "name": "starsTransactionPeerUnsupported",
+      "description": [
+        "Describes a Telegram Star¹ transaction that cannot be described using the current layer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "stats.broadcastRevenueStats": {
       "name": "stats.broadcastRevenueStats",
+      "description": [
+        "Channel revenue ad statistics, see here »¹ for more info.",
+        "Note that all balances and currency amounts and graph values are in the smallest unit of the chosen cryptocurrency (currently nanotons for TONs, so to obtain a value in USD divide the chosen amount by 10^9, and then divide by usd_rate)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "fields": {
         "balances": {
           "name": "balances",
-          "description": " "
+          "description": "Current balance, current withdrawable balance and overall revenue"
         },
         "revenue_graph": {
           "name": "revenue_graph",
-          "description": " "
+          "description": "Ad revenue graph (in the smallest unit of the cryptocurrency in which revenue is calculated)"
         },
         "top_hours_graph": {
           "name": "top_hours_graph",
-          "description": " "
+          "description": "Ad impressions graph"
         },
         "usd_rate": {
           "name": "usd_rate",
-          "description": " "
+          "description": "Current conversion rate of the cryptocurrency (not in the smallest unit) in which revenue is calculated to USD"
         }
       }
     },
     "stats.broadcastRevenueTransactions": {
       "name": "stats.broadcastRevenueTransactions",
+      "description": [
+        "Channel ad revenue transactions »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of transactions."
         },
         "transactions": {
           "name": "transactions",
-          "description": " "
+          "description": "Transactions"
         }
       }
     },
     "stats.broadcastRevenueWithdrawalUrl": {
       "name": "stats.broadcastRevenueWithdrawalUrl",
+      "description": [
+        "Contains the URL to use to withdraw channel ad revenue¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue#withdrawing-funds"
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "A unique URL to a Fragment page where the user will be able to specify and submit the address of the TON wallet where the funds will be sent."
         }
       }
     },
@@ -29289,14 +29499,20 @@
     },
     "updateBroadcastRevenueTransactions": {
       "name": "updateBroadcastRevenueTransactions",
+      "description": [
+        "A new channel ad revenue transaction was made, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue#revenue-statistics"
+      ],
       "fields": {
         "balances": {
           "name": "balances",
-          "description": " "
+          "description": "New ad revenue balance."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel"
         }
       }
     },
@@ -30611,7 +30827,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -30744,6 +30960,12 @@
     },
     "updateNewStoryReaction": {
       "name": "updateNewStoryReaction",
+      "description": [
+        "Represents a new reaction to a story¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#notifications-about-reactions"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
@@ -30751,11 +30973,17 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "The reaction¹.",
+          "links": [
+            "https://core.telegram.org/api/reactions"
+          ]
         },
         "story_id": {
           "name": "story_id",
-          "description": " "
+          "description": "Story ID¹.",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         }
       }
     },
@@ -31843,19 +32071,28 @@
     },
     "updateSmsJob": {
       "name": "updateSmsJob",
+      "description": [
+        "A new SMS job was received"
+      ],
       "fields": {
         "job_id": {
           "name": "job_id",
-          "description": " "
+          "description": "SMS job ID"
         }
       }
     },
     "updateStarsBalance": {
       "name": "updateStarsBalance",
+      "description": [
+        "The current account's Telegram Stars balance »¹ has changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "balance": {
           "name": "balance",
-          "description": " "
+          "description": "New balance."
         }
       }
     },
@@ -32699,7 +32936,10 @@
         },
         "bot_business": {
           "name": "bot_business",
-          "description": " "
+          "description": "Whether this bot can be connected to a user as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "bot_can_edit": {
           "name": "bot_can_edit",
@@ -33096,7 +33336,10 @@
         },
         "sponsored_enabled": {
           "name": "sponsored_enabled",
-          "description": " "
+          "description": "Whether ads were re-enabled for the current account (only accessible to the currently logged-in user), see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/business#re-enable-ads"
+          ]
         },
         "stories": {
           "name": "stories",
@@ -33777,7 +34020,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -34780,7 +35023,13 @@
       ]
     },
     "FactCheck": {
-      "name": "FactCheck"
+      "name": "FactCheck",
+      "description": [
+        "Represents a fact-check »¹ created by an independent fact-checker."
+      ],
+      "links": [
+        "https://core.telegram.org/api/factcheck"
+      ]
     },
     "FileHash": {
       "name": "FileHash",
@@ -35089,7 +35338,13 @@
       ]
     },
     "InputCollectible": {
-      "name": "InputCollectible"
+      "name": "InputCollectible",
+      "description": [
+        "Represents a Fragment collectible »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/fragment"
+      ]
     },
     "InputContact": {
       "name": "InputContact",
@@ -36288,16 +36543,41 @@
       ]
     },
     "SponsoredMessageReportOption": {
-      "name": "SponsoredMessageReportOption"
+      "name": "SponsoredMessageReportOption",
+      "description": [
+        "A report option for a sponsored message »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
+      ]
     },
     "StarsTopupOption": {
-      "name": "StarsTopupOption"
+      "name": "StarsTopupOption",
+      "description": [
+        "Telegram Stars topup option¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "StarsTransaction": {
-      "name": "StarsTransaction"
+      "name": "StarsTransaction",
+      "description": [
+        "Represents a Telegram Stars transaction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "StarsTransactionPeer": {
-      "name": "StarsTransactionPeer"
+      "name": "StarsTransactionPeer",
+      "description": [
+        "Source of an incoming Telegram Star transaction¹, or its recipient for outgoing Telegram Star transactions²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "Stats.BroadcastStats": {
       "name": "Stats.BroadcastStats",
@@ -36818,7 +37098,13 @@
       ]
     },
     "channels.SponsoredMessageReportResult": {
-      "name": "channels.SponsoredMessageReportResult"
+      "name": "channels.SponsoredMessageReportResult",
+      "description": [
+        "Status of the method call used to report a sponsored message »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages"
+      ]
     },
     "chatlists.ChatlistInvite": {
       "name": "chatlists.ChatlistInvite",
@@ -36897,7 +37183,13 @@
       ]
     },
     "fragment.CollectibleInfo": {
-      "name": "fragment.CollectibleInfo"
+      "name": "fragment.CollectibleInfo",
+      "description": [
+        "Info about a fragment collectible¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/fragment"
+      ]
     },
     "help.AppConfig": {
       "name": "help.AppConfig",
@@ -37076,7 +37368,13 @@
       ]
     },
     "messages.DialogFilters": {
-      "name": "messages.DialogFilters"
+      "name": "messages.DialogFilters",
+      "description": [
+        "Folder¹ information"
+      ],
+      "links": [
+        "https://core.telegram.org/api/folders"
+      ]
     },
     "messages.Dialogs": {
       "name": "messages.Dialogs",
@@ -37169,7 +37467,13 @@
       ]
     },
     "messages.MyStickers": {
-      "name": "messages.MyStickers"
+      "name": "messages.MyStickers",
+      "description": [
+        "The list of stickersets owned by the current account »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers"
+      ]
     },
     "messages.PeerSettings": {
       "name": "messages.PeerSettings",
@@ -37178,7 +37482,13 @@
       ]
     },
     "messages.QuickReplies": {
-      "name": "messages.QuickReplies"
+      "name": "messages.QuickReplies",
+      "description": [
+        "Info about quick reply shortcuts »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#quick-reply-shortcuts"
+      ]
     },
     "messages.Reactions": {
       "name": "messages.Reactions",
@@ -37199,7 +37509,13 @@
       ]
     },
     "messages.SavedReactionTags": {
-      "name": "messages.SavedReactionTags"
+      "name": "messages.SavedReactionTags",
+      "description": [
+        "List of reaction tag »¹ names assigned by the user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#tags"
+      ]
     },
     "messages.SearchResultsCalendar": {
       "name": "messages.SearchResultsCalendar",
@@ -37259,7 +37575,13 @@
       ]
     },
     "payments.StarsStatus": {
-      "name": "payments.StarsStatus"
+      "name": "payments.StarsStatus",
+      "description": [
+        "Info about the current Telegram Star balance and transaction history »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#balance-and-transaction-history"
+      ]
     },
     "phone.ExportedGroupCallInvite": {
       "name": "phone.ExportedGroupCallInvite",
@@ -37322,13 +37644,31 @@
       ]
     },
     "stats.BroadcastRevenueStats": {
-      "name": "stats.BroadcastRevenueStats"
+      "name": "stats.BroadcastRevenueStats",
+      "description": [
+        "Channel revenue ad statistics, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ]
     },
     "stats.BroadcastRevenueTransactions": {
-      "name": "stats.BroadcastRevenueTransactions"
+      "name": "stats.BroadcastRevenueTransactions",
+      "description": [
+        "Channel ad revenue transactions »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue"
+      ]
     },
     "stats.BroadcastRevenueWithdrawalUrl": {
-      "name": "stats.BroadcastRevenueWithdrawalUrl"
+      "name": "stats.BroadcastRevenueWithdrawalUrl",
+      "description": [
+        "Contains the URL to use to withdraw channel ad revenue¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/revenue#withdrawing-funds"
+      ]
     },
     "stats.MegagroupStats": {
       "name": "stats.MegagroupStats",
@@ -38082,7 +38422,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.emojiStatuses"
@@ -38102,7 +38442,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/emojiList"
@@ -38121,7 +38461,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.themes"
@@ -38162,7 +38502,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/emojiList"
@@ -38181,7 +38521,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.emojiStatuses"
@@ -38201,7 +38541,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/emojiList"
@@ -38221,7 +38561,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/emojiList"
@@ -38376,7 +38716,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.emojiStatuses"
@@ -38392,7 +38732,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.savedRingtones².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.savedRingtones².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.savedRingtones"
@@ -38456,7 +38796,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.themes"
@@ -38528,7 +38868,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.wallPapers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.wallPapers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/account.wallPapers"
@@ -44027,18 +44367,28 @@
     },
     "channels.reportSponsoredMessage": {
       "name": "channels.reportSponsoredMessage",
+      "description": [
+        "Report a sponsored message »¹, see here »² for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages",
+        "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel where the sponsored message can be seen."
         },
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Chosen report option, initially an empty string, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
+          ]
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "ID of the sponsored message."
         }
       },
       "errors": [
@@ -44122,14 +44472,24 @@
     },
     "channels.setBoostsToUnblockRestrictions": {
       "name": "channels.setBoostsToUnblockRestrictions",
+      "description": [
+        "Admins with ban_users admin rights »¹ may allow users that apply a certain number of booosts »² to the group to bypass slow mode »³ and other »⁴ supergroup restrictions, see here »⁵ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/chatAdminRights",
+        "https://core.telegram.org/api/boost",
+        "https://core.telegram.org/method/channels.toggleSlowMode",
+        "https://core.telegram.org/api/rights#default-rights",
+        "https://core.telegram.org/api/boost#bypass-slowmode-and-chat-restrictions"
+      ],
       "parameters": {
         "boosts": {
           "name": "boosts",
-          "description": " "
+          "description": "The number of required boosts (1-8, 0 to disable)."
         },
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The supergroup."
         }
       },
       "errors": [
@@ -45555,7 +45915,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -45570,7 +45930,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note that the hash is computed using the usual algorithm², passing to the algorithm first the previously returned contacts.contacts³.saved_count field, then max 100000 sorted user IDs from the contact list, including the ID of the currently logged in user if it is saved as a contact. Example: tdlib implementation⁴.",
+          "description": "Hash used for caching, for more info click here¹.Note that the hash is computed using the usual algorithm², passing to the algorithm first the previously returned contacts.contacts³.saved_count field, then max 100000 sorted user IDs from the contact list, including the ID of the currently logged in user if it is saved as a contact. Example: tdlib implementation⁴.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/api/offsets#hash-generation",
@@ -45711,7 +46071,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -46033,10 +46393,16 @@
     },
     "fragment.getCollectibleInfo": {
       "name": "fragment.getCollectibleInfo",
+      "description": [
+        "Fetch information about a fragment collectible, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/fragment#fetching-info-about-fragment-collectibles"
+      ],
       "parameters": {
         "collectible": {
           "name": "collectible",
-          "description": " "
+          "description": "Collectible to fetch info about."
         }
       },
       "errors": [
@@ -46142,7 +46508,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.appConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.appConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/help.appConfig"
@@ -46234,7 +46600,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.countriesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.countriesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/help.countriesList"
@@ -46284,7 +46650,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.passportConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.passportConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/help.passportConfig"
@@ -46303,7 +46669,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/help.peerColors"
@@ -46322,7 +46688,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/help.peerColors"
@@ -46402,7 +46768,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.timezonesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.timezonesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/help.timezonesList"
@@ -47386,14 +47752,22 @@
     },
     "messages.deleteFactCheck": {
       "name": "messages.deleteFactCheck",
+      "description": [
+        "Delete a fact-check¹ from a message.",
+        "Can only be used by independent fact-checkers as specified by the appConfig.can_edit_factcheck¹ configuration flag."
+      ],
+      "links": [
+        "https://core.telegram.org/api/factcheck",
+        "https://core.telegram.org/api/config#can-edit-factcheck"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the message was sent."
         }
       },
       "errors": [
@@ -48111,18 +48485,29 @@
     },
     "messages.editFactCheck": {
       "name": "messages.editFactCheck",
+      "description": [
+        "Edit/create a fact-check¹ on a message.",
+        "Can only be used by independent fact-checkers as specified by the appConfig.can_edit_factcheck¹ configuration flag."
+      ],
+      "links": [
+        "https://core.telegram.org/api/factcheck",
+        "https://core.telegram.org/api/config#can-edit-factcheck"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the message was sent"
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Fact-check (maximum UTF-8 length specified in appConfig.factcheck_length_limit¹).",
+          "links": [
+            "https://core.telegram.org/api/config#factcheck-length-limit"
+          ]
         }
       },
       "errors": [
@@ -48961,7 +49346,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.allStickers"
@@ -49045,7 +49430,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the attachMenuBots².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the attachMenuBots².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/attachMenuBots"
@@ -49076,7 +49461,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableEffects².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableEffects².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.availableEffects"
@@ -49095,7 +49480,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableReactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableReactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.availableReactions"
@@ -49121,7 +49506,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -49420,7 +49805,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.reactions"
@@ -49495,7 +49880,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -49633,7 +50018,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.emojiGroups"
@@ -49704,7 +50089,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.emojiGroups"
@@ -49725,7 +50110,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.emojiGroups"
@@ -49745,7 +50130,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.emojiGroups"
@@ -49764,7 +50149,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.allStickers"
@@ -49954,7 +50339,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.favedStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.favedStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.favedStickers"
@@ -49970,7 +50355,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.featuredStickers"
@@ -49986,7 +50371,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.featuredStickers"
@@ -50252,7 +50637,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.allStickers"
@@ -50498,6 +50883,12 @@
     },
     "messages.getMyStickers": {
       "name": "messages.getMyStickers",
+      "description": [
+        "Fetch stickerset owned by the current user¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers"
+      ],
       "parameters": {
         "limit": {
           "name": "limit",
@@ -50523,7 +50914,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.featuredStickers"
@@ -50830,7 +51221,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -50860,7 +51251,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -50889,7 +51280,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.reactions"
@@ -50923,7 +51314,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.recentStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.recentStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.recentStickers"
@@ -50946,7 +51337,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -51039,7 +51430,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -51079,7 +51470,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedGifs².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedGifs².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.savedGifs"
@@ -51158,7 +51549,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedReactionTags².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedReactionTags².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.savedReactionTags"
@@ -51181,7 +51572,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -51399,7 +51790,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -51435,7 +51826,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.stickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.stickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.stickers"
@@ -51470,7 +51861,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.reactions"
@@ -51641,7 +52032,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -53381,7 +53772,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/emojiList"
@@ -53419,7 +53810,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.foundStickerSets"
@@ -53568,7 +53959,7 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash for pagination, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/messages.foundStickerSets"
@@ -55688,7 +56079,12 @@
         },
         "reactions_limit": {
           "name": "reactions_limit",
-          "description": " "
+          "description": "This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of appConfig.reactions_uniq_max¹); this field and the other info set by the method will then be available to users in channelFull² and chatFull³.",
+          "links": [
+            "https://core.telegram.org/api/config#reactions-uniq-max",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/constructor/chatFull"
+          ]
         }
       },
       "errors": [
@@ -57573,10 +57969,17 @@
     },
     "payments.getStarsStatus": {
       "name": "payments.getStarsStatus",
+      "description": [
+        "Get the current Telegram Stars balance¹ of the current account (with peer=inputPeerSelf²), or the stars balance of the bot specified in peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/constructor/inputPeerSelf"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer of which to get the balance."
         }
       },
       "errors": [
@@ -57588,10 +57991,23 @@
       ]
     },
     "payments.getStarsTopupOptions": {
-      "name": "payments.getStarsTopupOptions"
+      "name": "payments.getStarsTopupOptions",
+      "description": [
+        "Obtain a list of Telegram Stars topup options »¹ as starsTopupOption² constructors."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#buying-stars",
+        "https://core.telegram.org/constructor/starsTopupOption"
+      ]
     },
     "payments.getStarsTransactions": {
       "name": "payments.getStarsTransactions",
+      "description": [
+        "Fetch Telegram Stars transactions¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#balance-and-transaction-history"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -57606,7 +58022,10 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination, obtained from the returned next_offset, initially an empty string »¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "outbound": {
           "name": "outbound",
@@ -57614,7 +58033,10 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Fetch the transaction history of the peer (inputPeerSelf¹ or a bot we own).",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerSelf"
+          ]
         }
       },
       "errors": [
@@ -57658,14 +58080,21 @@
     },
     "payments.refundStarsCharge": {
       "name": "payments.refundStarsCharge",
+      "description": [
+        "Refund a Telegram Stars¹ transaction, see here »² for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/payments#6-refunds"
+      ],
       "parameters": {
         "charge_id": {
           "name": "charge_id",
-          "description": " "
+          "description": "Transaction ID."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User to refund."
         }
       },
       "errors": [
@@ -57736,6 +58165,12 @@
     },
     "payments.sendStarsForm": {
       "name": "payments.sendStarsForm",
+      "description": [
+        "Make a payment using Telegram Stars, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#using-stars"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -57746,11 +58181,11 @@
         },
         "form_id": {
           "name": "form_id",
-          "description": " "
+          "description": "Payment form ID"
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         }
       },
       "errors": [
@@ -62031,21 +62466,11 @@
     "users.getIsPremiumRequiredToContact": {
       "name": "users.getIsPremiumRequiredToContact",
       "description": [
-        "Check whether we can write to the specified user (non-Premium¹ users only).",
-        "If a user enables their new_noncontact_peers_require_premium global privacy setting¹, represented in userFull².contact_require_premium, only users that have a premium account, are in our contact list, or already have a private chat with them can write to them in private.",
-        "To easily check whether we can write to a user with this flag enabled, if we haven't yet cached all the required information (for example we don't have the userFull¹ or history of all users while displaying the chat list in the sharing UI) this method may be invoked, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user.",
-        "This list may then be used, for example, to display a lock near the avatar of each user that we cannot write to, with an appropriate tooltip to purchase a Premium¹ subscription.",
-        "Note that this method should only be invoked if we don't have a Premium¹ subscription, only for users whose full info (userFull² + message history information) is not cached yet, as the same info can be computed locally if all the mentioned information is available, and updated automatically using the usual updates³."
+        "Check whether we can write to the specified user (non-Premium¹ users only), see here »² for more info on the full flow."
       ],
       "links": [
         "https://core.telegram.org/api/premium",
-        "https://core.telegram.org/api/privacy#global-privacy-settings",
-        "https://core.telegram.org/constructor/userFull",
-        "https://core.telegram.org/constructor/userFull",
-        "https://core.telegram.org/api/premium",
-        "https://core.telegram.org/api/premium",
-        "https://core.telegram.org/constructor/userFull",
-        "https://core.telegram.org/api/updates"
+        "https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users"
       ],
       "parameters": {
         "id": {
