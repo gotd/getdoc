@@ -9503,7 +9503,10 @@
         },
         "color": {
           "name": "color",
-          "description": " "
+          "description": "A color ID for the folder tag associated to this folder, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/folders#folder-tags"
+          ]
         },
         "contacts": {
           "name": "contacts",
@@ -9606,7 +9609,10 @@
       "fields": {
         "color": {
           "name": "color",
-          "description": " "
+          "description": "A color ID for the folder tag associated to this folder, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/folders#folder-tags"
+          ]
         },
         "emoticon": {
           "name": "emoticon",
@@ -11086,8 +11092,10 @@
         },
         "hide_read_marks": {
           "name": "hide_read_marks",
-          "description": "If set, (only) users that cannot see our exact last online date due to the current value of the inputPrivacyKeyStatusTimestamp¹ key will receive a 403 USER_PRIVACY_RESTRICTED error when invoking messages.getOutboxReadDate² to fetch the exact read date of one of their messages. The userFull³.read_dates_private flag will be set for users that have this flag enabled.",
+          "description": "If this flag is set, the inputPrivacyKeyStatusTimestamp¹ key will also apply to the ability to use messages.getOutboxReadDate² on messages sent to us. Meaning, users that cannot see our exact last online date due to the current value of the inputPrivacyKeyStatusTimestamp³ key will receive a 403 USER_PRIVACY_RESTRICTED error when invoking messages.getOutboxReadDate⁴ to fetch the exact read date of a message they sent to us. The userFull⁵.read_dates_private flag will be set for users that have this flag enabled.",
           "links": [
+            "https://core.telegram.org/constructor/inputPrivacyKeyStatusTimestamp",
+            "https://core.telegram.org/method/messages.getOutboxReadDate",
             "https://core.telegram.org/constructor/inputPrivacyKeyStatusTimestamp",
             "https://core.telegram.org/method/messages.getOutboxReadDate",
             "https://core.telegram.org/constructor/userFull"
@@ -11670,7 +11678,10 @@
         },
         "colors": {
           "name": "colors",
-          "description": "Light mode palette. Will be empty for IDs 0 to 6 inclusive, in which case a palette containing a single color from the following colors should be used: red, orange, violet, green, cyan, blue, pink for indexes 0 to 6."
+          "description": "Light mode palette. Will be empty for IDs 0 to 6 inclusive, in which case a palette containing a single color from the following colors should be used: red, orange, violet, green, cyan, blue, pink for indexes 0 to 6 (i.e. the same colors used for randomized fallback message accent colors¹).",
+          "links": [
+            "https://core.telegram.org/api/colors"
+          ]
         },
         "dark_colors": {
           "name": "dark_colors",
@@ -13679,10 +13690,19 @@
     },
     "inputKeyboardButtonRequestPeer": {
       "name": "inputKeyboardButtonRequestPeer",
+      "description": [
+        "Prompts the user to select and share one or more peers with the bot using messages.sendBotRequestedPeer¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+      ],
       "fields": {
         "button_id": {
           "name": "button_id",
-          "description": " "
+          "description": "Button ID, to be passed to messages.sendBotRequestedPeer¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -13693,27 +13713,27 @@
         },
         "max_quantity": {
           "name": "max_quantity",
-          "description": " "
+          "description": "Maximum number of peers that can be chosen."
         },
         "name_requested": {
           "name": "name_requested",
-          "description": " "
+          "description": "Set this flag to request the peer's name."
         },
         "peer_type": {
           "name": "peer_type",
-          "description": " "
+          "description": "Filtering criteria to use for the peer selection list shown to the user. The list should display all existing peers of the specified type, and should also offer an option for the user to create and immediately use one or more (up to max_quantity) peers of the specified type, if needed."
         },
         "photo_requested": {
           "name": "photo_requested",
-          "description": " "
+          "description": "Set this flag to request the peer's photo (if any)."
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Button text"
         },
         "username_requested": {
           "name": "username_requested",
-          "description": " "
+          "description": "Set this flag to request the peer's @username (if any)."
         }
       }
     },
@@ -16439,7 +16459,7 @@
         },
         "max_quantity": {
           "name": "max_quantity",
-          "description": "Maximum number of peers that can be chosne."
+          "description": "Maximum number of peers that can be chosen."
         },
         "peer_type": {
           "name": "peer_type",
@@ -17132,7 +17152,7 @@
         },
         "offline": {
           "name": "offline",
-          "description": " "
+          "description": "If set, the message was sent because of a scheduled action by the message sender, for example, as away, or a greeting service message."
         },
         "out": {
           "name": "out",
@@ -17823,7 +17843,7 @@
     "messageActionRequestedPeer": {
       "name": "messageActionRequestedPeer",
       "description": [
-        "Contains info about one or more peers that the user shared with the bot after clicking on a keyboardButtonRequestPeer¹ button."
+        "Contains info about one or more peers that the we (the user) shared with the bot after clicking on a keyboardButtonRequestPeer¹ button (service message sent by the user)."
       ],
       "links": [
         "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
@@ -17844,14 +17864,23 @@
     },
     "messageActionRequestedPeerSentMe": {
       "name": "messageActionRequestedPeerSentMe",
+      "description": [
+        "Contains info about one or more peers that the a user shared with the me (the bot) after clicking on a keyboardButtonRequestPeer¹ button (service message received by the bot)."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+      ],
       "fields": {
         "button_id": {
           "name": "button_id",
-          "description": " "
+          "description": "button_id contained in the keyboardButtonRequestPeer¹",
+          "links": [
+            "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
+          ]
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "Info about the shared peers."
         }
       }
     },
@@ -20199,7 +20228,7 @@
     "messages.dialogFilters": {
       "name": "messages.dialogFilters",
       "description": [
-        "Folder¹ information"
+        "Folder and folder tags¹ information"
       ],
       "links": [
         "https://core.telegram.org/api/folders"
@@ -20218,7 +20247,10 @@
         },
         "tags_enabled": {
           "name": "tags_enabled",
-          "description": " "
+          "description": "Whether folder tags¹ are enabled.",
+          "links": [
+            "https://core.telegram.org/api/folders#folder-tags"
+          ]
         }
       }
     },
@@ -21728,10 +21760,13 @@
     },
     "outboxReadDate": {
       "name": "outboxReadDate",
+      "description": [
+        "Exact read date of a private message we sent to another user."
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "UNIX timestamp with the read date."
         }
       }
     },
@@ -23650,7 +23685,7 @@
         },
         "custom_parameters": {
           "name": "custom_parameters",
-          "description": " "
+          "description": "Custom JSON-encoded call parameters to be passed to tgcalls."
         },
         "date": {
           "name": "date",
@@ -25535,10 +25570,19 @@
     },
     "requestedPeerChannel": {
       "name": "requestedPeerChannel",
+      "description": [
+        "Info about a channel/supergroup¹, shared by a user with the currently logged in bot using messages.sendBotRequestedPeer².",
+        "All fields except the ID are optional, and will be populated if present on the chosen channel/supergroup, according to the parameters of the requesting inputKeyboardButtonRequestPeer¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer",
+        "https://core.telegram.org/constructor/inputKeyboardButtonRequestPeer"
+      ],
       "fields": {
         "channel_id": {
           "name": "channel_id",
-          "description": " "
+          "description": "Channel/supergroup ID."
         },
         "flags": {
           "name": "flags",
@@ -25549,24 +25593,33 @@
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Channel/supergroup photo."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Channel/supergroup title."
         },
         "username": {
           "name": "username",
-          "description": " "
+          "description": "Channel/supergroup username."
         }
       }
     },
     "requestedPeerChat": {
       "name": "requestedPeerChat",
+      "description": [
+        "Info about a chat¹, shared by a user with the currently logged in bot using messages.sendBotRequestedPeer².",
+        "All fields except the ID are optional, and will be populated if present on the chosen chat, according to the parameters of the requesting inputKeyboardButtonRequestPeer¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer",
+        "https://core.telegram.org/constructor/inputKeyboardButtonRequestPeer"
+      ],
       "fields": {
         "chat_id": {
           "name": "chat_id",
-          "description": " "
+          "description": "Chat ID."
         },
         "flags": {
           "name": "flags",
@@ -25577,20 +25630,28 @@
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Chat photo."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Chat title."
         }
       }
     },
     "requestedPeerUser": {
       "name": "requestedPeerUser",
+      "description": [
+        "Info about a user, shared by a user with the currently logged in bot using messages.sendBotRequestedPeer¹.",
+        "All fields except the ID are optional, and will be populated if present on the chosen user, according to the parameters of the requesting inputKeyboardButtonRequestPeer¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer",
+        "https://core.telegram.org/constructor/inputKeyboardButtonRequestPeer"
+      ],
       "fields": {
         "first_name": {
           "name": "first_name",
-          "description": " "
+          "description": "First name."
         },
         "flags": {
           "name": "flags",
@@ -25601,19 +25662,19 @@
         },
         "last_name": {
           "name": "last_name",
-          "description": " "
+          "description": "Last name."
         },
         "photo": {
           "name": "photo",
-          "description": " "
+          "description": "Profile photo."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID."
         },
         "username": {
           "name": "username",
-          "description": " "
+          "description": "Username."
         }
       }
     },
@@ -32988,7 +33049,13 @@
         },
         "contact_require_premium": {
           "name": "contact_require_premium",
-          "description": " "
+          "description": "If set, we can only write to this user if they have already sent some messages to us, if we are subscribed to Telegram Premium¹, or if they're a mutual contact (user².mutual_contact).  All the secondary conditions listed above must be checked separately to verify whether we can still write to the user, even if this flag is set (i.e. a mutual contact will have this flag set even if we can still write to them, and so on...); to avoid doing these extra checks if we haven't yet cached all the required information (for example while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked instead, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user. To set this flag for ourselves invoke account.setGlobalPrivacySettings⁴, setting the settings.new_noncontact_peers_require_premium flag.",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/user",
+            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
+            "https://core.telegram.org/method/account.setGlobalPrivacySettings"
+          ]
         },
         "deleted": {
           "name": "deleted",
@@ -33326,7 +33393,7 @@
           "description": "If set, we cannot fetch the exact read date of messages we send to this user using messages.getOutboxReadDate¹.  The exact read date of messages might still be unavailable for other reasons, see here »² for more info.  To set this flag for ourselves invoke account.setGlobalPrivacySettings³, setting the settings.hide_read_marks flag.",
           "links": [
             "https://core.telegram.org/method/messages.getOutboxReadDate",
-            "https://core.telegram.org/constructor/globalPrivacySettings",
+            "https://core.telegram.org/method/messages.getOutboxReadDate",
             "https://core.telegram.org/method/account.setGlobalPrivacySettings"
           ]
         },
@@ -34043,7 +34110,10 @@
         },
         "type": {
           "name": "type",
-          "description": "Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else"
+          "description": "Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else, see here »¹ for a full list.",
+          "links": [
+            "https://github.com/telegramdesktop/tdesktop/blob/4f7a124f3e85f3f61d862b94fb5a45236976f38f/Telegram/SourceFiles/data/data_web_page.cpp#L127"
+          ]
         },
         "url": {
           "name": "url",
@@ -34053,10 +34123,22 @@
     },
     "webPageAttributeStickerSet": {
       "name": "webPageAttributeStickerSet",
+      "description": [
+        "Contains info about a stickerset »¹, for a webPage² preview of a stickerset deep link »³ (the webPage⁴ will have a type of telegram_stickerset)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers",
+        "https://core.telegram.org/constructor/webPage",
+        "https://core.telegram.org/api/links#stickerset-links",
+        "https://core.telegram.org/constructor/webPage"
+      ],
       "fields": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "Whether this i s a custom emoji stickerset¹.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -34067,11 +34149,11 @@
         },
         "stickers": {
           "name": "stickers",
-          "description": " "
+          "description": "A subset of the stickerset in the stickerset."
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Whether the color of this TGS custom emoji stickerset should be changed to the text color when used in messages, the accent color if used as emoji status, white on chat photos, or another appropriate color based on context."
         }
       }
     },
@@ -35920,7 +36002,10 @@
       ]
     },
     "OutboxReadDate": {
-      "name": "OutboxReadDate"
+      "name": "OutboxReadDate",
+      "description": [
+        "Exact read date of a private message we sent to another user."
+      ]
     },
     "Page": {
       "name": "Page",
@@ -36370,7 +36455,13 @@
       ]
     },
     "RequestedPeer": {
-      "name": "RequestedPeer"
+      "name": "RequestedPeer",
+      "description": [
+        "Info about a peer, shared by a user with the currently logged in bot using messages.sendBotRequestedPeer¹."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+      ]
     },
     "RestrictionReason": {
       "name": "RestrictionReason",
@@ -46938,18 +47029,21 @@
     },
     "invokeWithApnsSecret": {
       "name": "invokeWithApnsSecret",
+      "description": [
+        "Official clients only, invoke with Apple push verification."
+      ],
       "parameters": {
         "nonce": {
           "name": "nonce",
-          "description": " "
+          "description": "Nonce."
         },
         "query": {
           "name": "query",
-          "description": " "
+          "description": "Query."
         },
         "secret": {
           "name": "secret",
-          "description": " "
+          "description": "Secret."
         }
       },
       "bot_can_use": true
@@ -46978,18 +47072,21 @@
     },
     "invokeWithGooglePlayIntegrity": {
       "name": "invokeWithGooglePlayIntegrity",
+      "description": [
+        "Official clients only, invoke with Google Play Integrity token."
+      ],
       "parameters": {
         "nonce": {
           "name": "nonce",
-          "description": " "
+          "description": "Nonce."
         },
         "query": {
           "name": "query",
-          "description": " "
+          "description": "Query."
         },
         "token": {
           "name": "token",
-          "description": " "
+          "description": "Token."
         }
       },
       "bot_can_use": true
@@ -50964,14 +51061,28 @@
     },
     "messages.getOutboxReadDate": {
       "name": "messages.getOutboxReadDate",
+      "description": [
+        "Get the exact read date of one of our messages, sent to a private chat with another user.",
+        "Can be only done for private outgoing messages not older than appConfig.pm_read_date_expire_period »¹.",
+        "If the peer's userFull¹.read_dates_private flag is set, we will not be able to fetch the exact read date of messages we send to them, and a USER_PRIVACY_RESTRICTED RPC error will be emitted.",
+        "The exact read date of messages might still be unavailable for other reasons, see here »² for more info.",
+        "To set userFull³.read_dates_private for ourselves invoke account.setGlobalPrivacySettings⁴, setting the settings.hide_read_marks flag."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#pm-read-date-expire-period",
+        "https://core.telegram.org/constructor/userFull",
+        "https://core.telegram.org/constructor/globalPrivacySettings",
+        "https://core.telegram.org/constructor/userFull",
+        "https://core.telegram.org/method/account.setGlobalPrivacySettings"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "The message ID."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The user to whom we sent the message."
         }
       },
       "errors": [
@@ -56921,10 +57032,16 @@
     },
     "messages.toggleDialogFilterTags": {
       "name": "messages.toggleDialogFilterTags",
+      "description": [
+        "Enable or disable folder tags »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/folders#folder-tags"
+      ],
       "parameters": {
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Enable or disable folder tags."
         }
       }
     },
