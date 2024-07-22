@@ -5435,7 +5435,10 @@
       "fields": {
         "description": {
           "name": "description",
-          "description": "Profile introduction"
+          "description": "Profile introduction (max intro_description_length_limit »¹ UTF-8 characters).",
+          "links": [
+            "https://core.telegram.org/api/config#intro-description-length-limit"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -5453,7 +5456,10 @@
         },
         "title": {
           "name": "title",
-          "description": "Title of the introduction message"
+          "description": "Title of the introduction message (max intro_title_length_limit »¹ UTF-8 characters).",
+          "links": [
+            "https://core.telegram.org/api/config#intro-title-length-limit"
+          ]
         }
       }
     },
@@ -15047,7 +15053,10 @@
     "inputPrivacyKeyVoiceMessages": {
       "name": "inputPrivacyKeyVoiceMessages",
       "description": [
-        "Whether people can send you voice messages"
+        "Whether people can send you voice messages or round videos (Premium¹ users only)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium"
       ]
     },
     "inputPrivacyValueAllowAll": {
@@ -21587,7 +21596,7 @@
           "name": "user_id",
           "description": "ID of the user. If neither of the flags below are set, we could not add the user because of their privacy settings, and we can create and directly share an invite link¹ with them using a normal message, instead.",
           "links": [
-            "https://core.telegram.org#invite-links"
+            "https://core.telegram.org/api/invites#invite-links"
           ]
         }
       }
@@ -26815,7 +26824,7 @@
           "name": "can_report",
           "description": "Whether this message can be reported as specified here »¹.",
           "links": [
-            "https://core.telegram.org/api/sponsored-message#reporting-sponsored-messages"
+            "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
           ]
         },
         "color": {
