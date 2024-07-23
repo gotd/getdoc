@@ -5649,7 +5649,10 @@
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Access hash"
+          "description": "Access hash, see here »¹ for more info",
+          "links": [
+            "https://core.telegram.org/api/peers#access-hash"
+          ]
         },
         "admin_rights": {
           "name": "admin_rights",
@@ -5751,7 +5754,10 @@
         },
         "id": {
           "name": "id",
-          "description": "ID of the channel"
+          "description": "ID of the channel, see here »¹ for more info",
+          "links": [
+            "https://core.telegram.org/api/peers#peer-id"
+          ]
         },
         "join_request": {
           "name": "join_request",
@@ -7671,7 +7677,10 @@
         },
         "id": {
           "name": "id",
-          "description": "ID of the group"
+          "description": "ID of the group, see here »¹ for more info",
+          "links": [
+            "https://core.telegram.org/api/peers#peer-id"
+          ]
         },
         "left": {
           "name": "left",
@@ -32975,27 +32984,45 @@
     "user": {
       "name": "user",
       "description": [
-        "Indicates info about a certain user"
+        "Indicates info about a certain user.",
+        "Unless specified otherwise, when updating the local peer database¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).",
+        "See here »¹ for an implementation of the logic to use when updating the local user peer database²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/peers",
+        "https://github.com/tdlib/td/blob/cb164927417f22811c74cd8678ed4a5ab7cb80ba/td/telegram/UserManager.cpp#L2267",
+        "https://core.telegram.org/api/peers"
       ],
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Access hash of the user"
+          "description": "Access hash of the user, see here »¹ for more info. If this flag is set, when updating the local peer database², generate a virtual flag called min_access_hash, which is: - Set to true if min is set AND    - The phone flag is not set OR    - The phone flag is set and the associated phone number string is non-empty - Set to false otherwise. Then, apply both access_hash and min_access_hash to the local database if: - min_access_hash is false OR - min_access_hash is true AND    - There is no locally cached object for this user OR    - There is no access_hash in the local cache OR    - The cached object's min_access_hash is also true If the final merged object stored to the database has the min_access_hash field set to true, the related access_hash is only suitable to use in inputPeerPhotoFileLocation »³, to directly download the profile pictures⁴ of users, everywhere else a inputPeer*FromMessage constructor will have to be generated as specified here »⁵. Bots can also use min access hashes in some conditions, by passing 0 instead of the min access hash.",
+          "links": [
+            "https://core.telegram.org/api/peers#access-hash",
+            "https://core.telegram.org/api/peers",
+            "https://core.telegram.org/constructor/inputPeerPhotoFileLocation",
+            "https://core.telegram.org/api/files",
+            "https://core.telegram.org/api/min"
+          ]
         },
         "apply_min_photo": {
           "name": "apply_min_photo",
-          "description": "If set, the profile picture for this user should be refetched"
+          "description": "If set and min is set, the value of photo can be used to update the local database, see the documentation of that flag for more info."
         },
         "attach_menu_enabled": {
           "name": "attach_menu_enabled",
-          "description": "Whether we installed the attachment menu web app¹ offered by this bot",
+          "description": "Whether we installed the attachment menu web app¹ offered by this bot. When updating the local peer database², do not apply changes to this field if the min flag is set.",
           "links": [
-            "https://core.telegram.org/api/bots/attach"
+            "https://core.telegram.org/api/bots/attach",
+            "https://core.telegram.org/api/peers"
           ]
         },
         "bot": {
           "name": "bot",
-          "description": "Is this user a bot?"
+          "description": "Is this user a bot? Changes to this flag should invalidate the local userFull¹ cache for this user ID.",
+          "links": [
+            "https://core.telegram.org/constructor/userFull"
+          ]
         },
         "bot_attach_menu": {
           "name": "bot_attach_menu",
@@ -33013,7 +33040,11 @@
         },
         "bot_can_edit": {
           "name": "bot_can_edit",
-          "description": "Whether we can edit the profile picture, name, about text and description of this bot because we own it."
+          "description": "Whether we can edit the profile picture, name, about text and description of this bot because we own it. When updating the local peer database¹, do not apply changes to this field if the min flag is set. Changes to this flag (if min is not set) should invalidate the local userFull² cache for this user ID.",
+          "links": [
+            "https://core.telegram.org/api/peers",
+            "https://core.telegram.org/constructor/userFull"
+          ]
         },
         "bot_chat_history": {
           "name": "bot_chat_history",
@@ -33021,8 +33052,9 @@
         },
         "bot_info_version": {
           "name": "bot_info_version",
-          "description": "Version of the bot_info field in userFull¹, incremented every time it changes",
+          "description": "Version of the bot_info field in userFull¹, incremented every time it changes. Changes to this flag should invalidate the local userFull² cache for this user ID.",
           "links": [
+            "https://core.telegram.org/constructor/userFull",
             "https://core.telegram.org/constructor/userFull"
           ]
         },
@@ -33040,9 +33072,10 @@
         },
         "close_friend": {
           "name": "close_friend",
-          "description": "Whether we marked this user as a close friend, see here » for more info¹",
+          "description": "Whether we marked this user as a close friend, see here » for more info¹. When updating the local peer database², do not apply changes to this field if the min flag is set.",
           "links": [
-            "https://core.telegram.org/api/privacy"
+            "https://core.telegram.org/api/privacy",
+            "https://core.telegram.org/api/peers"
           ]
         },
         "color": {
@@ -33054,7 +33087,10 @@
         },
         "contact": {
           "name": "contact",
-          "description": "Whether this user is a contact"
+          "description": "Whether this user is a contact When updating the local peer database¹, do not apply changes to this field if the min flag is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "contact_require_premium": {
           "name": "contact_require_premium",
@@ -33083,7 +33119,10 @@
         },
         "first_name": {
           "name": "first_name",
-          "description": "First name"
+          "description": "First name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -33101,7 +33140,10 @@
         },
         "id": {
           "name": "id",
-          "description": "ID of the user"
+          "description": "ID of the user, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/peers#peer-id"
+          ]
         },
         "lang_code": {
           "name": "lang_code",
@@ -33109,7 +33151,10 @@
         },
         "last_name": {
           "name": "last_name",
-          "description": "Last name"
+          "description": "Last name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "min": {
           "name": "min",
@@ -33120,19 +33165,33 @@
         },
         "mutual_contact": {
           "name": "mutual_contact",
-          "description": "Whether this user is a mutual contact"
+          "description": "Whether this user is a mutual contact. When updating the local peer database¹, do not apply changes to this field if the min flag is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "phone": {
           "name": "phone",
-          "description": "Phone number"
+          "description": "Phone number. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "photo": {
           "name": "photo",
-          "description": "Profile picture of user"
+          "description": "Profile picture of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The apply_min_photo flag is set OR    - The min flag of the locally cached user entry is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "premium": {
           "name": "premium",
-          "description": "Whether this user is a Telegram Premium user"
+          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - help.getConfig² - messages.getTopReactions³ if the bot flag is not set",
+          "links": [
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/method/help.getConfig",
+            "https://core.telegram.org/method/messages.getTopReactions"
+          ]
         },
         "profile_color": {
           "name": "profile_color",
@@ -33159,13 +33218,18 @@
         },
         "status": {
           "name": "status",
-          "description": "Online status of user"
+          "description": "Online status of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set OR    - The locally cached user entry is equal to userStatusEmpty².",
+          "links": [
+            "https://core.telegram.org/api/peers",
+            "https://core.telegram.org/constructor/userStatusEmpty"
+          ]
         },
         "stories_hidden": {
           "name": "stories_hidden",
-          "description": "Whether we have hidden »¹ all active stories of this user.",
+          "description": "Whether we have hidden »¹ all active stories of this user. When updating the local peer database², do not apply changes to this field if the min flag is set.",
           "links": [
-            "https://core.telegram.org/api/stories#hiding-stories-of-other-users"
+            "https://core.telegram.org/api/stories#hiding-stories-of-other-users",
+            "https://core.telegram.org/api/peers"
           ]
         },
         "stories_max_id": {
@@ -33185,11 +33249,18 @@
         },
         "username": {
           "name": "username",
-          "description": "Username"
+          "description": "Username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "links": [
+            "https://core.telegram.org/api/peers"
+          ]
         },
         "usernames": {
           "name": "usernames",
-          "description": "Additional usernames"
+          "description": "Additional usernames. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set. Changes to this flag (if the above conditions are respected) should invalidate the local userFull² cache for this user ID.",
+          "links": [
+            "https://core.telegram.org/api/peers",
+            "https://core.telegram.org/constructor/userFull"
+          ]
         },
         "verified": {
           "name": "verified",
