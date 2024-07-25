@@ -5870,7 +5870,7 @@
         },
         "username": {
           "name": "username",
-          "description": "Username"
+          "description": "Main active username."
         },
         "usernames": {
           "name": "usernames",
@@ -15053,10 +15053,14 @@
       "name": "inputPrivacyKeyStatusTimestamp",
       "description": [
         "Whether people will be able to see our exact last online timestamp.",
-        "Note that if we decide to hide our exact last online timestamp to someone and we do not have a Premium¹ subscription, we won't be able to see the exact last online timestamp of any user, including those that do share it with us."
+        "Note that if we decide to hide our exact last online timestamp to someone (i.e., users A, B, C, or all users) and we do not have a Premium¹ subscription, we won't be able to see the exact last online timestamp of those users (A, B, C, or all users), even if those users do share it with us.",
+        "If those users do share their exact online status with us, but we can't see it due to the reason mentioned above, the by_me flag of userStatusRecently¹, userStatusLastWeek², userStatusLastMonth³ will be set."
       ],
       "links": [
-        "https://core.telegram.org/api/premium"
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/constructor/userStatusRecently",
+        "https://core.telegram.org/constructor/userStatusLastWeek",
+        "https://core.telegram.org/constructor/userStatusLastMonth"
       ]
     },
     "inputPrivacyKeyVoiceMessages": {
@@ -23699,7 +23703,7 @@
         },
         "connections": {
           "name": "connections",
-          "description": "List of endpoints the user can connect to to exchange call data"
+          "description": "List of endpoints the user can connect to exchange call data"
         },
         "custom_parameters": {
           "name": "custom_parameters",
@@ -24996,10 +25000,14 @@
       "name": "privacyKeyStatusTimestamp",
       "description": [
         "Whether we can see the last online timestamp of this user.",
-        "Note that if we decide to hide our exact last online timestamp to someone and we do not have a Premium¹ subscription, we won't be able to see the exact last online timestamp of any user, including those that do share it with us."
+        "Note that if we decide to hide our exact last online timestamp to someone (i.e., users A, B, C, or all users) and we do not have a Premium¹ subscription, we won't be able to see the exact last online timestamp of those users (A, B, C, or all users), even if those users do share it with us.",
+        "If those users do share their exact online status with us, but we can't see it due to the reason mentioned above, the by_me flag of userStatusRecently¹, userStatusLastWeek², userStatusLastMonth³ will be set."
       ],
       "links": [
-        "https://core.telegram.org/api/premium"
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/constructor/userStatusRecently",
+        "https://core.telegram.org/constructor/userStatusLastWeek",
+        "https://core.telegram.org/constructor/userStatusLastMonth"
       ]
     },
     "privacyKeyVoiceMessages": {
@@ -32996,7 +33004,7 @@
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Access hash of the user, see here »¹ for more info. If this flag is set, when updating the local peer database², generate a virtual flag called min_access_hash, which is: - Set to true if min is set AND    - The phone flag is not set OR    - The phone flag is set and the associated phone number string is non-empty - Set to false otherwise. Then, apply both access_hash and min_access_hash to the local database if: - min_access_hash is false OR - min_access_hash is true AND    - There is no locally cached object for this user OR    - There is no access_hash in the local cache OR    - The cached object's min_access_hash is also true If the final merged object stored to the database has the min_access_hash field set to true, the related access_hash is only suitable to use in inputPeerPhotoFileLocation »³, to directly download the profile pictures⁴ of users, everywhere else a inputPeer*FromMessage constructor will have to be generated as specified here »⁵. Bots can also use min access hashes in some conditions, by passing 0 instead of the min access hash.",
+          "description": "Access hash of the user, see here »¹ for more info. If this flag is set, when updating the local peer database², generate a virtual flag called min_access_hash, which is: - Set to true if min is set AND - The phone flag is not set OR - The phone flag is set and the associated phone number string is non-empty - Set to false otherwise. Then, apply both access_hash and min_access_hash to the local database if: - min_access_hash is false OR - min_access_hash is true AND - There is no locally cached object for this user OR - There is no access_hash in the local cache OR - The cached object's min_access_hash is also true If the final merged object stored to the database has the min_access_hash field set to true, the related access_hash is only suitable to use in inputPeerPhotoFileLocation »³, to directly download the profile pictures⁴ of users, everywhere else a inputPeer*FromMessage constructor will have to be generated as specified here »⁵. Bots can also use min access hashes in some conditions, by passing 0 instead of the min access hash.",
           "links": [
             "https://core.telegram.org/api/peers#access-hash",
             "https://core.telegram.org/api/peers",
@@ -33119,7 +33127,7 @@
         },
         "first_name": {
           "name": "first_name",
-          "description": "First name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "description": "First name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
@@ -33151,7 +33159,7 @@
         },
         "last_name": {
           "name": "last_name",
-          "description": "Last name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "description": "Last name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
@@ -33172,21 +33180,21 @@
         },
         "phone": {
           "name": "phone",
-          "description": "Phone number. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "description": "Phone number. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
         },
         "photo": {
           "name": "photo",
-          "description": "Profile picture of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The apply_min_photo flag is set OR    - The min flag of the locally cached user entry is set.",
+          "description": "Profile picture of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The apply_min_photo flag is set OR - The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
         },
         "premium": {
           "name": "premium",
-          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - help.getConfig² - messages.getTopReactions³ if the bot flag is not set",
+          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - help.getConfig²    - messages.getTopReactions³ if the bot flag is not set",
           "links": [
             "https://core.telegram.org/constructor/userFull",
             "https://core.telegram.org/method/help.getConfig",
@@ -33218,7 +33226,7 @@
         },
         "status": {
           "name": "status",
-          "description": "Online status of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set OR    - The locally cached user entry is equal to userStatusEmpty².",
+          "description": "Online status of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set OR - The locally cached user entry is equal to userStatusEmpty².",
           "links": [
             "https://core.telegram.org/api/peers",
             "https://core.telegram.org/constructor/userStatusEmpty"
@@ -33249,14 +33257,14 @@
         },
         "username": {
           "name": "username",
-          "description": "Username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set.",
+          "description": "Main active username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
         },
         "usernames": {
           "name": "usernames",
-          "description": "Additional usernames. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND    - The min flag of the locally cached user entry is set. Changes to this flag (if the above conditions are respected) should invalidate the local userFull² cache for this user ID.",
+          "description": "Additional usernames. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set. Changes to this flag (if the above conditions are respected) should invalidate the local userFull² cache for this user ID.",
           "links": [
             "https://core.telegram.org/api/peers",
             "https://core.telegram.org/constructor/userFull"
@@ -33606,7 +33614,11 @@
       "fields": {
         "by_me": {
           "name": "by_me",
-          "description": " "
+          "description": "If set, the exact user status of this user is actually available to us, but to view it we must first purchase a Premium¹ subscription, or allow this user to see our exact last online status. See here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/privacyKeyStatusTimestamp"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -33625,7 +33637,11 @@
       "fields": {
         "by_me": {
           "name": "by_me",
-          "description": " "
+          "description": "If set, the exact user status of this user is actually available to us, but to view it we must first purchase a Premium¹ subscription, or allow this user to see our exact last online status. See here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/privacyKeyStatusTimestamp"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -33668,7 +33684,11 @@
       "fields": {
         "by_me": {
           "name": "by_me",
-          "description": " "
+          "description": "If set, the exact user status of this user is actually available to us, but to view it we must first purchase a Premium¹ subscription, or allow this user to see our exact last online status. See here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/privacyKeyStatusTimestamp"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -38002,6 +38022,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
           "type": "PUBLIC_KEY_REQUIRED",
           "description": "A public key is required."
         }
@@ -38240,7 +38265,19 @@
           "name": "link",
           "description": "Info about the link to create."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHATLINKS_TOO_MUCH",
+          "description": "Too many business chat links were created, please delete some older links."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        }
+      ]
     },
     "account.createTheme": {
       "name": "account.createTheme",
@@ -38377,6 +38414,11 @@
           "code": 400,
           "type": "CHATLINK_SLUG_EMPTY",
           "description": "The specified slug is empty."
+        },
+        {
+          "code": 400,
+          "type": "CHATLINK_SLUG_EXPIRED",
+          "description": "The specified business chat link has expired."
         }
       ]
     },
@@ -38415,6 +38457,10 @@
       "errors": [
         {
           "code": 400,
+          "type": "BOT_NOT_CONNECTED_YET"
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -38446,6 +38492,11 @@
           "code": 400,
           "type": "CHATLINK_SLUG_EMPTY",
           "description": "The specified slug is empty."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -38514,6 +38565,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        },
         {
           "code": 400,
           "type": "PUBLIC_KEY_REQUIRED",
@@ -39295,6 +39351,11 @@
           "code": 400,
           "type": "ORDER_INVALID",
           "description": "The specified username order is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_NOT_MODIFIED",
+          "description": "The username was not modified."
         }
       ]
     },
@@ -39503,6 +39564,11 @@
           "code": 400,
           "type": "CHATLINK_SLUG_EMPTY",
           "description": "The specified slug is empty."
+        },
+        {
+          "code": 400,
+          "type": "CHATLINK_SLUG_EXPIRED",
+          "description": "The specified business chat link has expired."
         }
       ]
     },
@@ -39576,8 +39642,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.saveRingtone": {
       "name": "account.saveRingtone",
@@ -39603,7 +39668,14 @@
           "name": "unsave",
           "description": "Whether to add or delete the notification sound"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "RINGTONE_INVALID",
+          "description": "The specified ringtone is invalid."
+        }
+      ]
     },
     "account.saveSecureValue": {
       "name": "account.saveSecureValue",
@@ -39635,6 +39707,11 @@
           "code": 400,
           "type": "PASSWORD_REQUIRED",
           "description": "A 2FA password must be configured to use Telegram Passport."
+        },
+        {
+          "code": 400,
+          "type": "SECURE_SECRET_REQUIRED",
+          "description": "A secure secret is required."
         }
       ]
     },
@@ -39652,7 +39729,14 @@
           "name": "unsave",
           "description": "Unsave"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "THEME_INVALID",
+          "description": "Invalid theme provided."
+        }
+      ]
     },
     "account.saveWallPaper": {
       "name": "account.saveWallPaper",
@@ -40042,6 +40126,11 @@
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_NOT_MODIFIED",
+          "description": "The username was not modified."
         }
       ]
     },
@@ -40098,7 +40187,14 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BIRTHDAY_INVALID",
+          "description": "An invalid age was specified, must be between 0 and 150 years."
+        }
+      ]
     },
     "account.updateBusinessAwayMessage": {
       "name": "account.updateBusinessAwayMessage",
@@ -40223,7 +40319,18 @@
       "errors": [
         {
           "code": 400,
-          "type": "TIMEZONE_INVALID"
+          "type": "BUSINESS_WORK_HOURS_EMPTY",
+          "description": "No work hours were specified."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_WORK_HOURS_PERIOD_INVALID",
+          "description": "The specified work hours are invalid, see here » for the exact requirements."
+        },
+        {
+          "code": 400,
+          "type": "TIMEZONE_INVALID",
+          "description": "The specified timezone does not exist."
         }
       ]
     },
@@ -40265,6 +40372,11 @@
           "code": 400,
           "type": "COLOR_INVALID",
           "description": "The specified color palette ID was invalid."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -40303,7 +40415,23 @@
           "name": "recipients",
           "description": "Configuration for the business connection"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_BUSINESS_MISSING",
+          "description": "The specified bot is not a business bot (the user.bot_business flag is not set)."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_RECIPIENTS_EMPTY"
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        }
+      ]
     },
     "account.updateDeviceLocked": {
       "name": "account.updateDeviceLocked",
@@ -40637,7 +40765,14 @@
           "name": "mime_type",
           "description": "MIME type of file"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "RINGTONE_MIME_INVALID",
+          "description": "The MIME type for the ringtone is invalid."
+        }
+      ]
     },
     "account.uploadTheme": {
       "name": "account.uploadTheme",
@@ -40677,6 +40812,11 @@
           "code": 400,
           "type": "THEME_FILE_INVALID",
           "description": "Invalid theme file provided."
+        },
+        {
+          "code": 400,
+          "type": "THEME_MIME_INVALID",
+          "description": "The theme's MIME type is invalid."
         }
       ]
     },
@@ -40754,6 +40894,11 @@
           "code": 400,
           "type": "EMAIL_VERIFY_EXPIRED",
           "description": "The verification email has expired."
+        },
+        {
+          "code": 400,
+          "type": "PHONE_NUMBER_INVALID",
+          "description": "The phone number is invalid."
         }
       ]
     },
@@ -40983,6 +41128,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CODE_EMPTY",
+          "description": "The provided code is empty."
+        },
         {
           "code": 400,
           "type": "PASSWORD_RECOVERY_EXPIRED",
@@ -41575,6 +41725,11 @@
           "code": 400,
           "type": "SMS_CODE_CREATE_FAILED",
           "description": "An error occurred while creating the SMS code."
+        },
+        {
+          "code": 406,
+          "type": "UPDATE_APP_TO_LOGIN",
+          "description": "Please update to the latest version of MadelineProto to login."
         }
       ]
     },
@@ -41646,6 +41801,11 @@
           "code": 500,
           "type": "SIGN_IN_FAILED",
           "description": "Failure while signing in."
+        },
+        {
+          "code": 406,
+          "type": "UPDATE_APP_TO_LOGIN",
+          "description": "Please update to the latest version of MadelineProto to login."
         }
       ]
     },
@@ -41672,7 +41832,7 @@
         },
         "no_joined_notifications": {
           "name": "no_joined_notifications",
-          "description": " "
+          "description": "If set, users on Telegram that have already added phone_number to their contacts will not receive signup notifications about this user."
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
@@ -41775,6 +41935,11 @@
           "code": 403,
           "type": "USER_BOT_INVALID",
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -41818,6 +41983,11 @@
           "code": 400,
           "type": "USER_BOT_INVALID",
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -41921,6 +42091,11 @@
           "code": 400,
           "type": "BOT_INVALID",
           "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
+          "type": "DATA_JSON_INVALID",
+          "description": "The provided JSON data is invalid."
         }
       ]
     },
@@ -41944,9 +42119,13 @@
           "code": 400,
           "type": "BOT_INVALID",
           "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_NOT_MODIFIED",
+          "description": "The username was not modified."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.resetBotCommands": {
       "name": "bots.resetBotCommands",
@@ -41968,6 +42147,11 @@
           "code": 400,
           "type": "LANG_CODE_INVALID",
           "description": "The specified language code is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -42002,6 +42186,11 @@
           "code": 403,
           "type": "USER_BOT_INVALID",
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -42026,6 +42215,11 @@
           "code": 400,
           "type": "RIGHTS_NOT_MODIFIED",
           "description": "The new admin rights are equal to the old rights, no change was made."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -42183,6 +42377,11 @@
           "code": 400,
           "type": "BUTTON_URL_INVALID",
           "description": "Button URL invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -42214,6 +42413,11 @@
           "code": 400,
           "type": "BOT_INVALID",
           "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_NOT_MODIFIED",
+          "description": "The username was not modified."
         }
       ]
     },
@@ -42565,7 +42769,13 @@
           "description": "Supergroup or channel"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.deleteChannel": {
       "name": "channels.deleteChannel",
@@ -43090,7 +43300,7 @@
         {
           "code": 400,
           "type": "PASSWORD_MISSING",
-          "description": "You must enable 2FA in order to transfer ownership of a channel."
+          "description": "You must enable 2FA before executing this operation."
         },
         {
           "code": 400,
@@ -43236,6 +43446,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
@@ -43755,8 +43970,7 @@
           "type": "TOPICS_EMPTY",
           "description": "You specified no topic IDs."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getFullChannel": {
       "name": "channels.getFullChannel",
@@ -44439,7 +44653,13 @@
           ]
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.reorderUsernames": {
       "name": "channels.reorderUsernames",
@@ -44461,9 +44681,13 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.reportAntiSpamFalsePositive": {
       "name": "channels.reportAntiSpamFalsePositive",
@@ -44487,7 +44711,13 @@
           ]
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.reportSpam": {
       "name": "channels.reportSpam",
@@ -44565,8 +44795,18 @@
       "errors": [
         {
           "code": 400,
+          "type": "AD_EXPIRED",
+          "description": "The ad has expired (too old or not found)."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -44821,11 +45061,15 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.toggleForum": {
       "name": "channels.toggleForum",
@@ -44848,6 +45092,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_DISCUSSION_UNALLOWED",
           "description": "You can't enable forum topics in a discussion group linked to a channel."
         },
@@ -44856,8 +45105,7 @@
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.toggleJoinRequest": {
       "name": "channels.toggleJoinRequest",
@@ -44969,6 +45217,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid."
         },
@@ -44982,8 +45235,7 @@
           "type": "PARTICIPANTS_TOO_FEW",
           "description": "Not enough participants."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.togglePreHistoryHidden": {
       "name": "channels.togglePreHistoryHidden",
@@ -45151,6 +45403,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -45161,6 +45418,11 @@
         },
         {
           "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
           "type": "USERNAMES_ACTIVE_TOO_MUCH",
           "description": "The maximum number of active usernames was reached."
         },
@@ -45168,6 +45430,11 @@
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
+        },
+        {
+          "code": 400,
+          "type": "USERNAME_NOT_MODIFIED",
+          "description": "The username was not modified."
         }
       ]
     },
@@ -45315,11 +45582,15 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "TOPIC_ID_INVALID",
           "description": "The specified topic ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.updateUsername": {
       "name": "channels.updateUsername",
@@ -45479,8 +45750,7 @@
           "type": "FILTER_NOT_SUPPORTED",
           "description": "The specified filter cannot be used in this context."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.editExportedInvite": {
       "name": "chatlists.editExportedInvite",
@@ -45521,6 +45791,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "FILTER_ID_INVALID",
           "description": "The specified filter ID is invalid."
         },
@@ -45528,9 +45803,23 @@
           "code": 400,
           "type": "FILTER_NOT_SUPPORTED",
           "description": "The specified filter cannot be used in this context."
+        },
+        {
+          "code": 400,
+          "type": "INVITE_SLUG_EMPTY",
+          "description": "The specified invite slug is empty."
+        },
+        {
+          "code": 400,
+          "type": "INVITE_SLUG_EXPIRED",
+          "description": "The specified chat folder link has expired."
+        },
+        {
+          "code": 400,
+          "type": "PEERS_LIST_EMPTY",
+          "description": "The specified list of peers is empty."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.exportChatlistInvite": {
       "name": "chatlists.exportChatlistInvite",
@@ -45612,8 +45901,7 @@
           "type": "INPUT_CHATLIST_INVALID",
           "description": "The specified folder is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.getExportedInvites": {
       "name": "chatlists.getExportedInvites",
@@ -45629,7 +45917,13 @@
           "description": "The folder"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        }
+      ]
     },
     "chatlists.getLeaveChatlistSuggestions": {
       "name": "chatlists.getLeaveChatlistSuggestions",
@@ -45656,8 +45950,7 @@
           "type": "FILTER_NOT_SUPPORTED",
           "description": "The specified filter cannot be used in this context."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.hideChatlistUpdates": {
       "name": "chatlists.hideChatlistUpdates",
@@ -45684,8 +45977,7 @@
           "type": "FILTER_NOT_SUPPORTED",
           "description": "The specified filter cannot be used in this context."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.joinChatlistInvite": {
       "name": "chatlists.joinChatlistInvite",
@@ -45728,8 +46020,7 @@
           "type": "INVITE_SLUG_EXPIRED",
           "description": "The specified chat folder link has expired."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.joinChatlistUpdates": {
       "name": "chatlists.joinChatlistUpdates",
@@ -45764,8 +46055,7 @@
           "type": "FILTER_INCLUDE_EMPTY",
           "description": "The include_peers vector of the filter is empty."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "chatlists.leaveChatlist": {
       "name": "chatlists.leaveChatlist",
@@ -45785,7 +46075,13 @@
           "description": "Also leave the specified channels and groups"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "FILTER_ID_INVALID",
+          "description": "The specified filter ID is invalid."
+        }
+      ]
     },
     "contacts.acceptContact": {
       "name": "contacts.acceptContact",
@@ -46142,6 +46438,11 @@
       },
       "errors": [
         {
+          "code": 406,
+          "type": "BUSINESS_ADDRESS_ACTIVE",
+          "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
+        },
+        {
           "code": 400,
           "type": "GEO_POINT_INVALID",
           "description": "Invalid geoposition provided."
@@ -46297,8 +46598,7 @@
           "type": "IMPORT_TOKEN_INVALID",
           "description": "The specified token is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.importContacts": {
       "name": "contacts.importContacts",
@@ -47005,6 +47305,13 @@
           "description": "Number of pending updates"
         }
       },
+      "errors": [
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
+        }
+      ],
       "bot_can_use": true
     },
     "initConnection": {
@@ -47701,7 +48008,14 @@
           "name": "shortcut",
           "description": "Shorcut name (not ID!)."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        }
+      ]
     },
     "messages.clearAllDrafts": {
       "name": "messages.clearAllDrafts",
@@ -47948,6 +48262,11 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "CHAT_ACTION_FORBIDDEN",
+          "description": "You cannot execute this action."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -48689,6 +49008,11 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "CHAT_ACTION_FORBIDDEN",
+          "description": "You cannot execute this action."
+        },
+        {
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
@@ -49051,6 +49375,11 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
           "code": 400,
           "type": "SHORTCUT_INVALID",
           "description": "The specified shortcut is invalid."
@@ -49388,9 +49717,19 @@
           "description": "The provided peer id is invalid."
         },
         {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
           "code": 406,
           "type": "PRIVACY_PREMIUM_REQUIRED",
           "description": "You need a Telegram Premium subscription to send a message to this user."
+        },
+        {
+          "code": 400,
+          "type": "QUICK_REPLIES_TOO_MUCH",
+          "description": "A maximum of appConfig.quick_replies_limit shortcuts may be created, the limit was reached."
         },
         {
           "code": 400,
@@ -49406,6 +49745,11 @@
           "code": 400,
           "type": "RANDOM_ID_INVALID",
           "description": "A provided random ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MESSAGES_TOO_MUCH",
+          "description": "Each shortcut can contain a maximum of appConfig.quick_reply_messages_limit messages, the limit was reached."
         },
         {
           "code": 400,
@@ -49625,7 +49969,14 @@
           "name": "media",
           "description": "Stickered media"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MEDIA_EMPTY",
+          "description": "The provided media object is invalid."
+        }
+      ]
     },
     "messages.getAvailableEffects": {
       "name": "messages.getAvailableEffects",
@@ -49770,6 +50121,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PASSWORD_MISSING",
+          "description": "You must enable 2FA before executing this operation."
         },
         {
           "code": 400,
@@ -49968,8 +50324,7 @@
       "name": "messages.getDefaultHistoryTTL",
       "description": [
         "Gets the default value of the Time-To-Live setting, applied to all new chats."
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getDefaultTagReactions": {
       "name": "messages.getDefaultTagReactions",
@@ -50201,8 +50556,7 @@
             "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiKeywords": {
       "name": "messages.getEmojiKeywords",
@@ -50272,8 +50626,7 @@
             "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiStatusGroups": {
       "name": "messages.getEmojiStatusGroups",
@@ -50293,8 +50646,7 @@
             "https://core.telegram.org/constructor/messages.emojiGroups"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getEmojiStickerGroups": {
       "name": "messages.getEmojiStickerGroups",
@@ -51915,6 +52267,11 @@
           "code": 400,
           "type": "FILTER_NOT_SUPPORTED",
           "description": "The specified filter cannot be used in this context."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -51965,7 +52322,14 @@
             "https://core.telegram.org/api/saved-messages"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.getSplitRanges": {
       "name": "messages.getSplitRanges",
@@ -52470,7 +52834,14 @@
           "name": "peer",
           "description": "Peer"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.importChatInvite": {
       "name": "messages.importChatInvite",
@@ -52767,7 +53138,14 @@
             "https://core.telegram.org/method/messages.sendWebViewResultMessage"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ]
     },
     "messages.rateTranscribedAudio": {
       "name": "messages.rateTranscribedAudio",
@@ -52852,6 +53230,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
         {
           "code": 400,
           "type": "MAX_DATE_INVALID",
@@ -53128,7 +53511,14 @@
             "https://core.telegram.org/api/business#quick-reply-shortcuts"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        }
+      ]
     },
     "messages.reorderStickerSets": {
       "name": "messages.reorderStickerSets",
@@ -53247,6 +53637,11 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         },
         {
           "code": 400,
@@ -53976,8 +54371,7 @@
           "type": "EMOTICON_EMPTY",
           "description": "The emoji is empty."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.searchEmojiStickerSets": {
       "name": "messages.searchEmojiStickerSets",
@@ -54196,7 +54590,14 @@
           "name": "requested_peers",
           "description": "The chosen peers."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.sendEncrypted": {
       "name": "messages.sendEncrypted",
@@ -54586,9 +54987,19 @@
           "description": "The query ID is empty."
         },
         {
+          "code": 400,
+          "type": "QUICK_REPLIES_TOO_MUCH",
+          "description": "A maximum of appConfig.quick_replies_limit shortcuts may be created, the limit was reached."
+        },
+        {
           "code": 500,
           "type": "RANDOM_ID_DUPLICATE",
           "description": "You provided a random ID that was already used."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MESSAGES_TOO_MUCH",
+          "description": "Each shortcut can contain a maximum of appConfig.quick_reply_messages_limit messages, the limit was reached."
         },
         {
           "code": 400,
@@ -55020,6 +55431,11 @@
         },
         {
           "code": 400,
+          "type": "QUICK_REPLIES_TOO_MUCH",
+          "description": "A maximum of appConfig.quick_replies_limit shortcuts may be created, the limit was reached."
+        },
+        {
+          "code": 400,
           "type": "QUIZ_CORRECT_ANSWERS_EMPTY",
           "description": "No correct quiz answer was specified."
         },
@@ -55061,6 +55477,11 @@
           "code": 400,
           "type": "REPLY_MARKUP_TOO_LONG",
           "description": "The specified reply_markup is too long."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MESSAGES_TOO_MUCH",
+          "description": "Each shortcut can contain a maximum of appConfig.quick_reply_messages_limit messages, the limit was reached."
         },
         {
           "code": 400,
@@ -55283,6 +55704,11 @@
         },
         {
           "code": 400,
+          "type": "BUSINESS_PEER_INVALID",
+          "description": "Messages can't be set to the specified peer through the current business connection."
+        },
+        {
+          "code": 400,
           "type": "BUTTON_DATA_INVALID",
           "description": "The data of one or more of the buttons you provided is invalid."
         },
@@ -55428,6 +55854,11 @@
         },
         {
           "code": 400,
+          "type": "QUICK_REPLIES_TOO_MUCH",
+          "description": "A maximum of appConfig.quick_replies_limit shortcuts may be created, the limit was reached."
+        },
+        {
+          "code": 400,
           "type": "QUOTE_TEXT_INVALID",
           "description": "The specified reply_to.quote_text field is invalid."
         },
@@ -55445,6 +55876,11 @@
           "code": 400,
           "type": "REPLY_MARKUP_TOO_LONG",
           "description": "The specified reply_markup is too long."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MESSAGES_TOO_MUCH",
+          "description": "Each shortcut can contain a maximum of appConfig.quick_reply_messages_limit messages, the limit was reached."
         },
         {
           "code": 400,
@@ -55669,6 +56105,10 @@
         },
         {
           "code": 400,
+          "type": "FILE_REFERENCE_%d_EXPIRED"
+        },
+        {
+          "code": 400,
           "type": "MEDIA_CAPTION_TOO_LONG",
           "description": "The caption is too long."
         },
@@ -55693,6 +56133,11 @@
           "description": "The provided peer id is invalid."
         },
         {
+          "code": 400,
+          "type": "QUICK_REPLIES_TOO_MUCH",
+          "description": "A maximum of appConfig.quick_replies_limit shortcuts may be created, the limit was reached."
+        },
+        {
           "code": 500,
           "type": "RANDOM_ID_DUPLICATE",
           "description": "You provided a random ID that was already used."
@@ -55701,6 +56146,11 @@
           "code": 400,
           "type": "RANDOM_ID_EMPTY",
           "description": "Random ID empty."
+        },
+        {
+          "code": 400,
+          "type": "REPLY_MESSAGES_TOO_MUCH",
+          "description": "Each shortcut can contain a maximum of appConfig.quick_reply_messages_limit messages, the limit was reached."
         },
         {
           "code": 400,
@@ -55771,6 +56221,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -56076,7 +56531,14 @@
           "name": "random_id",
           "description": "Unique client message ID to prevent duplicate sending of the same event"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ]
     },
     "messages.sendWebViewResultMessage": {
       "name": "messages.sendWebViewResultMessage",
@@ -56104,6 +56566,11 @@
           "code": 400,
           "type": "QUERY_ID_INVALID",
           "description": "The query ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -56202,6 +56669,11 @@
           "code": 400,
           "type": "ERROR_TEXT_EMPTY",
           "description": "The provided error message is empty."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -56240,6 +56712,11 @@
           "code": 400,
           "type": "QUERY_ID_INVALID",
           "description": "The query ID is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         }
       ],
       "bot_can_use": true
@@ -56404,8 +56881,7 @@
           "type": "WALLPAPER_NOT_FOUND",
           "description": "The specified wallpaper could not be found."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setDefaultHistoryTTL": {
       "name": "messages.setDefaultHistoryTTL",
@@ -56424,8 +56900,7 @@
           "type": "TTL_PERIOD_INVALID",
           "description": "The specified TTL period is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setDefaultReaction": {
       "name": "messages.setDefaultReaction",
@@ -56563,6 +57038,11 @@
           "code": 400,
           "type": "CHAT_NOT_MODIFIED",
           "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         },
         {
           "code": 400,
@@ -56780,6 +57260,11 @@
           "code": 403,
           "type": "USER_BOT_INVALID",
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         },
         {
           "code": 400,
@@ -57123,7 +57608,14 @@
           "name": "enabled",
           "description": "Enable or disable folder tags."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        }
+      ]
     },
     "messages.toggleDialogPin": {
       "name": "messages.toggleDialogPin",
@@ -57231,7 +57723,13 @@
           "description": "The peer"
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.toggleSavedDialogPin": {
       "name": "messages.toggleSavedDialogPin",
@@ -57666,6 +58164,11 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        },
+        {
           "code": 400,
           "type": "REACTION_INVALID",
           "description": "The specified reaction is invalid."
@@ -57686,7 +58189,14 @@
           "name": "peer",
           "description": "The secret chat to associate the file to"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        }
+      ]
     },
     "messages.uploadImportedMedia": {
       "name": "messages.uploadImportedMedia",
@@ -57723,6 +58233,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "IMPORT_ID_INVALID",
+          "description": "The specified import ID is invalid."
         }
       ]
     },
@@ -57902,7 +58417,14 @@
           "name": "receipt",
           "description": "Receipt"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "RECEIPT_EMPTY",
+          "description": "The specified receipt is empty."
+        }
+      ]
     },
     "payments.assignPlayMarketTransaction": {
       "name": "payments.assignPlayMarketTransaction",
@@ -57918,7 +58440,14 @@
           "name": "receipt",
           "description": "Receipt"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "DATA_JSON_INVALID",
+          "description": "The provided JSON data is invalid."
+        }
+      ]
     },
     "payments.canPurchasePremium": {
       "name": "payments.canPurchasePremium",
@@ -58100,6 +58629,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         },
         {
           "code": 400,
@@ -58297,6 +58831,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHARGE_ALREADY_REFUNDED",
+          "description": "The transaction was already refunded."
+        },
+        {
+          "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         },
@@ -58357,6 +58896,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -58424,6 +58968,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -58499,6 +59048,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
         {
           "code": 400,
           "type": "GROUPCALL_JOIN_MISSING",
@@ -58756,6 +59310,11 @@
         },
         {
           "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
+        {
+          "code": 400,
           "type": "PARTICIPANT_JOIN_MISSING",
           "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
         },
@@ -58835,6 +59394,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
         {
           "code": 403,
           "type": "PUBLIC_CHANNEL_MISSING",
@@ -58991,7 +59555,14 @@
           "name": "sources",
           "description": "If specified, will fetch group participant info about the specified WebRTC source IDs"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.inviteToGroupCall": {
       "name": "phone.inviteToGroupCall",
@@ -59117,6 +59688,11 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
+        {
           "code": 403,
           "type": "PARTICIPANT_JOIN_MISSING",
           "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
@@ -59137,7 +59713,14 @@
           "name": "source",
           "description": "Your source ID"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.leaveGroupCallPresentation": {
       "name": "phone.leaveGroupCallPresentation",
@@ -59149,7 +59732,14 @@
           "name": "call",
           "description": "The group call"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.receivedCall": {
       "name": "phone.receivedCall",
@@ -59287,7 +59877,14 @@
           "name": "peer",
           "description": "Phone call"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CALL_PEER_INVALID",
+          "description": "The provided call peer object is invalid."
+        }
+      ]
     },
     "phone.saveDefaultGroupCallJoinAs": {
       "name": "phone.saveDefaultGroupCallJoinAs",
@@ -59331,7 +59928,14 @@
           "name": "peer",
           "description": "Phone call"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CALL_PEER_INVALID",
+          "description": "The provided call peer object is invalid."
+        }
+      ]
     },
     "phone.setCallRating": {
       "name": "phone.setCallRating",
@@ -59381,7 +59985,14 @@
           "name": "call",
           "description": "The scheduled group call"
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.toggleGroupCallRecord": {
       "name": "phone.toggleGroupCallRecord",
@@ -59464,6 +60075,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        },
+        {
+          "code": 400,
           "type": "GROUPCALL_NOT_MODIFIED",
           "description": "Group call settings weren't modified."
         }
@@ -59489,6 +60105,11 @@
           "code": 403,
           "type": "GROUPCALL_ALREADY_STARTED",
           "description": "The groupcall has already started, you can join directly using phone.joinGroupCall."
+        },
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
         }
       ]
     },
@@ -59683,8 +60304,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "photos.uploadProfilePhoto": {
       "name": "photos.uploadProfilePhoto",
@@ -60131,6 +60751,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
         }
       ]
     },
@@ -60196,6 +60821,16 @@
           "code": 400,
           "type": "PASSWORD_HASH_INVALID",
           "description": "The provided password hash is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PASSWORD_MISSING",
+          "description": "You must enable 2FA before executing this operation."
+        },
+        {
+          "code": 400,
+          "type": "PASSWORD_TOO_FRESH_%d",
+          "description": "The password was modified less than 24 hours ago, try again in %d seconds."
         }
       ]
     },
@@ -61031,7 +61666,14 @@
             "https://core.telegram.org/api/config#client-configuration"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
+        }
+      ]
     },
     "stories.canSendStory": {
       "name": "stories.canSendStory",
@@ -62012,6 +62654,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STORY_ID_INVALID",
+          "description": "The specified story ID is invalid."
         }
       ]
     },
@@ -62663,7 +63310,7 @@
     "users.getIsPremiumRequiredToContact": {
       "name": "users.getIsPremiumRequiredToContact",
       "description": [
-        "Check whether we can write to the specified user (non-Premium¹ users only), see here »² for more info on the full flow."
+        "Check whether we can write to the specified user (this method can only be called by non-Premium¹ users), see here »² for more info on the full flow."
       ],
       "links": [
         "https://core.telegram.org/api/premium",
@@ -62811,6 +63458,11 @@
       "type": "ADMIN_RIGHTS_EMPTY",
       "description": "The chatAdminRights constructor passed in keyboardButtonRequestPeer.peer_type.user_admin_rights has no rights set (i.e. flags is 0)."
     },
+    "AD_EXPIRED": {
+      "code": 400,
+      "type": "AD_EXPIRED",
+      "description": "The ad has expired (too old or not found)."
+    },
     "ALBUM_PHOTOS_TOO_MANY": {
       "code": 400,
       "type": "ALBUM_PHOTOS_TOO_MANY",
@@ -62896,6 +63548,11 @@
       "type": "BANNED_RIGHTS_INVALID",
       "description": "You provided some invalid flags in the banned rights."
     },
+    "BIRTHDAY_INVALID": {
+      "code": 400,
+      "type": "BIRTHDAY_INVALID",
+      "description": "An invalid age was specified, must be between 0 and 150 years."
+    },
     "BOOSTS_EMPTY": {
       "code": 400,
       "type": "BOOSTS_EMPTY",
@@ -62930,6 +63587,11 @@
       "code": 400,
       "type": "BOT_APP_SHORTNAME_INVALID",
       "description": "The specified bot app short name is invalid."
+    },
+    "BOT_BUSINESS_MISSING": {
+      "code": 400,
+      "type": "BOT_BUSINESS_MISSING",
+      "description": "The specified bot is not a business bot (the user.bot_business flag is not set)."
     },
     "BOT_CHANNELS_NA": {
       "code": 400,
@@ -62970,6 +63632,10 @@
       "code": 400,
       "type": "BOT_MISSING",
       "description": "Only bots can call this method, please use @stickers if you're a user."
+    },
+    "BOT_NOT_CONNECTED_YET": {
+      "code": 400,
+      "type": "BOT_NOT_CONNECTED_YET"
     },
     "BOT_ONESIDE_NOT_AVAIL": {
       "code": 400,
@@ -63015,6 +63681,30 @@
       "code": 400,
       "type": "BROADCAST_REQUIRED",
       "description": "This method can only be called on a channel, please use stats.getMegagroupStats for supergroups."
+    },
+    "BUSINESS_ADDRESS_ACTIVE": {
+      "code": 406,
+      "type": "BUSINESS_ADDRESS_ACTIVE",
+      "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
+    },
+    "BUSINESS_PEER_INVALID": {
+      "code": 400,
+      "type": "BUSINESS_PEER_INVALID",
+      "description": "Messages can't be set to the specified peer through the current business connection."
+    },
+    "BUSINESS_RECIPIENTS_EMPTY": {
+      "code": 400,
+      "type": "BUSINESS_RECIPIENTS_EMPTY"
+    },
+    "BUSINESS_WORK_HOURS_EMPTY": {
+      "code": 400,
+      "type": "BUSINESS_WORK_HOURS_EMPTY",
+      "description": "No work hours were specified."
+    },
+    "BUSINESS_WORK_HOURS_PERIOD_INVALID": {
+      "code": 400,
+      "type": "BUSINESS_WORK_HOURS_PERIOD_INVALID",
+      "description": "The specified work hours are invalid, see here » for the exact requirements."
     },
     "BUTTON_DATA_INVALID": {
       "code": 400,
@@ -63145,10 +63835,25 @@
       "type": "CHANNEL_TOO_LARGE",
       "description": "Channel is too large to be deleted; this error is issued when trying to delete channels with more than 1000 members (subject to change)."
     },
+    "CHARGE_ALREADY_REFUNDED": {
+      "code": 400,
+      "type": "CHARGE_ALREADY_REFUNDED",
+      "description": "The transaction was already refunded."
+    },
+    "CHATLINKS_TOO_MUCH": {
+      "code": 400,
+      "type": "CHATLINKS_TOO_MUCH",
+      "description": "Too many business chat links were created, please delete some older links."
+    },
     "CHATLINK_SLUG_EMPTY": {
       "code": 400,
       "type": "CHATLINK_SLUG_EMPTY",
       "description": "The specified slug is empty."
+    },
+    "CHATLINK_SLUG_EXPIRED": {
+      "code": 400,
+      "type": "CHATLINK_SLUG_EXPIRED",
+      "description": "The specified business chat link has expired."
     },
     "CHATLIST_EXCLUDE_INVALID": {
       "code": 400,
@@ -63164,6 +63869,11 @@
       "code": 400,
       "type": "CHAT_ABOUT_TOO_LONG",
       "description": "Chat about too long."
+    },
+    "CHAT_ACTION_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_ACTION_FORBIDDEN",
+      "description": "You cannot execute this action."
     },
     "CHAT_ADMIN_INVITE_REQUIRED": {
       "code": 403,
@@ -63619,6 +64329,10 @@
       "code": 400,
       "type": "FILE_PART_TOO_BIG",
       "description": "The uploaded file part is too big."
+    },
+    "FILE_REFERENCE_%d_EXPIRED": {
+      "code": 400,
+      "type": "FILE_REFERENCE_%d_EXPIRED"
     },
     "FILE_REFERENCE_*": {
       "code": 400,
@@ -64247,7 +64961,7 @@
     "PASSWORD_MISSING": {
       "code": 400,
       "type": "PASSWORD_MISSING",
-      "description": "You must enable 2FA in order to transfer ownership of a channel."
+      "description": "You must enable 2FA before executing this operation."
     },
     "PASSWORD_RECOVERY_EXPIRED": {
       "code": 400,
@@ -64539,6 +65253,11 @@
       "type": "QUERY_TOO_SHORT",
       "description": "The query string is too short."
     },
+    "QUICK_REPLIES_TOO_MUCH": {
+      "code": 400,
+      "type": "QUICK_REPLIES_TOO_MUCH",
+      "description": "A maximum of appConfig.quick_replies_limit shortcuts may be created, the limit was reached."
+    },
     "QUIZ_ANSWER_MISSING": {
       "code": 400,
       "type": "QUIZ_ANSWER_MISSING",
@@ -64614,6 +65333,11 @@
       "type": "REACTION_INVALID",
       "description": "The specified reaction is invalid."
     },
+    "RECEIPT_EMPTY": {
+      "code": 400,
+      "type": "RECEIPT_EMPTY",
+      "description": "The specified receipt is empty."
+    },
     "REPLY_MARKUP_BUY_EMPTY": {
       "code": 400,
       "type": "REPLY_MARKUP_BUY_EMPTY",
@@ -64632,6 +65356,11 @@
       "code": 400,
       "type": "REPLY_MARKUP_TOO_LONG",
       "description": "The specified reply_markup is too long."
+    },
+    "REPLY_MESSAGES_TOO_MUCH": {
+      "code": 400,
+      "type": "REPLY_MESSAGES_TOO_MUCH",
+      "description": "Each shortcut can contain a maximum of appConfig.quick_reply_messages_limit messages, the limit was reached."
     },
     "REPLY_MESSAGE_ID_INVALID": {
       "code": 400,
@@ -64698,6 +65427,16 @@
       "type": "RIGHT_FORBIDDEN",
       "description": "Your admin rights do not allow you to do this."
     },
+    "RINGTONE_INVALID": {
+      "code": 400,
+      "type": "RINGTONE_INVALID",
+      "description": "The specified ringtone is invalid."
+    },
+    "RINGTONE_MIME_INVALID": {
+      "code": 400,
+      "type": "RINGTONE_MIME_INVALID",
+      "description": "The MIME type for the ringtone is invalid."
+    },
     "RSA_DECRYPT_FAILED": {
       "code": 400,
       "type": "RSA_DECRYPT_FAILED",
@@ -64747,6 +65486,11 @@
       "code": 400,
       "type": "SECONDS_INVALID",
       "description": "Invalid duration provided."
+    },
+    "SECURE_SECRET_REQUIRED": {
+      "code": 400,
+      "type": "SECURE_SECRET_REQUIRED",
+      "description": "A secure secret is required."
     },
     "SEND_AS_PEER_INVALID": {
       "code": 400,
@@ -65080,7 +65824,8 @@
     },
     "TIMEZONE_INVALID": {
       "code": 400,
-      "type": "TIMEZONE_INVALID"
+      "type": "TIMEZONE_INVALID",
+      "description": "The specified timezone does not exist."
     },
     "TITLE_INVALID": {
       "code": 400,
@@ -65190,6 +65935,11 @@
       "code": 400,
       "type": "UNTIL_DATE_INVALID",
       "description": "Invalid until date provided."
+    },
+    "UPDATE_APP_TO_LOGIN": {
+      "code": 406,
+      "type": "UPDATE_APP_TO_LOGIN",
+      "description": "Please update to the latest version of MadelineProto to login."
     },
     "URL_INVALID": {
       "code": 400,
