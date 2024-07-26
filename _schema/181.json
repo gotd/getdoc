@@ -4822,9 +4822,10 @@
       "fields": {
         "currency": {
           "name": "currency",
-          "description": "Three-letter ISO 4217 currency¹ code",
+          "description": "Three-letter ISO 4217 currency¹ code, or XTR for Telegram Stars².",
           "links": [
-            "https://core.telegram.org/bots/payments#supported-currencies"
+            "https://core.telegram.org/bots/payments#supported-currencies",
+            "https://core.telegram.org/api/stars"
           ]
         },
         "description": {
@@ -10775,7 +10776,10 @@
         },
         "need_check": {
           "name": "need_check",
-          "description": " "
+          "description": "If set, the country/text fields will not be set, and the fact check must be fetched manually by the client (if it isn't already cached with the key specified in hash) using bundled messages.getFactCheck¹ requests, when the message with the factcheck scrolls into view.",
+          "links": [
+            "https://core.telegram.org/method/messages.getFactCheck"
+          ]
         },
         "text": {
           "name": "text",
@@ -16231,9 +16235,10 @@
       "fields": {
         "currency": {
           "name": "currency",
-          "description": "Three-letter ISO 4217 currency¹ code",
+          "description": "Three-letter ISO 4217 currency¹ code, or XTR for Telegram Stars².",
           "links": [
-            "https://core.telegram.org/bots/payments#supported-currencies"
+            "https://core.telegram.org/bots/payments#supported-currencies",
+            "https://core.telegram.org/api/stars"
           ]
         },
         "email_requested": {
@@ -17735,9 +17740,10 @@
       "fields": {
         "currency": {
           "name": "currency",
-          "description": "Three-letter ISO 4217 currency¹ code",
+          "description": "Three-letter ISO 4217 currency¹ code, or XTR for Telegram Stars².",
           "links": [
-            "https://core.telegram.org/bots/payments#supported-currencies"
+            "https://core.telegram.org/bots/payments#supported-currencies",
+            "https://core.telegram.org/api/stars"
           ]
         },
         "flags": {
@@ -17784,9 +17790,10 @@
         },
         "currency": {
           "name": "currency",
-          "description": "Three-letter ISO 4217 currency¹ code",
+          "description": "Three-letter ISO 4217 currency¹ code, or XTR for Telegram Stars².",
           "links": [
-            "https://core.telegram.org/bots/payments#supported-currencies"
+            "https://core.telegram.org/bots/payments#supported-currencies",
+            "https://core.telegram.org/api/stars"
           ]
         },
         "flags": {
@@ -19105,9 +19112,10 @@
       "fields": {
         "currency": {
           "name": "currency",
-          "description": "Three-letter ISO 4217 currency¹ code",
+          "description": "Three-letter ISO 4217 currency¹ code, or XTR for Telegram Stars².",
           "links": [
-            "https://core.telegram.org/bots/payments#supported-currencies"
+            "https://core.telegram.org/bots/payments#supported-currencies",
+            "https://core.telegram.org/api/stars"
           ]
         },
         "description": {
@@ -23102,7 +23110,7 @@
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Currency, always XTR."
         },
         "date": {
           "name": "date",
@@ -23133,7 +23141,10 @@
         },
         "total_amount": {
           "name": "total_amount",
-          "description": " "
+          "description": "Amount of Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "transaction_id": {
           "name": "transaction_id",
@@ -26835,7 +26846,7 @@
         },
         "button_text": {
           "name": "button_text",
-          "description": "Text of the sponsored message button."
+          "description": "Label of the sponsored message button."
         },
         "can_report": {
           "name": "can_report",
@@ -26853,7 +26864,7 @@
         },
         "entities": {
           "name": "entities",
-          "description": "Message entities for styled text¹",
+          "description": "Message entities for styled text¹ in message.",
           "links": [
             "https://core.telegram.org/api/entities"
           ]
@@ -26887,11 +26898,11 @@
         },
         "title": {
           "name": "title",
-          "description": "If set, contains a custom sender name should be displayed for the sponsored message, like for messages sent in groups."
+          "description": "Contains the title of the sponsored message."
         },
         "url": {
           "name": "url",
-          "description": "If set, contains a URL to open when the user clicks on the sponsored message."
+          "description": "Contains the URL to open when the user clicks on the sponsored message."
         }
       }
     },
@@ -27056,7 +27067,16 @@
       ]
     },
     "starsTransactionPeerPremiumBot": {
-      "name": "starsTransactionPeerPremiumBot"
+      "name": "starsTransactionPeerPremiumBot",
+      "description": [
+        "Describes a Telegram Star¹ transaction made using @PremiumBot² (i.e. using the inputInvoiceStars³ flow described here »⁴)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://t.me/premiumbot",
+        "https://core.telegram.org/constructor/inputInvoiceStars",
+        "https://core.telegram.org/api/stars#buying-stars"
+      ]
     },
     "starsTransactionPeerUnsupported": {
       "name": "starsTransactionPeerUnsupported",
@@ -29460,9 +29480,10 @@
       "fields": {
         "currency": {
           "name": "currency",
-          "description": "Three-letter ISO 4217 currency¹ code",
+          "description": "Three-letter ISO 4217 currency¹ code, or XTR for Telegram Stars².",
           "links": [
-            "https://core.telegram.org/bots/payments#supported-currencies"
+            "https://core.telegram.org/bots/payments#supported-currencies",
+            "https://core.telegram.org/api/stars"
           ]
         },
         "flags": {
@@ -31056,7 +31077,7 @@
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where the story was posted."
         },
         "reaction": {
           "name": "reaction",
@@ -33194,7 +33215,7 @@
         },
         "premium": {
           "name": "premium",
-          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - help.getConfig²    - messages.getTopReactions³ if the bot flag is not set",
+          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - The help.getConfig² cache - The messages.getTopReactions³ cache if the bot flag is not set",
           "links": [
             "https://core.telegram.org/constructor/userFull",
             "https://core.telegram.org/method/help.getConfig",
@@ -41423,18 +41444,27 @@
     },
     "auth.reportMissingCode": {
       "name": "auth.reportMissingCode",
+      "description": [
+        "Official apps only, reports that the SMS authentication code wasn't delivered."
+      ],
       "parameters": {
         "mnc": {
           "name": "mnc",
-          "description": " "
+          "description": "MNC¹ of the current network operator.",
+          "links": [
+            "https://en.wikipedia.org/wiki/Mobile_country_code"
+          ]
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "The phone code hash obtained from auth.sendCode¹",
+          "links": [
+            "https://core.telegram.org/method/auth.sendCode"
+          ]
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Phone number where we were supposed to receive the code"
         }
       },
       "errors": [
@@ -41558,7 +41588,10 @@
         },
         "reason": {
           "name": "reason",
-          "description": " "
+          "description": "Official clients only, used if the device integrity verification failed, and no secret could be obtained to invoke auth.requestFirebaseSms¹: in this case, the device integrity verification failure reason must be passed here.",
+          "links": [
+            "https://core.telegram.org/method/auth.requestFirebaseSms"
+          ]
         }
       },
       "errors": [
@@ -50842,14 +50875,23 @@
     },
     "messages.getFactCheck": {
       "name": "messages.getFactCheck",
+      "description": [
+        "Fetch one or more factchecks, see here »¹ for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/factcheck"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Messages that have associated factCheck¹ constructors with the need_check flag set.",
+          "links": [
+            "https://core.telegram.org/constructor/factCheck"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the messages were sent."
         }
       },
       "errors": [
@@ -51413,7 +51455,7 @@
     "messages.getMyStickers": {
       "name": "messages.getMyStickers",
       "description": [
-        "Fetch stickerset owned by the current user¹."
+        "Fetch all stickersets »¹ owned by the current user."
       ],
       "links": [
         "https://core.telegram.org/api/stickers"
@@ -52115,7 +52157,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹. To generate the hash, populate the ids array with the id, date and edit_date (in this order) of the previously returned messages (in order, i.e. ids = [id1, date1, edit_date1, id2, date2, edit_date2, ...]).",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -52587,9 +52629,11 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹. Note: the usual hash generation algorithm cannot be used in this case, please re-use the webPage².hash field returned by a previous call to the method, or pass 0 if this is the first call or if the previous call did not return a webPage³.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/constructor/webPage",
+            "https://core.telegram.org/constructor/webPage"
           ]
         },
         "url": {
@@ -58734,7 +58778,8 @@
     "payments.getStarsTransactions": {
       "name": "payments.getStarsTransactions",
       "description": [
-        "Fetch Telegram Stars transactions¹."
+        "Fetch Telegram Stars transactions¹.",
+        "The inbound and outbound flags are mutually exclusive: if none of the two are set, both incoming and outgoing transactions are fetched."
       ],
       "links": [
         "https://core.telegram.org/api/stars#balance-and-transaction-history"
@@ -58749,7 +58794,7 @@
         },
         "inbound": {
           "name": "inbound",
-          "description": " "
+          "description": "If set, fetches only incoming transactions."
         },
         "offset": {
           "name": "offset",
@@ -58760,7 +58805,7 @@
         },
         "outbound": {
           "name": "outbound",
-          "description": " "
+          "description": "If set, fetches only outgoing transactions."
         },
         "peer": {
           "name": "peer",
