@@ -38670,10 +38670,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.emojiStatuses"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38690,10 +38689,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/emojiList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38709,10 +38707,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.themes"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38750,10 +38747,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/emojiList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38769,10 +38765,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.emojiStatuses"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38789,10 +38784,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/emojiList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38809,10 +38803,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/emojiList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38964,10 +38957,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.emojiStatuses².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.emojiStatuses"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -38980,10 +38972,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.savedRingtones².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.savedRingtones"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -39044,10 +39035,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.themes².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.themes"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -39116,10 +39106,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the account.wallPapers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/account.wallPapers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -39879,6 +39868,11 @@
           "code": 400,
           "type": "EMAIL_INVALID",
           "description": "The specified email is invalid."
+        },
+        {
+          "code": 400,
+          "type": "EMAIL_NOT_ALLOWED",
+          "description": "The specified email cannot be used to complete the operation."
         },
         {
           "code": 400,
@@ -40910,6 +40904,11 @@
           "code": 400,
           "type": "EMAIL_INVALID",
           "description": "The specified email is invalid."
+        },
+        {
+          "code": 400,
+          "type": "EMAIL_NOT_ALLOWED",
+          "description": "The specified email cannot be used to complete the operation."
         },
         {
           "code": 400,
@@ -43168,7 +43167,7 @@
         {
           "code": 400,
           "type": "USER_CREATOR",
-          "description": "You can't leave this channel, because you're its creator."
+          "description": "For channels.editAdmin: you've tried to edit the admin rights of the owner, but you're not the owner; for channels.leaveChannel: you can't leave this channel, because you're its creator."
         },
         {
           "code": 400,
@@ -44569,7 +44568,7 @@
         {
           "code": 400,
           "type": "USER_CREATOR",
-          "description": "You can't leave this channel, because you're its creator."
+          "description": "For channels.editAdmin: you've tried to edit the admin rights of the owner, but you're not the owner; for channels.leaveChannel: you can't leave this channel, because you're its creator."
         },
         {
           "code": 400,
@@ -47012,10 +47011,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.appConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/help.appConfig"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -47104,10 +47102,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.countriesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/help.countriesList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "lang_code": {
@@ -47154,10 +47151,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.passportConfig².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/help.passportConfig"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -47173,10 +47169,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/help.peerColors"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -47192,10 +47187,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.peerColors².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/help.peerColors"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -47272,10 +47266,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the help.timezonesList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/help.timezonesList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -49900,10 +49893,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.allStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -49984,10 +49976,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the attachMenuBots².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/attachMenuBots"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50022,10 +50013,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableEffects².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.availableEffects"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50041,10 +50031,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.availableReactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.availableReactions"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50370,10 +50359,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.reactions"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50583,10 +50571,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.emojiGroups"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50653,10 +50640,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.emojiGroups"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50673,10 +50659,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.emojiGroups"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50692,10 +50677,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.emojiGroups².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.emojiGroups"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50711,10 +50695,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.allStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50910,10 +50893,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.favedStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.favedStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50926,10 +50908,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.featuredStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -50942,10 +50923,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.featuredStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -51208,10 +51188,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.allStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.allStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -51485,10 +51464,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.featuredStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.featuredStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "limit": {
@@ -51564,6 +51542,11 @@
           "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MESSAGE_NOT_READ_YET",
+          "description": "The specified message wasn't read yet."
         },
         {
           "code": 400,
@@ -51865,10 +51848,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.reactions"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "limit": {
@@ -51899,10 +51881,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.recentStickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.recentStickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -52055,10 +52036,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedGifs².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.savedGifs"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       }
@@ -52134,10 +52114,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.savedReactionTags².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.savedReactionTags"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "peer": {
@@ -52423,10 +52402,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.stickers².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.stickers"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       },
@@ -52458,10 +52436,9 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.reactions².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.reactions"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "limit": {
@@ -54402,10 +54379,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the emojiList².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/emojiList"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         }
       },
@@ -54439,10 +54415,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.foundStickerSets"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "q": {
@@ -54588,10 +54563,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹.Note: the usual hash generation algorithm cannot be used in this case, please re-use the messages.foundStickerSets².hash field returned by a previous call to the method, or pass 0 if this is the first call.",
+          "description": "Hash used for caching, for more info click here¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation",
-            "https://core.telegram.org/constructor/messages.foundStickerSets"
+            "https://core.telegram.org/api/offsets#hash-generation"
           ]
         },
         "q": {
@@ -56149,7 +56123,13 @@
         },
         {
           "code": 400,
-          "type": "FILE_REFERENCE_%d_EXPIRED"
+          "type": "FILE_REFERENCE_%d_EXPIRED",
+          "description": "File reference expired, it must be refetched as described in the documentation."
+        },
+        {
+          "code": 400,
+          "type": "FILE_REFERENCE_%d_INVALID",
+          "description": "File reference invalid."
         },
         {
           "code": 400,
@@ -58977,6 +58957,16 @@
       "errors": [
         {
           "code": 400,
+          "type": "BALANCE_TOO_LOW",
+          "description": "The transaction cannot be completed because the current Telegram Stars balance is too low."
+        },
+        {
+          "code": 400,
+          "type": "FORM_EXPIRED",
+          "description": "The form was generated more than 10 minutes ago and has expired, please re-generate it using payments.getPaymentForm and pass the new form_id."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -60032,6 +60022,11 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "GROUPCALL_ALREADY_STARTED",
+          "description": "The groupcall has already started, you can join directly using phone.joinGroupCall."
+        },
         {
           "code": 400,
           "type": "GROUPCALL_INVALID",
@@ -63583,6 +63578,11 @@
       "type": "AUTOARCHIVE_NOT_AVAILABLE",
       "description": "The autoarchive setting is not available at this time: please check the value of the autoarchive_setting_available field in client config » before calling this method."
     },
+    "BALANCE_TOO_LOW": {
+      "code": 400,
+      "type": "BALANCE_TOO_LOW",
+      "description": "The transaction cannot be completed because the current Telegram Stars balance is too low."
+    },
     "BANK_CARD_NUMBER_INVALID": {
       "code": 400,
       "type": "BANK_CARD_NUMBER_INVALID",
@@ -64215,6 +64215,11 @@
       "type": "EMAIL_INVALID",
       "description": "The specified email is invalid."
     },
+    "EMAIL_NOT_ALLOWED": {
+      "code": 400,
+      "type": "EMAIL_NOT_ALLOWED",
+      "description": "The specified email cannot be used to complete the operation."
+    },
     "EMAIL_NOT_SETUP": {
       "code": 400,
       "type": "EMAIL_NOT_SETUP",
@@ -64377,7 +64382,13 @@
     },
     "FILE_REFERENCE_%d_EXPIRED": {
       "code": 400,
-      "type": "FILE_REFERENCE_%d_EXPIRED"
+      "type": "FILE_REFERENCE_%d_EXPIRED",
+      "description": "File reference expired, it must be refetched as described in the documentation."
+    },
+    "FILE_REFERENCE_%d_INVALID": {
+      "code": 400,
+      "type": "FILE_REFERENCE_%d_INVALID",
+      "description": "File reference invalid."
     },
     "FILE_REFERENCE_*": {
       "code": 400,
@@ -64443,6 +64454,11 @@
       "code": 400,
       "type": "FOLDER_ID_INVALID",
       "description": "Invalid folder ID."
+    },
+    "FORM_EXPIRED": {
+      "code": 400,
+      "type": "FORM_EXPIRED",
+      "description": "The form was generated more than 10 minutes ago and has expired, please re-generate it using payments.getPaymentForm and pass the new form_id."
     },
     "FORUM_ENABLED": {
       "code": 400,
@@ -64857,6 +64873,11 @@
       "code": 400,
       "type": "MESSAGE_NOT_MODIFIED",
       "description": "The provided message data is identical to the previous message data, the message wasn't modified."
+    },
+    "MESSAGE_NOT_READ_YET": {
+      "code": 400,
+      "type": "MESSAGE_NOT_READ_YET",
+      "description": "The specified message wasn't read yet."
     },
     "MESSAGE_POLL_CLOSED": {
       "code": 400,
@@ -66094,7 +66115,7 @@
     "USER_CREATOR": {
       "code": 400,
       "type": "USER_CREATOR",
-      "description": "You can't leave this channel, because you're its creator."
+      "description": "For channels.editAdmin: you've tried to edit the admin rights of the owner, but you're not the owner; for channels.leaveChannel: you can't leave this channel, because you're its creator."
     },
     "USER_DELETED": {
       "code": 403,
