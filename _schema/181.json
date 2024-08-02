@@ -40439,7 +40439,8 @@
         },
         {
           "code": 400,
-          "type": "BUSINESS_RECIPIENTS_EMPTY"
+          "type": "BUSINESS_RECIPIENTS_EMPTY",
+          "description": "You didn't set any flag in inputBusinessBotRecipients, thus the bot cannot work with any peer."
         },
         {
           "code": 403,
@@ -55199,6 +55200,11 @@
         },
         {
           "code": 400,
+          "type": "BUTTON_POS_INVALID",
+          "description": "The position of one of the keyboard buttons is invalid (i.e. a Game or Pay button not in the first position, and so on...)."
+        },
+        {
+          "code": 400,
           "type": "BUTTON_TYPE_INVALID",
           "description": "The type of one or more of the buttons you provided is invalid."
         },
@@ -61206,7 +61212,7 @@
     "stickers.addStickerToSet": {
       "name": "stickers.addStickerToSet",
       "description": [
-        "Add a sticker to a stickerset, bots only. The sticker set must have been created by the bot."
+        "Add a sticker to a stickerset. The sticker set must have been created by the current user/bot."
       ],
       "parameters": {
         "sticker": {
@@ -61219,11 +61225,6 @@
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "Only bots can call this method, please use @stickers if you're a user."
-        },
         {
           "code": 400,
           "type": "STICKERPACK_STICKERS_TOO_MUCH",
@@ -61255,7 +61256,7 @@
     "stickers.changeSticker": {
       "name": "stickers.changeSticker",
       "description": [
-        "Update the keywords, emojis or mask coordinates¹ of a sticker, bots only."
+        "Update the keywords, emojis or mask coordinates¹ of a sticker."
       ],
       "links": [
         "https://core.telegram.org/api/stickers#mask-stickers"
@@ -61291,11 +61292,6 @@
       "errors": [
         {
           "code": 400,
-          "type": "BOT_MISSING",
-          "description": "Only bots can call this method, please use @stickers if you're a user."
-        },
-        {
-          "code": 400,
           "type": "STICKER_INVALID",
           "description": "The provided sticker is invalid."
         }
@@ -61305,7 +61301,7 @@
     "stickers.changeStickerPosition": {
       "name": "stickers.changeStickerPosition",
       "description": [
-        "Changes the absolute position of a sticker in the set to which it belongs; for bots only. The sticker set must have been created by the bot"
+        "Changes the absolute position of a sticker in the set to which it belongs. The sticker set must have been created by the current user/bot."
       ],
       "parameters": {
         "position": {
@@ -61353,7 +61349,7 @@
     "stickers.createStickerSet": {
       "name": "stickers.createStickerSet",
       "description": [
-        "Create a stickerset, bots only."
+        "Create a stickerset."
       ],
       "parameters": {
         "emojis": {
@@ -61506,7 +61502,7 @@
     "stickers.deleteStickerSet": {
       "name": "stickers.deleteStickerSet",
       "description": [
-        "Deletes a stickerset we created, bots only."
+        "Deletes a stickerset we created."
       ],
       "parameters": {
         "stickerset": {
@@ -61515,11 +61511,6 @@
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "Only bots can call this method, please use @stickers if you're a user."
-        },
         {
           "code": 400,
           "type": "STICKERSET_INVALID",
@@ -61531,7 +61522,7 @@
     "stickers.removeStickerFromSet": {
       "name": "stickers.removeStickerFromSet",
       "description": [
-        "Remove a sticker from the set where it belongs, bots only. The sticker set must have been created by the bot."
+        "Remove a sticker from the set where it belongs. The sticker set must have been created by the current user/bot."
       ],
       "parameters": {
         "sticker": {
@@ -61540,11 +61531,6 @@
         }
       },
       "errors": [
-        {
-          "code": 400,
-          "type": "BOT_MISSING",
-          "description": "Only bots can call this method, please use @stickers if you're a user."
-        },
         {
           "code": 400,
           "type": "STICKER_INVALID",
@@ -61556,7 +61542,7 @@
     "stickers.renameStickerSet": {
       "name": "stickers.renameStickerSet",
       "description": [
-        "Renames a stickerset, bots only."
+        "Renames a stickerset."
       ],
       "parameters": {
         "stickerset": {
@@ -63673,11 +63659,6 @@
       "type": "BOT_INVALID",
       "description": "This is not a valid bot."
     },
-    "BOT_MISSING": {
-      "code": 400,
-      "type": "BOT_MISSING",
-      "description": "Only bots can call this method, please use @stickers if you're a user."
-    },
     "BOT_NOT_CONNECTED_YET": {
       "code": 400,
       "type": "BOT_NOT_CONNECTED_YET"
@@ -63739,7 +63720,8 @@
     },
     "BUSINESS_RECIPIENTS_EMPTY": {
       "code": 400,
-      "type": "BUSINESS_RECIPIENTS_EMPTY"
+      "type": "BUSINESS_RECIPIENTS_EMPTY",
+      "description": "You didn't set any flag in inputBusinessBotRecipients, thus the bot cannot work with any peer."
     },
     "BUSINESS_WORK_HOURS_EMPTY": {
       "code": 400,
@@ -63755,6 +63737,11 @@
       "code": 400,
       "type": "BUTTON_DATA_INVALID",
       "description": "The data of one or more of the buttons you provided is invalid."
+    },
+    "BUTTON_POS_INVALID": {
+      "code": 400,
+      "type": "BUTTON_POS_INVALID",
+      "description": "The position of one of the keyboard buttons is invalid (i.e. a Game or Pay button not in the first position, and so on...)."
     },
     "BUTTON_TEXT_INVALID": {
       "code": 400,
