@@ -3823,7 +3823,7 @@
         },
         "play_integrity_project_id": {
           "name": "play_integrity_project_id",
-          "description": " "
+          "description": "Google Play Integrity project ID"
         },
         "push_timeout": {
           "name": "push_timeout",
@@ -5256,7 +5256,7 @@
         "Describes a refund for failed withdrawal of ad earnings »¹"
       ],
       "links": [
-        "https://core.telegram.org/api/revenue#withdrawing-funds"
+        "https://core.telegram.org/api/revenue#withdrawing-revenue"
       ],
       "fields": {
         "amount": {
@@ -5279,7 +5279,7 @@
         "Describes a withdrawal of ad earnings »¹"
       ],
       "links": [
-        "https://core.telegram.org/api/revenue#withdrawing-funds"
+        "https://core.telegram.org/api/revenue#withdrawing-revenue"
       ],
       "fields": {
         "amount": {
@@ -7028,12 +7028,15 @@
           "name": "can_view_revenue",
           "description": "If set, this user can view ad revenue statistics »¹ for this channel.",
           "links": [
-            "https://core.telegram.org/api/revenue"
+            "https://core.telegram.org/api/revenue#revenue-statistics"
           ]
         },
         "can_view_stars_revenue": {
           "name": "can_view_stars_revenue",
-          "description": " "
+          "description": "If set, this user can view Telegram Star revenue statistics »¹ for this channel.",
+          "links": [
+            "https://core.telegram.org/api/stars#revenue-statistics"
+          ]
         },
         "can_view_stats": {
           "name": "can_view_stats",
@@ -11074,14 +11077,20 @@
     },
     "foundStory": {
       "name": "foundStory",
+      "description": [
+        "A story found using global story search »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#searching-stories"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that posted the story."
         },
         "story": {
           "name": "story",
-          "description": " "
+          "description": "The story."
         }
       }
     },
@@ -13786,10 +13795,11 @@
     "inputInvoiceMessage": {
       "name": "inputInvoiceMessage",
       "description": [
-        "An invoice contained in a messageMediaInvoice¹ message."
+        "An invoice contained in a messageMediaInvoice¹ message or paid media »²."
       ],
       "links": [
-        "https://core.telegram.org/constructor/messageMediaInvoice"
+        "https://core.telegram.org/constructor/messageMediaInvoice",
+        "https://core.telegram.org/api/paid-media"
       ],
       "fields": {
         "msg_id": {
@@ -13798,7 +13808,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": "Chat where the invoice was sent"
+          "description": "Chat where the invoice/paid media was sent"
         }
       }
     },
@@ -13852,7 +13862,7 @@
     "inputInvoiceStars": {
       "name": "inputInvoiceStars",
       "description": [
-        "Used to top up the current account's Telegram Stars¹ balance."
+        "Used to top up the Telegram Stars¹ balance of the current account or someone else's account."
       ],
       "links": [
         "https://core.telegram.org/api/stars"
@@ -13860,7 +13870,11 @@
       "fields": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Either an inputStorePaymentStarsTopup¹ or an inputStorePaymentStarsGift².",
+          "links": [
+            "https://core.telegram.org/constructor/inputStorePaymentStarsTopup",
+            "https://core.telegram.org/constructor/inputStorePaymentStarsGift"
+          ]
         }
       }
     },
@@ -14213,7 +14227,7 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": "Extended media"
+          "description": " "
         },
         "flags": {
           "name": "flags",
@@ -14261,14 +14275,23 @@
     },
     "inputMediaPaidMedia": {
       "name": "inputMediaPaidMedia",
+      "description": [
+        "Paid media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
+      ],
       "fields": {
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Photos or videos."
         },
         "stars_amount": {
           "name": "stars_amount",
-          "description": " "
+          "description": "The price of the media in Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       }
     },
@@ -15681,6 +15704,12 @@
     },
     "inputStarsTransaction": {
       "name": "inputStarsTransaction",
+      "description": [
+        "Used to fetch info about a Telegram Star transaction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#balance-and-transaction-history"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -15691,11 +15720,11 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Transaction ID."
         },
         "refund": {
           "name": "refund",
-          "description": " "
+          "description": "If set, fetches info about the refund transaction for this transaction."
         }
       }
     },
@@ -16061,39 +16090,63 @@
     },
     "inputStorePaymentStarsGift": {
       "name": "inputStorePaymentStarsGift",
+      "description": [
+        "Used to gift Telegram Stars¹ to a friend."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of stars to gift"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user to which the stars should be gifted."
         }
       }
     },
     "inputStorePaymentStarsTopup": {
       "name": "inputStorePaymentStarsTopup",
+      "description": [
+        "Used to top up the Telegram Stars balance¹ of the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of stars to topup"
         }
       }
     },
@@ -17908,22 +17961,34 @@
     },
     "messageActionGiftStars": {
       "name": "messageActionGiftStars",
+      "description": [
+        "You gifted or were gifted some Telegram Stars¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the gift in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "crypto_amount": {
           "name": "crypto_amount",
-          "description": " "
+          "description": "If the gift was bought using a cryptocurrency, price of the gift in the smallest units of a cryptocurrency."
         },
         "crypto_currency": {
           "name": "crypto_currency",
-          "description": " "
+          "description": "If the gift was bought using a cryptocurrency, the cryptocurrency name."
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -17934,11 +17999,11 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of gifted stars"
         },
         "transaction_id": {
           "name": "transaction_id",
-          "description": " "
+          "description": "Identifier of the transaction, only visible to the receiver of the gift."
         }
       }
     },
@@ -18033,14 +18098,17 @@
     },
     "messageActionPaymentRefunded": {
       "name": "messageActionPaymentRefunded",
+      "description": [
+        "Describes a payment refund (service message received by both users and bots)."
+      ],
       "fields": {
         "charge": {
           "name": "charge",
-          "description": " "
+          "description": "Provider payment identifier"
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Currency, XTR for Telegram Stars."
         },
         "flags": {
           "name": "flags",
@@ -18051,15 +18119,18 @@
         },
         "payload": {
           "name": "payload",
-          "description": " "
+          "description": "Bot specified invoice payload (only received by bots)."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Identifier of the peer that returned the funds."
         },
         "total_amount": {
           "name": "total_amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         }
       }
     },
@@ -19012,19 +19083,25 @@
     "messageExtendedMedia": {
       "name": "messageExtendedMedia",
       "description": [
-        "Extended media"
+        "Already purchased paid media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
       ],
       "fields": {
         "media": {
           "name": "media",
-          "description": "Media"
+          "description": "The media we purchased."
         }
       }
     },
     "messageExtendedMediaPreview": {
       "name": "messageExtendedMediaPreview",
       "description": [
-        "Extended media preview"
+        "Paid media preview for not yet purchased paid media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
       ],
       "fields": {
         "flags": {
@@ -19040,11 +19117,14 @@
         },
         "thumb": {
           "name": "thumb",
-          "description": "Thumbnail"
+          "description": "Extremely low resolution thumbnail¹.",
+          "links": [
+            "https://core.telegram.org/api/files#stripped-thumbnails"
+          ]
         },
         "video_duration": {
           "name": "video_duration",
-          "description": "Video duration"
+          "description": "Video duration for videos."
         },
         "w": {
           "name": "w",
@@ -19455,7 +19535,7 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": "Extended media"
+          "description": " "
         },
         "flags": {
           "name": "flags",
@@ -19503,14 +19583,26 @@
     },
     "messageMediaPaidMedia": {
       "name": "messageMediaPaidMedia",
+      "description": [
+        "Paid media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
+      ],
       "fields": {
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Either the paid-for media, or super low resolution media previews if the media wasn't purchased yet, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/paid-media#viewing-paid-media"
+          ]
         },
         "stars_amount": {
           "name": "stars_amount",
-          "description": " "
+          "description": "The price of the media in Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       }
     },
@@ -23549,36 +23641,58 @@
     },
     "payments.starsRevenueAdsAccountUrl": {
       "name": "payments.starsRevenueAdsAccountUrl",
+      "description": [
+        "Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using Telegram Stars¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#paying-for-ads"
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL to open."
         }
       }
     },
     "payments.starsRevenueStats": {
       "name": "payments.starsRevenueStats",
+      "description": [
+        "Star revenue statistics, see here »¹ for more info.",
+        "Note that all balances and currency amounts and graph values are in Stars."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "revenue_graph": {
           "name": "revenue_graph",
-          "description": " "
+          "description": "Star revenue graph (number of earned stars)"
         },
         "status": {
           "name": "status",
-          "description": " "
+          "description": "Current balance, current withdrawable balance and overall earned Telegram Stars"
         },
         "usd_rate": {
           "name": "usd_rate",
-          "description": " "
+          "description": "Current conversion rate of Telegram Stars to USD"
         }
       }
     },
     "payments.starsRevenueWithdrawalUrl": {
       "name": "payments.starsRevenueWithdrawalUrl",
+      "description": [
+        "Contains the URL to use to withdraw Telegram Star revenue¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#withdrawing-revenue"
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Contains the URL to use to withdraw Telegram Star revenue¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#withdrawing-revenue"
+          ]
         }
       }
     },
@@ -27297,18 +27411,30 @@
     },
     "starsGiftOption": {
       "name": "starsGiftOption",
+      "description": [
+        "Telegram Stars gift option¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#buying-or-gifting-stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "extended": {
           "name": "extended",
-          "description": " "
+          "description": "If set, the option must only be shown in the full list of topup options."
         },
         "flags": {
           "name": "flags",
@@ -27319,24 +27445,30 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of Telegram stars."
         },
         "store_product": {
           "name": "store_product",
-          "description": " "
+          "description": "Identifier of the store product associated with the option, official apps only."
         }
       }
     },
     "starsRevenueStatus": {
       "name": "starsRevenueStatus",
+      "description": [
+        "Describes Telegram Star revenue balances »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "available_balance": {
           "name": "available_balance",
-          "description": " "
+          "description": "Amount of withdrawable Telegram Stars."
         },
         "current_balance": {
           "name": "current_balance",
-          "description": " "
+          "description": "Amount of not-yet-withdrawn Telegram Stars."
         },
         "flags": {
           "name": "flags",
@@ -27347,15 +27479,18 @@
         },
         "next_withdrawal_at": {
           "name": "next_withdrawal_at",
-          "description": " "
+          "description": "Unixtime indicating when will withdrawal be available to the user. If not set, withdrawal can be started now."
         },
         "overall_revenue": {
           "name": "overall_revenue",
-          "description": " "
+          "description": "Total amount of earned Telegram Stars."
         },
         "withdrawal_enabled": {
           "name": "withdrawal_enabled",
-          "description": " "
+          "description": "If set, the user may withdraw¹ up to available_balance stars.",
+          "links": [
+            "https://core.telegram.org/api/stars#withdrawing-revenue"
+          ]
         }
       }
     },
@@ -27414,7 +27549,11 @@
       "fields": {
         "bot_payload": {
           "name": "bot_payload",
-          "description": " "
+          "description": "Bot specified invoice payload (i.e. the payload passed to inputMediaInvoice¹ when creating the invoice²).",
+          "links": [
+            "https://core.telegram.org/constructor/inputMediaInvoice",
+            "https://core.telegram.org/api/payments"
+          ]
         },
         "date": {
           "name": "date",
@@ -27426,11 +27565,14 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "The purchased paid media »¹.",
+          "links": [
+            "https://core.telegram.org/api/paid-media"
+          ]
         },
         "failed": {
           "name": "failed",
-          "description": " "
+          "description": "This transaction has failed."
         },
         "flags": {
           "name": "flags",
@@ -27441,7 +27583,7 @@
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "This transaction was a gift from the user in peer.peer."
         },
         "id": {
           "name": "id",
@@ -27449,7 +27591,10 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "For paid media transactions »¹, message ID of the paid media posted to peer.peer (can point to a deleted message; either way, extended_media will always contain the bought media).",
+          "links": [
+            "https://core.telegram.org/api/paid-media"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -27457,7 +27602,7 @@
         },
         "pending": {
           "name": "pending",
-          "description": " "
+          "description": "The transaction is currently pending."
         },
         "photo": {
           "name": "photo",
@@ -27477,18 +27622,18 @@
         },
         "transaction_date": {
           "name": "transaction_date",
-          "description": " "
+          "description": "If neither pending nor failed are set, the transaction was completed successfully, and this field will contain the point in time (Unix timestamp) when the withdrawal was completed successfully."
         },
         "transaction_url": {
           "name": "transaction_url",
-          "description": " "
+          "description": "If neither pending nor failed are set, the transaction was completed successfully, and this field will contain a URL where the withdrawal transaction can be viewed."
         }
       }
     },
     "starsTransactionPeer": {
       "name": "starsTransactionPeer",
       "description": [
-        "Describes a Telegram Star¹ transaction with another peer (usually a bot or a channel)."
+        "Describes a Telegram Star¹ transaction with another peer."
       ],
       "links": [
         "https://core.telegram.org/api/stars"
@@ -27501,7 +27646,14 @@
       }
     },
     "starsTransactionPeerAds": {
-      "name": "starsTransactionPeerAds"
+      "name": "starsTransactionPeerAds",
+      "description": [
+        "Describes a Telegram Star¹ transaction used to pay for Telegram ads as specified here »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/stars#paying-for-ads"
+      ]
     },
     "starsTransactionPeerAppStore": {
       "name": "starsTransactionPeerAppStore",
@@ -27541,7 +27693,7 @@
         "https://core.telegram.org/api/stars",
         "https://t.me/premiumbot",
         "https://core.telegram.org/constructor/inputInvoiceStars",
-        "https://core.telegram.org/api/stars#buying-stars"
+        "https://core.telegram.org/api/stars#buying-or-gifting-stars"
       ]
     },
     "starsTransactionPeerUnsupported": {
@@ -27606,7 +27758,7 @@
         "Contains the URL to use to withdraw channel ad revenue¹."
       ],
       "links": [
-        "https://core.telegram.org/api/revenue#withdrawing-funds"
+        "https://core.telegram.org/api/revenue#withdrawing-revenue"
       ],
       "fields": {
         "url": {
@@ -28429,14 +28581,20 @@
     },
     "stories.foundStories": {
       "name": "stories.foundStories",
+      "description": [
+        "Stories found using global story search »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#searching-stories"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results found for the query."
         },
         "flags": {
           "name": "flags",
@@ -28447,15 +28605,15 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset used to fetch the next page, if not set this is the final page."
         },
         "stories": {
           "name": "stories",
-          "description": " "
+          "description": "Matching stories."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
@@ -29446,7 +29604,13 @@
       }
     },
     "topPeerCategoryBotsApp": {
-      "name": "topPeerCategoryBotsApp"
+      "name": "topPeerCategoryBotsApp",
+      "description": [
+        "Most frequently used Main Mini Bot Apps¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-apps"
+      ]
     },
     "topPeerCategoryBotsInline": {
       "name": "topPeerCategoryBotsInline",
@@ -30127,18 +30291,27 @@
     },
     "updateBusinessBotCallbackQuery": {
       "name": "updateBusinessBotCallbackQuery",
+      "description": [
+        "A callback button sent via a business connection¹ was pressed, and the button data was sent to the bot that created the button."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "chat_instance": {
           "name": "chat_instance",
-          "description": " "
+          "description": "Global identifier, uniquely corresponding to the chat to which the message with the callback button was sent. Useful for high scores in games."
         },
         "connection_id": {
           "name": "connection_id",
-          "description": " "
+          "description": "Business connection ID¹",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots"
+          ]
         },
         "data": {
           "name": "data",
-          "description": " "
+          "description": "Callback data"
         },
         "flags": {
           "name": "flags",
@@ -30149,19 +30322,19 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message that contains the keyboard (also contains info about the chat where the message was sent)."
         },
         "query_id": {
           "name": "query_id",
-          "description": " "
+          "description": "Query ID"
         },
         "reply_to_message": {
           "name": "reply_to_message",
-          "description": " "
+          "description": "The message that message is replying to."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that pressed the button"
         }
       }
     },
@@ -31287,20 +31460,26 @@
     "updateMessageExtendedMedia": {
       "name": "updateMessageExtendedMedia",
       "description": [
-        "Extended media update"
+        "You bought a paid media »¹: this update contains the revealed media."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
       ],
       "fields": {
         "extended_media": {
           "name": "extended_media",
-          "description": "Extended media"
+          "description": "Revealed media, contains only messageExtendedMedia¹ constructors.",
+          "links": [
+            "https://core.telegram.org/constructor/messageExtendedMedia"
+          ]
         },
         "msg_id": {
           "name": "msg_id",
-          "description": "Message ID"
+          "description": "ID of the message containing the paid media"
         },
         "peer": {
           "name": "peer",
-          "description": "Peer"
+          "description": "Peer where the paid media was posted"
         }
       }
     },
@@ -32747,14 +32926,20 @@
     },
     "updateStarsRevenueStatus": {
       "name": "updateStarsRevenueStatus",
+      "description": [
+        "The Telegram Star balance of a channel/bot we own has changed »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#revenue-statistics"
+      ],
       "fields": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel/bot"
         },
         "status": {
           "name": "status",
-          "description": " "
+          "description": "New Telegram Star balance."
         }
       }
     },
@@ -34999,11 +35184,16 @@
         },
         "fullsize": {
           "name": "fullsize",
-          "description": " "
+          "description": "If set, the app must be opened in fullsize mode instead of compact mode."
         },
         "query_id": {
           "name": "query_id",
-          "description": "Webview session ID"
+          "description": "Webview session ID (only returned by inline button mini apps¹, menu button mini apps², attachment menu mini apps³).",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#inline-button-mini-apps",
+            "https://core.telegram.org/api/bots/webapps#menu-button-mini-apps",
+            "https://core.telegram.org/api/bots/webapps#attachment-menu-mini-apps"
+          ]
         },
         "url": {
           "name": "url",
@@ -35829,7 +36019,13 @@
       ]
     },
     "FoundStory": {
-      "name": "FoundStory"
+      "name": "FoundStory",
+      "description": [
+        "A story found using global story search »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#searching-stories"
+      ]
     },
     "Game": {
       "name": "Game",
@@ -36318,7 +36514,13 @@
       ]
     },
     "InputStarsTransaction": {
-      "name": "InputStarsTransaction"
+      "name": "InputStarsTransaction",
+      "description": [
+        "Used to fetch info about a Telegram Star transaction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#balance-and-transaction-history"
+      ]
     },
     "InputStickerSet": {
       "name": "InputStickerSet",
@@ -36479,7 +36681,10 @@
     "MessageExtendedMedia": {
       "name": "MessageExtendedMedia",
       "description": [
-        "Extended media"
+        "Paid media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
       ]
     },
     "MessageFwdHeader": {
@@ -37340,10 +37545,22 @@
       ]
     },
     "StarsGiftOption": {
-      "name": "StarsGiftOption"
+      "name": "StarsGiftOption",
+      "description": [
+        "Telegram Stars gift option¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#buying-or-gifting-stars"
+      ]
     },
     "StarsRevenueStatus": {
-      "name": "StarsRevenueStatus"
+      "name": "StarsRevenueStatus",
+      "description": [
+        "Describes Telegram Star revenue balances »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "StarsTopupOption": {
       "name": "StarsTopupOption",
@@ -38375,13 +38592,32 @@
       ]
     },
     "payments.StarsRevenueAdsAccountUrl": {
-      "name": "payments.StarsRevenueAdsAccountUrl"
+      "name": "payments.StarsRevenueAdsAccountUrl",
+      "description": [
+        "Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using Telegram Stars¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#paying-for-ads"
+      ]
     },
     "payments.StarsRevenueStats": {
-      "name": "payments.StarsRevenueStats"
+      "name": "payments.StarsRevenueStats",
+      "description": [
+        "Star revenue statistics, see here »¹ for more info.",
+        "Note that all balances and currency amounts and graph values are in Stars."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "payments.StarsRevenueWithdrawalUrl": {
-      "name": "payments.StarsRevenueWithdrawalUrl"
+      "name": "payments.StarsRevenueWithdrawalUrl",
+      "description": [
+        "Contains the URL to use to withdraw Telegram Star revenue¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#withdrawing-revenue"
+      ]
     },
     "payments.StarsStatus": {
       "name": "payments.StarsStatus",
@@ -38476,7 +38712,7 @@
         "Contains the URL to use to withdraw channel ad revenue¹."
       ],
       "links": [
-        "https://core.telegram.org/api/revenue#withdrawing-funds"
+        "https://core.telegram.org/api/revenue#withdrawing-revenue"
       ]
     },
     "stats.MegagroupStats": {
@@ -38513,7 +38749,13 @@
       ]
     },
     "stories.FoundStories": {
-      "name": "stories.FoundStories"
+      "name": "stories.FoundStories",
+      "description": [
+        "Stories found using global story search »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#searching-stories"
+      ]
     },
     "stories.PeerStories": {
       "name": "stories.PeerStories",
@@ -47299,7 +47541,10 @@
       "parameters": {
         "bots_app": {
           "name": "bots_app",
-          "description": " "
+          "description": "Most frequently used Main Mini Bot Apps¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#main-mini-apps"
+          ]
         },
         "bots_inline": {
           "name": "bots_inline",
@@ -54489,7 +54734,10 @@
         },
         "compact": {
           "name": "compact",
-          "description": " "
+          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the direct Mini App deep link¹ is equal to compact.",
+          "links": [
+            "https://core.telegram.org/api/links#direct-mini-app-links"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -54639,7 +54887,10 @@
         },
         "compact": {
           "name": "compact",
-          "description": " "
+          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the Mini App link¹ is equal to compact.",
+          "links": [
+            "https://core.telegram.org/api/links#mini-app-links"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -54756,7 +55007,10 @@
         },
         "compact": {
           "name": "compact",
-          "description": " "
+          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the attachment menu deep link¹ is equal to compact.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-attachment-or-side-menu-links"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -59569,6 +59823,13 @@
     },
     "payments.getStarsGiftOptions": {
       "name": "payments.getStarsGiftOptions",
+      "description": [
+        "Obtain a list of Telegram Stars gift options »¹ as starsGiftOption² constructors."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#buying-or-gifting-stars",
+        "https://core.telegram.org/constructor/starsGiftOption"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -59579,16 +59840,22 @@
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "Receiver of the gift (optional)."
         }
       }
     },
     "payments.getStarsRevenueAdsAccountUrl": {
       "name": "payments.getStarsRevenueAdsAccountUrl",
+      "description": [
+        "Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for channel/bot in peer, paid using the Telegram Stars owned by the specified peer, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#paying-for-ads"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel or bot that owns the stars."
         }
       },
       "errors": [
@@ -59601,10 +59868,16 @@
     },
     "payments.getStarsRevenueStats": {
       "name": "payments.getStarsRevenueStats",
+      "description": [
+        "Get Telegram Star revenue statistics »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "parameters": {
         "dark": {
           "name": "dark",
-          "description": " "
+          "description": "Whether to enable dark theme for graph colors"
         },
         "flags": {
           "name": "flags",
@@ -59615,7 +59888,10 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Get statistics for the specified bot, channel or ourselves (inputPeerSelf¹).",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerSelf"
+          ]
         }
       },
       "errors": [
@@ -59628,18 +59904,27 @@
     },
     "payments.getStarsRevenueWithdrawalUrl": {
       "name": "payments.getStarsRevenueWithdrawalUrl",
+      "description": [
+        "Withdraw funds from a channel or bot's star balance »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#withdrawing-revenue"
+      ],
       "parameters": {
         "password": {
           "name": "password",
-          "description": " "
+          "description": "2FA password, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/srp#using-the-2fa-password"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel or bot from which to withdraw funds."
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Amount of stars to withdraw."
         }
       },
       "errors": [
@@ -59689,7 +59974,7 @@
         "Obtain a list of Telegram Stars topup options »¹ as starsTopupOption² constructors."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#buying-stars",
+        "https://core.telegram.org/api/stars#buying-or-gifting-stars",
         "https://core.telegram.org/constructor/starsTopupOption"
       ]
     },
@@ -59705,7 +59990,7 @@
       "parameters": {
         "ascending": {
           "name": "ascending",
-          "description": " "
+          "description": "Return transactions in ascending order by date (instead of descending order by date)."
         },
         "flags": {
           "name": "flags",
@@ -59755,14 +60040,20 @@
     },
     "payments.getStarsTransactionsByID": {
       "name": "payments.getStarsTransactionsByID",
+      "description": [
+        "Obtain info about Telegram Star transactions »¹ using specific transaction IDs."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#balance-and-transaction-history"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Transaction IDs."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Channel or bot."
         }
       },
       "errors": [
@@ -63357,10 +63648,24 @@
     },
     "stories.searchPosts": {
       "name": "stories.searchPosts",
+      "description": [
+        "Globally search for stories¹ using a hashtag or a location media area², see here »³ for more info on the full flow.",
+        "Either hashtag or area must be set when invoking the method."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories",
+        "https://core.telegram.org/api/stories#location-tags",
+        "https://core.telegram.org/api/stories#searching-stories"
+      ],
       "parameters": {
         "area": {
           "name": "area",
-          "description": " "
+          "description": "A mediaAreaGeoPoint¹ or a mediaAreaVenue².  Note mediaAreaGeoPoint³ areas may be searched only if they have an associated address.",
+          "links": [
+            "https://core.telegram.org/constructor/mediaAreaGeoPoint",
+            "https://core.telegram.org/constructor/mediaAreaVenue",
+            "https://core.telegram.org/constructor/mediaAreaGeoPoint"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -63371,7 +63676,7 @@
         },
         "hashtag": {
           "name": "hashtag",
-          "description": " "
+          "description": "Hashtag (without the #)"
         },
         "limit": {
           "name": "limit",
@@ -63382,7 +63687,11 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination¹: initially an empty string, then the next_offset from the previously returned stories.foundStories².",
+          "links": [
+            "https://core.telegram.org/api/offsets",
+            "https://core.telegram.org/constructor/stories.foundStories"
+          ]
         }
       },
       "errors": [
