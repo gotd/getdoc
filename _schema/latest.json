@@ -4679,7 +4679,10 @@
         },
         "has_preview_medias": {
           "name": "has_preview_medias",
-          "description": " "
+          "description": "If set, the bot has some preview medias for the configured Main Mini App, see here »¹ for more info on Main Mini App preview medias.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+          ]
         },
         "menu_button": {
           "name": "menu_button",
@@ -5139,14 +5142,20 @@
     },
     "botPreviewMedia": {
       "name": "botPreviewMedia",
+      "description": [
+        "Represents a Main Mini App preview media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was this media last updated."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The actual photo/video."
         }
       }
     },
@@ -5172,6 +5181,13 @@
     },
     "bots.popularAppBots": {
       "name": "bots.popularAppBots",
+      "description": [
+        "Popular Main Mini Apps¹, to be used in the apps tab of global search »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-apps",
+        "https://core.telegram.org/api/search#apps-tab"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -5182,24 +5198,42 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset for pagination¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "The bots associated to each Main Mini App, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#main-mini-apps"
+          ]
         }
       }
     },
     "bots.previewInfo": {
       "name": "bots.previewInfo",
+      "description": [
+        "Contains info about Main Mini App previews, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "fields": {
         "lang_codes": {
           "name": "lang_codes",
-          "description": " "
+          "description": "All available language codes for which preview medias were uploaded (regardless of the language code passed to bots.getPreviewInfo¹).",
+          "links": [
+            "https://core.telegram.org/method/bots.getPreviewInfo"
+          ]
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "All preview medias for the language code passed to bots.getPreviewInfo¹.",
+          "links": [
+            "https://core.telegram.org/method/bots.getPreviewInfo"
+          ]
         }
       }
     },
@@ -7148,7 +7182,10 @@
         },
         "paid_media_allowed": {
           "name": "paid_media_allowed",
-          "description": " "
+          "description": "Whether the current user can send or forward paid media »¹ to this channel.",
+          "links": [
+            "https://core.telegram.org/api/paid-media"
+          ]
         },
         "participants_count": {
           "name": "participants_count",
@@ -10113,7 +10150,7 @@
         },
         "video_start_ts": {
           "name": "video_start_ts",
-          "description": " "
+          "description": "Floating point UNIX timestamp in seconds, indicating the frame of the video that should be used as static preview and thumbnail."
         },
         "w": {
           "name": "w",
@@ -13641,10 +13678,16 @@
     },
     "inputFileStoryDocument": {
       "name": "inputFileStoryDocument",
+      "description": [
+        "Used to edit the thumbnail/static preview of a story, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#editing-stories"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The old story video."
         }
       }
     },
@@ -14227,7 +14270,7 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Deprecated"
         },
         "flags": {
           "name": "flags",
@@ -19535,7 +19578,7 @@
         },
         "extended_media": {
           "name": "extended_media",
-          "description": " "
+          "description": "Deprecated"
         },
         "flags": {
           "name": "flags",
@@ -33794,7 +33837,7 @@
         },
         "bot_active_users": {
           "name": "bot_active_users",
-          "description": " "
+          "description": "Monthly Active Users (MAU) of this bot (may be absent for small bots)."
         },
         "bot_attach_menu": {
           "name": "bot_attach_menu",
@@ -33824,7 +33867,10 @@
         },
         "bot_has_main_app": {
           "name": "bot_has_main_app",
-          "description": " "
+          "description": "If set, this bot has configured a Main Mini App »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#main-mini-apps"
+          ]
         },
         "bot_info_version": {
           "name": "bot_info_version",
@@ -35463,7 +35509,13 @@
       ]
     },
     "BotPreviewMedia": {
-      "name": "BotPreviewMedia"
+      "name": "BotPreviewMedia",
+      "description": [
+        "Represents a Main Mini App preview media, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ]
     },
     "BroadcastRevenueBalances": {
       "name": "BroadcastRevenueBalances",
@@ -38088,10 +38140,23 @@
       ]
     },
     "bots.PopularAppBots": {
-      "name": "bots.PopularAppBots"
+      "name": "bots.PopularAppBots",
+      "description": [
+        "Popular Main Mini Apps¹, to be used in the apps tab of global search »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-apps",
+        "https://core.telegram.org/api/search#apps-tab"
+      ]
     },
     "bots.PreviewInfo": {
-      "name": "bots.PreviewInfo"
+      "name": "bots.PreviewInfo",
+      "description": [
+        "Contains info about Main Mini App previews, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ]
     },
     "bytes": {
       "name": "bytes",
@@ -42769,18 +42834,29 @@
     },
     "bots.addPreviewMedia": {
       "name": "bots.addPreviewMedia",
+      "description": [
+        "Add a main mini app preview, see here »¹ for more info.",
+        "Only owners of bots with a configured Main Mini App can use this method, see see here »¹ for more info on how to check if you can invoke this method."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews",
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the Main Mini App."
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "ISO 639-1 language code, indicating the localization of the preview to add."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The photo/video preview, uploaded using messages.uploadMedia¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.uploadMedia"
+          ]
         }
       },
       "errors": [
@@ -42870,18 +42946,29 @@
     },
     "bots.deletePreviewMedia": {
       "name": "bots.deletePreviewMedia",
+      "description": [
+        "Delete a main mini app preview, see here »¹ for more info.",
+        "Only owners of bots with a configured Main Mini App can use this method, see see here »¹ for more info on how to check if you can invoke this method."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews",
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the Main Mini App."
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "ISO 639-1 language code, indicating the localization of the preview to delete."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The photo/video preview to delete, previously fetched as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+          ]
         }
       },
       "errors": [
@@ -42894,22 +42981,36 @@
     },
     "bots.editPreviewMedia": {
       "name": "bots.editPreviewMedia",
+      "description": [
+        "Edit a main mini app preview, see here »¹ for more info.",
+        "Only owners of bots with a configured Main Mini App can use this method, see see here »¹ for more info on how to check if you can invoke this method."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews",
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the Main Mini App."
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "ISO 639-1 language code, indicating the localization of the preview to edit."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The photo/video preview to replace, previously fetched as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+          ]
         },
         "new_media": {
           "name": "new_media",
-          "description": " "
+          "description": "The new photo/video preview, uploaded using messages.uploadMedia¹.",
+          "links": [
+            "https://core.telegram.org/method/messages.uploadMedia"
+          ]
         }
       },
       "errors": [
@@ -43016,6 +43117,13 @@
     },
     "bots.getPopularAppBots": {
       "name": "bots.getPopularAppBots",
+      "description": [
+        "Fetch popular Main Mini Apps¹, to be used in the apps tab of global search »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-apps",
+        "https://core.telegram.org/api/search#apps-tab"
+      ],
       "parameters": {
         "limit": {
           "name": "limit",
@@ -43026,20 +43134,32 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination¹, initially an empty string, then re-use the next_offset returned by the previous query.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
       }
     },
     "bots.getPreviewInfo": {
       "name": "bots.getPreviewInfo",
+      "description": [
+        "Bot owners only, fetch main mini app preview information, see here »¹ for more info.",
+        "Note: technically non-owners may also invoke this method, but it will always behave exactly as bots.getPreviewMedias¹, returning only previews for the current language and an empty lang_codes array, regardless of the passed lang_code, so please only use bots.getPreviewMedias² if you're not the owner of the bot."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews",
+        "https://core.telegram.org/method/bots.getPreviewMedias",
+        "https://core.telegram.org/method/bots.getPreviewMedias"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the Main Mini App."
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "Fetch previews for the specified ISO 639-1 language code."
         }
       },
       "errors": [
@@ -43052,10 +43172,16 @@
     },
     "bots.getPreviewMedias": {
       "name": "bots.getPreviewMedias",
+      "description": [
+        "Fetch main mini app previews, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the Main Mini App."
         }
       },
       "errors": [
@@ -43110,18 +43236,26 @@
     },
     "bots.reorderPreviewMedias": {
       "name": "bots.reorderPreviewMedias",
+      "description": [
+        "Reorder a main mini app previews, see here »¹ for more info.",
+        "Only owners of bots with a configured Main Mini App can use this method, see see here »¹ for more info on how to check if you can invoke this method."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews",
+        "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the Main Mini App."
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "ISO 639-1 language code, indicating the localization of the previews to reorder."
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "New order of the previews."
         }
       },
       "errors": [
@@ -51856,16 +51990,22 @@
     "messages.getExtendedMedia": {
       "name": "messages.getExtendedMedia",
       "description": [
-        "Get information about extended media"
+        "Fetch updated information about paid media, see here »¹ for the full flow.",
+        "This method will return an array of updateMessageExtendedMedia¹ updates, only for messages containing already bought paid media.",
+        "No information will be returned for messages containing not yet bought paid media."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media",
+        "https://core.telegram.org/constructor/updateMessageExtendedMedia"
       ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": "Message IDs"
+          "description": "IDs of currently visible messages containing paid media."
         },
         "peer": {
           "name": "peer",
-          "description": "Peer"
+          "description": "Peer with visible paid media messages."
         }
       }
     },
@@ -54831,14 +54971,23 @@
     },
     "messages.requestMainWebView": {
       "name": "messages.requestMainWebView",
+      "description": [
+        "Open a Main Mini App¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps#main-mini-apps"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Bot that owns the main mini app."
         },
         "compact": {
           "name": "compact",
-          "description": " "
+          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the Main Mini App link¹ is equal to compact.",
+          "links": [
+            "https://core.telegram.org/api/links#main-mini-app-links"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -54849,19 +54998,28 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Currently open chat, may be inputPeerEmpty¹ if no chat is currently open.",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerEmpty"
+          ]
         },
         "platform": {
           "name": "platform",
-          "description": " "
+          "description": "Short name of the application; 0-64 English letters, digits, and underscores"
         },
         "start_param": {
           "name": "start_param",
-          "description": " "
+          "description": "Start parameter, if opening from a Main Mini App link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#main-mini-app-links"
+          ]
         },
         "theme_params": {
           "name": "theme_params",
-          "description": " "
+          "description": "Theme parameters »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#theme-parameters"
+          ]
         }
       },
       "errors": [
@@ -54887,10 +55045,7 @@
         },
         "compact": {
           "name": "compact",
-          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the Mini App link¹ is equal to compact.",
-          "links": [
-            "https://core.telegram.org/api/links#mini-app-links"
-          ]
+          "description": "Deprecated."
         },
         "flags": {
           "name": "flags",
@@ -54901,10 +55056,9 @@
         },
         "from_side_menu": {
           "name": "from_side_menu",
-          "description": "Set this flag if opening the Mini App from the installed side menu entry »¹ or from a Mini App link »².",
+          "description": "Set this flag if opening the Mini App from the installed side menu entry »¹.",
           "links": [
-            "https://core.telegram.org/api/bots/attach",
-            "https://core.telegram.org/api/links#mini-app-links"
+            "https://core.telegram.org/api/bots/attach"
           ]
         },
         "from_switch_webview": {
@@ -54920,10 +55074,7 @@
         },
         "start_param": {
           "name": "start_param",
-          "description": "Start parameter, if opening from a Mini App link »¹.",
-          "links": [
-            "https://core.telegram.org/api/links#mini-app-links"
-          ]
+          "description": "Deprecated."
         },
         "theme_params": {
           "name": "theme_params",
