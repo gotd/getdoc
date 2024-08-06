@@ -5764,7 +5764,15 @@
     "channel": {
       "name": "channel",
       "description": [
-        "Channel/supergroup info"
+        "Channel/supergroup info",
+        "When updating the local peer database¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).",
+        "The only exception to the above rule is when the min flag is set, in which case only the following fields must be applied over any locally stored version:",
+        "See here »¹ for an implementation of the logic to use when updating the local user peer database²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/peers",
+        "https://github.com/tdlib/td/blob/a24af0992245f838f2b4b418a0a2d5fa9caa27b5/td/telegram/ChatManager.cpp#L8329",
+        "https://core.telegram.org/api/peers"
       ],
       "fields": {
         "access_hash": {
@@ -5831,9 +5839,11 @@
         },
         "fake": {
           "name": "fake",
-          "description": "If set, this supergroup/channel¹ was reported by many users as a fake or scam: be careful when interacting with it.",
+          "description": "If set, this supergroup/channel¹ was reported by many users as a fake or scam: be careful when interacting with it. Changes to this flag should invalidate the local channelFull² cache for this channel/supergroup ID, see here »³ for more info.",
           "links": [
-            "https://core.telegram.org/api/channel"
+            "https://core.telegram.org/api/channel",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "flags": {
@@ -5852,16 +5862,20 @@
         },
         "forum": {
           "name": "forum",
-          "description": "Whether this supergroup is a forum¹",
+          "description": "Whether this supergroup is a forum¹. Changes to this flag should invalidate the local channelFull² cache for this channel/supergroup ID, see here »³ for more info.",
           "links": [
-            "https://core.telegram.org/api/forum"
+            "https://core.telegram.org/api/forum",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "gigagroup": {
           "name": "gigagroup",
-          "description": "Whether this supergroup¹ is a gigagroup",
+          "description": "Whether this supergroup¹ is a gigagroupChanges to this flag should invalidate the local channelFull² cache for this channel/supergroup ID, see here »³ for more info.",
           "links": [
-            "https://core.telegram.org/api/channel"
+            "https://core.telegram.org/api/channel",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "has_geo": {
@@ -5870,7 +5884,13 @@
         },
         "has_link": {
           "name": "has_link",
-          "description": "Whether this channel has a private join link"
+          "description": "Whether this channel has a linked discussion group »¹ (or this supergroup is a channel's discussion group). The actual ID of the linked channel/supergroup is contained in channelFull².linked_chat_id. Changes to this flag should invalidate the local channelFull³ cache for this channel/supergroup ID, see here »⁴ for more info.",
+          "links": [
+            "https://core.telegram.org/api/discussion",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
+          ]
         },
         "id": {
           "name": "id",
@@ -5881,18 +5901,22 @@
         },
         "join_request": {
           "name": "join_request",
-          "description": "Whether a user's join request will have to be approved by administrators¹, toggle using channels.toggleJoinToSend²",
+          "description": "Whether a user's join request will have to be approved by administrators¹, toggle using channels.toggleJoinToSend²Changes to this flag should invalidate the local channelFull³ cache for this channel/supergroup ID, see here »⁴ for more info.",
           "links": [
             "https://core.telegram.org/api/invites#join-requests",
-            "https://core.telegram.org/method/channels.toggleJoinRequest"
+            "https://core.telegram.org/method/channels.toggleJoinRequest",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "join_to_send": {
           "name": "join_to_send",
-          "description": "Whether a user needs to join the supergroup before they can send messages: can be false only for discussion groups »¹, toggle using channels.toggleJoinToSend²",
+          "description": "Whether a user needs to join the supergroup before they can send messages: can be false only for discussion groups »¹, toggle using channels.toggleJoinToSend²Changes to this flag should invalidate the local channelFull³ cache for this channel/supergroup ID, see here »⁴ for more info.",
           "links": [
             "https://core.telegram.org/api/discussion",
-            "https://core.telegram.org/method/channels.toggleJoinToSend"
+            "https://core.telegram.org/method/channels.toggleJoinToSend",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "left": {
@@ -5901,14 +5925,20 @@
         },
         "level": {
           "name": "level",
-          "description": "Boost level¹",
+          "description": "Boost level¹. Changes to this flag should invalidate the local channelFull² cache for this channel/supergroup ID, see here »³ for more info.",
           "links": [
-            "https://core.telegram.org/api/boost"
+            "https://core.telegram.org/api/boost",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "megagroup": {
           "name": "megagroup",
-          "description": "Is this a supergroup?"
+          "description": "Is this a supergroup? Changes to this flag should invalidate the local channelFull¹ cache for this channel/supergroup ID, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
+          ]
         },
         "min": {
           "name": "min",
@@ -5941,15 +5971,23 @@
         },
         "restricted": {
           "name": "restricted",
-          "description": "Whether viewing/writing in this channel for a reason (see restriction_reason"
+          "description": "Whether viewing/writing in this channel for a reason (see restriction_reason)"
         },
         "restriction_reason": {
           "name": "restriction_reason",
-          "description": "Contains the reason why access to this channel must be restricted."
+          "description": "Contains the reason why access to this channel must be restricted. Changes to this flag should invalidate the local channelFull¹ cache for this channel/supergroup ID, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
+          ]
         },
         "scam": {
           "name": "scam",
-          "description": "This channel/supergroup is probably a scam"
+          "description": "This channel/supergroup is probably a scam Changes to this flag should invalidate the local channelFull¹ cache for this channel/supergroup ID, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
+          ]
         },
         "signatures": {
           "name": "signatures",
@@ -5957,7 +5995,11 @@
         },
         "slowmode_enabled": {
           "name": "slowmode_enabled",
-          "description": "Whether slow mode is enabled for groups to prevent flood in chat"
+          "description": "Whether slow mode is enabled for groups to prevent flood in chat. Changes to this flag should invalidate the local channelFull¹ cache for this channel/supergroup ID, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/peers#full-info-database"
+          ]
         },
         "stories_hidden": {
           "name": "stories_hidden",
@@ -6964,12 +7006,14 @@
     "channelFull": {
       "name": "channelFull",
       "description": [
-        "Full info about a channel¹, supergroup² or gigagroup³."
+        "Full info about a channel¹, supergroup² or gigagroup³.",
+        "When updating the local peer database »¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor)."
       ],
       "links": [
         "https://core.telegram.org/api/channel#channels",
         "https://core.telegram.org/api/channel#supergroups",
-        "https://core.telegram.org/api/channel#gigagroups"
+        "https://core.telegram.org/api/channel#gigagroups",
+        "https://core.telegram.org/api/peers"
       ],
       "fields": {
         "about": {
@@ -7149,7 +7193,7 @@
         },
         "linked_chat_id": {
           "name": "linked_chat_id",
-          "description": "ID of the linked discussion chat¹ for channels",
+          "description": "ID of the linked discussion chat¹ for channels (and vice versa, the ID of the linked channel for discussion chats).",
           "links": [
             "https://core.telegram.org/api/discussion"
           ]
@@ -7762,7 +7806,14 @@
     "chat": {
       "name": "chat",
       "description": [
-        "Info about a group"
+        "Info about a group.",
+        "When updating the local peer database¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).",
+        "See here »¹ for an implementation of the logic to use when updating the local user peer database²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/peers",
+        "https://github.com/tdlib/td/blob/a24af0992245f838f2b4b418a0a2d5fa9caa27b5/td/telegram/ChatManager.cpp#L5152",
+        "https://core.telegram.org/api/peers"
       ],
       "fields": {
         "admin_rights": {
@@ -8187,10 +8238,12 @@
     "chatFull": {
       "name": "chatFull",
       "description": [
-        "Full info about a basic group¹."
+        "Full info about a basic group¹.",
+        "When updating the local peer database »¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor)."
       ],
       "links": [
-        "https://core.telegram.org/api/channel#basic-groups"
+        "https://core.telegram.org/api/channel#basic-groups",
+        "https://core.telegram.org/api/peers"
       ],
       "fields": {
         "about": {
@@ -30384,7 +30437,18 @@
     "updateChannel": {
       "name": "updateChannel",
       "description": [
-        "A new channel or supergroup is available, or info about an existing channel has changed and must be refeteched."
+        "Channel/supergroup (channel¹ and/or channelFull²) information was updated.",
+        "This update can only be received through getDifference or in updates¹/updatesCombined² constructors, so it will always come bundled with the updated channel³, that should be applied as usual »⁴, without re-fetching the info manually.",
+        "However, full peer information will not come bundled in updates, so the full peer cache (channelFull¹) must be invalidated for channel_id when receiving this update."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/channel",
+        "https://core.telegram.org/constructor/channelFull",
+        "https://core.telegram.org/constructor/updates",
+        "https://core.telegram.org/constructor/updatesCombined",
+        "https://core.telegram.org/constructor/channel",
+        "https://core.telegram.org/api/peers",
+        "https://core.telegram.org/constructor/channelFull"
       ],
       "fields": {
         "channel_id": {
@@ -30734,7 +30798,18 @@
     "updateChat": {
       "name": "updateChat",
       "description": [
-        "A new chat is available"
+        "Chat (chat¹ and/or chatFull²) information was updated.",
+        "This update can only be received through getDifference or in updates¹/updatesCombined² constructors, so it will always come bundled with the updated chat³, that should be applied as usual »⁴, without re-fetching the info manually.",
+        "However, full peer information will not come bundled in updates, so the full peer cache (chatFull¹) must be invalidated for chat_id when receiving this update."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/chat",
+        "https://core.telegram.org/constructor/chatFull",
+        "https://core.telegram.org/constructor/updates",
+        "https://core.telegram.org/constructor/updatesCombined",
+        "https://core.telegram.org/constructor/chat",
+        "https://core.telegram.org/api/peers",
+        "https://core.telegram.org/constructor/chatFull"
       ],
       "fields": {
         "chat_id": {
@@ -33158,12 +33233,18 @@
     "updateUser": {
       "name": "updateUser",
       "description": [
-        "User (user¹ and/or userFull²) information was updated, it must be refetched using users.getFullUser³."
+        "User (user¹ and/or userFull²) information was updated.",
+        "This update can only be received through getDifference or in updates¹/updatesCombined² constructors, so it will always come bundled with the updated user³, that should be applied as usual »⁴, without re-fetching the info manually.",
+        "However, full peer information will not come bundled in updates, so the full peer cache (userFull¹) must be invalidated for user_id when receiving this update."
       ],
       "links": [
         "https://core.telegram.org/constructor/user",
         "https://core.telegram.org/constructor/userFull",
-        "https://core.telegram.org/method/users.getFullUser"
+        "https://core.telegram.org/constructor/updates",
+        "https://core.telegram.org/constructor/updatesCombined",
+        "https://core.telegram.org/constructor/user",
+        "https://core.telegram.org/api/peers",
+        "https://core.telegram.org/constructor/userFull"
       ],
       "fields": {
         "user_id": {
@@ -33830,9 +33911,10 @@
         },
         "bot": {
           "name": "bot",
-          "description": "Is this user a bot? Changes to this flag should invalidate the local userFull¹ cache for this user ID.",
+          "description": "Is this user a bot? Changes to this flag should invalidate the local userFull¹ cache for this user ID, see here »² for more info.",
           "links": [
-            "https://core.telegram.org/constructor/userFull"
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "bot_active_users": {
@@ -33874,10 +33956,11 @@
         },
         "bot_info_version": {
           "name": "bot_info_version",
-          "description": "Version of the bot_info field in userFull¹, incremented every time it changes. Changes to this flag should invalidate the local userFull² cache for this user ID.",
+          "description": "Version of the bot_info field in userFull¹, incremented every time it changes. Changes to this flag should invalidate the local userFull² cache for this user ID, see here »³ for more info.",
           "links": [
             "https://core.telegram.org/constructor/userFull",
-            "https://core.telegram.org/constructor/userFull"
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
         "bot_inline_geo": {
@@ -33916,17 +33999,23 @@
         },
         "contact_require_premium": {
           "name": "contact_require_premium",
-          "description": "If set, we can only write to this user if they have already sent some messages to us, if we are subscribed to Telegram Premium¹, or if they're a mutual contact (user².mutual_contact).  All the secondary conditions listed above must be checked separately to verify whether we can still write to the user, even if this flag is set (i.e. a mutual contact will have this flag set even if we can still write to them, and so on...); to avoid doing these extra checks if we haven't yet cached all the required information (for example while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked instead, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user. To set this flag for ourselves invoke account.setGlobalPrivacySettings⁴, setting the settings.new_noncontact_peers_require_premium flag.",
+          "description": "If set, we can only write to this user if they have already sent some messages to us, if we are subscribed to Telegram Premium¹, or if they're a mutual contact (user².mutual_contact).  All the secondary conditions listed above must be checked separately to verify whether we can still write to the user, even if this flag is set (i.e. a mutual contact will have this flag set even if we can still write to them, and so on...); to avoid doing these extra checks if we haven't yet cached all the required information (for example while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked instead, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user; alternatively, the userFull⁴.contact_require_premium flag contains the same (fully checked, i.e. it's not just a copy of this flag) info returned by users.getIsPremiumRequiredToContact⁵. To set this flag for ourselves invoke account.setGlobalPrivacySettings⁶, setting the settings.new_noncontact_peers_require_premium flag.",
           "links": [
             "https://core.telegram.org/api/premium",
             "https://core.telegram.org/constructor/user",
+            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
+            "https://core.telegram.org/constructor/userFull",
             "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
             "https://core.telegram.org/method/account.setGlobalPrivacySettings"
           ]
         },
         "deleted": {
           "name": "deleted",
-          "description": "Whether the account of this user was deleted"
+          "description": "Whether the account of this user was deleted. Changes to this flag should invalidate the local userFull¹ cache for this user ID, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/api/peers#full-info-database"
+          ]
         },
         "emoji_status": {
           "name": "emoji_status",
@@ -34008,9 +34097,10 @@
         },
         "premium": {
           "name": "premium",
-          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - The help.getConfig² cache - The messages.getTopReactions³ cache if the bot flag is not set",
+          "description": "Whether this user is a Telegram Premium user Changes to this flag should invalidate the local userFull¹ cache for this user ID, see here »² for more info. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - The help.getConfig³ cache - The messages.getTopReactions⁴ cache if the bot flag is not set",
           "links": [
             "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/api/peers#full-info-database",
             "https://core.telegram.org/method/help.getConfig",
             "https://core.telegram.org/method/messages.getTopReactions"
           ]
@@ -34056,9 +34146,10 @@
         },
         "stories_max_id": {
           "name": "stories_max_id",
-          "description": "ID of the maximum read story¹.",
+          "description": "ID of the maximum read story¹.  When updating the local peer database², do not apply changes to this field if the min flag of the incoming constructor is set.",
           "links": [
-            "https://core.telegram.org/api/stories"
+            "https://core.telegram.org/api/stories",
+            "https://core.telegram.org/api/peers"
           ]
         },
         "stories_unavailable": {
@@ -34071,9 +34162,10 @@
         },
         "username": {
           "name": "username",
-          "description": "Main active username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
+          "description": "Main active username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set. Changes to this flag should invalidate the local userFull² cache for this user ID if the above conditions are respected and the bot_can_edit flag is also set.",
           "links": [
-            "https://core.telegram.org/api/peers"
+            "https://core.telegram.org/api/peers",
+            "https://core.telegram.org/constructor/userFull"
           ]
         },
         "usernames": {
@@ -34105,7 +34197,11 @@
     "userFull": {
       "name": "userFull",
       "description": [
-        "Extended user info"
+        "Extended user info",
+        "When updating the local peer database »¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/peers"
       ],
       "fields": {
         "about": {
@@ -34195,12 +34291,11 @@
         },
         "contact_require_premium": {
           "name": "contact_require_premium",
-          "description": "If set, we can only write to this user if they have already sent some messages to us, if we are subscribed to Telegram Premium¹, or if they're a mutual contact (user².mutual_contact).  All the secondary conditions listed above must be checked separately to verify whether we can still write to the user, even if this flag is set (i.e. a mutual contact will have this flag set even if we can still write to them, and so on...); to avoid doing these extra checks if we haven't yet cached all the required information (for example while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked instead, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user. To set this flag for ourselves invoke account.setGlobalPrivacySettings⁴, setting the settings.new_noncontact_peers_require_premium flag.",
+          "description": "If set, we cannot write to this user: subscribe to Telegram Premium¹ to get permission to write to this user. To set this flag for ourselves invoke account.setGlobalPrivacySettings², setting the settings.new_noncontact_peers_require_premium flag, see here »³ for more info.",
           "links": [
             "https://core.telegram.org/api/premium",
-            "https://core.telegram.org/constructor/user",
-            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
-            "https://core.telegram.org/method/account.setGlobalPrivacySettings"
+            "https://core.telegram.org/method/account.setGlobalPrivacySettings",
+            "https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users"
           ]
         },
         "fallback_photo": {
@@ -48512,15 +48607,18 @@
         },
         "lang_code": {
           "name": "lang_code",
-          "description": "Code for the language used on the client, ISO 639-1 standard"
+          "description": "Either an ISO 639-1 language code or a language pack name obtained from a language pack link¹.",
+          "links": [
+            "https://core.telegram.org/api/links#language-pack-links"
+          ]
         },
         "lang_pack": {
           "name": "lang_pack",
-          "description": "Language pack to use"
+          "description": "Platform identifier (i.e. android, tdesktop, etc)."
         },
         "params": {
           "name": "params",
-          "description": "Additional initConnection parameters. For now, only the tz_offset field is supported, for specifying timezone offset in seconds."
+          "description": "Additional initConnection parameters. For now, only the tz_offset field is supported, for specifying the timezone offset in seconds."
         },
         "proxy": {
           "name": "proxy",
@@ -48762,11 +48860,14 @@
         },
         "lang_code": {
           "name": "lang_code",
-          "description": "Language code"
+          "description": "Either an ISO 639-1 language code or a language pack name obtained from a language pack link¹.",
+          "links": [
+            "https://core.telegram.org/api/links#language-pack-links"
+          ]
         },
         "lang_pack": {
           "name": "lang_pack",
-          "description": "Language pack"
+          "description": "Platform identifier (i.e. android, tdesktop, etc)."
         }
       },
       "errors": [
@@ -48785,14 +48886,14 @@
       "parameters": {
         "lang_code": {
           "name": "lang_code",
-          "description": "Language code"
-        },
-        "lang_pack": {
-          "name": "lang_pack",
-          "description": "Language pack name, usually obtained from a language pack link¹",
+          "description": "Either an ISO 639-1 language code or a language pack name obtained from a language pack link¹.",
           "links": [
             "https://core.telegram.org/api/links#language-pack-links"
           ]
+        },
+        "lang_pack": {
+          "name": "lang_pack",
+          "description": "Platform identifier (i.e. android, tdesktop, etc)."
         }
       },
       "errors": [
@@ -48821,14 +48922,14 @@
       "parameters": {
         "lang_code": {
           "name": "lang_code",
-          "description": "Language code"
-        },
-        "lang_pack": {
-          "name": "lang_pack",
-          "description": "Language pack name, usually obtained from a language pack link¹",
+          "description": "Either an ISO 639-1 language code or a language pack name obtained from a language pack link¹.",
           "links": [
             "https://core.telegram.org/api/links#language-pack-links"
           ]
+        },
+        "lang_pack": {
+          "name": "lang_pack",
+          "description": "Platform identifier (i.e. android, tdesktop, etc)."
         }
       },
       "errors": [
@@ -48852,7 +48953,7 @@
       "parameters": {
         "lang_pack": {
           "name": "lang_pack",
-          "description": "Language pack"
+          "description": "Platform identifier (i.e. android, tdesktop, etc)."
         }
       },
       "errors": [
@@ -48875,14 +48976,14 @@
         },
         "lang_code": {
           "name": "lang_code",
-          "description": "Language code"
-        },
-        "lang_pack": {
-          "name": "lang_pack",
-          "description": "Language pack name, usually obtained from a language pack link¹",
+          "description": "Either an ISO 639-1 language code or a language pack name obtained from a language pack link¹.",
           "links": [
             "https://core.telegram.org/api/links#language-pack-links"
           ]
+        },
+        "lang_pack": {
+          "name": "lang_pack",
+          "description": "Platform identifier (i.e. android, tdesktop, etc)."
         }
       },
       "errors": [
@@ -56595,6 +56696,11 @@
         },
         {
           "code": 400,
+          "type": "INPUT_FILE_INVALID",
+          "description": "The specified InputFile is invalid."
+        },
+        {
+          "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
         },
@@ -60183,6 +60289,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -61045,6 +61156,11 @@
           "code": 400,
           "type": "USER_ALREADY_INVITED",
           "description": "You have already invited this user."
+        },
+        {
+          "code": 403,
+          "type": "USER_NOT_PARTICIPANT",
+          "description": "You're not a member of this supergroup/channel."
         }
       ]
     },
@@ -66080,6 +66196,11 @@
       "code": 400,
       "type": "INPUT_CHATLIST_INVALID",
       "description": "The specified folder is invalid."
+    },
+    "INPUT_FILE_INVALID": {
+      "code": 400,
+      "type": "INPUT_FILE_INVALID",
+      "description": "The specified InputFile is invalid."
     },
     "INPUT_FILTER_INVALID": {
       "code": 400,
