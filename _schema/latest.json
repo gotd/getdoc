@@ -33435,7 +33435,10 @@
         },
         "timeout": {
           "name": "timeout",
-          "description": "Clients are supposed to refetch the channel difference after timeout seconds have elapsed"
+          "description": "Clients are supposed to refetch the channel difference after timeout seconds have elapsed, if the user is currently viewing the chat, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates#subscribing-to-updates-of-channels-supergroups"
+          ]
         },
         "users": {
           "name": "users",
@@ -33469,7 +33472,10 @@
         },
         "timeout": {
           "name": "timeout",
-          "description": "Clients are supposed to refetch the channel difference after timeout seconds have elapsed"
+          "description": "Clients are supposed to refetch the channel difference after timeout seconds have elapsed, if the user is currently viewing the chat, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates#subscribing-to-updates-of-channels-supergroups"
+          ]
         }
       }
     },
