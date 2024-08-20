@@ -41027,7 +41027,7 @@
         {
           "code": 400,
           "type": "AUTOARCHIVE_NOT_AVAILABLE",
-          "description": "The autoarchive setting is not available at this time: please check the value of the autoarchive_setting_available field in client config » before calling this method."
+          "description": "The autoarchive setting is not available at this time: please check the value of the autoarchive_setting_available field in client config » before calling this method."
         },
         {
           "code": 403,
@@ -41354,7 +41354,7 @@
         {
           "code": 400,
           "type": "BUSINESS_WORK_HOURS_PERIOD_INVALID",
-          "description": "The specified work hours are invalid, see here » for the exact requirements."
+          "description": "The specified work hours are invalid, see here » for the exact requirements."
         },
         {
           "code": 400,
@@ -47129,7 +47129,7 @@
         {
           "code": 400,
           "type": "INVITES_TOO_MUCH",
-          "description": "The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium client configuration parameters » was reached."
+          "description": "The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium client configuration parameters » was reached."
         },
         {
           "code": 400,
@@ -47708,7 +47708,7 @@
         {
           "code": 406,
           "type": "BUSINESS_ADDRESS_ACTIVE",
-          "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
+          "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
         },
         {
           "code": 400,
@@ -48234,7 +48234,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 403,
@@ -50353,7 +50353,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -50500,7 +50500,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -50884,7 +50884,7 @@
         {
           "code": 403,
           "type": "CHAT_GUEST_SEND_FORBIDDEN",
-          "description": "You join the discussion group before commenting, see here » for more info."
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -50989,7 +50989,7 @@
         {
           "code": 406,
           "type": "PAYMENT_UNSUPPORTED",
-          "description": "A detailed description of the error will be received separately as described here »."
+          "description": "A detailed description of the error will be received separately as described here »."
         },
         {
           "code": 400,
@@ -52578,7 +52578,7 @@
         {
           "code": 400,
           "type": "CHAT_TOO_BIG",
-          "description": "This method is not available for groups with more than chat_read_mark_size_threshold members, see client configuration »."
+          "description": "This method is not available for groups with more than chat_read_mark_size_threshold members, see client configuration »."
         },
         {
           "code": 400,
@@ -53915,7 +53915,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -55465,7 +55465,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -56250,7 +56250,7 @@
         {
           "code": 403,
           "type": "CHAT_GUEST_SEND_FORBIDDEN",
-          "description": "You join the discussion group before commenting, see here » for more info."
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -56310,7 +56310,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -56578,7 +56578,7 @@
         {
           "code": 403,
           "type": "CHAT_GUEST_SEND_FORBIDDEN",
-          "description": "You join the discussion group before commenting, see here » for more info."
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -56663,7 +56663,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -57122,7 +57122,7 @@
         {
           "code": 403,
           "type": "CHAT_GUEST_SEND_FORBIDDEN",
-          "description": "You join the discussion group before commenting, see here » for more info."
+          "description": "You join the discussion group before commenting, see here » for more info."
         },
         {
           "code": 400,
@@ -57162,7 +57162,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -57202,7 +57202,7 @@
         {
           "code": 406,
           "type": "PAYMENT_UNSUPPORTED",
-          "description": "A detailed description of the error will be received separately as described here »."
+          "description": "A detailed description of the error will be received separately as described here »."
         },
         {
           "code": 400,
@@ -57473,7 +57473,7 @@
         {
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
-          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+          "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
         },
         {
           "code": 400,
@@ -57707,7 +57707,7 @@
         {
           "code": 400,
           "type": "REACTIONS_TOO_MANY",
-          "description": "The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see the docs for more info »."
+          "description": "The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see the docs for more info »."
         },
         {
           "code": 400,
@@ -65136,7 +65136,7 @@
     "AUTOARCHIVE_NOT_AVAILABLE": {
       "code": 400,
       "type": "AUTOARCHIVE_NOT_AVAILABLE",
-      "description": "The autoarchive setting is not available at this time: please check the value of the autoarchive_setting_available field in client config » before calling this method."
+      "description": "The autoarchive setting is not available at this time: please check the value of the autoarchive_setting_available field in client config » before calling this method."
     },
     "BALANCE_TOO_LOW": {
       "code": 400,
@@ -65296,7 +65296,7 @@
     "BUSINESS_ADDRESS_ACTIVE": {
       "code": 406,
       "type": "BUSINESS_ADDRESS_ACTIVE",
-      "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
+      "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
     },
     "BUSINESS_PEER_INVALID": {
       "code": 400,
@@ -65316,7 +65316,7 @@
     "BUSINESS_WORK_HOURS_PERIOD_INVALID": {
       "code": 400,
       "type": "BUSINESS_WORK_HOURS_PERIOD_INVALID",
-      "description": "The specified work hours are invalid, see here » for the exact requirements."
+      "description": "The specified work hours are invalid, see here » for the exact requirements."
     },
     "BUTTON_DATA_INVALID": {
       "code": 400,
@@ -65511,7 +65511,7 @@
     "CHAT_GUEST_SEND_FORBIDDEN": {
       "code": 403,
       "type": "CHAT_GUEST_SEND_FORBIDDEN",
-      "description": "You join the discussion group before commenting, see here » for more info."
+      "description": "You join the discussion group before commenting, see here » for more info."
     },
     "CHAT_ID_EMPTY": {
       "code": 400,
@@ -65636,7 +65636,7 @@
     "CHAT_TOO_BIG": {
       "code": 400,
       "type": "CHAT_TOO_BIG",
-      "description": "This method is not available for groups with more than chat_read_mark_size_threshold members, see client configuration »."
+      "description": "This method is not available for groups with more than chat_read_mark_size_threshold members, see client configuration »."
     },
     "CHAT_WRITE_FORBIDDEN": {
       "code": 403,
@@ -65871,7 +65871,7 @@
     "ENTITY_BOUNDS_INVALID": {
       "code": 400,
       "type": "ENTITY_BOUNDS_INVALID",
-      "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+      "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
     },
     "ENTITY_MENTION_USER_INVALID": {
       "code": 400,
@@ -66231,7 +66231,7 @@
     "INVITES_TOO_MUCH": {
       "code": 400,
       "type": "INVITES_TOO_MUCH",
-      "description": "The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium client configuration parameters » was reached."
+      "description": "The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium client configuration parameters » was reached."
     },
     "INVITE_FORBIDDEN_WITH_JOINAS": {
       "code": 400,
@@ -66631,7 +66631,7 @@
     "PAYMENT_UNSUPPORTED": {
       "code": 406,
       "type": "PAYMENT_UNSUPPORTED",
-      "description": "A detailed description of the error will be received separately as described here »."
+      "description": "A detailed description of the error will be received separately as described here »."
     },
     "PEERS_LIST_EMPTY": {
       "code": 400,
@@ -66966,7 +66966,7 @@
     "REACTIONS_TOO_MANY": {
       "code": 400,
       "type": "REACTIONS_TOO_MANY",
-      "description": "The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see the docs for more info »."
+      "description": "The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see the docs for more info »."
     },
     "REACTION_EMPTY": {
       "code": 400,
