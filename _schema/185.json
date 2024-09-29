@@ -33894,7 +33894,7 @@
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Access hash of the user, see here »¹ for more info. If this flag is set, when updating the local peer database², generate a virtual flag called min_access_hash, which is: - Set to true if min is set AND - The phone flag is not set OR - The phone flag is set and the associated phone number string is non-empty - Set to false otherwise. Then, apply both access_hash and min_access_hash to the local database if: - min_access_hash is false OR - min_access_hash is true AND - There is no locally cached object for this user OR - There is no access_hash in the local cache OR - The cached object's min_access_hash is also true If the final merged object stored to the database has the min_access_hash field set to true, the related access_hash is only suitable to use in inputPeerPhotoFileLocation »³, to directly download the profile pictures⁴ of users, everywhere else a inputPeer*FromMessage constructor will have to be generated as specified here »⁵. Bots can also use min access hashes in some conditions, by passing 0 instead of the min access hash.",
+          "description": "Access hash of the user, see here »¹ for more info. If this flag is set, when updating the local peer database², generate a virtual flag called min_access_hash, which is: - Set to true if min is set AND -- The phone flag is not set OR -- The phone flag is set and the associated phone number string is non-empty - Set to false otherwise. Then, apply both access_hash and min_access_hash to the local database if: - min_access_hash is false OR - min_access_hash is true AND -- There is no locally cached object for this user OR -- There is no access_hash in the local cache OR -- The cached object's min_access_hash is also true If the final merged object stored to the database has the min_access_hash field set to true, the related access_hash is only suitable to use in inputPeerPhotoFileLocation »³, to directly download the profile pictures⁴ of users, everywhere else a inputPeer*FromMessage constructor will have to be generated as specified here »⁵. Bots can also use min access hashes in some conditions, by passing 0 instead of the min access hash.",
           "links": [
             "https://core.telegram.org/api/peers#access-hash",
             "https://core.telegram.org/api/peers",
@@ -34036,7 +34036,7 @@
         },
         "first_name": {
           "name": "first_name",
-          "description": "First name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
+          "description": "First name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
@@ -34068,7 +34068,7 @@
         },
         "last_name": {
           "name": "last_name",
-          "description": "Last name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
+          "description": "Last name. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
@@ -34089,14 +34089,14 @@
         },
         "phone": {
           "name": "phone",
-          "description": "Phone number. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set.",
+          "description": "Phone number. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
         },
         "photo": {
           "name": "photo",
-          "description": "Profile picture of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The apply_min_photo flag is set OR - The min flag of the locally cached user entry is set.",
+          "description": "Profile picture of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The apply_min_photo flag is set OR -- The min flag of the locally cached user entry is set.",
           "links": [
             "https://core.telegram.org/api/peers"
           ]
@@ -34136,7 +34136,7 @@
         },
         "status": {
           "name": "status",
-          "description": "Online status of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set OR - The locally cached user entry is equal to userStatusEmpty².",
+          "description": "Online status of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set OR -- The locally cached user entry is equal to userStatusEmpty².",
           "links": [
             "https://core.telegram.org/api/peers",
             "https://core.telegram.org/constructor/userStatusEmpty"
@@ -34168,7 +34168,7 @@
         },
         "username": {
           "name": "username",
-          "description": "Main active username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set. Changes to this flag should invalidate the local userFull² cache for this user ID if the above conditions are respected and the bot_can_edit flag is also set.",
+          "description": "Main active username. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set. Changes to this flag should invalidate the local userFull² cache for this user ID if the above conditions are respected and the bot_can_edit flag is also set.",
           "links": [
             "https://core.telegram.org/api/peers",
             "https://core.telegram.org/constructor/userFull"
@@ -34176,7 +34176,7 @@
         },
         "usernames": {
           "name": "usernames",
-          "description": "Additional usernames. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND - The min flag of the locally cached user entry is set. Changes to this flag (if the above conditions are respected) should invalidate the local userFull² cache for this user ID.",
+          "description": "Additional usernames. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set. Changes to this flag (if the above conditions are respected) should invalidate the local userFull² cache for this user ID.",
           "links": [
             "https://core.telegram.org/api/peers",
             "https://core.telegram.org/constructor/userFull"
@@ -42776,7 +42776,7 @@
         {
           "code": 406,
           "type": "UPDATE_APP_TO_LOGIN",
-          "description": "Please update to the latest version of MadelineProto to login."
+          "description": "Please update your client to login."
         }
       ]
     },
@@ -42852,7 +42852,7 @@
         {
           "code": 406,
           "type": "UPDATE_APP_TO_LOGIN",
-          "description": "Please update to the latest version of MadelineProto to login."
+          "description": "Please update your client to login."
         }
       ]
     },
@@ -67586,7 +67586,7 @@
     "UPDATE_APP_TO_LOGIN": {
       "code": 406,
       "type": "UPDATE_APP_TO_LOGIN",
-      "description": "Please update to the latest version of MadelineProto to login."
+      "description": "Please update your client to login."
     },
     "URL_INVALID": {
       "code": 400,
