@@ -51602,7 +51602,10 @@
       "parameters": {
         "allow_paid_floodskip": {
           "name": "allow_paid_floodskip",
-          "description": " "
+          "description": "Bots only: if set, allows sending up to 1000 messages per second, ignoring broadcasting limits¹ for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.",
+          "links": [
+            "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
+          ]
         },
         "background": {
           "name": "background",
@@ -57285,7 +57288,10 @@
       "parameters": {
         "allow_paid_floodskip": {
           "name": "allow_paid_floodskip",
-          "description": " "
+          "description": "Bots only: if set, allows sending up to 1000 messages per second, ignoring broadcasting limits¹ for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.",
+          "links": [
+            "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
+          ]
         },
         "background": {
           "name": "background",
@@ -57828,7 +57834,10 @@
       "parameters": {
         "allow_paid_floodskip": {
           "name": "allow_paid_floodskip",
-          "description": " "
+          "description": "Bots only: if set, allows sending up to 1000 messages per second, ignoring broadcasting limits¹ for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.",
+          "links": [
+            "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
+          ]
         },
         "background": {
           "name": "background",
@@ -58219,7 +58228,10 @@
       "parameters": {
         "allow_paid_floodskip": {
           "name": "allow_paid_floodskip",
-          "description": " "
+          "description": "Bots only: if set, allows sending up to 1000 messages per second, ignoring broadcasting limits¹ for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.",
+          "links": [
+            "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
+          ]
         },
         "background": {
           "name": "background",
