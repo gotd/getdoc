@@ -35106,7 +35106,10 @@
         },
         "can_view_revenue": {
           "name": "can_view_revenue",
-          "description": " "
+          "description": "If set, this user can view ad revenue statistics »¹ for this bot.",
+          "links": [
+            "https://core.telegram.org/api/revenue#revenue-statistics"
+          ]
         },
         "common_chats_count": {
           "name": "common_chats_count",
@@ -50121,6 +50124,9 @@
     },
     "messages.clickSponsoredMessage": {
       "name": "messages.clickSponsoredMessage",
+      "description": [
+        "Informs the server that the user has either:"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -50139,11 +50145,11 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel/bot where the ad is located"
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "The ad's unique ID."
         }
       },
       "bot_can_use": true
@@ -54453,10 +54459,16 @@
     },
     "messages.getSponsoredMessages": {
       "name": "messages.getSponsoredMessages",
+      "description": [
+        "Get a list of sponsored messages for a peer, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The currently open channel/bot."
         }
       },
       "bot_can_use": true
@@ -55804,18 +55816,28 @@
     },
     "messages.reportSponsoredMessage": {
       "name": "messages.reportSponsoredMessage",
+      "description": [
+        "Report a sponsored message »¹, see here »² for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages",
+        "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
+      ],
       "parameters": {
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Chosen report option, initially an empty string, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel/bot where the ad is located"
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "The ad's unique ID."
         }
       },
       "bot_can_use": true
@@ -60689,14 +60711,20 @@
     },
     "messages.viewSponsoredMessage": {
       "name": "messages.viewSponsoredMessage",
+      "description": [
+        "Mark a specific sponsored message »¹ as read"
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel/bot where the ad is located"
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "The ad's unique ID."
         }
       },
       "bot_can_use": true
