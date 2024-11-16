@@ -24266,7 +24266,7 @@
     "payments.starsStatus": {
       "name": "payments.starsStatus",
       "description": [
-        "Info about the current Telegram Star balance and transaction history »¹."
+        "Info about the current Telegram Star subscriptions, balance and transaction history »¹."
       ],
       "links": [
         "https://core.telegram.org/api/stars#balance-and-transaction-history"
@@ -24300,15 +24300,24 @@
         },
         "subscriptions": {
           "name": "subscriptions",
-          "description": " "
+          "description": "Info about current Telegram Star subscriptions, only returned when invoking payments.getStarsTransactions¹ and payments.getStarsSubscriptions².",
+          "links": [
+            "https://core.telegram.org/method/payments.getStarsTransactions",
+            "https://core.telegram.org/method/payments.getStarsSubscriptions"
+          ]
         },
         "subscriptions_missing_balance": {
           "name": "subscriptions_missing_balance",
-          "description": " "
+          "description": "The number of Telegram Stars the user should buy to be able to extend subscriptions expiring soon (i.e. the current balance is not enough to extend all expiring subscriptions)."
         },
         "subscriptions_next_offset": {
           "name": "subscriptions_next_offset",
-          "description": " "
+          "description": "Offset for pagination of subscriptions: only usable with payments.getStarsSubscriptions¹, returned when invoking payments.getStarsTransactions² and payments.getStarsSubscriptions³.",
+          "links": [
+            "https://core.telegram.org/method/payments.getStarsSubscriptions",
+            "https://core.telegram.org/method/payments.getStarsTransactions",
+            "https://core.telegram.org/method/payments.getStarsSubscriptions"
+          ]
         },
         "users": {
           "name": "users",
@@ -28291,18 +28300,27 @@
     },
     "starsSubscription": {
       "name": "starsSubscription",
+      "description": [
+        "Represents a Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ],
       "fields": {
         "can_refulfill": {
           "name": "can_refulfill",
-          "description": " "
+          "description": "Whether we left the associated private channel, but we can still rejoin it using payments.fulfillStarsSubscription¹ because the current subscription period hasn't expired yet.",
+          "links": [
+            "https://core.telegram.org/method/payments.fulfillStarsSubscription"
+          ]
         },
         "canceled": {
           "name": "canceled",
-          "description": " "
+          "description": "Whether this subscription was cancelled."
         },
         "chat_invite_hash": {
           "name": "chat_invite_hash",
-          "description": " "
+          "description": "Invitation link, used to renew the subscription."
         },
         "flags": {
           "name": "flags",
@@ -28313,7 +28331,7 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Subscription ID."
         },
         "missing_balance": {
           "name": "missing_balance",
@@ -28321,28 +28339,34 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Identifier of the associated private chat."
         },
         "pricing": {
           "name": "pricing",
-          "description": " "
+          "description": "Pricing of the subscription in Telegram Stars."
         },
         "until_date": {
           "name": "until_date",
-          "description": " "
+          "description": "Expiration date of the current subscription period."
         }
       }
     },
     "starsSubscriptionPricing": {
       "name": "starsSubscriptionPricing",
+      "description": [
+        "Pricing of a Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the subscription in Telegram Stars."
         },
         "period": {
           "name": "period",
-          "description": " "
+          "description": "The user should pay amount stars every period seconds to gain and maintain access to the channel. Currently the only allowed subscription period is 30*24*60*60, i.e. the user will be debited amount stars every month."
         }
       }
     },
@@ -38616,10 +38640,22 @@
       ]
     },
     "StarsSubscription": {
-      "name": "StarsSubscription"
+      "name": "StarsSubscription",
+      "description": [
+        "Represents a Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ]
     },
     "StarsSubscriptionPricing": {
-      "name": "StarsSubscriptionPricing"
+      "name": "StarsSubscriptionPricing",
+      "description": [
+        "Pricing of a Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ]
     },
     "StarsTopupOption": {
       "name": "StarsTopupOption",
@@ -39700,7 +39736,7 @@
     "payments.StarsStatus": {
       "name": "payments.StarsStatus",
       "description": [
-        "Info about the current Telegram Star balance and transaction history »¹."
+        "Info about the current Telegram Star subscriptions, balance and transaction history »¹."
       ],
       "links": [
         "https://core.telegram.org/api/stars#balance-and-transaction-history"
@@ -60842,10 +60878,16 @@
     },
     "payments.changeStarsSubscription": {
       "name": "payments.changeStarsSubscription",
+      "description": [
+        "Activate or deactivate a Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ],
       "parameters": {
         "canceled": {
           "name": "canceled",
-          "description": " "
+          "description": "Whether to cancel or reactivate the subscription."
         },
         "flags": {
           "name": "flags",
@@ -60856,11 +60898,14 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Always pass inputPeerSelf¹.",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerSelf"
+          ]
         },
         "subscription_id": {
           "name": "subscription_id",
-          "description": " "
+          "description": "ID of the subscription."
         }
       },
       "bot_can_use": true
@@ -60969,14 +61014,23 @@
     },
     "payments.fulfillStarsSubscription": {
       "name": "payments.fulfillStarsSubscription",
+      "description": [
+        "Re-join a private channel associated to an active Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Always pass inputPeerSelf¹.",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerSelf"
+          ]
         },
         "subscription_id": {
           "name": "subscription_id",
-          "description": " "
+          "description": "ID of the subscription."
         }
       },
       "bot_can_use": true
@@ -61296,6 +61350,12 @@
     },
     "payments.getStarsSubscriptions": {
       "name": "payments.getStarsSubscriptions",
+      "description": [
+        "Obtain a list of active, expiring or cancelled Telegram Star subscriptions »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/invites#paid-invite-links"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -61306,15 +61366,21 @@
         },
         "missing_balance": {
           "name": "missing_balance",
-          "description": " "
+          "description": "Whether to return only expiring subscriptions."
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination, taken from payments.starsStatus¹.",
+          "links": [
+            "https://core.telegram.org/constructor/payments.starsStatus#subscriptions_next_offset"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Always pass inputPeerSelf¹.",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerSelf"
+          ]
         }
       },
       "bot_can_use": true
