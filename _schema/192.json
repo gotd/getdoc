@@ -5329,7 +5329,10 @@
         },
         "withdrawal_enabled": {
           "name": "withdrawal_enabled",
-          "description": " "
+          "description": "If set, the available balance can be withdrawn »¹.",
+          "links": [
+            "https://core.telegram.org/api/revenue#withdrawing-revenue"
+          ]
         }
       }
     },
@@ -6063,7 +6066,7 @@
         },
         "signature_profiles": {
           "name": "signature_profiles",
-          "description": " "
+          "description": "If set, messages sent by admins to this channel will link to the admin's profile (just like with groups)."
         },
         "signatures": {
           "name": "signatures",
@@ -6104,7 +6107,10 @@
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
-          "description": " "
+          "description": "Expiration date of the Telegram Star subscription »¹ the current user has bought to gain access to this channel.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscription"
+          ]
         },
         "title": {
           "name": "title",
@@ -6649,6 +6655,12 @@
     },
     "channelAdminLogEventActionParticipantSubExtend": {
       "name": "channelAdminLogEventActionParticipantSubExtend",
+      "description": [
+        "A paid subscriber has extended their Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#star-subscriptions"
+      ],
       "fields": {
         "new_participant": {
           "name": "new_participant",
@@ -6870,10 +6882,13 @@
     },
     "channelAdminLogEventActionToggleSignatureProfiles": {
       "name": "channelAdminLogEventActionToggleSignatureProfiles",
+      "description": [
+        "Channel signature profiles were enabled/disabled."
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "New value"
         }
       }
     },
@@ -7052,7 +7067,10 @@
         },
         "sub_extend": {
           "name": "sub_extend",
-          "description": " "
+          "description": "Telegram Star subscription extension events »¹",
+          "links": [
+            "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantSubExtend"
+          ]
         },
         "unban": {
           "name": "unban",
@@ -7339,7 +7357,10 @@
         },
         "paid_reactions_available": {
           "name": "paid_reactions_available",
-          "description": " "
+          "description": "If set, users may send paid Telegram Star reactions »¹ to messages of this channel.",
+          "links": [
+            "https://core.telegram.org/api/reactions#paid-reactions"
+          ]
         },
         "participants_count": {
           "name": "participants_count",
@@ -7540,7 +7561,10 @@
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
-          "description": " "
+          "description": "If set, contains the expiration date of the current Telegram Star subscription period »¹ for the specified participant.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -7698,7 +7722,10 @@
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
-          "description": " "
+          "description": "If set, contains the expiration date of the current Telegram Star subscription period »¹ for the specified participant.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -8503,7 +8530,11 @@
         },
         "can_refulfill_subscription": {
           "name": "can_refulfill_subscription",
-          "description": " "
+          "description": "If set, indicates that the user has already paid for the associated Telegram Star subscriptions »¹ and it hasn't expired yet, so they may re-join the channel using messages.importChatInvite² without repeating the payment.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions",
+            "https://core.telegram.org/method/messages.importChatInvite"
+          ]
         },
         "channel": {
           "name": "channel",
@@ -8570,11 +8601,17 @@
         },
         "subscription_form_id": {
           "name": "subscription_form_id",
-          "description": " "
+          "description": "For Telegram Star subscriptions »¹, the ID of the payment form for the subscription.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "subscription_pricing": {
           "name": "subscription_pricing",
-          "description": " "
+          "description": "For Telegram Star subscriptions »¹, contains the pricing of the subscription the user must activate to join the private channel.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "title": {
           "name": "title",
@@ -8649,11 +8686,17 @@
         },
         "subscription_expired": {
           "name": "subscription_expired",
-          "description": " "
+          "description": "For Telegram Star subscriptions »¹, contains the number of chat members which have already joined the chat using the link, but have already left due to expiration of their subscription.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "subscription_pricing": {
           "name": "subscription_pricing",
-          "description": " "
+          "description": "For Telegram Star subscriptions »¹, contains the pricing of the subscription the user must activate to join the private channel.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "title": {
           "name": "title",
@@ -14039,10 +14082,19 @@
     },
     "inputInvoiceChatInviteSubscription": {
       "name": "inputInvoiceChatInviteSubscription",
+      "description": [
+        "Used to pay for a Telegram Star subscription »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars#star-subscriptions"
+      ],
       "fields": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "The invitation link of the Telegram Star subscription »¹",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         }
       }
     },
@@ -14144,16 +14196,18 @@
     "inputInvoiceStars": {
       "name": "inputInvoiceStars",
       "description": [
-        "Used to top up the Telegram Stars¹ balance of the current account or someone else's account."
+        "Used to top up the Telegram Stars¹ balance of the current account or someone else's account, or to start a Telegram Star giveaway »²."
       ],
       "links": [
-        "https://core.telegram.org/api/stars"
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/giveaways#star-giveaways"
       ],
       "fields": {
         "purpose": {
           "name": "purpose",
-          "description": "Either an inputStorePaymentStarsTopup¹ or an inputStorePaymentStarsGift².",
+          "description": "An inputStorePaymentStarsGiveaway¹, inputStorePaymentStarsTopup² or inputStorePaymentStarsGift³.",
           "links": [
+            "https://core.telegram.org/constructor/inputStorePaymentStarsGiveaway",
             "https://core.telegram.org/constructor/inputStorePaymentStarsTopup",
             "https://core.telegram.org/constructor/inputStorePaymentStarsGift"
           ]
@@ -16420,26 +16474,45 @@
     },
     "inputStorePaymentStarsGiveaway": {
       "name": "inputStorePaymentStarsGiveaway",
+      "description": [
+        "Used to pay for a star giveaway, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways#star-giveaways"
+      ],
       "fields": {
         "additional_peers": {
           "name": "additional_peers",
-          "description": " "
+          "description": "Additional channels that the user must join to participate to the giveaway can be specified here."
         },
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "boost_peer": {
           "name": "boost_peer",
-          "description": " "
+          "description": "The channel/supergroup starting the giveaway, that the user must join to participate, that will receive the giveaway boosts¹; see here »² for more info on giveaways.",
+          "links": [
+            "https://core.telegram.org/api/boost",
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "countries_iso2": {
           "name": "countries_iso2",
-          "description": " "
+          "description": "The set of users that can participate to the giveaway can be restricted by passing here an explicit whitelist of up to giveaway_countries_max¹ countries, specified as two-letter ISO 3166-1 alpha-2 country codes.",
+          "links": [
+            "https://core.telegram.org/api/config#giveaway-countries-max"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -16450,31 +16523,38 @@
         },
         "only_new_subscribers": {
           "name": "only_new_subscribers",
-          "description": " "
+          "description": "If set, only new subscribers starting from the giveaway creation date will be able to participate to the giveaway."
         },
         "prize_description": {
           "name": "prize_description",
-          "description": " "
+          "description": "Can contain a textual description of additional giveaway prizes."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Random ID to avoid resending the giveaway"
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Total number of Telegram Stars being given away (each user will receive stars/users stars)."
         },
         "until_date": {
           "name": "until_date",
-          "description": " "
+          "description": "The end date of the giveaway, must be at most giveaway_period_max¹ seconds in the future; see here »² for more info on giveaways.",
+          "links": [
+            "https://core.telegram.org/api/config#giveaway-period-max",
+            "https://core.telegram.org/api/giveaways"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Number of winners."
         },
         "winners_are_visible": {
           "name": "winners_are_visible",
-          "description": " "
+          "description": "If set, giveaway winners are public and will be listed in a messageMediaGiveawayResults¹ message that will be automatically sent to the channel once the giveaway ends.",
+          "links": [
+            "https://core.telegram.org/constructor/messageMediaGiveawayResults"
+          ]
         }
       }
     },
@@ -18407,7 +18487,10 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "For Telegram Star giveaways¹, the total number of Telegram Stars being given away.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-giveaways"
+          ]
         }
       }
     },
@@ -18429,7 +18512,10 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "If set, this is a Telegram Star giveaway¹",
+          "links": [
+            "https://core.telegram.org/api/stars#star-giveaways"
+          ]
         },
         "unclaimed_count": {
           "name": "unclaimed_count",
@@ -18679,6 +18765,13 @@
     },
     "messageActionPrizeStars": {
       "name": "messageActionPrizeStars",
+      "description": [
+        "You won some Telegram Stars¹ in a Telegram Star giveaway »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/giveaways#star-giveaways"
+      ],
       "fields": {
         "boost_peer": {
           "name": "boost_peer",
@@ -18693,11 +18786,14 @@
         },
         "giveaway_msg_id": {
           "name": "giveaway_msg_id",
-          "description": " "
+          "description": "ID of the message containing the messageMediaGiveaway¹",
+          "links": [
+            "https://core.telegram.org/constructor/messageMediaGiveaway"
+          ]
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "The number of Telegram Stars you won"
         },
         "transaction_id": {
           "name": "transaction_id",
@@ -19910,7 +20006,10 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "For Telegram Star giveaways¹, the total number of Telegram Stars being given away.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-giveaways"
+          ]
         },
         "until_date": {
           "name": "until_date",
@@ -19977,7 +20076,10 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "For Telegram Star giveaways¹, the total number of Telegram Stars being given away.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-giveaways"
+          ]
         },
         "unclaimed_count": {
           "name": "unclaimed_count",
@@ -20414,20 +20516,29 @@
         },
         "top_reactors": {
           "name": "top_reactors",
-          "description": " "
+          "description": "Paid Telegram Star reactions leaderboard »¹ for this message.",
+          "links": [
+            "https://core.telegram.org/api/reactions#paid-reactions"
+          ]
         }
       }
     },
     "messageReactor": {
       "name": "messageReactor",
+      "description": [
+        "Info about a user in the paid Star reactions leaderboard¹ for a message."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions"
+      ],
       "fields": {
         "anonymous": {
           "name": "anonymous",
-          "description": " "
+          "description": "If set, the reactor is anonymous."
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "The number of sent Telegram Stars."
         },
         "flags": {
           "name": "flags",
@@ -20438,15 +20549,15 @@
         },
         "my": {
           "name": "my",
-          "description": " "
+          "description": "If set, this reactor is the current user."
         },
         "peer_id": {
           "name": "peer_id",
-          "description": " "
+          "description": "Identifier of the peer that reacted: may be unset for anonymous reactors different from the current user (i.e. if the current user sent an anonymous reaction anonymous will be set but this field will also be set)."
         },
         "top": {
           "name": "top",
-          "description": " "
+          "description": "If set, the reactor is one of the most active reactors; may be unset if the reactor is the current user."
         }
       }
     },
@@ -20603,14 +20714,20 @@
     },
     "messageReportOption": {
       "name": "messageReportOption",
+      "description": [
+        "Report menu option"
+      ],
       "fields": {
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Option identifier: if the user selects this option, re-invoke messages.report¹, passing this option to option",
+          "links": [
+            "https://core.telegram.org/method/messages.report"
+          ]
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Option title"
         }
       }
     },
@@ -24308,7 +24425,7 @@
         },
         "subscriptions_missing_balance": {
           "name": "subscriptions_missing_balance",
-          "description": "The number of Telegram Stars the user should buy to be able to extend subscriptions expiring soon (i.e. the current balance is not enough to extend all expiring subscriptions)."
+          "description": "The number of Telegram Stars the user should buy to be able to extend expired subscriptions soon (i.e. the current balance is not enough to extend all expired subscriptions)."
         },
         "subscriptions_next_offset": {
           "name": "subscriptions_next_offset",
@@ -26061,26 +26178,35 @@
     },
     "prepaidStarsGiveaway": {
       "name": "prepaidStarsGiveaway",
+      "description": [
+        "Contains info about a prepaid Telegram Star giveaway »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways#star-giveaways"
+      ],
       "fields": {
         "boosts": {
           "name": "boosts",
-          "description": " "
+          "description": "Number of boosts the channel will gain by launching the giveaway."
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the giveaway paid for"
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Prepaid giveaway ID."
         },
         "quantity": {
           "name": "quantity",
-          "description": " "
+          "description": "Number of giveaway winners"
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Number of given away Telegram Stars »¹",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       }
     },
@@ -26389,7 +26515,13 @@
       ]
     },
     "reactionPaid": {
-      "name": "reactionPaid"
+      "name": "reactionPaid",
+      "description": [
+        "Represents a paid Telegram Star reaction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions"
+      ]
     },
     "reactionsNotifySettings": {
       "name": "reactionsNotifySettings",
@@ -26638,6 +26770,13 @@
     },
     "reportResultAddComment": {
       "name": "reportResultAddComment",
+      "description": [
+        "The user should enter an additional comment for the moderators, and then messages.report¹ must be re-invoked, passing the comment to messages.report².message."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.report",
+        "https://core.telegram.org/method/messages.report"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -26648,29 +26787,45 @@
         },
         "option": {
           "name": "option",
-          "description": " "
+          "description": "The messages.report¹ method must be re-invoked, passing this option to option",
+          "links": [
+            "https://core.telegram.org/method/messages.report"
+          ]
         },
         "optional": {
           "name": "optional",
-          "description": " "
+          "description": "Whether this step can be skipped by the user, passing an empty message to messages.report¹, or if a non-empty message is mandatory.",
+          "links": [
+            "https://core.telegram.org/method/messages.report"
+          ]
         }
       }
     },
     "reportResultChooseOption": {
       "name": "reportResultChooseOption",
+      "description": [
+        "The user must choose one of the following options, and then messages.report¹ must be re-invoked, passing the option's option identifier to messages.report².option."
+      ],
+      "links": [
+        "https://core.telegram.org/method/messages.report",
+        "https://core.telegram.org/method/messages.report"
+      ],
       "fields": {
         "options": {
           "name": "options",
-          "description": " "
+          "description": "Available options, rendered as menu entries."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title of the option popup"
         }
       }
     },
     "reportResultReported": {
-      "name": "reportResultReported"
+      "name": "reportResultReported",
+      "description": [
+        "The report was sent successfully, no further actions are required."
+      ]
     },
     "requestPeerTypeBroadcast": {
       "name": "requestPeerTypeBroadcast",
@@ -28191,22 +28346,34 @@
     },
     "starsGiveawayOption": {
       "name": "starsGiveawayOption",
+      "description": [
+        "Contains info about a Telegram Star giveaway¹ option."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways#star-giveaways"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "default": {
           "name": "default",
-          "description": " "
+          "description": "If set, this option must be pre-selected by default in the option list."
         },
         "extended": {
           "name": "extended",
-          "description": " "
+          "description": "If set, this option must only be shown in the full list of giveaway options (i.e. they must be added to the list only when the user clicks on the expand button)."
         },
         "flags": {
           "name": "flags",
@@ -28217,19 +28384,22 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "The number of Telegram Stars that will be distributed among winners"
         },
         "store_product": {
           "name": "store_product",
-          "description": " "
+          "description": "Identifier of the store product associated with the option, official apps only."
         },
         "winners": {
           "name": "winners",
-          "description": " "
+          "description": "Allowed options for the number of giveaway winners."
         },
         "yearly_boosts": {
           "name": "yearly_boosts",
-          "description": " "
+          "description": "Number of times the chat will be boosted for one year if the inputStorePaymentStarsGiveaway¹.boost_peer flag is populated",
+          "links": [
+            "https://core.telegram.org/constructor/inputStorePaymentStarsGiveaway"
+          ]
         }
       }
     },
@@ -28238,7 +28408,7 @@
       "fields": {
         "default": {
           "name": "default",
-          "description": " "
+          "description": "If set, this option must be pre-selected by default in the option list."
         },
         "flags": {
           "name": "flags",
@@ -28249,11 +28419,14 @@
         },
         "per_user_stars": {
           "name": "per_user_stars",
-          "description": " "
+          "description": "The number of Telegram Stars¹ each winner will receive.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "The number of users that will be randomly chosen as winners."
         }
       }
     },
@@ -28320,7 +28493,7 @@
         },
         "chat_invite_hash": {
           "name": "chat_invite_hash",
-          "description": "Invitation link, used to renew the subscription."
+          "description": "Invitation link, used to renew the subscription after cancellation or expiration."
         },
         "flags": {
           "name": "flags",
@@ -28335,7 +28508,7 @@
         },
         "missing_balance": {
           "name": "missing_balance",
-          "description": " "
+          "description": "Whether this subscription has expired because there are not enough stars on the user's balance to extend it."
         },
         "peer": {
           "name": "peer",
@@ -28498,7 +28671,10 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": " "
+          "description": "This transaction is a paid reaction »¹.",
+          "links": [
+            "https://core.telegram.org/api/reactions#paid-reactions"
+          ]
         },
         "refund": {
           "name": "refund",
@@ -28514,7 +28690,10 @@
         },
         "subscription_period": {
           "name": "subscription_period",
-          "description": " "
+          "description": "The number of seconds between consecutive Telegram Star debiting for Telegram Star subscriptions »¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "title": {
           "name": "title",
@@ -32793,10 +32972,18 @@
     },
     "updatePaidReactionPrivacy": {
       "name": "updatePaidReactionPrivacy",
+      "description": [
+        "Contains the current default paid reaction privacy, see here \u0026raquo:¹ for more info.",
+        "Clients should invoke messages.getPaidReactionPrivacy¹ on startup to fetch the current default reaction privacy because this update is only sent to currently online sessions and cannot be fetched using getDifference on client startup."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions",
+        "https://core.telegram.org/method/messages.getPaidReactionPrivacy"
+      ],
       "fields": {
         "private": {
           "name": "private",
-          "description": " "
+          "description": "Whether paid reaction privacy is enabled or disabled."
         }
       }
     },
@@ -37786,7 +37973,13 @@
       ]
     },
     "MessageReactor": {
-      "name": "MessageReactor"
+      "name": "MessageReactor",
+      "description": [
+        "Info about a user in the paid Star reactions leaderboard¹ for a message."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions"
+      ]
     },
     "MessageReplies": {
       "name": "MessageReplies",
@@ -37804,7 +37997,10 @@
       ]
     },
     "MessageReportOption": {
-      "name": "MessageReportOption"
+      "name": "MessageReportOption",
+      "description": [
+        "Report menu option"
+      ]
     },
     "MessageViews": {
       "name": "MessageViews",
@@ -38625,7 +38821,13 @@
       ]
     },
     "StarsGiveawayOption": {
-      "name": "StarsGiveawayOption"
+      "name": "StarsGiveawayOption",
+      "description": [
+        "Contains info about a Telegram Star giveaway¹ option."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways#star-giveaways"
+      ]
     },
     "StarsGiveawayWinnersOption": {
       "name": "StarsGiveawayWinnersOption"
@@ -47432,11 +47634,11 @@
         },
         "profiles_enabled": {
           "name": "profiles_enabled",
-          "description": " "
+          "description": "If set, messages from channel admins will link to their profiles, just like for group messages: can only be set if the signatures_enabled flag is set."
         },
         "signatures_enabled": {
           "name": "signatures_enabled",
-          "description": " "
+          "description": "If set, enables message signatures."
         }
       },
       "errors": [
@@ -51567,7 +51769,10 @@
         },
         "subscription_pricing": {
           "name": "subscription_pricing",
-          "description": " "
+          "description": "For Telegram Star subscriptions »¹, contains the pricing of the subscription the user must activate to join the private channel.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "title": {
           "name": "title",
@@ -52354,7 +52559,10 @@
         },
         "subscription_expired": {
           "name": "subscription_expired",
-          "description": " "
+          "description": "Set this flag if the link is a Telegram Star subscription link »¹ and only members with already expired subscription must be returned.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         }
       },
       "errors": [
@@ -53717,6 +53925,13 @@
     },
     "messages.getPaidReactionPrivacy": {
       "name": "messages.getPaidReactionPrivacy",
+      "description": [
+        "Fetches an updatePaidReactionPrivacy¹ update with the current default paid reaction privacy, see here \u0026raquo:² for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updatePaidReactionPrivacy",
+        "https://core.telegram.org/api/reactions#paid-reactions"
+      ],
       "bot_can_use": true
     },
     "messages.getPeerDialogs": {
@@ -58524,10 +58739,20 @@
     },
     "messages.sendPaidReaction": {
       "name": "messages.sendPaidReaction",
+      "description": [
+        "Sends one or more paid Telegram Star reactions »¹, transferring Telegram Stars »² to a channel's balance."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions",
+        "https://core.telegram.org/api/stars"
+      ],
       "parameters": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "The number of stars¹ to send (each will increment the reaction counter by one).",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -58538,19 +58763,26 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "The message to react to"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel"
         },
         "private": {
           "name": "private",
-          "description": " "
+          "description": "Each post with star reactions has a leaderboard with the top senders, but users can opt out of appearing there if they prefer more privacy.  If the user explicitly chose to make their paid reaction(s) private, pass boolTrue¹ to messages.sendPaidReaction².private.  If the user explicitly chose to make their paid reaction(s) private, pass boolFalse³ to messages.sendPaidReaction⁴.private.  If the user did not make any explicit choice about the privacy of their paid reaction(s) (i.e. when reacting by clicking on an existing star reaction on a message), do not populate the messages.sendPaidReaction⁵.private flag.",
+          "links": [
+            "https://core.telegram.org/constructor/boolTrue",
+            "https://core.telegram.org/method/messages.sendPaidReaction",
+            "https://core.telegram.org/constructor/boolTrue",
+            "https://core.telegram.org/method/messages.sendPaidReaction",
+            "https://core.telegram.org/method/messages.sendPaidReaction"
+          ]
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Unique client message ID required to prevent message resending"
         }
       },
       "bot_can_use": true
@@ -59108,7 +59340,11 @@
         },
         "paid_enabled": {
           "name": "paid_enabled",
-          "description": " "
+          "description": "If this flag is set and a Bool¹ is passed, the method will enable or disable paid message reactions »². If this flag is not set, the previously stored setting will not be changed.",
+          "links": [
+            "https://core.telegram.org/type/Bool",
+            "https://core.telegram.org/api/reactions#paid-reactions"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -59116,7 +59352,7 @@
         },
         "reactions_limit": {
           "name": "reactions_limit",
-          "description": "This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of appConfig.reactions_uniq_max¹); this field and the other info set by the method will then be available to users in channelFull² and chatFull³.",
+          "description": "This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of appConfig.reactions_uniq_max¹); this field and the other info set by the method will then be available to users in channelFull² and chatFull³. If this flag is not set, the previously configured reactions_limit will not be altered.",
           "links": [
             "https://core.telegram.org/api/config#reactions-uniq-max",
             "https://core.telegram.org/constructor/channelFull",
@@ -60069,18 +60305,24 @@
     },
     "messages.togglePaidReactionPrivacy": {
       "name": "messages.togglePaidReactionPrivacy",
+      "description": [
+        "Changes the privacy of already sent paid reactions¹ on a specific message."
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "The ID of the message to which we sent the paid reactions"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel"
         },
         "private": {
           "name": "private",
-          "description": " "
+          "description": "If true, makes the current anonymous in the top sender leaderboard for this message; otherwise, does the opposite."
         }
       },
       "bot_can_use": true
@@ -61351,7 +61593,7 @@
     "payments.getStarsSubscriptions": {
       "name": "payments.getStarsSubscriptions",
       "description": [
-        "Obtain a list of active, expiring or cancelled Telegram Star subscriptions »¹."
+        "Obtain a list of active, expired or cancelled Telegram Star subscriptions »¹."
       ],
       "links": [
         "https://core.telegram.org/api/invites#paid-invite-links"
@@ -61366,7 +61608,7 @@
         },
         "missing_balance": {
           "name": "missing_balance",
-          "description": "Whether to return only expiring subscriptions."
+          "description": "Whether to return only expired subscriptions due to an excessively low Telegram Star balance."
         },
         "offset": {
           "name": "offset",
@@ -61447,7 +61689,10 @@
         },
         "subscription_id": {
           "name": "subscription_id",
-          "description": " "
+          "description": "If set, fetches only transactions for the specified Telegram Star subscription »¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         }
       },
       "errors": [
