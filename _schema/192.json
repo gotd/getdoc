@@ -14167,6 +14167,12 @@
     },
     "inputInvoiceStarGift": {
       "name": "inputInvoiceStarGift",
+      "description": [
+        "Used to buy a Telegram Star Gift, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -14177,19 +14183,22 @@
         },
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Identifier of the gift, from starGift¹.id",
+          "links": [
+            "https://core.telegram.org/constructor/startGift"
+          ]
         },
         "hide_name": {
           "name": "hide_name",
-          "description": " "
+          "description": "If set, your name will be hidden if the destination user decides to display the gift on their profile (they will still see that you sent the gift)"
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Optional message, attached with the gift"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "Identifier of the user that will receive the gift"
         }
       }
     },
@@ -17128,14 +17137,17 @@
     },
     "keyboardButtonCopy": {
       "name": "keyboardButtonCopy",
+      "description": [
+        "Clipboard button: when clicked, the attached text must be copied to the clipboard."
+      ],
       "fields": {
         "copy_text": {
           "name": "copy_text",
-          "description": " "
+          "description": "The text that will be copied to the clipboard"
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "Title of the button"
         }
       }
     },
@@ -18969,14 +18981,23 @@
     },
     "messageActionStarGift": {
       "name": "messageActionStarGift",
+      "description": [
+        "You received a gift, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "convert_stars": {
           "name": "convert_stars",
-          "description": " "
+          "description": "The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page.convert_stars will be equal to stars only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars."
         },
         "converted": {
           "name": "converted",
-          "description": " "
+          "description": "Whether this gift was converted to Telegram Stars¹ and cannot be displayed on the profile anymore.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -18987,19 +19008,23 @@
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "Info about the gift"
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Additional message from the sender of the gift"
         },
         "name_hidden": {
           "name": "name_hidden",
-          "description": " "
+          "description": "If set, the name of the sender of the gift will be hidden if the destination user decides to display the gift on their profile"
         },
         "saved": {
           "name": "saved",
-          "description": " "
+          "description": "Whether this gift was added to the destination user's profile (may be toggled using payments.saveStarGift¹ and fetched using payments.getUserStarGifts²)",
+          "links": [
+            "https://core.telegram.org/method/payments.saveStarGift",
+            "https://core.telegram.org/method/payments.getUserStarGifts"
+          ]
         }
       }
     },
@@ -24062,14 +24087,20 @@
     },
     "payments.paymentFormStarGift": {
       "name": "payments.paymentFormStarGift",
+      "description": [
+        "Represents a payment form for a gift, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "form_id": {
           "name": "form_id",
-          "description": " "
+          "description": "Form ID."
         },
         "invoice": {
           "name": "invoice",
-          "description": " "
+          "description": "Invoice"
         }
       }
     },
@@ -24306,10 +24337,16 @@
     },
     "payments.starGifts": {
       "name": "payments.starGifts",
+      "description": [
+        "Available gifts »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "gifts": {
           "name": "gifts",
-          "description": " "
+          "description": "List of available gifts."
         },
         "hash": {
           "name": "hash",
@@ -24321,7 +24358,13 @@
       }
     },
     "payments.starGiftsNotModified": {
-      "name": "payments.starGiftsNotModified"
+      "name": "payments.starGiftsNotModified",
+      "description": [
+        "The list of available gifts »¹ hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "payments.starsRevenueAdsAccountUrl": {
       "name": "payments.starsRevenueAdsAccountUrl",
@@ -24444,10 +24487,16 @@
     },
     "payments.userStarGifts": {
       "name": "payments.userStarGifts",
+      "description": [
+        "Gifts¹ displayed on a user's profile."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of gifts displayed on the profile."
         },
         "flags": {
           "name": "flags",
@@ -24458,15 +24507,18 @@
         },
         "gifts": {
           "name": "gifts",
-          "description": " "
+          "description": "The gifts."
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset for pagination¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the gifts vector."
         }
       }
     },
@@ -28250,22 +28302,28 @@
     },
     "starGift": {
       "name": "starGift",
+      "description": [
+        "Represents a star gift, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "availability_remains": {
           "name": "availability_remains",
-          "description": " "
+          "description": "For limited-supply gifts: the remaining number of gifts that may be bought."
         },
         "availability_total": {
           "name": "availability_total",
-          "description": " "
+          "description": "For limited-supply gifts: the total number of gifts that was available in the initial supply."
         },
         "convert_stars": {
           "name": "convert_stars",
-          "description": " "
+          "description": "The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page.convert_stars will be equal to stars only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars."
         },
         "first_sale_date": {
           "name": "first_sale_date",
-          "description": " "
+          "description": "For sold out gifts only: when was the gift first bought."
         },
         "flags": {
           "name": "flags",
@@ -28276,27 +28334,33 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Identifier of the gift"
         },
         "last_sale_date": {
           "name": "last_sale_date",
-          "description": " "
+          "description": "For sold out gifts only: when was the gift last bought."
         },
         "limited": {
           "name": "limited",
-          "description": " "
+          "description": "Whether this is a limited-supply gift."
         },
         "sold_out": {
           "name": "sold_out",
-          "description": " "
+          "description": "Whether this gift sold out and cannot be bought anymore."
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Price of the gift in Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "sticker": {
           "name": "sticker",
-          "description": " "
+          "description": "Sticker¹ that represents the gift.",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         }
       }
     },
@@ -28682,7 +28746,10 @@
         },
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "This transaction indicates a purchase or a sale (conversion back to Stars) of a gift »¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "stars": {
           "name": "stars",
@@ -31278,6 +31345,12 @@
     },
     "updateBotPurchasedPaidMedia": {
       "name": "updateBotPurchasedPaidMedia",
+      "description": [
+        "Bots only: a user has purchased a paid media¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-media"
+      ],
       "fields": {
         "payload": {
           "name": "payload",
@@ -31285,11 +31358,14 @@
         },
         "qts": {
           "name": "qts",
-          "description": " "
+          "description": "New qts value, see updates »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/updates"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user that bought the media"
         }
       }
     },
@@ -32973,7 +33049,7 @@
     "updatePaidReactionPrivacy": {
       "name": "updatePaidReactionPrivacy",
       "description": [
-        "Contains the current default paid reaction privacy, see here \u0026raquo:¹ for more info.",
+        "Contains the current default paid reaction privacy, see here »¹ for more info.",
         "Clients should invoke messages.getPaidReactionPrivacy¹ on startup to fetch the current default reaction privacy because this update is only sent to currently online sessions and cannot be fetched using getDifference on client startup."
       ],
       "links": [
@@ -35458,7 +35534,10 @@
         },
         "stargifts_count": {
           "name": "stargifts_count",
-          "description": " "
+          "description": "Number of gifts¹ the user has chosen to display on their profile",
+          "links": [
+            "https://core.telegram.org/api/gifts"
+          ]
         },
         "stories": {
           "name": "stories",
@@ -35566,14 +35645,20 @@
     },
     "userStarGift": {
       "name": "userStarGift",
+      "description": [
+        "Represents a gift¹, displayed on a user's profile page."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "convert_stars": {
           "name": "convert_stars",
-          "description": " "
+          "description": "The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page.convert_stars will be equal to the buying price of the gift only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars."
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was this gift sent."
         },
         "flags": {
           "name": "flags",
@@ -35584,27 +35669,31 @@
         },
         "from_id": {
           "name": "from_id",
-          "description": " "
+          "description": "Sender of the gift (may be empty for anonymous senders; will always be set if this gift was sent to us)."
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The gift."
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message attached to the gift by the sender."
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Only visible to the receiver of the gift, contains the ID of the messageService¹ with the messageActionStarGift² in the chat with from_id.",
+          "links": [
+            "https://core.telegram.org/constructor/messageService",
+            "https://core.telegram.org/constructor/messageActionStarGift"
+          ]
         },
         "name_hidden": {
           "name": "name_hidden",
-          "description": " "
+          "description": "If set, from_id will not be visible to users (it will still be visible to the receiver of the gift)."
         },
         "unsaved": {
           "name": "unsaved",
-          "description": " "
+          "description": "If set, indicates this is a gift sent by from_id, received by the current user and currently hidden from our profile page."
         }
       }
     },
@@ -38618,7 +38707,10 @@
       ]
     },
     "ReportResult": {
-      "name": "ReportResult"
+      "name": "ReportResult",
+      "description": [
+        "Represents a report menu or result"
+      ]
     },
     "RequestPeerType": {
       "name": "RequestPeerType",
@@ -38809,7 +38901,13 @@
       ]
     },
     "StarGift": {
-      "name": "StarGift"
+      "name": "StarGift",
+      "description": [
+        "Represents a star gift, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "StarsGiftOption": {
       "name": "StarsGiftOption",
@@ -38830,7 +38928,10 @@
       ]
     },
     "StarsGiveawayWinnersOption": {
-      "name": "StarsGiveawayWinnersOption"
+      "name": "StarsGiveawayWinnersOption",
+      "description": [
+        "Represents a possible option for the number of winners in a star giveaway"
+      ]
     },
     "StarsRevenueStatus": {
       "name": "StarsRevenueStatus",
@@ -39138,7 +39239,13 @@
       ]
     },
     "UserStarGift": {
-      "name": "UserStarGift"
+      "name": "UserStarGift",
+      "description": [
+        "Represents a gift¹, displayed on a user's profile page."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "UserStatus": {
       "name": "UserStatus",
@@ -39905,7 +40012,13 @@
       ]
     },
     "payments.StarGifts": {
-      "name": "payments.StarGifts"
+      "name": "payments.StarGifts",
+      "description": [
+        "Available gifts »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "payments.StarsRevenueAdsAccountUrl": {
       "name": "payments.StarsRevenueAdsAccountUrl",
@@ -39945,7 +40058,13 @@
       ]
     },
     "payments.UserStarGifts": {
-      "name": "payments.UserStarGifts"
+      "name": "payments.UserStarGifts",
+      "description": [
+        "Gifts¹ displayed on a user's profile."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "phone.ExportedGroupCallInvite": {
       "name": "phone.ExportedGroupCallInvite",
@@ -53926,7 +54045,7 @@
     "messages.getPaidReactionPrivacy": {
       "name": "messages.getPaidReactionPrivacy",
       "description": [
-        "Fetches an updatePaidReactionPrivacy¹ update with the current default paid reaction privacy, see here \u0026raquo:² for more info."
+        "Fetches an updatePaidReactionPrivacy¹ update with the current default paid reaction privacy, see here »² for more info."
       ],
       "links": [
         "https://core.telegram.org/constructor/updatePaidReactionPrivacy",
@@ -55963,7 +56082,7 @@
         },
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Menu option, intially empty"
         },
         "peer": {
           "name": "peer",
@@ -61204,14 +61323,29 @@
     },
     "payments.convertStarGift": {
       "name": "payments.convertStarGift",
+      "description": [
+        "Convert a received gift »¹ into Telegram Stars: this will permanently destroy the gift, converting it into starGift².convert_stars Telegram Stars³, added to the user's balance.",
+        "Note that starGift¹.convert_stars will be less than the buying price (starGift².stars) of the gift if it was originally bought using Telegram Stars bought a long time ago."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/constructor/starGift",
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/constructor/starGift",
+        "https://core.telegram.org/constructor/starGift"
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "The ID of the messageService¹ with the messageActionStarGift².",
+          "links": [
+            "https://core.telegram.org/constructor/messageService",
+            "https://core.telegram.org/constructor/messageActionStarGift"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that sent us the gift."
         }
       },
       "bot_can_use": true
@@ -61428,6 +61562,12 @@
     },
     "payments.getStarGifts": {
       "name": "payments.getStarGifts",
+      "description": [
+        "Get a list of available gifts, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
@@ -61464,6 +61604,12 @@
     },
     "payments.getStarsGiveawayOptions": {
       "name": "payments.getStarsGiveawayOptions",
+      "description": [
+        "Fetch a list of star giveaway options »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/giveaways#star-giveaways"
+      ],
       "bot_can_use": true
     },
     "payments.getStarsRevenueAdsAccountUrl": {
@@ -61737,6 +61883,13 @@
     },
     "payments.getUserStarGifts": {
       "name": "payments.getUserStarGifts",
+      "description": [
+        "Get the gifts »¹ pinned on a specific user's profile.",
+        "May also be used to fetch all gifts received by the current user."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "parameters": {
         "limit": {
           "name": "limit",
@@ -61747,11 +61900,15 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination¹, taken from payments.userStarGifts² (initially empty).",
+          "links": [
+            "https://core.telegram.org/api/offsets",
+            "https://core.telegram.org/constructor/payments.userStarGifts"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "Identifier of the user (can be the current user to fetch all gifts received by the current user)."
         }
       },
       "bot_can_use": true
@@ -61826,6 +61983,12 @@
     },
     "payments.saveStarGift": {
       "name": "payments.saveStarGift",
+      "description": [
+        "Display or remove a received gift »¹ from our profile."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -61836,15 +61999,19 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "The ID of the messageService¹ with the messageActionStarGift².",
+          "links": [
+            "https://core.telegram.org/constructor/messageService",
+            "https://core.telegram.org/constructor/messageActionStarGift"
+          ]
         },
         "unsave": {
           "name": "unsave",
-          "description": " "
+          "description": "If set, hides the gift from our profile."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the user that sent us the gift."
         }
       },
       "bot_can_use": true
@@ -63758,7 +63925,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Get ad revenue stats for the specified channel or bot"
         }
       },
       "errors": [
@@ -63799,7 +63966,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Get ad revenue transactions for the specified channel or bot"
         }
       },
       "errors": [
@@ -63828,7 +63995,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Get ad revenue withdrawal URL for the specified channel or bot"
         }
       },
       "errors": [
@@ -65346,7 +65513,7 @@
         },
         "option": {
           "name": "option",
-          "description": " "
+          "description": "Menu option, intially empty"
         },
         "peer": {
           "name": "peer",
