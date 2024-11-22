@@ -6109,7 +6109,7 @@
           "name": "subscription_until_date",
           "description": "Expiration date of the Telegram Star subscription »¹ the current user has bought to gain access to this channel.",
           "links": [
-            "https://core.telegram.org/api/stars#star-subscription"
+            "https://core.telegram.org/api/stars#star-subscriptions"
           ]
         },
         "title": {
@@ -10391,7 +10391,7 @@
         },
         "video_codec": {
           "name": "video_codec",
-          "description": " "
+          "description": "Codec used for the video, i.e. \"h264\", \"h265\", or \"av1\""
         },
         "video_start_ts": {
           "name": "video_start_ts",
@@ -14185,7 +14185,7 @@
           "name": "gift_id",
           "description": "Identifier of the gift, from starGift¹.id",
           "links": [
-            "https://core.telegram.org/constructor/startGift"
+            "https://core.telegram.org/constructor/starGift"
           ]
         },
         "hide_name": {
@@ -14640,7 +14640,10 @@
         },
         "payload": {
           "name": "payload",
-          "description": " "
+          "description": "Bots only, specifies a custom payload that will then be passed in updateBotPurchasedPaidMedia¹ when a payment is made (this field will not be visible to the user)",
+          "links": [
+            "https://core.telegram.org/constructor/updateBotPurchasedPaidMedia"
+          ]
         },
         "stars_amount": {
           "name": "stars_amount",
@@ -16336,7 +16339,7 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message attached with the gift"
         },
         "users": {
           "name": "users",
@@ -18356,7 +18359,7 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message attached with the gift"
         },
         "months": {
           "name": "months",
@@ -18425,7 +18428,7 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message attached with the gift"
         },
         "months": {
           "name": "months",
@@ -19874,7 +19877,7 @@
       "fields": {
         "alt_documents": {
           "name": "alt_documents",
-          "description": " "
+          "description": "Videos only, contains alternative qualities of the video."
         },
         "document": {
           "name": "document",
@@ -28469,6 +28472,9 @@
     },
     "starsGiveawayWinnersOption": {
       "name": "starsGiveawayWinnersOption",
+      "description": [
+        "Allowed options for the number of giveaway winners."
+      ],
       "fields": {
         "default": {
           "name": "default",
@@ -31354,7 +31360,10 @@
       "fields": {
         "payload": {
           "name": "payload",
-          "description": " "
+          "description": "Payload passed by the bot in inputMediaPaidMedia¹.payload",
+          "links": [
+            "https://core.telegram.org/constructor/inputMediaPaidMedia"
+          ]
         },
         "qts": {
           "name": "qts",
