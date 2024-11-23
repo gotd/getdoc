@@ -18044,7 +18044,11 @@
         },
         "video_processing_pending": {
           "name": "video_processing_pending",
-          "description": " "
+          "description": "The video contained in the message is currently being processed by the server (i.e. to generate alternative qualities, that will be contained in the final messageMediaDocument¹.alt_document), and will be sent once the video is processed, which will happen approximately at the specified date (i.e. messages with this flag set should be treated similarly to scheduled messages², but instead of the scheduled date, date contains the estimated conversion date).",
+          "links": [
+            "https://core.telegram.org/constructor/messageMediaDocument",
+            "https://core.telegram.org/api/scheduled-messages"
+          ]
         },
         "views": {
           "name": "views",
@@ -18790,7 +18794,7 @@
       "fields": {
         "boost_peer": {
           "name": "boost_peer",
-          "description": " "
+          "description": "Identifier of the peer that was automatically boosted by the winners of the giveaway."
         },
         "flags": {
           "name": "flags",
@@ -18812,7 +18816,7 @@
         },
         "transaction_id": {
           "name": "transaction_id",
-          "description": " "
+          "description": "ID of the telegram star transaction."
         },
         "unclaimed": {
           "name": "unclaimed",
@@ -23989,7 +23993,11 @@
         },
         "stars_prize": {
           "name": "stars_prize",
-          "description": " "
+          "description": "If we're one of the winners of this Telegram Star giveaway¹, the number Telegram Stars² we won.",
+          "links": [
+            "https://core.telegram.org/api/giveaways#star-giveaways",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "start_date": {
           "name": "start_date",
@@ -28249,7 +28257,7 @@
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "If set, contains some media."
         },
         "message": {
           "name": "message",
@@ -28714,7 +28722,11 @@
         },
         "giveaway_post_id": {
           "name": "giveaway_post_id",
-          "description": " "
+          "description": "ID of the message containing the messageMediaGiveaway¹, for incoming star giveaway prizes².",
+          "links": [
+            "https://core.telegram.org/constructor/messageMediaGiveaway",
+            "https://core.telegram.org/api/giveaways#star-giveaways"
+          ]
         },
         "id": {
           "name": "id",
@@ -50505,7 +50517,10 @@
     "messages.clickSponsoredMessage": {
       "name": "messages.clickSponsoredMessage",
       "description": [
-        "Informs the server that the user has either:"
+        "Informs the server that the user has interacted with a sponsored message in one of the ways listed here »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/sponsored-messages#clicking-on-sponsored-messages"
       ],
       "parameters": {
         "flags": {
@@ -50517,11 +50532,11 @@
         },
         "fullscreen": {
           "name": "fullscreen",
-          "description": " "
+          "description": "The user expanded the video to full screen, and then clicked on it."
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The user clicked on the media"
         },
         "peer": {
           "name": "peer",
