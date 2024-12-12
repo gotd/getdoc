@@ -14194,7 +14194,10 @@
         },
         "message": {
           "name": "message",
-          "description": "Optional message, attached with the gift"
+          "description": "Optional message, attached with the gift. The maximum length for this field is specified in the stargifts_message_length_max client configuration value »¹.",
+          "links": [
+            "https://core.telegram.org/api/config#stargifts-message-length-max"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -18048,7 +18051,7 @@
           "links": [
             "https://core.telegram.org/constructor/messageMediaDocument",
             "https://core.telegram.org/api/scheduled-messages",
-            "https://core.telegram.org/api/scheduled-messages"
+            "https://core.telegram.org/api/files#video-qualities"
           ]
         },
         "views": {
@@ -32231,7 +32234,7 @@
     "updateDeleteScheduledMessages": {
       "name": "updateDeleteScheduledMessages",
       "description": [
-        "Some scheduled messages¹ were deleted from the schedule queue of a chat"
+        "Some scheduled messages¹ were deleted (or sent) from the schedule queue of a chat"
       ],
       "links": [
         "https://core.telegram.org/api/scheduled-messages"
@@ -32254,7 +32257,10 @@
         },
         "sent_messages": {
           "name": "sent_messages",
-          "description": " "
+          "description": "If set, this update indicates that some scheduled messages were sent (not simply deleted from the schedule queue).  In this case, the messages field will contain the scheduled message IDs for the sent messages (initially returned in updateNewScheduledMessage¹), and sent_messages will contain the real message IDs for the sent messages.",
+          "links": [
+            "https://core.telegram.org/constructor/updateNewScheduledMessage"
+          ]
         }
       }
     },
@@ -61779,13 +61785,13 @@
         },
         "missing_balance": {
           "name": "missing_balance",
-          "description": "Whether to return only expired subscriptions due to an excessively low Telegram Star balance."
+          "description": "Whether to return only subscriptions expired due to an excessively low Telegram Star balance."
         },
         "offset": {
           "name": "offset",
-          "description": "Offset for pagination, taken from payments.starsStatus¹.",
+          "description": "Offset for pagination, taken from payments.starsStatus¹.subscriptions_next_offset.",
           "links": [
-            "https://core.telegram.org/constructor/payments.starsStatus#subscriptions_next_offset"
+            "https://core.telegram.org/constructor/payments.starsStatus"
           ]
         },
         "peer": {
