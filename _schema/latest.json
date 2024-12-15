@@ -4479,7 +4479,7 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Number of Telegram Stars distributed among the winners of the giveaway."
         },
         "unclaimed": {
           "name": "unclaimed",
@@ -24487,10 +24487,8 @@
         },
         "subscriptions_next_offset": {
           "name": "subscriptions_next_offset",
-          "description": "Offset for pagination of subscriptions: only usable with payments.getStarsSubscriptions¹, returned when invoking payments.getStarsTransactions² and payments.getStarsSubscriptions³.",
+          "description": "Offset for pagination of subscriptions: only usable and returned when invoking payments.getStarsSubscriptions¹.",
           "links": [
-            "https://core.telegram.org/method/payments.getStarsSubscriptions",
-            "https://core.telegram.org/method/payments.getStarsTransactions",
             "https://core.telegram.org/method/payments.getStarsSubscriptions"
           ]
         },
