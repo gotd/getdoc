@@ -6739,11 +6739,11 @@
       "fields": {
         "new_participant": {
           "name": "new_participant",
-          "description": " "
+          "description": "The subscriber that extended the subscription."
         },
         "prev_participant": {
           "name": "prev_participant",
-          "description": " "
+          "description": "Same as new_participant."
         }
       }
     },
@@ -18964,7 +18964,7 @@
         },
         "unclaimed": {
           "name": "unclaimed",
-          "description": " "
+          "description": "If set, this indicates the reverse transaction that refunds the remaining stars to the creator of a giveaway if, when the giveaway ends, the number of members in the channel is smaller than the number of winners in the giveaway."
         }
       }
     },
@@ -24664,14 +24664,14 @@
         "Contains the URL to use to withdraw Telegram Star revenue¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#withdrawing-revenue"
+        "https://core.telegram.org/api/stars#withdrawing-stars"
       ],
       "fields": {
         "url": {
           "name": "url",
           "description": "Contains the URL to use to withdraw Telegram Star revenue¹.",
           "links": [
-            "https://core.telegram.org/api/stars#withdrawing-revenue"
+            "https://core.telegram.org/api/stars#withdrawing-stars"
           ]
         }
       }
@@ -28870,7 +28870,7 @@
           "name": "withdrawal_enabled",
           "description": "If set, the user may withdraw¹ up to available_balance stars.",
           "links": [
-            "https://core.telegram.org/api/stars#withdrawing-revenue"
+            "https://core.telegram.org/api/stars#withdrawing-stars"
           ]
         }
       }
@@ -40462,7 +40462,7 @@
         "Contains the URL to use to withdraw Telegram Star revenue¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#withdrawing-revenue"
+        "https://core.telegram.org/api/stars#withdrawing-stars"
       ]
     },
     "payments.StarsStatus": {
@@ -62402,7 +62402,7 @@
         "Withdraw funds from a channel or bot's star balance »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#withdrawing-revenue"
+        "https://core.telegram.org/api/stars#withdrawing-stars"
       ],
       "parameters": {
         "password": {
