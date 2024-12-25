@@ -4602,14 +4602,20 @@
     },
     "botAppSettings": {
       "name": "botAppSettings",
+      "description": [
+        "Mini app »¹ settings"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps"
+      ],
       "fields": {
         "background_color": {
           "name": "background_color",
-          "description": " "
+          "description": "Default light mode background color"
         },
         "background_dark_color": {
           "name": "background_dark_color",
-          "description": " "
+          "description": "Default dark mode background color"
         },
         "flags": {
           "name": "flags",
@@ -4620,15 +4626,18 @@
         },
         "header_color": {
           "name": "header_color",
-          "description": " "
+          "description": "Default light mode header color"
         },
         "header_dark_color": {
           "name": "header_dark_color",
-          "description": " "
+          "description": "Default dark mode header color"
         },
         "placeholder_path": {
           "name": "placeholder_path",
-          "description": " "
+          "description": "SVG placeholder logo, compressed using the same format used for vector thumbnails »¹.",
+          "links": [
+            "https://core.telegram.org/api/files#vector-thumbnails"
+          ]
         }
       }
     },
@@ -4781,7 +4790,10 @@
       "fields": {
         "app_settings": {
           "name": "app_settings",
-          "description": " "
+          "description": "Mini app »¹ settings",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps"
+          ]
         },
         "commands": {
           "name": "commands",
@@ -9529,22 +9541,28 @@
     },
     "connectedBotStarRef": {
       "name": "connectedBotStarRef",
+      "description": [
+        "Info about an active affiliate program we have with a Mini App¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals#becoming-an-affiliate"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "ID of the mini app that created the affiliate program"
         },
         "commission_permille": {
           "name": "commission_permille",
-          "description": " "
+          "description": "The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by bot_id"
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When did we affiliate with bot_id"
         },
         "duration_months": {
           "name": "duration_months",
-          "description": " "
+          "description": "Number of months the program will be active; if not set, there is no expiration date."
         },
         "flags": {
           "name": "flags",
@@ -9555,19 +9573,26 @@
         },
         "participants": {
           "name": "participants",
-          "description": " "
+          "description": "The number of users that used the affiliate program"
         },
         "revenue": {
           "name": "revenue",
-          "description": " "
+          "description": "The number of Telegram Stars that were earned by the affiliate program"
         },
         "revoked": {
           "name": "revoked",
-          "description": " "
+          "description": "If set, this affiliation was revoked by the affiliate using payments.editConnectedStarRefBot¹, or by the affiliation program owner using bots.updateStarRefProgram²",
+          "links": [
+            "https://core.telegram.org/method/payments.editConnectedStarRefBot",
+            "https://core.telegram.org/method/bots.updateStarRefProgram"
+          ]
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "Referral link¹ to be shared",
+          "links": [
+            "https://core.telegram.org/api/links#referral-links"
+          ]
         }
       }
     },
@@ -15728,7 +15753,13 @@
       ]
     },
     "inputPrivacyKeyStarGiftsAutoSave": {
-      "name": "inputPrivacyKeyStarGiftsAutoSave"
+      "name": "inputPrivacyKeyStarGiftsAutoSave",
+      "description": [
+        "Whether received gifts¹ will be automatically displayed on our profile"
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "inputPrivacyKeyStatusTimestamp": {
       "name": "inputPrivacyKeyStatusTimestamp",
@@ -15760,7 +15791,10 @@
       ]
     },
     "inputPrivacyValueAllowBots": {
-      "name": "inputPrivacyValueAllowBots"
+      "name": "inputPrivacyValueAllowBots",
+      "description": [
+        "Allow bots and mini apps"
+      ]
     },
     "inputPrivacyValueAllowChatParticipants": {
       "name": "inputPrivacyValueAllowChatParticipants",
@@ -15818,7 +15852,10 @@
       ]
     },
     "inputPrivacyValueDisallowBots": {
-      "name": "inputPrivacyValueDisallowBots"
+      "name": "inputPrivacyValueDisallowBots",
+      "description": [
+        "Disallow bots and mini apps"
+      ]
     },
     "inputPrivacyValueDisallowChatParticipants": {
       "name": "inputPrivacyValueDisallowChatParticipants",
@@ -17118,7 +17155,10 @@
         },
         "subscription_period": {
           "name": "subscription_period",
-          "description": " "
+          "description": "The number of seconds between consecutive Telegram Star debiting for subscription¹ invoices",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "suggested_tip_amounts": {
           "name": "suggested_tip_amounts",
@@ -18820,7 +18860,10 @@
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
-          "description": " "
+          "description": "Expiration date of the Telegram Star subscription »¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "total_amount": {
           "name": "total_amount",
@@ -18878,7 +18921,10 @@
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
-          "description": " "
+          "description": "Expiration date of the Telegram Star subscription »¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-subscriptions"
+          ]
         },
         "total_amount": {
           "name": "total_amount",
@@ -21932,6 +21978,9 @@
     },
     "messages.foundStickers": {
       "name": "messages.foundStickers",
+      "description": [
+        "Found stickers"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -21949,16 +21998,22 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "stickers": {
           "name": "stickers",
-          "description": " "
+          "description": "Found stickers"
         }
       }
     },
     "messages.foundStickersNotModified": {
       "name": "messages.foundStickersNotModified",
+      "description": [
+        "No new stickers were found for the specified query"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -21969,7 +22024,10 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
       }
     },
@@ -24117,18 +24175,24 @@
     },
     "payments.connectedStarRefBots": {
       "name": "payments.connectedStarRefBots",
+      "description": [
+        "Active affiliations¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals#becoming-an-affiliate"
+      ],
       "fields": {
         "connected_bots": {
           "name": "connected_bots",
-          "description": " "
+          "description": "The affiliations"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of active affiliations"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Peers mentioned in connected_bots"
         }
       }
     },
@@ -24738,10 +24802,17 @@
     },
     "payments.suggestedStarRefBots": {
       "name": "payments.suggestedStarRefBots",
+      "description": [
+        "A list of suggested mini apps¹ with available affiliate programs²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps",
+        "https://core.telegram.org/api/bots/referrals"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results (for pagination)"
         },
         "flags": {
           "name": "flags",
@@ -24752,15 +24823,18 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Next offset for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "suggested_bots": {
           "name": "suggested_bots",
-          "description": " "
+          "description": "Suggested affiliate programs (full or partial list to be fetched using pagination)"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Peers mentioned in suggested_bots"
         }
       }
     },
@@ -26599,7 +26673,13 @@
       ]
     },
     "privacyKeyStarGiftsAutoSave": {
-      "name": "privacyKeyStarGiftsAutoSave"
+      "name": "privacyKeyStarGiftsAutoSave",
+      "description": [
+        "Whether received gifts¹ will be automatically displayed on our profile"
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "privacyKeyStatusTimestamp": {
       "name": "privacyKeyStatusTimestamp",
@@ -26628,7 +26708,10 @@
       ]
     },
     "privacyValueAllowBots": {
-      "name": "privacyValueAllowBots"
+      "name": "privacyValueAllowBots",
+      "description": [
+        "Allow bots and mini apps"
+      ]
     },
     "privacyValueAllowChatParticipants": {
       "name": "privacyValueAllowChatParticipants",
@@ -26686,7 +26769,10 @@
       ]
     },
     "privacyValueDisallowBots": {
-      "name": "privacyValueDisallowBots"
+      "name": "privacyValueDisallowBots",
+      "description": [
+        "Disallow bots and mini apps"
+      ]
     },
     "privacyValueDisallowChatParticipants": {
       "name": "privacyValueDisallowChatParticipants",
@@ -28658,26 +28744,36 @@
     },
     "starRefProgram": {
       "name": "starRefProgram",
+      "description": [
+        "Indo about an affiliate program offered by a bot¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "ID of the bot that offers the program"
         },
         "commission_permille": {
           "name": "commission_permille",
-          "description": " "
+          "description": "An affiliate gets a commission of starRefProgram¹.commission_permille‰ Telegram Stars² for every mini app transaction made by users they refer",
+          "links": [
+            "https://core.telegram.org/constructor/starRefProgram",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "daily_revenue_per_user": {
           "name": "daily_revenue_per_user",
-          "description": " "
+          "description": "The amount of daily revenue per user in Telegram Stars of the bot that created the affiliate program"
         },
         "duration_months": {
           "name": "duration_months",
-          "description": " "
+          "description": "An affiliate gets a commission for every mini app transaction made by users they refer, for duration_months months after a referral link is imported, starting the bot for the first time"
         },
         "end_date": {
           "name": "end_date",
-          "description": " "
+          "description": "Point in time (Unix timestamp) when the affiliate program will be closed (optional, if not set the affiliate program isn't scheduled to be closed)"
         },
         "flags": {
           "name": "flags",
@@ -28690,14 +28786,20 @@
     },
     "starsAmount": {
       "name": "starsAmount",
+      "description": [
+        "Describes a real (i.e. possibly decimal) amount of Telegram Stars¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "The integer amount of Telegram Stars."
         },
         "nanos": {
           "name": "nanos",
-          "description": " "
+          "description": "The decimal amount of Telegram Stars, expressed as nanostars (i.e. 1 nanostar is equal to 1/1'000'000'000th of a Telegram Star). This field may also be negative (the allowed range is -999999999 to 999999999)."
         }
       }
     },
@@ -29113,15 +29215,25 @@
         },
         "starref_amount": {
           "name": "starref_amount",
-          "description": " "
+          "description": "For transactions made by referred users¹, the amount of Telegram Stars received by the affiliate, can be negative for refunds.",
+          "links": [
+            "https://core.telegram.org/api/bots/referrals"
+          ]
         },
         "starref_commission_permille": {
           "name": "starref_commission_permille",
-          "description": " "
+          "description": "This transaction is the receival (or refund) of an affiliate commission¹ (i.e. this is the transaction received by the peer that created the referral link², flag 17 is for transactions made by users that imported the referral link).",
+          "links": [
+            "https://core.telegram.org/api/bots/referrals",
+            "https://core.telegram.org/api/links#referral-links"
+          ]
         },
         "starref_peer": {
           "name": "starref_peer",
-          "description": " "
+          "description": "For transactions made by referred users¹, the peer that received the affiliate commission.",
+          "links": [
+            "https://core.telegram.org/api/bots/referrals"
+          ]
         },
         "stars": {
           "name": "stars",
@@ -35923,7 +36035,10 @@
         },
         "starref_program": {
           "name": "starref_program",
-          "description": " "
+          "description": "This bot has an active referral program »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/referrals"
+          ]
         },
         "stories": {
           "name": "stories",
@@ -36899,7 +37014,7 @@
         },
         "fullscreen": {
           "name": "fullscreen",
-          "description": " "
+          "description": "If set, the app must be opened in fullscreen"
         },
         "fullsize": {
           "name": "fullsize",
@@ -37134,7 +37249,13 @@
       ]
     },
     "BotAppSettings": {
-      "name": "BotAppSettings"
+      "name": "BotAppSettings",
+      "description": [
+        "Mini app »¹ settings"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps"
+      ]
     },
     "BotBusinessConnection": {
       "name": "BotBusinessConnection",
@@ -37486,7 +37607,13 @@
       ]
     },
     "ConnectedBotStarRef": {
-      "name": "ConnectedBotStarRef"
+      "name": "ConnectedBotStarRef",
+      "description": [
+        "Info about an active affiliate program we have with a Mini App¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals#becoming-an-affiliate"
+      ]
     },
     "Contact": {
       "name": "Contact",
@@ -38545,7 +38672,13 @@
       ]
     },
     "Messages.FoundStickers": {
-      "name": "Messages.FoundStickers"
+      "name": "Messages.FoundStickers",
+      "description": [
+        "Found stickers¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers"
+      ]
     },
     "Messages.HighScores": {
       "name": "Messages.HighScores",
@@ -38773,7 +38906,13 @@
       ]
     },
     "Payments.ConnectedStarRefBots": {
-      "name": "Payments.ConnectedStarRefBots"
+      "name": "Payments.ConnectedStarRefBots",
+      "description": [
+        "Active affiliations¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals#becoming-an-affiliate"
+      ]
     },
     "Payments.GiveawayInfo": {
       "name": "Payments.GiveawayInfo",
@@ -38809,7 +38948,14 @@
       ]
     },
     "Payments.SuggestedStarRefBots": {
-      "name": "Payments.SuggestedStarRefBots"
+      "name": "Payments.SuggestedStarRefBots",
+      "description": [
+        "A list of suggested mini apps¹ with available affiliate programs²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps",
+        "https://core.telegram.org/api/bots/referrals"
+      ]
     },
     "Payments.ValidatedRequestedInfo": {
       "name": "Payments.ValidatedRequestedInfo",
@@ -39321,10 +39467,22 @@
       ]
     },
     "StarRefProgram": {
-      "name": "StarRefProgram"
+      "name": "StarRefProgram",
+      "description": [
+        "Indo about an affiliate program offered by a bot¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals"
+      ]
     },
     "StarsAmount": {
-      "name": "StarsAmount"
+      "name": "StarsAmount",
+      "description": [
+        "Describes a real (i.e. possibly decimal) amount of Telegram Stars¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars"
+      ]
     },
     "StarsGiftOption": {
       "name": "StarsGiftOption",
@@ -44831,6 +44989,9 @@
     },
     "bots.getAdminedBots": {
       "name": "bots.getAdminedBots",
+      "description": [
+        "Get a list of bots owned by the current user"
+      ],
       "bot_can_use": true
     },
     "bots.getBotCommands": {
@@ -45416,18 +45577,28 @@
     },
     "bots.updateStarRefProgram": {
       "name": "bots.updateStarRefProgram",
+      "description": [
+        "Create, edit or delete the affiliate program¹ of a bot we own"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot"
         },
         "commission_permille": {
           "name": "commission_permille",
-          "description": " "
+          "description": "The permille commission rate: it indicates the share of Telegram Stars received by affiliates for every transaction made by users they referred inside of the bot.    The minimum and maximum value for this parameter are contained in the starref_min_commission_permille¹ and starref_max_commission_permille² client configuration parameters.   Can be 0 to terminate the affiliate program.  Both the duration and the commission may only be raised after creation of the program: to lower them, the program must first be terminated and a new one created.",
+          "links": [
+            "https://core.telegram.org/api/config#starref-min-commission-permille",
+            "https://core.telegram.org/api/config#starref-max-commission-permille"
+          ]
         },
         "duration_months": {
           "name": "duration_months",
-          "description": " "
+          "description": "Indicates the duration of the affiliate program; if not set, there is no expiration date."
         },
         "flags": {
           "name": "flags",
@@ -49611,7 +49782,10 @@
         },
         "referer": {
           "name": "referer",
-          "description": " "
+          "description": "Referrer ID from referral links »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#referral-links"
+          ]
         },
         "username": {
           "name": "username",
@@ -56768,7 +56942,7 @@
         },
         "compact": {
           "name": "compact",
-          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the direct Mini App deep link¹ is equal to compact.",
+          "description": "If set, requests to open the mini app in compact mode (as opposed to normal or fullscreen mode). Must be set if the mode parameter of the direct Mini App deep link¹ is equal to compact.",
           "links": [
             "https://core.telegram.org/api/links#direct-mini-app-links"
           ]
@@ -56782,7 +56956,10 @@
         },
         "fullscreen": {
           "name": "fullscreen",
-          "description": " "
+          "description": "If set, requests to open the mini app in fullscreen mode (as opposed to compact or normal mode). Must be set if the mode parameter of the direct Mini App deep link¹ is equal to fullscreen.",
+          "links": [
+            "https://core.telegram.org/api/links#direct-mini-app-links"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -56882,7 +57059,7 @@
         },
         "compact": {
           "name": "compact",
-          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the Main Mini App link¹ is equal to compact.",
+          "description": "If set, requests to open the mini app in compact mode (as opposed to normal or fullscreen mode). Must be set if the mode parameter of the Main Mini App link¹ is equal to compact.",
           "links": [
             "https://core.telegram.org/api/links#main-mini-app-links"
           ]
@@ -56896,7 +57073,10 @@
         },
         "fullscreen": {
           "name": "fullscreen",
-          "description": " "
+          "description": "If set, requests to open the mini app in fullscreen mode (as opposed to compact or normal mode). Must be set if the mode parameter of the Main Mini App link¹ is equal to fullscreen.",
+          "links": [
+            "https://core.telegram.org/api/links#main-mini-app-links"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -56972,7 +57152,7 @@
         },
         "fullscreen": {
           "name": "fullscreen",
-          "description": " "
+          "description": "Requests to open the app in fullscreen mode."
         },
         "platform": {
           "name": "platform",
@@ -57064,7 +57244,7 @@
         },
         "compact": {
           "name": "compact",
-          "description": "If set, requests to open the mini app in compact mode (as opposed to fullview mode). Must be set if the mode parameter of the attachment menu deep link¹ is equal to compact.",
+          "description": "If set, requests to open the mini app in compact mode (as opposed to normal or fullscreen mode). Must be set if the mode parameter of the attachment menu deep link¹ is equal to compact.",
           "links": [
             "https://core.telegram.org/api/links#bot-attachment-or-side-menu-links"
           ]
@@ -57085,7 +57265,10 @@
         },
         "fullscreen": {
           "name": "fullscreen",
-          "description": " "
+          "description": "If set, requests to open the mini app in fullscreen mode (as opposed to normal or compact mode). Must be set if the mode parameter of the attachment menu deep link¹ is equal to fullscreen.",
+          "links": [
+            "https://core.telegram.org/api/links#bot-attachment-or-side-menu-links"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -57401,7 +57584,7 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Number of results to return¹",
+          "description": "Number of results to return¹, can be 0 to only return the message counter.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
@@ -57625,7 +57808,7 @@
         },
         "groups_only": {
           "name": "groups_only",
-          "description": " "
+          "description": "Whether to search only in groups"
         },
         "limit": {
           "name": "limit",
@@ -57669,7 +57852,7 @@
         },
         "users_only": {
           "name": "users_only",
-          "description": " "
+          "description": "Whether to search only in private chats"
         }
       },
       "errors": [
@@ -57750,14 +57933,20 @@
     },
     "messages.searchStickers": {
       "name": "messages.searchStickers",
+      "description": [
+        "Search for stickers using AI-powered keyword search"
+      ],
       "parameters": {
         "emojis": {
           "name": "emojis",
-          "description": " "
+          "description": "If set, returns custom emoji stickers¹",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "emoticon": {
           "name": "emoticon",
-          "description": " "
+          "description": "Space-separated list of emojis to search for"
         },
         "flags": {
           "name": "flags",
@@ -57775,7 +57964,7 @@
         },
         "lang_code": {
           "name": "lang_code",
-          "description": " "
+          "description": "List of possible IETF language tags of the user's input language; may be empty if unknown"
         },
         "limit": {
           "name": "limit",
@@ -57786,11 +57975,14 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "q": {
           "name": "q",
-          "description": " "
+          "description": "The search term"
         }
       },
       "bot_can_use": true
@@ -60231,7 +60423,7 @@
       "parameters": {
         "period": {
           "name": "period",
-          "description": "The new default Time-To-Live of all messages sent in new chats."
+          "description": "The new default Time-To-Live of all messages sent in new chats, in seconds."
         }
       },
       "errors": [
@@ -61964,14 +62156,20 @@
     },
     "payments.connectStarRefBot": {
       "name": "payments.connectStarRefBot",
+      "description": [
+        "Join a bot's affiliate program, becoming an affiliate »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals#becoming-an-affiliate"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that offers the affiliate program"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that will become the affiliate: star commissions will be transferred to this peer's star balance."
         }
       },
       "bot_can_use": true
@@ -62007,6 +62205,12 @@
     },
     "payments.editConnectedStarRefBot": {
       "name": "payments.editConnectedStarRefBot",
+      "description": [
+        "Leave a bot's affiliate program »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals#becoming-an-affiliate"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -62017,15 +62221,15 @@
         },
         "link": {
           "name": "link",
-          "description": " "
+          "description": "The affiliate link to revoke"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that was affiliated"
         },
         "revoked": {
           "name": "revoked",
-          "description": " "
+          "description": "If set, leaves the bot's affiliate program"
         }
       },
       "bot_can_use": true
@@ -62112,20 +62316,29 @@
     },
     "payments.getConnectedStarRefBot": {
       "name": "payments.getConnectedStarRefBot",
+      "description": [
+        "Fetch info about a specific bot affiliation »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/referrals"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that offers the affiliate program"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The affiliated peer"
         }
       },
       "bot_can_use": true
     },
     "payments.getConnectedStarRefBots": {
       "name": "payments.getConnectedStarRefBots",
+      "description": [
+        "Fetch all affiliations we have created for a certain peer"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -62143,15 +62356,19 @@
         },
         "offset_date": {
           "name": "offset_date",
-          "description": " "
+          "description": "If set, returns only results older than the specified unixtime"
         },
         "offset_link": {
           "name": "offset_link",
-          "description": " "
+          "description": "Offset for pagination¹, taken from the last returned connectedBotStarRef².url (initially empty)",
+          "links": [
+            "https://core.telegram.org/api/offsets",
+            "https://core.telegram.org/constructor/connectedBotStarRef"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The affiliated peer"
         }
       },
       "bot_can_use": true
@@ -62609,6 +62826,14 @@
     },
     "payments.getSuggestedStarRefBots": {
       "name": "payments.getSuggestedStarRefBots",
+      "description": [
+        "Obtain a list of suggested mini apps¹ with available affiliate programs²",
+        "order_by_revenue and order_by_date are mutually exclusive: if neither is set, results are sorted by profitability."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps",
+        "https://core.telegram.org/api/bots/referrals"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -62626,19 +62851,22 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination, taken from payments.suggestedStarRefBots¹.next_offset, initially empty.",
+          "links": [
+            "https://core.telegram.org/constructor/payments.suggestedStarRefBots"
+          ]
         },
         "order_by_date": {
           "name": "order_by_date",
-          "description": " "
+          "description": "If set, orders results by the creation date of the affiliate program"
         },
         "order_by_revenue": {
           "name": "order_by_revenue",
-          "description": " "
+          "description": "If set, orders results by the expected revenue"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that will become the affiliate: star commissions will be transferred to this peer's star balance."
         }
       },
       "bot_can_use": true
