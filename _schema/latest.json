@@ -17155,9 +17155,9 @@
         },
         "subscription_period": {
           "name": "subscription_period",
-          "description": "The number of seconds between consecutive Telegram Star debiting for subscription¹ invoices",
+          "description": "The number of seconds between consecutive Telegram Star debiting for bot subscription¹ invoices",
           "links": [
-            "https://core.telegram.org/api/stars#star-subscriptions"
+            "https://core.telegram.org/api/subscriptions#bot-subscriptions"
           ]
         },
         "suggested_tip_amounts": {
@@ -21307,14 +21307,23 @@
     },
     "messages.botPreparedInlineMessage": {
       "name": "messages.botPreparedInlineMessage",
+      "description": [
+        "Represents a prepared inline message saved by a bot, to be sent to the user via a web app »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message"
+      ],
       "fields": {
         "expire_date": {
           "name": "expire_date",
-          "description": " "
+          "description": "Expiration date of the message"
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The ID of the saved message, to be passed to the id field of the web_app_send_prepared_message event »¹",
+          "links": [
+            "https://core.telegram.org/api/web-events#web-app-send-prepared-message"
+          ]
         }
       }
     },
@@ -22362,26 +22371,35 @@
     },
     "messages.preparedInlineMessage": {
       "name": "messages.preparedInlineMessage",
+      "description": [
+        "Represents a prepared inline message received via a bot's mini app, that can be sent to some chats »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message"
+      ],
       "fields": {
         "cache_time": {
           "name": "cache_time",
-          "description": " "
+          "description": "Caching validity of the results"
         },
         "peer_types": {
           "name": "peer_types",
-          "description": " "
+          "description": "Types of chats where this message can be sent"
         },
         "query_id": {
           "name": "query_id",
-          "description": " "
+          "description": "The query_id to pass to messages.sendInlineBotResult¹",
+          "links": [
+            "https://core.telegram.org/method/messages.sendInlineBotResult"
+          ]
         },
         "result": {
           "name": "result",
-          "description": " "
+          "description": "The contents of the message, to be shown in a preview"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the results"
         }
       }
     },
@@ -38645,7 +38663,13 @@
       ]
     },
     "Messages.BotPreparedInlineMessage": {
-      "name": "Messages.BotPreparedInlineMessage"
+      "name": "Messages.BotPreparedInlineMessage",
+      "description": [
+        "Represents a prepared inline message saved by a bot, to be sent to the user via a web app »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message"
+      ]
     },
     "Messages.DhConfig": {
       "name": "Messages.DhConfig",
@@ -38699,7 +38723,13 @@
       ]
     },
     "Messages.PreparedInlineMessage": {
-      "name": "Messages.PreparedInlineMessage"
+      "name": "Messages.PreparedInlineMessage",
+      "description": [
+        "Represents a prepared inline message received via a bot's mini app, that can be sent to some chats »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message"
+      ]
     },
     "Messages.RecentStickers": {
       "name": "Messages.RecentStickers",
@@ -44894,18 +44924,34 @@
     },
     "bots.checkDownloadFileParams": {
       "name": "bots.checkDownloadFileParams",
+      "description": [
+        "Check if a mini app¹ can request the download of a specific file: called when handling web_app_request_file_download events »²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/webapps",
+        "https://core.telegram.org/api/web-events#web-app-request-file-download"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the mini app¹ that requested the download",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps"
+          ]
         },
         "file_name": {
           "name": "file_name",
-          "description": " "
+          "description": "The filename from the web_app_request_file_download event »¹",
+          "links": [
+            "https://core.telegram.org/api/web-events#web-app-request-file-download"
+          ]
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The url from the web_app_request_file_download event »¹",
+          "links": [
+            "https://core.telegram.org/api/web-events#web-app-request-file-download"
+          ]
         }
       },
       "bot_can_use": true
@@ -54918,14 +54964,28 @@
     },
     "messages.getPreparedInlineMessage": {
       "name": "messages.getPreparedInlineMessage",
+      "description": [
+        "Obtain a prepared inline message¹ generated by a mini app²: invoked when handling web_app_send_prepared_message events³"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message",
+        "https://core.telegram.org/api/bots/webapps",
+        "https://core.telegram.org/api/web-events#web-app-send-prepared-message"
+      ],
       "parameters": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "The bot that owns the mini app that emitted the web_app_send_prepared_message event¹",
+          "links": [
+            "https://core.telegram.org/api/web-events#web-app-send-prepared-message"
+          ]
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The id from the web_app_send_prepared_message event¹",
+          "links": [
+            "https://core.telegram.org/api/web-events#web-app-send-prepared-message"
+          ]
         }
       },
       "bot_can_use": true
@@ -57490,6 +57550,13 @@
     },
     "messages.savePreparedInlineMessage": {
       "name": "messages.savePreparedInlineMessage",
+      "description": [
+        "Save a prepared inline message¹, to be shared by the user of the mini app using a web_app_send_prepared_message event²"
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message",
+        "https://core.telegram.org/api/web-events#web-app-send-prepared-message"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -57500,15 +57567,18 @@
         },
         "peer_types": {
           "name": "peer_types",
-          "description": " "
+          "description": "Types of chats where this message can be sent"
         },
         "result": {
           "name": "result",
-          "description": " "
+          "description": "The message"
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user to whom the web_app_send_prepared_message event¹ event will be sent",
+          "links": [
+            "https://core.telegram.org/api/web-events#web-app-send-prepared-message"
+          ]
         }
       },
       "bot_can_use": true
