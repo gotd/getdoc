@@ -48,7 +48,7 @@ func NewClient(opt Options) (*Client, error) {
 		http:     opt.Client,
 		readonly: opt.Readonly,
 		host:     opt.Host,
-		rate:     ratelimit.New(10),
+		rate:     ratelimit.New(100),
 	}
 
 	if opt.FromZip {
