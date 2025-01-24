@@ -12,7 +12,7 @@ import (
 )
 
 func TestSchemas(t *testing.T) {
-	files, err := data.ReadDir("_schema")
+	files, err := embedData.ReadDir("_schema")
 	require.NoError(t, err)
 	var latest int
 	for _, file := range files {
