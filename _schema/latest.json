@@ -68765,7 +68765,7 @@
       "description": "You can't enable forum topics in a discussion group linked to a channel."
     },
     "CHAT_FORWARDS_RESTRICTED": {
-      "code": 406,
+      "code": 400,
       "type": "CHAT_FORWARDS_RESTRICTED",
       "description": "You can't forward messages from a protected chat."
     },
@@ -69830,7 +69830,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -70030,7 +70030,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -70150,7 +70150,7 @@
       "description": "Cast a vote in the poll before calling this method."
     },
     "PREMIUM_ACCOUNT_REQUIRED": {
-      "code": 400,
+      "code": 403,
       "type": "PREMIUM_ACCOUNT_REQUIRED",
       "description": "A premium account is required to execute this action."
     },
@@ -70802,7 +70802,7 @@
     "TAKEOUT_REQUIRED": {
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
-      "description": "A takeout¹ session needs to be initialized first, see here » for more info²."
+      "description": "A takeout session needs to be initialized first, see here » for more info."
     },
     "TASK_ALREADY_EXISTS": {
       "code": 400,
@@ -70895,7 +70895,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -70905,7 +70905,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -71090,7 +71090,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
@@ -71135,12 +71135,12 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 400,
+      "code": 403,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
     "USER_NOT_PARTICIPANT": {
-      "code": 400,
+      "code": 403,
       "type": "USER_NOT_PARTICIPANT",
       "description": "You're not a member of this supergroup/channel."
     },
@@ -71195,7 +71195,7 @@
       "description": "The specified video title is empty."
     },
     "VOICE_MESSAGES_FORBIDDEN": {
-      "code": 403,
+      "code": 400,
       "type": "VOICE_MESSAGES_FORBIDDEN",
       "description": "This user's privacy settings forbid you from sending voice messages."
     },
