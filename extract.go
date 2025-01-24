@@ -138,5 +138,5 @@ func (e *Extractor) Extract(ctx context.Context) (*Doc, error) {
 
 // ExtractLayer uses Downloader to extract documentation of specified layer.
 func ExtractLayer(ctx context.Context, layer int, d Downloader) (*Doc, error) {
-	return newExtractor(layer, 16, d).Extract(ctx)
+	return newExtractor(layer, 64, d).Extract(ctx)
 }
