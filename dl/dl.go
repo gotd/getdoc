@@ -9,9 +9,12 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
+	"time"
 
 	"github.com/cenkalti/backoff/v4"
+	"github.com/go-faster/sdk/zctx"
 	"go.uber.org/ratelimit"
+	"go.uber.org/zap"
 
 	"github.com/gotd/getdoc/dl/internal/cache"
 )
@@ -48,7 +51,7 @@ func NewClient(opt Options) (*Client, error) {
 		http:     opt.Client,
 		readonly: opt.Readonly,
 		host:     opt.Host,
-		rate:     ratelimit.New(100),
+		rate:     ratelimit.New(1000),
 	}
 
 	if opt.FromZip {
@@ -97,12 +100,19 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 
 	c.rate.Take()
 
+	start := time.Now()
 	res, err := c.http.Do(req)
+	duration := time.Since(start)
+
 	if err != nil {
 		return nil, fmt.Errorf("failed to do request: %w", err)
 	}
 	defer func() { _ = res.Body.Close() }()
-
+	zctx.From(ctx).Debug("Request",
+		zap.String("path", u.Path),
+		zap.Duration("duration", duration),
+		zap.Int("status", res.StatusCode),
+	)
 	if res.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("unexpected http code %d", res.StatusCode)
 	}
@@ -134,6 +144,9 @@ func (c *Client) Get(ctx context.Context, layer int, key string) ([]byte, error)
 	// Trying to get from cache.
 	buf, err := c.cache.Get(cacheKey)
 	if err == nil {
+		zctx.From(ctx).Debug("Cache hit",
+			zap.String("key", cacheKey),
+		)
 		return buf, nil
 	}
 	if !errors.Is(err, cache.ErrNotFound) {

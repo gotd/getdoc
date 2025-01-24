@@ -10,6 +10,9 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/go-faster/sdk/zctx"
+	"go.uber.org/zap"
+
 	"github.com/gotd/getdoc"
 	"github.com/gotd/getdoc/dl"
 )
@@ -23,8 +26,18 @@ func main() {
 	pretty := flag.Bool("pretty", false, "pretty json output")
 	flag.Parse()
 
+	lg, err := zap.NewDevelopment()
+	if err != nil {
+		panic(err)
+	}
+
+	ctx := zctx.Base(context.Background(), lg)
+
+	cacheDir := filepath.Join(*dir, "cache")
+	lg.Info("Cache dir", zap.String("path", cacheDir))
+
 	client, err := dl.NewClient(dl.Options{
-		Path:     filepath.Join(*dir, "cache"),
+		Path:     cacheDir,
 		Host:     *host,
 		Readonly: *readonly,
 	})
@@ -32,7 +45,6 @@ func main() {
 		panic(err)
 	}
 
-	ctx := context.Background()
 	doc, err := getdoc.Extract(ctx, client)
 	if err != nil {
 		panic(err)

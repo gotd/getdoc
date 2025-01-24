@@ -47,7 +47,7 @@ func LayerExists(layer int) bool {
 var ErrNotFound = errors.New("layer not found")
 
 //go:embed _schema
-var data embed.FS
+var embedData embed.FS
 
 // Load layer documentation.
 func Load(layer int) (*Doc, error) {
@@ -55,7 +55,7 @@ func Load(layer int) (*Doc, error) {
 		return nil, ErrNotFound
 	}
 
-	b, err := data.ReadFile(path.Join("_schema", fmt.Sprintf("%d.json", layer)))
+	b, err := embedData.ReadFile(path.Join("_schema", fmt.Sprintf("%d.json", layer)))
 	if err != nil {
 		return nil, errors.Wrap(err, "read")
 	}
