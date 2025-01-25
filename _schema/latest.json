@@ -68755,7 +68755,7 @@
       "description": "You do not have the rights to do this."
     },
     "CHAT_ADMIN_REQUIRED": {
-      "code": 400,
+      "code": 403,
       "type": "CHAT_ADMIN_REQUIRED",
       "description": "You must be an admin in this chat to do this."
     },
@@ -68790,7 +68790,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 400,
+      "code": 500,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -69800,7 +69800,7 @@
       "description": "chat_read_mark_expire_period seconds have passed since the message was sent, read receipts were deleted."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -70030,7 +70030,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -70150,7 +70150,7 @@
       "description": "Cast a vote in the poll before calling this method."
     },
     "PREMIUM_ACCOUNT_REQUIRED": {
-      "code": 403,
+      "code": 400,
       "type": "PREMIUM_ACCOUNT_REQUIRED",
       "description": "A premium account is required to execute this action."
     },
@@ -70630,7 +70630,7 @@
       "description": "There are too many stickers in this stickerpack, you can't add any more."
     },
     "STICKERSET_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "STICKERSET_INVALID",
       "description": "The provided sticker set is invalid."
     },
@@ -70802,7 +70802,7 @@
     "TAKEOUT_REQUIRED": {
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
-      "description": "A takeout session needs to be initialized first, see here » for more info."
+      "description": "A takeout¹ session needs to be initialized first, see here » for more info²."
     },
     "TASK_ALREADY_EXISTS": {
       "code": 400,
@@ -70895,7 +70895,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -70905,7 +70905,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -71140,7 +71140,7 @@
       "description": "The provided user is not a mutual contact."
     },
     "USER_NOT_PARTICIPANT": {
-      "code": 403,
+      "code": 400,
       "type": "USER_NOT_PARTICIPANT",
       "description": "You're not a member of this supergroup/channel."
     },
