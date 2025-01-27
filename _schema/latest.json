@@ -68685,7 +68685,7 @@
       "description": "The current user is not in the channel."
     },
     "CHANNEL_PRIVATE": {
-      "code": 400,
+      "code": 406,
       "type": "CHANNEL_PRIVATE",
       "description": "You haven't joined this channel/supergroup."
     },
@@ -68755,7 +68755,7 @@
       "description": "You do not have the rights to do this."
     },
     "CHAT_ADMIN_REQUIRED": {
-      "code": 403,
+      "code": 400,
       "type": "CHAT_ADMIN_REQUIRED",
       "description": "You must be an admin in this chat to do this."
     },
@@ -70630,7 +70630,7 @@
       "description": "There are too many stickers in this stickerpack, you can't add any more."
     },
     "STICKERSET_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "STICKERSET_INVALID",
       "description": "The provided sticker set is invalid."
     },
