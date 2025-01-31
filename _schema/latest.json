@@ -60086,7 +60086,7 @@
         },
         "private": {
           "name": "private",
-          "description": "Each post with star reactions has a leaderboard with the top senders, but users can opt out of appearing there if they prefer more privacy.  If the user explicitly chose to make their paid reaction(s) private, pass boolTrue¹ to messages.sendPaidReaction².private.  If the user explicitly chose to make their paid reaction(s) private, pass boolFalse³ to messages.sendPaidReaction⁴.private.  If the user did not make any explicit choice about the privacy of their paid reaction(s) (i.e. when reacting by clicking on an existing star reaction on a message), do not populate the messages.sendPaidReaction⁵.private flag.",
+          "description": "Each post with star reactions has a leaderboard with the top senders, but users can opt out of appearing there if they prefer more privacy.If the user explicitly chose to make their paid reaction(s) private, pass boolTrue¹ to messages.sendPaidReaction².private.If the user explicitly chose to make their paid reaction(s) not private, pass boolFalse³ to messages.sendPaidReaction⁴.private.If the user did not make any explicit choice about the privacy of their paid reaction(s) (i.e. when reacting by clicking on an existing star reaction on a message), do not populate the messages.sendPaidReaction⁵.private flag.",
           "links": [
             "https://core.telegram.org/constructor/boolTrue",
             "https://core.telegram.org/method/messages.sendPaidReaction",
@@ -68755,7 +68755,7 @@
       "description": "You do not have the rights to do this."
     },
     "CHAT_ADMIN_REQUIRED": {
-      "code": 400,
+      "code": 403,
       "type": "CHAT_ADMIN_REQUIRED",
       "description": "You must be an admin in this chat to do this."
     },
@@ -68790,7 +68790,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 400,
+      "code": 500,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -69800,7 +69800,7 @@
       "description": "chat_read_mark_expire_period seconds have passed since the message was sent, read receipts were deleted."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -70030,7 +70030,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -70895,7 +70895,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -70905,7 +70905,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
