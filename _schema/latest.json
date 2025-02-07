@@ -68790,7 +68790,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 400,
+      "code": 500,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -69830,7 +69830,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -70030,7 +70030,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -70630,7 +70630,7 @@
       "description": "There are too many stickers in this stickerpack, you can't add any more."
     },
     "STICKERSET_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "STICKERSET_INVALID",
       "description": "The provided sticker set is invalid."
     },
@@ -70895,7 +70895,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -71090,7 +71090,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
