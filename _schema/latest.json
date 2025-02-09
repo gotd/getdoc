@@ -10516,7 +10516,7 @@
         },
         "nosound": {
           "name": "nosound",
-          "description": "Whether the specified document is a video file with no audio tracks (a GIF animation (even as MPEG4), for example)"
+          "description": "Whether the specified document is a video file with no audio tracks"
         },
         "preload_prefix_size": {
           "name": "preload_prefix_size",
@@ -10535,7 +10535,7 @@
         },
         "video_codec": {
           "name": "video_codec",
-          "description": "Codec used for the video, i.e. \"h264\", \"h265\", or \"av1\""
+          "description": "Codec used for the video, i.e. “h264”, “h265”, or “av1”"
         },
         "video_start_ts": {
           "name": "video_start_ts",
@@ -14942,7 +14942,10 @@
         },
         "nosound_video": {
           "name": "nosound_video",
-          "description": "Whether the specified document is a video file with no audio tracks (a GIF animation (even as MPEG4), for example)"
+          "description": "Whether to send the file as a video even if it doesn't have an audio track (i.e. if set, the documentAttributeAnimated¹ attribute will not be set even for videos without audio)",
+          "links": [
+            "https://core.telegram.org/constructor/documentAttributeAnimated"
+          ]
         },
         "spoiler": {
           "name": "spoiler",
@@ -70030,7 +70033,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -70895,7 +70898,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -70905,7 +70908,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -71135,7 +71138,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 400,
+      "code": 403,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
