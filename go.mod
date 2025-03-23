@@ -1,7 +1,8 @@
 module github.com/gotd/getdoc
 
-go 1.23
-toolchain go1.23.5
+go 1.23.0
+
+toolchain go1.24.1
 
 require (
 	github.com/PuerkitoBio/goquery v1.10.2
