@@ -68793,7 +68793,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 500,
+      "code": 400,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -69553,7 +69553,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -69833,7 +69833,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -69893,7 +69893,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -70033,7 +70033,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -70183,7 +70183,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -70633,7 +70633,7 @@
       "description": "There are too many stickers in this stickerpack, you can't add any more."
     },
     "STICKERSET_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "STICKERSET_INVALID",
       "description": "The provided sticker set is invalid."
     },
