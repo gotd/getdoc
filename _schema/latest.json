@@ -71138,7 +71138,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 403,
+      "code": 400,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
@@ -71158,7 +71158,7 @@
       "description": "Cannot generate a link to stories posted by a peer without a username."
     },
     "USER_RESTRICTED": {
-      "code": 406,
+      "code": 403,
       "type": "USER_RESTRICTED",
       "description": "You're spamreported, you can't create channels or chats."
     },
