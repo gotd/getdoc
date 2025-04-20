@@ -1,43 +1,6 @@
-linters-settings:
-  revive:
-    rules:
-      - name: unused-parameter
-        severity: warning
-        disabled: true
-  gocyclo:
-    min-complexity: 15
-  dupl:
-    threshold: 120
-  goconst:
-    min-len: 2
-    min-occurrences: 3
-  misspell:
-    locale: US
-  lll:
-    line-length: 140
-  goimports:
-    local-prefixes: github.com/gotd/
-  gocritic:
-    enabled-tags:
-      - diagnostic
-      - experimental
-      - opinionated
-      - performance
-      - style
-    disabled-checks:
-      - hugeParam
-      - rangeValCopy
-      - exitAfterDefer
-      - whyNoLint
-      - singleCaseSwitch
-      - commentedOutCode
-      - appendAssign
-      - octalLiteral
-      - preferWriteByte
-      - httpNoBody
-
+version: "2"
 linters:
-  disable-all: true
+  default: none
   enable:
     - dogsled
     - dupl
@@ -45,66 +8,104 @@ linters:
     - gochecknoinits
     - goconst
     - gocritic
-    - gofmt
-    - goimports
-    - revive
     - gosec
-    - gosimple
     - govet
     - ineffassign
     - lll
     - misspell
     - nakedret
+    - revive
     - staticcheck
-    - stylecheck
-    - typecheck
     - unconvert
     - unparam
     - unused
     - whitespace
-
-  # Do not enable:
-  # - wsl       (too opinionated about newlines)
-  # - godox     (todos are OK)
-  # - bodyclose (false positives on helper functions)
-  # - prealloc  (not worth it in scope of this project)
-  # - maligned  (same as prealloc)
-  # - funlen    (gocyclo is enough)
-  # - gochecknoglobals (we know when it is ok to use globals)
-
-issues:
-  exclude-rules:
-    # Exclude go:generate from lll
-    - source: "//go:generate"
-      linters: [ lll ]
-
-    # Disable linters that are annoying in tests.
-    - path: _test\.go
-      linters:
-        - gocyclo
-        - errcheck
-        - dupl
-        - gosec
-        - funlen
-        - goconst
-        - gocognit
-        - scopelint
-        - lll
-
-    # Ignore shadowing of err.
-    - linters: [ govet ]
-      text: 'declaration of "(err|ctx|log)"'
-
-    # Ignore linters in main packages.
-    - path: cmd\/.+\/main\.go
-      linters: [ goconst, funlen, gocognit, gocyclo ]
-
-    # Intended in commands:
-    # G307: Deferring unsafe method "Close" on type "*os.File"
-    # G304: Potential file inclusion via variable
-    - path: cmd\/.+\/main\.go
-      text: G(307|304)
-
-    - linters: [ revive ]
-      text: "if-return: redundant if ...; err != nil check, just return error instead."
-
+  settings:
+    dupl:
+      threshold: 120
+    goconst:
+      min-len: 2
+      min-occurrences: 3
+    gocritic:
+      disabled-checks:
+        - hugeParam
+        - rangeValCopy
+        - exitAfterDefer
+        - whyNoLint
+        - singleCaseSwitch
+        - commentedOutCode
+        - appendAssign
+        - octalLiteral
+        - preferWriteByte
+        - httpNoBody
+      enabled-tags:
+        - diagnostic
+        - experimental
+        - opinionated
+        - performance
+        - style
+    gocyclo:
+      min-complexity: 15
+    lll:
+      line-length: 140
+    misspell:
+      locale: US
+    revive:
+      rules:
+        - name: unused-parameter
+          severity: warning
+          disabled: true
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - lll
+        source: //go:generate
+      - linters:
+          - dupl
+          - errcheck
+          - funlen
+          - gocognit
+          - goconst
+          - gocyclo
+          - gosec
+          - lll
+          - scopelint
+        path: _test\.go
+      - linters:
+          - govet
+        text: declaration of "(err|ctx|log)"
+      - linters:
+          - funlen
+          - gocognit
+          - goconst
+          - gocyclo
+        path: cmd\/.+\/main\.go
+      - path: cmd\/.+\/main\.go
+        text: G(307|304)
+      - linters:
+          - revive
+        text: 'if-return: redundant if ...; err != nil check, just return error instead.'
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  settings:
+    goimports:
+      local-prefixes:
+        - github.com/gotd/
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
