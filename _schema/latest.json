@@ -69833,7 +69833,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -70183,7 +70183,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
