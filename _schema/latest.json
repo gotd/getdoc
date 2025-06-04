@@ -68758,7 +68758,7 @@
       "description": "You do not have the rights to do this."
     },
     "CHAT_ADMIN_REQUIRED": {
-      "code": 400,
+      "code": 403,
       "type": "CHAT_ADMIN_REQUIRED",
       "description": "You must be an admin in this chat to do this."
     },
@@ -68793,7 +68793,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 500,
+      "code": 400,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
