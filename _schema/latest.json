@@ -69553,7 +69553,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
