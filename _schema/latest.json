@@ -68688,7 +68688,7 @@
       "description": "The current user is not in the channel."
     },
     "CHANNEL_PRIVATE": {
-      "code": 400,
+      "code": 406,
       "type": "CHANNEL_PRIVATE",
       "description": "You haven't joined this channel/supergroup."
     },
@@ -70033,7 +70033,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
