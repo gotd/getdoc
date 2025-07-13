@@ -2744,9 +2744,6 @@
         }
       }
     },
-    "Page not found": {
-      "name": "Page not found"
-    },
     "Updates": {
       "name": "Updates",
       "description": [
@@ -3025,6 +3022,15 @@
       "links": [
         "https://core.telegram.org/api/emoji-status"
       ]
+    },
+    "account.paidMessagesRevenue": {
+      "name": "account.paidMessagesRevenue",
+      "fields": {
+        "stars_amount": {
+          "name": "stars_amount",
+          "description": " "
+        }
+      }
     },
     "account.password": {
       "name": "account.password",
@@ -3910,6 +3916,19 @@
         }
       }
     },
+    "auth.sentCodePaymentRequired": {
+      "name": "auth.sentCodePaymentRequired",
+      "fields": {
+        "phone_code_hash": {
+          "name": "phone_code_hash",
+          "description": " "
+        },
+        "store_product": {
+          "name": "store_product",
+          "description": " "
+        }
+      }
+    },
     "auth.sentCodeSuccess": {
       "name": "auth.sentCodeSuccess",
       "description": [
@@ -4769,10 +4788,6 @@
         "https://core.telegram.org/api/business#connected-bots"
       ],
       "fields": {
-        "can_reply": {
-          "name": "can_reply",
-          "description": "Whether the bot can reply on behalf of the user to messages it receives through the business connection"
-        },
         "connection_id": {
           "name": "connection_id",
           "description": "Business connection ID, used to identify messages coming from the connection and to reply to them as specified here »¹.",
@@ -4802,6 +4817,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "rights": {
+          "name": "rights",
+          "description": " "
         },
         "user_id": {
           "name": "user_id",
@@ -4958,6 +4977,10 @@
         "user_id": {
           "name": "user_id",
           "description": "ID of the bot"
+        },
+        "verifier_settings": {
+          "name": "verifier_settings",
+          "description": " "
         }
       }
     },
@@ -5426,6 +5449,51 @@
         }
       }
     },
+    "botVerification": {
+      "name": "botVerification",
+      "fields": {
+        "bot_id": {
+          "name": "bot_id",
+          "description": " "
+        },
+        "description": {
+          "name": "description",
+          "description": " "
+        },
+        "icon": {
+          "name": "icon",
+          "description": " "
+        }
+      }
+    },
+    "botVerifierSettings": {
+      "name": "botVerifierSettings",
+      "fields": {
+        "can_modify_custom_description": {
+          "name": "can_modify_custom_description",
+          "description": " "
+        },
+        "company": {
+          "name": "company",
+          "description": " "
+        },
+        "custom_description": {
+          "name": "custom_description",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "icon": {
+          "name": "icon",
+          "description": " "
+        }
+      }
+    },
     "bots.botInfo": {
       "name": "bots.botInfo",
       "description": [
@@ -5622,6 +5690,74 @@
         "users": {
           "name": "users",
           "description": "Explicitly selected private chats."
+        }
+      }
+    },
+    "businessBotRights": {
+      "name": "businessBotRights",
+      "fields": {
+        "change_gift_settings": {
+          "name": "change_gift_settings",
+          "description": " "
+        },
+        "delete_received_messages": {
+          "name": "delete_received_messages",
+          "description": " "
+        },
+        "delete_sent_messages": {
+          "name": "delete_sent_messages",
+          "description": " "
+        },
+        "edit_bio": {
+          "name": "edit_bio",
+          "description": " "
+        },
+        "edit_name": {
+          "name": "edit_name",
+          "description": " "
+        },
+        "edit_profile_photo": {
+          "name": "edit_profile_photo",
+          "description": " "
+        },
+        "edit_username": {
+          "name": "edit_username",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "manage_stories": {
+          "name": "manage_stories",
+          "description": " "
+        },
+        "read_messages": {
+          "name": "read_messages",
+          "description": " "
+        },
+        "reply": {
+          "name": "reply",
+          "description": " "
+        },
+        "sell_gifts": {
+          "name": "sell_gifts",
+          "description": " "
+        },
+        "transfer_and_upgrade_gifts": {
+          "name": "transfer_and_upgrade_gifts",
+          "description": " "
+        },
+        "transfer_stars": {
+          "name": "transfer_stars",
+          "description": " "
+        },
+        "view_gifts": {
+          "name": "view_gifts",
+          "description": " "
         }
       }
     },
@@ -5940,6 +6076,10 @@
             "https://core.telegram.org/api/rights"
           ]
         },
+        "autotranslation": {
+          "name": "autotranslation",
+          "description": " "
+        },
         "banned_rights": {
           "name": "banned_rights",
           "description": "Banned rights of the user in this channel (see rights¹)",
@@ -5947,9 +6087,17 @@
             "https://core.telegram.org/api/rights"
           ]
         },
+        "bot_verification_icon": {
+          "name": "bot_verification_icon",
+          "description": " "
+        },
         "broadcast": {
           "name": "broadcast",
           "description": "Is this a channel?"
+        },
+        "broadcast_messages_allowed": {
+          "name": "broadcast_messages_allowed",
+          "description": " "
         },
         "call_active": {
           "name": "call_active",
@@ -6020,6 +6168,10 @@
             "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
+        "forum_tabs": {
+          "name": "forum_tabs",
+          "description": " "
+        },
         "gigagroup": {
           "name": "gigagroup",
           "description": "Whether this supergroup¹ is a gigagroupChanges to this flag should invalidate the local channelFull² cache for this channel/supergroup ID, see here »³ for more info.",
@@ -6083,6 +6235,10 @@
             "https://core.telegram.org/api/peers#full-info-database"
           ]
         },
+        "linked_monoforum_id": {
+          "name": "linked_monoforum_id",
+          "description": " "
+        },
         "megagroup": {
           "name": "megagroup",
           "description": "Is this a supergroup? Changes to this flag should invalidate the local channelFull¹ cache for this channel/supergroup ID, see here »² for more info.",
@@ -6097,6 +6253,10 @@
           "links": [
             "https://core.telegram.org/api/min"
           ]
+        },
+        "monoforum": {
+          "name": "monoforum",
+          "description": " "
         },
         "noforwards": {
           "name": "noforwards",
@@ -6139,6 +6299,10 @@
             "https://core.telegram.org/constructor/channelFull",
             "https://core.telegram.org/api/peers#full-info-database"
           ]
+        },
+        "send_paid_messages_stars": {
+          "name": "send_paid_messages_stars",
+          "description": " "
         },
         "signature_profiles": {
           "name": "signature_profiles",
@@ -6887,6 +7051,15 @@
         }
       }
     },
+    "channelAdminLogEventActionToggleAutotranslation": {
+      "name": "channelAdminLogEventActionToggleAutotranslation",
+      "fields": {
+        "new_value": {
+          "name": "new_value",
+          "description": " "
+        }
+      }
+    },
     "channelAdminLogEventActionToggleForum": {
       "name": "channelAdminLogEventActionToggleForum",
       "description": [
@@ -7275,6 +7448,10 @@
           "name": "bot_info",
           "description": "Info about bots in the channel/supergroup"
         },
+        "bot_verification": {
+          "name": "bot_verification",
+          "description": " "
+        },
         "call": {
           "name": "call",
           "description": "Livestream or group call information"
@@ -7431,6 +7608,10 @@
             "https://core.telegram.org/api/paid-media"
           ]
         },
+        "paid_messages_available": {
+          "name": "paid_messages_available",
+          "description": " "
+        },
         "paid_reactions_available": {
           "name": "paid_reactions_available",
           "description": "If set, users may send paid Telegram Star reactions »¹ to messages of this channel.",
@@ -7501,6 +7682,10 @@
             "https://core.telegram.org/api/boost#disable-ads-on-the-channel"
           ]
         },
+        "send_paid_messages_stars": {
+          "name": "send_paid_messages_stars",
+          "description": " "
+        },
         "slowmode_next_send_date": {
           "name": "slowmode_next_send_date",
           "description": "Indicates when the user will be allowed to send another message in the supergroup (unixtime)"
@@ -7508,6 +7693,14 @@
         "slowmode_seconds": {
           "name": "slowmode_seconds",
           "description": "If specified, users in supergroups will only be able to send one message every slowmode_seconds seconds"
+        },
+        "stargifts_available": {
+          "name": "stargifts_available",
+          "description": " "
+        },
+        "stargifts_count": {
+          "name": "stargifts_count",
+          "description": " "
         },
         "stats_dc": {
           "name": "stats_dc",
@@ -8213,6 +8406,10 @@
           "name": "manage_call",
           "description": "If set, allows the admin to change group call/livestream settings"
         },
+        "manage_direct_messages": {
+          "name": "manage_direct_messages",
+          "description": " "
+        },
         "manage_topics": {
           "name": "manage_topics",
           "description": "If set, allows the admin to create, delete or modify forum topics »¹.",
@@ -8596,6 +8793,10 @@
         "about": {
           "name": "about",
           "description": "Description of the group of channel"
+        },
+        "bot_verification": {
+          "name": "bot_verification",
+          "description": " "
         },
         "broadcast": {
           "name": "broadcast",
@@ -9080,6 +9281,10 @@
           "name": "title",
           "description": "Name of the link"
         },
+        "title_noanimate": {
+          "name": "title_noanimate",
+          "description": " "
+        },
         "users": {
           "name": "users",
           "description": "Related user information"
@@ -9508,10 +9713,6 @@
           "name": "bot_id",
           "description": "ID of the connected bot"
         },
-        "can_reply": {
-          "name": "can_reply",
-          "description": "Whether the the bot can reply to messages it receives through the connection"
-        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -9525,6 +9726,10 @@
           "links": [
             "https://core.telegram.org/api/business#connected-bots"
           ]
+        },
+        "rights": {
+          "name": "rights",
+          "description": " "
         }
       }
     },
@@ -9786,6 +9991,26 @@
           "description": "Users"
         }
       }
+    },
+    "contacts.sponsoredPeers": {
+      "name": "contacts.sponsoredPeers",
+      "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "peers": {
+          "name": "peers",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "contacts.sponsoredPeersEmpty": {
+      "name": "contacts.sponsoredPeersEmpty"
     },
     "contacts.topPeers": {
       "name": "contacts.topPeers",
@@ -10118,6 +10343,10 @@
           "links": [
             "https://core.telegram.org/api/folders"
           ]
+        },
+        "title_noanimate": {
+          "name": "title_noanimate",
+          "description": " "
         }
       }
     },
@@ -10173,6 +10402,10 @@
         "title": {
           "name": "title",
           "description": "Name of the folder (max 12 UTF-8 chars)"
+        },
+        "title_noanimate": {
+          "name": "title_noanimate",
+          "description": " "
         }
       }
     },
@@ -10280,6 +10513,34 @@
           "description": "Peer folder ID, for more info click here¹",
           "links": [
             "https://core.telegram.org/api/folders#peer-folders"
+          ]
+        }
+      }
+    },
+    "disallowedGiftsSettings": {
+      "name": "disallowedGiftsSettings",
+      "fields": {
+        "disallow_limited_stargifts": {
+          "name": "disallow_limited_stargifts",
+          "description": " "
+        },
+        "disallow_premium_gifts": {
+          "name": "disallow_premium_gifts",
+          "description": " "
+        },
+        "disallow_unique_stargifts": {
+          "name": "disallow_unique_stargifts",
+          "description": " "
+        },
+        "disallow_unlimited_stargifts": {
+          "name": "disallow_unlimited_stargifts",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         }
       }
@@ -10524,7 +10785,7 @@
         },
         "video_codec": {
           "name": "video_codec",
-          "description": "Codec used for the video, i.e. “h264”, “h265”, or “av1”"
+          "description": "Codec used for the video, i.e. \"h264\", \"h265\", or \"av1\""
         },
         "video_start_ts": {
           "name": "video_start_ts",
@@ -10601,6 +10862,10 @@
         "reply_to": {
           "name": "reply_to",
           "description": "If set, indicates that the message should be sent in reply to the specified message or story."
+        },
+        "suggested_post": {
+          "name": "suggested_post",
+          "description": " "
         }
       }
     },
@@ -10878,6 +11143,69 @@
           "links": [
             "https://core.telegram.org/api/custom-emoji"
           ]
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "until": {
+          "name": "until",
+          "description": " "
+        }
+      }
+    },
+    "emojiStatusCollectible": {
+      "name": "emojiStatusCollectible",
+      "fields": {
+        "center_color": {
+          "name": "center_color",
+          "description": " "
+        },
+        "collectible_id": {
+          "name": "collectible_id",
+          "description": " "
+        },
+        "document_id": {
+          "name": "document_id",
+          "description": " "
+        },
+        "edge_color": {
+          "name": "edge_color",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "pattern_color": {
+          "name": "pattern_color",
+          "description": " "
+        },
+        "pattern_document_id": {
+          "name": "pattern_document_id",
+          "description": " "
+        },
+        "slug": {
+          "name": "slug",
+          "description": " "
+        },
+        "text_color": {
+          "name": "text_color",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        },
+        "until": {
+          "name": "until",
+          "description": " "
         }
       }
     },
@@ -11655,6 +11983,14 @@
           "name": "archive_and_mute_new_noncontact_peers",
           "description": "Whether to archive and mute new chats from non-contacts"
         },
+        "disallowed_gifts": {
+          "name": "disallowed_gifts",
+          "description": " "
+        },
+        "display_gifts_button": {
+          "name": "display_gifts_button",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -11696,6 +12032,10 @@
             "https://core.telegram.org/api/config#new-noncontact-peers-require-premium-without-ownpremium",
             "https://core.telegram.org/api/premium"
           ]
+        },
+        "noncontact_peers_paid_stars": {
+          "name": "noncontact_peers_paid_stars",
+          "description": " "
         }
       }
     },
@@ -11720,6 +12060,14 @@
           "name": "can_start_video",
           "description": "Whether you can start streaming video into the call"
         },
+        "conference": {
+          "name": "conference",
+          "description": " "
+        },
+        "creator": {
+          "name": "creator",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -11730,6 +12078,10 @@
         "id": {
           "name": "id",
           "description": "Group call ID"
+        },
+        "invite_link": {
+          "name": "invite_link",
+          "description": " "
         },
         "join_date_asc": {
           "name": "join_date_asc",
@@ -12402,6 +12754,14 @@
           "name": "chats",
           "description": "Chat info"
         },
+        "custom_pending_suggestion": {
+          "name": "custom_pending_suggestion",
+          "description": " "
+        },
+        "dismissed_suggestions": {
+          "name": "dismissed_suggestions",
+          "description": " "
+        },
         "expires": {
           "name": "expires",
           "description": "Expiry of PSA/MTProxy info"
@@ -12416,6 +12776,10 @@
         "peer": {
           "name": "peer",
           "description": "MTProxy/PSA peer"
+        },
+        "pending_suggestions": {
+          "name": "pending_suggestions",
+          "description": " "
         },
         "proxy": {
           "name": "proxy",
@@ -13834,6 +14198,26 @@
         }
       }
     },
+    "inputEmojiStatusCollectible": {
+      "name": "inputEmojiStatusCollectible",
+      "fields": {
+        "collectible_id": {
+          "name": "collectible_id",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "until": {
+          "name": "until",
+          "description": " "
+        }
+      }
+    },
     "inputEncryptedChat": {
       "name": "inputEncryptedChat",
       "description": [
@@ -14159,6 +14543,24 @@
         }
       }
     },
+    "inputGroupCallInviteMessage": {
+      "name": "inputGroupCallInviteMessage",
+      "fields": {
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        }
+      }
+    },
+    "inputGroupCallSlug": {
+      "name": "inputGroupCallSlug",
+      "fields": {
+        "slug": {
+          "name": "slug",
+          "description": " "
+        }
+      }
+    },
     "inputGroupCallStream": {
       "name": "inputGroupCallStream",
       "description": [
@@ -14191,6 +14593,19 @@
         "video_quality": {
           "name": "video_quality",
           "description": "Selected video quality (0 = lowest, 1 = medium, 2 = best)"
+        }
+      }
+    },
+    "inputInvoiceBusinessBotTransferStars": {
+      "name": "inputInvoiceBusinessBotTransferStars",
+      "fields": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "stars": {
+          "name": "stars",
+          "description": " "
         }
       }
     },
@@ -14263,6 +14678,30 @@
         }
       }
     },
+    "inputInvoicePremiumGiftStars": {
+      "name": "inputInvoicePremiumGiftStars",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "message": {
+          "name": "message",
+          "description": " "
+        },
+        "months": {
+          "name": "months",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      }
+    },
     "inputInvoiceSlug": {
       "name": "inputInvoiceSlug",
       "description": [
@@ -14306,6 +14745,10 @@
           "name": "hide_name",
           "description": "If set, your name will be hidden if the destination user decides to display the gift on their profile (they will still see that you sent the gift)"
         },
+        "include_upgrade": {
+          "name": "include_upgrade",
+          "description": " "
+        },
         "message": {
           "name": "message",
           "description": "Optional message, attached with the gift. The maximum length for this field is specified in the stargifts_message_length_max client configuration value »¹.",
@@ -14313,9 +14756,55 @@
             "https://core.telegram.org/api/config#stargifts-message-length-max"
           ]
         },
-        "user_id": {
-          "name": "user_id",
-          "description": "Identifier of the user that will receive the gift"
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      }
+    },
+    "inputInvoiceStarGiftResale": {
+      "name": "inputInvoiceStarGiftResale",
+      "fields": {
+        "slug": {
+          "name": "slug",
+          "description": " "
+        },
+        "to_id": {
+          "name": "to_id",
+          "description": " "
+        }
+      }
+    },
+    "inputInvoiceStarGiftTransfer": {
+      "name": "inputInvoiceStarGiftTransfer",
+      "fields": {
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        },
+        "to_id": {
+          "name": "to_id",
+          "description": " "
+        }
+      }
+    },
+    "inputInvoiceStarGiftUpgrade": {
+      "name": "inputInvoiceStarGiftUpgrade",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "keep_original_details": {
+          "name": "keep_original_details",
+          "description": " "
+        },
+        "stargift": {
+          "name": "stargift",
+          "description": " "
         }
       }
     },
@@ -14570,6 +15059,14 @@
         "ttl_seconds": {
           "name": "ttl_seconds",
           "description": "Time to live of self-destructing document"
+        },
+        "video_cover": {
+          "name": "video_cover",
+          "description": " "
+        },
+        "video_timestamp": {
+          "name": "video_timestamp",
+          "description": " "
         }
       }
     },
@@ -14597,6 +15094,14 @@
         "url": {
           "name": "url",
           "description": "URL of the document"
+        },
+        "video_cover": {
+          "name": "video_cover",
+          "description": " "
+        },
+        "video_timestamp": {
+          "name": "video_timestamp",
+          "description": " "
         }
       }
     },
@@ -14875,6 +15380,15 @@
         }
       }
     },
+    "inputMediaTodo": {
+      "name": "inputMediaTodo",
+      "fields": {
+        "todo": {
+          "name": "todo",
+          "description": " "
+        }
+      }
+    },
     "inputMediaUploadedDocument": {
       "name": "inputMediaUploadedDocument",
       "description": [
@@ -14929,6 +15443,14 @@
         "ttl_seconds": {
           "name": "ttl_seconds",
           "description": "Time to live in seconds of self-destructing document"
+        },
+        "video_cover": {
+          "name": "video_cover",
+          "description": " "
+        },
+        "video_timestamp": {
+          "name": "video_timestamp",
+          "description": " "
         }
       }
     },
@@ -15701,6 +16223,9 @@
         "https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding"
       ]
     },
+    "inputPrivacyKeyNoPaidMessages": {
+      "name": "inputPrivacyKeyNoPaidMessages"
+    },
     "inputPrivacyKeyPhoneCall": {
       "name": "inputPrivacyKeyPhoneCall",
       "description": [
@@ -15903,6 +16428,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "monoforum_peer_id": {
+          "name": "monoforum_peer_id",
+          "description": " "
+        },
         "quote_entities": {
           "name": "quote_entities",
           "description": "Message entities for styled text¹ from the quote_text field.",
@@ -15932,9 +16461,22 @@
           "name": "reply_to_peer_id",
           "description": "Used to reply to messages sent to another chat (specified here), can only be used for non-protected chats and messages."
         },
+        "todo_item_id": {
+          "name": "todo_item_id",
+          "description": " "
+        },
         "top_msg_id": {
           "name": "top_msg_id",
           "description": "This field must contain the topic ID only when replying to messages in forum topics different from the \"General\" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1).  If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the \"General\" topic."
+        }
+      }
+    },
+    "inputReplyToMonoForum": {
+      "name": "inputReplyToMonoForum",
+      "fields": {
+        "monoforum_peer_id": {
+          "name": "monoforum_peer_id",
+          "description": " "
         }
       }
     },
@@ -16013,6 +16555,37 @@
       "description": [
         "Report for violence"
       ]
+    },
+    "inputSavedStarGiftChat": {
+      "name": "inputSavedStarGiftChat",
+      "fields": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "saved_id": {
+          "name": "saved_id",
+          "description": " "
+        }
+      }
+    },
+    "inputSavedStarGiftSlug": {
+      "name": "inputSavedStarGiftSlug",
+      "fields": {
+        "slug": {
+          "name": "slug",
+          "description": " "
+        }
+      }
+    },
+    "inputSavedStarGiftUser": {
+      "name": "inputSavedStarGiftUser",
+      "fields": {
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        }
+      }
     },
     "inputSecureFile": {
       "name": "inputSecureFile",
@@ -16388,6 +16961,9 @@
         }
       }
     },
+    "inputStickerSetTonGifts": {
+      "name": "inputStickerSetTonGifts"
+    },
     "inputStickeredMediaDocument": {
       "name": "inputStickeredMediaDocument",
       "description": [
@@ -16409,6 +16985,38 @@
         "id": {
           "name": "id",
           "description": "The photo"
+        }
+      }
+    },
+    "inputStorePaymentAuthCode": {
+      "name": "inputStorePaymentAuthCode",
+      "fields": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
+        "currency": {
+          "name": "currency",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "phone_code_hash": {
+          "name": "phone_code_hash",
+          "description": " "
+        },
+        "phone_number": {
+          "name": "phone_number",
+          "description": " "
+        },
+        "restore": {
+          "name": "restore",
+          "description": " "
         }
       }
     },
@@ -17858,6 +18466,19 @@
         }
       }
     },
+    "mediaAreaStarGift": {
+      "name": "mediaAreaStarGift",
+      "fields": {
+        "coordinates": {
+          "name": "coordinates",
+          "description": " "
+        },
+        "slug": {
+          "name": "slug",
+          "description": " "
+        }
+      }
+    },
     "mediaAreaSuggestedReaction": {
       "name": "mediaAreaSuggestedReaction",
       "description": [
@@ -18114,6 +18735,18 @@
           "name": "out",
           "description": "Is this an outgoing message"
         },
+        "paid_message_stars": {
+          "name": "paid_message_stars",
+          "description": " "
+        },
+        "paid_suggested_post_stars": {
+          "name": "paid_suggested_post_stars",
+          "description": " "
+        },
+        "paid_suggested_post_ton": {
+          "name": "paid_suggested_post_ton",
+          "description": " "
+        },
         "peer_id": {
           "name": "peer_id",
           "description": "Peer ID, the chat where this message was sent"
@@ -18159,6 +18792,10 @@
           "name": "reply_to",
           "description": "Reply information"
         },
+        "report_delivery_until_date": {
+          "name": "report_delivery_until_date",
+          "description": " "
+        },
         "restriction_reason": {
           "name": "restriction_reason",
           "description": "Contains the reason why access to this message must be restricted."
@@ -18174,6 +18811,10 @@
         "silent": {
           "name": "silent",
           "description": "Whether this is a silent message (no notification triggered)"
+        },
+        "suggested_post": {
+          "name": "suggested_post",
+          "description": " "
         },
         "ttl_period": {
           "name": "ttl_period",
@@ -18398,6 +19039,42 @@
         "channel_id": {
           "name": "channel_id",
           "description": "The supergroup it was migrated to"
+        }
+      }
+    },
+    "messageActionConferenceCall": {
+      "name": "messageActionConferenceCall",
+      "fields": {
+        "active": {
+          "name": "active",
+          "description": " "
+        },
+        "call_id": {
+          "name": "call_id",
+          "description": " "
+        },
+        "duration": {
+          "name": "duration",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "missed": {
+          "name": "missed",
+          "description": " "
+        },
+        "other_participants": {
+          "name": "other_participants",
+          "description": " "
+        },
+        "video": {
+          "name": "video",
+          "description": " "
         }
       }
     },
@@ -18637,6 +19314,38 @@
         }
       }
     },
+    "messageActionGiftTon": {
+      "name": "messageActionGiftTon",
+      "fields": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
+        "crypto_amount": {
+          "name": "crypto_amount",
+          "description": " "
+        },
+        "crypto_currency": {
+          "name": "crypto_currency",
+          "description": " "
+        },
+        "currency": {
+          "name": "currency",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "transaction_id": {
+          "name": "transaction_id",
+          "description": " "
+        }
+      }
+    },
     "messageActionGiveawayLaunch": {
       "name": "messageActionGiveawayLaunch",
       "description": [
@@ -18753,6 +19462,39 @@
         "users": {
           "name": "users",
           "description": "The invited users"
+        }
+      }
+    },
+    "messageActionPaidMessagesPrice": {
+      "name": "messageActionPaidMessagesPrice",
+      "fields": {
+        "broadcast_messages_allowed": {
+          "name": "broadcast_messages_allowed",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "stars": {
+          "name": "stars",
+          "description": " "
+        }
+      }
+    },
+    "messageActionPaidMessagesRefunded": {
+      "name": "messageActionPaidMessagesRefunded",
+      "fields": {
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "stars": {
+          "name": "stars",
+          "description": " "
         }
       }
     },
@@ -19158,6 +19900,10 @@
         "https://core.telegram.org/api/gifts"
       ],
       "fields": {
+        "can_upgrade": {
+          "name": "can_upgrade",
+          "description": " "
+        },
         "convert_stars": {
           "name": "convert_stars",
           "description": "The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page.convert_stars will be equal to stars only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars."
@@ -19176,6 +19922,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "from_id": {
+          "name": "from_id",
+          "description": " "
+        },
         "gift": {
           "name": "gift",
           "description": "Info about the gift"
@@ -19188,6 +19938,14 @@
           "name": "name_hidden",
           "description": "If set, the name of the sender of the gift will be hidden if the destination user decides to display the gift on their profile"
         },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "refunded": {
+          "name": "refunded",
+          "description": " "
+        },
         "saved": {
           "name": "saved",
           "description": "Whether this gift was added to the destination user's profile (may be toggled using payments.saveStarGift¹ and fetched using payments.getUserStarGifts²)",
@@ -19195,6 +19953,86 @@
             "https://core.telegram.org/method/payments.saveStarGift",
             "https://core.telegram.org/method/payments.getUserStarGifts"
           ]
+        },
+        "saved_id": {
+          "name": "saved_id",
+          "description": " "
+        },
+        "upgrade_msg_id": {
+          "name": "upgrade_msg_id",
+          "description": " "
+        },
+        "upgrade_stars": {
+          "name": "upgrade_stars",
+          "description": " "
+        },
+        "upgraded": {
+          "name": "upgraded",
+          "description": " "
+        }
+      }
+    },
+    "messageActionStarGiftUnique": {
+      "name": "messageActionStarGiftUnique",
+      "fields": {
+        "can_export_at": {
+          "name": "can_export_at",
+          "description": " "
+        },
+        "can_resell_at": {
+          "name": "can_resell_at",
+          "description": " "
+        },
+        "can_transfer_at": {
+          "name": "can_transfer_at",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "from_id": {
+          "name": "from_id",
+          "description": " "
+        },
+        "gift": {
+          "name": "gift",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "refunded": {
+          "name": "refunded",
+          "description": " "
+        },
+        "resale_stars": {
+          "name": "resale_stars",
+          "description": " "
+        },
+        "saved": {
+          "name": "saved",
+          "description": " "
+        },
+        "saved_id": {
+          "name": "saved_id",
+          "description": " "
+        },
+        "transfer_stars": {
+          "name": "transfer_stars",
+          "description": " "
+        },
+        "transferred": {
+          "name": "transferred",
+          "description": " "
+        },
+        "upgrade": {
+          "name": "upgrade",
+          "description": " "
         }
       }
     },
@@ -19210,6 +20048,85 @@
         "photo": {
           "name": "photo",
           "description": "The photo that the user suggested we set as profile picture."
+        }
+      }
+    },
+    "messageActionSuggestedPostApproval": {
+      "name": "messageActionSuggestedPostApproval",
+      "fields": {
+        "balance_too_low": {
+          "name": "balance_too_low",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "price": {
+          "name": "price",
+          "description": " "
+        },
+        "reject_comment": {
+          "name": "reject_comment",
+          "description": " "
+        },
+        "rejected": {
+          "name": "rejected",
+          "description": " "
+        },
+        "schedule_date": {
+          "name": "schedule_date",
+          "description": " "
+        }
+      }
+    },
+    "messageActionSuggestedPostRefund": {
+      "name": "messageActionSuggestedPostRefund",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "payer_initiated": {
+          "name": "payer_initiated",
+          "description": " "
+        }
+      }
+    },
+    "messageActionSuggestedPostSuccess": {
+      "name": "messageActionSuggestedPostSuccess",
+      "fields": {
+        "price": {
+          "name": "price",
+          "description": " "
+        }
+      }
+    },
+    "messageActionTodoAppendTasks": {
+      "name": "messageActionTodoAppendTasks",
+      "fields": {
+        "list": {
+          "name": "list",
+          "description": " "
+        }
+      }
+    },
+    "messageActionTodoCompletions": {
+      "name": "messageActionTodoCompletions",
+      "fields": {
+        "completed": {
+          "name": "completed",
+          "description": " "
+        },
+        "incompleted": {
+          "name": "incompleted",
+          "description": " "
         }
       }
     },
@@ -20077,6 +20994,14 @@
           "name": "video",
           "description": "Whether this is a video."
         },
+        "video_cover": {
+          "name": "video_cover",
+          "description": " "
+        },
+        "video_timestamp": {
+          "name": "video_timestamp",
+          "description": " "
+        },
         "voice": {
           "name": "voice",
           "description": "Whether this is a voice message."
@@ -20462,6 +21387,26 @@
         "via_mention": {
           "name": "via_mention",
           "description": "If set, indicates that this someone has mentioned us in this story (i.e. by tagging us in the description) or vice versa, we have mentioned the other peer (if the message is outgoing)."
+        }
+      }
+    },
+    "messageMediaToDo": {
+      "name": "messageMediaToDo",
+      "fields": {
+        "completions": {
+          "name": "completions",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "todo": {
+          "name": "todo",
+          "description": " "
         }
       }
     },
@@ -20885,6 +21830,10 @@
           "links": [
             "https://core.telegram.org/api/threads"
           ]
+        },
+        "todo_item_id": {
+          "name": "todo_item_id",
+          "description": " "
         }
       }
     },
@@ -20979,9 +21928,21 @@
           "name": "post",
           "description": "Whether it's a channel post"
         },
+        "reactions": {
+          "name": "reactions",
+          "description": " "
+        },
+        "reactions_are_possible": {
+          "name": "reactions_are_possible",
+          "description": " "
+        },
         "reply_to": {
           "name": "reply_to",
           "description": "Reply (thread) information"
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
         },
         "silent": {
           "name": "silent",
@@ -22742,6 +23703,10 @@
         "A set of sponsored messages associated to a channel"
       ],
       "fields": {
+        "between_delay": {
+          "name": "between_delay",
+          "description": " "
+        },
         "chats": {
           "name": "chats",
           "description": "Chats mentioned in the sponsored messages"
@@ -22760,6 +23725,10 @@
         "posts_between": {
           "name": "posts_between",
           "description": "If set, specifies the minimum number of messages between shown sponsored messages; otherwise, only one sponsored message must be shown after all ordinary messages."
+        },
+        "start_delay": {
+          "name": "start_delay",
+          "description": " "
         },
         "users": {
           "name": "users",
@@ -22973,6 +23942,19 @@
         }
       }
     },
+    "messages.webPagePreview": {
+      "name": "messages.webPagePreview",
+      "fields": {
+        "media": {
+          "name": "media",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
     "missingInvitee": {
       "name": "missingInvitee",
       "description": [
@@ -23009,6 +23991,54 @@
           "links": [
             "https://core.telegram.org/api/invites#invite-links"
           ]
+        }
+      }
+    },
+    "monoForumDialog": {
+      "name": "monoForumDialog",
+      "fields": {
+        "draft": {
+          "name": "draft",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "nopaid_messages_exception": {
+          "name": "nopaid_messages_exception",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "read_inbox_max_id": {
+          "name": "read_inbox_max_id",
+          "description": " "
+        },
+        "read_outbox_max_id": {
+          "name": "read_outbox_max_id",
+          "description": " "
+        },
+        "top_message": {
+          "name": "top_message",
+          "description": " "
+        },
+        "unread_count": {
+          "name": "unread_count",
+          "description": " "
+        },
+        "unread_mark": {
+          "name": "unread_mark",
+          "description": " "
+        },
+        "unread_reactions_count": {
+          "name": "unread_reactions_count",
+          "description": " "
         }
       }
     },
@@ -23941,6 +24971,21 @@
         }
       }
     },
+    "paidReactionPrivacyAnonymous": {
+      "name": "paidReactionPrivacyAnonymous"
+    },
+    "paidReactionPrivacyDefault": {
+      "name": "paidReactionPrivacyDefault"
+    },
+    "paidReactionPrivacyPeer": {
+      "name": "paidReactionPrivacyPeer",
+      "fields": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      }
+    },
     "passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow": {
       "name": "passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow",
       "description": [
@@ -24620,6 +25665,50 @@
         }
       }
     },
+    "payments.resaleStarGifts": {
+      "name": "payments.resaleStarGifts",
+      "fields": {
+        "attributes": {
+          "name": "attributes",
+          "description": " "
+        },
+        "attributes_hash": {
+          "name": "attributes_hash",
+          "description": " "
+        },
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "counters": {
+          "name": "counters",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "gifts": {
+          "name": "gifts",
+          "description": " "
+        },
+        "next_offset": {
+          "name": "next_offset",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
     "payments.savedInfo": {
       "name": "payments.savedInfo",
       "description": [
@@ -24643,6 +25732,60 @@
         }
       }
     },
+    "payments.savedStarGifts": {
+      "name": "payments.savedStarGifts",
+      "fields": {
+        "chat_notifications_enabled": {
+          "name": "chat_notifications_enabled",
+          "description": " "
+        },
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "gifts": {
+          "name": "gifts",
+          "description": " "
+        },
+        "next_offset": {
+          "name": "next_offset",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "payments.starGiftUpgradePreview": {
+      "name": "payments.starGiftUpgradePreview",
+      "fields": {
+        "sample_attributes": {
+          "name": "sample_attributes",
+          "description": " "
+        }
+      }
+    },
+    "payments.starGiftWithdrawalUrl": {
+      "name": "payments.starGiftWithdrawalUrl",
+      "fields": {
+        "url": {
+          "name": "url",
+          "description": " "
+        }
+      }
+    },
     "payments.starGifts": {
       "name": "payments.starGifts",
       "description": [
@@ -24652,6 +25795,10 @@
         "https://core.telegram.org/api/gifts"
       ],
       "fields": {
+        "chats": {
+          "name": "chats",
+          "description": " "
+        },
         "gifts": {
           "name": "gifts",
           "description": "List of available gifts."
@@ -24662,6 +25809,10 @@
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
+        },
+        "users": {
+          "name": "users",
+          "description": " "
         }
       }
     },
@@ -24699,6 +25850,13 @@
         "https://core.telegram.org/api/stars"
       ],
       "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "revenue_graph": {
           "name": "revenue_graph",
           "description": "Star revenue graph (number of earned stars)"
@@ -24706,6 +25864,10 @@
         "status": {
           "name": "status",
           "description": "Current balance, current withdrawable balance and overall earned Telegram Stars"
+        },
+        "top_hours_graph": {
+          "name": "top_hours_graph",
+          "description": " "
         },
         "usd_rate": {
           "name": "usd_rate",
@@ -24826,6 +25988,19 @@
         "users": {
           "name": "users",
           "description": "Peers mentioned in suggested_bots"
+        }
+      }
+    },
+    "payments.uniqueStarGift": {
+      "name": "payments.uniqueStarGift",
+      "fields": {
+        "gift": {
+          "name": "gift",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
         }
       }
     },
@@ -25047,6 +26222,10 @@
             "https://core.telegram.org/method/account.toggleConnectedBotPaused"
           ]
         },
+        "charge_paid_message_stars": {
+          "name": "charge_paid_message_stars",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -25062,9 +26241,25 @@
           "name": "invite_members",
           "description": "If set, this is a recently created group chat to which new members can be invited"
         },
+        "name_change_date": {
+          "name": "name_change_date",
+          "description": " "
+        },
         "need_contacts_exception": {
           "name": "need_contacts_exception",
           "description": "Whether a special exception for contacts is needed"
+        },
+        "phone_country": {
+          "name": "phone_country",
+          "description": " "
+        },
+        "photo_change_date": {
+          "name": "photo_change_date",
+          "description": " "
+        },
+        "registration_month": {
+          "name": "registration_month",
+          "description": " "
         },
         "report_geo": {
           "name": "report_geo",
@@ -25138,6 +26333,27 @@
         "user_id": {
           "name": "user_id",
           "description": "User identifier"
+        }
+      }
+    },
+    "pendingSuggestion": {
+      "name": "pendingSuggestion",
+      "fields": {
+        "description": {
+          "name": "description",
+          "description": " "
+        },
+        "suggestion": {
+          "name": "suggestion",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        },
+        "url": {
+          "name": "url",
+          "description": " "
         }
       }
     },
@@ -25297,6 +26513,10 @@
           "name": "admin_id",
           "description": "User ID of the creator of the call"
         },
+        "conference_supported": {
+          "name": "conference_supported",
+          "description": " "
+        },
         "connections": {
           "name": "connections",
           "description": "List of endpoints the user can connect to exchange call data"
@@ -25423,6 +26643,15 @@
       "description": [
         "The phone call was ended normally"
       ]
+    },
+    "phoneCallDiscardReasonMigrateConferenceCall": {
+      "name": "phoneCallDiscardReasonMigrateConferenceCall",
+      "fields": {
+        "slug": {
+          "name": "slug",
+          "description": " "
+        }
+      }
     },
     "phoneCallDiscardReasonMissed": {
       "name": "phoneCallDiscardReasonMissed",
@@ -26558,6 +27787,9 @@
         "https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding"
       ]
     },
+    "privacyKeyNoPaidMessages": {
+      "name": "privacyKeyNoPaidMessages"
+    },
     "privacyKeyPhoneCall": {
       "name": "privacyKeyPhoneCall",
       "description": [
@@ -27379,6 +28611,21 @@
         }
       }
     },
+    "requirementToContactEmpty": {
+      "name": "requirementToContactEmpty"
+    },
+    "requirementToContactPaidMessages": {
+      "name": "requirementToContactPaidMessages",
+      "fields": {
+        "stars_amount": {
+          "name": "stars_amount",
+          "description": " "
+        }
+      }
+    },
+    "requirementToContactPremium": {
+      "name": "requirementToContactPremium"
+    },
     "restrictionReason": {
       "name": "restrictionReason",
       "description": [
@@ -27491,6 +28738,86 @@
         "title": {
           "name": "title",
           "description": "Custom tag name assigned by the user (max 12 UTF-8 chars)."
+        }
+      }
+    },
+    "savedStarGift": {
+      "name": "savedStarGift",
+      "fields": {
+        "can_export_at": {
+          "name": "can_export_at",
+          "description": " "
+        },
+        "can_resell_at": {
+          "name": "can_resell_at",
+          "description": " "
+        },
+        "can_transfer_at": {
+          "name": "can_transfer_at",
+          "description": " "
+        },
+        "can_upgrade": {
+          "name": "can_upgrade",
+          "description": " "
+        },
+        "convert_stars": {
+          "name": "convert_stars",
+          "description": " "
+        },
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "from_id": {
+          "name": "from_id",
+          "description": " "
+        },
+        "gift": {
+          "name": "gift",
+          "description": " "
+        },
+        "message": {
+          "name": "message",
+          "description": " "
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "name_hidden": {
+          "name": "name_hidden",
+          "description": " "
+        },
+        "pinned_to_top": {
+          "name": "pinned_to_top",
+          "description": " "
+        },
+        "refunded": {
+          "name": "refunded",
+          "description": " "
+        },
+        "saved_id": {
+          "name": "saved_id",
+          "description": " "
+        },
+        "transfer_stars": {
+          "name": "transfer_stars",
+          "description": " "
+        },
+        "unsaved": {
+          "name": "unsaved",
+          "description": " "
+        },
+        "upgrade_stars": {
+          "name": "upgrade_stars",
+          "description": " "
         }
       }
     },
@@ -28535,6 +29862,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "max_display_duration": {
+          "name": "max_display_duration",
+          "description": " "
+        },
         "media": {
           "name": "media",
           "description": "If set, contains some media."
@@ -28542,6 +29873,10 @@
         "message": {
           "name": "message",
           "description": "Sponsored message"
+        },
+        "min_display_duration": {
+          "name": "min_display_duration",
+          "description": " "
         },
         "photo": {
           "name": "photo",
@@ -28591,6 +29926,34 @@
         }
       }
     },
+    "sponsoredPeer": {
+      "name": "sponsoredPeer",
+      "fields": {
+        "additional_info": {
+          "name": "additional_info",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "random_id": {
+          "name": "random_id",
+          "description": " "
+        },
+        "sponsor_info": {
+          "name": "sponsor_info",
+          "description": " "
+        }
+      }
+    },
     "starGift": {
       "name": "starGift",
       "description": [
@@ -28603,6 +29966,10 @@
         "availability_remains": {
           "name": "availability_remains",
           "description": "For limited-supply gifts: the remaining number of gifts that may be bought."
+        },
+        "availability_resale": {
+          "name": "availability_resale",
+          "description": " "
         },
         "availability_total": {
           "name": "availability_total",
@@ -28639,6 +30006,14 @@
           "name": "limited",
           "description": "Whether this is a limited-supply gift."
         },
+        "released_by": {
+          "name": "released_by",
+          "description": " "
+        },
+        "resell_min_stars": {
+          "name": "resell_min_stars",
+          "description": " "
+        },
         "sold_out": {
           "name": "sold_out",
           "description": "Whether this gift sold out and cannot be bought anymore."
@@ -28656,6 +30031,213 @@
           "links": [
             "https://core.telegram.org/api/stickers"
           ]
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        },
+        "upgrade_stars": {
+          "name": "upgrade_stars",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeBackdrop": {
+      "name": "starGiftAttributeBackdrop",
+      "fields": {
+        "backdrop_id": {
+          "name": "backdrop_id",
+          "description": " "
+        },
+        "center_color": {
+          "name": "center_color",
+          "description": " "
+        },
+        "edge_color": {
+          "name": "edge_color",
+          "description": " "
+        },
+        "name": {
+          "name": "name",
+          "description": " "
+        },
+        "pattern_color": {
+          "name": "pattern_color",
+          "description": " "
+        },
+        "rarity_permille": {
+          "name": "rarity_permille",
+          "description": " "
+        },
+        "text_color": {
+          "name": "text_color",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeCounter": {
+      "name": "starGiftAttributeCounter",
+      "fields": {
+        "attribute": {
+          "name": "attribute",
+          "description": " "
+        },
+        "count": {
+          "name": "count",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeIdBackdrop": {
+      "name": "starGiftAttributeIdBackdrop",
+      "fields": {
+        "backdrop_id": {
+          "name": "backdrop_id",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeIdModel": {
+      "name": "starGiftAttributeIdModel",
+      "fields": {
+        "document_id": {
+          "name": "document_id",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeIdPattern": {
+      "name": "starGiftAttributeIdPattern",
+      "fields": {
+        "document_id": {
+          "name": "document_id",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeModel": {
+      "name": "starGiftAttributeModel",
+      "fields": {
+        "document": {
+          "name": "document",
+          "description": " "
+        },
+        "name": {
+          "name": "name",
+          "description": " "
+        },
+        "rarity_permille": {
+          "name": "rarity_permille",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributeOriginalDetails": {
+      "name": "starGiftAttributeOriginalDetails",
+      "fields": {
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "message": {
+          "name": "message",
+          "description": " "
+        },
+        "recipient_id": {
+          "name": "recipient_id",
+          "description": " "
+        },
+        "sender_id": {
+          "name": "sender_id",
+          "description": " "
+        }
+      }
+    },
+    "starGiftAttributePattern": {
+      "name": "starGiftAttributePattern",
+      "fields": {
+        "document": {
+          "name": "document",
+          "description": " "
+        },
+        "name": {
+          "name": "name",
+          "description": " "
+        },
+        "rarity_permille": {
+          "name": "rarity_permille",
+          "description": " "
+        }
+      }
+    },
+    "starGiftUnique": {
+      "name": "starGiftUnique",
+      "fields": {
+        "attributes": {
+          "name": "attributes",
+          "description": " "
+        },
+        "availability_issued": {
+          "name": "availability_issued",
+          "description": " "
+        },
+        "availability_total": {
+          "name": "availability_total",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "gift_address": {
+          "name": "gift_address",
+          "description": " "
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "num": {
+          "name": "num",
+          "description": " "
+        },
+        "owner_address": {
+          "name": "owner_address",
+          "description": " "
+        },
+        "owner_id": {
+          "name": "owner_id",
+          "description": " "
+        },
+        "owner_name": {
+          "name": "owner_name",
+          "description": " "
+        },
+        "released_by": {
+          "name": "released_by",
+          "description": " "
+        },
+        "resell_stars": {
+          "name": "resell_stars",
+          "description": " "
+        },
+        "slug": {
+          "name": "slug",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
         }
       }
     },
@@ -28988,6 +30570,15 @@
         }
       }
     },
+    "starsTonAmount": {
+      "name": "starsTonAmount",
+      "fields": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        }
+      }
+    },
     "starsTopupOption": {
       "name": "starsTopupOption",
       "description": [
@@ -29041,6 +30632,18 @@
         "https://core.telegram.org/api/stars"
       ],
       "fields": {
+        "ads_proceeds_from_date": {
+          "name": "ads_proceeds_from_date",
+          "description": " "
+        },
+        "ads_proceeds_to_date": {
+          "name": "ads_proceeds_to_date",
+          "description": " "
+        },
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
         "bot_payload": {
           "name": "bot_payload",
           "description": "Bot specified invoice payload (i.e. the payload passed to inputMediaInvoice¹ when creating the invoice²).",
@@ -29048,6 +30651,10 @@
             "https://core.telegram.org/constructor/inputMediaInvoice",
             "https://core.telegram.org/api/payments"
           ]
+        },
+        "business_transfer": {
+          "name": "business_transfer",
+          "description": " "
         },
         "date": {
           "name": "date",
@@ -29106,6 +30713,10 @@
             "https://core.telegram.org/api/paid-media"
           ]
         },
+        "paid_messages": {
+          "name": "paid_messages",
+          "description": " "
+        },
         "peer": {
           "name": "peer",
           "description": "Source of the incoming transaction, or its recipient for outgoing transactions."
@@ -29117,6 +30728,10 @@
         "photo": {
           "name": "photo",
           "description": "For transactions with bots, photo of the bought product."
+        },
+        "premium_gift_months": {
+          "name": "premium_gift_months",
+          "description": " "
         },
         "reaction": {
           "name": "reaction",
@@ -29135,6 +30750,14 @@
           "links": [
             "https://core.telegram.org/api/stars"
           ]
+        },
+        "stargift_resale": {
+          "name": "stargift_resale",
+          "description": " "
+        },
+        "stargift_upgrade": {
+          "name": "stargift_upgrade",
+          "description": " "
         },
         "starref_amount": {
           "name": "starref_amount",
@@ -29157,10 +30780,6 @@
           "links": [
             "https://core.telegram.org/api/bots/referrals"
           ]
-        },
-        "stars": {
-          "name": "stars",
-          "description": "Amount of Stars (negative for outgoing transactions)."
         },
         "subscription_period": {
           "name": "subscription_period",
@@ -30080,6 +31699,15 @@
         }
       }
     },
+    "stories.canSendStoryCount": {
+      "name": "stories.canSendStoryCount",
+      "fields": {
+        "count_remains": {
+          "name": "count_remains",
+          "description": " "
+        }
+      }
+    },
     "stories.foundStories": {
       "name": "stories.foundStories",
       "description": [
@@ -30725,6 +32353,34 @@
         }
       }
     },
+    "suggestedPost": {
+      "name": "suggestedPost",
+      "fields": {
+        "accepted": {
+          "name": "accepted",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "price": {
+          "name": "price",
+          "description": " "
+        },
+        "rejected": {
+          "name": "rejected",
+          "description": " "
+        },
+        "schedule_date": {
+          "name": "schedule_date",
+          "description": " "
+        }
+      }
+    },
     "textAnchor": {
       "name": "textAnchor",
       "description": [
@@ -31082,6 +32738,64 @@
         "utc_offset": {
           "name": "utc_offset",
           "description": "UTC offset in seconds, which may be displayed in hh:mm format by the client together with the human-readable name (i.e. $name UTC -01:00)."
+        }
+      }
+    },
+    "todoCompletion": {
+      "name": "todoCompletion",
+      "fields": {
+        "completed_by": {
+          "name": "completed_by",
+          "description": " "
+        },
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      }
+    },
+    "todoItem": {
+      "name": "todoItem",
+      "fields": {
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
+        }
+      }
+    },
+    "todoList": {
+      "name": "todoList",
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "list": {
+          "name": "list",
+          "description": " "
+        },
+        "others_can_append": {
+          "name": "others_can_append",
+          "description": " "
+        },
+        "others_can_complete": {
+          "name": "others_can_complete",
+          "description": " "
+        },
+        "title": {
+          "name": "title",
+          "description": " "
         }
       }
     },
@@ -32077,6 +33791,10 @@
           "name": "messages",
           "description": "IDs of messages that were read"
         },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
+        },
         "top_msg_id": {
           "name": "top_msg_id",
           "description": "Forum topic ID¹.",
@@ -32674,6 +34392,10 @@
           "name": "peer",
           "description": "The dialog"
         },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
+        },
         "unread": {
           "name": "unread",
           "description": "Was the chat marked or unmarked as read"
@@ -32703,6 +34425,10 @@
         "peer": {
           "name": "peer",
           "description": "The peer to which the draft is associated"
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -32886,6 +34612,34 @@
           "links": [
             "https://core.telegram.org/api/channel"
           ]
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        }
+      }
+    },
+    "updateGroupCallChainBlocks": {
+      "name": "updateGroupCallChainBlocks",
+      "fields": {
+        "blocks": {
+          "name": "blocks",
+          "description": " "
+        },
+        "call": {
+          "name": "call",
+          "description": " "
+        },
+        "next_offset": {
+          "name": "next_offset",
+          "description": " "
+        },
+        "sub_chain_id": {
+          "name": "sub_chain_id",
+          "description": " "
         }
       }
     },
@@ -33131,12 +34885,40 @@
           "name": "reactions",
           "description": "Reactions"
         },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
+        },
         "top_msg_id": {
           "name": "top_msg_id",
           "description": "Forum topic ID¹",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
+        }
+      }
+    },
+    "updateMonoForumNoPaidException": {
+      "name": "updateMonoForumNoPaidException",
+      "fields": {
+        "channel_id": {
+          "name": "channel_id",
+          "description": " "
+        },
+        "exception": {
+          "name": "exception",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
         }
       }
     },
@@ -34038,6 +35820,40 @@
         }
       }
     },
+    "updateReadMonoForumInbox": {
+      "name": "updateReadMonoForumInbox",
+      "fields": {
+        "channel_id": {
+          "name": "channel_id",
+          "description": " "
+        },
+        "read_max_id": {
+          "name": "read_max_id",
+          "description": " "
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
+        }
+      }
+    },
+    "updateReadMonoForumOutbox": {
+      "name": "updateReadMonoForumOutbox",
+      "fields": {
+        "channel_id": {
+          "name": "channel_id",
+          "description": " "
+        },
+        "read_max_id": {
+          "name": "read_max_id",
+          "description": " "
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
+        }
+      }
+    },
     "updateReadStories": {
       "name": "updateReadStories",
       "description": [
@@ -34131,6 +35947,15 @@
       "links": [
         "https://core.telegram.org/method/account.getSavedRingtones"
       ]
+    },
+    "updateSentPhoneCode": {
+      "name": "updateSentPhoneCode",
+      "fields": {
+        "sent_code": {
+          "name": "sent_code",
+          "description": " "
+        }
+      }
     },
     "updateSentStoryReaction": {
       "name": "updateSentStoryReaction",
@@ -35427,6 +37252,10 @@
           "name": "bot_nochats",
           "description": "Can the bot be added to groups?"
         },
+        "bot_verification_icon": {
+          "name": "bot_verification_icon",
+          "description": " "
+        },
         "close_friend": {
           "name": "close_friend",
           "description": "Whether we marked this user as a close friend, see here » for more info¹. When updating the local peer database², do not apply changes to this field if the min flag is set.",
@@ -35580,6 +37409,10 @@
           "name": "self",
           "description": "Whether this user indicates the currently logged in user"
         },
+        "send_paid_messages_stars": {
+          "name": "send_paid_messages_stars",
+          "description": " "
+        },
         "status": {
           "name": "status",
           "description": "Online status of user. When updating the local peer database¹, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set OR -- The locally cached user entry is equal to userStatusEmpty².",
@@ -35705,6 +37538,10 @@
           "name": "bot_info",
           "description": "For bots, info about the bot (bot commands, etc)"
         },
+        "bot_verification": {
+          "name": "bot_verification",
+          "description": " "
+        },
         "business_away_message": {
           "name": "business_away_message",
           "description": "Telegram Business away message »¹.",
@@ -35763,6 +37600,14 @@
             "https://core.telegram.org/method/account.setGlobalPrivacySettings",
             "https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users"
           ]
+        },
+        "disallowed_gifts": {
+          "name": "disallowed_gifts",
+          "description": " "
+        },
+        "display_gifts_button": {
+          "name": "display_gifts_button",
+          "description": " "
         },
         "fallback_photo": {
           "name": "fallback_photo",
@@ -35839,10 +37684,6 @@
             "https://core.telegram.org/api/pin"
           ]
         },
-        "premium_gifts": {
-          "name": "premium_gifts",
-          "description": "Telegram Premium subscriptions gift options"
-        },
         "private_forward_name": {
           "name": "private_forward_name",
           "description": "Anonymized text to be shown instead of the user's name on forwarded messages"
@@ -35859,6 +37700,10 @@
             "https://core.telegram.org/method/messages.getOutboxReadDate",
             "https://core.telegram.org/method/account.setGlobalPrivacySettings"
           ]
+        },
+        "send_paid_messages_stars": {
+          "name": "send_paid_messages_stars",
+          "description": " "
         },
         "settings": {
           "name": "settings",
@@ -36135,6 +37980,28 @@
         "users": {
           "name": "users",
           "description": "Mentioned users"
+        }
+      }
+    },
+    "users.users": {
+      "name": "users.users",
+      "fields": {
+        "users": {
+          "name": "users",
+          "description": " "
+        }
+      }
+    },
+    "users.usersSlice": {
+      "name": "users.usersSlice",
+      "fields": {
+        "count": {
+          "name": "count",
+          "description": " "
+        },
+        "users": {
+          "name": "users",
+          "description": " "
         }
       }
     },
@@ -36599,11 +38466,15 @@
         },
         "type": {
           "name": "type",
-          "description": "Type of the web page. One of the following: - video- gif- photo- document- profile- telegram_background- telegram_theme- telegram_story- telegram_channel- telegram_channel_request- telegram_megagroup- telegram_chat- telegram_megagroup_request- telegram_chat_request- telegram_album- telegram_message- telegram_bot- telegram_voicechat- telegram_livestream- telegram_user- telegram_botapp- telegram_channel_boost- telegram_group_boost- telegram_giftcode- telegram_stickerset"
+          "description": "Type of the web page. One of the following: - video- gif- photo- document- profile- telegram_background- telegram_theme- telegram_story- telegram_channel- telegram_channel_request- telegram_megagroup- telegram_chat- telegram_megagroup_request- telegram_chat_request- telegram_album- telegram_message- telegram_bot- telegram_voicechat- telegram_livestream- telegram_call- telegram_user- telegram_botapp- telegram_channel_boost- telegram_group_boost- telegram_giftcode- telegram_stickerset"
         },
         "url": {
           "name": "url",
           "description": "URL of previewed webpage"
+        },
+        "video_cover_photo": {
+          "name": "video_cover_photo",
+          "description": " "
         }
       }
     },
@@ -36696,6 +38567,15 @@
         "settings": {
           "name": "settings",
           "description": "Theme settings"
+        }
+      }
+    },
+    "webPageAttributeUniqueStarGift": {
+      "name": "webPageAttributeUniqueStarGift",
+      "fields": {
+        "gift": {
+          "name": "gift",
+          "description": " "
         }
       }
     },
@@ -37102,6 +38982,12 @@
         "https://core.telegram.org/api/bots/webapps#main-mini-app-previews"
       ]
     },
+    "BotVerification": {
+      "name": "BotVerification"
+    },
+    "BotVerifierSettings": {
+      "name": "BotVerifierSettings"
+    },
     "BusinessAwayMessage": {
       "name": "BusinessAwayMessage",
       "description": [
@@ -37128,6 +39014,9 @@
       "links": [
         "https://core.telegram.org/api/business#connected-bots"
       ]
+    },
+    "BusinessBotRights": {
+      "name": "BusinessBotRights"
     },
     "BusinessChatLink": {
       "name": "BusinessChatLink",
@@ -37462,6 +39351,9 @@
       "description": [
         "Peer, or all peers in a folder"
       ]
+    },
+    "DisallowedGiftsSettings": {
+      "name": "DisallowedGiftsSettings"
     },
     "Document": {
       "name": "Document",
@@ -38112,6 +40004,9 @@
         "Contains info about a message or story to reply to."
       ]
     },
+    "InputSavedStarGift": {
+      "name": "InputSavedStarGift"
+    },
     "InputSecureFile": {
       "name": "InputSecureFile",
       "description": [
@@ -38594,9 +40489,6 @@
         "https://instantview.telegram.org"
       ]
     },
-    "Page not found": {
-      "name": "Page not found"
-    },
     "PageBlock": {
       "name": "PageBlock",
       "description": [
@@ -38647,6 +40539,9 @@
       "description": [
         "Table row"
       ]
+    },
+    "PaidReactionPrivacy": {
+      "name": "PaidReactionPrivacy"
     },
     "PasswordKdfAlgo": {
       "name": "PasswordKdfAlgo",
@@ -38798,6 +40693,9 @@
       "links": [
         "https://core.telegram.org/api/stories"
       ]
+    },
+    "PendingSuggestion": {
+      "name": "PendingSuggestion"
     },
     "Phone.PhoneCall": {
       "name": "Phone.PhoneCall",
@@ -39063,6 +40961,9 @@
         "https://core.telegram.org/method/messages.sendBotRequestedPeer"
       ]
     },
+    "RequirementToContact": {
+      "name": "RequirementToContact"
+    },
     "RestrictionReason": {
       "name": "RestrictionReason",
       "description": [
@@ -39098,6 +40999,9 @@
       "links": [
         "https://core.telegram.org/api/saved-messages#tags"
       ]
+    },
+    "SavedStarGift": {
+      "name": "SavedStarGift"
     },
     "SearchResultsCalendarPeriod": {
       "name": "SearchResultsCalendarPeriod",
@@ -39236,6 +41140,9 @@
         "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
       ]
     },
+    "SponsoredPeer": {
+      "name": "SponsoredPeer"
+    },
     "StarGift": {
       "name": "StarGift",
       "description": [
@@ -39244,6 +41151,15 @@
       "links": [
         "https://core.telegram.org/api/gifts"
       ]
+    },
+    "StarGiftAttribute": {
+      "name": "StarGiftAttribute"
+    },
+    "StarGiftAttributeCounter": {
+      "name": "StarGiftAttributeCounter"
+    },
+    "StarGiftAttributeId": {
+      "name": "StarGiftAttributeId"
     },
     "StarRefProgram": {
       "name": "StarRefProgram",
@@ -39496,6 +41412,9 @@
         "https://core.telegram.org/api/stories"
       ]
     },
+    "SuggestedPost": {
+      "name": "SuggestedPost"
+    },
     "TextWithEntities": {
       "name": "TextWithEntities",
       "description": [
@@ -39522,6 +41441,15 @@
       "description": [
         "Timezone information."
       ]
+    },
+    "TodoCompletion": {
+      "name": "TodoCompletion"
+    },
+    "TodoItem": {
+      "name": "TodoItem"
+    },
+    "TodoList": {
+      "name": "TodoList"
     },
     "TopPeer": {
       "name": "TopPeer",
@@ -39717,6 +41645,9 @@
       "links": [
         "https://core.telegram.org/api/emoji-status"
       ]
+    },
+    "account.PaidMessagesRevenue": {
+      "name": "account.PaidMessagesRevenue"
     },
     "account.Password": {
       "name": "account.Password",
@@ -39954,6 +41885,9 @@
         "Object contains info on successfully imported contacts."
       ]
     },
+    "contacts.SponsoredPeers": {
+      "name": "contacts.SponsoredPeers"
+    },
     "double": {
       "name": "double",
       "description": [
@@ -40054,6 +41988,9 @@
       "links": [
         "https://core.telegram.org/mtproto/serialize"
       ]
+    },
+    "int256": {
+      "name": "int256"
     },
     "long": {
       "name": "long",
@@ -40344,6 +42281,9 @@
         "How users voted in a poll"
       ]
     },
+    "messages.WebPagePreview": {
+      "name": "messages.WebPagePreview"
+    },
     "payments.BankCardData": {
       "name": "payments.BankCardData",
       "description": [
@@ -40355,6 +42295,18 @@
       "description": [
         "Exported invoice"
       ]
+    },
+    "payments.ResaleStarGifts": {
+      "name": "payments.ResaleStarGifts"
+    },
+    "payments.SavedStarGifts": {
+      "name": "payments.SavedStarGifts"
+    },
+    "payments.StarGiftUpgradePreview": {
+      "name": "payments.StarGiftUpgradePreview"
+    },
+    "payments.StarGiftWithdrawalUrl": {
+      "name": "payments.StarGiftWithdrawalUrl"
     },
     "payments.StarGifts": {
       "name": "payments.StarGifts",
@@ -40401,6 +42353,9 @@
       "links": [
         "https://core.telegram.org/api/stars#balance-and-transaction-history"
       ]
+    },
+    "payments.UniqueStarGift": {
+      "name": "payments.UniqueStarGift"
     },
     "phone.ExportedGroupCallInvite": {
       "name": "phone.ExportedGroupCallInvite",
@@ -40494,6 +42449,9 @@
       "links": [
         "https://core.telegram.org/api/stories#watching-stories"
       ]
+    },
+    "stories.CanSendStoryCount": {
+      "name": "stories.CanSendStoryCount"
     },
     "stories.FoundStories": {
       "name": "stories.FoundStories",
@@ -40599,12 +42557,12 @@
       "description": [
         "Full user information, with attached context peers for reactions"
       ]
+    },
+    "users.Users": {
+      "name": "users.Users"
     }
   },
   "methods": {
-    "Page not found": {
-      "name": "Page not found"
-    },
     "account.acceptAuthorization": {
       "name": "account.acceptAuthorization",
       "description": [
@@ -41317,6 +43275,16 @@
         }
       }
     },
+    "account.getCollectibleEmojiStatuses": {
+      "name": "account.getCollectibleEmojiStatuses",
+      "parameters": {
+        "hash": {
+          "name": "hash",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "account.getConnectedBots": {
       "name": "account.getConnectedBots",
       "description": [
@@ -41499,6 +43467,27 @@
           "description": "The provided peer id is invalid."
         }
       ]
+    },
+    "account.getPaidMessagesRevenue": {
+      "name": "account.getPaidMessagesRevenue",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "account.getPassword": {
       "name": "account.getPassword",
@@ -42714,6 +44703,35 @@
         }
       ]
     },
+    "account.toggleNoPaidMessagesException": {
+      "name": "account.toggleNoPaidMessagesException",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
+        },
+        "refund_charged": {
+          "name": "refund_charged",
+          "description": " "
+        },
+        "require_payment": {
+          "name": "require_payment",
+          "description": " "
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "account.toggleSponsoredMessages": {
       "name": "account.toggleSponsoredMessages",
       "description": [
@@ -43026,13 +45044,6 @@
           "name": "bot",
           "description": "The bot to connect or disconnect"
         },
-        "can_reply": {
-          "name": "can_reply",
-          "description": "Whether the bot can reply to messages it receives from us, on behalf of us using the business connection¹.",
-          "links": [
-            "https://core.telegram.org/api/business#connected-bots"
-          ]
-        },
         "deleted": {
           "name": "deleted",
           "description": "Whether to fully disconnect the bot from the current account."
@@ -43047,6 +45058,10 @@
         "recipients": {
           "name": "recipients",
           "description": "Configuration for the business connection"
+        },
+        "rights": {
+          "name": "rights",
+          "description": " "
         }
       },
       "errors": [
@@ -44876,6 +46891,22 @@
       ],
       "bot_can_use": true
     },
+    "bots.getBotRecommendations": {
+      "name": "bots.getBotRecommendations",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        }
+      ]
+    },
     "bots.getPopularAppBots": {
       "name": "bots.getPopularAppBots",
       "description": [
@@ -44992,6 +47023,11 @@
           "code": 400,
           "type": "DATA_JSON_INVALID",
           "description": "The provided JSON data is invalid."
+        },
+        {
+          "code": 400,
+          "type": "METHOD_INVALID",
+          "description": "The specified method is invalid."
         }
       ]
     },
@@ -45315,6 +47351,47 @@
           "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
+        }
+      ],
+      "bot_can_use": true
+    },
+    "bots.setCustomVerification": {
+      "name": "bots.setCustomVerification",
+      "parameters": {
+        "bot": {
+          "name": "bot",
+          "description": " "
+        },
+        "custom_description": {
+          "name": "custom_description",
+          "description": " "
+        },
+        "enabled": {
+          "name": "enabled",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "BOT_INVALID",
+          "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ],
       "bot_can_use": true
@@ -47102,6 +49179,20 @@
         }
       ]
     },
+    "channels.getMessageAuthor": {
+      "name": "channels.getMessageAuthor",
+      "parameters": {
+        "channel": {
+          "name": "channel",
+          "description": " "
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "channels.getMessages": {
       "name": "channels.getMessages",
       "description": [
@@ -47275,6 +49366,17 @@
         "Obtains a list of peers that can be used to send messages in a specific group"
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "for_paid_reactions": {
+          "name": "for_paid_reactions",
+          "description": " "
+        },
         "peer": {
           "name": "peer",
           "description": "The group where we intend to send messages"
@@ -48037,6 +50139,20 @@
         }
       ]
     },
+    "channels.toggleAutotranslation": {
+      "name": "channels.toggleAutotranslation",
+      "parameters": {
+        "channel": {
+          "name": "channel",
+          "description": " "
+        },
+        "enabled": {
+          "name": "enabled",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "channels.toggleForum": {
       "name": "channels.toggleForum",
       "description": [
@@ -48053,6 +50169,10 @@
         "enabled": {
           "name": "enabled",
           "description": "Enable or disable forum functionality"
+        },
+        "tabs": {
+          "name": "tabs",
+          "description": " "
         }
       },
       "errors": [
@@ -48535,6 +50655,31 @@
           "description": "The provided channel is invalid."
         }
       ]
+    },
+    "channels.updatePaidMessagesPrice": {
+      "name": "channels.updatePaidMessagesPrice",
+      "parameters": {
+        "broadcast_messages_allowed": {
+          "name": "broadcast_messages_allowed",
+          "description": " "
+        },
+        "channel": {
+          "name": "channel",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "send_paid_messages_stars": {
+          "name": "send_paid_messages_stars",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "channels.updatePinnedForumTopic": {
       "name": "channels.updatePinnedForumTopic",
@@ -49485,6 +51630,16 @@
         }
       ]
     },
+    "contacts.getSponsoredPeers": {
+      "name": "contacts.getSponsoredPeers",
+      "parameters": {
+        "q": {
+          "name": "q",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "contacts.getStatuses": {
       "name": "contacts.getStatuses",
       "description": [
@@ -49701,6 +51856,11 @@
         },
         {
           "code": 400,
+          "type": "STARREF_EXPIRED",
+          "description": "The specified referral link is invalid."
+        },
+        {
+          "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
         },
@@ -49857,6 +52017,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "CHANNEL_PRIVATE",
@@ -50551,6 +52716,20 @@
       },
       "bot_can_use": true
     },
+    "invokeWithReCaptcha": {
+      "name": "invokeWithReCaptcha",
+      "parameters": {
+        "query": {
+          "name": "query",
+          "description": " "
+        },
+        "token": {
+          "name": "token",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "invokeWithTakeout": {
       "name": "invokeWithTakeout",
       "description": [
@@ -50915,6 +53094,24 @@
         }
       ]
     },
+    "messages.appendTodoList": {
+      "name": "messages.appendTodoList",
+      "parameters": {
+        "list": {
+          "name": "list",
+          "description": " "
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.checkChatInvite": {
       "name": "messages.checkChatInvite",
       "description": [
@@ -51094,10 +53291,6 @@
         "media": {
           "name": "media",
           "description": "The user clicked on the media"
-        },
-        "peer": {
-          "name": "peer",
-          "description": "The channel/bot where the ad is located"
         },
         "random_id": {
           "name": "random_id",
@@ -51584,6 +53777,10 @@
         "min_date": {
           "name": "min_date",
           "description": "Delete all messages newer than this UNIX timestamp"
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
         },
         "peer": {
           "name": "peer",
@@ -52592,6 +54789,10 @@
             "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
           ]
         },
+        "allow_paid_stars": {
+          "name": "allow_paid_stars",
+          "description": " "
+        },
         "background": {
           "name": "background",
           "description": "Whether to send the message in background"
@@ -52637,6 +54838,10 @@
           "name": "random_id",
           "description": "Random ID to prevent resending of messages"
         },
+        "reply_to": {
+          "name": "reply_to",
+          "description": " "
+        },
         "schedule_date": {
           "name": "schedule_date",
           "description": "Scheduled message date for scheduled messages"
@@ -52649,6 +54854,10 @@
           "name": "silent",
           "description": "Whether to send messages silently (no notification will be triggered on the destination clients)"
         },
+        "suggested_post": {
+          "name": "suggested_post",
+          "description": " "
+        },
         "to_peer": {
           "name": "to_peer",
           "description": "Destination peer"
@@ -52659,6 +54868,10 @@
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
+        },
+        "video_timestamp": {
+          "name": "video_timestamp",
+          "description": " "
         },
         "with_my_score": {
           "name": "with_my_score",
@@ -53476,7 +55689,20 @@
       "name": "messages.getDialogUnreadMarks",
       "description": [
         "Get dialogs manually marked as unread"
-      ]
+      ],
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
+        }
+      }
     },
     "messages.getDialogs": {
       "name": "messages.getDialogs",
@@ -55161,8 +57387,33 @@
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
         }
       }
+    },
+    "messages.getSavedDialogsByID": {
+      "name": "messages.getSavedDialogsByID",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "ids": {
+          "name": "ids",
+          "description": " "
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.getSavedGifs": {
       "name": "messages.getSavedGifs",
@@ -55192,6 +57443,13 @@
           "name": "add_offset",
           "description": "Number of list elements to be skipped, negative values are also accepted."
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "hash": {
           "name": "hash",
           "description": "Result hash¹",
@@ -55218,6 +57476,10 @@
         "offset_id": {
           "name": "offset_id",
           "description": "Only return messages starting from the specified message ID"
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
         },
         "peer": {
           "name": "peer",
@@ -55503,6 +57765,17 @@
         "https://core.telegram.org/api/sponsored-messages"
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
         "peer": {
           "name": "peer",
           "description": "The currently open channel/bot."
@@ -55729,6 +58002,10 @@
         "peer": {
           "name": "peer",
           "description": "Peer"
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -56199,6 +58476,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
+        },
         "peer": {
           "name": "peer",
           "description": "Dialog"
@@ -56550,6 +58831,10 @@
           "name": "peer",
           "description": "Peer"
         },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
+        },
         "top_msg_id": {
           "name": "top_msg_id",
           "description": "Mark as read only reactions to messages within the specified forum topic¹",
@@ -56565,6 +58850,24 @@
           "description": "The provided peer id is invalid."
         }
       ]
+    },
+    "messages.readSavedHistory": {
+      "name": "messages.readSavedHistory",
+      "parameters": {
+        "max_id": {
+          "name": "max_id",
+          "description": " "
+        },
+        "parent_peer": {
+          "name": "parent_peer",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "messages.receivedMessages": {
       "name": "messages.receivedMessages",
@@ -56759,6 +59062,11 @@
         },
         {
           "code": 400,
+          "type": "OPTION_INVALID",
+          "description": "Invalid option selected."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -56780,6 +59088,37 @@
           "code": 400,
           "type": "CHAT_ID_INVALID",
           "description": "The provided chat id is invalid."
+        }
+      ]
+    },
+    "messages.reportMessagesDelivery": {
+      "name": "messages.reportMessagesDelivery",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "id": {
+          "name": "id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "push": {
+          "name": "push",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
         }
       ]
     },
@@ -56871,10 +59210,6 @@
           "links": [
             "https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages"
           ]
-        },
-        "peer": {
-          "name": "peer",
-          "description": "The channel/bot where the ad is located"
         },
         "random_id": {
           "name": "random_id",
@@ -57422,6 +59757,10 @@
         "reply_to": {
           "name": "reply_to",
           "description": "If set, indicates that the message should be sent in reply to the specified message or story."
+        },
+        "suggested_post": {
+          "name": "suggested_post",
+          "description": " "
         }
       },
       "errors": [
@@ -58244,6 +60583,10 @@
         "https://core.telegram.org/method/messages.getInlineBotResults"
       ],
       "parameters": {
+        "allow_paid_stars": {
+          "name": "allow_paid_stars",
+          "description": " "
+        },
         "background": {
           "name": "background",
           "description": "Whether to send the message in background"
@@ -58516,6 +60859,10 @@
             "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
           ]
         },
+        "allow_paid_stars": {
+          "name": "allow_paid_stars",
+          "description": " "
+        },
         "background": {
           "name": "background",
           "description": "Send message in background"
@@ -58601,6 +60948,10 @@
         "silent": {
           "name": "silent",
           "description": "Send message silently (no notification should be triggered)"
+        },
+        "suggested_post": {
+          "name": "suggested_post",
+          "description": " "
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -59097,6 +61448,10 @@
             "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
           ]
         },
+        "allow_paid_stars": {
+          "name": "allow_paid_stars",
+          "description": " "
+        },
         "background": {
           "name": "background",
           "description": "Send this message as background message"
@@ -59182,6 +61537,10 @@
         "silent": {
           "name": "silent",
           "description": "Send this message silently (no notifications for the receivers)"
+        },
+        "suggested_post": {
+          "name": "suggested_post",
+          "description": " "
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -59511,6 +61870,10 @@
             "https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once"
           ]
         },
+        "allow_paid_stars": {
+          "name": "allow_paid_stars",
+          "description": " "
+        },
         "background": {
           "name": "background",
           "description": "Send in background?"
@@ -59777,7 +62140,7 @@
         },
         "private": {
           "name": "private",
-          "description": "Each post with star reactions has a leaderboard with the top senders, but users can opt out of appearing there if they prefer more privacy.If the user explicitly chose to make their paid reaction(s) private, pass boolTrue¹ to messages.sendPaidReaction².private.If the user explicitly chose to make their paid reaction(s) not private, pass boolFalse³ to messages.sendPaidReaction⁴.private.If the user did not make any explicit choice about the privacy of their paid reaction(s) (i.e. when reacting by clicking on an existing star reaction on a message), do not populate the messages.sendPaidReaction⁵.private flag.",
+          "description": "Each post with star reactions has a leaderboard with the top senders, but users can opt out of appearing there if they prefer more privacy.  If the user explicitly chose to make their paid reaction(s) private, pass boolTrue¹ to messages.sendPaidReaction².private.  If the user explicitly chose to make their paid reaction(s) not private, pass boolFalse³ to messages.sendPaidReaction⁴.private.  If the user did not make any explicit choice about the privacy of their paid reaction(s) (i.e. when reacting by clicking on an existing star reaction on a message), do not populate the messages.sendPaidReaction⁵.private flag.",
           "links": [
             "https://core.telegram.org/constructor/boolTrue",
             "https://core.telegram.org/method/messages.sendPaidReaction",
@@ -61462,6 +63825,61 @@
         }
       }
     },
+    "messages.toggleSuggestedPostApproval": {
+      "name": "messages.toggleSuggestedPostApproval",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "reject": {
+          "name": "reject",
+          "description": " "
+        },
+        "reject_comment": {
+          "name": "reject_comment",
+          "description": " "
+        },
+        "schedule_date": {
+          "name": "schedule_date",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "messages.toggleTodoCompleted": {
+      "name": "messages.toggleTodoCompleted",
+      "parameters": {
+        "completed": {
+          "name": "completed",
+          "description": " "
+        },
+        "incompleted": {
+          "name": "incompleted",
+          "description": " "
+        },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "messages.transcribeAudio": {
       "name": "messages.transcribeAudio",
       "description": [
@@ -61609,6 +64027,10 @@
         "peer": {
           "name": "peer",
           "description": "Chat where to unpin"
+        },
+        "saved_peer_id": {
+          "name": "saved_peer_id",
+          "description": " "
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -62063,10 +64485,6 @@
         "https://core.telegram.org/api/sponsored-messages"
       ],
       "parameters": {
-        "peer": {
-          "name": "peer",
-          "description": "The channel/bot where the ad is located"
-        },
         "random_id": {
           "name": "random_id",
           "description": "The ad's unique ID."
@@ -62194,6 +64612,16 @@
         }
       ]
     },
+    "payments.canPurchaseStore": {
+      "name": "payments.canPurchaseStore",
+      "parameters": {
+        "purpose": {
+          "name": "purpose",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "payments.changeStarsSubscription": {
       "name": "payments.changeStarsSubscription",
       "description": [
@@ -62317,20 +64745,17 @@
         "https://core.telegram.org/constructor/starGift"
       ],
       "parameters": {
-        "msg_id": {
-          "name": "msg_id",
-          "description": "The ID of the messageService¹ with the messageActionStarGift².",
-          "links": [
-            "https://core.telegram.org/constructor/messageService",
-            "https://core.telegram.org/constructor/messageActionStarGift"
-          ]
-        },
-        "user_id": {
-          "name": "user_id",
-          "description": "ID of the user that sent us the gift."
+        "stargift": {
+          "name": "stargift",
+          "description": " "
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
+        },
         {
           "code": 400,
           "type": "USER_ID_INVALID",
@@ -62677,11 +65102,140 @@
         }
       }
     },
+    "payments.getResaleStarGifts": {
+      "name": "payments.getResaleStarGifts",
+      "parameters": {
+        "attributes": {
+          "name": "attributes",
+          "description": " "
+        },
+        "attributes_hash": {
+          "name": "attributes_hash",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "gift_id": {
+          "name": "gift_id",
+          "description": " "
+        },
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset": {
+          "name": "offset",
+          "description": " "
+        },
+        "sort_by_num": {
+          "name": "sort_by_num",
+          "description": " "
+        },
+        "sort_by_price": {
+          "name": "sort_by_price",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "payments.getSavedInfo": {
       "name": "payments.getSavedInfo",
       "description": [
         "Get saved payment information"
       ]
+    },
+    "payments.getSavedStarGift": {
+      "name": "payments.getSavedStarGift",
+      "parameters": {
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.getSavedStarGifts": {
+      "name": "payments.getSavedStarGifts",
+      "parameters": {
+        "exclude_limited": {
+          "name": "exclude_limited",
+          "description": " "
+        },
+        "exclude_saved": {
+          "name": "exclude_saved",
+          "description": " "
+        },
+        "exclude_unique": {
+          "name": "exclude_unique",
+          "description": " "
+        },
+        "exclude_unlimited": {
+          "name": "exclude_unlimited",
+          "description": " "
+        },
+        "exclude_unsaved": {
+          "name": "exclude_unsaved",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset": {
+          "name": "offset",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "sort_by_value": {
+          "name": "sort_by_value",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.getStarGiftUpgradePreview": {
+      "name": "payments.getStarGiftUpgradePreview",
+      "parameters": {
+        "gift_id": {
+          "name": "gift_id",
+          "description": " "
+        }
+      }
+    },
+    "payments.getStarGiftWithdrawalUrl": {
+      "name": "payments.getStarGiftWithdrawalUrl",
+      "parameters": {
+        "password": {
+          "name": "password",
+          "description": " "
+        },
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "payments.getStarGifts": {
       "name": "payments.getStarGifts",
@@ -62799,6 +65353,10 @@
           "links": [
             "https://core.telegram.org/constructor/inputPeerSelf"
           ]
+        },
+        "ton": {
+          "name": "ton",
+          "description": " "
         }
       },
       "errors": [
@@ -62818,6 +65376,17 @@
         "https://core.telegram.org/api/stars#withdrawing-stars"
       ],
       "parameters": {
+        "amount": {
+          "name": "amount",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "password": {
           "name": "password",
           "description": "2FA password, see here »¹ for more info.",
@@ -62829,9 +65398,9 @@
           "name": "peer",
           "description": "Channel or bot from which to withdraw funds."
         },
-        "stars": {
-          "name": "stars",
-          "description": "Amount of stars to withdraw."
+        "ton": {
+          "name": "ton",
+          "description": " "
         }
       },
       "errors": [
@@ -62867,9 +65436,20 @@
         "https://core.telegram.org/constructor/inputPeerSelf"
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "peer": {
           "name": "peer",
           "description": "Peer of which to get the balance."
+        },
+        "ton": {
+          "name": "ton",
+          "description": " "
         }
       },
       "errors": [
@@ -62989,6 +65569,10 @@
           "links": [
             "https://core.telegram.org/api/stars#star-subscriptions"
           ]
+        },
+        "ton": {
+          "name": "ton",
+          "description": " "
         }
       },
       "errors": [
@@ -63014,6 +65598,13 @@
         "https://core.telegram.org/api/stars#balance-and-transaction-history"
       ],
       "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "id": {
           "name": "id",
           "description": "Transaction IDs."
@@ -63021,6 +65612,10 @@
         "peer": {
           "name": "peer",
           "description": "Channel or bot."
+        },
+        "ton": {
+          "name": "ton",
+          "description": " "
         }
       },
       "errors": [
@@ -63088,6 +65683,16 @@
           "description": "The provided peer id is invalid."
         }
       ]
+    },
+    "payments.getUniqueStarGift": {
+      "name": "payments.getUniqueStarGift",
+      "parameters": {
+        "slug": {
+          "name": "slug",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "payments.launchPrepaidGiveaway": {
       "name": "payments.launchPrepaidGiveaway",
@@ -63173,24 +65778,21 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
-        "msg_id": {
-          "name": "msg_id",
-          "description": "The ID of the messageService¹ with the messageActionStarGift².",
-          "links": [
-            "https://core.telegram.org/constructor/messageService",
-            "https://core.telegram.org/constructor/messageActionStarGift"
-          ]
+        "stargift": {
+          "name": "stargift",
+          "description": " "
         },
         "unsave": {
           "name": "unsave",
           "description": "If set, hides the gift from our profile."
-        },
-        "user_id": {
-          "name": "user_id",
-          "description": "ID of the user that sent us the gift."
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
+        },
         {
           "code": 400,
           "type": "USER_ID_INVALID",
@@ -63313,6 +65915,102 @@
           "code": 400,
           "type": "STARGIFT_USAGE_LIMITED",
           "description": "The gift is sold out."
+        }
+      ]
+    },
+    "payments.toggleChatStarGiftNotifications": {
+      "name": "payments.toggleChatStarGiftNotifications",
+      "parameters": {
+        "enabled": {
+          "name": "enabled",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.toggleStarGiftsPinnedToTop": {
+      "name": "payments.toggleStarGiftsPinnedToTop",
+      "parameters": {
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.transferStarGift": {
+      "name": "payments.transferStarGift",
+      "parameters": {
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        },
+        "to_id": {
+          "name": "to_id",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
+        }
+      ]
+    },
+    "payments.updateStarGiftPrice": {
+      "name": "payments.updateStarGiftPrice",
+      "parameters": {
+        "resell_stars": {
+          "name": "resell_stars",
+          "description": " "
+        },
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "payments.upgradeStarGift": {
+      "name": "payments.upgradeStarGift",
+      "parameters": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "keep_original_details": {
+          "name": "keep_original_details",
+          "description": " "
+        },
+        "stargift": {
+          "name": "stargift",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
         }
       ]
     },
@@ -63481,6 +66179,47 @@
         }
       ]
     },
+    "phone.createConferenceCall": {
+      "name": "phone.createConferenceCall",
+      "parameters": {
+        "block": {
+          "name": "block",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "join": {
+          "name": "join",
+          "description": " "
+        },
+        "muted": {
+          "name": "muted",
+          "description": " "
+        },
+        "params": {
+          "name": "params",
+          "description": " "
+        },
+        "public_key": {
+          "name": "public_key",
+          "description": " "
+        },
+        "random_id": {
+          "name": "random_id",
+          "description": " "
+        },
+        "video_stopped": {
+          "name": "video_stopped",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "phone.createGroupCall": {
       "name": "phone.createGroupCall",
       "description": [
@@ -63553,6 +66292,49 @@
           "description": "Invalid schedule date provided."
         }
       ]
+    },
+    "phone.declineConferenceCallInvite": {
+      "name": "phone.declineConferenceCallInvite",
+      "parameters": {
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
+    "phone.deleteConferenceCallParticipants": {
+      "name": "phone.deleteConferenceCallParticipants",
+      "parameters": {
+        "block": {
+          "name": "block",
+          "description": " "
+        },
+        "call": {
+          "name": "call",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "ids": {
+          "name": "ids",
+          "description": " "
+        },
+        "kick": {
+          "name": "kick",
+          "description": " "
+        },
+        "only_left": {
+          "name": "only_left",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "phone.discardCall": {
       "name": "phone.discardCall",
@@ -63827,6 +66609,31 @@
         }
       ]
     },
+    "phone.getGroupCallChainBlocks": {
+      "name": "phone.getGroupCallChainBlocks",
+      "parameters": {
+        "call": {
+          "name": "call",
+          "description": " "
+        },
+        "limit": {
+          "name": "limit",
+          "description": "Maximum number of results to return, see pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
+        },
+        "offset": {
+          "name": "offset",
+          "description": " "
+        },
+        "sub_chain_id": {
+          "name": "sub_chain_id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "phone.getGroupCallJoinAs": {
       "name": "phone.getGroupCallJoinAs",
       "description": [
@@ -63948,6 +66755,31 @@
         }
       ]
     },
+    "phone.inviteConferenceCallParticipant": {
+      "name": "phone.inviteConferenceCallParticipant",
+      "parameters": {
+        "call": {
+          "name": "call",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "user_id": {
+          "name": "user_id",
+          "description": " "
+        },
+        "video": {
+          "name": "video",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "phone.inviteToGroupCall": {
       "name": "phone.inviteToGroupCall",
       "description": [
@@ -64002,6 +66834,10 @@
         "Join a group call"
       ],
       "parameters": {
+        "block": {
+          "name": "block",
+          "description": " "
+        },
         "call": {
           "name": "call",
           "description": "The group call"
@@ -64031,6 +66867,10 @@
         "params": {
           "name": "params",
           "description": "WebRTC parameters"
+        },
+        "public_key": {
+          "name": "public_key",
+          "description": " "
         },
         "video_stopped": {
           "name": "video_stopped",
@@ -64307,6 +67147,20 @@
           "description": "The provided peer id is invalid."
         }
       ]
+    },
+    "phone.sendConferenceCallBroadcast": {
+      "name": "phone.sendConferenceCallBroadcast",
+      "parameters": {
+        "block": {
+          "name": "block",
+          "description": " "
+        },
+        "call": {
+          "name": "call",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
     },
     "phone.sendSignalingData": {
       "name": "phone.sendSignalingData",
@@ -67644,6 +70498,16 @@
       ],
       "bot_can_use": true
     },
+    "users.getRequirementsToContact": {
+      "name": "users.getRequirementsToContact",
+      "parameters": {
+        "id": {
+          "name": "id",
+          "description": " "
+        }
+      },
+      "bot_can_use": true
+    },
     "users.getUsers": {
       "name": "users.getUsers",
       "description": [
@@ -70068,6 +72932,11 @@
       "code": 400,
       "type": "STARREF_AWAITING_END",
       "description": "The previous referral program was terminated less than 24 hours ago: further changes can be made after the date specified in userFull.starref_program.end_date."
+    },
+    "STARREF_EXPIRED": {
+      "code": 400,
+      "type": "STARREF_EXPIRED",
+      "description": "The specified referral link is invalid."
     },
     "STARREF_HASH_REVOKED": {
       "code": 400,
