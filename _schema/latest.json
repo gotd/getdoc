@@ -71144,7 +71144,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 500,
+      "code": 400,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
