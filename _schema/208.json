@@ -67509,7 +67509,7 @@
         },
         "save": {
           "name": "save",
-          "description": "If set, removes a previously set personal profile picture (does not affect suggested profile pictures, to remove them simply deleted the messageActionSuggestProfilePhoto¹ service message with messages.deleteMessages²).",
+          "description": "If set, removes a previously set personal profile picture (does not affect suggested profile pictures, to remove them simply delete the messageActionSuggestProfilePhoto¹ service message with messages.deleteMessages²).",
           "links": [
             "https://core.telegram.org/constructor/messageActionSuggestProfilePhoto",
             "https://core.telegram.org/method/messages.deleteMessages"
