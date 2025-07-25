@@ -12022,20 +12022,18 @@
         },
         "new_noncontact_peers_require_premium": {
           "name": "new_noncontact_peers_require_premium",
-          "description": "If set, only users that have a premium account, are in our contact list, or already have a private chat with us can write to us; a 403 PRIVACY_PREMIUM_REQUIRED error will be emitted otherwise.  The userFull¹.contact_require_premium flag will be set for users that have this flag enabled.  To check whether we can write to a user with this flag enabled, if we haven't yet cached all the required information (for example we don't have the userFull² or history of all users while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user. This option may be enabled by both non-Premium⁴ and Premium⁵ users only if the new_noncontact_peers_require_premium_without_ownpremium client configuration flag »⁶ is equal to true, otherwise it may be enabled only by Premium⁷ users and non-Premium users will receive a PREMIUM_ACCOUNT_REQUIRED error when trying to enable this flag.",
+          "description": "See here for more info on this flag »¹.",
           "links": [
-            "https://core.telegram.org/constructor/userFull",
-            "https://core.telegram.org/constructor/userFull",
-            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
-            "https://core.telegram.org/api/premium",
-            "https://core.telegram.org/api/premium",
-            "https://core.telegram.org/api/config#new-noncontact-peers-require-premium-without-ownpremium",
-            "https://core.telegram.org/api/premium"
+            "https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users"
           ]
         },
         "noncontact_peers_paid_stars": {
           "name": "noncontact_peers_paid_stars",
-          "description": " "
+          "description": "If configured, specifies the number of stars¹ users must pay us to send us a message, see here »² for more info on paid messages.",
+          "links": [
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/api/paid-messages"
+          ]
         }
       }
     },
@@ -37280,14 +37278,9 @@
         },
         "contact_require_premium": {
           "name": "contact_require_premium",
-          "description": "If set, we can only write to this user if they have already sent some messages to us, if we are subscribed to Telegram Premium¹, or if they're a mutual contact (user².mutual_contact).  All the secondary conditions listed above must be checked separately to verify whether we can still write to the user, even if this flag is set (i.e. a mutual contact will have this flag set even if we can still write to them, and so on...); to avoid doing these extra checks if we haven't yet cached all the required information (for example while displaying the chat list in the sharing UI) the users.getIsPremiumRequiredToContact³ method may be invoked instead, passing the list of users currently visible in the UI, returning a list of booleans that directly specify whether we can or cannot write to each user; alternatively, the userFull⁴.contact_require_premium flag contains the same (fully checked, i.e. it's not just a copy of this flag) info returned by users.getIsPremiumRequiredToContact⁵. To set this flag for ourselves invoke account.setGlobalPrivacySettings⁶, setting the settings.new_noncontact_peers_require_premium flag.",
+          "description": "See here for more info on this flag »¹.",
           "links": [
-            "https://core.telegram.org/api/premium",
-            "https://core.telegram.org/constructor/user",
-            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
-            "https://core.telegram.org/constructor/userFull",
-            "https://core.telegram.org/method/users.getIsPremiumRequiredToContact",
-            "https://core.telegram.org/method/account.setGlobalPrivacySettings"
+            "https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users"
           ]
         },
         "deleted": {
@@ -43470,6 +43463,13 @@
     },
     "account.getPaidMessagesRevenue": {
       "name": "account.getPaidMessagesRevenue",
+      "description": [
+        "Get the number of stars we have received from the specified user thanks to paid messages »¹; the received amount will be equal to the sent amount multiplied by stars_paid_message_commission_permille² divided by 1000."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-messages",
+        "https://core.telegram.org/api/config#stars-paid-message-commission-permille"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -43480,11 +43480,14 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, can contain the ID of a monoforum (channel direct messages)¹ to obtain the number of stars the user has spent to send us direct messages via the channel.",
+          "links": [
+            "https://core.telegram.org/api/forum#monoforums"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user that paid to send us messages."
         }
       },
       "bot_can_use": true
@@ -44705,6 +44708,12 @@
     },
     "account.toggleNoPaidMessagesException": {
       "name": "account.toggleNoPaidMessagesException",
+      "description": [
+        "Allow a user to send us messages without paying if paid messages »¹ are enabled."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -44715,19 +44724,22 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, applies the setting within the monoforum aka direct messages »¹ (pass the ID of the monoforum, not the ID of the associated channel).",
+          "links": [
+            "https://core.telegram.org/api/forum#monoforums"
+          ]
         },
         "refund_charged": {
           "name": "refund_charged",
-          "description": " "
+          "description": "If set and require_payment is not set, refunds the amounts the user has already paid us to send us messages (directly or via a monoforum)."
         },
         "require_payment": {
           "name": "require_payment",
-          "description": " "
+          "description": "Allow or disallow a user to send us messages without paying."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user to exempt or unexempt."
         }
       },
       "bot_can_use": true
@@ -50658,14 +50670,31 @@
     },
     "channels.updatePaidMessagesPrice": {
       "name": "channels.updatePaidMessagesPrice",
+      "description": [
+        "Enable or disable paid messages »¹ in this supergroup² or monoforum³.",
+        "Also used to enable or disable monoforums aka direct messages in a channel¹.",
+        "Note that passing the ID of the monoforum itself to channel will return a CHANNEL_MONOFORUM_UNSUPPORTED error: pass the ID of the associated channel to edit the settings of the associated monoforum, instead."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-messages",
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/api/forum#monoforums",
+        "https://core.telegram.org/api/forum#monoforums"
+      ],
       "parameters": {
         "broadcast_messages_allowed": {
           "name": "broadcast_messages_allowed",
-          "description": " "
+          "description": "Only usable for channels, enables or disables the associated monoforum aka direct messages¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#monoforums"
+          ]
         },
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "Pass the supergroup ID for supergroups and the ID of the channel¹ to modify the setting in the associated monoforum.",
+          "links": [
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -50676,7 +50705,10 @@
         },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
-          "description": " "
+          "description": "Specifies the required amount of Telegram Stars¹ users must pay to send messages to the supergroup or monoforum.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       },
       "bot_can_use": true
@@ -72244,7 +72276,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -72529,7 +72561,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -73249,7 +73281,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -73259,7 +73291,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -73444,7 +73476,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 400,
+      "code": 403,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
@@ -73489,7 +73521,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 403,
+      "code": 400,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
