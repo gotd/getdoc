@@ -3025,10 +3025,20 @@
     },
     "account.paidMessagesRevenue": {
       "name": "account.paidMessagesRevenue",
+      "description": [
+        "Total number of non-refunded Telegram Stars¹ a user has spent on sending us messages either directly or through a channel, see here »² for more info on paid messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/paid-messages"
+      ],
       "fields": {
         "stars_amount": {
           "name": "stars_amount",
-          "description": " "
+          "description": "Amount in Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       }
     },
@@ -6302,7 +6312,14 @@
         },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
-          "description": " "
+          "description": "If set, this supergroup or monoforum¹ has enabled paid messages »², we might need to pay the specified amount of Stars³ to send messages to it, depending on the configured exceptions: check channelFull⁴.send_paid_messages_stars to see if the currently logged in user actually has to pay or not, see here »⁵ for the full flow (only set for the monoforum, not the associated channel).",
+          "links": [
+            "https://core.telegram.org/api/forum#monoforums",
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/constructor/channelFull",
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "signature_profiles": {
           "name": "signature_profiles",
@@ -7684,7 +7701,14 @@
         },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
-          "description": " "
+          "description": "If set and bigger than 0, this supergroup, monoforum¹ or the monoforum associated to this channel has enabled paid messages »² and we must pay the specified amount of Stars³ to send messages to it, see here »⁴ for the full flow. This flag will be set both for the monoforum and for channelFull⁵ of the associated channel). If set and equal to 0, the monoforum requires payment in general but we were exempted from paying.",
+          "links": [
+            "https://core.telegram.org/api/forum#monoforums",
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/constructor/channelFull"
+          ]
         },
         "slowmode_next_send_date": {
           "name": "slowmode_next_send_date",
@@ -16222,7 +16246,13 @@
       ]
     },
     "inputPrivacyKeyNoPaidMessages": {
-      "name": "inputPrivacyKeyNoPaidMessages"
+      "name": "inputPrivacyKeyNoPaidMessages",
+      "description": [
+        "Who can send you messages without paying, if paid messages »¹ are enabled."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-messages"
+      ]
     },
     "inputPrivacyKeyPhoneCall": {
       "name": "inputPrivacyKeyPhoneCall",
@@ -16300,7 +16330,11 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": "Allowed chat IDs"
+          "description": "Allowed chat IDs (either a chat¹ or a supergroup² ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)).",
+          "links": [
+            "https://core.telegram.org/constructor/chat",
+            "https://core.telegram.org/constructor/channel"
+          ]
         }
       }
     },
@@ -16361,7 +16395,11 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": "Disallowed chat IDs"
+          "description": "Disallowed chat IDs (either a chat¹ or a supergroup² ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)).",
+          "links": [
+            "https://core.telegram.org/constructor/chat",
+            "https://core.telegram.org/constructor/channel"
+          ]
         }
       }
     },
@@ -18735,7 +18773,10 @@
         },
         "paid_message_stars": {
           "name": "paid_message_stars",
-          "description": " "
+          "description": "The amount of stars the sender has paid to send the message, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "paid_suggested_post_stars": {
           "name": "paid_suggested_post_stars",
@@ -26222,7 +26263,11 @@
         },
         "charge_paid_message_stars": {
           "name": "charge_paid_message_stars",
-          "description": " "
+          "description": "All users that must pay us »¹ to send us private messages will have this flag set only for us, containing the amount of required stars, see here »² for more info on paid messages.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -27786,7 +27831,13 @@
       ]
     },
     "privacyKeyNoPaidMessages": {
-      "name": "privacyKeyNoPaidMessages"
+      "name": "privacyKeyNoPaidMessages",
+      "description": [
+        "Who can send you messages without paying, if paid messages »¹ are enabled."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-messages"
+      ]
     },
     "privacyKeyPhoneCall": {
       "name": "privacyKeyPhoneCall",
@@ -27861,7 +27912,11 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": "Allowed chats"
+          "description": "Allowed chat IDs (either a chat¹ or a supergroup² ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)).",
+          "links": [
+            "https://core.telegram.org/constructor/chat",
+            "https://core.telegram.org/constructor/channel"
+          ]
         }
       }
     },
@@ -27922,7 +27977,11 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": "Disallowed chats"
+          "description": "Disallowed chats IDs (either a chat¹ or a supergroup² ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)).",
+          "links": [
+            "https://core.telegram.org/constructor/chat",
+            "https://core.telegram.org/constructor/channel"
+          ]
         }
       }
     },
@@ -28610,19 +28669,38 @@
       }
     },
     "requirementToContactEmpty": {
-      "name": "requirementToContactEmpty"
+      "name": "requirementToContactEmpty",
+      "description": [
+        "This user can be freely contacted."
+      ]
     },
     "requirementToContactPaidMessages": {
       "name": "requirementToContactPaidMessages",
+      "description": [
+        "This user requires us to pay the specified amount of Telegram Stars¹ to send them a message, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/paid-messages"
+      ],
       "fields": {
         "stars_amount": {
           "name": "stars_amount",
-          "description": " "
+          "description": "The required amount of Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       }
     },
     "requirementToContactPremium": {
-      "name": "requirementToContactPremium"
+      "name": "requirementToContactPremium",
+      "description": [
+        "This user requires us to buy a Premium¹ subscription in order to contact them."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium"
+      ]
     },
     "restrictionReason": {
       "name": "restrictionReason",
@@ -37404,7 +37482,14 @@
         },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
-          "description": " "
+          "description": "If set, the user has enabled paid messages »¹, we might need to pay the specified amount of Stars² to send them messages, depending on the configured exceptions: check userFull³.send_paid_messages_stars or users.getRequirementsToContact⁴ to see if the currently logged in user actually has to pay or not, see here »⁵ for the full flow.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/method/users.getRequirementsToContact",
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "status": {
           "name": "status",
@@ -37696,7 +37781,13 @@
         },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
-          "description": " "
+          "description": "If set and bigger than 0, this user has enabled paid messages »¹ and we must pay the specified amount of Stars² to send messages to them, see here »³ for the full flow. If set and equal to 0, the user requires payment in general but we were exempted from paying for any of the reasons specified in the docs »⁴.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "settings": {
           "name": "settings",
@@ -40955,7 +41046,10 @@
       ]
     },
     "RequirementToContact": {
-      "name": "RequirementToContact"
+      "name": "RequirementToContact",
+      "description": [
+        "Specifies a requirement that must be satisfied in order to contact a user."
+      ]
     },
     "RestrictionReason": {
       "name": "RestrictionReason",
@@ -41640,7 +41734,14 @@
       ]
     },
     "account.PaidMessagesRevenue": {
-      "name": "account.PaidMessagesRevenue"
+      "name": "account.PaidMessagesRevenue",
+      "description": [
+        "Total number of non-refunded Telegram Stars¹ a user has spent on sending us messages either directly or through a channel, see here »² for more info on paid messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/paid-messages"
+      ]
     },
     "account.Password": {
       "name": "account.Password",
@@ -44735,7 +44836,11 @@
         },
         "require_payment": {
           "name": "require_payment",
-          "description": "Allow or disallow a user to send us messages without paying."
+          "description": "If set, requires the user to pay in order to send us messages (can only be used by monoforums, not users, i.e. parent_peer must be set if this flag is set; users must instead use the inputPrivacyKeyNoPaidMessages¹    privacy setting² to remove a previously added exemption). If not set, allows the user to send us messages without paying (can be used by both monoforums and users).",
+          "links": [
+            "https://core.telegram.org/constructor/inputPrivacyKeyNoPaidMessages",
+            "https://core.telegram.org/api/privacy"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -54823,7 +54928,11 @@
         },
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "For paid messages »¹, specifies the amount of Telegram Stars² the user has agreed to pay in order to send the message.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "background": {
           "name": "background",
@@ -60617,7 +60726,11 @@
       "parameters": {
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "For paid messages »¹, specifies the amount of Telegram Stars² the user has agreed to pay in order to send the message.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "background": {
           "name": "background",
@@ -60893,7 +61006,11 @@
         },
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "For paid messages »¹, specifies the amount of Telegram Stars² the user has agreed to pay in order to send the message.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "background": {
           "name": "background",
@@ -61482,7 +61599,11 @@
         },
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "For paid messages »¹, specifies the amount of Telegram Stars² the user has agreed to pay in order to send the message.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "background": {
           "name": "background",
@@ -61904,7 +62025,11 @@
         },
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "For paid messages »¹, specifies the amount of Telegram Stars² the user has agreed to pay in order to send the message.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "background": {
           "name": "background",
@@ -70532,10 +70657,19 @@
     },
     "users.getRequirementsToContact": {
       "name": "users.getRequirementsToContact",
+      "description": [
+        "Check whether we can write to the specified users, used to implement bulk checks for Premium-only messages »¹ and paid messages »².",
+        "For each input user, returns a RequirementToContact¹ constructor (at the same offset in the vector) containing requirements to contact them."
+      ],
+      "links": [
+        "https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users",
+        "https://core.telegram.org/api/paid-messages",
+        "https://core.telegram.org/type/RequirementToContact"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Users to check."
         }
       },
       "bot_can_use": true
