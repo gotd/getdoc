@@ -30815,6 +30815,10 @@
           "name": "photo",
           "description": "For transactions with bots, photo of the bought product."
         },
+        "posts_search": {
+          "name": "posts_search",
+          "description": " "
+        },
         "premium_gift_months": {
           "name": "premium_gift_months",
           "description": " "
@@ -38560,7 +38564,7 @@
         },
         "type": {
           "name": "type",
-          "description": "Type of the web page. One of the following: - video- gif- photo- document- profile- telegram_background- telegram_theme- telegram_story- telegram_channel- telegram_channel_request- telegram_megagroup- telegram_chat- telegram_megagroup_request- telegram_chat_request- telegram_album- telegram_message- telegram_bot- telegram_voicechat- telegram_livestream- telegram_call- telegram_user- telegram_botapp- telegram_channel_boost- telegram_group_boost- telegram_giftcode- telegram_stickerset"
+          "description": "Type of the web page. One of the following: - video- gif- photo- document- profile- telegram_background- telegram_theme- telegram_story- telegram_channel- telegram_channel_request- telegram_megagroup- telegram_chat- telegram_megagroup_request- telegram_chat_request- telegram_album- telegram_message- telegram_bot- telegram_voicechat- telegram_livestream- telegram_call- telegram_user- telegram_botapp- telegram_channel_boost- telegram_group_boost- telegram_giftcode- telegram_stickerset- telegram_story_album- telegram_collection"
         },
         "url": {
           "name": "url",
@@ -43393,8 +43397,7 @@
           "name": "hash",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "account.getConnectedBots": {
       "name": "account.getConnectedBots",
@@ -43608,7 +43611,17 @@
           "description": "The user that paid to send us messages."
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PARENT_PEER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
+        }
+      ]
     },
     "account.getPassword": {
       "name": "account.getPassword",
@@ -43743,6 +43756,10 @@
           "code": 400,
           "type": "THEME_INVALID",
           "description": "Invalid theme provided."
+        },
+        {
+          "code": 400,
+          "type": "THEME_SLUG_INVALID"
         }
       ]
     },
@@ -44745,6 +44762,15 @@
         },
         {
           "code": 403,
+          "type": "BOT_ACCESS_FORBIDDEN"
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 403,
           "type": "PREMIUM_ACCOUNT_REQUIRED",
           "description": "A premium account is required to execute this action."
         }
@@ -44853,7 +44879,7 @@
         },
         "require_payment": {
           "name": "require_payment",
-          "description": "If set, requires the user to pay in order to send us messages (can only be used by monoforums, not users, i.e. parent_peer must be set if this flag is set; users must instead use the inputPrivacyKeyNoPaidMessages¹                privacy setting² to remove a previously added exemption). If not set, allows the user to send us messages without paying (can be used by both monoforums and users).",
+          "description": "If set, requires the user to pay in order to send us messages (can only be used by monoforums, not users, i.e. parent_peer must be set if this flag is set; users must instead use the inputPrivacyKeyNoPaidMessages¹                                privacy setting² to remove a previously added exemption). If not set, allows the user to send us messages without paying (can be used by both monoforums and users).",
           "links": [
             "https://core.telegram.org/constructor/inputPrivacyKeyNoPaidMessages",
             "https://core.telegram.org/api/privacy"
@@ -44864,7 +44890,21 @@
           "description": "The user to exempt or unexempt."
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PARENT_PEER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "UNSUPPORTED"
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
+        }
+      ]
     },
     "account.toggleSponsoredMessages": {
       "name": "account.toggleSponsoredMessages",
@@ -45426,6 +45466,11 @@
         },
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "FIRSTNAME_INVALID",
           "description": "The first name is invalid."
         }
@@ -45445,7 +45490,13 @@
             "https://core.telegram.org/constructor/userStatusOffline"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        }
+      ]
     },
     "account.updateTheme": {
       "name": "account.updateTheme",
@@ -45822,6 +45873,11 @@
         },
         {
           "code": 400,
+          "type": "EXPIRES_AT_INVALID",
+          "description": "The specified expires_at timestamp is invalid."
+        },
+        {
+          "code": 400,
           "type": "TEMP_AUTH_KEY_ALREADY_BOUND",
           "description": "The passed temporary key is already bound to another perm_auth_key_id."
         },
@@ -45829,6 +45885,10 @@
           "code": 400,
           "type": "TEMP_AUTH_KEY_EMPTY",
           "description": "No temporary auth key provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ],
       "bot_can_use": true
@@ -46008,6 +46068,10 @@
           "code": 400,
           "type": "API_ID_PUBLISHED_FLOOD",
           "description": "This API id was published somewhere, you can't use it now."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -47923,7 +47987,7 @@
           "description": "The specified TTL period is invalid."
         },
         {
-          "code": 406,
+          "code": 403,
           "type": "USER_RESTRICTED",
           "description": "You're spamreported, you can't create channels or chats."
         }
@@ -48170,6 +48234,10 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
+          "code": 420,
+          "type": "FROZEN_METHOD_INVALID"
+        },
+        {
           "code": 403,
           "type": "MESSAGE_DELETE_FORBIDDEN",
           "description": "You can't delete one of the messages you tried to delete, most likely because it is a service message."
@@ -48260,6 +48328,11 @@
           "description": "The provided channel is invalid."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "TOPIC_ID_INVALID",
           "description": "The specified topic ID is invalid."
@@ -48334,6 +48407,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -48361,6 +48439,11 @@
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
         },
         {
           "code": 400,
@@ -48529,6 +48612,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -48536,6 +48624,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_MEMBER_ADD_FAILED",
+          "description": "Could not add participants."
         },
         {
           "code": 400,
@@ -48576,6 +48669,11 @@
           "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
+        },
+        {
+          "code": 403,
+          "type": "USER_PRIVACY_RESTRICTED",
+          "description": "The user's privacy settings do not allow you to do this."
         }
       ]
     },
@@ -49087,6 +49185,15 @@
           "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -49119,6 +49226,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -49191,6 +49302,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
         },
         {
           "code": 400,
@@ -49278,6 +49394,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ],
       "bot_can_use": true
@@ -49322,6 +49442,11 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "TAKEOUT_INVALID",
+          "description": "The specified takeout ID is invalid."
+        },
+        {
           "code": 403,
           "type": "TAKEOUT_REQUIRED",
           "description": "A takeout session needs to be initialized first, see here » for more info."
@@ -49340,7 +49465,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.getMessages": {
       "name": "channels.getMessages",
@@ -49373,6 +49504,15 @@
         },
         {
           "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "FROZEN_PARTICIPANT_MISSING"
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_IDS_EMPTY",
           "description": "No message ids were provided."
         },
@@ -49380,6 +49520,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -49492,6 +49636,11 @@
           "description": "The provided channel is invalid."
         },
         {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
+        },
+        {
           "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
@@ -49505,6 +49654,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ],
       "bot_can_use": true
@@ -49584,6 +49737,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
         },
         {
           "code": 406,
@@ -49700,6 +49858,10 @@
           "description": "Invalid chat."
         },
         {
+          "code": 420,
+          "type": "FROZEN_METHOD_INVALID"
+        },
+        {
           "code": 400,
           "type": "INVITE_HASH_EMPTY",
           "description": "The invite hash is empty."
@@ -49728,6 +49890,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -49843,6 +50009,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -50096,7 +50266,13 @@
             "https://core.telegram.org/constructor/messages.messagesSlice"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 420,
+          "type": "FROZEN_METHOD_INVALID"
+        }
+      ]
     },
     "channels.setBoostsToUnblockRestrictions": {
       "name": "channels.setBoostsToUnblockRestrictions",
@@ -50300,7 +50476,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        }
+      ]
     },
     "channels.toggleForum": {
       "name": "channels.toggleForum",
@@ -50848,7 +51030,27 @@
           ]
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "STARS_AMOUNT_INVALID"
+        }
+      ]
     },
     "channels.updatePinnedForumTopic": {
       "name": "channels.updatePinnedForumTopic",
@@ -51303,6 +51505,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNELS_TOO_MUCH",
+          "description": "You have joined too many channels/supergroups."
+        },
         {
           "code": 400,
           "type": "FILTER_INCLUDE_EMPTY",
@@ -51807,7 +52014,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "SEARCH_QUERY_EMPTY",
+          "description": "The search query is empty."
+        }
+      ]
     },
     "contacts.getStatuses": {
       "name": "contacts.getStatuses",
@@ -52027,6 +52240,10 @@
           "code": 400,
           "type": "STARREF_EXPIRED",
           "description": "The specified referral link is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -52352,6 +52569,18 @@
       "links": [
         "https://core.telegram.org/cdn"
       ],
+      "parameters": {
+        "-504": {
+          "name": "-504",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        }
+      ],
       "bot_can_use": true
     },
     "help.getConfig": {
@@ -52360,6 +52589,10 @@
         "Returns current configuration, including data center configuration."
       ],
       "parameters": {
+        "-504": {
+          "name": "-504",
+          "description": " "
+        },
         "400": {
           "name": "400",
           "description": "The provided username is not valid."
@@ -52394,6 +52627,10 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -52864,6 +53101,10 @@
           "code": 406,
           "type": "INVITE_HASH_EXPIRED",
           "description": "The invite link has expired."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ],
       "bot_can_use": true
@@ -53207,6 +53448,11 @@
           "description": "The provided chat id is invalid."
         },
         {
+          "code": 400,
+          "type": "CHAT_INVALID",
+          "description": "Invalid chat."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -53279,7 +53525,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.checkChatInvite": {
       "name": "messages.checkChatInvite",
@@ -53315,6 +53567,10 @@
           "code": 400,
           "type": "INVITE_HASH_INVALID",
           "description": "The invite hash is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -53509,6 +53765,11 @@
         },
         {
           "code": 400,
+          "type": "CHAT_MEMBER_ADD_FAILED",
+          "description": "Could not add participants."
+        },
+        {
+          "code": 400,
           "type": "CHAT_TITLE_EMPTY",
           "description": "No chat title provided."
         },
@@ -53528,7 +53789,7 @@
           "description": "Not enough users (to create a chat, for example)."
         },
         {
-          "code": 406,
+          "code": 403,
           "type": "USER_RESTRICTED",
           "description": "You're spamreported, you can't create channels or chats."
         }
@@ -53642,6 +53903,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
         {
           "code": 400,
           "type": "INVITE_HASH_EXPIRED",
@@ -53801,6 +54067,15 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "BOT_ACCESS_FORBIDDEN"
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
         {
           "code": 403,
           "type": "MESSAGE_DELETE_FORBIDDEN",
@@ -54178,6 +54453,11 @@
           "code": 400,
           "type": "BANNED_RIGHTS_INVALID",
           "description": "You provided some invalid flags in the banned rights."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
         },
         {
           "code": 400,
@@ -54586,6 +54866,16 @@
         },
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_PEER_INVALID",
+          "description": "Messages can't be set to the specified peer through the current business connection."
+        },
+        {
+          "code": 400,
           "type": "BUTTON_COPY_TEXT_INVALID",
           "description": "The specified keyboardButtonCopy.copy_text is invalid."
         },
@@ -54756,6 +55046,11 @@
         },
         {
           "code": 400,
+          "type": "PHOTO_SAVE_FILE_INVALID",
+          "description": "Internal issues, try again later."
+        },
+        {
+          "code": 400,
           "type": "REPLY_MARKUP_INVALID",
           "description": "The provided reply markup is invalid."
         },
@@ -54868,6 +55163,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
         },
         {
           "code": 400,
@@ -55053,6 +55353,15 @@
       },
       "errors": [
         {
+          "code": 406,
+          "type": "ALLOW_PAYMENT_REQUIRED"
+        },
+        {
+          "code": 403,
+          "type": "ALLOW_PAYMENT_REQUIRED_%d",
+          "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
+        },
+        {
           "code": 400,
           "type": "BROADCAST_PUBLIC_VOTERS_FORBIDDEN",
           "description": "You can't forward polls with public voters."
@@ -55114,6 +55423,11 @@
         },
         {
           "code": 403,
+          "type": "CHAT_SEND_INLINE_FORBIDDEN",
+          "description": "You can't send inline messages in this group."
+        },
+        {
+          "code": 403,
           "type": "CHAT_SEND_MEDIA_FORBIDDEN",
           "description": "You can't send media in this chat."
         },
@@ -55146,6 +55460,11 @@
           "code": 403,
           "type": "CHAT_SEND_VOICES_FORBIDDEN",
           "description": "You can't send voice recordings in this chat."
+        },
+        {
+          "code": 403,
+          "type": "CHAT_SEND_WEBPAGE_FORBIDDEN",
+          "description": "You can't send webpage previews to this chat."
         },
         {
           "code": 403,
@@ -55188,7 +55507,7 @@
           "description": "A detailed description of the error will be received separately as described here »."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         },
@@ -55198,7 +55517,7 @@
           "description": "A premium account is required to execute this action."
         },
         {
-          "code": 406,
+          "code": 403,
           "type": "PRIVACY_PREMIUM_REQUIRED",
           "description": "You need a Telegram Premium subscription to send a message to this user."
         },
@@ -55936,6 +56255,11 @@
       },
       "errors": [
         {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -55952,8 +56276,17 @@
         },
         {
           "code": 400,
+          "type": "PINNED_DIALOGS_TOO_MUCH",
+          "description": "Too many pinned dialogs."
+        },
+        {
+          "code": 400,
           "type": "TAKEOUT_INVALID",
           "description": "The specified takeout ID is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -56208,6 +56541,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "CHANNEL_PRIVATE",
@@ -56540,6 +56878,15 @@
         },
         {
           "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
+          "type": "FROZEN_PARTICIPANT_MISSING"
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -56552,6 +56899,10 @@
           "code": 400,
           "type": "TAKEOUT_INVALID",
           "description": "The specified takeout ID is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -56829,6 +57180,12 @@
           "description": "Message ID list"
         }
       },
+      "errors": [
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        }
+      ],
       "bot_can_use": true
     },
     "messages.getMessagesReactions": {
@@ -56902,6 +57259,11 @@
         },
         {
           "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -56909,6 +57271,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -57085,6 +57451,10 @@
         },
         {
           "code": 400,
+          "type": "FROZEN_PARTICIPANT_MISSING"
+        },
+        {
+          "code": 400,
           "type": "INPUT_PEERS_EMPTY",
           "description": "The specified peer array is empty."
         },
@@ -57097,6 +57467,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -57116,6 +57490,11 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
         },
         {
           "code": 400,
@@ -57585,8 +57964,7 @@
           "name": "parent_peer",
           "description": " "
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getSavedGifs": {
       "name": "messages.getSavedGifs",
@@ -57697,7 +58075,14 @@
             "https://core.telegram.org/api/saved-messages#saved-message-dialogs"
           ]
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.getScheduledHistory": {
       "name": "messages.getScheduledHistory",
@@ -57953,7 +58338,19 @@
           "name": "peer",
           "description": "The currently open channel/bot."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        }
+      ]
     },
     "messages.getStickerSet": {
       "name": "messages.getStickerSet",
@@ -58127,6 +58524,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -58904,6 +59305,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -58969,6 +59375,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -59040,7 +59450,12 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PARENT_PEER_INVALID"
+        }
+      ]
     },
     "messages.receivedMessages": {
       "name": "messages.receivedMessages",
@@ -59485,6 +59900,16 @@
           "code": 400,
           "type": "BOT_APP_SHORTNAME_INVALID",
           "description": "The specified bot app short name is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "THEME_PARAMS_INVALID",
+          "description": "The specified theme_params field is invalid."
         }
       ]
     },
@@ -59525,6 +59950,11 @@
           "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
+        },
+        {
+          "code": 403,
+          "type": "USER_IS_BLOCKED",
+          "description": "You were blocked by this user."
         }
       ]
     },
@@ -59817,6 +60247,11 @@
           "description": "A webview cannot be opened in the specified conditions: emitted for example if from_bot_menu or url are set and peer is not the chat with the bot."
         },
         {
+          "code": 403,
+          "type": "CHAT_WRITE_FORBIDDEN",
+          "description": "You can't write in this chat."
+        },
+        {
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
@@ -59874,6 +60309,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -59950,6 +60390,11 @@
           "code": 400,
           "type": "ENTITY_BOUNDS_INVALID",
           "description": "A specified entity offset or length is invalid, see here » for info on how to properly compute the entity offset/length."
+        },
+        {
+          "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
         },
         {
           "code": 400,
@@ -60230,6 +60675,11 @@
           "code": 400,
           "type": "SEARCH_QUERY_EMPTY",
           "description": "The search query is empty."
+        },
+        {
+          "code": 400,
+          "type": "TAKEOUT_INVALID",
+          "description": "The specified takeout ID is invalid."
         },
         {
           "code": 400,
@@ -60846,6 +61296,11 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "ALLOW_PAYMENT_REQUIRED_%d",
+          "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
+        },
+        {
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
@@ -60951,6 +61406,11 @@
           "description": "The provided peer id is invalid."
         },
         {
+          "code": 403,
+          "type": "PRIVACY_PREMIUM_REQUIRED",
+          "description": "You need a Telegram Premium subscription to send a message to this user."
+        },
+        {
           "code": 400,
           "type": "QUERY_ID_EMPTY",
           "description": "The query ID is empty."
@@ -60989,6 +61449,11 @@
           "code": 400,
           "type": "SCHEDULE_TOO_MUCH",
           "description": "There are too many scheduled messages."
+        },
+        {
+          "code": 400,
+          "type": "SEND_AS_PEER_INVALID",
+          "description": "You can't send messages as the specified peer."
         },
         {
           "code": 500,
@@ -61153,6 +61618,11 @@
       },
       "errors": [
         {
+          "code": 403,
+          "type": "ALLOW_PAYMENT_REQUIRED_%d",
+          "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
+        },
+        {
           "code": 400,
           "type": "BOT_GAMES_DISABLED",
           "description": "Games can't be sent to channels."
@@ -61166,6 +61636,11 @@
           "code": 400,
           "type": "BROADCAST_PUBLIC_VOTERS_FORBIDDEN",
           "description": "You can't forward polls with public voters."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
         },
         {
           "code": 400,
@@ -61196,6 +61671,11 @@
           "code": 400,
           "type": "BUTTON_URL_INVALID",
           "description": "Button URL invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUTTON_USER_PRIVACY_RESTRICTED",
+          "description": "The privacy setting of the user specified in a inputKeyboardButtonUserProfile button do not allow creating such a button."
         },
         {
           "code": 400,
@@ -61398,7 +61878,7 @@
           "description": "The specified payment provider is invalid."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         },
@@ -61509,6 +61989,11 @@
         },
         {
           "code": 400,
+          "type": "REPLY_MESSAGE_ID_INVALID",
+          "description": "The specified reply-to message ID is invalid."
+        },
+        {
+          "code": 400,
           "type": "SCHEDULE_BOT_NOT_ALLOWED",
           "description": "Bots cannot schedule messages."
         },
@@ -61566,6 +62051,10 @@
           "code": 400,
           "type": "TTL_MEDIA_INVALID",
           "description": "Invalid media Time To Live was provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -61751,6 +62240,11 @@
           "description": "The chatAdminRights constructor passed in keyboardButtonRequestPeer.peer_type.user_admin_rights has no rights set (i.e. flags is 0)."
         },
         {
+          "code": 403,
+          "type": "ALLOW_PAYMENT_REQUIRED_%d",
+          "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
+        },
+        {
           "code": 400,
           "type": "BOT_DOMAIN_INVALID",
           "description": "Bot domain invalid."
@@ -61759,6 +62253,11 @@
           "code": 400,
           "type": "BOT_INVALID",
           "description": "This is not a valid bot."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
         },
         {
           "code": 400,
@@ -61912,6 +62411,11 @@
         },
         {
           "code": 400,
+          "type": "PEER_TYPES_INVALID",
+          "description": "The passed keyboardButtonSwitchInline.peer_types field is invalid."
+        },
+        {
+          "code": 400,
           "type": "PINNED_DIALOGS_TOO_MUCH",
           "description": "Too many pinned dialogs."
         },
@@ -61926,7 +62430,7 @@
           "description": "A premium account is required to execute this action."
         },
         {
-          "code": 406,
+          "code": 403,
           "type": "PRIVACY_PREMIUM_REQUIRED",
           "description": "You need a Telegram Premium subscription to send a message to this user."
         },
@@ -61972,6 +62476,10 @@
         },
         {
           "code": 400,
+          "type": "REPLY_TO_MONOFORUM_PEER_INVALID"
+        },
+        {
+          "code": 400,
           "type": "REPLY_TO_USER_INVALID",
           "description": "The replied-to user is invalid."
         },
@@ -62007,6 +62515,11 @@
         },
         {
           "code": 400,
+          "type": "STORIES_NEVER_CREATED",
+          "description": "This peer hasn't ever posted any stories."
+        },
+        {
+          "code": 400,
           "type": "STORY_ID_INVALID",
           "description": "The specified story ID is invalid."
         },
@@ -62019,6 +62532,10 @@
           "code": 406,
           "type": "TOPIC_DELETED",
           "description": "The specified topic was deleted."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -62151,6 +62668,16 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "ALLOW_PAYMENT_REQUIRED_%d",
+          "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
         {
           "code": 400,
           "type": "BUSINESS_PEER_INVALID",
@@ -62355,8 +62882,36 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "RANDOM_ID_EMPTY",
+          "description": "Random ID empty."
+        },
+        {
+          "code": 400,
+          "type": "RANDOM_ID_EXPIRED"
+        },
+        {
+          "code": 400,
+          "type": "REACTIONS_COUNT_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "SEND_AS_PEER_INVALID",
+          "description": "You can't send messages as the specified peer."
         }
       ]
     },
@@ -62946,8 +63501,18 @@
         },
         {
           "code": 400,
+          "type": "DOCUMENT_INVALID",
+          "description": "The specified document is invalid."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "REACTION_INVALID",
+          "description": "The specified reaction is invalid."
         }
       ]
     },
@@ -63476,6 +64041,11 @@
         },
         {
           "code": 400,
+          "type": "WEBDOCUMENT_URL_EMPTY",
+          "description": "The passed web document URL is empty."
+        },
+        {
+          "code": 400,
           "type": "WEBDOCUMENT_URL_INVALID",
           "description": "The specified webdocument URL is invalid."
         }
@@ -63565,6 +64135,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "BUSINESS_PEER_INVALID",
           "description": "Messages can't be set to the specified peer through the current business connection."
         },
@@ -63614,9 +64189,13 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": 400,
+          "code": 406,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -63923,6 +64502,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "REACTION_EMPTY",
+          "description": "Empty reaction provided."
         }
       ]
     },
@@ -64054,7 +64638,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.toggleTodoCompleted": {
       "name": "messages.toggleTodoCompleted",
@@ -64076,7 +64666,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "messages.transcribeAudio": {
       "name": "messages.transcribeAudio",
@@ -64097,6 +64693,15 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
+        {
+          "code": 400,
+          "type": "MSG_VOICE_MISSING"
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -64152,6 +64757,10 @@
       "errors": [
         {
           "code": 400,
+          "type": "ACCESS_FORBIDDEN"
+        },
+        {
+          "code": 400,
           "type": "INPUT_TEXT_EMPTY",
           "description": "The specified text is empty."
         },
@@ -64184,6 +64793,14 @@
           "code": 400,
           "type": "TRANSLATE_REQ_QUOTA_EXCEEDED",
           "description": "Translation is currently unavailable due to a temporary server-side lack of resources."
+        },
+        {
+          "code": 406,
+          "type": "TRANSLATIONS_DISABLED"
+        },
+        {
+          "code": 500,
+          "type": "TRANSLATION_TIMEOUT"
         }
       ]
     },
@@ -64316,6 +64933,11 @@
         },
         {
           "code": 400,
+          "type": "MESSAGE_TOO_LONG",
+          "description": "The provided message is too long."
+        },
+        {
+          "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         },
@@ -64386,6 +65008,16 @@
         },
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_PEER_INVALID",
+          "description": "Messages can't be set to the specified peer through the current business connection."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
         },
@@ -64393,6 +65025,11 @@
           "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_INVALID",
+          "description": "Invalid chat."
         },
         {
           "code": 400,
@@ -64657,6 +65294,10 @@
           "description": "Internal issues, try again later."
         },
         {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        },
+        {
           "code": 400,
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
@@ -64687,7 +65328,13 @@
           "name": "random_id",
           "description": "The ad's unique ID."
         }
-      }
+      },
+      "errors": [
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        }
+      ]
     },
     "payments.applyGiftCode": {
       "name": "payments.applyGiftCode",
@@ -64818,7 +65465,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 406,
+          "type": "PREMIUM_CURRENTLY_UNAVAILABLE",
+          "description": "You cannot currently purchase a Premium subscription."
+        }
+      ]
     },
     "payments.changeStarsSubscription": {
       "name": "payments.changeStarsSubscription",
@@ -64951,8 +65604,17 @@
       "errors": [
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "SAVED_ID_EMPTY"
         },
         {
           "code": 400,
@@ -65015,6 +65677,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "CURRENCY_TOTAL_AMOUNT_INVALID",
           "description": "The total amount of all prices is invalid."
         },
@@ -65037,6 +65704,11 @@
           "code": 400,
           "type": "STARS_INVOICE_INVALID",
           "description": "The specified Telegram Star invoice is invalid."
+        },
+        {
+          "code": 400,
+          "type": "USER_BOT_REQUIRED",
+          "description": "This method can only be called by a bot."
         },
         {
           "code": 400,
@@ -65187,6 +65859,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
@@ -65224,9 +65901,23 @@
           "description": "The specified boost_peer is invalid."
         },
         {
+          "code": 403,
+          "type": "BOT_ACCESS_FORBIDDEN"
+        },
+        {
           "code": 400,
           "type": "BOT_INVOICE_INVALID",
           "description": "The specified invoice is invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
+          "type": "GIFT_MONTHS_INVALID",
+          "description": "The value passed in invoice.inputInvoicePremiumGiftStars.months is invalid."
         },
         {
           "code": 400,
@@ -65245,8 +65936,32 @@
         },
         {
           "code": 400,
+          "type": "STARGIFT_ALREADY_CONVERTED"
+        },
+        {
+          "code": 400,
           "type": "STARGIFT_INVALID",
           "description": "The passed inputInvoiceStarGift is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_OWNER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_RESELL_NOT_ALLOWED"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_SLUG_INVALID"
+        },
+        {
+          "code": 406,
+          "type": "STARS_FORM_AMOUNT_MISMATCH"
+        },
+        {
+          "code": 400,
+          "type": "TO_ID_INVALID"
         },
         {
           "code": 400,
@@ -65342,7 +66057,17 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "STARGIFT_INVALID",
+          "description": "The passed inputInvoiceStarGift is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        }
+      ]
     },
     "payments.getSavedInfo": {
       "name": "payments.getSavedInfo",
@@ -65358,7 +66083,16 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "SAVED_ID_EMPTY"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_SLUG_INVALID"
+        }
+      ]
     },
     "payments.getSavedStarGifts": {
       "name": "payments.getSavedStarGifts",
@@ -65410,7 +66144,18 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "payments.getStarGiftUpgradePreview": {
       "name": "payments.getStarGiftUpgradePreview",
@@ -65419,7 +66164,14 @@
           "name": "gift_id",
           "description": " "
         }
-      }
+      },
+      "errors": [
+        {
+          "code": 400,
+          "type": "STARGIFT_INVALID",
+          "description": "The passed inputInvoiceStarGift is invalid."
+        }
+      ]
     },
     "payments.getStarGiftWithdrawalUrl": {
       "name": "payments.getStarGiftWithdrawalUrl",
@@ -65433,7 +66185,23 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PASSWORD_HASH_INVALID",
+          "description": "The provided password hash is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PASSWORD_TOO_FRESH_%d",
+          "description": "The password was modified less than 24 hours ago, try again in %d seconds."
+        },
+        {
+          "code": 400,
+          "type": "SESSION_TOO_FRESH_%d",
+          "description": "This session was created less than 24 hours ago, try again in %d seconds."
+        }
+      ]
     },
     "payments.getStarGifts": {
       "name": "payments.getStarGifts",
@@ -65477,6 +66245,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
+        },
         {
           "code": 400,
           "type": "USER_GIFT_UNAVAILABLE",
@@ -65651,6 +66424,15 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "BOT_ACCESS_FORBIDDEN"
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -65890,7 +66672,12 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "STARGIFT_SLUG_INVALID"
+        }
+      ]
     },
     "payments.launchPrepaidGiveaway": {
       "name": "payments.launchPrepaidGiveaway",
@@ -65993,6 +66780,14 @@
         },
         {
           "code": 400,
+          "type": "SAVED_ID_EMPTY"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_OWNER_INVALID"
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -66045,8 +66840,17 @@
       "errors": [
         {
           "code": 400,
+          "type": "FORM_UNSUPPORTED",
+          "description": "Please update your client."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PAYMENT_CREDENTIALS_INVALID"
         },
         {
           "code": 400,
@@ -66085,9 +66889,18 @@
           "description": "The transaction cannot be completed because the current Telegram Stars balance is too low."
         },
         {
+          "code": 403,
+          "type": "BOT_ACCESS_FORBIDDEN"
+        },
+        {
           "code": 400,
           "type": "BOT_INVOICE_INVALID",
           "description": "The specified invoice is invalid."
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
         },
         {
           "code": 400,
@@ -66106,13 +66919,35 @@
         },
         {
           "code": 400,
+          "type": "GIFT_STARS_INVALID",
+          "description": "The specified amount of stars is invalid."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 406,
+          "type": "PRECHECKOUT_FAILED"
+        },
+        {
+          "code": 400,
+          "type": "PURPOSE_INVALID"
         },
         {
           "code": 400,
           "type": "STARGIFT_USAGE_LIMITED",
           "description": "The gift is sold out."
+        },
+        {
+          "code": 400,
+          "type": "TO_ID_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "USER_ID_INVALID",
+          "description": "The provided user ID is invalid."
         }
       ]
     },
@@ -66135,7 +66970,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "payments.toggleStarGiftsPinnedToTop": {
       "name": "payments.toggleStarGiftsPinnedToTop",
@@ -66149,7 +66990,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        }
+      ]
     },
     "payments.transferStarGift": {
       "name": "payments.transferStarGift",
@@ -66166,8 +67013,38 @@
       "errors": [
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PAYMENT_REQUIRED"
+        },
+        {
+          "code": 400,
+          "type": "PEER_ID_INVALID",
+          "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "SAVED_ID_EMPTY"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_NOT_FOUND"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_OWNER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_PEER_INVALID"
         }
       ]
     },
@@ -66183,7 +67060,16 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "SAVED_ID_EMPTY"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_NOT_FOUND"
+        }
+      ]
     },
     "payments.upgradeStarGift": {
       "name": "payments.upgradeStarGift",
@@ -66207,8 +67093,25 @@
       "errors": [
         {
           "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PAYMENT_REQUIRED"
+        },
+        {
+          "code": 400,
+          "type": "SAVED_ID_EMPTY"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_ALREADY_CONVERTED"
         }
       ]
     },
@@ -66303,6 +67206,11 @@
           "code": 400,
           "type": "CALL_PROTOCOL_FLAGS_INVALID",
           "description": "Call protocol flags invalid."
+        },
+        {
+          "code": 400,
+          "type": "CALL_PROTOCOL_LAYER_INVALID",
+          "description": "The specified protocol layer version range is invalid."
         }
       ]
     },
@@ -66418,8 +67326,7 @@
           "name": "video_stopped",
           "description": "If set, our video stream is disabled (can only be used if join is set)."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "phone.createGroupCall": {
       "name": "phone.createGroupCall",
@@ -66502,7 +67409,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "MESSAGE_ID_INVALID",
+          "description": "The provided message id is invalid."
+        }
+      ]
     },
     "phone.deleteConferenceCallParticipants": {
       "name": "phone.deleteConferenceCallParticipants",
@@ -66535,7 +67448,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.discardCall": {
       "name": "phone.discardCall",
@@ -66833,7 +67752,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.getGroupCallJoinAs": {
       "name": "phone.getGroupCallJoinAs",
@@ -66847,6 +67772,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -66979,7 +67909,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.inviteToGroupCall": {
       "name": "phone.inviteToGroupCall",
@@ -67249,6 +68185,10 @@
           "description": "The specified user was deleted."
         },
         {
+          "code": 500,
+          "type": "PARTICIPANT_CALL_FAILED"
+        },
+        {
           "code": 400,
           "type": "PARTICIPANT_VERSION_OUTDATED",
           "description": "The other participant does not use an up to date telegram client with support for calls."
@@ -67361,7 +68301,13 @@
           "description": " "
         }
       },
-      "bot_can_use": true
+      "errors": [
+        {
+          "code": 400,
+          "type": "GROUPCALL_INVALID",
+          "description": "The specified group call is invalid."
+        }
+      ]
     },
     "phone.sendSignalingData": {
       "name": "phone.sendSignalingData",
@@ -67990,8 +68936,17 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_PRIVATE",
+          "description": "You haven't joined this channel/supergroup."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -69025,6 +69980,11 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
         },
@@ -69074,6 +70034,20 @@
         }
       },
       "errors": [
+        {
+          "code": 403,
+          "type": "BOT_ACCESS_FORBIDDEN"
+        },
+        {
+          "code": 400,
+          "type": "BUSINESS_CONNECTION_INVALID",
+          "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -69464,6 +70438,10 @@
           "code": 400,
           "type": "STORY_ID_EMPTY",
           "description": "You specified no story IDs."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ]
     },
@@ -69904,6 +70882,16 @@
         },
         {
           "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_ADMIN_REQUIRED",
+          "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
           "type": "IMAGE_PROCESS_FAILED",
           "description": "Failure while processing image."
         },
@@ -70107,6 +71095,11 @@
           "description": "channel/supergroup not available."
         },
         {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -70115,6 +71108,10 @@
           "code": 400,
           "type": "FROM_MESSAGE_BOT_DISABLED",
           "description": "Bots can't use fromMessage min constructors."
+        },
+        {
+          "code": 400,
+          "type": "FROZEN_PARTICIPANT_MISSING"
         },
         {
           "code": 400,
@@ -70145,6 +71142,10 @@
           "code": 400,
           "type": "RANGES_INVALID",
           "description": "Invalid range provided."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -70224,6 +71225,11 @@
           "description": "You haven't joined this channel/supergroup."
         },
         {
+          "code": 400,
+          "type": "CHAT_NOT_MODIFIED",
+          "description": "No changes were made to chat information because the new information you passed is identical to the current information."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -70254,6 +71260,10 @@
           "description": "You provided a random ID that was already used."
         },
         {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        },
+        {
           "code": 400,
           "type": "USERNAME_INVALID",
           "description": "The provided username is not valid."
@@ -70270,6 +71280,18 @@
       "name": "updates.getState",
       "description": [
         "Returns a current state of updates."
+      ],
+      "parameters": {
+        "-504": {
+          "name": "-504",
+          "description": " "
+        }
+      },
+      "errors": [
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        }
       ],
       "bot_can_use": true
     },
@@ -70300,6 +71322,11 @@
           "code": 400,
           "type": "FILE_TOKEN_INVALID",
           "description": "The master DC did not accept the file_token (e.g., the token has expired). Continue downloading the file from the master DC using upload.getFile."
+        },
+        {
+          "code": 404,
+          "type": "METHOD_INVALID",
+          "description": "The specified method is invalid."
         }
       ]
     },
@@ -70336,6 +71363,10 @@
           "code": 400,
           "type": "RSA_DECRYPT_FAILED",
           "description": "Internal RSA decryption failed."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         }
       ],
       "bot_can_use": true
@@ -70412,6 +71443,11 @@
           "code": 400,
           "type": "FILE_REFERENCE_EXPIRED",
           "description": "File reference expired, it must be refetched as described in the documentation."
+        },
+        {
+          "code": 400,
+          "type": "FILE_REFERENCE_INVALID",
+          "description": "The specified file reference is invalid."
         },
         {
           "code": 420,
@@ -70687,6 +71723,10 @@
           "description": "Invalid message ID provided."
         },
         {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
+        },
+        {
           "code": 400,
           "type": "USERNAME_OCCUPIED",
           "description": "The provided username is already occupied."
@@ -70715,8 +71755,7 @@
           "name": "id",
           "description": "Users to check."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "users.getUsers": {
       "name": "users.getUsers",
@@ -70754,6 +71793,10 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": -504,
+          "type": "UNHANDLED_EXCEPTION"
         },
         {
           "code": 400,
@@ -70813,6 +71856,10 @@
       "type": "ABOUT_TOO_LONG",
       "description": "About string too long."
     },
+    "ACCESS_FORBIDDEN": {
+      "code": 400,
+      "type": "ACCESS_FORBIDDEN"
+    },
     "ACCESS_TOKEN_EXPIRED": {
       "code": 400,
       "type": "ACCESS_TOKEN_EXPIRED",
@@ -70857,6 +71904,15 @@
       "code": 400,
       "type": "ALBUM_PHOTOS_TOO_MANY",
       "description": "You have uploaded too many profile photos, delete some before retrying."
+    },
+    "ALLOW_PAYMENT_REQUIRED": {
+      "code": 406,
+      "type": "ALLOW_PAYMENT_REQUIRED"
+    },
+    "ALLOW_PAYMENT_REQUIRED_%d": {
+      "code": 403,
+      "type": "ALLOW_PAYMENT_REQUIRED_%d",
+      "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
     },
     "ANONYMOUS_REACTIONS_DISABLED": {
       "code": 403,
@@ -70977,6 +72033,10 @@
       "code": 400,
       "type": "BOTS_TOO_MUCH",
       "description": "There are too many bots in this chat/channel."
+    },
+    "BOT_ACCESS_FORBIDDEN": {
+      "code": 403,
+      "type": "BOT_ACCESS_FORBIDDEN"
     },
     "BOT_ALREADY_DISABLED": {
       "code": 400,
@@ -71103,6 +72163,11 @@
       "type": "BUSINESS_ADDRESS_ACTIVE",
       "description": "The user is currently advertising a Business Location, the location may only be changed (or removed) using account.updateBusinessLocation ».  ."
     },
+    "BUSINESS_CONNECTION_INVALID": {
+      "code": 400,
+      "type": "BUSINESS_CONNECTION_INVALID",
+      "description": "The connection_id passed to the wrapping invokeWithBusinessConnection call is invalid."
+    },
     "BUSINESS_PEER_INVALID": {
       "code": 400,
       "type": "BUSINESS_PEER_INVALID",
@@ -71203,6 +72268,11 @@
       "type": "CALL_PROTOCOL_FLAGS_INVALID",
       "description": "Call protocol flags invalid."
     },
+    "CALL_PROTOCOL_LAYER_INVALID": {
+      "code": 400,
+      "type": "CALL_PROTOCOL_LAYER_INVALID",
+      "description": "The specified protocol layer version range is invalid."
+    },
     "CDN_METHOD_INVALID": {
       "code": 400,
       "type": "CDN_METHOD_INVALID",
@@ -71242,6 +72312,11 @@
       "code": 400,
       "type": "CHANNEL_INVALID",
       "description": "The provided channel is invalid."
+    },
+    "CHANNEL_MONOFORUM_UNSUPPORTED": {
+      "code": 400,
+      "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+      "description": "Monoforums do not support this feature."
     },
     "CHANNEL_PARICIPANT_MISSING": {
       "code": 400,
@@ -71354,7 +72429,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 500,
+      "code": 400,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -71457,6 +72532,11 @@
       "code": 403,
       "type": "CHAT_SEND_VOICES_FORBIDDEN",
       "description": "You can't send voice recordings in this chat."
+    },
+    "CHAT_SEND_WEBPAGE_FORBIDDEN": {
+      "code": 403,
+      "type": "CHAT_SEND_WEBPAGE_FORBIDDEN",
+      "description": "You can't send webpage previews to this chat."
     },
     "CHAT_TITLE_EMPTY": {
       "code": 400,
@@ -71718,6 +72798,11 @@
       "type": "ERROR_TEXT_EMPTY",
       "description": "The provided error message is empty."
     },
+    "EXPIRES_AT_INVALID": {
+      "code": 400,
+      "type": "EXPIRES_AT_INVALID",
+      "description": "The specified expires_at timestamp is invalid."
+    },
     "EXPIRE_DATE_INVALID": {
       "code": 400,
       "type": "EXPIRE_DATE_INVALID",
@@ -71908,6 +72993,14 @@
       "type": "FROM_PEER_INVALID",
       "description": "The specified from_id is invalid."
     },
+    "FROZEN_METHOD_INVALID": {
+      "code": 420,
+      "type": "FROZEN_METHOD_INVALID"
+    },
+    "FROZEN_PARTICIPANT_MISSING": {
+      "code": 400,
+      "type": "FROZEN_PARTICIPANT_MISSING"
+    },
     "GAME_BOT_INVALID": {
       "code": 400,
       "type": "GAME_BOT_INVALID",
@@ -71923,6 +73016,11 @@
       "type": "GEO_POINT_INVALID",
       "description": "Invalid geoposition provided."
     },
+    "GIFT_MONTHS_INVALID": {
+      "code": 400,
+      "type": "GIFT_MONTHS_INVALID",
+      "description": "The value passed in invoice.inputInvoicePremiumGiftStars.months is invalid."
+    },
     "GIFT_SLUG_EXPIRED": {
       "code": 400,
       "type": "GIFT_SLUG_EXPIRED",
@@ -71932,6 +73030,11 @@
       "code": 400,
       "type": "GIFT_SLUG_INVALID",
       "description": "The specified slug is invalid."
+    },
+    "GIFT_STARS_INVALID": {
+      "code": 400,
+      "type": "GIFT_STARS_INVALID",
+      "description": "The specified amount of stars is invalid."
     },
     "GIF_CONTENT_TYPE_INVALID": {
       "code": 400,
@@ -72114,7 +73217,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -72344,7 +73447,7 @@
       "description": "The message is too old, the requested information is not available."
     },
     "METHOD_INVALID": {
-      "code": 400,
+      "code": 404,
       "type": "METHOD_INVALID",
       "description": "The specified method is invalid."
     },
@@ -72362,6 +73465,10 @@
       "code": 400,
       "type": "MSG_TOO_OLD",
       "description": "chat_read_mark_expire_period seconds have passed since the message was sent, read receipts were deleted."
+    },
+    "MSG_VOICE_MISSING": {
+      "code": 400,
+      "type": "MSG_VOICE_MISSING"
     },
     "MSG_WAIT_FAILED": {
       "code": 500,
@@ -72394,7 +73501,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -72443,10 +73550,18 @@
       "type": "PACK_TITLE_INVALID",
       "description": "The stickerpack title is invalid."
     },
+    "PARENT_PEER_INVALID": {
+      "code": 400,
+      "type": "PARENT_PEER_INVALID"
+    },
     "PARTICIPANTS_TOO_FEW": {
       "code": 400,
       "type": "PARTICIPANTS_TOO_FEW",
       "description": "Not enough participants."
+    },
+    "PARTICIPANT_CALL_FAILED": {
+      "code": 500,
+      "type": "PARTICIPANT_CALL_FAILED"
     },
     "PARTICIPANT_ID_INVALID": {
       "code": 400,
@@ -72498,10 +73613,18 @@
       "type": "PASSWORD_TOO_FRESH_%d",
       "description": "The password was modified less than 24 hours ago, try again in %d seconds."
     },
+    "PAYMENT_CREDENTIALS_INVALID": {
+      "code": 400,
+      "type": "PAYMENT_CREDENTIALS_INVALID"
+    },
     "PAYMENT_PROVIDER_INVALID": {
       "code": 400,
       "type": "PAYMENT_PROVIDER_INVALID",
       "description": "The specified payment provider is invalid."
+    },
+    "PAYMENT_REQUIRED": {
+      "code": 400,
+      "type": "PAYMENT_REQUIRED"
     },
     "PAYMENT_UNSUPPORTED": {
       "code": 406,
@@ -72713,10 +73836,19 @@
       "type": "POLL_VOTE_REQUIRED",
       "description": "Cast a vote in the poll before calling this method."
     },
+    "PRECHECKOUT_FAILED": {
+      "code": 406,
+      "type": "PRECHECKOUT_FAILED"
+    },
     "PREMIUM_ACCOUNT_REQUIRED": {
       "code": 400,
       "type": "PREMIUM_ACCOUNT_REQUIRED",
       "description": "A premium account is required to execute this action."
+    },
+    "PREMIUM_CURRENTLY_UNAVAILABLE": {
+      "code": 406,
+      "type": "PREMIUM_CURRENTLY_UNAVAILABLE",
+      "description": "You cannot currently purchase a Premium subscription."
     },
     "PREMIUM_SUB_ACTIVE_UNTIL_%d": {
       "code": 420,
@@ -72739,7 +73871,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 406,
+      "code": 403,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -72762,6 +73894,10 @@
       "code": 400,
       "type": "PUBLIC_KEY_REQUIRED",
       "description": "A public key is required."
+    },
+    "PURPOSE_INVALID": {
+      "code": 400,
+      "type": "PURPOSE_INVALID"
     },
     "QUERY_ID_EMPTY": {
       "code": 400,
@@ -72828,6 +73964,10 @@
       "type": "RANDOM_ID_EMPTY",
       "description": "Random ID empty."
     },
+    "RANDOM_ID_EXPIRED": {
+      "code": 400,
+      "type": "RANDOM_ID_EXPIRED"
+    },
     "RANDOM_ID_INVALID": {
       "code": 400,
       "type": "RANDOM_ID_INVALID",
@@ -72842,6 +73982,10 @@
       "code": 400,
       "type": "RANGES_INVALID",
       "description": "Invalid range provided."
+    },
+    "REACTIONS_COUNT_INVALID": {
+      "code": 400,
+      "type": "REACTIONS_COUNT_INVALID"
     },
     "REACTIONS_TOO_MANY": {
       "code": 400,
@@ -72897,6 +74041,10 @@
       "code": 400,
       "type": "REPLY_TO_INVALID",
       "description": "The specified reply_to field is invalid."
+    },
+    "REPLY_TO_MONOFORUM_PEER_INVALID": {
+      "code": 400,
+      "type": "REPLY_TO_MONOFORUM_PEER_INVALID"
     },
     "REPLY_TO_USER_INVALID": {
       "code": 400,
@@ -72967,6 +74115,10 @@
       "code": 400,
       "type": "RSA_DECRYPT_FAILED",
       "description": "Internal RSA decryption failed."
+    },
+    "SAVED_ID_EMPTY": {
+      "code": 400,
+      "type": "SAVED_ID_EMPTY"
     },
     "SCHEDULE_BOT_NOT_ALLOWED": {
       "code": 400,
@@ -73128,10 +74280,34 @@
       "type": "SRP_PASSWORD_CHANGED",
       "description": "Password has changed."
     },
+    "STARGIFT_ALREADY_CONVERTED": {
+      "code": 400,
+      "type": "STARGIFT_ALREADY_CONVERTED"
+    },
     "STARGIFT_INVALID": {
       "code": 400,
       "type": "STARGIFT_INVALID",
       "description": "The passed inputInvoiceStarGift is invalid."
+    },
+    "STARGIFT_NOT_FOUND": {
+      "code": 400,
+      "type": "STARGIFT_NOT_FOUND"
+    },
+    "STARGIFT_OWNER_INVALID": {
+      "code": 400,
+      "type": "STARGIFT_OWNER_INVALID"
+    },
+    "STARGIFT_PEER_INVALID": {
+      "code": 400,
+      "type": "STARGIFT_PEER_INVALID"
+    },
+    "STARGIFT_RESELL_NOT_ALLOWED": {
+      "code": 400,
+      "type": "STARGIFT_RESELL_NOT_ALLOWED"
+    },
+    "STARGIFT_SLUG_INVALID": {
+      "code": 400,
+      "type": "STARGIFT_SLUG_INVALID"
     },
     "STARGIFT_USAGE_LIMITED": {
       "code": 400,
@@ -73162,6 +74338,14 @@
       "code": 400,
       "type": "STARREF_PERMILLE_TOO_LOW",
       "description": "The specified commission_permille is too low: the minimum and maximum values for this parameter are contained in the starref_min_commission_permille and starref_max_commission_permille client configuration parameters."
+    },
+    "STARS_AMOUNT_INVALID": {
+      "code": 400,
+      "type": "STARS_AMOUNT_INVALID"
+    },
+    "STARS_FORM_AMOUNT_MISMATCH": {
+      "code": 406,
+      "type": "STARS_FORM_AMOUNT_MISMATCH"
     },
     "STARS_INVOICE_INVALID": {
       "code": 400,
@@ -73413,6 +74597,10 @@
       "type": "THEME_PARAMS_INVALID",
       "description": "The specified theme_params field is invalid."
     },
+    "THEME_SLUG_INVALID": {
+      "code": 400,
+      "type": "THEME_SLUG_INVALID"
+    },
     "THEME_TITLE_INVALID": {
       "code": 400,
       "type": "THEME_TITLE_INVALID",
@@ -73493,6 +74681,10 @@
       "type": "TOPIC_TITLE_EMPTY",
       "description": "The specified topic title is empty."
     },
+    "TO_ID_INVALID": {
+      "code": 400,
+      "type": "TO_ID_INVALID"
+    },
     "TO_LANG_INVALID": {
       "code": 400,
       "type": "TO_LANG_INVALID",
@@ -73518,6 +74710,14 @@
       "type": "TRANSLATE_REQ_QUOTA_EXCEEDED",
       "description": "Translation is currently unavailable due to a temporary server-side lack of resources."
     },
+    "TRANSLATIONS_DISABLED": {
+      "code": 406,
+      "type": "TRANSLATIONS_DISABLED"
+    },
+    "TRANSLATION_TIMEOUT": {
+      "code": 500,
+      "type": "TRANSLATION_TIMEOUT"
+    },
     "TTL_DAYS_INVALID": {
       "code": 400,
       "type": "TTL_DAYS_INVALID",
@@ -73542,6 +74742,14 @@
       "code": -503,
       "type": "Timeout",
       "description": "Timeout while fetching data."
+    },
+    "UNHANDLED_EXCEPTION": {
+      "code": -504,
+      "type": "UNHANDLED_EXCEPTION"
+    },
+    "UNSUPPORTED": {
+      "code": 400,
+      "type": "UNSUPPORTED"
     },
     "UNTIL_DATE_INVALID": {
       "code": 400,
@@ -73699,7 +74907,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 403,
+      "code": 400,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
@@ -73719,7 +74927,7 @@
       "description": "Cannot generate a link to stories posted by a peer without a username."
     },
     "USER_RESTRICTED": {
-      "code": 406,
+      "code": 403,
       "type": "USER_RESTRICTED",
       "description": "You're spamreported, you can't create channels or chats."
     },
