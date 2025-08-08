@@ -20017,6 +20017,13 @@
     },
     "messageActionStarGiftUnique": {
       "name": "messageActionStarGiftUnique",
+      "description": [
+        "A gift »¹ was upgraded to a collectible gift »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "can_export_at": {
           "name": "can_export_at",
@@ -20043,7 +20050,7 @@
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The gift that was upgraded."
         },
         "peer": {
           "name": "peer",
@@ -25819,10 +25826,18 @@
     },
     "payments.starGiftUpgradePreview": {
       "name": "payments.starGiftUpgradePreview",
+      "description": [
+        "A preview of the possible attributes (chosen randomly) a gift »¹ can receive after upgrading it to a collectible gift »², see here »³ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "sample_attributes": {
           "name": "sample_attributes",
-          "description": " "
+          "description": "Possible gift attributes"
         }
       }
     },
@@ -30130,34 +30145,43 @@
     },
     "starGiftAttributeBackdrop": {
       "name": "starGiftAttributeBackdrop",
+      "description": [
+        "The backdrop of a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "backdrop_id": {
           "name": "backdrop_id",
-          "description": " "
+          "description": "Unique ID of the backdrop"
         },
         "center_color": {
           "name": "center_color",
-          "description": " "
+          "description": "Color of the center of the backdrop in RGB24 format."
         },
         "edge_color": {
           "name": "edge_color",
-          "description": " "
+          "description": "Color of the edges of the backdrop in RGB24 format."
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "Name of the backdrop"
         },
         "pattern_color": {
           "name": "pattern_color",
-          "description": " "
+          "description": "Color of the starGiftAttributePattern¹ applied on the backdrop in RGB24 format.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributePattern"
+          ]
         },
         "rarity_permille": {
           "name": "rarity_permille",
-          "description": " "
+          "description": "The number of upgraded gifts that receive this backdrop for each 1000 gifts upgraded."
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Color of the text on the backdrop in RGB24 format."
         }
       }
     },
@@ -30203,27 +30227,43 @@
     },
     "starGiftAttributeModel": {
       "name": "starGiftAttributeModel",
+      "description": [
+        "The model of a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "document": {
           "name": "document",
-          "description": " "
+          "description": "The sticker¹ representing the upgraded gift",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "Name of the model"
         },
         "rarity_permille": {
           "name": "rarity_permille",
-          "description": " "
+          "description": "The number of upgraded gifts that receive this backdrop for each 1000 gifts upgraded."
         }
       }
     },
     "starGiftAttributeOriginalDetails": {
       "name": "starGiftAttributeOriginalDetails",
+      "description": [
+        "Info about the sender, receiver and message attached to the original gift »¹, before it was upgraded to a collectible gift »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the gift sent."
         },
         "flags": {
           "name": "flags",
@@ -30234,32 +30274,39 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Original message attached to the gift, if present."
         },
         "recipient_id": {
           "name": "recipient_id",
-          "description": " "
+          "description": "Original receiver of the gift."
         },
         "sender_id": {
           "name": "sender_id",
-          "description": " "
+          "description": "Original sender of the gift, absent if the gift was private."
         }
       }
     },
     "starGiftAttributePattern": {
       "name": "starGiftAttributePattern",
+      "description": [
+        "A sticker¹ applied on the backdrop of a collectible gift »² using a repeating pattern."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stickers",
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "document": {
           "name": "document",
-          "description": " "
+          "description": "The symbol"
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "Name of the symbol"
         },
         "rarity_permille": {
           "name": "rarity_permille",
-          "description": " "
+          "description": "The number of upgraded gifts that receive this backdrop for each 1000 gifts upgraded."
         }
       }
     },
@@ -41254,7 +41301,13 @@
       ]
     },
     "StarGiftAttribute": {
-      "name": "StarGiftAttribute"
+      "name": "StarGiftAttribute",
+      "description": [
+        "An attribute of a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "StarGiftAttributeCounter": {
       "name": "StarGiftAttributeCounter"
@@ -42418,7 +42471,15 @@
       "name": "payments.SavedStarGifts"
     },
     "payments.StarGiftUpgradePreview": {
-      "name": "payments.StarGiftUpgradePreview"
+      "name": "payments.StarGiftUpgradePreview",
+      "description": [
+        "A preview of the possible attributes (chosen randomly) a gift »¹ can receive after upgrading it to a collectible gift »², see here »³ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "payments.StarGiftWithdrawalUrl": {
       "name": "payments.StarGiftWithdrawalUrl"
@@ -44879,7 +44940,7 @@
         },
         "require_payment": {
           "name": "require_payment",
-          "description": "If set, requires the user to pay in order to send us messages (can only be used by monoforums, not users, i.e. parent_peer must be set if this flag is set; users must instead use the inputPrivacyKeyNoPaidMessages¹                                privacy setting² to remove a previously added exemption). If not set, allows the user to send us messages without paying (can be used by both monoforums and users).",
+          "description": "If set, requires the user to pay in order to send us messages (can only be used by monoforums, not users, i.e. parent_peer must be set if this flag is set; users must instead use the inputPrivacyKeyNoPaidMessages¹                                                                privacy setting² to remove a previously added exemption). If not set, allows the user to send us messages without paying (can be used by both monoforums and users).",
           "links": [
             "https://core.telegram.org/constructor/inputPrivacyKeyNoPaidMessages",
             "https://core.telegram.org/api/privacy"
@@ -66159,10 +66220,18 @@
     },
     "payments.getStarGiftUpgradePreview": {
       "name": "payments.getStarGiftUpgradePreview",
+      "description": [
+        "Obtain a preview of the possible attributes (chosen randomly) a gift »¹ can receive after upgrading it to a collectible gift »², see here »³ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "parameters": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "The gift to upgrade."
         }
       },
       "errors": [
