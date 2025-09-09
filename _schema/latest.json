@@ -5461,35 +5461,47 @@
     },
     "botVerification": {
       "name": "botVerification",
+      "description": [
+        "Describes a bot verification icon »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/verification"
+      ],
       "fields": {
         "bot_id": {
           "name": "bot_id",
-          "description": " "
+          "description": "ID of the bot that verified this peer"
         },
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Verification description"
         },
         "icon": {
           "name": "icon",
-          "description": " "
+          "description": "Verification icon"
         }
       }
     },
     "botVerifierSettings": {
       "name": "botVerifierSettings",
+      "description": [
+        "Info about the current verifier bot »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/verification"
+      ],
       "fields": {
         "can_modify_custom_description": {
           "name": "can_modify_custom_description",
-          "description": " "
+          "description": "Indicates whether the bot is allowed to set a custom description field for individual verified peers, different from the custom_description provided here."
         },
         "company": {
           "name": "company",
-          "description": " "
+          "description": "The name of the organization that provides the verification"
         },
         "custom_description": {
           "name": "custom_description",
-          "description": " "
+          "description": "An optional default description for the verification"
         },
         "flags": {
           "name": "flags",
@@ -5500,7 +5512,7 @@
         },
         "icon": {
           "name": "icon",
-          "description": " "
+          "description": "Verification icon"
         }
       }
     },
@@ -14620,14 +14632,25 @@
     },
     "inputInvoiceBusinessBotTransferStars": {
       "name": "inputInvoiceBusinessBotTransferStars",
+      "description": [
+        "Transfer stars from the balance of a user account connected to a business bot¹, to the balance of the business bot², see here »³ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/api/business#transferring-stars-from-a-business-account-to-the-business-bot"
+      ],
       "fields": {
         "bot": {
           "name": "bot",
-          "description": " "
+          "description": "Always inputUserSelf¹.",
+          "links": [
+            "https://core.telegram.org/constructor/inputUserSelf"
+          ]
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "The number of stars to transfer."
         }
       }
     },
@@ -14786,32 +14809,53 @@
     },
     "inputInvoiceStarGiftResale": {
       "name": "inputInvoiceStarGiftResale",
+      "description": [
+        "Used to buy a collectible gift¹ currently up on resale, see here² for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+      ],
       "fields": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Slug of the gift to buy."
         },
         "to_id": {
           "name": "to_id",
-          "description": " "
+          "description": "The receiver of the gift."
         }
       }
     },
     "inputInvoiceStarGiftTransfer": {
       "name": "inputInvoiceStarGiftTransfer",
+      "description": [
+        "Used to pay to transfer a collectible gift to another peer¹, see the gifts »² documentation for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#transferring-collectible-gifts",
+        "https://core.telegram.org/api/gifts#transferring-collectible-gifts"
+      ],
       "fields": {
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The identifier of the received gift"
         },
         "to_id": {
           "name": "to_id",
-          "description": " "
+          "description": "The destination peer"
         }
       }
     },
     "inputInvoiceStarGiftUpgrade": {
       "name": "inputInvoiceStarGiftUpgrade",
+      "description": [
+        "Used to pay to upgrade a Gift to a collectible gift¹, see the collectible gifts »² documentation for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -14822,11 +14866,14 @@
         },
         "keep_original_details": {
           "name": "keep_original_details",
-          "description": " "
+          "description": "Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a starGiftAttributeOriginalDetails¹ attribute.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails"
+          ]
         },
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The identifier of the received gift to upgrade."
         }
       }
     },
@@ -30370,7 +30417,7 @@
       "fields": {
         "attributes": {
           "name": "attributes",
-          "description": " "
+          "description": "Collectible attributes"
         },
         "availability_issued": {
           "name": "availability_issued",
@@ -30393,11 +30440,11 @@
         },
         "id": {
           "name": "id",
-          "description": "Identifier of the gift."
+          "description": "Identifier of the collectible gift."
         },
         "num": {
           "name": "num",
-          "description": " "
+          "description": "Unique identifier of this collectible gift among all collectible gifts of the same type."
         },
         "owner_address": {
           "name": "owner_address",
@@ -30417,7 +30464,11 @@
         },
         "resell_stars": {
           "name": "resell_stars",
-          "description": " "
+          "description": "The number of stars¹ the user has to pay in order to put the gift up for sale on the marketplace »².",
+          "links": [
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+          ]
         },
         "slug": {
           "name": "slug",
@@ -30425,7 +30476,7 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Collectible title."
         }
       }
     },
@@ -38185,23 +38236,29 @@
     },
     "users.users": {
       "name": "users.users",
+      "description": [
+        "Describes a list of users (or bots)."
+      ],
       "fields": {
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users"
         }
       }
     },
     "users.usersSlice": {
       "name": "users.usersSlice",
+      "description": [
+        "Describes a partial list of users."
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of users (bigger than the users specified in users)"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Subset of users."
         }
       }
     },
@@ -39183,10 +39240,22 @@
       ]
     },
     "BotVerification": {
-      "name": "BotVerification"
+      "name": "BotVerification",
+      "description": [
+        "Describes a bot verification icon »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/verification"
+      ]
     },
     "BotVerifierSettings": {
-      "name": "BotVerifierSettings"
+      "name": "BotVerifierSettings",
+      "description": [
+        "Info about the current verifier bot »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/verification"
+      ]
     },
     "BusinessAwayMessage": {
       "name": "BusinessAwayMessage",
@@ -66789,10 +66858,17 @@
     },
     "payments.getUniqueStarGift": {
       "name": "payments.getUniqueStarGift",
+      "description": [
+        "Obtain info about a collectible gift »¹ using a slug obtained from a collectible gift link »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/links#collectible-gift-link"
+      ],
       "parameters": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "The slug."
         }
       },
       "errors": [
@@ -67123,14 +67199,22 @@
     },
     "payments.transferStarGift": {
       "name": "payments.transferStarGift",
+      "description": [
+        "Transfer a collectible gift¹ to another user or channel: can only be used if transfer is free (i.e. messageActionStarGiftUnique².transfer_stars is not set); see here »³ for more info on the full flow (including the different flow to use in case the transfer isn't free)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/constructor/messageActionStarGiftUnique",
+        "https://core.telegram.org/api/gifts#transferring-collectible-gifts"
+      ],
       "parameters": {
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The gift to transfer."
         },
         "to_id": {
           "name": "to_id",
-          "description": " "
+          "description": "Destination peer."
         }
       },
       "errors": [
@@ -67196,6 +67280,14 @@
     },
     "payments.upgradeStarGift": {
       "name": "payments.upgradeStarGift",
+      "description": [
+        "Upgrade a gift¹ to a collectible gift²: can only be used if the upgrade was already paid by the gift sender; see here »³ for more info on the full flow (including the different flow to use in case the upgrade was not paid by the gift sender)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -67206,11 +67298,14 @@
         },
         "keep_original_details": {
           "name": "keep_original_details",
-          "description": " "
+          "description": "Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a starGiftAttributeOriginalDetails¹ attribute.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails"
+          ]
         },
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The gift to upgrade"
         }
       },
       "errors": [
@@ -74770,7 +74865,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -74780,7 +74875,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
