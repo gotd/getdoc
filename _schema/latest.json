@@ -11189,12 +11189,21 @@
         },
         "until": {
           "name": "until",
-          "description": " "
+          "description": "If set, the emoji status will be active until the specified unixtime."
         }
       }
     },
     "emojiStatusCollectible": {
       "name": "emojiStatusCollectible",
+      "description": [
+        "An owned collectible gift »¹ as emoji status.",
+        "Cannot be passed to account.updateEmojiStatus¹, must be converted to an inputEmojiStatusCollectible² first before passing it to that method."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/method/account.updateEmojiStatus",
+        "https://core.telegram.org/constructor/inputEmojiStatusCollectible"
+      ],
       "fields": {
         "center_color": {
           "name": "center_color",
@@ -11202,11 +11211,17 @@
         },
         "collectible_id": {
           "name": "collectible_id",
-          "description": " "
+          "description": "ID of the collectible (from starGiftUnique¹.id).",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ representing the status.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "edge_color": {
           "name": "edge_color",
@@ -11229,7 +11244,11 @@
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Unique identifier of the collectible that may be used to create a collectible gift link »¹ for the current collectible, or to fetch further info about the collectible using payments.getUniqueStarGift².",
+          "links": [
+            "https://core.telegram.org/api/links#collectible-gift-link",
+            "https://core.telegram.org/method/payments.getUniqueStarGift"
+          ]
         },
         "text_color": {
           "name": "text_color",
@@ -11237,7 +11256,7 @@
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Name of the collectible."
         },
         "until": {
           "name": "until",
@@ -14234,10 +14253,24 @@
     },
     "inputEmojiStatusCollectible": {
       "name": "inputEmojiStatusCollectible",
+      "description": [
+        "An owned collectible gift »¹ as emoji status: can only be used in account.updateEmojiStatus², is never returned by the API.",
+        "Note that once set, the status will be returned to users as a emojiStatusCollectible¹ constructor, instead (which cannot be passed to account.updateEmojiStatus², and must be converted to an inputEmojiStatusCollectible³ first)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/method/account.updateEmojiStatus",
+        "https://core.telegram.org/constructor/emojiStatusCollectible",
+        "https://core.telegram.org/method/account.updateEmojiStatus",
+        "https://core.telegram.org/constructor/inputEmojiStatusCollectible"
+      ],
       "fields": {
         "collectible_id": {
           "name": "collectible_id",
-          "description": " "
+          "description": "ID of the collectible (from starGiftUnique¹.id).",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -14248,7 +14281,7 @@
         },
         "until": {
           "name": "until",
-          "description": " "
+          "description": "If set, the emoji status will be active until the specified unixtime."
         }
       }
     },
@@ -18497,7 +18530,7 @@
     "mediaAreaCoordinates": {
       "name": "mediaAreaCoordinates",
       "description": [
-        "Coordinates and size of a clicable rectangular area on top of a story."
+        "Coordinates and size of a clickable rectangular area on top of a story."
       ],
       "fields": {
         "flags": {
@@ -18565,6 +18598,12 @@
     },
     "mediaAreaStarGift": {
       "name": "mediaAreaStarGift",
+      "description": [
+        "Represents a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "coordinates": {
           "name": "coordinates",
@@ -18572,7 +18611,11 @@
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "slug from starGiftUnique¹.slug, that can be resolved as specified here »².",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique",
+            "https://core.telegram.org/api/gifts#sharing-and-getting-info-about-a-collectible-gift"
+          ]
         }
       }
     },
@@ -20055,10 +20098,10 @@
         },
         "saved": {
           "name": "saved",
-          "description": "Whether this gift was added to the destination user's profile (may be toggled using payments.saveStarGift¹ and fetched using payments.getUserStarGifts²)",
+          "description": "Whether this gift was added to the destination user's profile (may be toggled using payments.saveStarGift¹ and fetched using payments.getSavedStarGifts²)",
           "links": [
             "https://core.telegram.org/method/payments.saveStarGift",
-            "https://core.telegram.org/method/payments.getUserStarGifts"
+            "https://core.telegram.org/method/payments.getSavedStarGifts"
           ]
         },
         "saved_id": {
@@ -24096,14 +24139,21 @@
     },
     "messages.webPagePreview": {
       "name": "messages.webPagePreview",
+      "description": [
+        "Represents a webpage preview."
+      ],
       "fields": {
         "media": {
           "name": "media",
-          "description": " "
+          "description": "The messageMediaWebPage¹ or a messageMediaEmpty² if there is no preview.",
+          "links": [
+            "https://core.telegram.org/constructor/messageMediaWebPage",
+            "https://core.telegram.org/constructor/messageMediaEmpty"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned within the media object."
         }
       }
     },
@@ -25886,18 +25936,27 @@
     },
     "payments.savedStarGifts": {
       "name": "payments.savedStarGifts",
+      "description": [
+        "Represents a list of gifts¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "chat_notifications_enabled": {
           "name": "chat_notifications_enabled",
-          "description": " "
+          "description": "Ternary value: can be not set, set\u0026true, set\u0026false. Can only be set for channels we own: the value indicates whether we enabled gift notifications¹ for this channel.",
+          "links": [
+            "https://core.telegram.org/api/gifts#notifications-for-received-channel-gifts"
+          ]
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Channels mentioned in gifts"
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results (can be less than the returned gifts, in which case next_offset will be set)."
         },
         "flags": {
           "name": "flags",
@@ -25908,15 +25967,18 @@
         },
         "gifts": {
           "name": "gifts",
-          "description": " "
+          "description": "Gifts"
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset to pass to payments.getSavedStarGifts¹ to fetch the next page of results.",
+          "links": [
+            "https://core.telegram.org/method/payments.getSavedStarGifts"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in gifts"
         }
       }
     },
@@ -25939,10 +26001,13 @@
     },
     "payments.starGiftWithdrawalUrl": {
       "name": "payments.starGiftWithdrawalUrl",
+      "description": [
+        "A URL that can be used to import the exported NFT on Fragment."
+      ],
       "fields": {
         "url": {
           "name": "url",
-          "description": " "
+          "description": "The URL to open."
         }
       }
     },
@@ -26153,14 +26218,23 @@
     },
     "payments.uniqueStarGift": {
       "name": "payments.uniqueStarGift",
+      "description": [
+        "Represents a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The starGiftUnique¹ constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the gift field."
         }
       }
     },
@@ -28940,6 +29014,12 @@
     },
     "savedStarGift": {
       "name": "savedStarGift",
+      "description": [
+        "Represents a gift¹ owned by a peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "can_export_at": {
           "name": "can_export_at",
@@ -38723,7 +38803,7 @@
         },
         "type": {
           "name": "type",
-          "description": "Type of the web page. One of the following: - video- gif- photo- document- profile- telegram_background- telegram_theme- telegram_story- telegram_channel- telegram_channel_request- telegram_megagroup- telegram_chat- telegram_megagroup_request- telegram_chat_request- telegram_album- telegram_message- telegram_bot- telegram_voicechat- telegram_livestream- telegram_call- telegram_user- telegram_botapp- telegram_channel_boost- telegram_group_boost- telegram_giftcode- telegram_stickerset- telegram_story_album- telegram_collection"
+          "description": "Type of the web page. One of the following: - app- article- document- gif- photo- profile- telegram_album- telegram_background- telegram_bot- telegram_botapp- telegram_call- telegram_channel- telegram_channel_boost- telegram_channel_direct- telegram_channel_request- telegram_chat- telegram_chat_request- telegram_chatlist- telegram_collection- telegram_community- telegram_giftcode- telegram_group_boost- telegram_livestream- telegram_megagroup- telegram_megagroup_request- telegram_message- telegram_nft- telegram_stickerset- telegram_story- telegram_story_album- telegram_theme- telegram_user- telegram_videochat- telegram_voicechat- video"
         },
         "url": {
           "name": "url",
@@ -38829,10 +38909,22 @@
     },
     "webPageAttributeUniqueStarGift": {
       "name": "webPageAttributeUniqueStarGift",
+      "description": [
+        "Contains info about collectible gift »¹ for a webPage² preview of a collectible gift »³ (the webPage⁴ will have a type of telegram_nft)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/constructor/webPage",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/constructor/webPage"
+      ],
       "fields": {
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The starGiftUnique¹ constructor.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         }
       }
     },
@@ -40449,7 +40541,7 @@
     "MediaAreaCoordinates": {
       "name": "MediaAreaCoordinates",
       "description": [
-        "Coordinates and size of a clicable rectangular area on top of a story."
+        "Coordinates and size of a clickable rectangular area on top of a story."
       ]
     },
     "Message": {
@@ -41273,7 +41365,13 @@
       ]
     },
     "SavedStarGift": {
-      "name": "SavedStarGift"
+      "name": "SavedStarGift",
+      "description": [
+        "Represents a gift¹ owned by a peer."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "SearchResultsCalendarPeriod": {
       "name": "SearchResultsCalendarPeriod",
@@ -42574,7 +42672,10 @@
       ]
     },
     "messages.WebPagePreview": {
-      "name": "messages.WebPagePreview"
+      "name": "messages.WebPagePreview",
+      "description": [
+        "Represents a webpage preview."
+      ]
     },
     "payments.BankCardData": {
       "name": "payments.BankCardData",
@@ -42592,7 +42693,13 @@
       "name": "payments.ResaleStarGifts"
     },
     "payments.SavedStarGifts": {
-      "name": "payments.SavedStarGifts"
+      "name": "payments.SavedStarGifts",
+      "description": [
+        "Represents a list of gifts¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "payments.StarGiftUpgradePreview": {
       "name": "payments.StarGiftUpgradePreview",
@@ -42606,7 +42713,10 @@
       ]
     },
     "payments.StarGiftWithdrawalUrl": {
-      "name": "payments.StarGiftWithdrawalUrl"
+      "name": "payments.StarGiftWithdrawalUrl",
+      "description": [
+        "A URL that can be used to import the exported NFT on Fragment."
+      ]
     },
     "payments.StarGifts": {
       "name": "payments.StarGifts",
@@ -42655,7 +42765,13 @@
       ]
     },
     "payments.UniqueStarGift": {
-      "name": "payments.UniqueStarGift"
+      "name": "payments.UniqueStarGift",
+      "description": [
+        "Represents a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "phone.ExportedGroupCallInvite": {
       "name": "phone.ExportedGroupCallInvite",
@@ -43577,10 +43693,20 @@
     },
     "account.getCollectibleEmojiStatuses": {
       "name": "account.getCollectibleEmojiStatuses",
+      "description": [
+        "Obtain a list of emoji statuses »¹ for owned collectible gifts²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/emoji-status",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for pagination¹",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         }
       }
     },
@@ -66261,10 +66387,17 @@
     },
     "payments.getSavedStarGift": {
       "name": "payments.getSavedStarGift",
+      "description": [
+        "Fetch info about specific gifts¹ owned by a peer we control.",
+        "Note that unlike what the name suggests, the method can be used to fetch both \"saved\" and \"unsaved\" gifts (aka gifts both pinned and not pinned to the profile)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "parameters": {
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "List of gifts to fetch info about."
         }
       },
       "errors": [
@@ -66280,26 +66413,42 @@
     },
     "payments.getSavedStarGifts": {
       "name": "payments.getSavedStarGifts",
+      "description": [
+        "Fetch the full list of gifts¹ owned by a peer.",
+        "Note that unlike what the name suggests, the method can be used to fetch both \"saved\" and \"unsaved\" gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "parameters": {
         "exclude_limited": {
           "name": "exclude_limited",
-          "description": " "
+          "description": "Exclude gifts that do have the starGift¹.limited flag set.",
+          "links": [
+            "https://core.telegram.org/constructor/starGift"
+          ]
         },
         "exclude_saved": {
           "name": "exclude_saved",
-          "description": " "
+          "description": "Exclude gifts pinned on the profile."
         },
         "exclude_unique": {
           "name": "exclude_unique",
-          "description": " "
+          "description": "Exclude collectible gifts »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "exclude_unlimited": {
           "name": "exclude_unlimited",
-          "description": " "
+          "description": "Exclude gifts that do not have the starGift¹.limited flag set.",
+          "links": [
+            "https://core.telegram.org/constructor/starGift"
+          ]
         },
         "exclude_unsaved": {
           "name": "exclude_unsaved",
-          "description": " "
+          "description": "Exclude gifts not pinned on the profile."
         },
         "flags": {
           "name": "flags",
@@ -66317,15 +66466,24 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination¹.",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Fetch only gifts owned by the specified peer, such as: a user, with peer=inputPeerUser¹; a channel, with peer=inputPeerChannel²; a connected business user³ (when executing the method as a bot, over the business connection), with peer=inputPeerUser⁴.",
+          "links": [
+            "https://core.telegram.org/constructor/inputPeerUser",
+            "https://core.telegram.org/constructor/inputPeerChannel",
+            "https://core.telegram.org/api/business#connected-bots",
+            "https://core.telegram.org/constructor/inputPeerUser"
+          ]
         },
         "sort_by_value": {
           "name": "sort_by_value",
-          "description": " "
+          "description": "If set, sorts the gifts by price instead of reception date."
         }
       },
       "errors": [
@@ -66367,14 +66525,23 @@
     },
     "payments.getStarGiftWithdrawalUrl": {
       "name": "payments.getStarGiftWithdrawalUrl",
+      "description": [
+        "Convert a collectible gift »¹ to an NFT on the TON blockchain."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "parameters": {
         "password": {
           "name": "password",
-          "description": " "
+          "description": "The current user's 2FA password, passed as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/srp"
+          ]
         },
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The collectible gift to export."
         }
       },
       "errors": [
@@ -67152,10 +67319,21 @@
     },
     "payments.toggleChatStarGiftNotifications": {
       "name": "payments.toggleChatStarGiftNotifications",
+      "description": [
+        "Enables or disables the reception of notifications every time a gift »¹ is received by the specified channel, can only be invoked by admins with post_messages admin rights²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts",
+        "https://core.telegram.org/constructor/chatAdminRights"
+      ],
       "parameters": {
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Whether to enable or disable reception of notifications in the form of messageActionStarGiftUnique¹ and messageActionStarGift² service messages from the channel.",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionStarGiftUnique",
+            "https://core.telegram.org/constructor/messageActionStarGift"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -67166,7 +67344,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The channel for which to receive or not receive notifications."
         }
       },
       "errors": [
@@ -73435,7 +73613,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -73719,7 +73897,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
