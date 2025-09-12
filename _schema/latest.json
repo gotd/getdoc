@@ -14767,6 +14767,13 @@
     },
     "inputInvoicePremiumGiftStars": {
       "name": "inputInvoicePremiumGiftStars",
+      "description": [
+        "Used to gift a Telegram Premium¹ subscription to another user, paying with Telegram Stars²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/api/stars"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -14777,15 +14784,18 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Message attached with the gift."
         },
         "months": {
           "name": "months",
-          "description": " "
+          "description": "Duration of the subscription in months, must be one of the options with currency == \"XTR\" returned by payments.getPremiumGiftCodeOptions¹.",
+          "links": [
+            "https://core.telegram.org/method/payments.getPremiumGiftCodeOptions"
+          ]
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "Who will receive the gifted subscription."
         }
       }
     },
@@ -31028,7 +31038,7 @@
     "starsTransaction": {
       "name": "starsTransaction",
       "description": [
-        "Represents a Telegram Stars transaction »¹."
+        "Represents a Telegram Stars or TON transaction »¹."
       ],
       "links": [
         "https://core.telegram.org/api/stars"
@@ -31044,7 +31054,7 @@
         },
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Amount of Telegram Stars or TON."
         },
         "bot_payload": {
           "name": "bot_payload",
@@ -31056,7 +31066,11 @@
         },
         "business_transfer": {
           "name": "business_transfer",
-          "description": " "
+          "description": "This transaction transfers stars from the balance of a user account connected to a business bot¹, to the balance of the business bot, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/api/business#connected-bots",
+            "https://core.telegram.org/api/stars#transferring-stars-from-a-business-account-to-the-business-bot"
+          ]
         },
         "date": {
           "name": "date",
@@ -31117,7 +31131,10 @@
         },
         "paid_messages": {
           "name": "paid_messages",
-          "description": " "
+          "description": "This transaction is related to the reception or transmission of a paid message »¹.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -31137,7 +31154,10 @@
         },
         "premium_gift_months": {
           "name": "premium_gift_months",
-          "description": " "
+          "description": "This transaction indicates the payment for a gifted Telegram Premium subscription »¹.",
+          "links": [
+            "https://core.telegram.org/api/premium#gifting-telegram-premium"
+          ]
         },
         "reaction": {
           "name": "reaction",
@@ -31159,11 +31179,17 @@
         },
         "stargift_resale": {
           "name": "stargift_resale",
-          "description": " "
+          "description": "This transaction is related to the resale of a collectible gift »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+          ]
         },
         "stargift_upgrade": {
           "name": "stargift_upgrade",
-          "description": " "
+          "description": "This transaction pays for the upgrade of a gift to a collectible gift »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "starref_amount": {
           "name": "starref_amount",
@@ -53524,14 +53550,17 @@
     },
     "invokeWithReCaptcha": {
       "name": "invokeWithReCaptcha",
+      "description": [
+        "Official clients only: re-execute a method call that required reCAPTCHA verification via a RECAPTCHA_CHECK_%s__%s, where the first placeholder is the action, and the second one is the reCAPTCHA key ID."
+      ],
       "parameters": {
         "query": {
           "name": "query",
-          "description": " "
+          "description": "The original method call."
         },
         "token": {
           "name": "token",
-          "description": " "
+          "description": "reCAPTCHA token received after verification."
         }
       },
       "bot_can_use": true
@@ -73956,7 +73985,7 @@
       "type": "MSG_VOICE_MISSING"
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -73986,7 +74015,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -74054,7 +74083,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 400,
+      "code": 403,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -75392,7 +75421,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 400,
+      "code": 403,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
