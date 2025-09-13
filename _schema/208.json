@@ -43733,8 +43733,7 @@
           "type": "CONNECTION_ID_INVALID",
           "description": "The specified connection ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "account.getBusinessChatLinks": {
       "name": "account.getBusinessChatLinks",
@@ -45713,6 +45712,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "COLLECTIBLE_INVALID",
+          "description": "The specified collectible is invalid."
+        },
+        {
+          "code": 400,
           "type": "DOCUMENT_INVALID",
           "description": "The specified document is invalid."
         }
@@ -46309,8 +46313,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.cancelCode": {
       "name": "auth.cancelCode",
@@ -46422,8 +46425,7 @@
           "name": "except_auth_keys",
           "description": "The auth keys that shouldn't be dropped."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "auth.exportAuthorization": {
       "name": "auth.exportAuthorization",
@@ -46442,8 +46444,7 @@
           "type": "DC_ID_INVALID",
           "description": "The provided DC ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.exportLoginToken": {
       "name": "auth.exportLoginToken",
@@ -46520,8 +46521,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.importBotAuthorization": {
       "name": "auth.importBotAuthorization",
@@ -46576,8 +46576,7 @@
           "type": "API_ID_PUBLISHED_FLOOD",
           "description": "This API id was published somewhere, you can't use it now."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.importLoginToken": {
       "name": "auth.importLoginToken",
@@ -46655,8 +46654,7 @@
       "name": "auth.logOut",
       "description": [
         "Logs out the user."
-      ],
-      "bot_can_use": true
+      ]
     },
     "auth.recoverPassword": {
       "name": "auth.recoverPassword",
@@ -47260,17 +47258,11 @@
           "description": "The query ID is invalid."
         },
         {
-          "code": 403,
-          "type": "USER_BOT_INVALID",
-          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
-        },
-        {
           "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.canSendMessage": {
       "name": "bots.canSendMessage",
@@ -47432,16 +47424,10 @@
       "errors": [
         {
           "code": 400,
-          "type": "USER_BOT_INVALID",
-          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
-        },
-        {
-          "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.getBotInfo": {
       "name": "bots.getBotInfo",
@@ -47481,8 +47467,7 @@
           "type": "USER_BOT_INVALID",
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.getBotMenuButton": {
       "name": "bots.getBotMenuButton",
@@ -47505,8 +47490,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.getBotRecommendations": {
       "name": "bots.getBotRecommendations",
@@ -47740,8 +47724,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.sendCustomRequest": {
       "name": "bots.sendCustomRequest",
@@ -47770,17 +47753,11 @@
           "description": "The specified method is invalid."
         },
         {
-          "code": 403,
-          "type": "USER_BOT_INVALID",
-          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
-        },
-        {
           "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.setBotBroadcastDefaultAdminRights": {
       "name": "bots.setBotBroadcastDefaultAdminRights",
@@ -47808,8 +47785,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.setBotCommands": {
       "name": "bots.setBotCommands",
@@ -47861,8 +47837,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.setBotGroupDefaultAdminRights": {
       "name": "bots.setBotGroupDefaultAdminRights",
@@ -47890,8 +47865,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.setBotInfo": {
       "name": "bots.setBotInfo",
@@ -47938,8 +47912,7 @@
           "type": "USER_BOT_INVALID",
           "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.setBotMenuButton": {
       "name": "bots.setBotMenuButton",
@@ -47975,8 +47948,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.setCustomVerification": {
       "name": "bots.setCustomVerification",
@@ -48025,8 +47997,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "bots.toggleUserEmojiStatusPermission": {
       "name": "bots.toggleUserEmojiStatusPermission",
@@ -48174,8 +48145,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.checkUsername": {
       "name": "channels.checkUsername",
@@ -48488,8 +48458,7 @@
           "type": "TOPIC_TITLE_EMPTY",
           "description": "The specified topic title is empty."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.deactivateAllUsernames": {
       "name": "channels.deactivateAllUsernames",
@@ -48666,8 +48635,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.deleteParticipantHistory": {
       "name": "channels.deleteParticipantHistory",
@@ -48756,8 +48724,7 @@
           "type": "TOPIC_ID_INVALID",
           "description": "The specified topic ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editAdmin": {
       "name": "channels.editAdmin",
@@ -48914,8 +48881,7 @@
           "type": "USER_RESTRICTED",
           "description": "You're spamreported, you can't create channels or chats."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editBanned": {
       "name": "channels.editBanned",
@@ -48998,8 +48964,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editCreator": {
       "name": "channels.editCreator",
@@ -49171,6 +49136,10 @@
         },
         {
           "code": 400,
+          "type": "NOGENERAL_HIDE_FORBIDDEN"
+        },
+        {
+          "code": 400,
           "type": "TOPIC_CLOSE_SEPARATELY",
           "description": "The close flag cannot be provided together with any of the other flags."
         },
@@ -49189,8 +49158,7 @@
           "type": "TOPIC_NOT_MODIFIED",
           "description": "The updated topic info is equal to the current topic info, nothing was changed."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editLocation": {
       "name": "channels.editLocation",
@@ -49329,8 +49297,7 @@
           "type": "STICKER_MIME_INVALID",
           "description": "The specified sticker MIME type is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.editTitle": {
       "name": "channels.editTitle",
@@ -49381,8 +49348,7 @@
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.exportMessageLink": {
       "name": "channels.exportMessageLink",
@@ -49655,8 +49621,7 @@
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getForumTopics": {
       "name": "channels.getForumTopics",
@@ -49818,8 +49783,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getGroupsForDiscussion": {
       "name": "channels.getGroupsForDiscussion",
@@ -49949,8 +49913,7 @@
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getParticipant": {
       "name": "channels.getParticipant",
@@ -50006,8 +49969,7 @@
           "type": "USER_NOT_PARTICIPANT",
           "description": "You're not a member of this supergroup/channel."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getParticipants": {
       "name": "channels.getParticipants",
@@ -50078,8 +50040,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.getSendAs": {
       "name": "channels.getSendAs",
@@ -50270,6 +50231,11 @@
           "description": "The provided channel is invalid."
         },
         {
+          "code": 400,
+          "type": "CHANNEL_MONOFORUM_UNSUPPORTED",
+          "description": "Monoforums do not support this feature."
+        },
+        {
           "code": 406,
           "type": "CHANNEL_PRIVATE",
           "description": "You haven't joined this channel/supergroup."
@@ -50392,8 +50358,7 @@
           "type": "USER_NOT_PARTICIPANT",
           "description": "You're not a member of this supergroup/channel."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.readHistory": {
       "name": "channels.readHistory",
@@ -50849,8 +50814,7 @@
           "type": "STICKERSET_OWNER_ANONYMOUS",
           "description": "Provided stickerset can't be installed as group stickerset to prevent admin deanonymization."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "channels.toggleAntiSpam": {
       "name": "channels.toggleAntiSpam",
@@ -51504,6 +51468,10 @@
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
+        },
+        {
+          "code": 400,
+          "type": "PINNED_TOO_MUCH"
         },
         {
           "code": 400,
@@ -52677,8 +52645,7 @@
           "type": "USERNAME_NOT_OCCUPIED",
           "description": "The provided username is not occupied."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "contacts.search": {
       "name": "contacts.search",
@@ -53002,8 +52969,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getConfig": {
       "name": "help.getConfig",
@@ -53064,8 +53030,7 @@
           "type": "USER_PRIVACY_RESTRICTED",
           "description": "The user's privacy settings do not allow you to do this."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "help.getCountriesList": {
       "name": "help.getCountriesList",
@@ -53310,8 +53275,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "initConnection": {
       "name": "initConnection",
@@ -53379,8 +53343,7 @@
           "type": "CONNECTION_LAYER_INVALID",
           "description": "Layer invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "invokeAfterMsg": {
       "name": "invokeAfterMsg",
@@ -53396,8 +53359,7 @@
           "name": "query",
           "description": "The query itself"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeAfterMsgs": {
       "name": "invokeAfterMsgs",
@@ -53413,8 +53375,7 @@
           "name": "query",
           "description": "The query itself"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithApnsSecret": {
       "name": "invokeWithApnsSecret",
@@ -53434,8 +53395,7 @@
           "name": "secret",
           "description": "Secret."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithBusinessConnection": {
       "name": "invokeWithBusinessConnection",
@@ -53456,8 +53416,7 @@
           "name": "query",
           "description": "The actual query."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithGooglePlayIntegrity": {
       "name": "invokeWithGooglePlayIntegrity",
@@ -53477,8 +53436,7 @@
           "name": "token",
           "description": "Token."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithLayer": {
       "name": "invokeWithLayer",
@@ -53528,8 +53486,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "invokeWithMessagesRange": {
       "name": "invokeWithMessagesRange",
@@ -53545,8 +53502,7 @@
           "name": "range",
           "description": "Message range"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithReCaptcha": {
       "name": "invokeWithReCaptcha",
@@ -53562,8 +53518,7 @@
           "name": "token",
           "description": "reCAPTCHA token received after verification."
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithTakeout": {
       "name": "invokeWithTakeout",
@@ -53585,8 +53540,7 @@
             "https://core.telegram.org/api/takeout"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "invokeWithoutUpdates": {
       "name": "invokeWithoutUpdates",
@@ -53602,8 +53556,7 @@
           "name": "query",
           "description": "The query"
         }
-      },
-      "bot_can_use": true
+      }
     },
     "langpack.getDifference": {
       "name": "langpack.getDifference",
@@ -53876,6 +53829,11 @@
           "code": 400,
           "type": "CHAT_INVALID",
           "description": "Invalid chat."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_MEMBER_ADD_FAILED",
+          "description": "Could not add participants."
         },
         {
           "code": 403,
@@ -54309,8 +54267,7 @@
           "type": "USER_NOT_PARTICIPANT",
           "description": "You're not a member of this supergroup/channel."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.deleteExportedChatInvite": {
       "name": "messages.deleteExportedChatInvite",
@@ -54511,8 +54468,7 @@
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.deletePhoneCallHistory": {
       "name": "messages.deletePhoneCallHistory",
@@ -54807,8 +54763,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editChatAdmin": {
       "name": "messages.editChatAdmin",
@@ -54919,8 +54874,7 @@
           "type": "UNTIL_DATE_INVALID",
           "description": "Invalid until date provided."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editChatPhoto": {
       "name": "messages.editChatPhoto",
@@ -54973,8 +54927,7 @@
           "type": "PHOTO_INVALID",
           "description": "Photo invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editChatTitle": {
       "name": "messages.editChatTitle",
@@ -55017,8 +54970,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editExportedChatInvite": {
       "name": "messages.editExportedChatInvite",
@@ -55103,8 +55055,7 @@
           "type": "USAGE_LIMIT_INVALID",
           "description": "The specified usage limit is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editFactCheck": {
       "name": "messages.editFactCheck",
@@ -55212,8 +55163,7 @@
           "type": "MESSAGE_NOT_MODIFIED",
           "description": "The provided message data is identical to the previous message data, the message wasn't modified."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editMessage": {
       "name": "messages.editMessage",
@@ -55499,8 +55449,7 @@
           "type": "WEBPAGE_NOT_FOUND",
           "description": "A preview for the specified webpage url could not be generated."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.editQuickReplyShortcut": {
       "name": "messages.editQuickReplyShortcut",
@@ -55644,8 +55593,7 @@
           "type": "USAGE_LIMIT_INVALID",
           "description": "The specified usage limit is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.faveSticker": {
       "name": "messages.faveSticker",
@@ -55897,6 +55845,10 @@
           "description": "You can't write in this chat."
         },
         {
+          "code": 500,
+          "type": "CHP_BAD_EVENT"
+        },
+        {
           "code": 400,
           "type": "GROUPED_MEDIA_INVALID",
           "description": "Invalid grouped media."
@@ -55973,6 +55925,10 @@
         },
         {
           "code": 400,
+          "type": "REPLY_TO_MONOFORUM_PEER_INVALID"
+        },
+        {
+          "code": 400,
           "type": "SCHEDULE_BOT_NOT_ALLOWED",
           "description": "Bots cannot schedule messages."
         },
@@ -56036,8 +55992,7 @@
           "type": "YOU_BLOCKED_USER",
           "description": "You blocked this user."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getAdminsWithInvites": {
       "name": "messages.getAdminsWithInvites",
@@ -56479,8 +56434,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getCommonChats": {
       "name": "messages.getCommonChats",
@@ -56540,8 +56494,7 @@
             "https://core.telegram.org/constructor/messageEntityCustomEmoji"
           ]
         }
-      },
-      "bot_can_use": true
+      }
     },
     "messages.getDefaultHistoryTTL": {
       "name": "messages.getDefaultHistoryTTL",
@@ -56790,8 +56743,7 @@
           "type": "SHA256_HASH_INVALID",
           "description": "The provided SHA256 hash is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getEmojiGroups": {
       "name": "messages.getEmojiGroups",
@@ -57067,6 +57019,11 @@
           "description": "You must be an admin in this chat to do this."
         },
         {
+          "code": 400,
+          "type": "CHAT_ID_INVALID",
+          "description": "The provided chat id is invalid."
+        },
+        {
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
@@ -57202,8 +57159,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getGameHighScores": {
       "name": "messages.getGameHighScores",
@@ -57240,8 +57196,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getHistory": {
       "name": "messages.getHistory",
@@ -57434,8 +57389,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getMaskStickers": {
       "name": "messages.getMaskStickers",
@@ -57610,8 +57564,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getMessagesReactions": {
       "name": "messages.getMessagesReactions",
@@ -58806,8 +58759,7 @@
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.getStickers": {
       "name": "messages.getStickers",
@@ -59265,8 +59217,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.hidePeerSettingsBar": {
       "name": "messages.hidePeerSettingsBar",
@@ -60905,8 +60856,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.saveRecentSticker": {
       "name": "messages.saveRecentSticker",
@@ -62043,6 +61993,10 @@
       },
       "errors": [
         {
+          "code": 406,
+          "type": "ALLOW_PAYMENT_REQUIRED"
+        },
+        {
           "code": 403,
           "type": "ALLOW_PAYMENT_REQUIRED_%d",
           "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
@@ -62193,6 +62147,10 @@
           "description": "You can't write in this chat."
         },
         {
+          "code": 500,
+          "type": "CHP_BAD_EVENT"
+        },
+        {
           "code": 400,
           "type": "CURRENCY_TOTAL_AMOUNT_INVALID",
           "description": "The total amount of all prices is invalid."
@@ -62216,6 +62174,10 @@
           "code": 400,
           "type": "EXTENDED_MEDIA_AMOUNT_INVALID",
           "description": "The specified stars_amount of the passed inputMediaPaidMedia is invalid."
+        },
+        {
+          "code": 400,
+          "type": "EXTENDED_MEDIA_INVALID"
         },
         {
           "code": 400,
@@ -62536,8 +62498,7 @@
           "type": "YOU_BLOCKED_USER",
           "description": "You blocked this user."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendMessage": {
       "name": "messages.sendMessage",
@@ -62665,6 +62626,10 @@
           "description": "The chatAdminRights constructor passed in keyboardButtonRequestPeer.peer_type.user_admin_rights has no rights set (i.e. flags is 0)."
         },
         {
+          "code": 406,
+          "type": "ALLOW_PAYMENT_REQUIRED"
+        },
+        {
           "code": 403,
           "type": "ALLOW_PAYMENT_REQUIRED_%d",
           "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
@@ -62743,6 +62708,11 @@
           "code": 403,
           "type": "CHAT_ADMIN_REQUIRED",
           "description": "You must be an admin in this chat to do this."
+        },
+        {
+          "code": 400,
+          "type": "CHAT_FORWARDS_RESTRICTED",
+          "description": "You can't forward messages from a protected chat."
         },
         {
           "code": 403,
@@ -62987,8 +62957,7 @@
           "type": "YOU_BLOCKED_USER",
           "description": "You blocked this user."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendMultiMedia": {
       "name": "messages.sendMultiMedia",
@@ -63253,8 +63222,7 @@
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.sendPaidReaction": {
       "name": "messages.sendPaidReaction",
@@ -63719,8 +63687,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setBotCallbackAnswer": {
       "name": "messages.setBotCallbackAnswer",
@@ -63777,8 +63744,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setBotPrecheckoutResults": {
       "name": "messages.setBotPrecheckoutResults",
@@ -63822,8 +63788,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setBotShippingResults": {
       "name": "messages.setBotShippingResults",
@@ -63865,8 +63830,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setChatAvailableReactions": {
       "name": "messages.setChatAvailableReactions",
@@ -64180,8 +64144,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setHistoryTTL": {
       "name": "messages.setHistoryTTL",
@@ -64427,11 +64390,6 @@
           "description": "Invalid URL provided."
         },
         {
-          "code": 403,
-          "type": "USER_BOT_INVALID",
-          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
-        },
-        {
           "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
@@ -64471,8 +64429,7 @@
           "type": "WEBDOCUMENT_URL_INVALID",
           "description": "The specified webdocument URL is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setInlineGameScore": {
       "name": "messages.setInlineGameScore",
@@ -64519,8 +64476,7 @@
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.setTyping": {
       "name": "messages.setTyping",
@@ -64634,8 +64590,7 @@
           "type": "USER_IS_BOT",
           "description": "Bots can't send messages to other bots."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.startBot": {
       "name": "messages.startBot",
@@ -65290,11 +65245,15 @@
         },
         {
           "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.updateDialogFilter": {
       "name": "messages.updateDialogFilter",
@@ -65465,6 +65424,11 @@
         },
         {
           "code": 400,
+          "type": "INPUT_USER_DEACTIVATED",
+          "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
         },
@@ -65483,8 +65447,7 @@
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.updateSavedReactionTag": {
       "name": "messages.updateSavedReactionTag",
@@ -65734,8 +65697,7 @@
           "type": "WEBPAGE_CURL_FAILED",
           "description": "Failure while fetching the webpage with cURL."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "messages.viewSponsoredMessage": {
       "name": "messages.viewSponsoredMessage",
@@ -65806,6 +65768,10 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "INPUT_PURPOSE_INVALID"
+        },
         {
           "code": 400,
           "type": "RECEIPT_EMPTY",
@@ -65881,13 +65847,20 @@
     },
     "payments.canPurchaseStore": {
       "name": "payments.canPurchaseStore",
+      "description": [
+        "Checks whether a purchase is possible. Must be called before in-store purchase, official apps only."
+      ],
       "parameters": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Payment purpose."
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "INPUT_PURPOSE_INVALID"
+        },
         {
           "code": 406,
           "type": "PREMIUM_CURRENTLY_UNAVAILABLE",
@@ -66040,6 +66013,10 @@
         },
         {
           "code": 400,
+          "type": "STARGIFT_PEER_INVALID"
+        },
+        {
+          "code": 400,
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
@@ -66142,8 +66119,7 @@
           "type": "WEBDOCUMENT_URL_EMPTY",
           "description": "The passed web document URL is empty."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.fulfillStarsSubscription": {
       "name": "payments.fulfillStarsSubscription",
@@ -66318,6 +66294,10 @@
       },
       "errors": [
         {
+          "code": 406,
+          "type": "API_GIFT_RESTRICTED_UPDATE_APP"
+        },
+        {
           "code": 400,
           "type": "BOOST_PEER_INVALID",
           "description": "The specified boost_peer is invalid."
@@ -66343,8 +66323,16 @@
         },
         {
           "code": 400,
+          "type": "INVOICE_INVALID"
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
+        },
+        {
+          "code": 400,
+          "type": "NO_PAYMENT_NEEDED"
         },
         {
           "code": 400,
@@ -66362,12 +66350,32 @@
         },
         {
           "code": 400,
+          "type": "STARGIFT_ALREADY_REFUNDED"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_ALREADY_UPGRADED"
+        },
+        {
+          "code": 400,
           "type": "STARGIFT_INVALID",
-          "description": "The passed inputInvoiceStarGift is invalid."
+          "description": "The passed gift is invalid."
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_NOT_FOUND"
         },
         {
           "code": 400,
           "type": "STARGIFT_OWNER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_PEER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED"
         },
         {
           "code": 400,
@@ -66376,6 +66384,14 @@
         {
           "code": 400,
           "type": "STARGIFT_SLUG_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_TRANSFER_TOO_EARLY_%d"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_UPGRADE_UNAVAILABLE"
         },
         {
           "code": 406,
@@ -66483,7 +66499,7 @@
         {
           "code": 400,
           "type": "STARGIFT_INVALID",
-          "description": "The passed inputInvoiceStarGift is invalid."
+          "description": "The passed gift is invalid."
         },
         {
           "code": -504,
@@ -66631,7 +66647,7 @@
         {
           "code": 400,
           "type": "STARGIFT_INVALID",
-          "description": "The passed inputInvoiceStarGift is invalid."
+          "description": "The passed gift is invalid."
         }
       ]
     },
@@ -67037,8 +67053,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.getStarsTransactionsByID": {
       "name": "payments.getStarsTransactionsByID",
@@ -67222,8 +67237,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "payments.saveStarGift": {
       "name": "payments.saveStarGift",
@@ -67323,6 +67337,10 @@
         },
         {
           "code": 400,
+          "type": "INVOICE_INVALID"
+        },
+        {
+          "code": 400,
           "type": "MESSAGE_ID_INVALID",
           "description": "The provided message id is invalid."
         },
@@ -67362,6 +67380,10 @@
       },
       "errors": [
         {
+          "code": 406,
+          "type": "API_GIFT_RESTRICTED_UPDATE_APP"
+        },
+        {
           "code": 400,
           "type": "BALANCE_TOO_LOW",
           "description": "The transaction cannot be completed because the current Telegram Stars balance is too low."
@@ -67392,6 +67414,10 @@
         },
         {
           "code": 400,
+          "type": "FORM_SUBMIT_DUPLICATE"
+        },
+        {
+          "code": 400,
           "type": "FORM_UNSUPPORTED",
           "description": "Please update your client."
         },
@@ -67399,6 +67425,10 @@
           "code": 400,
           "type": "GIFT_STARS_INVALID",
           "description": "The specified amount of stars is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_ALREADY_PAID"
         },
         {
           "code": 400,
@@ -67415,8 +67445,24 @@
         },
         {
           "code": 400,
+          "type": "STARGIFT_NOT_FOUND"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_OWNER_INVALID"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_RESELL_NOT_ALLOWED"
+        },
+        {
+          "code": 400,
           "type": "STARGIFT_USAGE_LIMITED",
           "description": "The gift is sold out."
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_USER_USAGE_LIMITED"
         },
         {
           "code": 400,
@@ -67626,6 +67672,14 @@
         {
           "code": 400,
           "type": "STARGIFT_ALREADY_CONVERTED"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_ALREADY_UPGRADED"
+        },
+        {
+          "code": 400,
+          "type": "STARGIFT_UPGRADE_UNAVAILABLE"
         }
       ]
     },
@@ -68695,6 +68749,11 @@
         },
         {
           "code": 400,
+          "type": "CALL_PROTOCOL_LAYER_INVALID",
+          "description": "The specified protocol layer version range is invalid."
+        },
+        {
+          "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
         },
@@ -69082,8 +69141,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "photos.updateProfilePhoto": {
       "name": "photos.updateProfilePhoto",
@@ -69147,8 +69205,7 @@
           "type": "PHOTO_ID_INVALID",
           "description": "Photo ID invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "photos.uploadContactProfilePhoto": {
       "name": "photos.uploadContactProfilePhoto",
@@ -69327,8 +69384,7 @@
           "type": "VIDEO_FILE_INVALID",
           "description": "The specified video file is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "premium.applyBoost": {
       "name": "premium.applyBoost",
@@ -69495,8 +69551,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "smsjobs.finishJob": {
       "name": "smsjobs.finishJob",
@@ -70024,8 +70079,7 @@
           "type": "STICKER_TGS_NOTGS",
           "description": "Invalid TGS sticker provided."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.changeSticker": {
       "name": "stickers.changeSticker",
@@ -70069,8 +70123,7 @@
           "type": "STICKER_INVALID",
           "description": "The provided sticker is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.changeStickerPosition": {
       "name": "stickers.changeStickerPosition",
@@ -70093,8 +70146,7 @@
           "type": "STICKER_INVALID",
           "description": "The provided sticker is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.checkShortName": {
       "name": "stickers.checkShortName",
@@ -70270,8 +70322,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.deleteStickerSet": {
       "name": "stickers.deleteStickerSet",
@@ -70290,8 +70341,7 @@
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.removeStickerFromSet": {
       "name": "stickers.removeStickerFromSet",
@@ -70310,8 +70360,7 @@
           "type": "STICKER_INVALID",
           "description": "The provided sticker is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.renameStickerSet": {
       "name": "stickers.renameStickerSet",
@@ -70334,8 +70383,7 @@
           "type": "STICKERSET_INVALID",
           "description": "The provided sticker set is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.replaceSticker": {
       "name": "stickers.replaceSticker",
@@ -70361,8 +70409,7 @@
           "type": "STICKER_INVALID",
           "description": "The provided sticker is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.setStickerSetThumb": {
       "name": "stickers.setStickerSetThumb",
@@ -70409,8 +70456,7 @@
           "type": "STICKER_THUMB_TGS_NOTGS",
           "description": "Incorrect stickerset TGS thumb file provided."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "stickers.suggestShortName": {
       "name": "stickers.suggestShortName",
@@ -70815,6 +70861,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "CHANNEL_INVALID",
+          "description": "The provided channel is invalid."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -71666,8 +71717,7 @@
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "updates.getDifference": {
       "name": "updates.getDifference",
@@ -71787,8 +71837,7 @@
           "type": "USER_NOT_PARTICIPANT",
           "description": "You're not a member of this supergroup/channel."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "updates.getState": {
       "name": "updates.getState",
@@ -71806,8 +71855,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.getCdnFile": {
       "name": "upload.getCdnFile",
@@ -71882,8 +71930,7 @@
           "code": -504,
           "type": "UNHANDLED_EXCEPTION"
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.getFile": {
       "name": "upload.getFile",
@@ -71993,8 +72040,7 @@
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.getFileHashes": {
       "name": "upload.getFileHashes",
@@ -72017,8 +72063,7 @@
           "type": "LOCATION_INVALID",
           "description": "The provided location is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.getWebfile": {
       "name": "upload.getWebfile",
@@ -72106,8 +72151,7 @@
           "type": "RSA_DECRYPT_FAILED",
           "description": "Internal RSA decryption failed."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.saveBigFilePart": {
       "name": "upload.saveBigFilePart",
@@ -72168,8 +72212,7 @@
           "type": "FILE_PART_TOO_SMALL",
           "description": "The size of the uploaded file part is too small, please see the documentation for the allowed sizes."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "upload.saveFilePart": {
       "name": "upload.saveFilePart",
@@ -72206,8 +72249,7 @@
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "users.getFullUser": {
       "name": "users.getFullUser",
@@ -72250,8 +72292,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "users.getRequirementsToContact": {
       "name": "users.getRequirementsToContact",
@@ -72317,8 +72358,7 @@
           "type": "USER_BANNED_IN_CHANNEL",
           "description": "You're banned from sending messages in supergroups/channels."
         }
-      ],
-      "bot_can_use": true
+      ]
     },
     "users.setSecureValueErrors": {
       "name": "users.setSecureValueErrors",
@@ -72341,11 +72381,6 @@
       },
       "errors": [
         {
-          "code": 403,
-          "type": "USER_BOT_INVALID",
-          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
-        },
-        {
           "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
@@ -72355,8 +72390,7 @@
           "type": "USER_ID_INVALID",
           "description": "The provided user ID is invalid."
         }
-      ],
-      "bot_can_use": true
+      ]
     }
   },
   "errors": {
@@ -72432,6 +72466,10 @@
       "code": 403,
       "type": "ANONYMOUS_REACTIONS_DISABLED",
       "description": "Sorry, anonymous administrators cannot leave reactions or participate in polls."
+    },
+    "API_GIFT_RESTRICTED_UPDATE_APP": {
+      "code": 406,
+      "type": "API_GIFT_RESTRICTED_UPDATE_APP"
     },
     "API_ID_INVALID": {
       "code": 400,
@@ -73072,6 +73110,10 @@
       "type": "CHAT_WRITE_FORBIDDEN",
       "description": "You can't write in this chat."
     },
+    "CHP_BAD_EVENT": {
+      "code": 500,
+      "type": "CHP_BAD_EVENT"
+    },
     "CODE_EMPTY": {
       "code": 400,
       "type": "CODE_EMPTY",
@@ -73327,6 +73369,10 @@
       "type": "EXTENDED_MEDIA_AMOUNT_INVALID",
       "description": "The specified stars_amount of the passed inputMediaPaidMedia is invalid."
     },
+    "EXTENDED_MEDIA_INVALID": {
+      "code": 400,
+      "type": "EXTENDED_MEDIA_INVALID"
+    },
     "EXTERNAL_URL_INVALID": {
       "code": 400,
       "type": "EXTERNAL_URL_INVALID",
@@ -73471,6 +73517,10 @@
       "code": 400,
       "type": "FORM_ID_EMPTY",
       "description": "The specified form ID is empty."
+    },
+    "FORM_SUBMIT_DUPLICATE": {
+      "code": 400,
+      "type": "FORM_SUBMIT_DUPLICATE"
     },
     "FORM_UNSUPPORTED": {
       "code": 400,
@@ -73700,6 +73750,10 @@
       "type": "INPUT_PEERS_EMPTY",
       "description": "The specified peer array is empty."
     },
+    "INPUT_PURPOSE_INVALID": {
+      "code": 400,
+      "type": "INPUT_PURPOSE_INVALID"
+    },
     "INPUT_TEXT_EMPTY": {
       "code": 400,
       "type": "INPUT_TEXT_EMPTY",
@@ -73764,6 +73818,10 @@
       "code": 400,
       "type": "INVITE_SLUG_INVALID",
       "description": "The specified invitation slug is invalid."
+    },
+    "INVOICE_INVALID": {
+      "code": 400,
+      "type": "INVOICE_INVALID"
     },
     "INVOICE_PAYLOAD_INVALID": {
       "code": 400,
@@ -73834,6 +73892,10 @@
       "code": 400,
       "type": "MD5_CHECKSUM_INVALID",
       "description": "The MD5 checksums do not match."
+    },
+    "MEDIA_ALREADY_PAID": {
+      "code": 400,
+      "type": "MEDIA_ALREADY_PAID"
     },
     "MEDIA_CAPTION_TOO_LONG": {
       "code": 400,
@@ -74014,6 +74076,10 @@
       "type": "NEXT_OFFSET_INVALID",
       "description": "The specified offset is longer than 64 bytes."
     },
+    "NOGENERAL_HIDE_FORBIDDEN": {
+      "code": 400,
+      "type": "NOGENERAL_HIDE_FORBIDDEN"
+    },
     "NOT_ELIGIBLE": {
       "code": 400,
       "type": "NOT_ELIGIBLE",
@@ -74023,6 +74089,10 @@
       "code": 400,
       "type": "NOT_JOINED",
       "description": "The current user hasn't joined the Peer-to-Peer Login Program."
+    },
+    "NO_PAYMENT_NEEDED": {
+      "code": 400,
+      "type": "NO_PAYMENT_NEEDED"
     },
     "OFFSET_INVALID": {
       "code": 400,
@@ -74314,6 +74384,10 @@
       "code": 400,
       "type": "PINNED_DIALOGS_TOO_MUCH",
       "description": "Too many pinned dialogs."
+    },
+    "PINNED_TOO_MUCH": {
+      "code": 400,
+      "type": "PINNED_TOO_MUCH"
     },
     "PIN_RESTRICTED": {
       "code": 400,
@@ -74798,10 +74872,18 @@
       "code": 400,
       "type": "STARGIFT_ALREADY_CONVERTED"
     },
+    "STARGIFT_ALREADY_REFUNDED": {
+      "code": 400,
+      "type": "STARGIFT_ALREADY_REFUNDED"
+    },
+    "STARGIFT_ALREADY_UPGRADED": {
+      "code": 400,
+      "type": "STARGIFT_ALREADY_UPGRADED"
+    },
     "STARGIFT_INVALID": {
       "code": 400,
       "type": "STARGIFT_INVALID",
-      "description": "The passed inputInvoiceStarGift is invalid."
+      "description": "The passed gift is invalid."
     },
     "STARGIFT_NOT_FOUND": {
       "code": 400,
@@ -74815,6 +74897,10 @@
       "code": 400,
       "type": "STARGIFT_PEER_INVALID"
     },
+    "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED": {
+      "code": 400,
+      "type": "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED"
+    },
     "STARGIFT_RESELL_NOT_ALLOWED": {
       "code": 400,
       "type": "STARGIFT_RESELL_NOT_ALLOWED"
@@ -74823,10 +74909,22 @@
       "code": 400,
       "type": "STARGIFT_SLUG_INVALID"
     },
+    "STARGIFT_TRANSFER_TOO_EARLY_%d": {
+      "code": 400,
+      "type": "STARGIFT_TRANSFER_TOO_EARLY_%d"
+    },
+    "STARGIFT_UPGRADE_UNAVAILABLE": {
+      "code": 400,
+      "type": "STARGIFT_UPGRADE_UNAVAILABLE"
+    },
     "STARGIFT_USAGE_LIMITED": {
       "code": 400,
       "type": "STARGIFT_USAGE_LIMITED",
       "description": "The gift is sold out."
+    },
+    "STARGIFT_USER_USAGE_LIMITED": {
+      "code": 400,
+      "type": "STARGIFT_USER_USAGE_LIMITED"
     },
     "STARREF_AWAITING_END": {
       "code": 400,
@@ -75366,7 +75464,7 @@
       "description": "Bots can only be admins in channels."
     },
     "USER_BOT_INVALID": {
-      "code": 403,
+      "code": 400,
       "type": "USER_BOT_INVALID",
       "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
     },
