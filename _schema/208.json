@@ -3928,14 +3928,23 @@
     },
     "auth.sentCodePaymentRequired": {
       "name": "auth.sentCodePaymentRequired",
+      "description": [
+        "Official apps may receive this constructor, indicating that due to the high cost of SMS verification codes for the user's country/provider, the user must purchase a Telegram Premium¹ subscription in order to proceed with the login/signup."
+      ],
+      "links": [
+        "https://core.telegram.org/api/premium"
+      ],
       "fields": {
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "Phone code hash, to be stored and later re-used with auth.signIn¹",
+          "links": [
+            "https://core.telegram.org/method/auth.signIn"
+          ]
         },
         "store_product": {
           "name": "store_product",
-          "description": " "
+          "description": "Store identifier of the Telegram Premium subscription."
         }
       }
     },
@@ -5717,34 +5726,40 @@
     },
     "businessBotRights": {
       "name": "businessBotRights",
+      "description": [
+        "Business bot rights¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ],
       "fields": {
         "change_gift_settings": {
           "name": "change_gift_settings",
-          "description": " "
+          "description": "Whether the bot can change the privacy settings pertaining to gifts for the business account."
         },
         "delete_received_messages": {
           "name": "delete_received_messages",
-          "description": " "
+          "description": "Whether the bot can delete received private messages in managed chats."
         },
         "delete_sent_messages": {
           "name": "delete_sent_messages",
-          "description": " "
+          "description": "Whether the bot can delete messages sent by the bot."
         },
         "edit_bio": {
           "name": "edit_bio",
-          "description": " "
+          "description": "Whether the bot can edit the bio of the business account."
         },
         "edit_name": {
           "name": "edit_name",
-          "description": " "
+          "description": "Whether the bot can edit the first and last name of the business account."
         },
         "edit_profile_photo": {
           "name": "edit_profile_photo",
-          "description": " "
+          "description": "Whether the bot can edit the profile photo of the business account."
         },
         "edit_username": {
           "name": "edit_username",
-          "description": " "
+          "description": "Whether the bot can edit the username of the business account."
         },
         "flags": {
           "name": "flags",
@@ -5755,31 +5770,31 @@
         },
         "manage_stories": {
           "name": "manage_stories",
-          "description": " "
+          "description": "Whether the bot can post, edit and delete stories on behalf of the business account."
         },
         "read_messages": {
           "name": "read_messages",
-          "description": " "
+          "description": "Whether the bot can mark incoming private messages as read."
         },
         "reply": {
           "name": "reply",
-          "description": " "
+          "description": "Whether the bot can send and edit messages in private chats that had incoming messages in the last 24 hours."
         },
         "sell_gifts": {
           "name": "sell_gifts",
-          "description": " "
+          "description": "Whether the bot can convert regular gifts owned by the business account to Telegram Stars."
         },
         "transfer_and_upgrade_gifts": {
           "name": "transfer_and_upgrade_gifts",
-          "description": " "
+          "description": "Whether the bot can transfer and upgrade gifts owned by the business account."
         },
         "transfer_stars": {
           "name": "transfer_stars",
-          "description": " "
+          "description": "Whether the bot can transfer Telegram Stars received by the business account to its own account, or use them to upgrade and transfer gifts."
         },
         "view_gifts": {
           "name": "view_gifts",
-          "description": " "
+          "description": "Whether the bot can view gifts and the amount of Telegram Stars owned by the business account."
         }
       }
     },
@@ -10039,23 +10054,29 @@
     },
     "contacts.sponsoredPeers": {
       "name": "contacts.sponsoredPeers",
+      "description": [
+        "Sponsored peers."
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Info about sponsored chats and channels"
         },
         "peers": {
           "name": "peers",
-          "description": " "
+          "description": "Sponsored peers."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Info about sponsored users"
         }
       }
     },
     "contacts.sponsoredPeersEmpty": {
-      "name": "contacts.sponsoredPeersEmpty"
+      "name": "contacts.sponsoredPeersEmpty",
+      "description": [
+        "There are no sponsored peers for this query."
+      ]
     },
     "contacts.topPeers": {
       "name": "contacts.topPeers",
@@ -17142,14 +17163,23 @@
     },
     "inputStorePaymentAuthCode": {
       "name": "inputStorePaymentAuthCode",
+      "description": [
+        "Indicates payment for a login code."
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -17160,15 +17190,18 @@
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "phone_code_hash returned by auth.sendCode¹.",
+          "links": [
+            "https://core.telegram.org/method/auth.sendCode"
+          ]
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Phone number."
         },
         "restore": {
           "name": "restore",
-          "description": " "
+          "description": "Set this flag to restore a previously made purchase."
         }
       }
     },
@@ -30275,10 +30308,13 @@
     },
     "sponsoredPeer": {
       "name": "sponsoredPeer",
+      "description": [
+        "A sponsored peer."
+      ],
       "fields": {
         "additional_info": {
           "name": "additional_info",
-          "description": " "
+          "description": "If set, contains additional information about the sponsored message to be shown along with the peer."
         },
         "flags": {
           "name": "flags",
@@ -30289,15 +30325,21 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The sponsored peer."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "ID of the sponsored peer, to be passed to messages.viewSponsoredMessage¹, messages.clickSponsoredMessage² or messages.reportSponsoredMessage³ (the same methods used for sponsored messages \u0026raquo⁴).",
+          "links": [
+            "https://core.telegram.org/method/messages.viewSponsoredMessage",
+            "https://core.telegram.org/method/messages.clickSponsoredMessage",
+            "https://core.telegram.org/method/messages.reportSponsoredMessage",
+            "https://core.telegram.org/api/sponsored-messages"
+          ]
         },
         "sponsor_info": {
           "name": "sponsor_info",
-          "description": " "
+          "description": "If set, contains additional information about the sponsor to be shown along with the peer."
         }
       }
     },
@@ -36382,10 +36424,13 @@
     },
     "updateSentPhoneCode": {
       "name": "updateSentPhoneCode",
+      "description": [
+        "A paid login SMS code was successfully sent."
+      ],
       "fields": {
         "sent_code": {
           "name": "sent_code",
-          "description": " "
+          "description": "Info about the sent code."
         }
       }
     },
@@ -39486,7 +39531,13 @@
       ]
     },
     "BusinessBotRights": {
-      "name": "BusinessBotRights"
+      "name": "BusinessBotRights",
+      "description": [
+        "Business bot rights¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/business#connected-bots"
+      ]
     },
     "BusinessChatLink": {
       "name": "BusinessChatLink",
@@ -41620,7 +41671,10 @@
       ]
     },
     "SponsoredPeer": {
-      "name": "SponsoredPeer"
+      "name": "SponsoredPeer",
+      "description": [
+        "A sponsored peer."
+      ]
     },
     "StarGift": {
       "name": "StarGift",
@@ -42378,7 +42432,10 @@
       ]
     },
     "contacts.SponsoredPeers": {
-      "name": "contacts.SponsoredPeers"
+      "name": "contacts.SponsoredPeers",
+      "description": [
+        "A list of sponsored peers."
+      ]
     },
     "double": {
       "name": "double",
@@ -45653,7 +45710,7 @@
         },
         "rights": {
           "name": "rights",
-          "description": " "
+          "description": "Business bot rights."
         }
       },
       "errors": [
@@ -52398,10 +52455,13 @@
     },
     "contacts.getSponsoredPeers": {
       "name": "contacts.getSponsoredPeers",
+      "description": [
+        "Obtain a list of sponsored peer search results for a given query"
+      ],
       "parameters": {
         "q": {
           "name": "q",
-          "description": " "
+          "description": "The query"
         }
       },
       "errors": [
@@ -63266,7 +63326,7 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent message resending"
+          "description": "Unique client message ID required to prevent message resending. Note: this argument must be composed of a 64-bit integer where the first 32 bits are random, and the remaining 32 bits are equal to the current unixtime, i.e. uint64_t random_id = (time() \u003c\u003c 32) | ((uint64_t)random_uint32_t()): this differs from the random_id format of all other methods in the API, which just take 64 random bits."
         }
       },
       "errors": [
@@ -67971,10 +68031,16 @@
     },
     "phone.declineConferenceCallInvite": {
       "name": "phone.declineConferenceCallInvite",
+      "description": [
+        "Declines a conference call invite."
+      ],
       "parameters": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "The ID of the messageActionConferenceCall¹ to decline.",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionConferenceCall"
+          ]
         }
       },
       "errors": [
@@ -67987,14 +68053,21 @@
     },
     "phone.deleteConferenceCallParticipants": {
       "name": "phone.deleteConferenceCallParticipants",
+      "description": [
+        "Remove participants from a conference call.",
+        "Exactly one of the only_left and kick flags must be set."
+      ],
       "parameters": {
         "block": {
           "name": "block",
-          "description": " "
+          "description": "The block containing an appropriate e2e.chain.changeSetGroupState event¹",
+          "links": [
+            "https://core.telegram.org/api/end-to-end/group-calls"
+          ]
         },
         "call": {
           "name": "call",
-          "description": " "
+          "description": "The conference call."
         },
         "flags": {
           "name": "flags",
@@ -68005,15 +68078,15 @@
         },
         "ids": {
           "name": "ids",
-          "description": " "
+          "description": "IDs of users to remove."
         },
         "kick": {
           "name": "kick",
-          "description": " "
+          "description": "Whether this is a forced removal of active members in a conference call."
         },
         "only_left": {
           "name": "only_left",
-          "description": " "
+          "description": "Whether this is a removal of members that already left the conference call."
         }
       },
       "errors": [
@@ -68299,25 +68372,31 @@
     },
     "phone.getGroupCallChainBlocks": {
       "name": "phone.getGroupCallChainBlocks",
+      "description": [
+        "Fetch the blocks of a conference blockchain »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end/group-calls"
+      ],
       "parameters": {
         "call": {
           "name": "call",
-          "description": " "
+          "description": "The conference."
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
+          "description": "Maximum number of blocks to return in this call, see pagination¹",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination."
         },
         "sub_chain_id": {
           "name": "sub_chain_id",
-          "description": " "
+          "description": "Subchain ID."
         }
       },
       "errors": [
@@ -68456,10 +68535,13 @@
     },
     "phone.inviteConferenceCallParticipant": {
       "name": "phone.inviteConferenceCallParticipant",
+      "description": [
+        "Invite a user to a conference call."
+      ],
       "parameters": {
         "call": {
           "name": "call",
-          "description": " "
+          "description": "The conference call."
         },
         "flags": {
           "name": "flags",
@@ -68470,11 +68552,11 @@
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user to invite."
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "Invite the user to also turn on their video feed."
         }
       },
       "errors": [
@@ -68541,7 +68623,10 @@
       "parameters": {
         "block": {
           "name": "block",
-          "description": " "
+          "description": "The block containing an appropriate e2e.chain.changeSetGroupState event¹.",
+          "links": [
+            "https://core.telegram.org/api/end-to-end/group-calls"
+          ]
         },
         "call": {
           "name": "call",
@@ -68575,7 +68660,7 @@
         },
         "public_key": {
           "name": "public_key",
-          "description": " "
+          "description": "For conference calls, your public key."
         },
         "video_stopped": {
           "name": "video_stopped",
@@ -68864,14 +68949,20 @@
     },
     "phone.sendConferenceCallBroadcast": {
       "name": "phone.sendConferenceCallBroadcast",
+      "description": [
+        "Broadcast a blockchain block to all members of a conference call, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end/group-calls"
+      ],
       "parameters": {
         "block": {
           "name": "block",
-          "description": " "
+          "description": "The block to broadcast."
         },
         "call": {
           "name": "call",
-          "description": " "
+          "description": "The conference where to broadcast the block."
         }
       },
       "errors": [
