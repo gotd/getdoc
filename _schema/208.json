@@ -2922,7 +2922,7 @@
         "Info about currently connected business bots¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "connected_bots": {
@@ -4804,14 +4804,14 @@
         "Contains info about a bot business connection¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "connection_id": {
           "name": "connection_id",
           "description": "Business connection ID, used to identify messages coming from the connection and to reply to them as specified here »¹.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "date": {
@@ -4823,7 +4823,7 @@
           "description": "ID of the datacenter where to send queries wrapped in a invokeWithBusinessConnection¹ as specified here »².",
           "links": [
             "https://core.telegram.org/method/invokeWithBusinessConnection",
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "disabled": {
@@ -4839,7 +4839,7 @@
         },
         "rights": {
           "name": "rights",
-          "description": " "
+          "description": "Business bot rights."
         },
         "user_id": {
           "name": "user_id",
@@ -5684,7 +5684,7 @@
         "Specifies the private chats that a connected business bot »¹ may receive messages and interact with."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "contacts": {
@@ -5730,7 +5730,7 @@
         "Business bot rights¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "change_gift_settings": {
@@ -7097,10 +7097,16 @@
     },
     "channelAdminLogEventActionToggleAutotranslation": {
       "name": "channelAdminLogEventActionToggleAutotranslation",
+      "description": [
+        "Channel autotranslation was toggled »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/translation#autotranslation-for-channels"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "New value of the toggle"
         }
       }
     },
@@ -9766,7 +9772,7 @@
         "Contains info about a connected business bot »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "bot_id": {
@@ -9784,12 +9790,12 @@
           "name": "recipients",
           "description": "Specifies the private chats that a connected business bot »¹ may receive messages and interact with.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "rights": {
           "name": "rights",
-          "description": " "
+          "description": "Business bot rights."
         }
       }
     },
@@ -10585,22 +10591,40 @@
     },
     "disallowedGiftsSettings": {
       "name": "disallowedGiftsSettings",
+      "description": [
+        "Disallow the reception of specific gift¹ types."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ],
       "fields": {
         "disallow_limited_stargifts": {
           "name": "disallow_limited_stargifts",
-          "description": " "
+          "description": "Disallow the reception of limited-supply gifts (those with the starGift¹.limited flag set).",
+          "links": [
+            "https://core.telegram.org/constructor/starGift"
+          ]
         },
         "disallow_premium_gifts": {
           "name": "disallow_premium_gifts",
-          "description": " "
+          "description": "Disallow the reception of gifted Telegram Premium subscriptions »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "disallow_unique_stargifts": {
           "name": "disallow_unique_stargifts",
-          "description": " "
+          "description": "Disallow the reception of collectible gifts »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "disallow_unlimited_stargifts": {
           "name": "disallow_unlimited_stargifts",
-          "description": " "
+          "description": "Disallow the reception of gifts with an unlimited supply (those with the starGift¹.limited flag not set).",
+          "links": [
+            "https://core.telegram.org/constructor/starGift"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -12070,11 +12094,17 @@
         },
         "disallowed_gifts": {
           "name": "disallowed_gifts",
-          "description": " "
+          "description": "Disallows the reception of specific gift types."
         },
         "display_gifts_button": {
           "name": "display_gifts_button",
-          "description": " "
+          "description": "Enables or disables our userFull¹.display_gifts_button flag: if the userFull².display_gifts_button flag of both us and another user is set, a gift button should always be displayed in the text field in private chats with the other user: once clicked, the gift UI should be displayed, offering the user options to gift Telegram Premium »³ subscriptions or Telegram Gifts »⁴.",
+          "links": [
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/constructor/userFull",
+            "https://core.telegram.org/api/premium#gifting-telegram-premium",
+            "https://core.telegram.org/api/gifts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -13804,7 +13834,7 @@
         "Specifies the private chats that a connected business bot »¹ may interact with."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "contacts": {
@@ -14642,19 +14672,37 @@
     },
     "inputGroupCallInviteMessage": {
       "name": "inputGroupCallInviteMessage",
+      "description": [
+        "Join a group call through a messageActionConferenceCall¹ invitation message."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/messageActionConferenceCall"
+      ],
       "fields": {
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "ID of the messageActionConferenceCall¹.",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionConferenceCall"
+          ]
         }
       }
     },
     "inputGroupCallSlug": {
       "name": "inputGroupCallSlug",
+      "description": [
+        "Join a conference call through an invitation link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#conference-link"
+      ],
       "fields": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Slug from the conference link »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#conference-link"
+          ]
         }
       }
     },
@@ -14699,9 +14747,9 @@
         "Transfer stars from the balance of a user account connected to a business bot¹, to the balance of the business bot², see here »³ for more info on the full flow."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots",
-        "https://core.telegram.org/api/business#connected-bots",
-        "https://core.telegram.org/api/business#transferring-stars-from-a-business-account-to-the-business-bot"
+        "https://core.telegram.org/api/bots/connected-business-bots",
+        "https://core.telegram.org/api/bots/connected-business-bots",
+        "https://core.telegram.org/api/stars#transferring-stars-from-a-business-account-to-the-business-bot"
       ],
       "fields": {
         "bot": {
@@ -14890,7 +14938,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/gifts#collectible-gifts",
-        "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+        "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
       ],
       "fields": {
         "slug": {
@@ -16737,10 +16785,16 @@
     },
     "inputSavedStarGiftSlug": {
       "name": "inputSavedStarGiftSlug",
+      "description": [
+        "Points to a collectible gift obtained from a collectible gift link »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/links#collectible-gift-link"
+      ],
       "fields": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Slug from the link."
         }
       }
     },
@@ -19030,7 +19084,7 @@
           "name": "via_business_bot_id",
           "description": "Whether the message was sent by the business bot¹ specified in via_bot_id on behalf of the user.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "video_processing_pending": {
@@ -19246,18 +19300,24 @@
     },
     "messageActionConferenceCall": {
       "name": "messageActionConferenceCall",
+      "description": [
+        "Represents a conference call¹ (or an invitation to a conference call, if neither the missed nor active flags are set)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end/group-calls"
+      ],
       "fields": {
         "active": {
           "name": "active",
-          "description": " "
+          "description": "Whether the user is currently in the conference call."
         },
         "call_id": {
           "name": "call_id",
-          "description": " "
+          "description": "Call ID."
         },
         "duration": {
           "name": "duration",
-          "description": " "
+          "description": "Call duration, for left calls only."
         },
         "flags": {
           "name": "flags",
@@ -19268,15 +19328,15 @@
         },
         "missed": {
           "name": "missed",
-          "description": " "
+          "description": "Whether the conference call has ended and the user hasn't joined."
         },
         "other_participants": {
           "name": "other_participants",
-          "description": " "
+          "description": "Identifiers of some other call participants."
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "Whether this is a video conference call."
         }
       }
     },
@@ -19669,10 +19729,20 @@
     },
     "messageActionPaidMessagesPrice": {
       "name": "messageActionPaidMessagesPrice",
+      "description": [
+        "The price of paid messages »¹ in this chat was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/paid-messages"
+      ],
       "fields": {
         "broadcast_messages_allowed": {
           "name": "broadcast_messages_allowed",
-          "description": " "
+          "description": "Can only be set for channels, if set indicates that direct messages were enabled »¹, otherwise indicates that direct messages were disabled; the price of paid messages is related to the price of direct messages (aka those sent to the associated monoforum²).",
+          "links": [
+            "https://core.telegram.org/api/forum#monoforums",
+            "https://core.telegram.org/api/forum#monoforums"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -19683,20 +19753,30 @@
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "The new price in Telegram Stars¹, can be 0 if messages are now free.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       }
     },
     "messageActionPaidMessagesRefunded": {
       "name": "messageActionPaidMessagesRefunded",
+      "description": [
+        "Sent from peer A to B, indicates that A refunded all stars¹ B previously paid to send messages to A, see here »² for more info on paid messages."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/api/paid-messages"
+      ],
       "fields": {
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Number of paid messages affected by the refund."
         },
         "stars": {
           "name": "stars",
-          "description": " "
+          "description": "Number of refunded stars."
         }
       }
     },
@@ -25945,6 +26025,12 @@
     },
     "payments.resaleStarGifts": {
       "name": "payments.resaleStarGifts",
+      "description": [
+        "List of gifts currently on resale »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
+      ],
       "fields": {
         "attributes": {
           "name": "attributes",
@@ -25960,7 +26046,7 @@
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of results."
         },
         "counters": {
           "name": "counters",
@@ -25975,15 +26061,18 @@
         },
         "gifts": {
           "name": "gifts",
-          "description": " "
+          "description": "Collectible gifts on resale (may be less than count, in which case next_offset will be set)."
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset for pagination, pass this to payments.getResaleStarGifts¹.offset to fetch the next results.",
+          "links": [
+            "https://core.telegram.org/method/payments.getResaleStarGifts"
+          ]
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the attributes."
         }
       }
     },
@@ -26506,15 +26595,15 @@
           "name": "business_bot_can_reply",
           "description": "This flag is set if both business_bot_id and business_bot_manage_url are set and connected business bots »¹ can reply to messages in this chat, as specified by the settings during initial configuration².",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots",
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots",
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "business_bot_id": {
           "name": "business_bot_id",
           "description": "Contains the ID of the business bot »¹ managing this chat, used to display info about the bot in the action bar.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "business_bot_manage_url": {
@@ -26528,7 +26617,7 @@
           "name": "business_bot_paused",
           "description": "This flag is set if both business_bot_id and business_bot_manage_url are set and all connected business bots »¹ were paused in this chat using account.toggleConnectedBotPaused »².",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots",
+            "https://core.telegram.org/api/bots/connected-business-bots",
             "https://core.telegram.org/method/account.toggleConnectedBotPaused"
           ]
         },
@@ -26829,7 +26918,10 @@
         },
         "conference_supported": {
           "name": "conference_supported",
-          "description": " "
+          "description": "If set, the other party supports upgrading of the call to a conference call¹.",
+          "links": [
+            "https://core.telegram.org/api/end-to-end/group-calls"
+          ]
         },
         "connections": {
           "name": "connections",
@@ -26960,10 +27052,19 @@
     },
     "phoneCallDiscardReasonMigrateConferenceCall": {
       "name": "phoneCallDiscardReasonMigrateConferenceCall",
+      "description": [
+        "This phone call was migrated to a conference call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end/group-calls"
+      ],
       "fields": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Conference link »¹ slug.",
+          "links": [
+            "https://core.telegram.org/api/links#conference-link"
+          ]
         }
       }
     },
@@ -30361,7 +30462,7 @@
           "description": "The total number of (upgraded to collectibles¹) gifts of this type currently on resale²",
           "links": [
             "https://core.telegram.org/api/gifts#collectible-gifts",
-            "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
           ]
         },
         "availability_total": {
@@ -30408,7 +30509,7 @@
           "description": "The minimum price in Stars¹ for gifts of this type currently on resale².",
           "links": [
             "https://core.telegram.org/api/stars",
-            "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
           ]
         },
         "sold_out": {
@@ -30499,28 +30600,52 @@
     },
     "starGiftAttributeIdBackdrop": {
       "name": "starGiftAttributeIdBackdrop",
+      "description": [
+        "The backdrop of a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "backdrop_id": {
           "name": "backdrop_id",
-          "description": " "
+          "description": "Unique ID of the backdrop."
         }
       }
     },
     "starGiftAttributeIdModel": {
       "name": "starGiftAttributeIdModel",
+      "description": [
+        "The model of a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "The sticker¹ representing the upgraded gift",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         }
       }
     },
     "starGiftAttributeIdPattern": {
       "name": "starGiftAttributeIdPattern",
+      "description": [
+        "The pattern of a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "document_id": {
           "name": "document_id",
-          "description": " "
+          "description": "The sticker¹ representing the symbol",
+          "links": [
+            "https://core.telegram.org/api/stickers"
+          ]
         }
       }
     },
@@ -30678,7 +30803,7 @@
           "description": "The number of stars¹ the user has to pay in order to put the gift up for sale on the marketplace »².",
           "links": [
             "https://core.telegram.org/api/stars",
-            "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
           ]
         },
         "slug": {
@@ -31110,7 +31235,7 @@
           "name": "business_transfer",
           "description": "This transaction transfers stars from the balance of a user account connected to a business bot¹, to the balance of the business bot, see here »² for more info.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots",
+            "https://core.telegram.org/api/bots/connected-business-bots",
             "https://core.telegram.org/api/stars#transferring-stars-from-a-business-account-to-the-business-bot"
           ]
         },
@@ -31223,7 +31348,7 @@
           "name": "stargift_resale",
           "description": "This transaction is related to the resale of a collectible gift »¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#selling-collectible-gifts"
+            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
           ]
         },
         "stargift_upgrade": {
@@ -32175,10 +32300,16 @@
     },
     "stories.canSendStoryCount": {
       "name": "stories.canSendStoryCount",
+      "description": [
+        "Contains the number of available active story slots (equal to the value of the story_expiring_limit_* client configuration parameter¹ minus the number of currently active stories)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#story-expiring-limit-default"
+      ],
       "fields": {
         "count_remains": {
           "name": "count_remains",
-          "description": " "
+          "description": "Remaining active story slots."
         }
       }
     },
@@ -33403,7 +33534,7 @@
         "Connecting or disconnecting a business bot¹ or changing the connection settings will emit an updateBotBusinessConnect² update to the bot, with the new settings and a connection_id that will be used by the bot to handle updates from and send messages as the user."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/api/bots/connected-business-bots",
         "https://core.telegram.org/constructor/updateBotBusinessConnect"
       ],
       "fields": {
@@ -33562,7 +33693,7 @@
         "A message was deleted in a connected business chat »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "connection_id": {
@@ -33595,7 +33726,7 @@
         "A message was edited in a connected business chat »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "connection_id": {
@@ -33795,7 +33926,7 @@
         "A message was received via a connected business chat »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "connection_id": {
@@ -33994,7 +34125,7 @@
         "A callback button sent via a business connection¹ was pressed, and the button data was sent to the bot that created the button."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "fields": {
         "chat_instance": {
@@ -34005,7 +34136,7 @@
           "name": "connection_id",
           "description": "Business connection ID¹",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "data": {
@@ -35098,22 +35229,28 @@
     },
     "updateGroupCallChainBlocks": {
       "name": "updateGroupCallChainBlocks",
+      "description": [
+        "Contains updates to the blockchain of a conference call, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end/group-calls"
+      ],
       "fields": {
         "blocks": {
           "name": "blocks",
-          "description": " "
+          "description": "Blocks."
         },
         "call": {
           "name": "call",
-          "description": " "
+          "description": "The conference call."
         },
         "next_offset": {
           "name": "next_offset",
-          "description": " "
+          "description": "Offset of the next block."
         },
         "sub_chain_id": {
           "name": "sub_chain_id",
-          "description": " "
+          "description": "Subchain ID."
         }
       }
     },
@@ -37686,7 +37823,7 @@
           "name": "bot_business",
           "description": "Whether this bot can be connected to a user as specified here »¹.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "bot_can_edit": {
@@ -38019,7 +38156,10 @@
         },
         "bot_verification": {
           "name": "bot_verification",
-          "description": " "
+          "description": "Describes a bot verification icon »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/verification"
+          ]
         },
         "business_away_message": {
           "name": "business_away_message",
@@ -38082,11 +38222,16 @@
         },
         "disallowed_gifts": {
           "name": "disallowed_gifts",
-          "description": " "
+          "description": "Disallows the reception of specific gift types."
         },
         "display_gifts_button": {
           "name": "display_gifts_button",
-          "description": " "
+          "description": "If this flag is set for both us and another user (changed through globalPrivacySettings¹), a gift button should always be displayed in the text field in private chats with the other user: once clicked, the gift UI should be displayed, offering the user options to gift Telegram Premium »² subscriptions or Telegram Gifts »³.",
+          "links": [
+            "https://core.telegram.org/constructor/globalPrivacySettings",
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/api/gifts"
+          ]
         },
         "fallback_photo": {
           "name": "fallback_photo",
@@ -39434,7 +39579,7 @@
         "Contains info about a bot business connection¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "BotCommand": {
@@ -39527,7 +39672,7 @@
         "Specifies the private chats that a connected business bot »¹ may receive messages and interact with."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "BusinessBotRights": {
@@ -39536,7 +39681,7 @@
         "Business bot rights¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "BusinessChatLink": {
@@ -39783,7 +39928,7 @@
         "Contains info about a connected business bot »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "ConnectedBotStarRef": {
@@ -39874,7 +40019,13 @@
       ]
     },
     "DisallowedGiftsSettings": {
-      "name": "DisallowedGiftsSettings"
+      "name": "DisallowedGiftsSettings",
+      "description": [
+        "Disallow the reception of specific gift¹ types."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "Document": {
       "name": "Document",
@@ -40275,7 +40426,7 @@
         "Specifies the private chats that a connected business bot »¹ may interact with."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "InputBusinessChatLink": {
@@ -42161,7 +42312,7 @@
         "Info about currently connected business bots¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "account.ContentSettings": {
@@ -42856,7 +43007,13 @@
       ]
     },
     "payments.ResaleStarGifts": {
-      "name": "payments.ResaleStarGifts"
+      "name": "payments.ResaleStarGifts",
+      "description": [
+        "List of gifts currently on resale »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
+      ]
     },
     "payments.SavedStarGifts": {
       "name": "payments.SavedStarGifts",
@@ -43033,7 +43190,13 @@
       ]
     },
     "stories.CanSendStoryCount": {
-      "name": "stories.CanSendStoryCount"
+      "name": "stories.CanSendStoryCount",
+      "description": [
+        "Contains the number of available active story slots (equal to the value of the story_expiring_limit_* client configuration parameter¹ minus the number of currently active stories)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#story-expiring-limit-default"
+      ]
     },
     "stories.FoundStories": {
       "name": "stories.FoundStories",
@@ -43602,7 +43765,7 @@
         "Permanently disconnect a specific chat from all business bots »¹ (equivalent to specifying it in recipients.exclude_users during initial configuration with account.updateConnectedBot »²); to reconnect of a chat disconnected using this method the user must reconnect the entire bot by invoking account.updateConnectedBot »³."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/api/bots/connected-business-bots",
         "https://core.telegram.org/method/account.updateConnectedBot",
         "https://core.telegram.org/method/account.updateConnectedBot"
       ],
@@ -43769,7 +43932,7 @@
       ],
       "links": [
         "https://core.telegram.org/constructor/updateBotBusinessConnect",
-        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/api/bots/connected-business-bots",
         "https://core.telegram.org/constructor/updateBotNewBusinessMessage",
         "https://core.telegram.org/constructor/updateBotBusinessConnect",
         "https://core.telegram.org/constructor/updateBotBusinessConnect",
@@ -43780,7 +43943,7 @@
           "name": "connection_id",
           "description": "Business connection ID »¹.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         }
       },
@@ -43881,7 +44044,7 @@
         "List all currently connected business bots »¹"
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ]
     },
     "account.getContactSignUpNotification": {
@@ -45306,7 +45469,7 @@
         "Pause or unpause a specific chat, temporarily disconnecting it from all business bots »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "parameters": {
         "paused": {
@@ -45686,7 +45849,7 @@
         "Connect a business bot »¹ to the current account, or to change the current connection settings."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots"
+        "https://core.telegram.org/api/bots/connected-business-bots"
       ],
       "parameters": {
         "bot": {
@@ -50909,14 +51072,20 @@
     },
     "channels.toggleAutotranslation": {
       "name": "channels.toggleAutotranslation",
+      "description": [
+        "Toggle autotranslation in a channel, for all users: see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/translation#autotranslation-for-channels"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "The channel where to toggle autotranslation."
         },
         "enabled": {
           "name": "enabled",
-          "description": " "
+          "description": "Whether to enable or disable autotranslation."
         }
       },
       "errors": [
@@ -53464,7 +53633,7 @@
         "Make sure to always send queries wrapped in a invokeWithBusinessConnection to the datacenter ID, specified in the dc_id field of the botBusinessConnection¹ that is being used."
       ],
       "links": [
-        "https://core.telegram.org/api/business#connected-bots",
+        "https://core.telegram.org/api/bots/connected-business-bots",
         "https://core.telegram.org/constructor/botBusinessConnection"
       ],
       "parameters": {
@@ -65631,7 +65800,7 @@
           "name": "business_connection_id",
           "description": "Whether the media will be used only in the specified business connection »¹, and not directly by the bot.",
           "links": [
-            "https://core.telegram.org/api/business#connected-bots"
+            "https://core.telegram.org/api/bots/connected-business-bots"
           ]
         },
         "flags": {
@@ -66515,6 +66684,13 @@
     },
     "payments.getResaleStarGifts": {
       "name": "payments.getResaleStarGifts",
+      "description": [
+        "Get collectible gifts¹ currently on resale, see here »² for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
+      ],
       "parameters": {
         "attributes": {
           "name": "attributes",
@@ -66544,7 +66720,7 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination."
         },
         "sort_by_num": {
           "name": "sort_by_num",
@@ -66552,7 +66728,7 @@
         },
         "sort_by_price": {
           "name": "sort_by_price",
-          "description": " "
+          "description": "Sort gifts by price."
         }
       },
       "errors": [
@@ -66665,7 +66841,7 @@
           "links": [
             "https://core.telegram.org/constructor/inputPeerUser",
             "https://core.telegram.org/constructor/inputPeerChannel",
-            "https://core.telegram.org/api/business#connected-bots",
+            "https://core.telegram.org/api/bots/connected-business-bots",
             "https://core.telegram.org/constructor/inputPeerUser"
           ]
         },
@@ -67659,14 +67835,22 @@
     },
     "payments.updateStarGiftPrice": {
       "name": "payments.updateStarGiftPrice",
+      "description": [
+        "A collectible gift we own »¹ can be put up for sale on the gift marketplace »² with this method, see here »³ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://telegram.org/blog/gift-marketplace-and-more",
+        "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
+      ],
       "parameters": {
         "resell_stars": {
           "name": "resell_stars",
-          "description": " "
+          "description": "The price, can be 0 to remove the gift from the gift marketplace."
         },
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The gift to resell."
         }
       },
       "errors": [
