@@ -58699,7 +58699,7 @@
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹. To generate the hash, populate the ids array with the id, date and edit_date (in this order) of the previously returned messages (in order, i.e. ids = [id1, date1, edit_date1, id2, date2, edit_date2, ...]).",
+          "description": "Hash used for caching, for more info click here¹. To generate the hash, populate the ids array with the id, edit_date (0 if unedited) and date (in this order) of the previously returned messages (in order, i.e. ids = [id1, (edit_date1 ?? 0), date1, id2, (edit_date2 ?? 0), date2, ...]).",
           "links": [
             "https://core.telegram.org/api/offsets#hash-generation"
           ]
@@ -74356,7 +74356,7 @@
       "type": "NOGENERAL_HIDE_FORBIDDEN"
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -74428,7 +74428,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -75534,7 +75534,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -75544,7 +75544,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -75749,7 +75749,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
