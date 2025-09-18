@@ -65722,7 +65722,7 @@
     "messages.uploadEncryptedFile": {
       "name": "messages.uploadEncryptedFile",
       "description": [
-        "Upload encrypted file and associate it to a secret chat"
+        "Upload encrypted file and associate it to a secret chat (without actually sending it to the chat)."
       ],
       "parameters": {
         "file": {
@@ -74356,7 +74356,7 @@
       "type": "NOGENERAL_HIDE_FORBIDDEN"
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
