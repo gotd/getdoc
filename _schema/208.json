@@ -65722,7 +65722,7 @@
     "messages.uploadEncryptedFile": {
       "name": "messages.uploadEncryptedFile",
       "description": [
-        "Upload encrypted file and associate it to a secret chat"
+        "Upload encrypted file and associate it to a secret chat (without actually sending it to the chat)."
       ],
       "parameters": {
         "file": {
