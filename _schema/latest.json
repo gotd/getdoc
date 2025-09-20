@@ -74428,7 +74428,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -75534,7 +75534,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -75544,7 +75544,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -75794,7 +75794,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 400,
+      "code": 403,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
