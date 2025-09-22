@@ -3945,6 +3945,14 @@
         "store_product": {
           "name": "store_product",
           "description": "Store identifier of the Telegram Premium subscription."
+        },
+        "support_email_address": {
+          "name": "support_email_address",
+          "description": " "
+        },
+        "support_email_subject": {
+          "name": "support_email_subject",
+          "description": " "
         }
       }
     },
@@ -7631,6 +7639,13 @@
         "location": {
           "name": "location",
           "description": "Location of the geogroup"
+        },
+        "main_tab": {
+          "name": "main_tab",
+          "description": "The main tab for the channel's profile, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/profile#tabs"
+          ]
         },
         "migrated_from_chat_id": {
           "name": "migrated_from_chat_id",
@@ -14941,6 +14956,13 @@
         "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
       ],
       "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "slug": {
           "name": "slug",
           "description": "Slug of the gift to buy."
@@ -14948,6 +14970,10 @@
         "to_id": {
           "name": "to_id",
           "description": "The receiver of the gift."
+        },
+        "ton": {
+          "name": "ton",
+          "description": " "
         }
       }
     },
@@ -17581,6 +17607,17 @@
             "https://core.telegram.org/bots/payments#supported-currencies"
           ]
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "spend_purpose_peer": {
+          "name": "spend_purpose_peer",
+          "description": "Should be populated with the peer where the topup process was initiated due to low funds (i.e. a bot for bot payments, a channel for paid media/reactions, etc); leave this flag unpopulated if the topup flow was not initated when attempting to spend more Stars than currently available on the account's balance."
+        },
         "stars": {
           "name": "stars",
           "description": "Amount of stars to topup"
@@ -20101,9 +20138,9 @@
         "The chat theme was changed"
       ],
       "fields": {
-        "emoticon": {
-          "name": "emoticon",
-          "description": "The emoji that identifies a chat theme"
+        "theme": {
+          "name": "theme",
+          "description": " "
         }
       }
     },
@@ -20215,6 +20252,10 @@
           "name": "gift",
           "description": "Info about the gift"
         },
+        "gift_msg_id": {
+          "name": "gift_msg_id",
+          "description": " "
+        },
         "message": {
           "name": "message",
           "description": "Additional message from the sender of the gift"
@@ -20226,6 +20267,14 @@
         "peer": {
           "name": "peer",
           "description": "Receiver of the gift."
+        },
+        "prepaid_upgrade": {
+          "name": "prepaid_upgrade",
+          "description": " "
+        },
+        "prepaid_upgrade_hash": {
+          "name": "prepaid_upgrade_hash",
+          "description": " "
         },
         "refunded": {
           "name": "refunded",
@@ -20253,6 +20302,10 @@
             "https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift",
             "https://core.telegram.org/constructor/messageActionStarGiftUnique"
           ]
+        },
+        "upgrade_separate": {
+          "name": "upgrade_separate",
+          "description": " "
         },
         "upgrade_stars": {
           "name": "upgrade_stars",
@@ -20320,6 +20373,10 @@
           "name": "peer",
           "description": "Receiver of the gift."
         },
+        "prepaid_upgrade": {
+          "name": "prepaid_upgrade",
+          "description": " "
+        },
         "refunded": {
           "name": "refunded",
           "description": "This gift was upgraded to a collectible gift »¹ and then re-downgraded to a regular gift because a request to refund the payment related to the upgrade was made, and the money was returned.",
@@ -20327,9 +20384,9 @@
             "https://core.telegram.org/api/gifts#collectible-gifts"
           ]
         },
-        "resale_stars": {
-          "name": "resale_stars",
-          "description": "If set, indicates the number of Telegram Stars that were spent on buying the gift, not set if the gift was upgraded or transferred."
+        "resale_amount": {
+          "name": "resale_amount",
+          "description": " "
         },
         "saved": {
           "name": "saved",
@@ -23563,6 +23620,10 @@
           "name": "offset_id_offset",
           "description": "Indicates the absolute position of messages[0] within the total result set with count count. This is useful, for example, if the result was fetched using offset_id, and we need to display a progress/total counter (like photo 134 of 200, for all media in a chat, we could simply use photo ${offset_id_offset} of ${count}."
         },
+        "search_flood": {
+          "name": "search_flood",
+          "description": " "
+        },
         "users": {
           "name": "users",
           "description": "List of users mentioned in messages and chats"
@@ -24284,6 +24345,10 @@
         "Represents a webpage preview."
       ],
       "fields": {
+        "chats": {
+          "name": "chats",
+          "description": "Chats mentioned in the gift field."
+        },
         "media": {
           "name": "media",
           "description": "The messageMediaWebPage¹ or a messageMediaEmpty² if there is no preview.",
@@ -26042,7 +26107,7 @@
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Chats mentioned in the attributes."
         },
         "count": {
           "name": "count",
@@ -26390,6 +26455,10 @@
         "https://core.telegram.org/api/gifts#collectible-gifts"
       ],
       "fields": {
+        "chats": {
+          "name": "chats",
+          "description": "Chats mentioned in the gift field."
+        },
         "gift": {
           "name": "gift",
           "description": "The starGiftUnique¹ constructor.",
@@ -29226,6 +29295,10 @@
             "https://core.telegram.org/api/gifts#collectible-gifts"
           ]
         },
+        "collection_id": {
+          "name": "collection_id",
+          "description": " "
+        },
         "convert_stars": {
           "name": "convert_stars",
           "description": "For non-collectible gifts, the receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page."
@@ -29268,6 +29341,10 @@
           "name": "pinned_to_top",
           "description": "Whether this gift is pinned on top of the user's profile page."
         },
+        "prepaid_upgrade_hash": {
+          "name": "prepaid_upgrade_hash",
+          "description": " "
+        },
         "refunded": {
           "name": "refunded",
           "description": "This gift was upgraded to a collectible gift »¹ and then re-downgraded to a regular gift because a request to refund the payment related to the upgrade was made, and the money was returned.",
@@ -29292,6 +29369,10 @@
         "unsaved": {
           "name": "unsaved",
           "description": "If set, the gift is not pinned on the user's profile."
+        },
+        "upgrade_separate": {
+          "name": "upgrade_separate",
+          "description": " "
         },
         "upgrade_stars": {
           "name": "upgrade_stars",
@@ -30500,9 +30581,29 @@
           "name": "limited",
           "description": "Whether this is a limited-supply gift."
         },
+        "limited_per_user": {
+          "name": "limited_per_user",
+          "description": " "
+        },
+        "locked_until_date": {
+          "name": "locked_until_date",
+          "description": "If set, the specified gift cannot be sent until the specified date."
+        },
+        "per_user_remains": {
+          "name": "per_user_remains",
+          "description": " "
+        },
+        "per_user_total": {
+          "name": "per_user_total",
+          "description": " "
+        },
         "released_by": {
           "name": "released_by",
           "description": "This gift was released by the specified peer."
+        },
+        "require_premium": {
+          "name": "require_premium",
+          "description": " "
         },
         "resell_min_stars": {
           "name": "resell_min_stars",
@@ -30770,6 +30871,10 @@
             "https://core.telegram.org/api/config#ton-blockchain-explorer-url"
           ]
         },
+        "gift_id": {
+          "name": "gift_id",
+          "description": " "
+        },
         "id": {
           "name": "id",
           "description": "Identifier of the collectible gift."
@@ -30798,13 +30903,17 @@
           "name": "released_by",
           "description": "This gift was released by the specified peer."
         },
-        "resell_stars": {
-          "name": "resell_stars",
-          "description": "The number of stars¹ the user has to pay in order to put the gift up for sale on the marketplace »².",
-          "links": [
-            "https://core.telegram.org/api/stars",
-            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
-          ]
+        "require_premium": {
+          "name": "require_premium",
+          "description": " "
+        },
+        "resale_ton_only": {
+          "name": "resale_ton_only",
+          "description": " "
+        },
+        "resell_amount": {
+          "name": "resell_amount",
+          "description": " "
         },
         "slug": {
           "name": "slug",
@@ -30814,9 +30923,25 @@
             "https://core.telegram.org/api/gifts"
           ]
         },
+        "theme_available": {
+          "name": "theme_available",
+          "description": " "
+        },
+        "theme_peer": {
+          "name": "theme_peer",
+          "description": " "
+        },
         "title": {
           "name": "title",
           "description": "Collectible title."
+        },
+        "value_amount": {
+          "name": "value_amount",
+          "description": " "
+        },
+        "value_currency": {
+          "name": "value_currency",
+          "description": " "
         }
       }
     },
@@ -31343,6 +31468,10 @@
           "links": [
             "https://core.telegram.org/api/stars"
           ]
+        },
+        "stargift_prepaid_upgrade": {
+          "name": "stargift_prepaid_upgrade",
+          "description": " "
         },
         "stargift_resale": {
           "name": "stargift_resale",
@@ -32588,6 +32717,10 @@
         "https://core.telegram.org/api/stories"
       ],
       "fields": {
+        "albums": {
+          "name": "albums",
+          "description": " "
+        },
         "caption": {
           "name": "caption",
           "description": "Story caption."
@@ -38269,6 +38402,13 @@
           "name": "id",
           "description": "User ID"
         },
+        "main_tab": {
+          "name": "main_tab",
+          "description": "The main tab for the user's profile, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/profile#tabs"
+          ]
+        },
         "notify_settings": {
           "name": "notify_settings",
           "description": "Notification settings"
@@ -38325,6 +38465,13 @@
             "https://core.telegram.org/method/account.setGlobalPrivacySettings"
           ]
         },
+        "saved_music": {
+          "name": "saved_music",
+          "description": "The first song on the music tab of the profile, see here »¹ for more info on the music profile tab.",
+          "links": [
+            "https://core.telegram.org/api/profile#music"
+          ]
+        },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
           "description": "If set and bigger than 0, this user has enabled paid messages »¹ and we must pay the specified amount of Stars² to send messages to them, see here »³ for the full flow. If set and equal to 0, the user requires payment in general but we were exempted from paying for any of the reasons specified in the docs »⁴.",
@@ -38360,6 +38507,18 @@
             "https://core.telegram.org/api/bots/referrals"
           ]
         },
+        "stars_my_pending_rating": {
+          "name": "stars_my_pending_rating",
+          "description": " "
+        },
+        "stars_my_pending_rating_date": {
+          "name": "stars_my_pending_rating_date",
+          "description": " "
+        },
+        "stars_rating": {
+          "name": "stars_rating",
+          "description": " "
+        },
         "stories": {
           "name": "stories",
           "description": "Active stories »¹",
@@ -38374,9 +38533,9 @@
             "https://core.telegram.org/api/stories#pinned-or-archived-stories"
           ]
         },
-        "theme_emoticon": {
-          "name": "theme_emoticon",
-          "description": "Emoji associated with chat theme"
+        "theme": {
+          "name": "theme",
+          "description": " "
         },
         "translations_disabled": {
           "name": "translations_disabled",
@@ -50841,6 +51000,17 @@
         "https://core.telegram.org/api/channel"
       ],
       "parameters": {
+        "allow_paid_stars": {
+          "name": "allow_paid_stars",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "hashtag": {
           "name": "hashtag",
           "description": "The hashtag to search, without the # character."
@@ -50872,6 +51042,10 @@
           "links": [
             "https://core.telegram.org/constructor/messages.messagesSlice"
           ]
+        },
+        "query": {
+          "name": "query",
+          "description": " "
         }
       },
       "errors": [
@@ -64137,16 +64311,13 @@
         "Change the chat theme of a certain chat"
       ],
       "parameters": {
-        "emoticon": {
-          "name": "emoticon",
-          "description": "Emoji, identifying a specific chat theme; a list of chat themes can be fetched using account.getChatThemes¹",
-          "links": [
-            "https://core.telegram.org/method/account.getChatThemes"
-          ]
-        },
         "peer": {
           "name": "peer",
           "description": "Private chat where to change theme"
+        },
+        "theme": {
+          "name": "theme",
+          "description": " "
         }
       },
       "errors": [
@@ -66685,7 +66856,8 @@
     "payments.getResaleStarGifts": {
       "name": "payments.getResaleStarGifts",
       "description": [
-        "Get collectible gifts¹ currently on resale, see here »² for more info."
+        "Get collectible gifts¹ currently on resale, see here »² for more info.",
+        "sort_by_price and sort_by_num are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed."
       ],
       "links": [
         "https://core.telegram.org/api/gifts#collectible-gifts",
@@ -66694,11 +66866,14 @@
       "parameters": {
         "attributes": {
           "name": "attributes",
-          "description": " "
+          "description": "Optionally filter gifts that have only the specified attributes."
         },
         "attributes_hash": {
           "name": "attributes_hash",
-          "description": " "
+          "description": "When filtering attributes using attributes, if a previous call to the method with the same attributes was made, pass here the returned payments.resaleStarGifts¹.attributes_hash to avoid returning any results if they haven't changed.",
+          "links": [
+            "https://core.telegram.org/constructor/payments.resaleStarGifts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -66709,7 +66884,7 @@
         },
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Identifier of the base gift from which the collectible gift was upgraded."
         },
         "limit": {
           "name": "limit",
@@ -66724,11 +66899,11 @@
         },
         "sort_by_num": {
           "name": "sort_by_num",
-          "description": " "
+          "description": "Sort gifts by number (ascending)."
         },
         "sort_by_price": {
           "name": "sort_by_price",
-          "description": "Sort gifts by price."
+          "description": "Sort gifts by price (ascending)."
         }
       },
       "errors": [
@@ -66785,12 +66960,9 @@
         "https://core.telegram.org/api/gifts"
       ],
       "parameters": {
-        "exclude_limited": {
-          "name": "exclude_limited",
-          "description": "Exclude gifts that do have the starGift¹.limited flag set.",
-          "links": [
-            "https://core.telegram.org/constructor/starGift"
-          ]
+        "collection_id": {
+          "name": "collection_id",
+          "description": " "
         },
         "exclude_saved": {
           "name": "exclude_saved",
@@ -66813,6 +66985,14 @@
         "exclude_unsaved": {
           "name": "exclude_unsaved",
           "description": "Exclude gifts not pinned on the profile."
+        },
+        "exclude_unupgradable": {
+          "name": "exclude_unupgradable",
+          "description": " "
+        },
+        "exclude_upgradable": {
+          "name": "exclude_upgradable",
+          "description": " "
         },
         "flags": {
           "name": "flags",
@@ -67844,9 +68024,9 @@
         "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
       ],
       "parameters": {
-        "resell_stars": {
-          "name": "resell_stars",
-          "description": "The price, can be 0 to remove the gift from the gift marketplace."
+        "resell_amount": {
+          "name": "resell_amount",
+          "description": " "
         },
         "stargift": {
           "name": "stargift",
@@ -71640,6 +71820,10 @@
         "https://core.telegram.org/api/stories"
       ],
       "parameters": {
+        "albums": {
+          "name": "albums",
+          "description": " "
+        },
         "caption": {
           "name": "caption",
           "description": "Story caption."
