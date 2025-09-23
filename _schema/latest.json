@@ -12875,7 +12875,10 @@
     "help.promoData": {
       "name": "help.promoData",
       "description": [
-        "MTProxy/Public Service Announcement information"
+        "A set of useful suggestions and a PSA/MTProxy sponsored peer, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#suggestions"
       ],
       "fields": {
         "chats": {
@@ -12884,15 +12887,24 @@
         },
         "custom_pending_suggestion": {
           "name": "custom_pending_suggestion",
-          "description": " "
+          "description": "Contains a list of custom pending suggestions »¹.",
+          "links": [
+            "https://core.telegram.org/api/config#pending-suggestions"
+          ]
         },
         "dismissed_suggestions": {
           "name": "dismissed_suggestions",
-          "description": " "
+          "description": "Contains a list of inverted suggestions »¹.",
+          "links": [
+            "https://core.telegram.org/api/config#inverted-suggestions"
+          ]
         },
         "expires": {
           "name": "expires",
-          "description": "Expiry of PSA/MTProxy info"
+          "description": "Unixtime when to re-invoke help.getPromoData¹.",
+          "links": [
+            "https://core.telegram.org/method/help.getPromoData"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -12907,19 +12919,22 @@
         },
         "pending_suggestions": {
           "name": "pending_suggestions",
-          "description": " "
+          "description": "Contains a list of pending suggestions »¹.",
+          "links": [
+            "https://core.telegram.org/api/config#pending-suggestions"
+          ]
         },
         "proxy": {
           "name": "proxy",
-          "description": "MTProxy-related channel"
+          "description": "Set when connecting using an MTProxy that has configured an associated peer (that will be passed in peer, i.e. the channel that sponsored the MTProxy) that should be pinned on top of the chat list."
         },
         "psa_message": {
           "name": "psa_message",
-          "description": "PSA message"
+          "description": "For Public Service Announcement peers, contains the PSA itself."
         },
         "psa_type": {
           "name": "psa_type",
-          "description": "PSA type"
+          "description": "For Public Service Announcement peers, indicates the type of the PSA."
         },
         "users": {
           "name": "users",
@@ -26099,11 +26114,14 @@
       "fields": {
         "attributes": {
           "name": "attributes",
-          "description": " "
+          "description": "Possible gift attributes."
         },
         "attributes_hash": {
           "name": "attributes_hash",
-          "description": " "
+          "description": "Hash of the attributes field, pass this to payments.getResaleStarGifts¹.attributes_hash to avoid returning any attributes (flag not set) if they haven't changed.",
+          "links": [
+            "https://core.telegram.org/method/payments.getResaleStarGifts"
+          ]
         },
         "chats": {
           "name": "chats",
@@ -26810,22 +26828,31 @@
     },
     "pendingSuggestion": {
       "name": "pendingSuggestion",
+      "description": [
+        "Represents a custom pending suggestion »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#custom-suggestions"
+      ],
       "fields": {
         "description": {
           "name": "description",
-          "description": " "
+          "description": "Body of the suggestion."
         },
         "suggestion": {
           "name": "suggestion",
-          "description": " "
+          "description": "The suggestion ID, can be passed to help.dismissSuggestion¹.",
+          "links": [
+            "https://core.telegram.org/method/help.dismissSuggestion"
+          ]
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title of the suggestion."
         },
         "url": {
           "name": "url",
-          "description": " "
+          "description": "URL to open when the user clicks on the suggestion."
         }
       }
     },
@@ -29297,7 +29324,10 @@
         },
         "collection_id": {
           "name": "collection_id",
-          "description": " "
+          "description": "IDs of the collections »¹ that this gift is a part of.",
+          "links": [
+            "https://core.telegram.org/api/gifts#gift-collections"
+          ]
         },
         "convert_stars": {
           "name": "convert_stars",
@@ -30583,7 +30613,7 @@
         },
         "limited_per_user": {
           "name": "limited_per_user",
-          "description": " "
+          "description": "If set, the maximum number of gifts of this type that can be owned by a single user is limited and specified in per_user_total, and the remaining slots for the current user in per_user_remains."
         },
         "locked_until_date": {
           "name": "locked_until_date",
@@ -30591,11 +30621,11 @@
         },
         "per_user_remains": {
           "name": "per_user_remains",
-          "description": " "
+          "description": "Remaining number of gifts of this type that can be owned by the current user."
         },
         "per_user_total": {
           "name": "per_user_total",
-          "description": " "
+          "description": "Maximum number of gifts of this type that can be owned by any user."
         },
         "released_by": {
           "name": "released_by",
@@ -30603,7 +30633,10 @@
         },
         "require_premium": {
           "name": "require_premium",
-          "description": " "
+          "description": "This gift can only be bought by users with a Premium¹ subscription.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "resell_min_stars": {
           "name": "resell_min_stars",
@@ -30688,21 +30721,24 @@
     },
     "starGiftAttributeCounter": {
       "name": "starGiftAttributeCounter",
+      "description": [
+        "Indicates the total number of gifts that have the specified attribute."
+      ],
       "fields": {
         "attribute": {
           "name": "attribute",
-          "description": " "
+          "description": "The attribute (just the ID, without the attribute itself)."
         },
         "count": {
           "name": "count",
-          "description": " "
+          "description": "Total number of gifts with this attribute."
         }
       }
     },
     "starGiftAttributeIdBackdrop": {
       "name": "starGiftAttributeIdBackdrop",
       "description": [
-        "The backdrop of a collectible gift »¹."
+        "The ID of a backdrop of a collectible gift »¹."
       ],
       "links": [
         "https://core.telegram.org/api/gifts#collectible-gifts"
@@ -30717,7 +30753,7 @@
     "starGiftAttributeIdModel": {
       "name": "starGiftAttributeIdModel",
       "description": [
-        "The model of a collectible gift »¹."
+        "The ID of a model of a collectible gift »¹."
       ],
       "links": [
         "https://core.telegram.org/api/gifts#collectible-gifts"
@@ -30735,7 +30771,7 @@
     "starGiftAttributeIdPattern": {
       "name": "starGiftAttributeIdPattern",
       "description": [
-        "The pattern of a collectible gift »¹."
+        "The ID of a pattern of a collectible gift »¹."
       ],
       "links": [
         "https://core.telegram.org/api/gifts#collectible-gifts"
@@ -41526,7 +41562,13 @@
       ]
     },
     "PendingSuggestion": {
-      "name": "PendingSuggestion"
+      "name": "PendingSuggestion",
+      "description": [
+        "Represents a custom pending suggestion »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#custom-suggestions"
+      ]
     },
     "Phone.PhoneCall": {
       "name": "Phone.PhoneCall",
@@ -42005,7 +42047,10 @@
       ]
     },
     "StarGiftAttributeCounter": {
-      "name": "StarGiftAttributeCounter"
+      "name": "StarGiftAttributeCounter",
+      "description": [
+        "Indicates the total number of gifts that have the specified attribute."
+      ]
     },
     "StarGiftAttributeId": {
       "name": "StarGiftAttributeId"
@@ -53544,7 +53589,10 @@
     "help.getPromoData": {
       "name": "help.getPromoData",
       "description": [
-        "Get MTProxy/Public Service Announcement information"
+        "Returns a set of useful suggestions and PSA/MTProxy sponsored peers, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/config#suggestions"
       ]
     },
     "help.getRecentMeUrls": {
@@ -66856,7 +66904,7 @@
     "payments.getResaleStarGifts": {
       "name": "payments.getResaleStarGifts",
       "description": [
-        "Get collectible gifts¹ currently on resale, see here »² for more info.",
+        "Get collectible gifts¹ of a specific type currently on resale, see here »² for more info.",
         "sort_by_price and sort_by_num are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed."
       ],
       "links": [
@@ -66866,11 +66914,11 @@
       "parameters": {
         "attributes": {
           "name": "attributes",
-          "description": "Optionally filter gifts that have only the specified attributes."
+          "description": "Optionally filter gifts with the specified attributes. If no attributes of a specific type are specified, all attributes of that type are allowed."
         },
         "attributes_hash": {
           "name": "attributes_hash",
-          "description": "When filtering attributes using attributes, if a previous call to the method with the same attributes was made, pass here the returned payments.resaleStarGifts¹.attributes_hash to avoid returning any results if they haven't changed.",
+          "description": "If a previous call to the method was made and payments.resaleStarGifts¹.attributes_hash was set, pass it here to avoid returning any results if they haven't changed.",
           "links": [
             "https://core.telegram.org/constructor/payments.resaleStarGifts"
           ]
@@ -66962,7 +67010,10 @@
       "parameters": {
         "collection_id": {
           "name": "collection_id",
-          "description": " "
+          "description": "Only returns gifts within the specified collection »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#gift-collections"
+          ]
         },
         "exclude_saved": {
           "name": "exclude_saved",
@@ -66988,11 +67039,17 @@
         },
         "exclude_unupgradable": {
           "name": "exclude_unupgradable",
-          "description": " "
+          "description": "Exclude gifts that cannot be upgraded to collectible gifts »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "exclude_upgradable": {
           "name": "exclude_upgradable",
-          "description": " "
+          "description": "Exclude gifts that can be upgraded to collectible gifts »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -71822,7 +71879,7 @@
       "parameters": {
         "albums": {
           "name": "albums",
-          "description": " "
+          "description": "If set, adds the story to the specified albums."
         },
         "caption": {
           "name": "caption",
@@ -74244,7 +74301,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -74612,7 +74669,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 400,
+      "code": 403,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -74760,7 +74817,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -75933,7 +75990,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
