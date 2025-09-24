@@ -6242,7 +6242,7 @@
         },
         "id": {
           "name": "id",
-          "description": "ID of the channel, see here »¹ for more info",
+          "description": "ID of the channel, see here »¹ for more info and the available ID range.",
           "links": [
             "https://core.telegram.org/api/peers#peer-id"
           ]
@@ -8364,7 +8364,7 @@
         },
         "id": {
           "name": "id",
-          "description": "ID of the group, see here »¹ for more info",
+          "description": "ID of the group, see here »¹ for more info and the available ID range.",
           "links": [
             "https://core.telegram.org/api/peers#peer-id"
           ]
@@ -14988,7 +14988,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": " "
+          "description": "Buy the gift using TON."
         }
       }
     },
@@ -15616,10 +15616,16 @@
     },
     "inputMediaTodo": {
       "name": "inputMediaTodo",
+      "description": [
+        "Creates a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "todo": {
           "name": "todo",
-          "description": " "
+          "description": "The todo list."
         }
       }
     },
@@ -20401,7 +20407,7 @@
         },
         "resale_amount": {
           "name": "resale_amount",
-          "description": " "
+          "description": "Resale price of the gift."
         },
         "saved": {
           "name": "saved",
@@ -20512,23 +20518,35 @@
     },
     "messageActionTodoAppendTasks": {
       "name": "messageActionTodoAppendTasks",
+      "description": [
+        "Items were appended to the todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "list": {
           "name": "list",
-          "description": " "
+          "description": "Appended items."
         }
       }
     },
     "messageActionTodoCompletions": {
       "name": "messageActionTodoCompletions",
+      "description": [
+        "Items were marked as completed or not completed in a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "completed": {
           "name": "completed",
-          "description": " "
+          "description": "Items marked as completed."
         },
         "incompleted": {
           "name": "incompleted",
-          "description": " "
+          "description": "Items marked as not completed."
         }
       }
     },
@@ -21794,10 +21812,16 @@
     },
     "messageMediaToDo": {
       "name": "messageMediaToDo",
+      "description": [
+        "Represents a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "completions": {
           "name": "completions",
-          "description": " "
+          "description": "Completed items."
         },
         "flags": {
           "name": "flags",
@@ -21808,7 +21832,7 @@
         },
         "todo": {
           "name": "todo",
-          "description": " "
+          "description": "The todo list."
         }
       }
     },
@@ -30617,7 +30641,10 @@
         },
         "locked_until_date": {
           "name": "locked_until_date",
-          "description": "If set, the specified gift cannot be sent until the specified date."
+          "description": "If set, the specified gift possibly cannot be sent until the specified date, see here »¹ for the full flow.",
+          "links": [
+            "https://core.telegram.org/api/gifts"
+          ]
         },
         "per_user_remains": {
           "name": "per_user_remains",
@@ -30909,7 +30936,7 @@
         },
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Unique ID of the gift."
         },
         "id": {
           "name": "id",
@@ -30941,15 +30968,18 @@
         },
         "require_premium": {
           "name": "require_premium",
-          "description": " "
+          "description": "This gift can only be bought by users with a Premium¹ subscription.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "resale_ton_only": {
           "name": "resale_ton_only",
-          "description": " "
+          "description": "Whether the gift can be bought only using Toncoins."
         },
         "resell_amount": {
           "name": "resell_amount",
-          "description": " "
+          "description": "Resale price of the gift."
         },
         "slug": {
           "name": "slug",
@@ -30973,11 +31003,11 @@
         },
         "value_amount": {
           "name": "value_amount",
-          "description": " "
+          "description": "Price of the gift."
         },
         "value_currency": {
           "name": "value_currency",
-          "description": " "
+          "description": "Currency for the gift's price."
         }
       }
     },
@@ -32755,7 +32785,10 @@
       "fields": {
         "albums": {
           "name": "albums",
-          "description": " "
+          "description": "Albums¹ this story is part of.",
+          "links": [
+            "https://core.telegram.org/api/stories#story-albums"
+          ]
         },
         "caption": {
           "name": "caption",
@@ -33517,36 +33550,54 @@
     },
     "todoCompletion": {
       "name": "todoCompletion",
+      "description": [
+        "A completed todo list »¹ item."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "completed_by": {
           "name": "completed_by",
-          "description": " "
+          "description": "ID of the user that completed the item."
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the item completed."
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The ID of the completed item."
         }
       }
     },
     "todoItem": {
       "name": "todoItem",
+      "description": [
+        "An item of a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "ID of the item, a positive (non-zero) integer unique within the current list."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Text of the item."
         }
       }
     },
     "todoList": {
       "name": "todoList",
+      "description": [
+        "Represents a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -33557,19 +33608,19 @@
         },
         "list": {
           "name": "list",
-          "description": " "
+          "description": "Items of the list."
         },
         "others_can_append": {
           "name": "others_can_append",
-          "description": " "
+          "description": "If set, users different from the creator of the list can append items to the list."
         },
         "others_can_complete": {
           "name": "others_can_complete",
-          "description": " "
+          "description": "If set, users different from the creator of the list can complete items in the list."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Title of the todo list."
         }
       }
     },
@@ -38110,7 +38161,7 @@
         },
         "id": {
           "name": "id",
-          "description": "ID of the user, see here »¹ for more info.",
+          "description": "ID of the user, see here »¹ for more info and the available ID range.",
           "links": [
             "https://core.telegram.org/api/peers#peer-id"
           ]
@@ -38545,15 +38596,24 @@
         },
         "stars_my_pending_rating": {
           "name": "stars_my_pending_rating",
-          "description": " "
+          "description": "Our pending star rating¹, only visible for ourselves.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-rating"
+          ]
         },
         "stars_my_pending_rating_date": {
           "name": "stars_my_pending_rating_date",
-          "description": " "
+          "description": "When the pending star rating¹ will be applied, only visible for ourselves.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-rating"
+          ]
         },
         "stars_rating": {
           "name": "stars_rating",
-          "description": " "
+          "description": "The user's star rating¹.",
+          "links": [
+            "https://core.telegram.org/api/stars#star-rating"
+          ]
         },
         "stories": {
           "name": "stories",
@@ -42337,13 +42397,31 @@
       ]
     },
     "TodoCompletion": {
-      "name": "TodoCompletion"
+      "name": "TodoCompletion",
+      "description": [
+        "A completed todo list »¹ item."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ]
     },
     "TodoItem": {
-      "name": "TodoItem"
+      "name": "TodoItem",
+      "description": [
+        "An item of a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ]
     },
     "TodoList": {
-      "name": "TodoList"
+      "name": "TodoList",
+      "description": [
+        "Represents a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ]
     },
     "TopPeer": {
       "name": "TopPeer",
@@ -51039,7 +51117,8 @@
     "channels.searchPosts": {
       "name": "channels.searchPosts",
       "description": [
-        "Globally search for posts from public channels »¹ (including those we aren't a member of) containing a specific hashtag."
+        "Globally search for posts from public channels »¹ (including those we aren't a member of) containing either a specific hashtag, or a full text query.",
+        "Exactly one of query and hashtag must be set."
       ],
       "links": [
         "https://core.telegram.org/api/channel"
@@ -51047,7 +51126,10 @@
       "parameters": {
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "For full text post searches (query), allows payment of the specified amount of Stars for the search, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/search#posts-tab"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -51083,14 +51165,17 @@
         },
         "offset_rate": {
           "name": "offset_rate",
-          "description": "Initially 0, then set to the next_rate parameter of messages.messagesSlice¹",
+          "description": "Initially 0, then set to the next_rate parameter of messages.messagesSlice¹, or if that is absent, the date of the last returned message.",
           "links": [
             "https://core.telegram.org/constructor/messages.messagesSlice"
           ]
         },
         "query": {
           "name": "query",
-          "description": " "
+          "description": "The full text query: each user has a limited amount of free full text search slots, after which payment is required, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/search#posts-tab"
+          ]
         }
       },
       "errors": [
@@ -54345,18 +54430,24 @@
     },
     "messages.appendTodoList": {
       "name": "messages.appendTodoList",
+      "description": [
+        "Appends one or more items to a todo list »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "parameters": {
         "list": {
           "name": "list",
-          "description": " "
+          "description": "Items to append."
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "ID of the message with the todo list."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the todo list was posted."
         }
       },
       "errors": [
@@ -61642,7 +61733,7 @@
         },
         "offset_rate": {
           "name": "offset_rate",
-          "description": "Initially 0, then set to the next_rate parameter of messages.messagesSlice¹",
+          "description": "Initially 0, then set to the next_rate parameter of messages.messagesSlice¹, or if that is absent, the date of the last returned message.",
           "links": [
             "https://core.telegram.org/constructor/messages.messagesSlice"
           ]
@@ -65473,22 +65564,28 @@
     },
     "messages.toggleTodoCompleted": {
       "name": "messages.toggleTodoCompleted",
+      "description": [
+        "Mark one or more items of a todo list »¹ as completed or not completed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/todo"
+      ],
       "parameters": {
         "completed": {
           "name": "completed",
-          "description": " "
+          "description": "Items to mark as completed."
         },
         "incompleted": {
           "name": "incompleted",
-          "description": " "
+          "description": "Items to mark as not completed."
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "ID of the message with the todo list."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer where the todo list was posted."
         }
       },
       "errors": [
@@ -68083,7 +68180,7 @@
       "parameters": {
         "resell_amount": {
           "name": "resell_amount",
-          "description": " "
+          "description": "Resale price of the gift."
         },
         "stargift": {
           "name": "stargift",
