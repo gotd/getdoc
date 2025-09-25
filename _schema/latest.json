@@ -3948,11 +3948,11 @@
         },
         "support_email_address": {
           "name": "support_email_address",
-          "description": " "
+          "description": "An email address that can be contacted for more information about this request."
         },
         "support_email_subject": {
           "name": "support_email_subject",
-          "description": " "
+          "description": "The mandatory subject for the email."
         }
       }
     },
@@ -6123,7 +6123,11 @@
         },
         "autotranslation": {
           "name": "autotranslation",
-          "description": " "
+          "description": "If set, autotranslation¹ was enabled for all users by the admin of the channel, as specified here »².",
+          "links": [
+            "https://core.telegram.org/api/translation#autotranslation-for-channels",
+            "https://core.telegram.org/api/translation#autotranslation-for-channels"
+          ]
         },
         "banned_rights": {
           "name": "banned_rights",
@@ -6134,7 +6138,10 @@
         },
         "bot_verification_icon": {
           "name": "bot_verification_icon",
-          "description": " "
+          "description": "Describes a bot verification icon »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/verification"
+          ]
         },
         "broadcast": {
           "name": "broadcast",
@@ -6142,7 +6149,10 @@
         },
         "broadcast_messages_allowed": {
           "name": "broadcast_messages_allowed",
-          "description": " "
+          "description": "If set, this channel has an associated monoforum »¹, and its ID is specified in the linked_monoforum_id flag.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "call_active": {
           "name": "call_active",
@@ -6215,7 +6225,10 @@
         },
         "forum_tabs": {
           "name": "forum_tabs",
-          "description": " "
+          "description": "If set, enables the tabbed forum UI »¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#tabbed-or-list-based-forum-UI"
+          ]
         },
         "gigagroup": {
           "name": "gigagroup",
@@ -6282,7 +6295,12 @@
         },
         "linked_monoforum_id": {
           "name": "linked_monoforum_id",
-          "description": " "
+          "description": "For channels with associated monoforums¹, the monoforum² ID. For Monoforums³, the ID of the associated channel.",
+          "links": [
+            "https://core.telegram.org/api/monoforum",
+            "https://core.telegram.org/api/monoforum",
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "megagroup": {
           "name": "megagroup",
@@ -6301,7 +6319,10 @@
         },
         "monoforum": {
           "name": "monoforum",
-          "description": " "
+          "description": "If set, this is a monoforum »¹, and the ID of the associated channel is specified in the linked_monoforum_id.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "noforwards": {
           "name": "noforwards",
@@ -6349,7 +6370,7 @@
           "name": "send_paid_messages_stars",
           "description": "If set, this supergroup or monoforum¹ has enabled paid messages »², we might need to pay the specified amount of Stars³ to send messages to it, depending on the configured exceptions: check channelFull⁴.send_paid_messages_stars to see if the currently logged in user actually has to pay or not, see here »⁵ for the full flow (only set for the monoforum, not the associated channel).",
           "links": [
-            "https://core.telegram.org/api/forum#monoforums",
+            "https://core.telegram.org/api/monoforum",
             "https://core.telegram.org/api/paid-messages",
             "https://core.telegram.org/api/stars",
             "https://core.telegram.org/constructor/channelFull",
@@ -7754,7 +7775,7 @@
           "name": "send_paid_messages_stars",
           "description": "If set and bigger than 0, this supergroup, monoforum¹ or the monoforum associated to this channel has enabled paid messages »² and we must pay the specified amount of Stars³ to send messages to it, see here »⁴ for the full flow. This flag will be set both for the monoforum and for channelFull⁵ of the associated channel). If set and equal to 0, the monoforum requires payment in general but we were exempted from paying.",
           "links": [
-            "https://core.telegram.org/api/forum#monoforums",
+            "https://core.telegram.org/api/monoforum",
             "https://core.telegram.org/api/paid-messages",
             "https://core.telegram.org/api/stars",
             "https://core.telegram.org/api/paid-messages",
@@ -8489,7 +8510,11 @@
         },
         "manage_direct_messages": {
           "name": "manage_direct_messages",
-          "description": " "
+          "description": "If set, allows the admin to manage the direct messages monoforum »¹ and decline suggested posts »².",
+          "links": [
+            "https://core.telegram.org/api/monoforum",
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         },
         "manage_topics": {
           "name": "manage_topics",
@@ -10970,7 +10995,10 @@
         },
         "suggested_post": {
           "name": "suggested_post",
-          "description": " "
+          "description": "Used to suggest a post to a channel, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         }
       }
     },
@@ -16684,7 +16712,10 @@
         },
         "monoforum_peer_id": {
           "name": "monoforum_peer_id",
-          "description": " "
+          "description": "Must be set to the ID of the topic when replying to a message within a monoforum topic¹.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "quote_entities": {
           "name": "quote_entities",
@@ -16727,10 +16758,16 @@
     },
     "inputReplyToMonoForum": {
       "name": "inputReplyToMonoForum",
+      "description": [
+        "Used to send messages to a monoforum topic¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum"
+      ],
       "fields": {
         "monoforum_peer_id": {
           "name": "monoforum_peer_id",
-          "description": " "
+          "description": "The topic ID."
         }
       }
     },
@@ -19116,10 +19153,11 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": "Messages fetched from a saved messages dialog »¹ will have peer=inputPeerSelf² and the saved_peer_id flag set to the ID of the saved dialog.",
+          "description": "Messages from a saved messages dialog »¹ will have peer=inputPeerSelf² and the saved_peer_id flag set to the ID of the saved dialog.Messages from a monoforum »³ will have peer=ID of the monoforum and the saved_peer_id flag set to the ID of a topic.",
           "links": [
             "https://core.telegram.org/api/saved-messages",
-            "https://core.telegram.org/constructor/inputPeerSelf"
+            "https://core.telegram.org/constructor/inputPeerSelf",
+            "https://core.telegram.org/api/monoforum"
           ]
         },
         "silent": {
@@ -19128,7 +19166,10 @@
         },
         "suggested_post": {
           "name": "suggested_post",
-          "description": " "
+          "description": "Used to suggest a post to a channel, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         },
         "ttl_period": {
           "name": "ttl_period",
@@ -19798,8 +19839,8 @@
           "name": "broadcast_messages_allowed",
           "description": "Can only be set for channels, if set indicates that direct messages were enabled »¹, otherwise indicates that direct messages were disabled; the price of paid messages is related to the price of direct messages (aka those sent to the associated monoforum²).",
           "links": [
-            "https://core.telegram.org/api/forum#monoforums",
-            "https://core.telegram.org/api/forum#monoforums"
+            "https://core.telegram.org/api/monoforum",
+            "https://core.telegram.org/api/monoforum"
           ]
         },
         "flags": {
@@ -20461,10 +20502,16 @@
     },
     "messageActionSuggestedPostApproval": {
       "name": "messageActionSuggestedPostApproval",
+      "description": [
+        "A suggested post »¹ was approved or rejected."
+      ],
+      "links": [
+        "https://core.telegram.org/api/suggested-posts"
+      ],
       "fields": {
         "balance_too_low": {
           "name": "balance_too_low",
-          "description": " "
+          "description": "If set, the post was approved but the user's balance is too low to pay for the suggested post."
         },
         "flags": {
           "name": "flags",
@@ -20475,24 +20522,31 @@
         },
         "price": {
           "name": "price",
-          "description": " "
+          "description": "Price for the suggested post."
         },
         "reject_comment": {
           "name": "reject_comment",
-          "description": " "
+          "description": "If the suggested post was rejected, can optionally contain a rejection comment."
         },
         "rejected": {
           "name": "rejected",
-          "description": " "
+          "description": "Whether the suggested post was rejected."
         },
         "schedule_date": {
           "name": "schedule_date",
-          "description": " "
+          "description": "Scheduling date."
         }
       }
     },
     "messageActionSuggestedPostRefund": {
       "name": "messageActionSuggestedPostRefund",
+      "description": [
+        "A suggested post »¹ was accepted and posted or scheduled, but either the channel deleted the posted/scheduled post before stars_suggested_post_age_min² seconds have elapsed, or the user refunded the payment for the stars used to pay for the suggested post."
+      ],
+      "links": [
+        "https://core.telegram.org/api/suggested-posts",
+        "https://core.telegram.org/api/config#stars-suggested-post-age-min"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -20503,16 +20557,22 @@
         },
         "payer_initiated": {
           "name": "payer_initiated",
-          "description": " "
+          "description": "If set, the user refunded the payment for the stars used to pay for the suggested post."
         }
       }
     },
     "messageActionSuggestedPostSuccess": {
       "name": "messageActionSuggestedPostSuccess",
+      "description": [
+        "A suggested post »¹ was successfully posted, and payment for it was successfully received."
+      ],
+      "links": [
+        "https://core.telegram.org/api/suggested-posts"
+      ],
       "fields": {
         "price": {
           "name": "price",
-          "description": " "
+          "description": "The price."
         }
       }
     },
@@ -22130,7 +22190,7 @@
     "messageReplies": {
       "name": "messageReplies",
       "description": [
-        "Info about the comment section of a channel post, or a simple message thread¹"
+        "Info about the comment section of a channel post, a simple message thread, a forum topic, or a direct messages topic¹ (all features ultimately based on message threads)."
       ],
       "links": [
         "https://core.telegram.org/api/threads"
@@ -22374,7 +22434,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Will only be set for service messages within a monoforum topic »¹: peer will be equal to the ID of the monoforum and the saved_peer_id flag will be set to the ID of a topic.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "silent": {
           "name": "silent",
@@ -24443,10 +24506,19 @@
     },
     "monoForumDialog": {
       "name": "monoForumDialog",
+      "description": [
+        "Represents a monoforum topic »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum"
+      ],
       "fields": {
         "draft": {
           "name": "draft",
-          "description": " "
+          "description": "A pending message draft¹.",
+          "links": [
+            "https://core.telegram.org/api/drafts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -24461,31 +24533,34 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer associated to the topic, AKA the topic ID."
         },
         "read_inbox_max_id": {
           "name": "read_inbox_max_id",
-          "description": " "
+          "description": "Position up to which all incoming messages are read."
         },
         "read_outbox_max_id": {
           "name": "read_outbox_max_id",
-          "description": " "
+          "description": "Position up to which all outgoing messages are read."
         },
         "top_message": {
           "name": "top_message",
-          "description": " "
+          "description": "The latest message ID"
         },
         "unread_count": {
           "name": "unread_count",
-          "description": " "
+          "description": "Number of unread messages."
         },
         "unread_mark": {
           "name": "unread_mark",
-          "description": " "
+          "description": "Whether this topic has a manually set (with messages.markDialogUnread¹) unread mark.",
+          "links": [
+            "https://core.telegram.org/method/messages.markDialogUnread"
+          ]
         },
         "unread_reactions_count": {
           "name": "unread_reactions_count",
-          "description": " "
+          "description": "Number of unread reactions."
         }
       }
     },
@@ -33162,10 +33237,16 @@
     },
     "suggestedPost": {
       "name": "suggestedPost",
+      "description": [
+        "Contains info about a suggested post »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/suggested-posts"
+      ],
       "fields": {
         "accepted": {
           "name": "accepted",
-          "description": " "
+          "description": "Whether the suggested post was accepted."
         },
         "flags": {
           "name": "flags",
@@ -33176,15 +33257,15 @@
         },
         "price": {
           "name": "price",
-          "description": " "
+          "description": "Price of the suggested post."
         },
         "rejected": {
           "name": "rejected",
-          "description": " "
+          "description": "Whether the suggested post was rejected."
         },
         "schedule_date": {
           "name": "schedule_date",
-          "description": " "
+          "description": "Scheduling date."
         }
       }
     },
@@ -34592,10 +34673,11 @@
     "updateChannelReadMessagesContents": {
       "name": "updateChannelReadMessagesContents",
       "description": [
-        "The specified channel/supergroup¹ messages were read"
+        "The specified channel/supergroup¹ messages were read (emitted specifically for messages like voice messages or video, only once the media is watched and marked as read using channels.readMessageContents²)"
       ],
       "links": [
-        "https://core.telegram.org/api/channel"
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/method/channels.readMessageContents"
       ],
       "fields": {
         "channel_id": {
@@ -34618,7 +34700,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, the messages were read within the specified monoforum topic »¹.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -35219,7 +35304,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, the mark is related to the specified monoforum topic ID »¹.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "unread": {
           "name": "unread",
@@ -35253,7 +35341,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, the draft is related to the specified monoforum topic ID »¹.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -35718,7 +35809,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, the reactions are in the specified monoforum topic »¹.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -36614,10 +36708,11 @@
     "updateReadMessagesContents": {
       "name": "updateReadMessagesContents",
       "description": [
-        "Contents of messages in the common message box¹ were read"
+        "Contents of messages in the common message box¹ were read (emitted specifically for messages like voice messages or video, only once the media is watched and marked as read using messages.readMessageContents²)."
       ],
       "links": [
-        "https://core.telegram.org/api/updates"
+        "https://core.telegram.org/api/updates",
+        "https://core.telegram.org/method/messages.readMessageContents"
       ],
       "fields": {
         "date": {
@@ -36653,35 +36748,47 @@
     },
     "updateReadMonoForumInbox": {
       "name": "updateReadMonoForumInbox",
+      "description": [
+        "Incoming messages in a monoforum topic¹ were read"
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum"
+      ],
       "fields": {
         "channel_id": {
           "name": "channel_id",
-          "description": " "
+          "description": "ID of the monoforum."
         },
         "read_max_id": {
           "name": "read_max_id",
-          "description": " "
+          "description": "Position up to which all incoming messages are read."
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Topic ID."
         }
       }
     },
     "updateReadMonoForumOutbox": {
       "name": "updateReadMonoForumOutbox",
+      "description": [
+        "Outgoing messages in a monoforum¹ were read."
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum"
+      ],
       "fields": {
         "channel_id": {
           "name": "channel_id",
-          "description": " "
+          "description": "ID of the monoforum."
         },
         "read_max_id": {
           "name": "read_max_id",
-          "description": " "
+          "description": "Position up to which all outgoing messages are read."
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "Topic ID."
         }
       }
     },
@@ -42367,7 +42474,13 @@
       ]
     },
     "SuggestedPost": {
-      "name": "SuggestedPost"
+      "name": "SuggestedPost",
+      "description": [
+        "Contains info about a suggested post »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/suggested-posts"
+      ]
     },
     "TextWithEntities": {
       "name": "TextWithEntities",
@@ -44524,7 +44637,7 @@
           "name": "parent_peer",
           "description": "If set, can contain the ID of a monoforum (channel direct messages)¹ to obtain the number of stars the user has spent to send us direct messages via the channel.",
           "links": [
-            "https://core.telegram.org/api/forum#monoforums"
+            "https://core.telegram.org/api/monoforum"
           ]
         },
         "user_id": {
@@ -45791,7 +45904,7 @@
           "name": "parent_peer",
           "description": "If set, applies the setting within the monoforum aka direct messages »¹ (pass the ID of the monoforum, not the ID of the associated channel).",
           "links": [
-            "https://core.telegram.org/api/forum#monoforums"
+            "https://core.telegram.org/api/monoforum"
           ]
         },
         "refund_charged": {
@@ -50908,10 +51021,11 @@
     "channels.readMessageContents": {
       "name": "channels.readMessageContents",
       "description": [
-        "Mark channel/supergroup¹ message contents as read"
+        "Mark channel/supergroup¹ message contents as read, emitting an updateChannelReadMessagesContents²."
       ],
       "links": [
-        "https://core.telegram.org/api/channel"
+        "https://core.telegram.org/api/channel",
+        "https://core.telegram.org/constructor/updateChannelReadMessagesContents"
       ],
       "parameters": {
         "channel": {
@@ -51913,15 +52027,15 @@
       "links": [
         "https://core.telegram.org/api/paid-messages",
         "https://core.telegram.org/api/channel",
-        "https://core.telegram.org/api/forum#monoforums",
-        "https://core.telegram.org/api/forum#monoforums"
+        "https://core.telegram.org/api/monoforum",
+        "https://core.telegram.org/api/monoforum"
       ],
       "parameters": {
         "broadcast_messages_allowed": {
           "name": "broadcast_messages_allowed",
           "description": "Only usable for channels, enables or disables the associated monoforum aka direct messages¹.",
           "links": [
-            "https://core.telegram.org/api/forum#monoforums"
+            "https://core.telegram.org/api/monoforum"
           ]
         },
         "channel": {
@@ -55120,9 +55234,10 @@
     "messages.deleteSavedHistory": {
       "name": "messages.deleteSavedHistory",
       "description": [
-        "Deletes messages forwarded from a specific peer to saved messages »¹."
+        "Deletes messages from a monoforum topic »¹, or deletes messages forwarded from a specific peer to saved messages »²."
       ],
       "links": [
+        "https://core.telegram.org/api/monoforum",
         "https://core.telegram.org/api/saved-messages"
       ],
       "parameters": {
@@ -55147,11 +55262,15 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, affects the messages of the passed monoforum topic »¹, otherwise affects saved messages »².",
+          "links": [
+            "https://core.telegram.org/api/monoforum",
+            "https://core.telegram.org/api/saved-messages"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": "Peer, whose messages will be deleted from saved messages »¹",
+          "description": "Peer, whose messages will be deleted from saved messages »¹, or the ID of the topic.",
           "links": [
             "https://core.telegram.org/api/saved-messages"
           ]
@@ -56228,7 +56347,11 @@
         },
         "reply_to": {
           "name": "reply_to",
-          "description": " "
+          "description": "Can only contain an inputReplyToMonoForum¹, to forward messages to a monoforum topic² (mutually exclusive with top_msg_id).",
+          "links": [
+            "https://core.telegram.org/constructor/inputReplyToMonoForum",
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "schedule_date": {
           "name": "schedule_date",
@@ -56244,7 +56367,10 @@
         },
         "suggested_post": {
           "name": "suggested_post",
-          "description": " "
+          "description": "Used to suggest a post to a channel, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         },
         "to_peer": {
           "name": "to_peer",
@@ -57112,7 +57238,7 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "Can be equal to the ID of a monoforum, to fetch monoforum topics manually marked as unread."
         }
       }
     },
@@ -58811,10 +58937,11 @@
     "messages.getSavedDialogs": {
       "name": "messages.getSavedDialogs",
       "description": [
-        "Returns the current saved dialog list, see here »¹ for more info."
+        "Returns the current saved dialog list »¹ or monoforum topic list »²."
       ],
       "links": [
-        "https://core.telegram.org/api/saved-messages"
+        "https://core.telegram.org/api/saved-messages",
+        "https://core.telegram.org/api/monoforum"
       ],
       "parameters": {
         "exclude_pinned": {
@@ -58862,12 +58989,19 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, fetches the topic list of the passed monoforum, otherwise fetches the saved dialog list."
         }
       }
     },
     "messages.getSavedDialogsByID": {
       "name": "messages.getSavedDialogsByID",
+      "description": [
+        "Obtain information about specific saved message dialogs »¹ or monoforum topics »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/saved-messages#saved-message-dialogs",
+        "https://core.telegram.org/api/monoforum"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -58878,11 +59012,15 @@
         },
         "ids": {
           "name": "ids",
-          "description": " "
+          "description": "IDs of dialogs (topics) to fetch."
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, fetches monoforum topics »¹, otherwise fetches saved message dialogs »².",
+          "links": [
+            "https://core.telegram.org/api/monoforum",
+            "https://core.telegram.org/api/saved-messages#saved-message-dialogs"
+          ]
         }
       }
     },
@@ -58904,10 +59042,11 @@
     "messages.getSavedHistory": {
       "name": "messages.getSavedHistory",
       "description": [
-        "Returns saved messages »¹ forwarded from a specific peer"
+        "Fetch saved messages »¹ forwarded from a specific peer, or fetch messages from a monoforum topic »²."
       ],
       "links": [
-        "https://core.telegram.org/api/saved-messages"
+        "https://core.telegram.org/api/saved-messages",
+        "https://core.telegram.org/api/monoforum"
       ],
       "parameters": {
         "add_offset": {
@@ -58950,11 +59089,11 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, fetches messages from the specified monoforum, otherwise fetches from saved messages."
         },
         "peer": {
           "name": "peer",
-          "description": "Target peer"
+          "description": "Target peer (or topic)"
         }
       },
       "errors": [
@@ -59498,7 +59637,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, must be equal to the ID of a monoforum topic¹: will affect that topic in the monoforum passed in peer.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -59970,7 +60112,10 @@
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "If set, must be equal to the ID of a monoforum¹, and will affect the monoforum topic passed in peer.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -60303,7 +60448,10 @@
     "messages.readMessageContents": {
       "name": "messages.readMessageContents",
       "description": [
-        "Notifies the sender about the recipient having listened a voice message or watched a video."
+        "Notifies the sender about the recipient having listened a voice message or watched a video, emitting an updateReadMessagesContents¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/updateReadMessagesContents"
       ],
       "parameters": {
         "id": {
@@ -60334,7 +60482,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, must be equal to the ID of a monoforum topic¹: will affect that topic in the monoforum passed in peer.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -60354,18 +60505,24 @@
     },
     "messages.readSavedHistory": {
       "name": "messages.readSavedHistory",
+      "description": [
+        "Mark messages as read in a monoforum topic »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum"
+      ],
       "parameters": {
         "max_id": {
           "name": "max_id",
-          "description": " "
+          "description": "If a positive value is passed, only messages with identifiers less or equal than the given one will be read."
         },
         "parent_peer": {
           "name": "parent_peer",
-          "description": " "
+          "description": "ID of the monoforum group."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "ID of the topic."
         }
       },
       "errors": [
@@ -61300,7 +61457,10 @@
         },
         "suggested_post": {
           "name": "suggested_post",
-          "description": " "
+          "description": "Used to suggest a post to a channel, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         }
       },
       "errors": [
@@ -62523,7 +62683,10 @@
         },
         "suggested_post": {
           "name": "suggested_post",
-          "description": " "
+          "description": "Used to suggest a post to a channel, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -63151,7 +63314,10 @@
         },
         "suggested_post": {
           "name": "suggested_post",
-          "description": " "
+          "description": "Used to suggest a post to a channel, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         },
         "update_stickersets_order": {
           "name": "update_stickersets_order",
@@ -64447,7 +64613,10 @@
     "messages.setChatTheme": {
       "name": "messages.setChatTheme",
       "description": [
-        "Change the chat theme of a certain chat"
+        "Change the chat theme of a certain chat, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/themes#chat-themes"
       ],
       "parameters": {
         "peer": {
@@ -64456,7 +64625,7 @@
         },
         "theme": {
           "name": "theme",
-          "description": " "
+          "description": "The theme to set."
         }
       },
       "errors": [
@@ -65525,6 +65694,12 @@
     },
     "messages.toggleSuggestedPostApproval": {
       "name": "messages.toggleSuggestedPostApproval",
+      "description": [
+        "Approve or reject a suggested post »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/suggested-posts"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -65535,23 +65710,26 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "ID of the suggestion message."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Both for users and channels, must contain the ID of the direct messages monoforum »¹ (for channels, the topic ID is extracted automatically from the msg_id).",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "reject": {
           "name": "reject",
-          "description": " "
+          "description": "Reject the suggested post."
         },
         "reject_comment": {
           "name": "reject_comment",
-          "description": " "
+          "description": "Optional comment for rejections (can only be used if reject is set)."
         },
         "schedule_date": {
           "name": "schedule_date",
-          "description": " "
+          "description": "Custom scheduling date."
         }
       },
       "errors": [
@@ -65767,7 +65945,10 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "If set, must be equal to the ID of a monoforum topic¹, and will unpin all messages pinned in the passed monoforum topic.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -74766,7 +74947,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -75872,7 +76053,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
