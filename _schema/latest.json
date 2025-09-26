@@ -5007,7 +5007,10 @@
         },
         "verifier_settings": {
           "name": "verifier_settings",
-          "description": " "
+          "description": "This bot can verify peers¹: this field contains more info about the verification the bot can assign to peers.",
+          "links": [
+            "https://core.telegram.org/api/bots/verification"
+          ]
         }
       }
     },
@@ -8902,7 +8905,10 @@
         },
         "bot_verification": {
           "name": "bot_verification",
-          "description": " "
+          "description": "Describes a bot verification icon »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/verification"
+          ]
         },
         "broadcast": {
           "name": "broadcast",
@@ -20202,7 +20208,7 @@
       "fields": {
         "theme": {
           "name": "theme",
-          "description": " "
+          "description": "The new chat theme."
         }
       }
     },
@@ -20316,7 +20322,10 @@
         },
         "gift_msg_id": {
           "name": "gift_msg_id",
-          "description": " "
+          "description": "For separate upgrades¹, the identifier of the message with the gift whose upgrade was prepaid (valid for everyone, since all messages across all private chats with users share the same message ID sequence, and for channels the service message will already be sent to the channel, that will contain the service message with the original gift).",
+          "links": [
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+          ]
         },
         "message": {
           "name": "message",
@@ -20332,11 +20341,14 @@
         },
         "prepaid_upgrade": {
           "name": "prepaid_upgrade",
-          "description": " "
+          "description": "The sender has already pre-paid for the upgrade of this gift to a collectible gift."
         },
         "prepaid_upgrade_hash": {
           "name": "prepaid_upgrade_hash",
-          "description": " "
+          "description": "Hash to prepay for a gift upgrade separately »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+          ]
         },
         "refunded": {
           "name": "refunded",
@@ -20367,7 +20379,10 @@
         },
         "upgrade_separate": {
           "name": "upgrade_separate",
-          "description": " "
+          "description": "This service message is the notification of a separate pre-payment for the upgrade of a gift we own¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+          ]
         },
         "upgrade_stars": {
           "name": "upgrade_stars",
@@ -29472,7 +29487,10 @@
         },
         "prepaid_upgrade_hash": {
           "name": "prepaid_upgrade_hash",
-          "description": " "
+          "description": "Hash to prepay for a gift upgrade separately »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+          ]
         },
         "refunded": {
           "name": "refunded",
@@ -29501,13 +29519,17 @@
         },
         "upgrade_separate": {
           "name": "upgrade_separate",
-          "description": " "
+          "description": "If set, someone already separately pre-paid¹ for the upgrade of this gift.",
+          "links": [
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+          ]
         },
         "upgrade_stars": {
           "name": "upgrade_stars",
-          "description": "For non-collectible gifts, the number of Telegram Stars the user can pay to convert the gift into a collectible gift »¹.",
+          "description": "Only for pre-paid non-collectible gifts, the number of Telegram Stars the sender has already paid to convert the gift into a collectible gift »¹ (this is different from the meaning of the flag in messageActionStarGift², where it signals the upgrade price for not yet upgraded gifts).",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gifts"
+            "https://core.telegram.org/api/gifts#collectible-gifts",
+            "https://core.telegram.org/constructor/messageActionStarGift"
           ]
         }
       }
@@ -31066,11 +31088,17 @@
         },
         "theme_available": {
           "name": "theme_available",
-          "description": " "
+          "description": "A chat theme associated to this gift is available, see here »¹ for more info on how to use it.",
+          "links": [
+            "https://core.telegram.org/api/themes#chat-themes"
+          ]
         },
         "theme_peer": {
           "name": "theme_peer",
-          "description": " "
+          "description": "The current chat where the associated chat theme¹ is installed, if any (gift-based themes can only be installed in one chat at a time).",
+          "links": [
+            "https://core.telegram.org/api/themes#chat-themes"
+          ]
         },
         "title": {
           "name": "title",
@@ -31479,11 +31507,11 @@
       "fields": {
         "ads_proceeds_from_date": {
           "name": "ads_proceeds_from_date",
-          "description": " "
+          "description": "Indicates that this is payment for ad revenue from the specified unixtime (always set together with ads_proceeds_to_date)."
         },
         "ads_proceeds_to_date": {
           "name": "ads_proceeds_to_date",
-          "description": " "
+          "description": "Indicates that this is payment for ad revenue to the specified unixtime."
         },
         "amount": {
           "name": "amount",
@@ -31583,7 +31611,10 @@
         },
         "posts_search": {
           "name": "posts_search",
-          "description": " "
+          "description": "Represents payment for a paid global post search »¹.",
+          "links": [
+            "https://core.telegram.org/api/search#posts-tab"
+          ]
         },
         "premium_gift_months": {
           "name": "premium_gift_months",
@@ -31612,7 +31643,10 @@
         },
         "stargift_prepaid_upgrade": {
           "name": "stargift_prepaid_upgrade",
-          "description": " "
+          "description": "Represents payment for a separate prepaid upgrade of a gift¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+          ]
         },
         "stargift_resale": {
           "name": "stargift_resale",
@@ -38195,7 +38229,10 @@
         },
         "bot_verification_icon": {
           "name": "bot_verification_icon",
-          "description": " "
+          "description": "Describes a bot verification icon »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/verification"
+          ]
         },
         "close_friend": {
           "name": "close_friend",
@@ -38738,7 +38775,10 @@
         },
         "theme": {
           "name": "theme",
-          "description": " "
+          "description": "The chat theme associated with this user »¹.",
+          "links": [
+            "https://core.telegram.org/api/themes#chat-themes"
+          ]
         },
         "translations_disabled": {
           "name": "translations_disabled",
@@ -41039,7 +41079,13 @@
       ]
     },
     "InputSavedStarGift": {
-      "name": "InputSavedStarGift"
+      "name": "InputSavedStarGift",
+      "description": [
+        "Points to a gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts"
+      ]
     },
     "InputSecureFile": {
       "name": "InputSecureFile",
@@ -41575,7 +41621,13 @@
       ]
     },
     "PaidReactionPrivacy": {
-      "name": "PaidReactionPrivacy"
+      "name": "PaidReactionPrivacy",
+      "description": [
+        "Paid reaction privacy settings »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/reactions#paid-reactions"
+      ]
     },
     "PasswordKdfAlgo": {
       "name": "PasswordKdfAlgo",
@@ -42220,7 +42272,13 @@
       ]
     },
     "StarGiftAttributeId": {
-      "name": "StarGiftAttributeId"
+      "name": "StarGiftAttributeId",
+      "description": [
+        "Represents the identifier of a collectible gift attribute¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "StarRefProgram": {
       "name": "StarRefProgram",
@@ -43699,7 +43757,10 @@
       ]
     },
     "users.Users": {
-      "name": "users.Users"
+      "name": "users.Users",
+      "description": [
+        "Describes a list of users (or bots)."
+      ]
     }
   },
   "methods": {
@@ -51533,7 +51594,7 @@
         },
         "tabs": {
           "name": "tabs",
-          "description": " "
+          "description": "If true enables the tabbed forum UI, otherwise enables the list-based forum UI."
         }
       },
       "errors": [
@@ -75095,7 +75156,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -76053,7 +76114,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -76268,7 +76329,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
