@@ -6230,7 +6230,7 @@
           "name": "forum_tabs",
           "description": "If set, enables the tabbed forum UI »¹.",
           "links": [
-            "https://core.telegram.org/api/forum#tabbed-or-list-based-forum-UI"
+            "https://core.telegram.org/api/forum#tabbed-or-list-based-forum-ui"
           ]
         },
         "gigagroup": {
@@ -7702,7 +7702,10 @@
         },
         "paid_messages_available": {
           "name": "paid_messages_available",
-          "description": " "
+          "description": "If set, admins may enable enable paid messages »¹ in this supergroup.",
+          "links": [
+            "https://core.telegram.org/api/paid-messages"
+          ]
         },
         "paid_reactions_available": {
           "name": "paid_reactions_available",
@@ -9395,7 +9398,7 @@
         },
         "title_noanimate": {
           "name": "title_noanimate",
-          "description": " "
+          "description": "If set, any animated emojis present in title should not be animated and should be instead frozen on the first frame."
         },
         "users": {
           "name": "users",
@@ -10464,7 +10467,7 @@
         },
         "title_noanimate": {
           "name": "title_noanimate",
-          "description": " "
+          "description": "If set, any animated emojis present in title should not be animated and should be instead frozen on the first frame."
         }
       }
     },
@@ -10523,7 +10526,7 @@
         },
         "title_noanimate": {
           "name": "title_noanimate",
-          "description": " "
+          "description": "If set, any animated emojis present in title should not be animated and should be instead frozen on the first frame."
         }
       }
     },
@@ -11310,7 +11313,10 @@
       "fields": {
         "center_color": {
           "name": "center_color",
-          "description": " "
+          "description": "Color of the center of the profile backdrop in RGB24 format, from the gift's starGiftAttributeBackdrop¹.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeBackdrop"
+          ]
         },
         "collectible_id": {
           "name": "collectible_id",
@@ -11328,7 +11334,10 @@
         },
         "edge_color": {
           "name": "edge_color",
-          "description": " "
+          "description": "Color of the edges of the profile backdrop in RGB24 format, from the gift's starGiftAttributeBackdrop¹.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeBackdrop"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -11339,11 +11348,17 @@
         },
         "pattern_color": {
           "name": "pattern_color",
-          "description": " "
+          "description": "Color of the pattern_document_id applied on the profile backdrop in RGB24 format, from the gift's starGiftAttributeBackdrop¹.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeBackdrop"
+          ]
         },
         "pattern_document_id": {
           "name": "pattern_document_id",
-          "description": " "
+          "description": "The ID of a pattern to apply on the profile's backdrop, correlated to the starGiftAttributePattern¹ from the gift in slug.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributePattern"
+          ]
         },
         "slug": {
           "name": "slug",
@@ -11355,7 +11370,10 @@
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Color of text on the profile backdrop in RGB24 format, from the gift's starGiftAttributeBackdrop¹.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeBackdrop"
+          ]
         },
         "title": {
           "name": "title",
@@ -11363,7 +11381,7 @@
         },
         "until": {
           "name": "until",
-          "description": " "
+          "description": "If set, the emoji status will be active until the specified unixtime."
         }
       }
     },
@@ -12224,11 +12242,11 @@
         },
         "conference": {
           "name": "conference",
-          "description": " "
+          "description": "Whether this is an E2E conference call."
         },
         "creator": {
           "name": "creator",
-          "description": " "
+          "description": "Whether we're created this group call."
         },
         "flags": {
           "name": "flags",
@@ -12243,7 +12261,7 @@
         },
         "invite_link": {
           "name": "invite_link",
-          "description": " "
+          "description": "Invitation link for the conference."
         },
         "join_date_asc": {
           "name": "join_date_asc",
@@ -12923,7 +12941,7 @@
           "name": "custom_pending_suggestion",
           "description": "Contains a list of custom pending suggestions »¹.",
           "links": [
-            "https://core.telegram.org/api/config#pending-suggestions"
+            "https://core.telegram.org/api/config#custom-suggestions"
           ]
         },
         "dismissed_suggestions": {
@@ -12955,7 +12973,7 @@
           "name": "pending_suggestions",
           "description": "Contains a list of pending suggestions »¹.",
           "links": [
-            "https://core.telegram.org/api/config#pending-suggestions"
+            "https://core.telegram.org/api/config#basic-suggestions"
           ]
         },
         "proxy": {
@@ -14758,14 +14776,14 @@
         "Join a conference call through an invitation link »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/links#conference-link"
+        "https://core.telegram.org/api/links#conference-links"
       ],
       "fields": {
         "slug": {
           "name": "slug",
           "description": "Slug from the conference link »¹.",
           "links": [
-            "https://core.telegram.org/api/links#conference-link"
+            "https://core.telegram.org/api/links#conference-links"
           ]
         }
       }
@@ -15724,7 +15742,7 @@
         },
         "video_timestamp": {
           "name": "video_timestamp",
-          "description": " "
+          "description": "Start playing the video at the specified timestamp (seconds)."
         }
       }
     },
@@ -16754,7 +16772,10 @@
         },
         "todo_item_id": {
           "name": "todo_item_id",
-          "description": " "
+          "description": "Can be set to reply to the specified item of a todo list »¹.",
+          "links": [
+            "https://core.telegram.org/api/todo"
+          ]
         },
         "top_msg_id": {
           "name": "top_msg_id",
@@ -18817,7 +18838,7 @@
       "fields": {
         "coordinates": {
           "name": "coordinates",
-          "description": " "
+          "description": "Coordinates of the media area."
         },
         "slug": {
           "name": "slug",
@@ -19094,11 +19115,18 @@
         },
         "paid_suggested_post_stars": {
           "name": "paid_suggested_post_stars",
-          "description": " "
+          "description": "Set if this is a suggested channel post »¹ that was paid using Telegram Stars².",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "paid_suggested_post_ton": {
           "name": "paid_suggested_post_ton",
-          "description": " "
+          "description": "Set if this is a suggested channel post »¹ that was paid using Toncoins.",
+          "links": [
+            "https://core.telegram.org/api/suggested-posts"
+          ]
         },
         "peer_id": {
           "name": "peer_id",
@@ -20324,7 +20352,7 @@
           "name": "gift_msg_id",
           "description": "For separate upgrades¹, the identifier of the message with the gift whose upgrade was prepaid (valid for everyone, since all messages across all private chats with users share the same message ID sequence, and for channels the service message will already be sent to the channel, that will contain the service message with the original gift).",
           "links": [
-            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
         },
         "message": {
@@ -20347,7 +20375,7 @@
           "name": "prepaid_upgrade_hash",
           "description": "Hash to prepay for a gift upgrade separately »¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
         },
         "refunded": {
@@ -20381,7 +20409,7 @@
           "name": "upgrade_separate",
           "description": "This service message is the notification of a separate pre-payment for the upgrade of a gift we own¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
         },
         "upgrade_stars": {
@@ -20421,7 +20449,7 @@
           "name": "can_resell_at",
           "description": "If set, indicates that the current gift can't be resold »¹ yet: the owner will be able to put it up for sale at the specified unixtime.",
           "links": [
-            "https://core.telegram.org/api/gifts#sell-a-collectible-gift"
+            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
           ]
         },
         "can_transfer_at": {
@@ -20452,7 +20480,7 @@
         },
         "prepaid_upgrade": {
           "name": "prepaid_upgrade",
-          "description": " "
+          "description": "The sender has pre-paid for the upgrade of this gift to a collectible gift."
         },
         "refunded": {
           "name": "refunded",
@@ -22334,7 +22362,10 @@
         },
         "todo_item_id": {
           "name": "todo_item_id",
-          "description": " "
+          "description": "Can be set to reply to the specified item of a todo list »¹.",
+          "links": [
+            "https://core.telegram.org/api/todo"
+          ]
         }
       }
     },
@@ -23735,11 +23766,14 @@
         },
         "offset_id_offset": {
           "name": "offset_id_offset",
-          "description": "Indicates the absolute position of messages[0] within the total result set with count count. This is useful, for example, if the result was fetched using offset_id, and we need to display a progress/total counter (like photo 134 of 200, for all media in a chat, we could simply use photo ${offset_id_offset} of ${count}."
+          "description": "Indicates the absolute position of messages[0] within the total result set with count count. This is useful, for example, if the result was fetched using offset_id, and we need to display a progress/total counter (like photo 134 of 200, for all media in a chat, we could simply use photo ${offset_id_offset} of ${count})."
         },
         "search_flood": {
           "name": "search_flood",
-          "description": " "
+          "description": "For global post searches »¹, the remaining amount of free searches.",
+          "links": [
+            "https://core.telegram.org/api/search#posts-tab"
+          ]
         },
         "users": {
           "name": "users",
@@ -24219,7 +24253,10 @@
       "fields": {
         "between_delay": {
           "name": "between_delay",
-          "description": " "
+          "description": "For sponsored messages to show on channel videos »¹, the number of seconds to wait after the previous ad is hidden, before showing the next ad.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements"
+          ]
         },
         "chats": {
           "name": "chats",
@@ -24242,7 +24279,10 @@
         },
         "start_delay": {
           "name": "start_delay",
-          "description": " "
+          "description": "For sponsored messages to show on channel videos »¹, the number of seconds to wait before showing the first ad.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements"
+          ]
         },
         "users": {
           "name": "users",
@@ -26384,7 +26424,7 @@
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Chats mentioned in the gifts field."
         },
         "gifts": {
           "name": "gifts",
@@ -26399,7 +26439,7 @@
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Users mentioned in the gifts field."
         }
       }
     },
@@ -26454,7 +26494,7 @@
         },
         "top_hours_graph": {
           "name": "top_hours_graph",
-          "description": " "
+          "description": "For ad revenue statistics, ad impressions graph"
         },
         "usd_rate": {
           "name": "usd_rate",
@@ -26468,14 +26508,14 @@
         "Contains the URL to use to withdraw Telegram Star revenue¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#withdrawing-stars"
+        "https://core.telegram.org/api/stars#withdrawing-revenue"
       ],
       "fields": {
         "url": {
           "name": "url",
           "description": "Contains the URL to use to withdraw Telegram Star revenue¹.",
           "links": [
-            "https://core.telegram.org/api/stars#withdrawing-stars"
+            "https://core.telegram.org/api/stars#withdrawing-revenue"
           ]
         }
       }
@@ -26847,7 +26887,7 @@
         },
         "name_change_date": {
           "name": "name_change_date",
-          "description": " "
+          "description": "When was the user's name last changed."
         },
         "need_contacts_exception": {
           "name": "need_contacts_exception",
@@ -26855,15 +26895,15 @@
         },
         "phone_country": {
           "name": "phone_country",
-          "description": " "
+          "description": "The country code of the user's phone number."
         },
         "photo_change_date": {
           "name": "photo_change_date",
-          "description": " "
+          "description": "When was the user's photo last changed."
         },
         "registration_month": {
           "name": "registration_month",
-          "description": " "
+          "description": "Used to display the user's registration year and month, the string is in MM.YYYY format, where MM is the registration month (1-12), and YYYY is the registration year."
         },
         "report_geo": {
           "name": "report_geo",
@@ -27273,7 +27313,7 @@
           "name": "slug",
           "description": "Conference link »¹ slug.",
           "links": [
-            "https://core.telegram.org/api/links#conference-link"
+            "https://core.telegram.org/api/links#conference-links"
           ]
         }
       }
@@ -27821,8 +27861,9 @@
       "fields": {
         "answers": {
           "name": "answers",
-          "description": "The possible answers, vote using messages.sendVote¹.",
+          "description": "The possible answers (2-poll_answers_max¹), vote using messages.sendVote².",
           "links": [
+            "https://core.telegram.org/api/config#poll-answers-max",
             "https://core.telegram.org/method/messages.sendVote"
           ]
         },
@@ -29288,11 +29329,10 @@
       "name": "restrictionReason",
       "description": [
         "Restriction reason.",
-        "Contains the reason why access to a certain object must be restricted. Clients are supposed to deny access to the channel if the platform field is equal to all or to the current platform (ios, android, wp, etc.). Platforms can be concatenated (ios-android, ios-wp), unknown platforms are to be ignored. The text is the error message that should be shown to the user.",
-        "The restriction_add_platforms »¹ client configuration parameter contains an array of platform identifiers that must also be treated as our own, in additional to the one hardcoded in the client."
+        "See here »¹ for the full flow to use for restricted or age-gated content."
       ],
       "links": [
-        "https://core.telegram.org/api/config#restriction-add-platforms"
+        "https://core.telegram.org/api/age-verification"
       ],
       "fields": {
         "platform": {
@@ -29419,7 +29459,7 @@
           "name": "can_resell_at",
           "description": "If set, indicates that the current gift can't be resold »¹ yet: the owner will be able to put it up for sale at the specified unixtime.",
           "links": [
-            "https://core.telegram.org/api/gifts#sell-a-collectible-gift"
+            "https://core.telegram.org/api/gifts#reselling-collectible-gifts"
           ]
         },
         "can_transfer_at": {
@@ -29489,7 +29529,7 @@
           "name": "prepaid_upgrade_hash",
           "description": "Hash to prepay for a gift upgrade separately »¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
         },
         "refunded": {
@@ -29521,7 +29561,7 @@
           "name": "upgrade_separate",
           "description": "If set, someone already separately pre-paid¹ for the upgrade of this gift.",
           "links": [
-            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
         },
         "upgrade_stars": {
@@ -30577,7 +30617,10 @@
         },
         "max_display_duration": {
           "name": "max_display_duration",
-          "description": " "
+          "description": "For sponsored messages to show on channel videos »¹, autohide the ad after after the specified amount of seconds.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements"
+          ]
         },
         "media": {
           "name": "media",
@@ -30589,7 +30632,10 @@
         },
         "min_display_duration": {
           "name": "min_display_duration",
-          "description": " "
+          "description": "For sponsored messages to show on channel videos »¹, allow the user to hide the ad only after the specified amount of seconds.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements"
+          ]
         },
         "photo": {
           "name": "photo",
@@ -31344,7 +31390,7 @@
           "name": "withdrawal_enabled",
           "description": "If set, the user may withdraw¹ up to available_balance stars.",
           "links": [
-            "https://core.telegram.org/api/stars#withdrawing-stars"
+            "https://core.telegram.org/api/stars#withdrawing-revenue"
           ]
         }
       }
@@ -31445,10 +31491,13 @@
     },
     "starsTonAmount": {
       "name": "starsTonAmount",
+      "description": [
+        "Describes an amount of toncoin in nanotons (i.e. 1/1_000_000_000 of a toncoin)."
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "The amount in nanotons."
         }
       }
     },
@@ -31645,7 +31694,7 @@
           "name": "stargift_prepaid_upgrade",
           "description": "Represents payment for a separate prepaid upgrade of a gift¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#prepaying-for-someone-else-s-upgrade"
+            "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
         },
         "stargift_resale": {
@@ -33701,7 +33750,10 @@
         },
         "title": {
           "name": "title",
-          "description": "Text of the item."
+          "description": "Text of the item, maximum length equal to todo_item_length_max »¹.",
+          "links": [
+            "https://core.telegram.org/api/config#todo-item-length-max"
+          ]
         }
       }
     },
@@ -33735,7 +33787,10 @@
         },
         "title": {
           "name": "title",
-          "description": "Title of the todo list."
+          "description": "Title of the todo list, maximum length equal to todo_title_length_max »¹.",
+          "links": [
+            "https://core.telegram.org/api/config#todo-title-length-max"
+          ]
         }
       }
     },
@@ -39512,7 +39567,10 @@
         },
         "video_cover_photo": {
           "name": "video_cover_photo",
-          "description": " "
+          "description": "Represents a custom video cover¹.",
+          "links": [
+            "https://core.telegram.org/api/files#video-covers"
+          ]
         }
       }
     },
@@ -43528,7 +43586,7 @@
         "Contains the URL to use to withdraw Telegram Star revenue¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#withdrawing-stars"
+        "https://core.telegram.org/api/stars#withdrawing-revenue"
       ]
     },
     "payments.StarsStatus": {
@@ -59452,7 +59510,10 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Must be set when fetching sponsored messages to show on channel videos »¹.",
+          "links": [
+            "https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -60836,15 +60897,18 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The IDs of the received messages."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where the messages were received."
         },
         "push": {
           "name": "push",
-          "description": "If set,"
+          "description": "Must be set if the messages were received from a push notification¹.",
+          "links": [
+            "https://core.telegram.org/api/push-updates"
+          ]
         }
       },
       "errors": [
@@ -66780,7 +66844,7 @@
       "parameters": {
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The gift to convert."
         }
       },
       "errors": [
@@ -67643,7 +67707,7 @@
         "Withdraw funds from a channel or bot's star balance »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/stars#withdrawing-stars"
+        "https://core.telegram.org/api/stars#withdrawing-revenue"
       ],
       "parameters": {
         "amount": {
@@ -67719,7 +67783,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": " "
+          "description": "If set, returns the channel/ad revenue balance in nanotons."
         }
       },
       "errors": [
@@ -67851,7 +67915,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": " "
+          "description": "If set, returns the channel/ad revenue transactions in nanotons, instead."
         }
       },
       "errors": [
@@ -67893,7 +67957,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": " "
+          "description": "If set, returns channel/bot ad revenue transactions in nanotons."
         }
       },
       "errors": [
