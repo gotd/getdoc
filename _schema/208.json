@@ -17300,7 +17300,10 @@
       }
     },
     "inputStickerSetTonGifts": {
-      "name": "inputStickerSetTonGifts"
+      "name": "inputStickerSetTonGifts",
+      "description": [
+        "TON gifts stickerset."
+      ]
     },
     "inputStickeredMediaDocument": {
       "name": "inputStickeredMediaDocument",
@@ -19434,10 +19437,13 @@
     "messageActionConferenceCall": {
       "name": "messageActionConferenceCall",
       "description": [
-        "Represents a conference call¹ (or an invitation to a conference call, if neither the missed nor active flags are set)."
+        "Represents a conference call¹ (or an invitation to a conference call, if neither the missed nor active flags are set).",
+        "If call_requests_disabled¹ is not set or false, an incoming messageActionConferenceCall² with the missed and active flags not set should trigger ringing and an incoming call screen, just like for one-on-one calls."
       ],
       "links": [
-        "https://core.telegram.org/api/end-to-end/group-calls"
+        "https://core.telegram.org/api/end-to-end/group-calls",
+        "https://core.telegram.org/api/config#call-requests-disabled",
+        "https://core.telegram.org/constructor/messageActionConferenceCall"
       ],
       "fields": {
         "active": {
@@ -19619,7 +19625,12 @@
     "messageActionGiftPremium": {
       "name": "messageActionGiftPremium",
       "description": [
-        "Info about a gifted Telegram Premium subscription"
+        "Info about a gifted Telegram Premium subscription",
+        "This service message should be displayed below the appropriate sticker from the inputStickerSetPremiumGifts »¹ stickerset »²:"
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/inputStickerSetPremiumGifts",
+        "https://core.telegram.org/api/stickers#stickersets"
       ],
       "fields": {
         "amount": {
@@ -19657,17 +19668,20 @@
         },
         "months": {
           "name": "months",
-          "description": "Duration of the gifted Telegram Premium subscription"
+          "description": "Duration of the gifted Telegram Premium subscription."
         }
       }
     },
     "messageActionGiftStars": {
       "name": "messageActionGiftStars",
       "description": [
-        "You gifted or were gifted some Telegram Stars¹."
+        "You gifted or were gifted some Telegram Stars¹.",
+        "This service message should be displayed below the appropriate sticker from the inputStickerSetPremiumGifts »¹ stickerset »²:"
       ],
       "links": [
-        "https://core.telegram.org/api/stars"
+        "https://core.telegram.org/api/stars",
+        "https://core.telegram.org/constructor/inputStickerSetPremiumGifts",
+        "https://core.telegram.org/api/stickers#stickersets"
       ],
       "fields": {
         "amount": {
@@ -19711,6 +19725,14 @@
     },
     "messageActionGiftTon": {
       "name": "messageActionGiftTon",
+      "description": [
+        "You were gifted some toncoins.",
+        "This service message should be displayed below the appropriate sticker from the inputStickerSetTonGifts »¹ stickerset »²:"
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/inputStickerSetTonGifts",
+        "https://core.telegram.org/api/stickers#stickersets"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
@@ -19737,7 +19759,7 @@
         },
         "transaction_id": {
           "name": "transaction_id",
-          "description": " "
+          "description": "Transaction ID."
         }
       }
     },
@@ -20105,11 +20127,14 @@
     "messageActionPrizeStars": {
       "name": "messageActionPrizeStars",
       "description": [
-        "You won some Telegram Stars¹ in a Telegram Star giveaway »²."
+        "You won some Telegram Stars¹ in a Telegram Star giveaway »².",
+        "This service message should be displayed below the appropriate sticker from the inputStickerSetPremiumGifts »¹ stickerset »²:"
       ],
       "links": [
         "https://core.telegram.org/api/stars",
-        "https://core.telegram.org/api/giveaways#star-giveaways"
+        "https://core.telegram.org/api/giveaways#star-giveaways",
+        "https://core.telegram.org/constructor/inputStickerSetPremiumGifts",
+        "https://core.telegram.org/api/stickers#stickersets"
       ],
       "fields": {
         "boost_peer": {
@@ -22469,7 +22494,7 @@
         },
         "reactions_are_possible": {
           "name": "reactions_are_possible",
-          "description": "Whether you can react to this messages »¹.",
+          "description": "Whether you can react to this message »¹.",
           "links": [
             "https://core.telegram.org/api/reactions"
           ]
@@ -24584,7 +24609,10 @@
         },
         "nopaid_messages_exception": {
           "name": "nopaid_messages_exception",
-          "description": " "
+          "description": "If set, an admin has exempted this peer from payment to send messages using account.toggleNoPaidMessagesException¹.",
+          "links": [
+            "https://core.telegram.org/method/account.toggleNoPaidMessagesException"
+          ]
         },
         "peer": {
           "name": "peer",
@@ -35914,14 +35942,21 @@
     },
     "updateMonoForumNoPaidException": {
       "name": "updateMonoForumNoPaidException",
+      "description": [
+        "An admin has (un)exempted this monoforum topic »¹ from payment to send messages using account.toggleNoPaidMessagesException²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum",
+        "https://core.telegram.org/method/account.toggleNoPaidMessagesException"
+      ],
       "fields": {
         "channel_id": {
           "name": "channel_id",
-          "description": " "
+          "description": "The monoforum ID."
         },
         "exception": {
           "name": "exception",
-          "description": " "
+          "description": "If set, an admin has exempted this peer, otherwise the peer was unexempted."
         },
         "flags": {
           "name": "flags",
@@ -35932,7 +35967,7 @@
         },
         "saved_peer_id": {
           "name": "saved_peer_id",
-          "description": " "
+          "description": "The peer/topic ID."
         }
       }
     },
@@ -50572,14 +50607,20 @@
     },
     "channels.getMessageAuthor": {
       "name": "channels.getMessageAuthor",
+      "description": [
+        "Can only be invoked by non-bot admins of a monoforum »¹, obtains the original sender of a message sent by other monoforum admins to the monoforum, on behalf of the channel associated to the monoforum."
+      ],
+      "links": [
+        "https://core.telegram.org/api/monoforum"
+      ],
       "parameters": {
         "channel": {
           "name": "channel",
-          "description": " "
+          "description": "ID of the monoforum."
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "ID of the message sent by a monoforum admin."
         }
       },
       "errors": [
@@ -67690,7 +67731,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": " "
+          "description": "If set, fetches channel/bot ad revenue statistics in TON."
         }
       },
       "errors": [
@@ -67712,7 +67753,7 @@
       "parameters": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "The amount of stars or nanotons to withdraw."
         },
         "flags": {
           "name": "flags",
@@ -67734,7 +67775,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": " "
+          "description": "If set, withdraws channel/ad revenue in TON."
         }
       },
       "errors": [
@@ -68133,7 +68174,7 @@
         },
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The gift to display or remove."
         },
         "unsave": {
           "name": "unsave",
