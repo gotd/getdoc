@@ -10710,7 +10710,7 @@
           "name": "file_reference",
           "description": "File reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "flags": {
@@ -14348,7 +14348,7 @@
           "name": "file_reference",
           "description": "File reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "id": {
@@ -14380,7 +14380,7 @@
           "name": "file_reference",
           "description": "File reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "id": {
@@ -14611,7 +14611,7 @@
           "name": "file_reference",
           "description": "File reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "local_id": {
@@ -16395,7 +16395,7 @@
           "name": "file_reference",
           "description": "File reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "id": {
@@ -16430,7 +16430,7 @@
           "name": "file_reference",
           "description": "File reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "id": {
@@ -27655,7 +27655,7 @@
           "name": "file_reference",
           "description": "file reference¹",
           "links": [
-            "https://core.telegram.org/api/file_reference"
+            "https://core.telegram.org/api/file-references"
           ]
         },
         "flags": {
@@ -70068,7 +70068,7 @@
           "name": "max_id",
           "description": "If a positive value was transferred, the method will return only photos with IDs less than the set one. This parameter is often useful when refetching file references »¹, as in conjuction with limit=1 and offset=-1 the photo² object with the id specified in max_id can be fetched.",
           "links": [
-            "https://core.telegram.org/api/file_reference",
+            "https://core.telegram.org/api/file-references",
             "https://core.telegram.org/constructor/photo"
           ]
         },
