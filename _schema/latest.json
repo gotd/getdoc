@@ -3708,7 +3708,7 @@
         },
         "otherwise_relogin_days": {
           "name": "otherwise_relogin_days",
-          "description": "Iff setup_password_required is set and the user declines to set a 2-step verification password, they will be able to log into their account via SMS again only after this many days pass."
+          "description": "If and only if setup_password_required is set and the user declines to set a 2-step verification password, they will be able to log into their account via SMS again only after this many days pass."
         },
         "setup_password_required": {
           "name": "setup_password_required",
@@ -23957,9 +23957,9 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹",
+          "description": "Hash used for caching, can also be locally regenerated using the algorithm specified here »¹.",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/reactions#recent-reactions"
           ]
         },
         "reactions": {
@@ -24122,9 +24122,10 @@
       "fields": {
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹",
+          "description": "Hash used for caching, for more info click here¹. Can also be manually regenerated, if needed, using the custom algorithm specified here »².",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/offsets#hash-generation",
+            "https://core.telegram.org/api/saved-messages#tags"
           ]
         },
         "tags": {
@@ -31072,10 +31073,12 @@
     "starGiftUnique": {
       "name": "starGiftUnique",
       "description": [
-        "Represents a collectible star gift, see here »¹ for more info."
+        "Represents a collectible star gift, see here »¹ for more info.",
+        "The sticker that represents the gift is contained in a starGiftAttributeModel¹ object in attributes."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gifts"
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/constructor/starGiftAttributeModel"
       ],
       "fields": {
         "attributes": {
@@ -58909,9 +58912,9 @@
         },
         "hash": {
           "name": "hash",
-          "description": "Hash used for caching, for more info click here¹",
+          "description": "Hash for pagination, generated as specified here »¹ (not the usual algorithm used for hash generation).",
           "links": [
-            "https://core.telegram.org/api/offsets#hash-generation"
+            "https://core.telegram.org/api/business#quick-reply-shortcuts"
           ]
         },
         "id": {
@@ -64256,7 +64259,11 @@
         },
         "reaction": {
           "name": "reaction",
-          "description": "A list of reactions"
+          "description": "A list of reactions (doesn't accept reactionPaid¹ constructors, use messages.sendPaidReaction² to send paid reactions, instead).",
+          "links": [
+            "https://core.telegram.org/constructor/reactionPaid",
+            "https://core.telegram.org/method/messages.sendPaidReaction"
+          ]
         }
       },
       "errors": [
@@ -66456,7 +66463,12 @@
     "messages.uploadMedia": {
       "name": "messages.uploadMedia",
       "description": [
-        "Upload a file and associate it to a chat (without actually sending it to the chat)"
+        "Upload a file and associate it to a chat (without actually sending it to the chat)",
+        "May also be used in a business connection¹, not by wrapping the query in invokeWithBusinessConnection »², but rather by specifying the business connection ID in the business_connection_id parameter."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/connected-business-bots",
+        "https://core.telegram.org/method/invokeWithBusinessConnection"
       ],
       "parameters": {
         "business_connection_id": {
@@ -71579,10 +71591,14 @@
     "stories.editStory": {
       "name": "stories.editStory",
       "description": [
-        "Edit an uploaded story¹"
+        "Edit an uploaded story¹",
+        "May also be used in a business connection¹, not by wrapping the query in invokeWithBusinessConnection »², but rather by specifying the ID of a controlled business user in peer: in this context, the method can only be used to edit stories posted by the same business bot on behalf of the user with stories.sendStory³."
       ],
       "links": [
-        "https://core.telegram.org/api/stories"
+        "https://core.telegram.org/api/stories",
+        "https://core.telegram.org/api/bots/connected-business-bots",
+        "https://core.telegram.org/method/invokeWithBusinessConnection",
+        "https://core.telegram.org/method/stories.sendStory"
       ],
       "parameters": {
         "caption": {
@@ -72315,10 +72331,13 @@
     "stories.sendStory": {
       "name": "stories.sendStory",
       "description": [
-        "Uploads a Telegram Story¹."
+        "Uploads a Telegram Story¹.",
+        "May also be used in a business connection¹, not by wrapping the query in invokeWithBusinessConnection »², but rather by specifying the ID of a controlled business user in peer."
       ],
       "links": [
-        "https://core.telegram.org/api/stories"
+        "https://core.telegram.org/api/stories",
+        "https://core.telegram.org/api/bots/connected-business-bots",
+        "https://core.telegram.org/method/invokeWithBusinessConnection"
       ],
       "parameters": {
         "albums": {
@@ -75007,7 +75026,7 @@
       "type": "MSG_VOICE_MISSING"
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -75041,7 +75060,7 @@
       "type": "NOGENERAL_HIDE_FORBIDDEN"
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -75113,7 +75132,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -76479,7 +76498,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 403,
+      "code": 400,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
