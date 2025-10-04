@@ -19736,19 +19736,19 @@
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "FIAT currency equivalent (in the currency specified in currency) of the amount specified in crypto_amount."
         },
         "crypto_amount": {
           "name": "crypto_amount",
-          "description": " "
+          "description": "Amount in the smallest unit of the cryptocurrency (for TONs, one billionth of a ton, AKA a nanoton)."
         },
         "crypto_currency": {
           "name": "crypto_currency",
-          "description": " "
+          "description": "Name of the cryptocurrency."
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Name of a localized FIAT currency."
         },
         "flags": {
           "name": "flags",
@@ -23795,7 +23795,7 @@
         },
         "search_flood": {
           "name": "search_flood",
-          "description": "For global post searches »¹, the remaining amount of free searches.",
+          "description": "For global post searches »¹, the remaining amount of free searches, here query_is_free is related to the current call only, not to the next paginated call, and all subsequent pagination calls will always be free.",
           "links": [
             "https://core.telegram.org/api/search#posts-tab"
           ]
@@ -46091,7 +46091,8 @@
         },
         {
           "code": 400,
-          "type": "UNSUPPORTED"
+          "type": "UNSUPPORTED",
+          "description": "require_payment cannot be set by users, only by monoforums: users must instead use the inputPrivacyKeyNoPaidMessages privacy setting to remove a previously added exemption."
         },
         {
           "code": 400,
@@ -50675,7 +50676,8 @@
         },
         {
           "code": 400,
-          "type": "FROZEN_PARTICIPANT_MISSING"
+          "type": "FROZEN_PARTICIPANT_MISSING",
+          "description": "The current account is frozen, and cannot access the specified peer."
         },
         {
           "code": 400,
@@ -55271,7 +55273,8 @@
         },
         {
           "code": 400,
-          "type": "SELF_DELETE_RESTRICTED"
+          "type": "SELF_DELETE_RESTRICTED",
+          "description": "Business bots can't delete messages just for the user, revoke must be set."
         }
       ]
     },
@@ -56559,7 +56562,8 @@
       "errors": [
         {
           "code": 406,
-          "type": "ALLOW_PAYMENT_REQUIRED"
+          "type": "ALLOW_PAYMENT_REQUIRED",
+          "description": "This peer only accepts paid messages »: this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages.  ."
         },
         {
           "code": 403,
@@ -56675,10 +56679,6 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
-        },
-        {
-          "code": 500,
-          "type": "CHP_BAD_EVENT"
         },
         {
           "code": 400,
@@ -58102,7 +58102,8 @@
         },
         {
           "code": 400,
-          "type": "FROZEN_PARTICIPANT_MISSING"
+          "type": "FROZEN_PARTICIPANT_MISSING",
+          "description": "The current account is frozen, and cannot access the specified peer."
         },
         {
           "code": 400,
@@ -58654,7 +58655,8 @@
         },
         {
           "code": 400,
-          "type": "FROZEN_PARTICIPANT_MISSING"
+          "type": "FROZEN_PARTICIPANT_MISSING",
+          "description": "The current account is frozen, and cannot access the specified peer."
         },
         {
           "code": 400,
@@ -61707,7 +61709,8 @@
         },
         {
           "code": 400,
-          "type": "SEND_MESSAGE_GAME_INVALID"
+          "type": "SEND_MESSAGE_GAME_INVALID",
+          "description": "An inputBotInlineMessageGame can only be contained in an inputBotInlineResultGame, not in an inputBotInlineResult/inputBotInlineResultPhoto/etc."
         },
         {
           "code": 400,
@@ -62860,7 +62863,8 @@
       "errors": [
         {
           "code": 406,
-          "type": "ALLOW_PAYMENT_REQUIRED"
+          "type": "ALLOW_PAYMENT_REQUIRED",
+          "description": "This peer only accepts paid messages »: this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages.  ."
         },
         {
           "code": 403,
@@ -63011,10 +63015,6 @@
           "code": 403,
           "type": "CHAT_WRITE_FORBIDDEN",
           "description": "You can't write in this chat."
-        },
-        {
-          "code": 500,
-          "type": "CHP_BAD_EVENT"
         },
         {
           "code": 400,
@@ -63518,7 +63518,8 @@
         },
         {
           "code": 406,
-          "type": "ALLOW_PAYMENT_REQUIRED"
+          "type": "ALLOW_PAYMENT_REQUIRED",
+          "description": "This peer only accepts paid messages »: this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages.  ."
         },
         {
           "code": 403,
@@ -64193,6 +64194,11 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "BALANCE_TOO_LOW",
+          "description": "The transaction cannot be completed because the current Telegram Stars balance is too low."
+        },
         {
           "code": 400,
           "type": "CHANNEL_INVALID",
@@ -66080,10 +66086,6 @@
       "errors": [
         {
           "code": 400,
-          "type": "ACCESS_FORBIDDEN"
-        },
-        {
-          "code": 400,
           "type": "INPUT_TEXT_EMPTY",
           "description": "The specified text is empty."
         },
@@ -66119,7 +66121,8 @@
         },
         {
           "code": 406,
-          "type": "TRANSLATIONS_DISABLED"
+          "type": "TRANSLATIONS_DISABLED",
+          "description": "Translations are unavailable, a detailed and localized description for the error will be emitted via an updateServiceNotification as specified here »."
         },
         {
           "code": 500,
@@ -67294,7 +67297,8 @@
         },
         {
           "code": 400,
-          "type": "NO_PAYMENT_NEEDED"
+          "type": "NO_PAYMENT_NEEDED",
+          "description": "The upgrade/transfer of the specified gift was already paid for or is free."
         },
         {
           "code": 400,
@@ -67323,7 +67327,8 @@
         },
         {
           "code": 406,
-          "type": "STARGIFT_EXPORT_IN_PROGRESS"
+          "type": "STARGIFT_EXPORT_IN_PROGRESS",
+          "description": "A gift export is in progress, a detailed and localized description for the error will be emitted via an updateServiceNotification as specified here »."
         },
         {
           "code": 400,
@@ -67337,7 +67342,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_OWNER_INVALID"
+          "type": "STARGIFT_OWNER_INVALID",
+          "description": "You cannot transfer or sell a gift owned by another user."
         },
         {
           "code": 400,
@@ -67346,11 +67352,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED"
-        },
-        {
-          "code": 400,
-          "type": "STARGIFT_RESELL_NOT_ALLOWED"
+          "type": "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED",
+          "description": "You can't buy the gift using the specified currency (i.e. trying to pay in Stars for TON gifts)."
         },
         {
           "code": 400,
@@ -67364,11 +67367,13 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_UPGRADE_UNAVAILABLE"
+          "type": "STARGIFT_UPGRADE_UNAVAILABLE",
+          "description": "A received gift can only be upgraded to a collectible gift if the messageActionStarGift/savedStarGift.can_upgrade flag is set."
         },
         {
           "code": 406,
-          "type": "STARS_FORM_AMOUNT_MISMATCH"
+          "type": "STARS_FORM_AMOUNT_MISMATCH",
+          "description": "The form amount has changed, please fetch the new form using payments.getPaymentForm and restart the process."
         },
         {
           "code": 400,
@@ -68286,7 +68291,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_OWNER_INVALID"
+          "type": "STARGIFT_OWNER_INVALID",
+          "description": "You cannot transfer or sell a gift owned by another user."
         },
         {
           "code": 400,
@@ -68458,7 +68464,8 @@
         },
         {
           "code": 406,
-          "type": "PRECHECKOUT_FAILED"
+          "type": "PRECHECKOUT_FAILED",
+          "description": "Precheckout failed, a detailed and localized description for the error will be emitted via an updateServiceNotification as specified here »."
         },
         {
           "code": 400,
@@ -68477,11 +68484,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_OWNER_INVALID"
-        },
-        {
-          "code": 400,
-          "type": "STARGIFT_RESELL_NOT_ALLOWED"
+          "type": "STARGIFT_OWNER_INVALID",
+          "description": "You cannot transfer or sell a gift owned by another user."
         },
         {
           "code": 400,
@@ -68500,7 +68504,8 @@
         },
         {
           "code": 406,
-          "type": "STARS_FORM_AMOUNT_MISMATCH"
+          "type": "STARS_FORM_AMOUNT_MISMATCH",
+          "description": "The form amount has changed, please fetch the new form using payments.getPaymentForm and restart the process."
         },
         {
           "code": 400,
@@ -68631,7 +68636,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_OWNER_INVALID"
+          "type": "STARGIFT_OWNER_INVALID",
+          "description": "You cannot transfer or sell a gift owned by another user."
         },
         {
           "code": 400,
@@ -68736,7 +68742,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_UPGRADE_UNAVAILABLE"
+          "type": "STARGIFT_UPGRADE_UNAVAILABLE",
+          "description": "A received gift can only be upgraded to a collectible gift if the messageActionStarGift/savedStarGift.can_upgrade flag is set."
         }
       ]
     },
@@ -69838,10 +69845,6 @@
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
-        },
-        {
-          "code": 500,
-          "type": "PARTICIPANT_CALL_FAILED"
         },
         {
           "code": 400,
@@ -72783,7 +72786,8 @@
         },
         {
           "code": 400,
-          "type": "FROZEN_PARTICIPANT_MISSING"
+          "type": "FROZEN_PARTICIPANT_MISSING",
+          "description": "The current account is frozen, and cannot access the specified peer."
         },
         {
           "code": 400,
@@ -73489,10 +73493,6 @@
       "type": "ABOUT_TOO_LONG",
       "description": "About string too long."
     },
-    "ACCESS_FORBIDDEN": {
-      "code": 400,
-      "type": "ACCESS_FORBIDDEN"
-    },
     "ACCESS_TOKEN_EXPIRED": {
       "code": 400,
       "type": "ACCESS_TOKEN_EXPIRED",
@@ -73540,7 +73540,8 @@
     },
     "ALLOW_PAYMENT_REQUIRED": {
       "code": 406,
-      "type": "ALLOW_PAYMENT_REQUIRED"
+      "type": "ALLOW_PAYMENT_REQUIRED",
+      "description": "This peer only accepts paid messages »: this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages.  ."
     },
     "ALLOW_PAYMENT_REQUIRED_%d": {
       "code": 403,
@@ -74222,10 +74223,6 @@
       "type": "CHAT_WRITE_FORBIDDEN",
       "description": "You can't write in this chat."
     },
-    "CHP_BAD_EVENT": {
-      "code": 500,
-      "type": "CHP_BAD_EVENT"
-    },
     "CODE_EMPTY": {
       "code": 400,
       "type": "CODE_EMPTY",
@@ -74688,7 +74685,8 @@
     },
     "FROZEN_PARTICIPANT_MISSING": {
       "code": 400,
-      "type": "FROZEN_PARTICIPANT_MISSING"
+      "type": "FROZEN_PARTICIPANT_MISSING",
+      "description": "The current account is frozen, and cannot access the specified peer."
     },
     "GAME_BOT_INVALID": {
       "code": 400,
@@ -75232,7 +75230,8 @@
     },
     "NO_PAYMENT_NEEDED": {
       "code": 400,
-      "type": "NO_PAYMENT_NEEDED"
+      "type": "NO_PAYMENT_NEEDED",
+      "description": "The upgrade/transfer of the specified gift was already paid for or is free."
     },
     "OFFSET_INVALID": {
       "code": 400,
@@ -75288,10 +75287,6 @@
       "code": 400,
       "type": "PARTICIPANTS_TOO_FEW",
       "description": "Not enough participants."
-    },
-    "PARTICIPANT_CALL_FAILED": {
-      "code": 500,
-      "type": "PARTICIPANT_CALL_FAILED"
     },
     "PARTICIPANT_ID_INVALID": {
       "code": 400,
@@ -75575,7 +75570,8 @@
     },
     "PRECHECKOUT_FAILED": {
       "code": 406,
-      "type": "PRECHECKOUT_FAILED"
+      "type": "PRECHECKOUT_FAILED",
+      "description": "Precheckout failed, a detailed and localized description for the error will be emitted via an updateServiceNotification as specified here »."
     },
     "PREMIUM_ACCOUNT_REQUIRED": {
       "code": 400,
@@ -75919,7 +75915,8 @@
     },
     "SELF_DELETE_RESTRICTED": {
       "code": 400,
-      "type": "SELF_DELETE_RESTRICTED"
+      "type": "SELF_DELETE_RESTRICTED",
+      "description": "Business bots can't delete messages just for the user, revoke must be set."
     },
     "SEND_AS_PEER_INVALID": {
       "code": 400,
@@ -75938,7 +75935,8 @@
     },
     "SEND_MESSAGE_GAME_INVALID": {
       "code": 400,
-      "type": "SEND_MESSAGE_GAME_INVALID"
+      "type": "SEND_MESSAGE_GAME_INVALID",
+      "description": "An inputBotInlineMessageGame can only be contained in an inputBotInlineResultGame, not in an inputBotInlineResult/inputBotInlineResultPhoto/etc."
     },
     "SEND_MESSAGE_MEDIA_INVALID": {
       "code": 400,
@@ -76052,7 +76050,8 @@
     },
     "STARGIFT_EXPORT_IN_PROGRESS": {
       "code": 406,
-      "type": "STARGIFT_EXPORT_IN_PROGRESS"
+      "type": "STARGIFT_EXPORT_IN_PROGRESS",
+      "description": "A gift export is in progress, a detailed and localized description for the error will be emitted via an updateServiceNotification as specified here »."
     },
     "STARGIFT_INVALID": {
       "code": 400,
@@ -76066,7 +76065,8 @@
     },
     "STARGIFT_OWNER_INVALID": {
       "code": 400,
-      "type": "STARGIFT_OWNER_INVALID"
+      "type": "STARGIFT_OWNER_INVALID",
+      "description": "You cannot transfer or sell a gift owned by another user."
     },
     "STARGIFT_PEER_INVALID": {
       "code": 400,
@@ -76075,11 +76075,8 @@
     },
     "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED": {
       "code": 400,
-      "type": "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED"
-    },
-    "STARGIFT_RESELL_NOT_ALLOWED": {
-      "code": 400,
-      "type": "STARGIFT_RESELL_NOT_ALLOWED"
+      "type": "STARGIFT_RESELL_CURRENCY_NOT_ALLOWED",
+      "description": "You can't buy the gift using the specified currency (i.e. trying to pay in Stars for TON gifts)."
     },
     "STARGIFT_SLUG_INVALID": {
       "code": 400,
@@ -76093,7 +76090,8 @@
     },
     "STARGIFT_UPGRADE_UNAVAILABLE": {
       "code": 400,
-      "type": "STARGIFT_UPGRADE_UNAVAILABLE"
+      "type": "STARGIFT_UPGRADE_UNAVAILABLE",
+      "description": "A received gift can only be upgraded to a collectible gift if the messageActionStarGift/savedStarGift.can_upgrade flag is set."
     },
     "STARGIFT_USAGE_LIMITED": {
       "code": 400,
@@ -76137,7 +76135,8 @@
     },
     "STARS_FORM_AMOUNT_MISMATCH": {
       "code": 406,
-      "type": "STARS_FORM_AMOUNT_MISMATCH"
+      "type": "STARS_FORM_AMOUNT_MISMATCH",
+      "description": "The form amount has changed, please fetch the new form using payments.getPaymentForm and restart the process."
     },
     "STARS_INVOICE_INVALID": {
       "code": 400,
@@ -76536,7 +76535,8 @@
     },
     "TRANSLATIONS_DISABLED": {
       "code": 406,
-      "type": "TRANSLATIONS_DISABLED"
+      "type": "TRANSLATIONS_DISABLED",
+      "description": "Translations are unavailable, a detailed and localized description for the error will be emitted via an updateServiceNotification as specified here »."
     },
     "TRANSLATION_TIMEOUT": {
       "code": 500,
@@ -76570,7 +76570,8 @@
     },
     "UNSUPPORTED": {
       "code": 400,
-      "type": "UNSUPPORTED"
+      "type": "UNSUPPORTED",
+      "description": "require_payment cannot be set by users, only by monoforums: users must instead use the inputPrivacyKeyNoPaidMessages privacy setting to remove a previously added exemption."
     },
     "UNTIL_DATE_INVALID": {
       "code": 400,
@@ -76683,7 +76684,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
