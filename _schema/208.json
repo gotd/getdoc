@@ -20375,7 +20375,7 @@
         },
         "gift_msg_id": {
           "name": "gift_msg_id",
-          "description": "For separate upgrades¹, the identifier of the message with the gift whose upgrade was prepaid (valid for everyone, since all messages across all private chats with users share the same message ID sequence, and for channels the service message will already be sent to the channel, that will contain the service message with the original gift).",
+          "description": "For separate upgrades¹, the identifier of the message with the gift whose upgrade was prepaid (only valid for the receiver of the service message).",
           "links": [
             "https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade"
           ]
@@ -26297,7 +26297,10 @@
       "fields": {
         "attributes": {
           "name": "attributes",
-          "description": "Possible gift attributes."
+          "description": "Possible gift attributes, only set if payments.getResaleStarGifts¹.attributes_hash is set (on the first call, it must be equal to 0).",
+          "links": [
+            "https://core.telegram.org/method/payments.getResaleStarGifts"
+          ]
         },
         "attributes_hash": {
           "name": "attributes_hash",
@@ -26316,7 +26319,10 @@
         },
         "counters": {
           "name": "counters",
-          "description": " "
+          "description": "Indicates the total number of gifts that have a specific attribute, only set if payments.getResaleStarGifts¹.offset is empty (since this field is not related to the current result page but to all of them, it's only returned on the first page).",
+          "links": [
+            "https://core.telegram.org/method/payments.getResaleStarGifts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -67449,8 +67455,10 @@
         },
         "attributes_hash": {
           "name": "attributes_hash",
-          "description": "If a previous call to the method was made and payments.resaleStarGifts¹.attributes_hash was set, pass it here to avoid returning any results if they haven't changed.",
+          "description": "If a previous call to the method was made and payments.resaleStarGifts¹.attributes_hash was set, pass it here to avoid returning any results if they haven't changed. Otherwise, set this flag and pass 0 to return payments.resaleStarGifts².attributes_hash and payments.resaleStarGifts³.attributes, these two fields will not be set if this flag is not set.",
           "links": [
+            "https://core.telegram.org/constructor/payments.resaleStarGifts",
+            "https://core.telegram.org/constructor/payments.resaleStarGifts",
             "https://core.telegram.org/constructor/payments.resaleStarGifts"
           ]
         },
@@ -67474,7 +67482,10 @@
         },
         "offset": {
           "name": "offset",
-          "description": "Offset for pagination."
+          "description": "Offset for pagination. If not equal to an empty string, payments.resaleStarGifts¹.counters will not be set to avoid returning the counters every time a new page is fetched.",
+          "links": [
+            "https://core.telegram.org/constructor/payments.resaleStarGifts"
+          ]
         },
         "sort_by_num": {
           "name": "sort_by_num",
