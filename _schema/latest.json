@@ -76621,7 +76621,7 @@
       "description": "Only the \"General\" topic with id=1 can be hidden."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -78131,7 +78131,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 403,
+      "code": 400,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
