@@ -18,7 +18,7 @@ jobs:
         runner:
           - ubuntu-latest
         go:
-          - 1.23.x
+          - stable
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
