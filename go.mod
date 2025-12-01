@@ -8,7 +8,7 @@ require (
 	github.com/PuerkitoBio/goquery v1.10.3
 	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/go-faster/errors v0.7.1
-	github.com/go-faster/sdk v0.30.0
+	github.com/go-faster/sdk v0.31.0
 	github.com/stretchr/testify v1.11.1
 	go.uber.org/ratelimit v0.3.1
 	go.uber.org/zap v1.27.1
