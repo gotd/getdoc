@@ -4236,19 +4236,26 @@
     "auth.sentCodePaymentRequired": {
       "name": "auth.sentCodePaymentRequired",
       "description": [
-        "Official apps may receive this constructor, indicating that due to the high cost of SMS verification codes for the user's country/provider, the user must purchase a Telegram Premium¹ subscription in order to proceed with the login/signup."
+        "Official apps may receive this constructor, indicating that due to the high cost of SMS verification codes for the user's country/provider, the user must purchase a Telegram Premium¹ subscription in order to proceed with the login/signup, see here »² for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/premium"
+        "https://core.telegram.org/api/premium",
+        "https://core.telegram.org/api/auth#paid-auth"
       ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json¹, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).",
+          "links": [
+            "https://core.telegram.org/bots/payments/currencies.json"
+          ]
         },
         "currency": {
           "name": "currency",
-          "description": " "
+          "description": "Three-letter ISO 4217 currency¹ code.",
+          "links": [
+            "https://core.telegram.org/bots/payments#supported-currencies"
+          ]
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
@@ -4259,7 +4266,7 @@
         },
         "store_product": {
           "name": "store_product",
-          "description": "Store identifier of the Telegram Premium subscription."
+          "description": "For official apps, tore identifier of the Telegram Premium subscription."
         },
         "support_email_address": {
           "name": "support_email_address",
@@ -15454,10 +15461,19 @@
     },
     "inputInvoicePremiumAuthCode": {
       "name": "inputInvoicePremiumAuthCode",
+      "description": [
+        "Used to pay for login codes, in case of high cost of SMS verification codes for the user's country/provider, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#paid-auth"
+      ],
       "fields": {
         "purpose": {
           "name": "purpose",
-          "description": " "
+          "description": "Must contain an inputStorePaymentAuthCode¹.",
+          "links": [
+            "https://core.telegram.org/constructor/inputStorePaymentAuthCode"
+          ]
         }
       }
     },
@@ -49911,18 +49927,30 @@
     },
     "auth.checkPaidAuth": {
       "name": "auth.checkPaidAuth",
+      "description": [
+        "Checks the status of a login payment¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auth#paid-auth"
+      ],
       "parameters": {
         "form_id": {
           "name": "form_id",
-          "description": " "
+          "description": "The payment form ID passed to payments.sendPaymentForm¹.",
+          "links": [
+            "https://core.telegram.org/method/payments.sendPaymentForm"
+          ]
         },
         "phone_code_hash": {
           "name": "phone_code_hash",
-          "description": " "
+          "description": "The phone code hash obtained from auth.sendCode¹",
+          "links": [
+            "https://core.telegram.org/method/auth.sendCode"
+          ]
         },
         "phone_number": {
           "name": "phone_number",
-          "description": " "
+          "description": "Phone number"
         }
       },
       "errors": [
@@ -70651,6 +70679,10 @@
         "sort_by_price": {
           "name": "sort_by_price",
           "description": "Sort gifts by price (ascending)."
+        },
+        "stars_only": {
+          "name": "stars_only",
+          "description": " "
         }
       },
       "errors": [
