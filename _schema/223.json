@@ -17146,7 +17146,10 @@
         },
         "note": {
           "name": "note",
-          "description": " "
+          "description": "A private note for this contact, only visible to us; see here »¹ for more info on contact notes.",
+          "links": [
+            "https://core.telegram.org/api/profile#private-notes-for-contacts"
+          ]
         },
         "phone": {
           "name": "phone",
@@ -21669,10 +21672,17 @@
     },
     "messageActionSuggestBirthday": {
       "name": "messageActionSuggestBirthday",
+      "description": [
+        "A new birthday was suggested using users.suggestBirthday¹, see here »² for more info on birthdays in the API."
+      ],
+      "links": [
+        "https://core.telegram.org/method/users.suggestBirthday",
+        "https://core.telegram.org/api/profile#birthday"
+      ],
       "fields": {
         "birthday": {
           "name": "birthday",
-          "description": " "
+          "description": "The suggested birthday."
         }
       }
     },
@@ -41107,7 +41117,10 @@
         },
         "note": {
           "name": "note",
-          "description": " "
+          "description": "A private note for this contact, only visible to us; see here »¹ for more info on contact notes.",
+          "links": [
+            "https://core.telegram.org/api/profile#private-notes-for-contacts"
+          ]
         },
         "notify_settings": {
           "name": "notify_settings",
@@ -55357,7 +55370,10 @@
         },
         "note": {
           "name": "note",
-          "description": " "
+          "description": "A private note for this contact, only visible to us; see here »¹ for more info on contact notes.",
+          "links": [
+            "https://core.telegram.org/api/profile#private-notes-for-contacts"
+          ]
         },
         "phone": {
           "name": "phone",
@@ -56089,14 +56105,20 @@
     },
     "contacts.updateContactNote": {
       "name": "contacts.updateContactNote",
+      "description": [
+        "Update the private note associated to a contact; see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#private-notes-for-contacts"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The contact."
         },
         "note": {
           "name": "note",
-          "description": " "
+          "description": "The note."
         }
       },
       "errors": [
@@ -77582,14 +77604,20 @@
     },
     "users.suggestBirthday": {
       "name": "users.suggestBirthday",
+      "description": [
+        "Suggest a birthday to another user, see here »¹ for more info on birthdays in the API."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#birthday"
+      ],
       "parameters": {
         "birthday": {
           "name": "birthday",
-          "description": " "
+          "description": "The birthday to suggest."
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "The user that will receive the suggested birthday date."
         }
       },
       "errors": [
