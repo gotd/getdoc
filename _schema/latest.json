@@ -33350,7 +33350,7 @@
         },
         "nanos": {
           "name": "nanos",
-          "description": "The decimal amount of Telegram Stars, expressed as nanostars (i.e. 1 nanostar is equal to 1/1'000'000'000th (one billionth) of a Telegram Star). This field may also be negative (the allowed range is -999999999 to 999999999)."
+          "description": "The decimal amount of Telegram Stars, expressed as nanostars (i.e. 1 nanostar is equal to 1/1_000_000_000th (one billionth) of a Telegram Star). This field may also be negative (the allowed range is from -999_999_999 to 999_999_999)."
         }
       }
     },
@@ -39085,7 +39085,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, the messages were read only within the specified bot forum topic »¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         }
       }
     },
@@ -40011,7 +40014,10 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If set, this notification was sent within a bot forum topic »¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -40660,11 +40666,17 @@
         },
         "bot_forum_can_manage_topics": {
           "name": "bot_forum_can_manage_topics",
-          "description": " "
+          "description": "If set, this bot supports bot forum topics »¹, and users (not just the bot!) are allowed to create and manage bot forum topics in their private chat with the bot.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         },
         "bot_forum_view": {
           "name": "bot_forum_view",
-          "description": " "
+          "description": "If set, this bot supports bot forum topics »¹.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         },
         "bot_has_main_app": {
           "name": "bot_has_main_app",
@@ -57549,6 +57561,12 @@
     },
     "messages.createForumTopic": {
       "name": "messages.createForumTopic",
+      "description": [
+        "Create a forum topic¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -57559,27 +57577,32 @@
         },
         "icon_color": {
           "name": "icon_color",
-          "description": " "
+          "description": "If no custom emoji icon is specified, specifies the color of the fallback topic icon (RGB), one of 0x6FB9F0, 0xFFD67E, 0xCB86DB, 0x8EEE98, 0xFF93B2, or 0xFB6F5F."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ used as topic icon. Telegram Premium² users can use any custom emoji, other users can only use the custom emojis contained in the inputStickerSetEmojiDefaultTopicIcons³ emoji pack.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji",
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/inputStickerSetEmojiDefaultTopicIcons"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup, private chat (for forum-enabled bots) or forum bot (for users) where to create the topic."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Unique client message ID to prevent duplicate sending of the same event"
         },
         "send_as": {
           "name": "send_as",
-          "description": " "
+          "description": "Create the topic as the specified peer"
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "Topic title (maximum UTF-8 length: 128)"
         },
         "title_missing": {
           "name": "title_missing",
@@ -58104,14 +58127,20 @@
     },
     "messages.deleteTopicHistory": {
       "name": "messages.deleteTopicHistory",
+      "description": [
+        "Delete message history of a forum topic¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located."
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "Topic ID"
         }
       },
       "errors": [
@@ -58608,10 +58637,16 @@
     },
     "messages.editForumTopic": {
       "name": "messages.editForumTopic",
+      "description": [
+        "Edit forum topic¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "closed": {
           "name": "closed",
-          "description": " "
+          "description": "If present, will update the open/closed status of the topic."
         },
         "flags": {
           "name": "flags",
@@ -58622,23 +58657,28 @@
         },
         "hidden": {
           "name": "hidden",
-          "description": " "
+          "description": "If present, will hide/unhide the topic (only valid for the \"General\" topic, id=1)."
         },
         "icon_emoji_id": {
           "name": "icon_emoji_id",
-          "description": " "
+          "description": "If present, updates the custom emoji¹ used as topic icon. Telegram Premium² users can use any custom emoji, other users can only use the custom emojis contained in the inputStickerSetEmojiDefaultTopicIcons³ emoji pack. Pass 0 to switch to the fallback topic icon.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji",
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/inputStickerSetEmojiDefaultTopicIcons"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located."
         },
         "title": {
           "name": "title",
-          "description": " "
+          "description": "If present, will update the topic title (maximum UTF-8 length: 128)."
         },
         "topic_id": {
           "name": "topic_id",
-          "description": " "
+          "description": "Topic ID"
         }
       },
       "errors": [
@@ -60745,6 +60785,12 @@
     },
     "messages.getForumTopics": {
       "name": "messages.getForumTopics",
+      "description": [
+        "Get topics of a forum¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -60755,36 +60801,39 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
+          "description": "Maximum number of results to return, see pagination¹. For optimal performance, the number of returned topics is chosen by the server and can be smaller than the specified limit.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_date": {
           "name": "offset_date",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹, date of the last message of the last found topic. Use 0 or any date in the future to get results from the last topic.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_id": {
           "name": "offset_id",
-          "description": "Offsets for pagination, for more info click here¹",
+          "description": "Offsets for pagination, for more info click here¹, ID of the last message of the last found topic (or initially 0).",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset_topic": {
           "name": "offset_topic",
-          "description": " "
+          "description": "Offsets for pagination, for more info click here¹, ID of the last found topic (or initially 0).",
+          "links": [
+            "https://core.telegram.org/api/offsets"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located."
         },
         "q": {
           "name": "q",
-          "description": " "
+          "description": "Search query"
         }
       },
       "errors": [
@@ -60797,14 +60846,17 @@
     },
     "messages.getForumTopicsByID": {
       "name": "messages.getForumTopicsByID",
+      "description": [
+        "Get forum topics by their ID"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located."
         },
         "topics": {
           "name": "topics",
-          "description": " "
+          "description": "Topic IDs"
         }
       },
       "errors": [
@@ -63655,6 +63707,9 @@
     },
     "messages.reorderPinnedForumTopics": {
       "name": "messages.reorderPinnedForumTopics",
+      "description": [
+        "Reorder pinned forum topics"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -63665,15 +63720,18 @@
         },
         "force": {
           "name": "force",
-          "description": " "
+          "description": "If not set, the order of only the topics present both server-side and in order will be changed (i.e. mentioning topics not pinned server-side in order will not pin them, and not mentioning topics pinned server-side will not unpin them).  If set, the entire server-side pinned topic list will be replaced with order (i.e. mentioning topics not pinned server-side in order will pin them, and not mentioning topics pinned server-side will unpin them)"
         },
         "order": {
           "name": "order",
-          "description": " "
+          "description": "Topic IDs »¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located."
         }
       },
       "errors": [
@@ -69333,18 +69391,27 @@
     },
     "messages.updatePinnedForumTopic": {
       "name": "messages.updatePinnedForumTopic",
+      "description": [
+        "Pin or unpin forum topics¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located."
         },
         "pinned": {
           "name": "pinned",
-          "description": " "
+          "description": "Whether to pin or unpin the topic"
         },
         "topic_id": {
           "name": "topic_id",
-          "description": " "
+          "description": "Forum topic ID¹",
+          "links": [
+            "https://core.telegram.org/api/forum"
+          ]
         }
       },
       "errors": [
@@ -71233,7 +71300,7 @@
     "payments.getStarsStatus": {
       "name": "payments.getStarsStatus",
       "description": [
-        "Get the current Telegram Stars balance¹ of the current account (with peer=inputPeerSelf²), or the stars balance of the bot specified in peer."
+        "Get the current Telegram Stars balance¹ of the current account (with peer=inputPeerSelf²), or the stars balance of the bot or channel specified in peer."
       ],
       "links": [
         "https://core.telegram.org/api/stars",
@@ -79100,7 +79167,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -79374,7 +79441,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -79804,7 +79871,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -80704,12 +80771,12 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
