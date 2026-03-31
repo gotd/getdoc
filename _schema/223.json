@@ -15643,10 +15643,20 @@
     },
     "inputInvoiceStarGiftDropOriginalDetails": {
       "name": "inputInvoiceStarGiftDropOriginalDetails",
+      "description": [
+        "Used to pay for for the removal of the starGiftAttributeOriginalDetails¹ attribute from a collectible gift, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails",
+        "https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift"
+      ],
       "fields": {
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "The collectible gift whose starGiftAttributeOriginalDetails¹ attribute should be removed.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails"
+          ]
         }
       }
     },
@@ -21595,7 +21605,11 @@
         },
         "drop_original_details_stars": {
           "name": "drop_original_details_stars",
-          "description": " "
+          "description": "If set, the starGiftAttributeOriginalDetails¹ attribute of this gift may be removed by paying the specified amount of stars, see here »² for the full flow.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails",
+            "https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -27854,11 +27868,11 @@
       "fields": {
         "next_prices": {
           "name": "next_prices",
-          "description": " "
+          "description": "Contains the current upgrade price and a list of future prices, each associated to a UNIX timestamp that indicates when the price comes in effect (the current price is valid only until the next one comes into effect, and so on for all prices in the list)."
         },
         "prices": {
           "name": "prices",
-          "description": " "
+          "description": "Contains a similar list of upgrade prices and timestamps, not as granular as in next_prices (i.e. prices are approximately 1 month apart), to be used mainly to scale the price graph, and to show a more general future overview of the upgrade price."
         },
         "sample_attributes": {
           "name": "sample_attributes",
@@ -31180,7 +31194,11 @@
         },
         "drop_original_details_stars": {
           "name": "drop_original_details_stars",
-          "description": " "
+          "description": "If set, the starGiftAttributeOriginalDetails¹ attribute of this gift may be removed by paying the specified amount of stars, see here »² for the full flow.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails",
+            "https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -33282,14 +33300,20 @@
     },
     "starGiftUpgradePrice": {
       "name": "starGiftUpgradePrice",
+      "description": [
+        "Indicates the price for a gift upgrade »¹ starting from a specific point in time."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "UNIX timestamp indicating when the price will be in effect."
         },
         "upgrade_stars": {
           "name": "upgrade_stars",
-          "description": " "
+          "description": "Upgrade price."
         }
       }
     },
@@ -33871,7 +33895,11 @@
         },
         "stargift_drop_original_details": {
           "name": "stargift_drop_original_details",
-          "description": " "
+          "description": "Represents payment for the removal of the starGiftAttributeOriginalDetails¹ attribute from a gift, see here »² for the full flow.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAttributeOriginalDetails",
+            "https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift"
+          ]
         },
         "stargift_prepaid_upgrade": {
           "name": "stargift_prepaid_upgrade",
@@ -44975,7 +45003,13 @@
       ]
     },
     "StarGiftUpgradePrice": {
-      "name": "StarGiftUpgradePrice"
+      "name": "StarGiftUpgradePrice",
+      "description": [
+        "Indicates the price for a gift upgrade »¹ starting from a specific point in time."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "StarRefProgram": {
       "name": "StarRefProgram",
@@ -47745,16 +47779,17 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
+          "description": "Maximum number of results to return, see pagination¹. Note that the server may return less than limit results, even if the actual number of remaining results is \u003e= limit, paginate to fetch them all.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset for pagination¹.",
+          "description": "Offset for pagination¹, intially an empty string, then equal the value of the last returned account.chatThemes².next_offset (if set).",
           "links": [
-            "https://core.telegram.org/api/offsets"
+            "https://core.telegram.org/api/offsets",
+            "https://core.telegram.org/constructor/account.chatThemes"
           ]
         }
       }
