@@ -79526,7 +79526,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -80818,12 +80818,12 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -81013,7 +81013,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
