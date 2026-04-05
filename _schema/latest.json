@@ -79214,7 +79214,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -79605,7 +79605,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 400,
+      "code": 403,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -80523,7 +80523,7 @@
       "description": "There are too many stickers in this stickerpack, you can't add any more."
     },
     "STICKERSET_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "STICKERSET_INVALID",
       "description": "The provided sticker set is invalid."
     },
@@ -80818,12 +80818,12 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
