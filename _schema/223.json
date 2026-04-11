@@ -28274,6 +28274,14 @@
     },
     "peerColorCollectible": {
       "name": "peerColorCollectible",
+      "description": [
+        "Represents a color palette »¹ associated to a collectible gift »², see here »³ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/colors#collectible-gift-palettes"
+      ],
       "fields": {
         "accent_color": {
           "name": "accent_color",
@@ -28281,11 +28289,17 @@
         },
         "background_emoji_id": {
           "name": "background_emoji_id",
-          "description": " "
+          "description": "Custom emoji ID »¹ used to generate the pattern.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         },
         "collectible_id": {
           "name": "collectible_id",
-          "description": " "
+          "description": "ID of the collectible gift »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "colors": {
           "name": "colors",
@@ -28308,7 +28322,10 @@
         },
         "gift_emoji_id": {
           "name": "gift_emoji_id",
-          "description": " "
+          "description": "Custom emoji ID »¹ of the collectible gift: a single copy of this custom emoji should be displayed as-is (without recoloring it, unlike for background_emoji_id) in the top-right corner of the palette.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
