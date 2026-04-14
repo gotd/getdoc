@@ -17338,7 +17338,13 @@
       ]
     },
     "inputPrivacyKeySavedMusic": {
-      "name": "inputPrivacyKeySavedMusic"
+      "name": "inputPrivacyKeySavedMusic",
+      "description": [
+        "Whether the user can see the songs we pinned to our profile »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#music"
+      ]
     },
     "inputPrivacyKeyStarGiftsAutoSave": {
       "name": "inputPrivacyKeyStarGiftsAutoSave",
@@ -20178,7 +20184,10 @@
         },
         "schedule_repeat_period": {
           "name": "schedule_repeat_period",
-          "description": " "
+          "description": "Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see here »¹ for more info on repeating scheduled messages.",
+          "links": [
+            "https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages"
+          ]
         },
         "silent": {
           "name": "silent",
@@ -30121,7 +30130,13 @@
       ]
     },
     "privacyKeySavedMusic": {
-      "name": "privacyKeySavedMusic"
+      "name": "privacyKeySavedMusic",
+      "description": [
+        "Whether the user can see the songs we pinned to our profile »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/profile#music"
+      ]
     },
     "privacyKeyStarGiftsAutoSave": {
       "name": "privacyKeyStarGiftsAutoSave",
@@ -32168,14 +32183,23 @@
     },
     "sendMessageTextDraftAction": {
       "name": "sendMessageTextDraftAction",
+      "description": [
+        "Used by bots to implement live message streaming »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/ai#live-message-streaming"
+      ],
       "fields": {
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Live draft ID: used by graphical clients to slightly change the rendering behavior, see here »¹ for more info.",
+          "links": [
+            "https://core.telegram.org/api/bots/ai#live-message-streaming"
+          ]
         },
         "text": {
           "name": "text",
-          "description": " "
+          "description": "The contents of the live draft."
         }
       }
     },
@@ -58885,7 +58909,10 @@
         },
         "schedule_repeat_period": {
           "name": "schedule_repeat_period",
-          "description": " "
+          "description": "Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see here »¹ for more info on repeating scheduled messages.",
+          "links": [
+            "https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages"
+          ]
         }
       },
       "errors": [
@@ -59338,7 +59365,10 @@
         },
         "effect": {
           "name": "effect",
-          "description": " "
+          "description": "Specifies a message effect »¹ to use for the message.",
+          "links": [
+            "https://core.telegram.org/api/effects"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -59387,7 +59417,10 @@
         },
         "schedule_repeat_period": {
           "name": "schedule_repeat_period",
-          "description": " "
+          "description": "Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see here »¹ for more info on repeating scheduled messages.",
+          "links": [
+            "https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages"
+          ]
         },
         "send_as": {
           "name": "send_as",
@@ -65896,7 +65929,10 @@
         },
         "schedule_repeat_period": {
           "name": "schedule_repeat_period",
-          "description": " "
+          "description": "Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see here »¹ for more info on repeating scheduled messages.",
+          "links": [
+            "https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages"
+          ]
         },
         "send_as": {
           "name": "send_as",
@@ -66568,7 +66604,10 @@
         },
         "schedule_repeat_period": {
           "name": "schedule_repeat_period",
-          "description": " "
+          "description": "Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see here »¹ for more info on repeating scheduled messages.",
+          "links": [
+            "https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages"
+          ]
         },
         "send_as": {
           "name": "send_as",
