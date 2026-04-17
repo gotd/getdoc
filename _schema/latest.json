@@ -10767,6 +10767,10 @@
             "https://core.telegram.org/api/mentions"
           ]
         },
+        "unread_poll_votes_count": {
+          "name": "unread_poll_votes_count",
+          "description": " "
+        },
         "unread_reactions_count": {
           "name": "unread_reactions_count",
           "description": "Number of unread reactions to messages you sent"
@@ -12399,6 +12403,10 @@
           "links": [
             "https://core.telegram.org/api/mentions"
           ]
+        },
+        "unread_poll_votes_count": {
+          "name": "unread_poll_votes_count",
+          "description": " "
         },
         "unread_reactions_count": {
           "name": "unread_reactions_count",
@@ -16268,6 +16276,10 @@
           "name": "id",
           "description": "Photo to be forwarded"
         },
+        "live_photo": {
+          "name": "live_photo",
+          "description": " "
+        },
         "spoiler": {
           "name": "spoiler",
           "description": "Whether this media should be hidden behind a spoiler warning"
@@ -16275,6 +16287,10 @@
         "ttl_seconds": {
           "name": "ttl_seconds",
           "description": "Time to live in seconds of self-destructing photo"
+        },
+        "video": {
+          "name": "video",
+          "description": " "
         }
       }
     },
@@ -16311,6 +16327,10 @@
         "A poll"
       ],
       "fields": {
+        "attached_media": {
+          "name": "attached_media",
+          "description": " "
+        },
         "correct_answers": {
           "name": "correct_answers",
           "description": "Correct answer IDs (for quiz polls)"
@@ -16336,6 +16356,10 @@
           "links": [
             "https://core.telegram.org/api/entities"
           ]
+        },
+        "solution_media": {
+          "name": "solution_media",
+          "description": " "
         }
       }
     },
@@ -16472,6 +16496,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "live_photo": {
+          "name": "live_photo",
+          "description": " "
+        },
         "spoiler": {
           "name": "spoiler",
           "description": "Whether this media should be hidden behind a spoiler warning"
@@ -16483,6 +16511,10 @@
         "ttl_seconds": {
           "name": "ttl_seconds",
           "description": "Time to live in seconds of self-destructing photo"
+        },
+        "video": {
+          "name": "video",
+          "description": " "
         }
       }
     },
@@ -17538,6 +17570,10 @@
           "links": [
             "https://core.telegram.org/api/monoforum"
           ]
+        },
+        "poll_option": {
+          "name": "poll_option",
+          "description": " "
         },
         "quote_entities": {
           "name": "quote_entities",
@@ -23090,6 +23126,10 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "live_photo": {
+          "name": "live_photo",
+          "description": " "
+        },
         "photo": {
           "name": "photo",
           "description": "Photo"
@@ -23101,6 +23141,10 @@
         "ttl_seconds": {
           "name": "ttl_seconds",
           "description": "Time to live in seconds of self-destructing photo"
+        },
+        "video": {
+          "name": "video",
+          "description": " "
         }
       }
     },
@@ -23110,6 +23154,17 @@
         "Poll"
       ],
       "fields": {
+        "attached_media": {
+          "name": "attached_media",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "poll": {
           "name": "poll",
           "description": "The poll"
@@ -23571,6 +23626,10 @@
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
+        },
+        "poll_option": {
+          "name": "poll_option",
+          "description": " "
         },
         "quote": {
           "name": "quote",
@@ -29522,12 +29581,24 @@
           "name": "closed",
           "description": "Whether the poll is closed and doesn't accept any more answers"
         },
+        "creator": {
+          "name": "creator",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "hash": {
+          "name": "hash",
+          "description": " "
+        },
+        "hide_results_until_close": {
+          "name": "hide_results_until_close",
+          "description": " "
         },
         "id": {
           "name": "id",
@@ -29536,6 +29607,10 @@
         "multiple_choice": {
           "name": "multiple_choice",
           "description": "Whether multiple options can be chosen as answer"
+        },
+        "open_answers": {
+          "name": "open_answers",
+          "description": " "
         },
         "public_voters": {
           "name": "public_voters",
@@ -29552,6 +29627,14 @@
         "quiz": {
           "name": "quiz",
           "description": "Whether this is a quiz (with wrong and correct answers, results shown in the return type)"
+        },
+        "revoting_disabled": {
+          "name": "revoting_disabled",
+          "description": " "
+        },
+        "shuffle_answers": {
+          "name": "shuffle_answers",
+          "description": " "
         }
       }
     },
@@ -29561,6 +29644,25 @@
         "A possible answer of a poll"
       ],
       "fields": {
+        "added_by": {
+          "name": "added_by",
+          "description": " "
+        },
+        "date": {
+          "name": "date",
+          "description": " "
+        },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "media": {
+          "name": "media",
+          "description": " "
+        },
         "option": {
           "name": "option",
           "description": "The param that has to be passed to messages.sendVote¹.",
@@ -29606,6 +29708,10 @@
             "https://core.telegram.org/method/messages.sendVote"
           ]
         },
+        "recent_voters": {
+          "name": "recent_voters",
+          "description": " "
+        },
         "voters": {
           "name": "voters",
           "description": "How many users voted for this option"
@@ -29624,6 +29730,10 @@
           "links": [
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
+        },
+        "has_unread_votes": {
+          "name": "has_unread_votes",
+          "description": " "
         },
         "min": {
           "name": "min",
@@ -29651,6 +29761,10 @@
           "links": [
             "https://core.telegram.org/api/entities"
           ]
+        },
+        "solution_media": {
+          "name": "solution_media",
+          "description": " "
         },
         "total_voters": {
           "name": "total_voters",
@@ -30499,6 +30613,10 @@
         "messages_notify_from": {
           "name": "messages_notify_from",
           "description": "Message reaction notification settings, if not set completely disables notifications/updates about message reactions."
+        },
+        "poll_votes_notify_from": {
+          "name": "poll_votes_notify_from",
+          "description": " "
         },
         "show_previews": {
           "name": "show_previews",
@@ -35339,6 +35457,10 @@
             "https://core.telegram.org/method/stories.getStoriesByID"
           ]
         },
+        "music": {
+          "name": "music",
+          "description": " "
+        },
         "noforwards": {
           "name": "noforwards",
           "description": "Whether this story is protected¹ and thus cannot be forwarded; clients should also prevent users from saving attached media (i.e. videos should only be streamed, photos should be kept in RAM, et cetera).",
@@ -38166,6 +38288,14 @@
             "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
           ]
         },
+        "msg_id": {
+          "name": "msg_id",
+          "description": " "
+        },
+        "peer": {
+          "name": "peer",
+          "description": " "
+        },
         "poll": {
           "name": "poll",
           "description": "If the server knows the client hasn't cached this poll yet, the poll itself"
@@ -38177,6 +38307,10 @@
         "results": {
           "name": "results",
           "description": "New poll results"
+        },
+        "top_msg_id": {
+          "name": "top_msg_id",
+          "description": " "
         }
       }
     },
@@ -38197,6 +38331,10 @@
         "poll_id": {
           "name": "poll_id",
           "description": "Poll ID"
+        },
+        "positions": {
+          "name": "positions",
+          "description": " "
         },
         "qts": {
           "name": "qts",
@@ -40641,6 +40779,10 @@
           "name": "ip",
           "description": " "
         },
+        "is_app": {
+          "name": "is_app",
+          "description": " "
+        },
         "match_codes": {
           "name": "match_codes",
           "description": " "
@@ -40667,6 +40809,10 @@
         },
         "user_id_hint": {
           "name": "user_id_hint",
+          "description": " "
+        },
+        "verified_app_name": {
+          "name": "verified_app_name",
           "description": " "
         }
       }
@@ -40740,6 +40886,10 @@
             "https://core.telegram.org/api/peers",
             "https://core.telegram.org/constructor/userFull"
           ]
+        },
+        "bot_can_manage_bots": {
+          "name": "bot_can_manage_bots",
+          "description": " "
         },
         "bot_chat_history": {
           "name": "bot_chat_history",
@@ -41078,6 +41228,10 @@
           "name": "bot_info",
           "description": "For bots, info about the bot (bot commands, etc)"
         },
+        "bot_manager_id": {
+          "name": "bot_manager_id",
+          "description": " "
+        },
         "bot_verification": {
           "name": "bot_verification",
           "description": "Describes a bot verification icon »¹.",
@@ -41365,6 +41519,10 @@
         "ttl_period": {
           "name": "ttl_period",
           "description": "Time To Live of all messages in this chat; once a message is this many seconds old, it must be deleted."
+        },
+        "unofficial_security_risk": {
+          "name": "unofficial_security_risk",
+          "description": " "
         },
         "video_calls_available": {
           "name": "video_calls_available",
@@ -61779,6 +61937,10 @@
         "peer": {
           "name": "peer",
           "description": "Peer where the poll was found"
+        },
+        "poll_hash": {
+          "name": "poll_hash",
+          "description": " "
         }
       },
       "errors": [
@@ -65309,6 +65471,13 @@
             "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
           ]
         },
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
         "msg_id": {
           "name": "msg_id",
           "description": "ID of the message that contained the reply keyboard with the keyboardButtonRequestPeer¹ button.",
@@ -65326,6 +65495,10 @@
         "requested_peers": {
           "name": "requested_peers",
           "description": "The chosen peers."
+        },
+        "webapp_req_id": {
+          "name": "webapp_req_id",
+          "description": " "
         }
       },
       "errors": [
@@ -68816,6 +68989,10 @@
         "to_lang": {
           "name": "to_lang",
           "description": " "
+        },
+        "tone": {
+          "name": "tone",
+          "description": " "
         }
       },
       "errors": [
@@ -69273,6 +69450,10 @@
         "to_lang": {
           "name": "to_lang",
           "description": "Two-letter ISO 639-1 language code of the language to which the message is translated"
+        },
+        "tone": {
+          "name": "tone",
+          "description": " "
         }
       },
       "errors": [
@@ -75756,6 +75937,10 @@
             "https://core.telegram.org/api/stories#media-areas"
           ]
         },
+        "music": {
+          "name": "music",
+          "description": " "
+        },
         "peer": {
           "name": "peer",
           "description": "Peer where the story was posted."
@@ -76607,6 +76792,10 @@
             "https://core.telegram.org/api/stories#media-areas",
             "https://core.telegram.org/api/stories#media-areas"
           ]
+        },
+        "music": {
+          "name": "music",
+          "description": " "
         },
         "noforwards": {
           "name": "noforwards",
@@ -79270,7 +79459,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -79974,7 +80163,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -81069,7 +81258,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
