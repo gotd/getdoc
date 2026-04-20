@@ -7853,8 +7853,9 @@
         },
         "blocked": {
           "name": "blocked",
-          "description": "Whether any anonymous admin of this supergroup was blocked: if set, you won't receive messages from anonymous group admins in discussion replies via @replies¹",
+          "description": "Whether any anonymous admin of this supergroup was blocked: if set, you won't receive messages from anonymous group admins »¹ in discussion replies via @replies²",
           "links": [
+            "https://core.telegram.org/api/rights#anonymous-admins",
             "https://core.telegram.org/api/discussion"
           ]
         },
@@ -8956,7 +8957,7 @@
       "fields": {
         "change_info": {
           "name": "change_info",
-          "description": "If set, does not allow any user to change the description of a supergroup/chat¹",
+          "description": "If set, does not allow a user to change the description of a supergroup/chat¹",
           "links": [
             "https://core.telegram.org/api/channel"
           ]
@@ -8981,21 +8982,21 @@
         },
         "invite_users": {
           "name": "invite_users",
-          "description": "If set, does not allow any user to invite users in a supergroup/chat¹",
+          "description": "If set, does not allow a user to invite users in a supergroup/chat¹",
           "links": [
             "https://core.telegram.org/api/channel"
           ]
         },
         "manage_topics": {
           "name": "manage_topics",
-          "description": "If set, does not allow any user to create, delete or modify forum topics »¹.",
+          "description": "If set, does not allow a user to create, delete or modify forum topics »¹.",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
         },
         "pin_messages": {
           "name": "pin_messages",
-          "description": "If set, does not allow any user to pin messages in a supergroup/chat¹",
+          "description": "If set, does not allow a user to pin messages in a supergroup/chat¹",
           "links": [
             "https://core.telegram.org/api/channel"
           ]
@@ -26953,7 +26954,7 @@
     "paidReactionPrivacyPeer": {
       "name": "paidReactionPrivacyPeer",
       "description": [
-        "Send paid reactions as the specified peer, fetched using channels.getSendAs¹."
+        "Send paid reactions as the specified peer, fetched using channels.getSendAs¹ with the for_paid_reactions flag set."
       ],
       "links": [
         "https://core.telegram.org/method/channels.getSendAs"
