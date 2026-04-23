@@ -3279,19 +3279,34 @@
     },
     "account.passkeyRegistrationOptions": {
       "name": "account.passkeyRegistrationOptions",
+      "description": [
+        "Passkey registration options, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey"
+      ],
       "fields": {
         "options": {
           "name": "options",
-          "description": " "
+          "description": "JSON-encoded object whose publicKey field contains a PublicKeyCredentialCreationOptions¹ object.",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions"
+          ]
         }
       }
     },
     "account.passkeys": {
       "name": "account.passkeys",
+      "description": [
+        "List of passkeys »¹ associated to the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#list-passkeys"
+      ],
       "fields": {
         "passkeys": {
           "name": "passkeys",
-          "description": " "
+          "description": "List of passkeys that can be used to log into the current account"
         }
       }
     },
@@ -4170,10 +4185,19 @@
     },
     "auth.passkeyLoginOptions": {
       "name": "auth.passkeyLoginOptions",
+      "description": [
+        "Passkey login options, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey"
+      ],
       "fields": {
         "options": {
           "name": "options",
-          "description": " "
+          "description": "JSON-encoded object whose publicKey field contains a PublicKeyCredentialRequestOptions¹ object.",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions"
+          ]
         }
       }
     },
@@ -16843,52 +16867,101 @@
     },
     "inputPasskeyCredentialPublicKey": {
       "name": "inputPasskeyCredentialPublicKey",
+      "description": [
+        "Public-key passkey credential used both for registration and for login, see creating a passkey »¹ and logging in with a passkey »² for the full flows."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey",
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey"
+      ],
       "fields": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "id field of a PublicKeyCredential¹, passed as-is without base64url-decoding when using the JSON representation",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential"
+          ]
         },
         "raw_id": {
           "name": "raw_id",
-          "description": " "
+          "description": "rawId field of a PublicKeyCredential¹, passed as-is without base64url-decoding when using the JSON representation",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential"
+          ]
         },
         "response": {
           "name": "response",
-          "description": " "
+          "description": "Registration or login response."
         }
       }
     },
     "inputPasskeyResponseLogin": {
       "name": "inputPasskeyResponseLogin",
+      "description": [
+        "WebAuthn authentication response used when logging in with a passkey, see here »¹ for more info on the full flow.",
+        "Generated from the AuthenticatorAssertionResponse¹ object."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey",
+        "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse"
+      ],
       "fields": {
         "authenticator_data": {
           "name": "authenticator_data",
-          "description": " "
+          "description": "Base64url-decoded authenticatorData field of an AuthenticatorAssertionResponse¹",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse"
+          ]
         },
         "client_data": {
           "name": "client_data",
-          "description": " "
+          "description": "Base64url-decoded clientDataJSON field of an AuthenticatorAssertionResponse¹, wrapped in dataJSON²",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse",
+            "https://core.telegram.org/constructor/dataJSON"
+          ]
         },
         "signature": {
           "name": "signature",
-          "description": " "
+          "description": "Base64url-decoded signature field of an AuthenticatorAssertionResponse¹",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse"
+          ]
         },
         "user_handle": {
           "name": "user_handle",
-          "description": " "
+          "description": "Base64url-decoded userHandle field of an AuthenticatorAssertionResponse¹. The user handle specified by the server is in \u003cdc_id\u003e:\u003cuser_id\u003e format.",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse"
+          ]
         }
       }
     },
     "inputPasskeyResponseRegister": {
       "name": "inputPasskeyResponseRegister",
+      "description": [
+        "WebAuthn registration response used when registering a new passkey, see here »¹ for more info on the full flow.",
+        "Generated from the AuthenticatorAttestationResponse¹ object."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey",
+        "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse"
+      ],
       "fields": {
         "attestation_data": {
           "name": "attestation_data",
-          "description": " "
+          "description": "Base64url-decoded attestationObject field of an AuthenticatorAttestationResponse¹",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse"
+          ]
         },
         "client_data": {
           "name": "client_data",
-          "description": " "
+          "description": "Base64url-decoded clientDataJSON field of an AuthenticatorAttestationResponse¹, wrapped in dataJSON²",
+          "links": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse",
+            "https://core.telegram.org/constructor/dataJSON"
+          ]
         }
       }
     },
@@ -26968,10 +27041,17 @@
     },
     "passkey": {
       "name": "passkey",
+      "description": [
+        "Human-readable info about a passkey associated to an account, returned when creating a passkey »¹ or listing passkeys »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey",
+        "https://core.telegram.org/api/passkeys#list-passkeys"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Creation date of the passkey"
         },
         "flags": {
           "name": "flags",
@@ -26982,19 +27062,25 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Unique passkey ID, usable for example in account.deletePasskey¹.",
+          "links": [
+            "https://core.telegram.org/method/account.deletePasskey"
+          ]
         },
         "last_usage_date": {
           "name": "last_usage_date",
-          "description": " "
+          "description": "Date when the passkey was last used to log in"
         },
         "name": {
           "name": "name",
-          "description": " "
+          "description": "Human-readable passkey name"
         },
         "software_emoji_id": {
           "name": "software_emoji_id",
-          "description": " "
+          "description": "ID of the custom emoji¹ used as icon for the software or password manager that created the passkey",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
@@ -42586,10 +42672,22 @@
       ]
     },
     "Account.PasskeyRegistrationOptions": {
-      "name": "Account.PasskeyRegistrationOptions"
+      "name": "Account.PasskeyRegistrationOptions",
+      "description": [
+        "Passkey registration options, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey"
+      ]
     },
     "Account.Passkeys": {
-      "name": "Account.Passkeys"
+      "name": "Account.Passkeys",
+      "description": [
+        "List of passkeys »¹ associated to the current account."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#list-passkeys"
+      ]
     },
     "Account.PrivacyRules": {
       "name": "Account.PrivacyRules",
@@ -42694,7 +42792,13 @@
       ]
     },
     "Auth.PasskeyLoginOptions": {
-      "name": "Auth.PasskeyLoginOptions"
+      "name": "Auth.PasskeyLoginOptions",
+      "description": [
+        "Passkey login options, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey"
+      ]
     },
     "Authorization": {
       "name": "Authorization",
@@ -44483,7 +44587,14 @@
       ]
     },
     "Passkey": {
-      "name": "Passkey"
+      "name": "Passkey",
+      "description": [
+        "Human-readable info about a passkey associated to an account, returned when creating a passkey »¹ or listing passkeys »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey",
+        "https://core.telegram.org/api/passkeys#list-passkeys"
+      ]
     },
     "PasswordKdfAlgo": {
       "name": "PasswordKdfAlgo",
@@ -47219,10 +47330,20 @@
     },
     "account.deletePasskey": {
       "name": "account.deletePasskey",
+      "description": [
+        "Delete a passkey associated to the current account, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#delete-passkeys"
+      ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Identifier of the passkey to delete, taken from passkey¹.id, usually obtained using account.getPasskeys².",
+          "links": [
+            "https://core.telegram.org/constructor/passkey",
+            "https://core.telegram.org/method/account.getPasskeys"
+          ]
         }
       }
     },
@@ -47747,7 +47868,13 @@
       ]
     },
     "account.getPasskeys": {
-      "name": "account.getPasskeys"
+      "name": "account.getPasskeys",
+      "description": [
+        "List the passkeys associated to the current account that can be used to log in, see here »¹ for more info on passkeys."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#list-passkeys"
+      ]
     },
     "account.getPassword": {
       "name": "account.getPassword",
@@ -48048,6 +48175,12 @@
     },
     "account.initPasskeyRegistration": {
       "name": "account.initPasskeyRegistration",
+      "description": [
+        "Initialize passkey registration for the current account, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey"
+      ],
       "parameters": {
         "403": {
           "name": "403",
@@ -48286,10 +48419,16 @@
     },
     "account.registerPasskey": {
       "name": "account.registerPasskey",
+      "description": [
+        "Complete passkey registration for the current account, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#creating-a-passkey"
+      ],
       "parameters": {
         "credential": {
           "name": "credential",
-          "description": " "
+          "description": "Registration result."
         }
       },
       "errors": [
@@ -50380,10 +50519,18 @@
     },
     "auth.finishPasskeyLogin": {
       "name": "auth.finishPasskeyLogin",
+      "description": [
+        "Complete login with a passkey over an unauthenticated connection, see here »¹ for more info.",
+        "Must be sent to the user's native DC, as specified by the user_handle (dcId:userId) returned in the passkey assertion, see here »¹ for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey",
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey"
+      ],
       "parameters": {
         "credential": {
           "name": "credential",
-          "description": " "
+          "description": "Passkey assertion result."
         },
         "flags": {
           "name": "flags",
@@ -50394,11 +50541,18 @@
         },
         "from_auth_key_id": {
           "name": "from_auth_key_id",
-          "description": " "
+          "description": "Auth key ID for the connection to from_dc_id (use the permanent auth key ID if PFS is enabled); set only if the user's DC is different from the DC used for the initial auth.initPasskeyLogin¹.",
+          "links": [
+            "https://core.telegram.org/method/auth.initPasskeyLogin"
+          ]
         },
         "from_dc_id": {
           "name": "from_dc_id",
-          "description": " "
+          "description": "DC ID used for the initial auth.initPasskeyLogin¹ request; set only if the user's DC is different from the DC used for the initial auth.initPasskeyLogin².",
+          "links": [
+            "https://core.telegram.org/method/auth.initPasskeyLogin",
+            "https://core.telegram.org/method/auth.initPasskeyLogin"
+          ]
         }
       },
       "errors": [
@@ -50574,14 +50728,26 @@
     },
     "auth.initPasskeyLogin": {
       "name": "auth.initPasskeyLogin",
+      "description": [
+        "Initialize login with a passkey over an unauthenticated connection, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys#logging-in-with-a-passkey"
+      ],
       "parameters": {
         "api_hash": {
           "name": "api_hash",
-          "description": " "
+          "description": "Application identifier hash (see App configuration¹)",
+          "links": [
+            "https://core.telegram.org/myapp"
+          ]
         },
         "api_id": {
           "name": "api_id",
-          "description": " "
+          "description": "Application identifier (see App configuration¹)",
+          "links": [
+            "https://core.telegram.org/myapp"
+          ]
         }
       },
       "errors": [
@@ -79460,7 +79626,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
