@@ -7817,7 +7817,10 @@
         },
         "monoforum": {
           "name": "monoforum",
-          "description": " "
+          "description": "If set, this is a monoforum »¹.",
+          "links": [
+            "https://core.telegram.org/api/monoforum"
+          ]
         },
         "title": {
           "name": "title",
@@ -15859,7 +15862,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -15906,7 +15912,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -15937,7 +15946,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19142,7 +19154,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19165,7 +19180,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19202,7 +19220,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19229,7 +19250,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19252,7 +19276,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19275,7 +19302,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19316,7 +19346,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19339,7 +19372,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19366,7 +19402,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19407,7 +19446,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19424,18 +19466,24 @@
     },
     "keyboardButtonStyle": {
       "name": "keyboardButtonStyle",
+      "description": [
+        "This constructor allows setting a custom background color and custom emoji label for a button, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/button#button-styles"
+      ],
       "fields": {
         "bg_danger": {
           "name": "bg_danger",
-          "description": " "
+          "description": "A red color, recommended for destructive actions."
         },
         "bg_primary": {
           "name": "bg_primary",
-          "description": " "
+          "description": "A dark blue color, recommended for main actions."
         },
         "bg_success": {
           "name": "bg_success",
-          "description": " "
+          "description": "A green color, recommended for positive actions."
         },
         "flags": {
           "name": "flags",
@@ -19446,7 +19494,10 @@
         },
         "icon": {
           "name": "icon",
-          "description": " "
+          "description": "The ID of a custom emoji¹ to be displayed before the button's label.",
+          "links": [
+            "https://core.telegram.org/api/custom-emoji"
+          ]
         }
       }
     },
@@ -19477,7 +19528,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19500,7 +19554,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19546,7 +19603,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19577,7 +19637,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -19610,7 +19673,10 @@
         },
         "style": {
           "name": "style",
-          "description": " "
+          "description": "Button style, see here »¹ for more info on button styles.",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#button-styles"
+          ]
         },
         "text": {
           "name": "text",
@@ -29311,7 +29377,7 @@
     "phoneConnection": {
       "name": "phoneConnection",
       "description": [
-        "Identifies an endpoint that can be used to connect to the other user in a phone call"
+        "DEPRECATED (libtgvoip): Identifies an endpoint that can be used to connect to the other user in a phone call"
       ],
       "fields": {
         "flags": {
@@ -44167,7 +44233,13 @@
       ]
     },
     "KeyboardButtonStyle": {
-      "name": "KeyboardButtonStyle"
+      "name": "KeyboardButtonStyle",
+      "description": [
+        "This constructor allows setting a custom background color and custom emoji label for a button, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/bots/button#button-styles"
+      ]
     },
     "LabeledPrice": {
       "name": "LabeledPrice",
@@ -67660,7 +67732,7 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent message resending. Note: this argument must be composed of a 64-bit integer where the lower 32 bits are random, and the higher 32 bits are equal to the current unixtime, i.e. uint64_t random_id = (time() \u003c\u003c 32) | ((uint64_t)random_uint32_t()): this differs from the random_id format of all other methods in the API, which just take 64 random bits."
+          "description": "Unique client message ID required to prevent message resending. Note: this argument must be composed of a 64-bit integer where the lower 32 bits are random, and the higher 32 bits are equal to the current unixtime, i.e. `uint64_t random_id = (time() \u003c\u003c 32)"
         }
       },
       "errors": [
@@ -67697,7 +67769,7 @@
         {
           "code": 400,
           "type": "RANDOM_ID_EXPIRED",
-          "description": "The specified random_id was expired (most likely it didn't follow the required uint64_t random_id = (time() \u003c\u003c 32) | ((uint64_t)random_uint32_t()) format, or the specified time is too far in the past)."
+          "description": "The specified random_id was expired (most likely it didn't follow the required `uint64_t random_id = (time() \u003c\u003c 32)"
         },
         {
           "code": 400,
@@ -69137,6 +69209,12 @@
     },
     "messages.summarizeText": {
       "name": "messages.summarizeText",
+      "description": [
+        "Summarize the contents of a message with AI, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/ai#summarize-messages"
+      ],
       "parameters": {
         "flags": {
           "name": "flags",
@@ -69147,11 +69225,11 @@
         },
         "id": {
           "name": "id",
-          "description": " "
+          "description": "Message ID."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer where the message is located."
         },
         "to_lang": {
           "name": "to_lang",
@@ -72868,7 +72946,10 @@
     "phone.acceptCall": {
       "name": "phone.acceptCall",
       "description": [
-        "Accept incoming call"
+        "Accept incoming call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#one-to-one-calls"
       ],
       "parameters": {
         "g_b": {
@@ -72957,10 +73038,11 @@
     "phone.confirmCall": {
       "name": "phone.confirmCall",
       "description": [
-        "Complete phone call E2E encryption key exchange »¹"
+        "Complete phone call E2E encryption key exchange »¹, see here »² for more info on the full flow."
       ],
       "links": [
-        "https://core.telegram.org/api/end-to-end/voice-calls"
+        "https://core.telegram.org/api/end-to-end/voice-calls",
+        "https://core.telegram.org/api/calls#one-to-one-calls"
       ],
       "parameters": {
         "g_a": {
@@ -73245,7 +73327,10 @@
     "phone.discardCall": {
       "name": "phone.discardCall",
       "description": [
-        "Refuse or end running call"
+        "Refuse or end running call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#one-to-one-calls"
       ],
       "parameters": {
         "connection_id": {
@@ -73481,7 +73566,7 @@
     "phone.getCallConfig": {
       "name": "phone.getCallConfig",
       "description": [
-        "Get phone call configuration to be passed to libtgvoip's shared config"
+        "DEPRECATED: Get phone call configuration to be passed to the libtgvoip (deprecated) shared config."
       ]
     },
     "phone.getGroupCall": {
@@ -73954,7 +74039,10 @@
     "phone.receivedCall": {
       "name": "phone.receivedCall",
       "description": [
-        "Optional: notify the server that the user is currently busy in a call: this will automatically refuse all incoming phone calls until the current phone call is ended."
+        "Optional: notify the server that the user is currently busy in a call: this will automatically refuse all incoming phone calls until the current phone call is ended, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#one-to-one-calls"
       ],
       "parameters": {
         "peer": {
@@ -73978,7 +74066,10 @@
     "phone.requestCall": {
       "name": "phone.requestCall",
       "description": [
-        "Start a telegram phone call"
+        "Start a telegram phone call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#one-to-one-calls"
       ],
       "parameters": {
         "flags": {
@@ -74067,7 +74158,7 @@
       "parameters": {
         "debug": {
           "name": "debug",
-          "description": "Debug statistics obtained from libtgvoip"
+          "description": "Debug statistics obtained from tgcalls"
         },
         "peer": {
           "name": "peer",
@@ -74090,12 +74181,12 @@
     "phone.saveCallLog": {
       "name": "phone.saveCallLog",
       "description": [
-        "Save phone call debug information"
+        "Deprecated: send libtgvoip phone call debug information"
       ],
       "parameters": {
         "file": {
           "name": "file",
-          "description": "Logs"
+          "description": "Libtgvoip logs"
         },
         "peer": {
           "name": "peer",
@@ -74269,12 +74360,18 @@
     "phone.setCallRating": {
       "name": "phone.setCallRating",
       "description": [
-        "Rate a call, returns info about the rating message sent to the official VoIP bot."
+        "Rate a call, returns info about the rating message sent to the official VoIP bot, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#call-rating"
       ],
       "parameters": {
         "comment": {
           "name": "comment",
-          "description": "An additional comment"
+          "description": "An additional comment with problem hashtags, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/calls#call-rating"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -74293,7 +74390,10 @@
         },
         "user_initiative": {
           "name": "user_initiative",
-          "description": "Whether the user decided on their own initiative to rate the call"
+          "description": "Whether the user decided on their own initiative to rate the call, must NOT be set if rating was requested by the server with phoneCallDiscarded¹.need_rating.",
+          "links": [
+            "https://core.telegram.org/constructor/phoneCallDiscarded"
+          ]
         }
       },
       "errors": [
@@ -79626,7 +79726,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -79938,7 +80038,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -80330,7 +80430,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 406,
+      "code": 403,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -80432,7 +80532,7 @@
     "RANDOM_ID_EXPIRED": {
       "code": 400,
       "type": "RANDOM_ID_EXPIRED",
-      "description": "The specified random_id was expired (most likely it didn't follow the required uint64_t random_id = (time() \u003c\u003c 32) | ((uint64_t)random_uint32_t()) format, or the specified time is too far in the past)."
+      "description": "The specified random_id was expired (most likely it didn't follow the required `uint64_t random_id = (time() \u003c\u003c 32)"
     },
     "RANDOM_ID_INVALID": {
       "code": 400,
