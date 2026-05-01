@@ -7233,18 +7233,24 @@
     },
     "channelAdminLogEventActionParticipantEditRank": {
       "name": "channelAdminLogEventActionParticipantEditRank",
+      "description": [
+        "A participant's tag »¹ was changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/rank"
+      ],
       "fields": {
         "new_rank": {
           "name": "new_rank",
-          "description": " "
+          "description": "The new tag."
         },
         "prev_rank": {
           "name": "prev_rank",
-          "description": " "
+          "description": "The previous tag."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "The user ID."
         }
       }
     },
@@ -8313,7 +8319,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The participant's tag »¹.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
@@ -8366,7 +8375,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": "The role (rank) of the admin in the group: just an arbitrary string, admin by default"
+          "description": "The participant's tag »¹, defaults to \"Admin\" if not set.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "self": {
           "name": "self",
@@ -8416,7 +8428,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The participant's tag »¹.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         }
       }
     },
@@ -8439,7 +8454,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": "The role (rank) of the group creator in the group: just an arbitrary string, admin by default"
+          "description": "The participant's tag »¹, defaults to \"Owner\" if not set.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -8482,7 +8500,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The participant's tag »¹.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "subscription_until_date": {
           "name": "subscription_until_date",
@@ -9587,7 +9608,10 @@
     "chatParticipant": {
       "name": "chatParticipant",
       "description": [
-        "Group member."
+        "Basic group¹ member (not usable by supergroups)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "date": {
@@ -9607,7 +9631,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The participant's tag »¹.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -9618,7 +9645,10 @@
     "chatParticipantAdmin": {
       "name": "chatParticipantAdmin",
       "description": [
-        "Chat admin"
+        "Basic group¹ admin (not usable by supergroups)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "date": {
@@ -9638,7 +9668,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The participant's tag »¹.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -9649,7 +9682,10 @@
     "chatParticipantCreator": {
       "name": "chatParticipantCreator",
       "description": [
-        "Represents the creator of the group"
+        "Represents the creator of the basic group »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "flags": {
@@ -9661,7 +9697,10 @@
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The participant's tag »¹.",
+          "links": [
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -9672,7 +9711,10 @@
     "chatParticipants": {
       "name": "chatParticipants",
       "description": [
-        "Group members."
+        "Contains the full list of members of basic groups »¹; is NOT usable for supergroups/channels."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "chat_id": {
@@ -9692,7 +9734,10 @@
     "chatParticipantsForbidden": {
       "name": "chatParticipantsForbidden",
       "description": [
-        "Info on members is unavailable"
+        "The full list of members of basic groups »¹ is not available to you, because you were banned."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "chat_id": {
@@ -17096,10 +17141,21 @@
     },
     "inputPeerColorCollectible": {
       "name": "inputPeerColorCollectible",
+      "description": [
+        "Represents a color palette »¹ associated to a collectible gift »², see here »³ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/colors",
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/colors#collectible-gift-palettes"
+      ],
       "fields": {
         "collectible_id": {
           "name": "collectible_id",
-          "description": " "
+          "description": "ID of the collectible gift »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         }
       }
     },
@@ -20203,7 +20259,12 @@
         },
         "from_rank": {
           "name": "from_rank",
-          "description": " "
+          "description": "Only in supergroups »¹ (never basic groups, where this information is contained elsewhere »²), contains the sender's tag »³.",
+          "links": [
+            "https://core.telegram.org/api/channel#supergroups",
+            "https://core.telegram.org/api/rank",
+            "https://core.telegram.org/api/rank"
+          ]
         },
         "from_scheduled": {
           "name": "from_scheduled",
@@ -37493,10 +37554,10 @@
     "updateChatDefaultBannedRights": {
       "name": "updateChatDefaultBannedRights",
       "description": [
-        "Default banned rights in a normal chat¹ were updated"
+        "Default banned rights in a basic group¹ were updated"
       ],
       "links": [
-        "https://core.telegram.org/api/channel"
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "default_banned_rights": {
@@ -37509,14 +37570,20 @@
         },
         "version": {
           "name": "version",
-          "description": "Version"
+          "description": "Used similarly to pts values to deduplicate/update outdated chat information as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/peers#basic-group-updates"
+          ]
         }
       }
     },
     "updateChatParticipant": {
       "name": "updateChatParticipant",
       "description": [
-        "A user has joined or left a specific chat"
+        "A user has joined or left a specific basic group »¹"
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "actor_id": {
@@ -37590,7 +37657,10 @@
         },
         "version": {
           "name": "version",
-          "description": "Chat version number"
+          "description": "Used similarly to pts values to deduplicate/update outdated chat information as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/peers#basic-group-updates"
+          ]
         }
       }
     },
@@ -37617,14 +37687,20 @@
         },
         "version": {
           "name": "version",
-          "description": "Used in basic groups to reorder updates and make sure that all of them was received."
+          "description": "Used similarly to pts values to deduplicate/update outdated chat information as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/peers#basic-group-updates"
+          ]
         }
       }
     },
     "updateChatParticipantDelete": {
       "name": "updateChatParticipantDelete",
       "description": [
-        "A member has left the group."
+        "A member has left the basic group¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "chat_id": {
@@ -37637,40 +37713,59 @@
         },
         "version": {
           "name": "version",
-          "description": "Used in basic groups to reorder updates and make sure that all of them was received."
+          "description": "Used similarly to pts values to deduplicate/update outdated chat information as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/peers#basic-group-updates"
+          ]
         }
       }
     },
     "updateChatParticipantRank": {
       "name": "updateChatParticipantRank",
+      "description": [
+        "The tag »¹ of a participant of a basic group »² has changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/rank",
+        "https://core.telegram.org/api/channel#basic-groups"
+      ],
       "fields": {
         "chat_id": {
           "name": "chat_id",
-          "description": " "
+          "description": "Basic group ID."
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The new tag."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "User ID."
         },
         "version": {
           "name": "version",
-          "description": " "
+          "description": "Used similarly to pts values to deduplicate/update outdated chat information as specified here »¹.",
+          "links": [
+            "https://core.telegram.org/api/peers#basic-group-updates"
+          ]
         }
       }
     },
     "updateChatParticipants": {
       "name": "updateChatParticipants",
       "description": [
-        "Composition of chat participants changed."
+        "The participants of a basic group »¹ changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ],
       "fields": {
         "participants": {
           "name": "participants",
-          "description": "Updated chat participants"
+          "description": "Updated chat participants (also contains the version used to deduplicate/update outdated chat information as specified here »¹).",
+          "links": [
+            "https://core.telegram.org/api/peers#basic-group-updates"
+          ]
         }
       }
     },
@@ -43281,7 +43376,10 @@
     "ChatParticipants": {
       "name": "ChatParticipants",
       "description": [
-        "Object contains info on group members."
+        "Contains the full list of members of basic groups »¹; is NOT usable for supergroups/channels."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#basic-groups"
       ]
     },
     "ChatPhoto": {
@@ -52871,7 +52969,7 @@
         },
         "rank": {
           "name": "rank",
-          "description": "Indicates the role (rank) of the admin in the group: just an arbitrary string"
+          "description": "Indicates the role (rank) of the admin in the group: just an arbitrary string. If the flag is not set, the rank is left unchanged."
         },
         "user_id": {
           "name": "user_id",
@@ -58884,18 +58982,24 @@
     },
     "messages.editChatParticipantRank": {
       "name": "messages.editChatParticipantRank",
+      "description": [
+        "Edit a group participant's tag »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/rank"
+      ],
       "parameters": {
         "participant": {
           "name": "participant",
-          "description": " "
+          "description": "The participant."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The basic group/supergroup."
         },
         "rank": {
           "name": "rank",
-          "description": " "
+          "description": "The new tag."
         }
       }
     },
@@ -80000,7 +80104,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -80271,7 +80375,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -81330,7 +81434,7 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -81525,7 +81629,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
