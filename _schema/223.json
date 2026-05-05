@@ -32877,11 +32877,18 @@
         },
         "auction_slug": {
           "name": "auction_slug",
-          "description": " "
+          "description": "Always set for gifts that can be bought on auctions »¹, contains the auction deep link slug »².",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-auctions",
+            "https://core.telegram.org/api/links#auction-links"
+          ]
         },
         "auction_start_date": {
           "name": "auction_start_date",
-          "description": " "
+          "description": "Always set for gifts that can be bought on auctions »¹, contains the UNIX timestamp indicating when will the auction start (or when the auction started, if it points to the past).",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+          ]
         },
         "availability_remains": {
           "name": "availability_remains",
@@ -32924,7 +32931,10 @@
         },
         "gifts_per_round": {
           "name": "gifts_per_round",
-          "description": " "
+          "description": "Always set for gifts that can be bought on auctions »¹, contains the number of gifts of this kind that are distributed on every round.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+          ]
         },
         "id": {
           "name": "id",
@@ -33304,101 +33314,152 @@
     },
     "starGiftAuctionRound": {
       "name": "starGiftAuctionRound",
+      "description": [
+        "Describes one or more collectible gift auction rounds »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+      ],
       "fields": {
         "duration": {
           "name": "duration",
-          "description": " "
+          "description": "Duration in seconds of the round(s)."
         },
         "num": {
           "name": "num",
-          "description": " "
+          "description": "This object describes all rounds starting from num up until next.num-1 inclusively (next is the next StarGiftAuctionRound¹).",
+          "links": [
+            "https://core.telegram.org/type/StarGiftAuctionRound"
+          ]
         }
       }
     },
     "starGiftAuctionRoundExtendable": {
       "name": "starGiftAuctionRoundExtendable",
+      "description": [
+        "Describes one or more collectible gift auction rounds »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+      ],
       "fields": {
         "duration": {
           "name": "duration",
-          "description": " "
+          "description": "Duration in seconds of the round(s)."
         },
         "extend_top": {
           "name": "extend_top",
-          "description": " "
+          "description": "The round(s) will be extended by extend_window if a bid changes the composition/order of the top extend_top bidders."
         },
         "extend_window": {
           "name": "extend_window",
-          "description": " "
+          "description": "The round(s) will be extended by this many seconds if a bid changes the composition/order of the top extend_top bidders."
         },
         "num": {
           "name": "num",
-          "description": " "
+          "description": "This object describes all rounds starting from num up until next.num-1 inclusively (next is the next StarGiftAuctionRound¹).",
+          "links": [
+            "https://core.telegram.org/type/StarGiftAuctionRound"
+          ]
         }
       }
     },
     "starGiftAuctionState": {
       "name": "starGiftAuctionState",
+      "description": [
+        "Represents an active or pending auction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+      ],
       "fields": {
         "bid_levels": {
           "name": "bid_levels",
-          "description": " "
+          "description": "Contains a sparse list of bids starting from the top bids, a more detailed description is available in the docs¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+          ]
         },
         "current_round": {
           "name": "current_round",
-          "description": " "
+          "description": "The current round number (starting from 1)."
         },
         "end_date": {
           "name": "end_date",
-          "description": " "
+          "description": "UNIX timestamp indicating when the auction will end"
         },
         "gifts_left": {
           "name": "gifts_left",
-          "description": " "
+          "description": "The remaining number of gifts that are yet to be distributed."
         },
         "last_gift_num": {
           "name": "last_gift_num",
-          "description": " "
+          "description": "The number of gifts that were distributed in the previous round (also used to compute the approximated index of the gift that the current user will receive, last_gift_num + approx_pos, see here »¹ for more info).",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+          ]
         },
         "min_bid_amount": {
           "name": "min_bid_amount",
-          "description": " "
+          "description": "Minumum allowed bid amount in Telegram Stars¹: only applicable if the user hasn't made a bid yet, otherwise must be overridden to the value of starGiftAuctionUserState².min_bid_amount (which will be set if and only if the user already made a bid to this auction).",
+          "links": [
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/constructor/starGiftAuctionUserState"
+          ]
         },
         "next_round_at": {
           "name": "next_round_at",
-          "description": " "
+          "description": "UNIX timestamp indicating when the current auction round will end, distributing starGift¹.gifts_per_round gifts to the top starGift².gifts_per_round bidders.",
+          "links": [
+            "https://core.telegram.org/constructor/starGift",
+            "https://core.telegram.org/constructor/starGift"
+          ]
         },
         "rounds": {
           "name": "rounds",
-          "description": " "
+          "description": "Detailed round information."
         },
         "start_date": {
           "name": "start_date",
-          "description": " "
+          "description": "UNIX timestamp indicating when the auction will start (or when it started, if it's in the past)."
         },
         "top_bidders": {
           "name": "top_bidders",
-          "description": " "
+          "description": "User IDs of the top 3 bidders (the user¹ constructors will be returned as min² constructors in the containing object).",
+          "links": [
+            "https://core.telegram.org/constructor/user",
+            "https://core.telegram.org/api/min"
+          ]
         },
         "total_rounds": {
           "name": "total_rounds",
-          "description": " "
+          "description": "The total number of rounds in this auction."
         },
         "version": {
           "name": "version",
-          "description": " "
+          "description": "Only apply incoming starGiftAuctionState¹ constructors if the received version is bigger than the locally cached version.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAuctionState"
+          ]
         }
       }
     },
     "starGiftAuctionStateFinished": {
       "name": "starGiftAuctionStateFinished",
+      "description": [
+        "Represents a finished auction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+      ],
       "fields": {
         "average_price": {
           "name": "average_price",
-          "description": " "
+          "description": "Average price of distributed gifts."
         },
         "end_date": {
           "name": "end_date",
-          "description": " "
+          "description": "UNIX timestamp indicating when the auction ended."
         },
         "flags": {
           "name": "flags",
@@ -33409,24 +33470,37 @@
         },
         "fragment_listed_count": {
           "name": "fragment_listed_count",
-          "description": " "
+          "description": "Number of gifts from the auction currently being resold on Fragment¹.",
+          "links": [
+            "https://fragment.com"
+          ]
         },
         "fragment_listed_url": {
           "name": "fragment_listed_url",
-          "description": " "
+          "description": "Only set if fragment_listed_count is set. If set, when the corresponding element is clicked in graphical clients, this URL should be opened."
         },
         "listed_count": {
           "name": "listed_count",
-          "description": " "
+          "description": "Number of gifts from the auction currently being resold on Telegram: if set, when the corresponding element is clicked in graphical clients, payments.getResaleStarGifts¹ should be invoked with the ID of the gift associated to this auction, see here »² for more info.",
+          "links": [
+            "https://core.telegram.org/method/payments.getResaleStarGifts",
+            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+          ]
         },
         "start_date": {
           "name": "start_date",
-          "description": " "
+          "description": "UNIX timestamp indicating when the auction started."
         }
       }
     },
     "starGiftAuctionStateNotModified": {
-      "name": "starGiftAuctionStateNotModified"
+      "name": "starGiftAuctionStateNotModified",
+      "description": [
+        "Returned only by auction methods (never by updates) if the passed version is equal to the remote auction »¹.version, meaning auction information hasn't changed over the locally cached version."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+      ]
     },
     "starGiftAuctionUserState": {
       "name": "starGiftAuctionUserState",
