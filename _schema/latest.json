@@ -3984,18 +3984,27 @@
     },
     "auctionBidLevel": {
       "name": "auctionBidLevel",
+      "description": [
+        "Describes a bid in an auction¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": " "
+          "description": "Amount of the bid in Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "Date when the bid was placed."
         },
         "pos": {
           "name": "pos",
-          "description": " "
+          "description": "Position of the bid."
         }
       }
     },
@@ -15688,10 +15697,19 @@
     },
     "inputInvoiceStarGiftAuctionBid": {
       "name": "inputInvoiceStarGiftAuctionBid",
+      "description": [
+        "Used to place a bid in a collectible gift auction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "bid_amount": {
           "name": "bid_amount",
-          "description": " "
+          "description": "Total amount of the bid in Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -15702,23 +15720,32 @@
         },
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Identifier of the gift, from starGift¹.id",
+          "links": [
+            "https://core.telegram.org/constructor/starGift"
+          ]
         },
         "hide_name": {
           "name": "hide_name",
-          "description": " "
+          "description": "If set, your name will be hidden if the destination peer decides to display the gift on their profile (they will still see that you sent the gift).    Must not be set when updating an existing bid, as the value cannot be changed for existing bids."
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Optional message that will be attached with the gift if we end up winning this round: the maximum length for this field is specified in the stargifts_message_length_max client configuration value »¹.    Must not be set when updating an existing bid, as the value cannot be changed for existing bids.",
+          "links": [
+            "https://core.telegram.org/api/config#stargifts-message-length-max"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Identifier of the user or channel (only if channelFull¹.stargifts_available is set) that will receive the gift.",
+          "links": [
+            "https://core.telegram.org/constructor/channelFull"
+          ]
         },
         "update_bid": {
           "name": "update_bid",
-          "description": " "
+          "description": "Must be set when increasing an already existing bid."
         }
       }
     },
@@ -18091,19 +18118,39 @@
     },
     "inputStarGiftAuction": {
       "name": "inputStarGiftAuction",
+      "description": [
+        "Used to fetch auctions¹ using the ID of the linked collectible gift²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Collectible gift ID¹",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         }
       }
     },
     "inputStarGiftAuctionSlug": {
       "name": "inputStarGiftAuctionSlug",
+      "description": [
+        "Used to fetch auctions¹ using the slug of an auction deep link »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/api/links#auction-links"
+      ],
       "fields": {
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Auction deep link slug »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#auction-links"
+          ]
         }
       }
     },
@@ -21627,7 +21674,10 @@
       "fields": {
         "auction_acquired": {
           "name": "auction_acquired",
-          "description": " "
+          "description": "If set, this gift was acquired in a collectible gifts auction »¹.",
+          "links": [
+            "https://core.telegram.org/api/auctions"
+          ]
         },
         "can_upgrade": {
           "name": "can_upgrade",
@@ -28040,67 +28090,95 @@
     },
     "payments.starGiftActiveAuctions": {
       "name": "payments.starGiftActiveAuctions",
+      "description": [
+        "Describes all currently active gift auctions¹ where the user has placed a bid."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "auctions": {
           "name": "auctions",
-          "description": " "
+          "description": "Auctions where the user has placed a bid"
         },
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "payments.starGiftActiveAuctionsNotModified": {
-      "name": "payments.starGiftActiveAuctionsNotModified"
+      "name": "payments.starGiftActiveAuctionsNotModified",
+      "description": [
+        "The list of currently active gift auctions¹ where the user has placed a bid hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "payments.starGiftAuctionAcquiredGifts": {
       "name": "payments.starGiftAuctionAcquiredGifts",
+      "description": [
+        "Describes all the gifts that the current user won in an auction¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "gifts": {
           "name": "gifts",
-          "description": " "
+          "description": "The gifts"
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
     "payments.starGiftAuctionState": {
       "name": "payments.starGiftAuctionState",
+      "description": [
+        "Describes a collectible gift auction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "chats": {
           "name": "chats",
-          "description": " "
+          "description": "Mentioned chats"
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The gift currently being distributed in the auction."
         },
         "state": {
           "name": "state",
-          "description": " "
+          "description": "Auction state."
         },
         "timeout": {
           "name": "timeout",
-          "description": " "
+          "description": "Re-invoke the payments.getStarGiftAuctionState¹ method after timeout seconds to keep receiving auction updates, see here »² for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/method/payments.getStarGiftAuctionState",
+            "https://core.telegram.org/api/auctions"
+          ]
         },
         "user_state": {
           "name": "user_state",
-          "description": " "
+          "description": "Auction state related to the current user (i.e. info about placed bids, won gifts, and so on)."
         },
         "users": {
           "name": "users",
-          "description": " "
+          "description": "Mentioned users"
         }
       }
     },
@@ -32873,13 +32951,16 @@
       "fields": {
         "auction": {
           "name": "auction",
-          "description": " "
+          "description": "If set, this is a collectible gift that can only be bought through a collectible gift auction »¹.",
+          "links": [
+            "https://core.telegram.org/api/auctions"
+          ]
         },
         "auction_slug": {
           "name": "auction_slug",
           "description": "Always set for gifts that can be bought on auctions »¹, contains the auction deep link slug »².",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gift-auctions",
+            "https://core.telegram.org/api/auctions",
             "https://core.telegram.org/api/links#auction-links"
           ]
         },
@@ -32887,7 +32968,7 @@
           "name": "auction_start_date",
           "description": "Always set for gifts that can be bought on auctions »¹, contains the UNIX timestamp indicating when will the auction start (or when the auction started, if it points to the past).",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+            "https://core.telegram.org/api/auctions"
           ]
         },
         "availability_remains": {
@@ -32933,7 +33014,7 @@
           "name": "gifts_per_round",
           "description": "Always set for gifts that can be bought on auctions »¹, contains the number of gifts of this kind that are distributed on every round.",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+            "https://core.telegram.org/api/auctions"
           ]
         },
         "id": {
@@ -33027,18 +33108,27 @@
     },
     "starGiftActiveAuctionState": {
       "name": "starGiftActiveAuctionState",
+      "description": [
+        "Contains info about an auction where the user has placed a bid »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The collectible gift »¹ currently being distributed in the auction.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "state": {
           "name": "state",
-          "description": " "
+          "description": "Auction state"
         },
         "user_state": {
           "name": "user_state",
-          "description": " "
+          "description": "Auction state related to the current user (i.e. info about placed bids, won gifts and so on)."
         }
       }
     },
@@ -33270,14 +33360,20 @@
     },
     "starGiftAuctionAcquiredGift": {
       "name": "starGiftAuctionAcquiredGift",
+      "description": [
+        "Describes a gift that the current user won in an auction."
+      ],
       "fields": {
         "bid_amount": {
           "name": "bid_amount",
-          "description": " "
+          "description": "The amount in Telegram Stars¹ that was bid in order to obtain the gift.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When was the gift obtained."
         },
         "flags": {
           "name": "flags",
@@ -33292,23 +33388,23 @@
         },
         "message": {
           "name": "message",
-          "description": " "
+          "description": "Optional message that attached with the gift, passed when making the bid."
         },
         "name_hidden": {
           "name": "name_hidden",
-          "description": " "
+          "description": "If set, your name will be hidden if the destination peer decides to display the gift on their profile (they will still see that you sent the gift)."
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The peer that received the gift."
         },
         "pos": {
           "name": "pos",
-          "description": " "
+          "description": "The position of the gift in the auction."
         },
         "round": {
           "name": "round",
-          "description": " "
+          "description": "The round number where the gift was obtained."
         }
       }
     },
@@ -33318,7 +33414,7 @@
         "Describes one or more collectible gift auction rounds »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+        "https://core.telegram.org/api/auctions"
       ],
       "fields": {
         "duration": {
@@ -33337,10 +33433,10 @@
     "starGiftAuctionRoundExtendable": {
       "name": "starGiftAuctionRoundExtendable",
       "description": [
-        "Describes one or more collectible gift auction rounds »¹."
+        "Describes one or more extendable collectible gift auction rounds »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+        "https://core.telegram.org/api/auctions"
       ],
       "fields": {
         "duration": {
@@ -33370,14 +33466,14 @@
         "Represents an active or pending auction »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+        "https://core.telegram.org/api/auctions"
       ],
       "fields": {
         "bid_levels": {
           "name": "bid_levels",
           "description": "Contains a sparse list of bids starting from the top bids, a more detailed description is available in the docs¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+            "https://core.telegram.org/api/auctions"
           ]
         },
         "current_round": {
@@ -33396,7 +33492,7 @@
           "name": "last_gift_num",
           "description": "The number of gifts that were distributed in the previous round (also used to compute the approximated index of the gift that the current user will receive, last_gift_num + approx_pos, see here »¹ for more info).",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+            "https://core.telegram.org/api/auctions"
           ]
         },
         "min_bid_amount": {
@@ -33450,7 +33546,7 @@
         "Represents a finished auction »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+        "https://core.telegram.org/api/auctions"
       ],
       "fields": {
         "average_price": {
@@ -33484,7 +33580,7 @@
           "description": "Number of gifts from the auction currently being resold on Telegram: if set, when the corresponding element is clicked in graphical clients, payments.getResaleStarGifts¹ should be invoked with the ID of the gift associated to this auction, see here »² for more info.",
           "links": [
             "https://core.telegram.org/method/payments.getResaleStarGifts",
-            "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+            "https://core.telegram.org/api/auctions"
           ]
         },
         "start_date": {
@@ -33499,27 +33595,38 @@
         "Returned only by auction methods (never by updates) if the passed version is equal to the remote auction »¹.version, meaning auction information hasn't changed over the locally cached version."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gift-auctions"
+        "https://core.telegram.org/api/auctions"
       ]
     },
     "starGiftAuctionUserState": {
       "name": "starGiftAuctionUserState",
+      "description": [
+        "Contains information about the current user's state in an auction »¹.",
+        "The bid_amount, bid_date, bid_peer and min_bid_amount flags of starGiftAuctionUserState¹ will all be set if the user placed a bid in the auction."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/constructor/starGiftAuctionUserState"
+      ],
       "fields": {
         "acquired_count": {
           "name": "acquired_count",
-          "description": " "
+          "description": "Contains the number of gifts that were purchased so far in the auction by the current user."
         },
         "bid_amount": {
           "name": "bid_amount",
-          "description": " "
+          "description": "Contains the amount of the placed bid in Telegram Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "bid_date": {
           "name": "bid_date",
-          "description": " "
+          "description": "Contains a UNIX timestamp, indicating when the bid was placed."
         },
         "bid_peer": {
           "name": "bid_peer",
-          "description": " "
+          "description": "Contains the peer that will receive the gift, if you end up winning this round"
         },
         "flags": {
           "name": "flags",
@@ -33530,11 +33637,18 @@
         },
         "min_bid_amount": {
           "name": "min_bid_amount",
-          "description": " "
+          "description": "Contains the minumum allowed bid amount in Telegram Stars¹, if set overrides starGiftAuctionState².min_bid_amount for the current user.",
+          "links": [
+            "https://core.telegram.org/api/stars",
+            "https://core.telegram.org/constructor/starGiftAuctionState"
+          ]
         },
         "returned": {
           "name": "returned",
-          "description": " "
+          "description": "If set, the placed bid was returned to the user, because it was outbid so much that it fell out of the top starGiftAuctionState¹.gifts_left positions, meaning that even if no new bids are placed, the user will never receive any gifts, so the bid was completely removed from the auction, and in order to participate again the user must manually make a new bid.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAuctionState"
+          ]
         }
       }
     },
@@ -34338,7 +34452,10 @@
         },
         "stargift_auction_bid": {
           "name": "stargift_auction_bid",
-          "description": " "
+          "description": "Represents payment for placing a collectible gift auction bid »¹.",
+          "links": [
+            "https://core.telegram.org/api/auctions"
+          ]
         },
         "stargift_drop_original_details": {
           "name": "stargift_drop_original_details",
@@ -40199,27 +40316,45 @@
     },
     "updateStarGiftAuctionState": {
       "name": "updateStarGiftAuctionState",
+      "description": [
+        "Contains updates to auction state, see here »¹ for more info on how to enable these updates."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "ID of the collectible gift »¹ currently being distributed in the auction.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "state": {
           "name": "state",
-          "description": " "
+          "description": "Auction state."
         }
       }
     },
     "updateStarGiftAuctionUserState": {
       "name": "updateStarGiftAuctionUserState",
+      "description": [
+        "Contains updates to auction state related to the current user, see here »¹ for more info on how to enable these updates."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "fields": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "ID of the collectible gift »¹ currently being distributed in the auction.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "user_state": {
           "name": "user_state",
-          "description": " "
+          "description": "Auction state related to the current user (i.e. info about placed bids, won gifts and so on)."
         }
       }
     },
@@ -42610,14 +42745,23 @@
     },
     "webPageAttributeStarGiftAuction": {
       "name": "webPageAttributeStarGiftAuction",
+      "description": [
+        "Contains info about a collectible gift auction »¹ for a webPage² preview of an auction »³ (the webPage⁴ will have a type of telegram_auction)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/constructor/webPage",
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/constructor/webPage"
+      ],
       "fields": {
         "end_date": {
           "name": "end_date",
-          "description": " "
+          "description": "Date when the auction will end (UNIX timestamp)"
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The gift linked to the auction"
         }
       }
     },
@@ -43018,7 +43162,13 @@
       ]
     },
     "AuctionBidLevel": {
-      "name": "AuctionBidLevel"
+      "name": "AuctionBidLevel",
+      "description": [
+        "Describes a bid in an auction¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "Auth.ExportedAuthorization": {
       "name": "Auth.ExportedAuthorization",
@@ -44928,10 +45078,22 @@
       "name": "Payments.StarGiftActiveAuctions"
     },
     "Payments.StarGiftAuctionAcquiredGifts": {
-      "name": "Payments.StarGiftAuctionAcquiredGifts"
+      "name": "Payments.StarGiftAuctionAcquiredGifts",
+      "description": [
+        "Describes all the gifts that the current user won in an auction¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "Payments.StarGiftAuctionState": {
-      "name": "Payments.StarGiftAuctionState"
+      "name": "Payments.StarGiftAuctionState",
+      "description": [
+        "Describes a collectible gift auction »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "Payments.StarGiftUpgradeAttributes": {
       "name": "Payments.StarGiftUpgradeAttributes"
@@ -45504,7 +45666,13 @@
       ]
     },
     "StarGiftActiveAuctionState": {
-      "name": "StarGiftActiveAuctionState"
+      "name": "StarGiftActiveAuctionState",
+      "description": [
+        "Contains info about an auction where the user has placed a bid »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "StarGiftAttribute": {
       "name": "StarGiftAttribute",
@@ -45534,7 +45702,10 @@
       "name": "StarGiftAttributeRarity"
     },
     "StarGiftAuctionAcquiredGift": {
-      "name": "StarGiftAuctionAcquiredGift"
+      "name": "StarGiftAuctionAcquiredGift",
+      "description": [
+        "Describes a gift that the current user won in an auction."
+      ]
     },
     "StarGiftAuctionRound": {
       "name": "StarGiftAuctionRound"
@@ -45543,7 +45714,15 @@
       "name": "StarGiftAuctionState"
     },
     "StarGiftAuctionUserState": {
-      "name": "StarGiftAuctionUserState"
+      "name": "StarGiftAuctionUserState",
+      "description": [
+        "Contains information about the current user's state in an auction »¹.",
+        "The bid_amount, bid_date, bid_peer and min_bid_amount flags of starGiftAuctionUserState¹ will all be set if the user placed a bid in the auction."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/constructor/starGiftAuctionUserState"
+      ]
     },
     "StarGiftBackground": {
       "name": "StarGiftBackground"
@@ -71653,19 +71832,34 @@
     },
     "payments.getStarGiftActiveAuctions": {
       "name": "payments.getStarGiftActiveAuctions",
+      "description": [
+        "Fetches all currently active gift auctions¹ where the user has placed a bid."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "parameters": {
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash generated as specified here »¹",
+          "links": [
+            "https://core.telegram.org/api/auctions"
+          ]
         }
       }
     },
     "payments.getStarGiftAuctionAcquiredGifts": {
       "name": "payments.getStarGiftAuctionAcquiredGifts",
+      "description": [
+        "Fetches all the gifts that the current user won in an auction¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ],
       "parameters": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "The gift ID linked to the auction."
         }
       },
       "errors": [
@@ -71678,14 +71872,27 @@
     },
     "payments.getStarGiftAuctionState": {
       "name": "payments.getStarGiftAuctionState",
+      "description": [
+        "Returns info about a collectible gift auction »¹; also subscribes the user to auction updates, see here »² for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/api/auctions"
+      ],
       "parameters": {
         "auction": {
           "name": "auction",
-          "description": " "
+          "description": "Either the ID of the gift linked to the auction, or an auction deep link slug »¹.",
+          "links": [
+            "https://core.telegram.org/api/links#auction-links"
+          ]
         },
         "version": {
           "name": "version",
-          "description": " "
+          "description": "Initially 0, then set to the returned starGiftAuctionState¹.version, to avoid refetching results if they haven't changed.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftAuctionState"
+          ]
         }
       },
       "errors": [
@@ -79904,7 +80111,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -80216,7 +80423,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
