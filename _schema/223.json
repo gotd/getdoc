@@ -12440,7 +12440,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Contains the supergroup/private chat where the topic is located."
         },
         "pinned": {
           "name": "pinned",
@@ -17359,7 +17359,7 @@
           "name": "note",
           "description": "A private note for this contact, only visible to us; see here »¹ for more info on contact notes.",
           "links": [
-            "https://core.telegram.org/api/profile#private-notes-for-contacts"
+            "https://core.telegram.org/api/contacts#private-notes-for-contacts"
           ]
         },
         "phone": {
@@ -19573,7 +19573,7 @@
         "This constructor allows setting a custom background color and custom emoji label for a button, see here »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/button#button-styles"
+        "https://core.telegram.org/api/bots/buttons#button-styles"
       ],
       "fields": {
         "bg_danger": {
@@ -28645,7 +28645,7 @@
       "fields": {
         "accent_color": {
           "name": "accent_color",
-          "description": " "
+          "description": "Accent color in RGB24 format, used for reply backgrounds and the user's name in messages."
         },
         "background_emoji_id": {
           "name": "background_emoji_id",
@@ -28663,15 +28663,15 @@
         },
         "colors": {
           "name": "colors",
-          "description": " "
+          "description": "1-3 RGB24 colors to be used in the reply strip."
         },
         "dark_accent_color": {
           "name": "dark_accent_color",
-          "description": " "
+          "description": "Accent color in RGB24 format, used for reply backgrounds and the user's name in messages in dark mode (fallback to accent_color if absent)."
         },
         "dark_colors": {
           "name": "dark_colors",
-          "description": " "
+          "description": "1-3 RGB24 colors to be used in the reply strip in dark mode (fallback to colors if absent)."
         },
         "flags": {
           "name": "flags",
@@ -41823,7 +41823,7 @@
           "name": "note",
           "description": "A private note for this contact, only visible to us; see here »¹ for more info on contact notes.",
           "links": [
-            "https://core.telegram.org/api/profile#private-notes-for-contacts"
+            "https://core.telegram.org/api/contacts#private-notes-for-contacts"
           ]
         },
         "notify_settings": {
@@ -44560,7 +44560,7 @@
         "This constructor allows setting a custom background color and custom emoji label for a button, see here »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/button#button-styles"
+        "https://core.telegram.org/api/bots/buttons#button-styles"
       ]
     },
     "LabeledPrice": {
@@ -56220,7 +56220,7 @@
           "name": "note",
           "description": "A private note for this contact, only visible to us; see here »¹ for more info on contact notes.",
           "links": [
-            "https://core.telegram.org/api/profile#private-notes-for-contacts"
+            "https://core.telegram.org/api/contacts#private-notes-for-contacts"
           ]
         },
         "phone": {
@@ -56754,7 +56754,8 @@
     "contacts.resolvePhone": {
       "name": "contacts.resolvePhone",
       "description": [
-        "Resolve a phone number to get user info, if their privacy settings allow it."
+        "Resolve a phone number to get user info, if their privacy settings allow it.",
+        "Make sure to implement client-side ratelimiting/debounce for this method, allowing at most 1 call every 3 seconds."
       ],
       "parameters": {
         "phone": {
@@ -56957,7 +56958,7 @@
         "Update the private note associated to a contact; see here »¹ for more info."
       ],
       "links": [
-        "https://core.telegram.org/api/profile#private-notes-for-contacts"
+        "https://core.telegram.org/api/contacts#private-notes-for-contacts"
       ],
       "parameters": {
         "id": {
