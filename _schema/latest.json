@@ -21179,10 +21179,16 @@
     },
     "messageActionNoForwardsRequest": {
       "name": "messageActionNoForwardsRequest",
+      "description": [
+        "Emitted only in private chats if the other side requested to disable content protection »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/protected-content#for-users"
+      ],
       "fields": {
         "expired": {
           "name": "expired",
-          "description": " "
+          "description": "If set, this request was accepted or rejected by the other user and thus cannot be used anymore."
         },
         "flags": {
           "name": "flags",
@@ -21193,24 +21199,33 @@
         },
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "New requested protection status."
         },
         "prev_value": {
           "name": "prev_value",
-          "description": " "
+          "description": "Previous protection status."
         }
       }
     },
     "messageActionNoForwardsToggle": {
       "name": "messageActionNoForwardsToggle",
+      "description": [
+        "Emitted only in private chats when enabling or disabling content protection »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/protected-content#for-users"
+      ],
       "fields": {
         "new_value": {
           "name": "new_value",
-          "description": " "
+          "description": "New protection status."
         },
         "prev_value": {
           "name": "prev_value",
-          "description": " "
+          "description": "Previous protection status (if true, the chat was protected). May be equal to new_value when replying to requests, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/protected-content#for-users"
+          ]
         }
       }
     },
@@ -69716,10 +69731,10 @@
     "messages.toggleNoForwards": {
       "name": "messages.toggleNoForwards",
       "description": [
-        "Enable or disable content protection¹ on a channel or chat"
+        "Enable or disable content protection¹ on a channel, group or private chat."
       ],
       "links": [
-        "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+        "https://core.telegram.org/api/protected-content"
       ],
       "parameters": {
         "enabled": {
@@ -69739,7 +69754,10 @@
         },
         "request_msg_id": {
           "name": "request_msg_id",
-          "description": " "
+          "description": "Used only inside private chats to accept or refuse a request to disable content protection, see here »¹ for more info on the full flow.",
+          "links": [
+            "https://core.telegram.org/api/protected-content#for-users"
+          ]
         }
       },
       "errors": [
@@ -80112,7 +80130,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -80386,7 +80404,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -80424,7 +80442,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
