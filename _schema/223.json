@@ -6686,7 +6686,7 @@
           "name": "noforwards",
           "description": "Whether this channel or group is protected¹, thus does not allow forwarding messages from it",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "participants_count": {
@@ -8828,7 +8828,7 @@
           "name": "noforwards",
           "description": "Whether this group is protected¹, thus does not allow forwarding messages from it",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "participants_count": {
@@ -20367,7 +20367,7 @@
           "name": "noforwards",
           "description": "Whether this message is protected¹ and thus cannot be forwarded; clients should also prevent users from saving attached media (i.e. videos should only be streamed, photos should be kept in RAM, et cetera).",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "offline": {
@@ -21183,7 +21183,7 @@
         "Emitted only in private chats if the other side requested to disable content protection »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/protected-content#for-users"
+        "https://core.telegram.org/api/content-protection#for-users"
       ],
       "fields": {
         "expired": {
@@ -21213,7 +21213,7 @@
         "Emitted only in private chats when enabling or disabling content protection »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/protected-content#for-users"
+        "https://core.telegram.org/api/content-protection#for-users"
       ],
       "fields": {
         "new_value": {
@@ -21224,7 +21224,7 @@
           "name": "prev_value",
           "description": "Previous protection status (if true, the chat was protected). May be equal to new_value when replying to requests, see here »¹ for more info on the full flow.",
           "links": [
-            "https://core.telegram.org/api/protected-content#for-users"
+            "https://core.telegram.org/api/content-protection#for-users"
           ]
         }
       }
@@ -21817,18 +21817,25 @@
     },
     "messageActionStarGiftPurchaseOffer": {
       "name": "messageActionStarGiftPurchaseOffer",
+      "description": [
+        "Contains an offer to purchase a collectible gift »¹, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers",
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+      ],
       "fields": {
         "accepted": {
           "name": "accepted",
-          "description": " "
+          "description": "If set, the gift owner accepted this offer."
         },
         "declined": {
           "name": "declined",
-          "description": " "
+          "description": "If set, the gift owner declined this offer."
         },
         "expires_at": {
           "name": "expires_at",
-          "description": " "
+          "description": "Offer expiration date (UNIX timestamp): if the owner doesn't act before this date, the offer will expire and the buyer will be refunded automatically."
         },
         "flags": {
           "name": "flags",
@@ -21839,20 +21846,30 @@
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The collectible gift the offer is about."
         },
         "price": {
           "name": "price",
-          "description": " "
+          "description": "Offered price."
         }
       }
     },
     "messageActionStarGiftPurchaseOfferDeclined": {
       "name": "messageActionStarGiftPurchaseOfferDeclined",
+      "description": [
+        "A collectible gift purchase offer »¹ was declined, or the offer expired, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers",
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+      ],
       "fields": {
         "expired": {
           "name": "expired",
-          "description": " "
+          "description": "If set, the owner didn't act before the messageActionStarGiftPurchaseOffer¹.expires_at deadline and the offer expired automatically; otherwise, the owner explicitly declined the offer.",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionStarGiftPurchaseOffer"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -21863,11 +21880,11 @@
         },
         "gift": {
           "name": "gift",
-          "description": " "
+          "description": "The collectible gift the declined or expired offer was about."
         },
         "price": {
           "name": "price",
-          "description": " "
+          "description": "Offered price that is refunded automatically to the buyer."
         }
       }
     },
@@ -33793,7 +33810,10 @@
         },
         "offer_min_stars": {
           "name": "offer_min_stars",
-          "description": " "
+          "description": "If set, you can send a purchase offer for this gift »¹: the minimum offer price is specified in this flag.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+          ]
         },
         "owner_address": {
           "name": "owner_address",
@@ -33813,7 +33833,10 @@
         },
         "peer_color": {
           "name": "peer_color",
-          "description": " "
+          "description": "Can contain a collectible message palette »¹.",
+          "links": [
+            "https://core.telegram.org/api/colors#collectible-message-palettes"
+          ]
         },
         "released_by": {
           "name": "released_by",
@@ -33862,15 +33885,15 @@
         },
         "value_amount": {
           "name": "value_amount",
-          "description": "Price of the gift."
+          "description": "Estimated price of the gift."
         },
         "value_currency": {
           "name": "value_currency",
-          "description": "Currency for the gift's price."
+          "description": "Currency for the gift's estimated price."
         },
         "value_usd_amount": {
           "name": "value_usd_amount",
-          "description": " "
+          "description": "Estimated price of the gift in USD cents."
         }
       }
     },
@@ -34408,7 +34431,10 @@
         },
         "offer": {
           "name": "offer",
-          "description": " "
+          "description": "Represents payment for a collectible gift purchase offer »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+          ]
         },
         "paid_messages": {
           "name": "paid_messages",
@@ -35885,7 +35911,7 @@
           "name": "noforwards",
           "description": "Whether this story is protected¹ and thus cannot be forwarded; clients should also prevent users from saving attached media (i.e. videos should only be streamed, photos should be kept in RAM, et cetera).",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "out": {
@@ -41828,11 +41854,17 @@
         },
         "noforwards_my_enabled": {
           "name": "noforwards_my_enabled",
-          "description": " "
+          "description": "If set, content protection »¹ was enabled in this private chat by us.",
+          "links": [
+            "https://core.telegram.org/api/content-protection#for-users"
+          ]
         },
         "noforwards_peer_enabled": {
           "name": "noforwards_peer_enabled",
-          "description": " "
+          "description": "If set, content protection »¹ was enabled in this private chat by this user.",
+          "links": [
+            "https://core.telegram.org/api/content-protection#for-users"
+          ]
         },
         "note": {
           "name": "note",
@@ -60159,7 +60191,7 @@
           "name": "noforwards",
           "description": "Only for bots, disallows further re-forwarding and saving of the messages, even if the destination chat doesn't have content protection¹ enabled",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "quick_reply_shortcut": {
@@ -66679,7 +66711,7 @@
           "name": "noforwards",
           "description": "Only for bots, disallows forwarding and saving of the messages, even if the destination chat doesn't have content protection¹ enabled",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "peer": {
@@ -67354,7 +67386,7 @@
           "name": "noforwards",
           "description": "Only for bots, disallows forwarding and saving of the messages, even if the destination chat doesn't have content protection¹ enabled",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "peer": {
@@ -67848,7 +67880,7 @@
           "name": "noforwards",
           "description": "Only for bots, disallows forwarding and saving of the messages, even if the destination chat doesn't have content protection¹ enabled",
           "links": [
-            "https://telegram.org/blog/protected-content-delete-by-date-and-more"
+            "https://telegram.org/blog/content-protection-delete-by-date-and-more"
           ]
         },
         "peer": {
@@ -69734,7 +69766,7 @@
         "Enable or disable content protection¹ on a channel, group or private chat."
       ],
       "links": [
-        "https://core.telegram.org/api/protected-content"
+        "https://core.telegram.org/api/content-protection"
       ],
       "parameters": {
         "enabled": {
@@ -69756,7 +69788,7 @@
           "name": "request_msg_id",
           "description": "Used only inside private chats to accept or refuse a request to disable content protection, see here »¹ for more info on the full flow.",
           "links": [
-            "https://core.telegram.org/api/protected-content#for-users"
+            "https://core.telegram.org/api/content-protection#for-users"
           ]
         }
       },
@@ -72650,10 +72682,17 @@
     },
     "payments.resolveStarGiftOffer": {
       "name": "payments.resolveStarGiftOffer",
+      "description": [
+        "Accept or decline a previously received collectible gift purchase offer »¹, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers",
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+      ],
       "parameters": {
         "decline": {
           "name": "decline",
-          "description": " "
+          "description": "If set, declines the offer; otherwise, accepts it."
         },
         "flags": {
           "name": "flags",
@@ -72664,7 +72703,10 @@
         },
         "offer_msg_id": {
           "name": "offer_msg_id",
-          "description": " "
+          "description": "Identifier of the messageActionStarGiftPurchaseOffer¹ service message describing the offer to act upon.",
+          "links": [
+            "https://core.telegram.org/constructor/messageActionStarGiftPurchaseOffer"
+          ]
         }
       },
       "errors": [
@@ -72802,14 +72844,25 @@
     },
     "payments.sendStarGiftOffer": {
       "name": "payments.sendStarGiftOffer",
+      "description": [
+        "Send an offer to purchase a collectible gift »¹, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers",
+        "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+      ],
       "parameters": {
         "allow_paid_stars": {
           "name": "allow_paid_stars",
-          "description": " "
+          "description": "If the destination peer has paid messages »¹ enabled, specifies the amount of Telegram Stars² the sending user has agreed to pay in order to send the offer (in addition to the amount for the offer itself, contained in price).",
+          "links": [
+            "https://core.telegram.org/api/paid-messages",
+            "https://core.telegram.org/api/stars"
+          ]
         },
         "duration": {
           "name": "duration",
-          "description": " "
+          "description": "Duration of the offer, in seconds: must be one of 21600, 43200, 86400, 129600, 172800, or 259200; can also be 120 in test mode."
         },
         "flags": {
           "name": "flags",
@@ -72820,19 +72873,25 @@
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Owner of the collectible gift: equal to starGiftUnique¹.owner_id.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "price": {
           "name": "price",
-          "description": " "
+          "description": "Offer price, in stars or TON."
         },
         "random_id": {
           "name": "random_id",
-          "description": " "
+          "description": "Random 64-bit identifier used to avoid sending the same offer twice in case of network issues."
         },
         "slug": {
           "name": "slug",
-          "description": " "
+          "description": "Identifier of the collectible gift: equal to starGiftUnique¹.slug.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         }
       },
       "errors": [
