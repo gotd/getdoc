@@ -11183,7 +11183,7 @@
         },
         "disallow_stargifts_from_channels": {
           "name": "disallow_stargifts_from_channels",
-          "description": " "
+          "description": "Disallow the reception of gifts sent by channels."
         },
         "disallow_unique_stargifts": {
           "name": "disallow_unique_stargifts",
@@ -20872,7 +20872,7 @@
         },
         "days": {
           "name": "days",
-          "description": " "
+          "description": "Duration of the gifted Telegram Premium subscription, in days."
         },
         "flags": {
           "name": "flags",
@@ -20943,7 +20943,7 @@
         },
         "days": {
           "name": "days",
-          "description": " "
+          "description": "Duration of the gifted Telegram Premium subscription, in days."
         },
         "flags": {
           "name": "flags",
@@ -21900,11 +21900,17 @@
       "fields": {
         "assigned": {
           "name": "assigned",
-          "description": " "
+          "description": "This collectible gift was assigned from the TON blockchain »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#withdraw-a-collectible-gift-to-the-ton-blockchain"
+          ]
         },
         "can_craft_at": {
           "name": "can_craft_at",
-          "description": " "
+          "description": "If set, this gift can be used for crafting »¹ only starting from the specified unixtime.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "can_export_at": {
           "name": "can_export_at",
@@ -21929,7 +21935,10 @@
         },
         "craft": {
           "name": "craft",
-          "description": " "
+          "description": "This collectible gift was obtained by crafting »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "drop_original_details_stars": {
           "name": "drop_original_details_stars",
@@ -21952,7 +21961,10 @@
         },
         "from_offer": {
           "name": "from_offer",
-          "description": " "
+          "description": "This collectible gift was transferred after a purchase offer »¹ was accepted.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gift-purchase-offers"
+          ]
         },
         "gift": {
           "name": "gift",
@@ -27493,7 +27505,7 @@
         },
         "days": {
           "name": "days",
-          "description": " "
+          "description": "Duration of the gifted Telegram Premium subscription, in days."
         },
         "flags": {
           "name": "flags",
@@ -28243,7 +28255,10 @@
       "fields": {
         "attributes": {
           "name": "attributes",
-          "description": " "
+          "description": "Full list of possible attributes that may be assigned when gifts of the specified type are turned into collectible gifts »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         }
       }
     },
@@ -31621,7 +31636,10 @@
       "fields": {
         "can_craft_at": {
           "name": "can_craft_at",
-          "description": " "
+          "description": "If set, this gift can be used for crafting »¹ only starting from the specified unixtime.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "can_export_at": {
           "name": "can_export_at",
@@ -31691,7 +31709,7 @@
         },
         "gift_num": {
           "name": "gift_num",
-          "description": " "
+          "description": "Collectible number assigned to the gift, if already known."
         },
         "message": {
           "name": "message",
@@ -33021,7 +33039,7 @@
         },
         "background": {
           "name": "background",
-          "description": " "
+          "description": "Default background palette for this gift type, used when rendering gift cards and previews before a specific collectible backdrop is chosen."
         },
         "birthday": {
           "name": "birthday",
@@ -33074,7 +33092,10 @@
         },
         "peer_color_available": {
           "name": "peer_color_available",
-          "description": " "
+          "description": "If set, collectible gifts of this type may be used to generate a message color palette and pattern »¹.",
+          "links": [
+            "https://core.telegram.org/api/colors#collectible-message-palettes"
+          ]
         },
         "per_user_remains": {
           "name": "per_user_remains",
@@ -33134,7 +33155,10 @@
         },
         "upgrade_variants": {
           "name": "upgrade_variants",
-          "description": " "
+          "description": "Total number of possible collectible variants »¹ for this gift type.",
+          "links": [
+            "https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants"
+          ]
         }
       }
     },
@@ -33198,7 +33222,7 @@
         },
         "rarity": {
           "name": "rarity",
-          "description": " "
+          "description": "Rarity of this backdrop."
         },
         "text_color": {
           "name": "text_color",
@@ -33284,7 +33308,10 @@
       "fields": {
         "crafted": {
           "name": "crafted",
-          "description": " "
+          "description": "This model is reserved for crafting »¹, and should be filtered out from regular upgrade previews.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "document": {
           "name": "document",
@@ -33306,7 +33333,7 @@
         },
         "rarity": {
           "name": "rarity",
-          "description": " "
+          "description": "Rarity of this model."
         }
       }
     },
@@ -33365,30 +33392,45 @@
         },
         "rarity": {
           "name": "rarity",
-          "description": " "
+          "description": "Rarity of this pattern."
         }
       }
     },
     "starGiftAttributeRarity": {
       "name": "starGiftAttributeRarity",
+      "description": [
+        "Exact rarity value for a collectible gift attribute."
+      ],
       "fields": {
         "permille": {
           "name": "permille",
-          "description": " "
+          "description": "Probability of this attribute, in permille"
         }
       }
     },
     "starGiftAttributeRarityEpic": {
-      "name": "starGiftAttributeRarityEpic"
+      "name": "starGiftAttributeRarityEpic",
+      "description": [
+        "Represents epic collectible gift attribute rarity."
+      ]
     },
     "starGiftAttributeRarityLegendary": {
-      "name": "starGiftAttributeRarityLegendary"
+      "name": "starGiftAttributeRarityLegendary",
+      "description": [
+        "Represents legendary collectible gift attribute rarity."
+      ]
     },
     "starGiftAttributeRarityRare": {
-      "name": "starGiftAttributeRarityRare"
+      "name": "starGiftAttributeRarityRare",
+      "description": [
+        "Represents rare collectible gift attribute rarity."
+      ]
     },
     "starGiftAttributeRarityUncommon": {
-      "name": "starGiftAttributeRarityUncommon"
+      "name": "starGiftAttributeRarityUncommon",
+      "description": [
+        "Represents uncommon collectible gift attribute rarity."
+      ]
     },
     "starGiftAuctionAcquiredGift": {
       "name": "starGiftAuctionAcquiredGift",
@@ -33416,7 +33458,7 @@
         },
         "gift_num": {
           "name": "gift_num",
-          "description": " "
+          "description": "If set, the collectible number of the won gift among all collectibles of the same type."
         },
         "message": {
           "name": "message",
@@ -33686,18 +33728,24 @@
     },
     "starGiftBackground": {
       "name": "starGiftBackground",
+      "description": [
+        "Contains the default background palette of a gift type »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants"
+      ],
       "fields": {
         "center_color": {
           "name": "center_color",
-          "description": " "
+          "description": "Center color of the background palette, in RGB24 format."
         },
         "edge_color": {
           "name": "edge_color",
-          "description": " "
+          "description": "Edge color of the background palette, in RGB24 format."
         },
         "text_color": {
           "name": "text_color",
-          "description": " "
+          "description": "Text color to use on top of the background palette, in RGB24 format."
         }
       }
     },
@@ -33767,15 +33815,24 @@
         },
         "burned": {
           "name": "burned",
-          "description": " "
+          "description": "This gift was already used as an ingredient for crafting another collectible gift »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "craft_chance_permille": {
           "name": "craft_chance_permille",
-          "description": " "
+          "description": "Success probability, per 1000, contributed by this gift when it is used for crafting »¹.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "crafted": {
           "name": "crafted",
-          "description": " "
+          "description": "This collectible gift was obtained by crafting »¹, not by upgrading a regular gift.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -33794,15 +33851,15 @@
         },
         "gift_id": {
           "name": "gift_id",
-          "description": "Unique ID of the gift."
+          "description": "ID of the regular gift from which this gift was upgraded (all collectible gifts upgraded from the same gift will have the same gift_id, with different attributes)."
         },
         "host_id": {
           "name": "host_id",
-          "description": " "
+          "description": "If set, the gift is currently hosted on the specified user or channel profile even though ownership belongs to a TON wallet. The owner may transfer, resell or export the gift, while the host or owner may show it on the profile, use it as a theme/status and add it to a collection."
         },
         "id": {
           "name": "id",
-          "description": "Identifier of the collectible gift."
+          "description": "Unique identifier of this collectible gift."
         },
         "num": {
           "name": "num",
@@ -45772,7 +45829,13 @@
       ]
     },
     "StarGiftBackground": {
-      "name": "StarGiftBackground"
+      "name": "StarGiftBackground",
+      "description": [
+        "Contains the default background palette of a gift type »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants"
+      ]
     },
     "StarGiftCollection": {
       "name": "StarGiftCollection",
