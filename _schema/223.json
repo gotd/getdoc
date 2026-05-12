@@ -4297,6 +4297,10 @@
             "https://core.telegram.org/method/auth.signIn"
           ]
         },
+        "premium_days": {
+          "name": "premium_days",
+          "description": " "
+        },
         "store_product": {
           "name": "store_product",
           "description": "For official apps, tore identifier of the Telegram Premium subscription."
@@ -9127,6 +9131,10 @@
           "links": [
             "https://core.telegram.org/api/channel"
           ]
+        },
+        "send_reactions": {
+          "name": "send_reactions",
+          "description": " "
         },
         "send_roundvideos": {
           "name": "send_roundvideos",
@@ -18408,6 +18416,10 @@
           "name": "phone_number",
           "description": "Phone number."
         },
+        "premium_days": {
+          "name": "premium_days",
+          "description": " "
+        },
         "restore": {
           "name": "restore",
           "description": "Set this flag to restore a previously made purchase."
@@ -20331,6 +20343,10 @@
             "https://core.telegram.org/method/messages.sendMultiMedia",
             "https://core.telegram.org/api/files#albums-grouped-media"
           ]
+        },
+        "guestchat_via_from": {
+          "name": "guestchat_via_from",
+          "description": " "
         },
         "id": {
           "name": "id",
@@ -28252,12 +28268,19 @@
     },
     "payments.starGiftUpgradeAttributes": {
       "name": "payments.starGiftUpgradeAttributes",
+      "description": [
+        "List of just the collectible attributes that may appear for a gift type once it's upgraded to a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ],
       "fields": {
         "attributes": {
           "name": "attributes",
-          "description": "Full list of possible attributes that may be assigned when gifts of the specified type are turned into collectible gifts »¹.",
+          "description": "Full list of possible attributes that may be assigned when gifts of the specified type are turned into collectible gifts »¹, including craft-only models marked with starGiftAttributeModel².crafted.",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gifts"
+            "https://core.telegram.org/api/gifts#collectible-gifts",
+            "https://core.telegram.org/constructor/starGiftAttributeModel"
           ]
         }
       }
@@ -29920,6 +29943,10 @@
           "name": "closed",
           "description": "Whether the poll is closed and doesn't accept any more answers"
         },
+        "countries_iso2": {
+          "name": "countries_iso2",
+          "description": " "
+        },
         "creator": {
           "name": "creator",
           "description": " "
@@ -29973,6 +30000,10 @@
         },
         "shuffle_answers": {
           "name": "shuffle_answers",
+          "description": " "
+        },
+        "subscribers_only": {
+          "name": "subscribers_only",
           "description": " "
         }
       }
@@ -30063,6 +30094,10 @@
         "Results of poll"
       ],
       "fields": {
+        "can_view_stats": {
+          "name": "can_view_stats",
+          "description": " "
+        },
         "flags": {
           "name": "flags",
           "description": "Flags, see TL conditional fields¹",
@@ -40457,7 +40492,13 @@
       }
     },
     "updateStarGiftCraftFail": {
-      "name": "updateStarGiftCraftFail"
+      "name": "updateStarGiftCraftFail",
+      "description": [
+        "Indicates that a crafting »¹ attempt did not produce a new collectible gift."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+      ]
     },
     "updateStarsBalance": {
       "name": "updateStarsBalance",
@@ -40928,8 +40969,8 @@
     "updates.channelDifferenceTooLong": {
       "name": "updates.channelDifferenceTooLong",
       "description": [
-        "The provided pts + limit \u003c remote pts. Simply, there are too many updates to be fetched (more than limit), the client has to resolve the update gap in one of the following ways (assuming the existence of a persistent database to locally store messages):",
-        "It should be also noted that some messages like live location messages shouldn't be deleted."
+        "The passed pts is too old: one or more updates starting from the specified PTS were deleted from the message box of this channel.",
+        "For supergroups/channels, this usually happens for updates older than latestPts - 100000 (though do not rely on this value, it's a server-side implementation detail that may change, and should not be used by clients in any way)."
       ],
       "fields": {
         "chats": {
@@ -40945,7 +40986,7 @@
         },
         "final": {
           "name": "final",
-          "description": "Whether there are more updates that must be fetched (always false)"
+          "description": "Whether there are more updates that must be fetched (always set)"
         },
         "flags": {
           "name": "flags",
@@ -40956,7 +40997,7 @@
         },
         "messages": {
           "name": "messages",
-          "description": "The latest messages"
+          "description": "The latest messages (not starting from the passed pts, just the latest messages)."
         },
         "timeout": {
           "name": "timeout",
@@ -41463,6 +41504,10 @@
           "links": [
             "https://core.telegram.org/api/forum#bot-forums"
           ]
+        },
+        "bot_guestchat": {
+          "name": "bot_guestchat",
+          "description": " "
         },
         "bot_has_main_app": {
           "name": "bot_has_main_app",
@@ -45200,7 +45245,13 @@
       ]
     },
     "Payments.StarGiftUpgradeAttributes": {
-      "name": "Payments.StarGiftUpgradeAttributes"
+      "name": "Payments.StarGiftUpgradeAttributes",
+      "description": [
+        "List of just the collectible attributes that may appear for a gift type once it's upgraded to a collectible gift »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "Payments.SuggestedStarRefBots": {
       "name": "Payments.SuggestedStarRefBots",
@@ -56718,6 +56769,10 @@
           "links": [
             "https://core.telegram.org/api/bots/webapps#main-mini-apps"
           ]
+        },
+        "bots_guestchat": {
+          "name": "bots_guestchat",
+          "description": " "
         },
         "bots_inline": {
           "name": "bots_inline",
@@ -71125,10 +71180,22 @@
     },
     "payments.craftStarGift": {
       "name": "payments.craftStarGift",
+      "description": [
+        "Craft a new collectible gift »¹ by combining 1 to 4 owned collectible gifts of the same base gift type.",
+        "The passed gifts must all have the same starGiftUnique¹.gift_id, must be usable for crafting, and must not be blocked by a future can_craft_at timestamp.",
+        "The first passed gift must not be located on the TON blockchain."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/constructor/starGiftUnique"
+      ],
       "parameters": {
         "stargift": {
           "name": "stargift",
-          "description": " "
+          "description": "1 to 4 owned collectible gifts of the same type to use for crafting »¹. The first gift's ID is reused if crafting succeeds.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+          ]
         }
       },
       "errors": [
@@ -71408,10 +71475,20 @@
     },
     "payments.getCraftStarGifts": {
       "name": "payments.getCraftStarGifts",
+      "description": [
+        "Obtain owned collectible gifts »¹ of a specific type that can be used for crafting »²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+      ],
       "parameters": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Identifier of the base gift type, equal to starGiftUnique¹.gift_id of the first selected gift.",
+          "links": [
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "limit": {
           "name": "limit",
@@ -71422,7 +71499,7 @@
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset for pagination."
         }
       },
       "errors": [
@@ -71741,7 +71818,11 @@
         },
         "for_craft": {
           "name": "for_craft",
-          "description": " "
+          "description": "Only return collectible gifts that can be bought and used for crafting »¹; render each returned gift's starGiftUnique².craft_chance_permille as its crafting success contribution.",
+          "links": [
+            "https://core.telegram.org/api/gifts#crafting-collectible-gifts",
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "gift_id": {
           "name": "gift_id",
@@ -72049,10 +72130,22 @@
     },
     "payments.getStarGiftUpgradeAttributes": {
       "name": "payments.getStarGiftUpgradeAttributes",
+      "description": [
+        "Obtains the full list of just the collectible attributes that may appear for a gift type once it's upgraded to a collectible gift »¹.",
+        "The result may also include starGiftAttributeModel¹ constructors with the crafted flag set: these models are reserved for crafting »² and should be filtered out from regular upgrade previews (and vice versa)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/constructor/starGiftAttributeModel",
+        "https://core.telegram.org/api/gifts#crafting-collectible-gifts"
+      ],
       "parameters": {
         "gift_id": {
           "name": "gift_id",
-          "description": " "
+          "description": "Non-collectible base gift ID, from starGift¹.id",
+          "links": [
+            "https://core.telegram.org/constructor/starGift"
+          ]
         }
       },
       "errors": [
