@@ -37731,8 +37731,14 @@
     "updateChannelTooLong": {
       "name": "updateChannelTooLong",
       "description": [
-        "There are new updates in the specified channel, the client must fetch them.",
-        "If the difference is too long or if the channel isn't currently in the states, start fetching from the specified pts."
+        "There are new updates in the specified channel, the client must fetch them manually by invoking updates.getChannelDifference¹ as specified in the documentation »².",
+        "If the channel's PTS isn't currently stored in the database (i.e. we joined this channel on another client while the current client was offline), start fetching from the specified pts.",
+        "Does not necessarily indicate the channel message box size limit was reached¹, it simply indicates that the number of queued updates in a message box is too large to be delivered passively through the socket."
+      ],
+      "links": [
+        "https://core.telegram.org/method/updates.getChannelDifference",
+        "https://core.telegram.org/api/updates",
+        "https://core.telegram.org/api/updates#recovering-gaps-for-very-old-messages"
       ],
       "fields": {
         "channel_id": {
@@ -41173,10 +41179,13 @@
     "updatesTooLong": {
       "name": "updatesTooLong",
       "description": [
-        "Too many updates, it is necessary to execute updates.getDifference¹."
+        "The number of queued updates in the common message box is too large to be delivered passively through the socket, invoke updates.getDifference¹ to fetch the difference as specified in the documentation »².",
+        "Does not necessarily indicate the message box size limit was reached¹, it simply indicates that the number of queued updates in a message box is too large to be delivered passively through the socket."
       ],
       "links": [
-        "https://core.telegram.org/method/updates.getDifference"
+        "https://core.telegram.org/method/updates.getDifference",
+        "https://core.telegram.org/api/updates",
+        "https://core.telegram.org/api/updates#recovering-gaps-for-very-old-messages"
       ]
     },
     "upload.cdnFile": {
@@ -61963,7 +61972,8 @@
     "messages.getHistory": {
       "name": "messages.getHistory",
       "description": [
-        "Returns the conversation history with one interlocutor / within a chat"
+        "Returns the message history in a peer.",
+        "Results are ordered by date (descending)."
       ],
       "parameters": {
         "add_offset": {
@@ -81949,12 +81959,12 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
