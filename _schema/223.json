@@ -22523,14 +22523,22 @@
     },
     "messageEntityFormattedDate": {
       "name": "messageEntityFormattedDate",
+      "description": [
+        "Represents a specific point in time, rendered as specified here »¹",
+        "All flags are optional, with the following limitations:",
+        "If any of the flags are combined, their rendering order in the text is the following:"
+      ],
+      "links": [
+        "https://core.telegram.org/api/entities#date-entities"
+      ],
       "fields": {
         "date": {
           "name": "date",
-          "description": " "
+          "description": "The date as a UNIX timestamp: the allowed value ranges from 0 to the current date plus 1098 days (time()+1098*86400)."
         },
         "day_of_week": {
           "name": "day_of_week",
-          "description": " "
+          "description": "Renders the day of the week according to the user's locale settings."
         },
         "flags": {
           "name": "flags",
@@ -22541,31 +22549,40 @@
         },
         "length": {
           "name": "length",
-          "description": " "
+          "description": "Length of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "long_date": {
           "name": "long_date",
-          "description": " "
+          "description": "Renders the time in long format: always month, date and year, all according the user's locale settings; cannot be combined with short_date."
         },
         "long_time": {
           "name": "long_time",
-          "description": " "
+          "description": "Renders the time in long format: hours, minutes, seconds and maybe timezone, according to the user's locale settings; cannot be combined with short_time."
         },
         "offset": {
           "name": "offset",
-          "description": " "
+          "description": "Offset of message entity within message (in UTF-16 code units¹)",
+          "links": [
+            "https://core.telegram.org/api/entities#entity-length"
+          ]
         },
         "relative": {
           "name": "relative",
-          "description": " "
+          "description": "If set, render a relative date, see here »¹ for more info. Cannot be combined with any of the other flags.",
+          "links": [
+            "https://core.telegram.org/api/entities#date-entities"
+          ]
         },
         "short_date": {
           "name": "short_date",
-          "description": " "
+          "description": "Renders the time in short format: month, date, (and year, if different from the current one), all according the user's locale settings; cannot be combined with long_date."
         },
         "short_time": {
           "name": "short_time",
-          "description": " "
+          "description": "Renders the time in short format: hours and minutes, according to the user's locale settings; cannot be combined with long_time."
         }
       }
     },
@@ -59327,18 +59344,27 @@
     },
     "messages.editChatCreator": {
       "name": "messages.editChatCreator",
+      "description": [
+        "Transfer the ownership of a basic group, supergroup or channel to another user, see here »¹ for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#transferring-ownership-of-a-groupchannel"
+      ],
       "parameters": {
         "password": {
           "name": "password",
-          "description": " "
+          "description": "The current account's 2FA password¹.",
+          "links": [
+            "https://core.telegram.org/api/srp"
+          ]
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Owned group/supergroup/channel."
         },
         "user_id": {
           "name": "user_id",
-          "description": " "
+          "description": "ID of the new owner."
         }
       }
     },
@@ -61925,10 +61951,16 @@
     },
     "messages.getFutureChatCreatorAfterLeave": {
       "name": "messages.getFutureChatCreatorAfterLeave",
+      "description": [
+        "Group/channel owners only: returns the ID of the user that will become the new owner of the group if we decide to leave the group, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#leaving-groups-channels"
+      ],
       "parameters": {
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "The basic group/supergroup/channel we're about to leave."
         }
       }
     },
@@ -71862,7 +71894,10 @@
         },
         "stars_only": {
           "name": "stars_only",
-          "description": " "
+          "description": "Only return gifts that can be bought using Stars¹.",
+          "links": [
+            "https://core.telegram.org/api/stars"
+          ]
         }
       },
       "errors": [
