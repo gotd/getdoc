@@ -80935,7 +80935,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
