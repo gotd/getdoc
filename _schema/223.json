@@ -1549,8 +1549,7 @@
           "webPageEmpty",
           "webPageNotModified",
           "webPagePending",
-          "webViewMessageSent",
-          "webViewResultUrl"
+          "webViewMessageSent"
         ]
       },
       {
@@ -2312,7 +2311,8 @@
           "users.getSavedMusicByID",
           "users.getUsers",
           "users.setSecureValueErrors",
-          "users.suggestBirthday"
+          "users.suggestBirthday",
+          "webViewResultUrl"
         ]
       },
       {
@@ -43158,42 +43158,6 @@
           "description": "Message ID"
         }
       }
-    },
-    "webViewResultUrl": {
-      "name": "webViewResultUrl",
-      "description": [
-        "Contains the webview URL with appropriate theme and user info parameters added"
-      ],
-      "fields": {
-        "flags": {
-          "name": "flags",
-          "description": "Flags, see TL conditional fields¹",
-          "links": [
-            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
-          ]
-        },
-        "fullscreen": {
-          "name": "fullscreen",
-          "description": "If set, the app must be opened in fullscreen"
-        },
-        "fullsize": {
-          "name": "fullsize",
-          "description": "If set, the app must be opened in fullsize mode instead of compact mode."
-        },
-        "query_id": {
-          "name": "query_id",
-          "description": "Webview session ID (only returned by inline button mini apps¹, menu button mini apps², attachment menu mini apps³).",
-          "links": [
-            "https://core.telegram.org/api/bots/webapps#inline-button-mini-apps",
-            "https://core.telegram.org/api/bots/webapps#menu-button-mini-apps",
-            "https://core.telegram.org/api/bots/webapps#attachment-menu-mini-apps"
-          ]
-        },
-        "url": {
-          "name": "url",
-          "description": "Webview URL to open"
-        }
-      }
     }
   },
   "types": {
@@ -47493,6 +47457,9 @@
     }
   },
   "methods": {
+    "Page not found": {
+      "name": "Page not found"
+    },
     "account.acceptAuthorization": {
       "name": "account.acceptAuthorization",
       "description": [
