@@ -20598,10 +20598,17 @@
     },
     "messageActionChangeCreator": {
       "name": "messageActionChangeCreator",
+      "description": [
+        "Service message: emitted to a supergroup when ownership transfer completes after the old owner left the group »¹ (7 days after the old owner left without rejoining), indicating that ownership has been transferred to a new owner.",
+        "Sent from the user ID of the old owner."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#leaving-groups-channels"
+      ],
       "fields": {
         "new_creator_id": {
           "name": "new_creator_id",
-          "description": " "
+          "description": "The ID of the user who became the new owner of the group/channel."
         }
       }
     },
@@ -21186,10 +21193,17 @@
     },
     "messageActionNewCreatorPending": {
       "name": "messageActionNewCreatorPending",
+      "description": [
+        "Service message: emitted to a supergroup when the group/channel creator leaves the group »¹, indicating that ownership transfer is pending. The new_creator_id user will become the new owner after 7 days if the old owner does not rejoin.",
+        "Sent from the user ID of the old owner."
+      ],
+      "links": [
+        "https://core.telegram.org/api/channel#leaving-groups-channels"
+      ],
       "fields": {
         "new_creator_id": {
           "name": "new_creator_id",
-          "description": " "
+          "description": "The ID of the user who will become the new owner of the group/channel after 7 days if the old owner does not rejoin."
         }
       }
     },
@@ -74254,7 +74268,7 @@
     "phone.getGroupCall": {
       "name": "phone.getGroupCall",
       "description": [
-        "Get info about a group call"
+        "Get info about a group call and its participants."
       ],
       "parameters": {
         "call": {
@@ -74263,9 +74277,11 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of results to return, see pagination¹",
+          "description": "Maximum number of participants to return in this call. If the number of returned participants is less than groupCall¹.participants_count, paginate through the remaining participants using phone.getGroupParticipants², passing to offset the phone.groupCall³.participants_next_offset returned by this call.",
           "links": [
-            "https://core.telegram.org/api/offsets"
+            "https://core.telegram.org/constructor/groupCall",
+            "https://core.telegram.org/method/phone.getGroupParticipants",
+            "https://core.telegram.org/constructor/phone.groupCall"
           ]
         }
       },
@@ -74453,9 +74469,10 @@
         },
         "offset": {
           "name": "offset",
-          "description": "Offset for results, taken from the next_offset field of phone.groupParticipants¹, initially an empty string. Note: if no more results are available, the method call will return an empty next_offset; thus, avoid providing the next_offset returned in phone.groupParticipants² if it is empty, to avoid an infinite loop.",
+          "description": "Offset for results, taken from the next_offset field of phone.groupParticipants¹ or the participants_next_offset field of phone.groupCall², initially an empty string. Note: if no more results are available, the method call will return an empty next_offset; thus, avoid providing the next_offset returned in phone.groupParticipants³ if it is empty, to avoid an infinite loop.",
           "links": [
             "https://core.telegram.org/constructor/phone.groupParticipants",
+            "https://core.telegram.org/constructor/phone.groupCall",
             "https://core.telegram.org/constructor/phone.groupParticipants"
           ]
         },
@@ -80682,7 +80699,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -81112,7 +81129,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -82012,12 +82029,12 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -82207,7 +82224,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 400,
+      "code": 403,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
