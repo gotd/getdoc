@@ -1549,7 +1549,8 @@
           "webPageEmpty",
           "webPageNotModified",
           "webPagePending",
-          "webViewMessageSent"
+          "webViewMessageSent",
+          "webViewResultUrl"
         ]
       },
       {
@@ -2311,8 +2312,7 @@
           "users.getSavedMusicByID",
           "users.getUsers",
           "users.setSecureValueErrors",
-          "users.suggestBirthday",
-          "webViewResultUrl"
+          "users.suggestBirthday"
         ]
       },
       {
@@ -21133,7 +21133,10 @@
     "messageActionGroupCall": {
       "name": "messageActionGroupCall",
       "description": [
-        "The group call has ended"
+        "A video chat/livestream¹ was started or terminated."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#video-chats-livestreams"
       ],
       "fields": {
         "call": {
@@ -21142,7 +21145,7 @@
         },
         "duration": {
           "name": "duration",
-          "description": "Group call duration"
+          "description": "Duration of the group call in seconds, for terminated calls."
         },
         "flags": {
           "name": "flags",
@@ -21156,7 +21159,10 @@
     "messageActionGroupCallScheduled": {
       "name": "messageActionGroupCallScheduled",
       "description": [
-        "A group call was scheduled"
+        "A video chat/livestream¹ was scheduled."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#video-chats-livestreams"
       ],
       "fields": {
         "call": {
@@ -21165,7 +21171,7 @@
         },
         "schedule_date": {
           "name": "schedule_date",
-          "description": "When is this group call scheduled to start"
+          "description": "When is the group call scheduled to start"
         }
       }
     },
@@ -43188,6 +43194,42 @@
           "description": "Message ID"
         }
       }
+    },
+    "webViewResultUrl": {
+      "name": "webViewResultUrl",
+      "description": [
+        "Contains the webview URL with appropriate theme and user info parameters added"
+      ],
+      "fields": {
+        "flags": {
+          "name": "flags",
+          "description": "Flags, see TL conditional fields¹",
+          "links": [
+            "https://core.telegram.org/mtproto/TL-combinators#conditional-fields"
+          ]
+        },
+        "fullscreen": {
+          "name": "fullscreen",
+          "description": "If set, the app must be opened in fullscreen"
+        },
+        "fullsize": {
+          "name": "fullsize",
+          "description": "If set, the app must be opened in fullsize mode instead of compact mode."
+        },
+        "query_id": {
+          "name": "query_id",
+          "description": "Webview session ID (only returned by inline button mini apps¹, menu button mini apps², attachment menu mini apps³).",
+          "links": [
+            "https://core.telegram.org/api/bots/webapps#inline-button-mini-apps",
+            "https://core.telegram.org/api/bots/webapps#menu-button-mini-apps",
+            "https://core.telegram.org/api/bots/webapps#attachment-menu-mini-apps"
+          ]
+        },
+        "url": {
+          "name": "url",
+          "description": "Webview URL to open"
+        }
+      }
     }
   },
   "types": {
@@ -47487,9 +47529,6 @@
     }
   },
   "methods": {
-    "Page not found": {
-      "name": "Page not found"
-    },
     "account.acceptAuthorization": {
       "name": "account.acceptAuthorization",
       "description": [
@@ -73850,11 +73889,11 @@
         },
         "schedule_date": {
           "name": "schedule_date",
-          "description": "For scheduled group call or livestreams, the absolute date when the group call will start"
+          "description": "For scheduled group call or livestreams, the absolute date (unixtime) when the group call is expected to start: the date must be at least 10 seconds and at most 8 days in the future."
         },
         "title": {
           "name": "title",
-          "description": "Call title"
+          "description": "Call title, if not set defaults to the group/channel's name."
         }
       },
       "errors": [
