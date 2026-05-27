@@ -12766,7 +12766,10 @@
     "groupCall": {
       "name": "groupCall",
       "description": [
-        "Info about a group call or livestream"
+        "Info about a group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "fields": {
         "access_hash": {
@@ -34048,7 +34051,7 @@
     "starRefProgram": {
       "name": "starRefProgram",
       "description": [
-        "Indo about an affiliate program offered by a bot¹"
+        "Info about an affiliate program offered by a bot¹"
       ],
       "links": [
         "https://core.telegram.org/api/bots/referrals"
@@ -74316,11 +74319,13 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of participants to return in this call. If the number of returned participants is less than groupCall¹.participants_count, paginate through the remaining participants using phone.getGroupParticipants², passing to offset the phone.groupCall³.participants_next_offset returned by this call.",
+          "description": "Maximum number of participants to return in this call (0 to return a server-defined amount). If the number of returned participants is less than groupCall¹.participants_count, paginate through the remaining participants using phone.getGroupParticipants², passing to offset the phone.groupCall³.participants_next_offset returned by this call. This parameter behaves in a different way compared to the limit of phone.getGroupParticipants⁴, see here »⁵ for more info.",
           "links": [
             "https://core.telegram.org/constructor/groupCall",
             "https://core.telegram.org/method/phone.getGroupParticipants",
-            "https://core.telegram.org/constructor/phone.groupCall"
+            "https://core.telegram.org/constructor/phone.groupCall",
+            "https://core.telegram.org/method/phone.getGroupParticipants",
+            "https://core.telegram.org/api/group-calls#getting-info-about-a-group-call"
           ]
         }
       },
