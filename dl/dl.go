@@ -95,6 +95,8 @@ func (c *Client) download(ctx context.Context, layer int, key string) ([]byte, e
 			Value: strconv.Itoa(layer),
 
 			HttpOnly: true,
+			Secure:   true,
+			SameSite: http.SameSiteStrictMode,
 		})
 	}
 
