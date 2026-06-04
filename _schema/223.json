@@ -12894,7 +12894,10 @@
     "groupCallDiscarded": {
       "name": "groupCallDiscarded",
       "description": [
-        "An ended group call"
+        "An ended group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "fields": {
         "access_hash": {
@@ -15414,7 +15417,10 @@
     "inputGroupCall": {
       "name": "inputGroupCall",
       "description": [
-        "Points to a specific group call"
+        "Points to a specific group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "fields": {
         "access_hash": {
@@ -17324,7 +17330,10 @@
     "inputPhoneCall": {
       "name": "inputPhoneCall",
       "description": [
-        "Phone call"
+        "Identifies a phone call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "access_hash": {
@@ -21187,7 +21196,10 @@
     "messageActionInviteToGroupCall": {
       "name": "messageActionInviteToGroupCall",
       "description": [
-        "A set of users was invited to the group call"
+        "A set of users was invited to a group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "fields": {
         "call": {
@@ -29259,7 +29271,10 @@
     "phoneCall": {
       "name": "phoneCall",
       "description": [
-        "Phone call"
+        "Phone call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "access_hash": {
@@ -29339,7 +29354,10 @@
     "phoneCallAccepted": {
       "name": "phoneCallAccepted",
       "description": [
-        "An accepted phone call"
+        "An accepted phone call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "access_hash": {
@@ -29389,19 +29407,28 @@
     "phoneCallDiscardReasonBusy": {
       "name": "phoneCallDiscardReasonBusy",
       "description": [
-        "The phone call was discarded because the user is busy in another call"
+        "The phone call was discarded because the user is busy in another call, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ]
     },
     "phoneCallDiscardReasonDisconnect": {
       "name": "phoneCallDiscardReasonDisconnect",
       "description": [
-        "The phone call was disconnected"
+        "The phone call was disconnected, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ]
     },
     "phoneCallDiscardReasonHangup": {
       "name": "phoneCallDiscardReasonHangup",
       "description": [
-        "The phone call was ended normally"
+        "The phone call was ended normally, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ]
     },
     "phoneCallDiscardReasonMigrateConferenceCall": {
@@ -29425,13 +29452,19 @@
     "phoneCallDiscardReasonMissed": {
       "name": "phoneCallDiscardReasonMissed",
       "description": [
-        "The phone call was missed"
+        "The phone call was missed, see here »¹ for more info."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ]
     },
     "phoneCallDiscarded": {
       "name": "phoneCallDiscarded",
       "description": [
-        "Indicates a discarded phone call"
+        "Indicates a discarded phone call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "duration": {
@@ -29488,7 +29521,10 @@
     "phoneCallProtocol": {
       "name": "phoneCallProtocol",
       "description": [
-        "Protocol info for libtgvoip"
+        "Protocol info for the VoIP library, see here »¹ for details on how to populate it."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#populating-phonecallprotocol"
       ],
       "fields": {
         "flags": {
@@ -29529,7 +29565,10 @@
     "phoneCallRequested": {
       "name": "phoneCallRequested",
       "description": [
-        "Requested phone call"
+        "Requested phone call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "access_hash": {
@@ -29579,7 +29618,10 @@
     "phoneCallWaiting": {
       "name": "phoneCallWaiting",
       "description": [
-        "Incoming phone call"
+        "Incoming phone call, see here »¹ for more info on the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "access_hash": {
@@ -29665,7 +29707,10 @@
     "phoneConnectionWebrtc": {
       "name": "phoneConnectionWebrtc",
       "description": [
-        "WebRTC connection parameters"
+        "WebRTC connection parameters for a phone call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls"
       ],
       "fields": {
         "flags": {
@@ -38652,7 +38697,10 @@
     "updateGroupCall": {
       "name": "updateGroupCall",
       "description": [
-        "A new groupcall was started"
+        "Info about a group call¹ was updated."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "fields": {
         "call": {
@@ -38706,7 +38754,10 @@
     "updateGroupCallConnection": {
       "name": "updateGroupCallConnection",
       "description": [
-        "New WebRTC parameters"
+        "New WebRTC connection parameters for the currently joined group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "fields": {
         "flags": {
@@ -38728,6 +38779,13 @@
     },
     "updateGroupCallEncryptedMessage": {
       "name": "updateGroupCallEncryptedMessage",
+      "description": [
+        "A new E2E-encrypted message was received in a conference call¹, sent using phone.sendGroupCallEncryptedMessage²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls",
+        "https://core.telegram.org/method/phone.sendGroupCallEncryptedMessage"
+      ],
       "fields": {
         "call": {
           "name": "call",
@@ -38745,6 +38803,13 @@
     },
     "updateGroupCallMessage": {
       "name": "updateGroupCallMessage",
+      "description": [
+        "A new in-call message was received in a group call or livestream¹, sent using phone.sendGroupCallMessage²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls",
+        "https://core.telegram.org/method/phone.sendGroupCallMessage"
+      ],
       "fields": {
         "call": {
           "name": "call",
@@ -38759,7 +38824,10 @@
     "updateGroupCallParticipants": {
       "name": "updateGroupCallParticipants",
       "description": [
-        "The participant list of a certain group call has changed"
+        "The participant list of a group call¹ has changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#applying-group-call-updates"
       ],
       "fields": {
         "call": {
@@ -73747,8 +73815,11 @@
     "phone.checkGroupCall": {
       "name": "phone.checkGroupCall",
       "description": [
-        "Check whether the group call Server Forwarding Unit is currently receiving the streams with the specified WebRTC source IDs.",
+        "Check whether the group call¹ Server Forwarding Unit is currently receiving the streams with the specified WebRTC source IDs.",
         "Returns an intersection of the source IDs specified in sources, and the source IDs currently being forwarded by the SFU."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -73819,7 +73890,10 @@
     "phone.createConferenceCall": {
       "name": "phone.createConferenceCall",
       "description": [
-        "Create and optionally join a new conference call."
+        "Create and optionally join a new conference call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
       ],
       "parameters": {
         "block": {
@@ -73862,7 +73936,10 @@
     "phone.createGroupCall": {
       "name": "phone.createGroupCall",
       "description": [
-        "Create a group call or livestream"
+        "Create a group call or livestream¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#video-chats-livestreams"
       ],
       "parameters": {
         "flags": {
@@ -73935,7 +74012,10 @@
     "phone.declineConferenceCallInvite": {
       "name": "phone.declineConferenceCallInvite",
       "description": [
-        "Declines a conference call invite."
+        "Decline a conference call¹ invite."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
       ],
       "parameters": {
         "msg_id": {
@@ -73957,8 +74037,11 @@
     "phone.deleteConferenceCallParticipants": {
       "name": "phone.deleteConferenceCallParticipants",
       "description": [
-        "Remove participants from a conference call.",
+        "Remove participants from a conference call¹.",
         "Exactly one of the only_left and kick flags must be set."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
       ],
       "parameters": {
         "block": {
@@ -74002,6 +74085,12 @@
     },
     "phone.deleteGroupCallMessages": {
       "name": "phone.deleteGroupCallMessages",
+      "description": [
+        "Delete messages from the in-call message overlay of a group call or livestream¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
+      ],
       "parameters": {
         "call": {
           "name": "call",
@@ -74033,6 +74122,12 @@
     },
     "phone.deleteGroupCallParticipantMessages": {
       "name": "phone.deleteGroupCallParticipantMessages",
+      "description": [
+        "Delete all messages from a specific participant in the in-call message overlay of a group call or livestream¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
+      ],
       "parameters": {
         "call": {
           "name": "call",
@@ -74120,7 +74215,10 @@
     "phone.discardGroupCall": {
       "name": "phone.discardGroupCall",
       "description": [
-        "Terminate a group call"
+        "Terminate a group call¹, ending the room for all participants."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -74149,10 +74247,11 @@
     "phone.editGroupCallParticipant": {
       "name": "phone.editGroupCallParticipant",
       "description": [
-        "Edit information about a given group call participant",
+        "Edit information about a given group call¹ participant.",
         "Note: flags¹.N?Bool² parameters can have three possible values:"
       ],
       "links": [
+        "https://core.telegram.org/api/group-calls",
         "https://core.telegram.org/mtproto/TL-combinators#conditional-fields",
         "https://core.telegram.org/type/Bool"
       ],
@@ -74238,7 +74337,10 @@
     "phone.editGroupCallTitle": {
       "name": "phone.editGroupCallTitle",
       "description": [
-        "Edit the title of a group call or livestream"
+        "Edit the title of a group call or livestream¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -74310,7 +74412,10 @@
     "phone.getGroupCall": {
       "name": "phone.getGroupCall",
       "description": [
-        "Get info about a group call and its participants."
+        "Get info about a group call¹ and its participants."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#getting-info-about-a-group-call"
       ],
       "parameters": {
         "call": {
@@ -74382,7 +74487,10 @@
     "phone.getGroupCallJoinAs": {
       "name": "phone.getGroupCallJoinAs",
       "description": [
-        "Get a list of peers that can be used to join a group call, presenting yourself as a specific user/channel."
+        "Get a list of peers that can be used to join a group call¹, presenting yourself as a specific user/channel."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#creating-joining-a-group-call-on-behalf-of-owned-channels"
       ],
       "parameters": {
         "peer": {
@@ -74405,6 +74513,12 @@
     },
     "phone.getGroupCallStars": {
       "name": "phone.getGroupCallStars",
+      "description": [
+        "Fetch the livestream¹ donor and paid-message leaderboard."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#livestreams"
+      ],
       "parameters": {
         "call": {
           "name": "call",
@@ -74493,7 +74607,10 @@
     "phone.getGroupParticipants": {
       "name": "phone.getGroupParticipants",
       "description": [
-        "Get group call participants"
+        "Get group call¹ participants."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#getting-info-about-a-group-call"
       ],
       "parameters": {
         "call": {
@@ -74536,7 +74653,10 @@
     "phone.inviteConferenceCallParticipant": {
       "name": "phone.inviteConferenceCallParticipant",
       "description": [
-        "Invite a user to a conference call."
+        "Invite a user to a conference call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
       ],
       "parameters": {
         "call": {
@@ -74570,7 +74690,10 @@
     "phone.inviteToGroupCall": {
       "name": "phone.inviteToGroupCall",
       "description": [
-        "Invite a set of users to a group call."
+        "Invite a set of users to a group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -74618,7 +74741,11 @@
     "phone.joinGroupCall": {
       "name": "phone.joinGroupCall",
       "description": [
-        "Join a group call"
+        "Join a group call¹, see here »² for the full flow."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls",
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "block": {
@@ -74712,7 +74839,10 @@
     "phone.joinGroupCallPresentation": {
       "name": "phone.joinGroupCallPresentation",
       "description": [
-        "Start screen sharing in a call"
+        "Start screen sharing in a group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -74740,7 +74870,10 @@
     "phone.leaveGroupCall": {
       "name": "phone.leaveGroupCall",
       "description": [
-        "Leave a group call"
+        "Leave a group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -74763,7 +74896,10 @@
     "phone.leaveGroupCallPresentation": {
       "name": "phone.leaveGroupCallPresentation",
       "description": [
-        "Stop screen sharing in a group call"
+        "Stop screen sharing in a group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -74896,7 +75032,10 @@
     "phone.saveCallDebug": {
       "name": "phone.saveCallDebug",
       "description": [
-        "Send phone call debug data to server"
+        "Send phone call¹ debug data to server."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#call-debug"
       ],
       "parameters": {
         "debug": {
@@ -74947,7 +75086,10 @@
     "phone.saveDefaultGroupCallJoinAs": {
       "name": "phone.saveDefaultGroupCallJoinAs",
       "description": [
-        "Set the default peer that will be used to join a group call in a specific dialog."
+        "Set the default peer that will be used to join a group call¹ in a specific dialog."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#creating-joining-a-group-call-on-behalf-of-owned-channels"
       ],
       "parameters": {
         "join_as": {
@@ -75020,6 +75162,13 @@
     },
     "phone.sendGroupCallEncryptedMessage": {
       "name": "phone.sendGroupCallEncryptedMessage",
+      "description": [
+        "Send an E2E-encrypted message to all participants of a conference call¹, using the E2E encryption protocol²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls",
+        "https://core.telegram.org/api/end-to-end/group-calls#encryption-protocol"
+      ],
       "parameters": {
         "call": {
           "name": "call",
@@ -75040,6 +75189,12 @@
     },
     "phone.sendGroupCallMessage": {
       "name": "phone.sendGroupCallMessage",
+      "description": [
+        "Send a transient in-call message to all participants of a group call or livestream¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#conference-calls"
+      ],
       "parameters": {
         "allow_paid_stars": {
           "name": "allow_paid_stars",
@@ -75080,7 +75235,10 @@
     "phone.sendSignalingData": {
       "name": "phone.sendSignalingData",
       "description": [
-        "Send VoIP signaling data"
+        "Send VoIP signaling data¹ for an ongoing phone call."
+      ],
+      "links": [
+        "https://core.telegram.org/api/calls#signaling-data"
       ],
       "parameters": {
         "data": {
@@ -75150,7 +75308,10 @@
     "phone.startScheduledGroupCall": {
       "name": "phone.startScheduledGroupCall",
       "description": [
-        "Start a scheduled group call."
+        "Start a scheduled group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#video-chats-livestreams"
       ],
       "parameters": {
         "call": {
@@ -75174,7 +75335,10 @@
     "phone.toggleGroupCallRecord": {
       "name": "phone.toggleGroupCallRecord",
       "description": [
-        "Start or stop recording a group call: the recorded audio and video streams will be automatically sent to Saved messages (the chat with ourselves)."
+        "Start or stop recording a group call¹: the recorded audio and video streams will be automatically sent to Saved messages (the chat with ourselves)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -75226,7 +75390,10 @@
     "phone.toggleGroupCallSettings": {
       "name": "phone.toggleGroupCallSettings",
       "description": [
-        "Change group call settings"
+        "Change group call¹ settings."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls"
       ],
       "parameters": {
         "call": {
@@ -75273,7 +75440,10 @@
     "phone.toggleGroupCallStartSubscription": {
       "name": "phone.toggleGroupCallStartSubscription",
       "description": [
-        "Subscribe or unsubscribe to a scheduled group call"
+        "Subscribe or unsubscribe to a scheduled group call¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/group-calls#video-chats-livestreams"
       ],
       "parameters": {
         "call": {
