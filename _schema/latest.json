@@ -38743,7 +38743,7 @@
         },
         "next_offset": {
           "name": "next_offset",
-          "description": "Offset of the next block."
+          "description": "Height of the block located after the last block in blocks."
         },
         "sub_chain_id": {
           "name": "sub_chain_id",
@@ -74450,10 +74450,14 @@
     "phone.getGroupCallChainBlocks": {
       "name": "phone.getGroupCallChainBlocks",
       "description": [
-        "Fetch the blocks of a conference blockchain »¹."
+        "Fetch the blocks of a conference blockchain »¹, returns an updateGroupCallChainBlocks² to be handled as specifiede here »³.",
+        "If the number of blocks returned by any call to this method is equal to limit, this method must be re-invoked immediately after processing the returned updateGroupCallChainBlocks¹, with the newly committed offset (usually equal to the returned next_offset)."
       ],
       "links": [
-        "https://core.telegram.org/api/end-to-end/group-calls"
+        "https://core.telegram.org/api/end-to-end/group-calls",
+        "https://core.telegram.org/constructor/updateGroupCallChainBlocks",
+        "https://core.telegram.org/api/end-to-end/group-calls#handling-updates",
+        "https://core.telegram.org/constructor/updateGroupCallChainBlocks"
       ],
       "parameters": {
         "call": {
@@ -74462,14 +74466,14 @@
         },
         "limit": {
           "name": "limit",
-          "description": "Maximum number of blocks to return in this call, see pagination¹",
+          "description": "Maximum number of blocks to return in this call, see pagination¹, max 100.",
           "links": [
             "https://core.telegram.org/api/offsets"
           ]
         },
         "offset": {
           "name": "offset",
-          "description": "Offset for pagination."
+          "description": "Start fetching blocks starting from the specified height."
         },
         "sub_chain_id": {
           "name": "sub_chain_id",
@@ -80913,7 +80917,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -80951,7 +80955,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 400,
+      "code": 403,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -82243,7 +82247,7 @@
       "description": "The specified token type is invalid."
     },
     "TOPIC_CLOSED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
