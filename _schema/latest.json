@@ -74368,19 +74368,25 @@
     "phone.exportGroupCallInvite": {
       "name": "phone.exportGroupCallInvite",
       "description": [
-        "Get an invite link¹ for a group call or livestream"
+        "Get an invite link¹ for a video chat/livestream »²; cannot be used for live stories »³ or conference calls »⁴."
       ],
       "links": [
-        "https://core.telegram.org/api/links#video-chat-livestream-links"
+        "https://core.telegram.org/api/links#video-chat-livestream-links",
+        "https://core.telegram.org/api/group-calls#video-chatslivestreams",
+        "https://core.telegram.org/api/group-calls#live-stories",
+        "https://core.telegram.org/api/group-calls#conference-calls"
       ],
       "parameters": {
         "call": {
           "name": "call",
-          "description": "The group call"
+          "description": "The video chat/livestream »¹",
+          "links": [
+            "https://core.telegram.org/api/group-calls#video-chatslivestreams"
+          ]
         },
         "can_self_unmute": {
           "name": "can_self_unmute",
-          "description": "For livestreams or muted group chats, if set, users that join using this link will be able to speak without explicitly requesting permission by (for example by raising their hand)."
+          "description": "For livestreams or muted group chats, if set, users that join using this link will be able to speak without explicitly requesting permission, for example by raising their hand."
         },
         "flags": {
           "name": "flags",
@@ -74694,15 +74700,20 @@
     "phone.inviteToGroupCall": {
       "name": "phone.inviteToGroupCall",
       "description": [
-        "Invite a set of users to a group call¹."
+        "Invite a set of users to a video chat/livestream »¹; cannot be used for live stories »² or conference calls »³."
       ],
       "links": [
-        "https://core.telegram.org/api/group-calls"
+        "https://core.telegram.org/api/group-calls#video-chatslivestreams",
+        "https://core.telegram.org/api/group-calls#live-stories",
+        "https://core.telegram.org/api/group-calls#conference-calls"
       ],
       "parameters": {
         "call": {
           "name": "call",
-          "description": "The group call"
+          "description": "The video chat/livestream »¹",
+          "links": [
+            "https://core.telegram.org/api/group-calls#video-chatslivestreams"
+          ]
         },
         "users": {
           "name": "users",
@@ -74754,9 +74765,10 @@
       "parameters": {
         "block": {
           "name": "block",
-          "description": "The block containing an appropriate e2e.chain.changeSetGroupState event¹.",
+          "description": "The block containing an appropriate e2e.chain.changeSetGroupState event¹, only for conference calls »².",
           "links": [
-            "https://core.telegram.org/api/end-to-end/group-calls"
+            "https://core.telegram.org/api/end-to-end/group-calls",
+            "https://core.telegram.org/api/group-calls#conference-calls"
           ]
         },
         "call": {
@@ -74772,14 +74784,23 @@
         },
         "invite_hash": {
           "name": "invite_hash",
-          "description": "The invitation hash from the invite link »¹, if provided allows speaking in a livestream or muted group chat.",
+          "description": "The invitation hash from the invite link »¹, if provided allows speaking in a livestream or muted group call (video chats/livestreams »² only, cannot be used by live stories »³ or conference calls »⁴).",
           "links": [
-            "https://core.telegram.org/api/links#video-chat-livestream-links"
+            "https://core.telegram.org/api/links#video-chat-livestream-links",
+            "https://core.telegram.org/api/group-calls#video-chatslivestreams",
+            "https://core.telegram.org/api/group-calls#live-stories",
+            "https://core.telegram.org/api/group-calls#conference-calls"
           ]
         },
         "join_as": {
           "name": "join_as",
-          "description": "Join the group call, presenting yourself as the specified user/channel"
+          "description": "Join the group call, presenting yourself as the specified user/channel (video chats/livestreams »¹ only, must be equal to inputPeerSelf² when joining live stories »³ or conference calls »⁴).",
+          "links": [
+            "https://core.telegram.org/api/group-calls#video-chatslivestreams",
+            "https://core.telegram.org/constructor/inputPeerSelf",
+            "https://core.telegram.org/api/group-calls#live-stories",
+            "https://core.telegram.org/api/group-calls#conference-calls"
+          ]
         },
         "muted": {
           "name": "muted",
@@ -74791,7 +74812,10 @@
         },
         "public_key": {
           "name": "public_key",
-          "description": "For conference calls, your public key."
+          "description": "For conference calls »¹ only, your public key.",
+          "links": [
+            "https://core.telegram.org/api/group-calls#conference-calls"
+          ]
         },
         "video_stopped": {
           "name": "video_stopped",
@@ -80643,7 +80667,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 400,
+      "code": 406,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -80917,7 +80941,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -80955,7 +80979,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -81034,7 +81058,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 403,
+      "code": 400,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -82139,7 +82163,7 @@
     "TAKEOUT_REQUIRED": {
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
-      "description": "A takeout¹ session needs to be initialized first, see here » for more info²."
+      "description": "A takeout session needs to be initialized first, see here » for more info."
     },
     "TASK_ALREADY_EXISTS": {
       "code": 400,
@@ -82252,7 +82276,7 @@
       "description": "This topic was closed, you can't send messages to it anymore."
     },
     "TOPIC_DELETED": {
-      "code": 400,
+      "code": 406,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -82442,7 +82466,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
