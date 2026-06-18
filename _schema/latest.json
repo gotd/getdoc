@@ -16236,7 +16236,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Time to live of self-destructing document"
+          "description": "Time to live of self-destructing document, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "video_cover": {
           "name": "video_cover",
@@ -16267,7 +16267,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Self-destruct time to live of document"
+          "description": "Time to live of self-destructing document, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "url": {
           "name": "url",
@@ -16481,7 +16481,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Time to live in seconds of self-destructing photo"
+          "description": "Time to live of self-destructing photo, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "video": {
           "name": "video",
@@ -16508,7 +16508,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Self-destruct time to live of photo"
+          "description": "Time to live of self-destructing photo, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the photo immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "url": {
           "name": "url",
@@ -16659,7 +16659,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Time to live in seconds of self-destructing document"
+          "description": "Time to live of self-destructing document, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "video_cover": {
           "name": "video_cover",
@@ -16705,7 +16705,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Time to live in seconds of self-destructing photo"
+          "description": "Time to live of self-destructing photo, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the photo immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "video": {
           "name": "video",
@@ -20447,7 +20447,10 @@
         },
         "media_unread": {
           "name": "media_unread",
-          "description": "Whether there are unread media attachments in this message"
+          "description": "Whether there are unread media attachments in this message, see here »¹ for more info on how to clear this flag.",
+          "links": [
+            "https://core.telegram.org/api/views#read-message-contents"
+          ]
         },
         "mentioned": {
           "name": "mentioned",
@@ -23223,7 +23226,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Time to live of self-destructing document"
+          "description": "Time to live of self-destructing document, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "video": {
           "name": "video",
@@ -23572,7 +23575,7 @@
         },
         "ttl_seconds": {
           "name": "ttl_seconds",
-          "description": "Time to live in seconds of self-destructing photo"
+          "description": "Time to live of self-destructing photo, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the photo immediately after it's played; otherwise self-destructs ttl_seconds after it's played."
         },
         "video": {
           "name": "video",
@@ -63202,7 +63205,11 @@
     "messages.getRecentLocations": {
       "name": "messages.getRecentLocations",
       "description": [
-        "Get live location history of a certain user"
+        "Get all recent live locations¹ sent to a specific chat: returns up to 1 location message (messageMediaGeoLive²) per chat participant."
+      ],
+      "links": [
+        "https://core.telegram.org/api/live-location",
+        "https://core.telegram.org/constructor/messageMediaGeoLive"
       ],
       "parameters": {
         "hash": {
@@ -63221,7 +63228,7 @@
         },
         "peer": {
           "name": "peer",
-          "description": "User"
+          "description": "Target group or private chat."
         }
       }
     },
@@ -64800,7 +64807,7 @@
       "parameters": {
         "max_id": {
           "name": "max_id",
-          "description": "If a positive value is passed, only messages with identifiers less or equal than the given one will be read"
+          "description": "If a positive value is passed, only messages with identifiers less than or equal to the given one will be read"
         },
         "peer": {
           "name": "peer",
@@ -64956,7 +64963,7 @@
       "parameters": {
         "max_id": {
           "name": "max_id",
-          "description": "If a positive value is passed, only messages with identifiers less or equal than the given one will be read."
+          "description": "If a positive value is passed, only messages with identifiers less than or equal to the given one will be read."
         },
         "parent_peer": {
           "name": "parent_peer",
@@ -81132,7 +81139,7 @@
       "description": "The specified message is not a voice message."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -81170,7 +81177,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -81249,7 +81256,7 @@
       "description": "The specified participant ID is invalid."
     },
     "PARTICIPANT_JOIN_MISSING": {
-      "code": 400,
+      "code": 403,
       "type": "PARTICIPANT_JOIN_MISSING",
       "description": "Trying to enable a presentation, when the user hasn't joined the Video Chat with phone.joinGroupCall."
     },
@@ -81562,7 +81569,7 @@
       "description": "The privacy key is invalid."
     },
     "PRIVACY_PREMIUM_REQUIRED": {
-      "code": 403,
+      "code": 406,
       "type": "PRIVACY_PREMIUM_REQUIRED",
       "description": "You need a Telegram Premium subscription to send a message to this user."
     },
@@ -82657,7 +82664,7 @@
       "description": "This method can only be called by a bot."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
