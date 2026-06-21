@@ -4299,7 +4299,10 @@
         },
         "premium_days": {
           "name": "premium_days",
-          "description": " "
+          "description": "Duration in days of the Telegram Premium¹ subscription granted by this purchase.",
+          "links": [
+            "https://core.telegram.org/api/premium"
+          ]
         },
         "store_product": {
           "name": "store_product",
@@ -6771,9 +6774,9 @@
         },
         "stories_max_id": {
           "name": "stories_max_id",
-          "description": "ID of the maximum read story¹.",
+          "description": "Summary of the channel or supergroup's active stories »¹.",
           "links": [
-            "https://core.telegram.org/api/stories"
+            "https://core.telegram.org/api/stories#recent-story-summaries"
           ]
         },
         "stories_unavailable": {
@@ -7684,7 +7687,11 @@
         },
         "edit_rank": {
           "name": "edit_rank",
-          "description": " "
+          "description": "Events where a participant's custom tag (rank) »¹ was changed (channelAdminLogEventActionParticipantEditRank²).",
+          "links": [
+            "https://core.telegram.org/api/rank",
+            "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantEditRank"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -9035,7 +9042,11 @@
         },
         "edit_rank": {
           "name": "edit_rank",
-          "description": " "
+          "description": "If set, does not allow a user to edit their own custom tag (rank) »¹ in a supergroup/chat².",
+          "links": [
+            "https://core.telegram.org/api/rank",
+            "https://core.telegram.org/api/channel"
+          ]
         },
         "embed_links": {
           "name": "embed_links",
@@ -9144,7 +9155,7 @@
         },
         "send_reactions": {
           "name": "send_reactions",
-          "description": " "
+          "description": "If set, does not allow a user to react to messages in a chat."
         },
         "send_roundvideos": {
           "name": "send_roundvideos",
@@ -10872,7 +10883,10 @@
         },
         "unread_poll_votes_count": {
           "name": "unread_poll_votes_count",
-          "description": " "
+          "description": "Number of unread votes cast in non-anonymous polls »¹ owned by the user in this dialog.",
+          "links": [
+            "https://core.telegram.org/api/poll#unread-poll-votes"
+          ]
         },
         "unread_reactions_count": {
           "name": "unread_reactions_count",
@@ -12493,7 +12507,10 @@
         },
         "title_missing": {
           "name": "title_missing",
-          "description": " "
+          "description": "If set, the topic has no user-defined title, can only be set for the per-user topics of bot forums¹; if this field is set, the topic title likely needs to be changed by the bot.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         },
         "top_message": {
           "name": "top_message",
@@ -12512,7 +12529,10 @@
         },
         "unread_poll_votes_count": {
           "name": "unread_poll_votes_count",
-          "description": " "
+          "description": "Number of unread votes cast in non-anonymous polls »¹ owned by the user in this forum topic.",
+          "links": [
+            "https://core.telegram.org/api/poll#unread-poll-votes"
+          ]
         },
         "unread_reactions_count": {
           "name": "unread_reactions_count",
@@ -13025,7 +13045,11 @@
         },
         "message": {
           "name": "message",
-          "description": "Message text or emoji reaction; empty for standalone paid live story donations"
+          "description": "Message text or emoji reaction; empty for standalone paid live story donations. Must be at most group_call_message_length_limit »¹ UTF-8 characters long. For paid chats, use stars_groupcall_message_limits »² to source limits according to the passed value of paid_message_stars, instead.",
+          "links": [
+            "https://core.telegram.org/api/config#group-call-message-length-limit",
+            "https://core.telegram.org/api/config#stars-groupcall-message-limits"
+          ]
         },
         "paid_message_stars": {
           "name": "paid_message_stars",
@@ -15985,10 +16009,15 @@
     "inputKeyboardButtonRequestPeer": {
       "name": "inputKeyboardButtonRequestPeer",
       "description": [
-        "Prompts the user to select and share one or more peers with the bot using messages.sendBotRequestedPeer¹."
+        "Prompts the user to select and share one or more peers with the bot using messages.sendBotRequestedPeer¹.",
+        "Use this constructor to send a keyboardButtonRequestPeer¹ button in a reply keyboard² in a private chat.",
+        "See peer requests¹ for the full flow."
       ],
       "links": [
-        "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer",
+        "https://core.telegram.org/constructor/keyboardButtonRequestPeer",
+        "https://core.telegram.org/bots/features#keyboards",
+        "https://core.telegram.org/api/bots/buttons#peer-requests"
       ],
       "fields": {
         "button_id": {
@@ -16041,11 +16070,14 @@
     "inputKeyboardButtonUrlAuth": {
       "name": "inputKeyboardButtonUrlAuth",
       "description": [
-        "Button to request a user to authorize¹ via URL using Seamless Telegram Login²."
+        "Button to request a user to authorize¹ via URL using Seamless Telegram Login².",
+        "Use this constructor to send a keyboardButtonUrlAuth¹ button in an inline keyboard²."
       ],
       "links": [
         "https://core.telegram.org/method/messages.acceptUrlAuth",
-        "https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots"
+        "https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots",
+        "https://core.telegram.org/constructor/keyboardButtonUrlAuth",
+        "https://core.telegram.org/bots/features#inline-keyboards"
       ],
       "fields": {
         "bot": {
@@ -16095,7 +16127,12 @@
     "inputKeyboardButtonUserProfile": {
       "name": "inputKeyboardButtonUserProfile",
       "description": [
-        "Button that links directly to a user profile"
+        "Button that links directly to a user profile",
+        "Use this constructor to send a keyboardButtonUserProfile¹ button in an inline keyboard²."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/keyboardButtonUserProfile",
+        "https://core.telegram.org/bots/features#inline-keyboards"
       ],
       "fields": {
         "flags": {
@@ -16476,7 +16513,7 @@
         },
         "live_photo": {
           "name": "live_photo",
-          "description": " "
+          "description": "Whether this is a live photo, i.e. a still photo paired with the short video clip captured alongside it"
         },
         "spoiler": {
           "name": "spoiler",
@@ -16488,7 +16525,7 @@
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "The short video clip of the live photo"
         }
       }
     },
@@ -16527,11 +16564,11 @@
       "fields": {
         "attached_media": {
           "name": "attached_media",
-          "description": " "
+          "description": "Optional media attachment to display alongside the poll"
         },
         "correct_answers": {
           "name": "correct_answers",
-          "description": "Correct answer IDs (for quiz polls)"
+          "description": "0-based indices of the correct answers in the answers vector (for quiz polls)"
         },
         "flags": {
           "name": "flags",
@@ -16546,35 +16583,38 @@
         },
         "solution": {
           "name": "solution",
-          "description": "Explanation of quiz solution"
+          "description": "Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style poll, 0-200 characters with at most 2 line feeds."
         },
         "solution_entities": {
           "name": "solution_entities",
-          "description": "Message entities for styled text¹",
+          "description": "Styled text message entities¹ for the solution explanation.",
           "links": [
             "https://core.telegram.org/api/entities"
           ]
         },
         "solution_media": {
           "name": "solution_media",
-          "description": " "
+          "description": "Optional media attachment shown alongside the quiz solution explanation"
         }
       }
     },
     "inputMediaStakeDice": {
       "name": "inputMediaStakeDice",
+      "description": [
+        "Dice game media."
+      ],
       "fields": {
         "client_seed": {
           "name": "client_seed",
-          "description": " "
+          "description": "Client seed."
         },
         "game_hash": {
           "name": "game_hash",
-          "description": " "
+          "description": "Game hash."
         },
         "ton_amount": {
           "name": "ton_amount",
-          "description": " "
+          "description": "Amount."
         }
       }
     },
@@ -16696,7 +16736,7 @@
         },
         "live_photo": {
           "name": "live_photo",
-          "description": " "
+          "description": "Whether this is a live photo, i.e. a still photo paired with the short video clip captured alongside it"
         },
         "spoiler": {
           "name": "spoiler",
@@ -16712,7 +16752,7 @@
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "The short video clip of the live photo"
         }
       }
     },
@@ -17031,10 +17071,18 @@
     },
     "inputPasskeyCredentialFirebasePNV": {
       "name": "inputPasskeyCredentialFirebasePNV",
+      "description": [
+        "Alternative passkey¹ credential that proves ownership of the account's phone number through a Firebase Phone Number Verification (PNV) token, used on official apps where a full WebAuthn public-key passkey² cannot be created, in a way similar to Firebase SMS authentication »³."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys",
+        "https://core.telegram.org/constructor/inputPasskeyCredentialPublicKey",
+        "https://core.telegram.org/api/auth"
+      ],
       "fields": {
         "pnv_token": {
           "name": "pnv_token",
-          "description": " "
+          "description": "Firebase Phone Number Verification token attesting that the user controls the phone number associated with the account."
         }
       }
     },
@@ -17834,7 +17882,10 @@
         },
         "poll_option": {
           "name": "poll_option",
-          "description": " "
+          "description": "If set, sends the message as a reply to a specific poll answer option »¹, containing the option bytes of the desired answer.",
+          "links": [
+            "https://core.telegram.org/api/poll#replying-to-poll-options"
+          ]
         },
         "quote_entities": {
           "name": "quote_entities",
@@ -18502,7 +18553,11 @@
         },
         "premium_days": {
           "name": "premium_days",
-          "description": " "
+          "description": "Duration in days of the Telegram Premium¹ subscription granted by this purchase, as indicated in auth.sentCodePaymentRequired².premium_days.",
+          "links": [
+            "https://core.telegram.org/api/premium",
+            "https://core.telegram.org/constructor/auth.sentCodePaymentRequired"
+          ]
         },
         "restore": {
           "name": "restore",
@@ -19341,7 +19396,13 @@
     "keyboardButton": {
       "name": "keyboardButton",
       "description": [
-        "Bot keyboard button"
+        "Bot keyboard button",
+        "Available only in reply keyboards¹.",
+        "When pressed, clients must send text as a message to the current chat, replying to the message that attached the replyKeyboardMarkup¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyKeyboardMarkup",
+        "https://core.telegram.org/constructor/replyKeyboardMarkup"
       ],
       "fields": {
         "flags": {
@@ -19367,7 +19428,13 @@
     "keyboardButtonBuy": {
       "name": "keyboardButtonBuy",
       "description": [
-        "Button to buy a product"
+        "Button to buy a product",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients must start the payment flow for the attached invoice¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup",
+        "https://core.telegram.org/api/payments"
       ],
       "fields": {
         "flags": {
@@ -19393,7 +19460,14 @@
     "keyboardButtonCallback": {
       "name": "keyboardButtonCallback",
       "description": [
-        "Callback button"
+        "Callback button",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients send data to the bot, optionally providing the user's 2FA SRP parameters¹ for identity verification, as described in callback queries²."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup",
+        "https://core.telegram.org/api/srp",
+        "https://core.telegram.org/api/bots/buttons#callback-queries"
       ],
       "fields": {
         "data": {
@@ -19433,7 +19507,12 @@
     "keyboardButtonCopy": {
       "name": "keyboardButtonCopy",
       "description": [
-        "Clipboard button: when clicked, the attached text must be copied to the clipboard."
+        "Clipboard button",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients must copy copy_text to the clipboard."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup"
       ],
       "fields": {
         "copy_text": {
@@ -19463,7 +19542,16 @@
     "keyboardButtonGame": {
       "name": "keyboardButtonGame",
       "description": [
-        "Button to start a game"
+        "Button to start a game",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients must open the game¹ from the attached messageMediaGame² constructor by invoking messages.getBotCallbackAnswer³ with the game flag set, as described in Starting a game⁴."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup",
+        "https://core.telegram.org/constructor/game",
+        "https://core.telegram.org/constructor/messageMediaGame",
+        "https://core.telegram.org/method/messages.getBotCallbackAnswer",
+        "https://core.telegram.org/api/bots/games#starting-a-game"
       ],
       "fields": {
         "flags": {
@@ -19489,7 +19577,13 @@
     "keyboardButtonRequestGeoLocation": {
       "name": "keyboardButtonRequestGeoLocation",
       "description": [
-        "Button to request a user's geolocation"
+        "Button to request a user's geolocation",
+        "Available only in private chats, in reply keyboards¹.",
+        "When pressed, clients must request permission from the user to send the current user's geolocation to the chat, replying to the message that attached the replyKeyboardMarkup¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyKeyboardMarkup",
+        "https://core.telegram.org/constructor/replyKeyboardMarkup"
       ],
       "fields": {
         "flags": {
@@ -19515,10 +19609,14 @@
     "keyboardButtonRequestPeer": {
       "name": "keyboardButtonRequestPeer",
       "description": [
-        "Prompts the user to select and share one or more peers with the bot using messages.sendBotRequestedPeer¹"
+        "Prompts the user to select and share one or more peers with the bot using messages.sendBotRequestedPeer¹",
+        "Available only in private chats, in reply keyboards¹.",
+        "See peer requests¹ for the full flow."
       ],
       "links": [
-        "https://core.telegram.org/method/messages.sendBotRequestedPeer"
+        "https://core.telegram.org/method/messages.sendBotRequestedPeer",
+        "https://core.telegram.org/constructor/replyKeyboardMarkup",
+        "https://core.telegram.org/api/bots/buttons#peer-requests"
       ],
       "fields": {
         "button_id": {
@@ -19559,7 +19657,13 @@
     "keyboardButtonRequestPhone": {
       "name": "keyboardButtonRequestPhone",
       "description": [
-        "Button to request a user's phone number"
+        "Button to request a user's phone number",
+        "Available only in private chats, in reply keyboards¹.",
+        "When pressed, clients must request permission from the user to send the current user's contact to the chat, replying to the message that attached the replyKeyboardMarkup¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyKeyboardMarkup",
+        "https://core.telegram.org/constructor/replyKeyboardMarkup"
       ],
       "fields": {
         "flags": {
@@ -19585,7 +19689,14 @@
     "keyboardButtonRequestPoll": {
       "name": "keyboardButtonRequestPoll",
       "description": [
-        "A button that allows the user to create and send a poll when pressed; available only in private"
+        "Button to request a poll from the user",
+        "Available only in private chats, in reply keyboards¹.",
+        "When pressed, clients prompt the user to create and send a poll¹, replying to the message that attached the replyKeyboardMarkup². If quiz is set, the prompt must create a quiz poll."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyKeyboardMarkup",
+        "https://core.telegram.org/api/poll",
+        "https://core.telegram.org/constructor/replyKeyboardMarkup"
       ],
       "fields": {
         "flags": {
@@ -19628,12 +19739,16 @@
       "name": "keyboardButtonSimpleWebView",
       "description": [
         "Button to open a bot mini app¹ using messages.requestSimpleWebView², without sending user information to the web app.",
-        "Can only be sent or received as part of a reply keyboard, use keyboardButtonWebView¹ for inline keyboards."
+        "Can only be sent or received as part of a reply keyboard, use keyboardButtonWebView¹ for inline keyboards.",
+        "When pressed, clients must open a Keyboard Button Mini App¹ using messages.requestSimpleWebView², passing url to messages.requestSimpleWebView³.url."
       ],
       "links": [
         "https://core.telegram.org/api/bots/webapps",
         "https://core.telegram.org/method/messages.requestSimpleWebView",
-        "https://core.telegram.org/constructor/keyboardButtonWebView"
+        "https://core.telegram.org/constructor/keyboardButtonWebView",
+        "https://core.telegram.org/api/bots/webapps#keyboard-button-mini-apps",
+        "https://core.telegram.org/method/messages.requestSimpleWebView",
+        "https://core.telegram.org/method/messages.requestSimpleWebView"
       ],
       "fields": {
         "flags": {
@@ -19703,7 +19818,14 @@
     "keyboardButtonSwitchInline": {
       "name": "keyboardButtonSwitchInline",
       "description": [
-        "Button to force a user to switch to inline mode: pressing the button will prompt the user to select one of their chats, open that chat and insert the bot's username and the specified inline query in the input field."
+        "Button to switch the user to inline mode",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients must insert the bot's username and query into the chat input field, triggering an inline query¹.",
+        "If same_peer is set, clients use the current chat. Otherwise, clients prompt the user to select a chat, filtered by peer_types if specified."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup",
+        "https://core.telegram.org/api/bots/inline"
       ],
       "fields": {
         "flags": {
@@ -19741,7 +19863,13 @@
     "keyboardButtonUrl": {
       "name": "keyboardButtonUrl",
       "description": [
-        "URL button"
+        "URL button",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients open url, showing a confirmation prompt unless the URL is one of the internal URIs¹."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup",
+        "https://github.com/DrKLO/Telegram/blob/002c01ecd37cd08ed07b3ed84d79318d091dfc85/TMessagesProj/src/main/java/org/telegram/messenger/browser/Browser.java#L351"
       ],
       "fields": {
         "flags": {
@@ -19771,7 +19899,8 @@
     "keyboardButtonUrlAuth": {
       "name": "keyboardButtonUrlAuth",
       "description": [
-        "Button to request a user to authorize via URL using Seamless Telegram Login¹. When the user clicks on such a button, messages.requestUrlAuth² should be called, providing the button_id and the ID of the container message. The returned urlAuthResultRequest³ object will contain more details about the authorization request (request_write_access if the bot would like to send messages to the user along with the username of the bot which will be used for user authorization). Finally, the user can choose to call messages.acceptUrlAuth⁴ to get a urlAuthResultAccepted⁵ with the URL to open instead of the url of this constructor, or a urlAuthResultDefault⁶, in which case the url of this constructor must be opened, instead. If the user refuses the authorization request but still wants to open the link, the url of this constructor must be used."
+        "Button to request a user to authorize via URL using Seamless Telegram Login¹. When the user clicks on such a button, messages.requestUrlAuth² should be called, providing the button_id and the ID of the container message. The returned urlAuthResultRequest³ object will contain more details about the authorization request (request_write_access if the bot would like to send messages to the user along with the username of the bot which will be used for user authorization). Finally, the user can choose to call messages.acceptUrlAuth⁴ to get a urlAuthResultAccepted⁵ with the URL to open instead of the url of this constructor, or a urlAuthResultDefault⁶, in which case the url of this constructor must be opened, instead. If the user refuses the authorization request but still wants to open the link, the url of this constructor must be used.",
+        "Available only in inline keyboards¹."
       ],
       "links": [
         "https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots",
@@ -19779,7 +19908,8 @@
         "https://core.telegram.org/constructor/urlAuthResultRequest",
         "https://core.telegram.org/method/messages.acceptUrlAuth",
         "https://core.telegram.org/constructor/urlAuthResultAccepted",
-        "https://core.telegram.org/constructor/urlAuthResultDefault"
+        "https://core.telegram.org/constructor/urlAuthResultDefault",
+        "https://core.telegram.org/constructor/replyInlineMarkup"
       ],
       "fields": {
         "button_id": {
@@ -19824,7 +19954,12 @@
     "keyboardButtonUserProfile": {
       "name": "keyboardButtonUserProfile",
       "description": [
-        "Button that links directly to a user profile"
+        "Button that links directly to a user profile",
+        "Available only in inline keyboards¹.",
+        "When pressed, clients must open the profile of the user identified by user_id."
+      ],
+      "links": [
+        "https://core.telegram.org/constructor/replyInlineMarkup"
       ],
       "fields": {
         "flags": {
@@ -19855,12 +19990,16 @@
       "name": "keyboardButtonWebView",
       "description": [
         "Button to open a bot mini app¹ using messages.requestWebView², sending over user information after user confirmation.",
-        "Can only be sent or received as part of an inline keyboard, use keyboardButtonSimpleWebView¹ for reply keyboards."
+        "Can only be sent or received as part of an inline keyboard, use keyboardButtonSimpleWebView¹ for reply keyboards.",
+        "When pressed, clients must open an Inline Button Mini App¹ using messages.requestWebView², passing url to messages.requestWebView³.url."
       ],
       "links": [
         "https://core.telegram.org/api/bots/webapps",
         "https://core.telegram.org/method/messages.requestWebView",
-        "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
+        "https://core.telegram.org/constructor/keyboardButtonSimpleWebView",
+        "https://core.telegram.org/api/bots/webapps#inline-button-mini-apps",
+        "https://core.telegram.org/method/messages.requestWebView",
+        "https://core.telegram.org/method/messages.requestWebView"
       ],
       "fields": {
         "flags": {
@@ -20430,7 +20569,10 @@
         },
         "guestchat_via_from": {
           "name": "guestchat_via_from",
-          "description": " "
+          "description": "If the message was posted by a guest bot »¹, the peer on whose behalf the bot sent the message.",
+          "links": [
+            "https://core.telegram.org/api/bots/guest-mode#guest-messages"
+          ]
         },
         "id": {
           "name": "id",
@@ -20589,7 +20731,10 @@
         },
         "summary_from_language": {
           "name": "summary_from_language",
-          "description": " "
+          "description": "If set, clients should offer a summarization button »¹ for this message; contains the two-letter ISO 639-1 language code of the message text that will be summarized.",
+          "links": [
+            "https://core.telegram.org/api/ai#summarize-messages"
+          ]
         },
         "ttl_period": {
           "name": "ttl_period",
@@ -21862,7 +22007,11 @@
         },
         "gift_num": {
           "name": "gift_num",
-          "description": " "
+          "description": "For gifts acquired in an auction »¹, the collectible number of the won collectible gift »²; this field is disjoint from auction_acquired because only auction collectibles won before this field was introduced in the API will not have this flag set.",
+          "links": [
+            "https://core.telegram.org/api/auctions",
+            "https://core.telegram.org/api/gifts#collectible-gifts"
+          ]
         },
         "message": {
           "name": "message",
@@ -21908,7 +22057,10 @@
         },
         "to_id": {
           "name": "to_id",
-          "description": " "
+          "description": "For gifts acquired in an auction »¹ (i.e. when auction_acquired is set), the peer the gift was assigned to.",
+          "links": [
+            "https://core.telegram.org/api/auctions"
+          ]
         },
         "upgrade_msg_id": {
           "name": "upgrade_msg_id",
@@ -22324,7 +22476,10 @@
         },
         "title_missing": {
           "name": "title_missing",
-          "description": " "
+          "description": "If set, the topic has no user-defined title, can only be set for the per-user topics of bot forums¹; if this field is set, the topic title likely needs to be changed by the bot.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         }
       }
     },
@@ -23183,7 +23338,7 @@
         },
         "game_outcome": {
           "name": "game_outcome",
-          "description": " "
+          "description": "Dice game outcome."
         },
         "value": {
           "name": "value",
@@ -23566,7 +23721,7 @@
         },
         "live_photo": {
           "name": "live_photo",
-          "description": " "
+          "description": "Whether this is a live photo, i.e. a still photo paired with the short video clip captured alongside it"
         },
         "photo": {
           "name": "photo",
@@ -23582,7 +23737,7 @@
         },
         "video": {
           "name": "video",
-          "description": " "
+          "description": "The short video clip of the live photo"
         }
       }
     },
@@ -23594,7 +23749,7 @@
       "fields": {
         "attached_media": {
           "name": "attached_media",
-          "description": " "
+          "description": "Optional media attachment displayed alongside the poll"
         },
         "flags": {
           "name": "flags",
@@ -24076,7 +24231,10 @@
         },
         "poll_option": {
           "name": "poll_option",
-          "description": " "
+          "description": "If the message is a reply to a specific poll answer option »¹, the option bytes of the answer the reply is directed at.",
+          "links": [
+            "https://core.telegram.org/api/poll#replying-to-poll-options"
+          ]
         },
         "quote": {
           "name": "quote",
@@ -24978,10 +25136,13 @@
     },
     "messages.emojiGameDiceInfo": {
       "name": "messages.emojiGameDiceInfo",
+      "description": [
+        "Dice game information."
+      ],
       "fields": {
         "current_streak": {
           "name": "current_streak",
-          "description": " "
+          "description": "Current streak."
         },
         "flags": {
           "name": "flags",
@@ -24992,41 +25153,47 @@
         },
         "game_hash": {
           "name": "game_hash",
-          "description": " "
+          "description": "Game hash."
         },
         "params": {
           "name": "params",
-          "description": " "
+          "description": "Parameters."
         },
         "plays_left": {
           "name": "plays_left",
-          "description": " "
+          "description": "Plays left."
         },
         "prev_stake": {
           "name": "prev_stake",
-          "description": " "
+          "description": "Previous stake."
         }
       }
     },
     "messages.emojiGameOutcome": {
       "name": "messages.emojiGameOutcome",
+      "description": [
+        "Dice game outcome."
+      ],
       "fields": {
         "seed": {
           "name": "seed",
-          "description": " "
+          "description": "Seed."
         },
         "stake_ton_amount": {
           "name": "stake_ton_amount",
-          "description": " "
+          "description": "Staked amount."
         },
         "ton_amount": {
           "name": "ton_amount",
-          "description": " "
+          "description": "Amount."
         }
       }
     },
     "messages.emojiGameUnavailable": {
-      "name": "messages.emojiGameUnavailable"
+      "name": "messages.emojiGameUnavailable",
+      "description": [
+        "Dice game information."
+      ]
     },
     "messages.emojiGroups": {
       "name": "messages.emojiGroups",
@@ -25534,7 +25701,10 @@
         },
         "topics": {
           "name": "topics",
-          "description": " "
+          "description": "Forum topics¹ the returned messages belong to.",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "users": {
           "name": "users",
@@ -25603,7 +25773,10 @@
         },
         "topics": {
           "name": "topics",
-          "description": " "
+          "description": "Forum topics¹ the returned messages belong to.",
+          "links": [
+            "https://core.telegram.org/api/forum#forum-topics"
+          ]
         },
         "users": {
           "name": "users",
@@ -30126,11 +30299,17 @@
         },
         "close_date": {
           "name": "close_date",
-          "description": "Point in time (Unix timestamp) when the poll will be automatically closed. Must be at least 5 and no more than 600 seconds in the future; can't be used together with close_period."
+          "description": "Point in time (Unix timestamp) when the poll will be automatically closed. Up to poll_close_period_max »¹ seconds in the future; can't be used together with close_period.",
+          "links": [
+            "https://core.telegram.org/api/config#poll-close-period-max"
+          ]
         },
         "close_period": {
           "name": "close_period",
-          "description": "Amount of time in seconds the poll will be active after creation, 5-600. Can't be used together with close_date."
+          "description": "Amount of time in seconds the poll will be active after creation, up to poll_close_period_max »¹ seconds. Can't be used together with close_date.",
+          "links": [
+            "https://core.telegram.org/api/config#poll-close-period-max"
+          ]
         },
         "closed": {
           "name": "closed",
@@ -30138,11 +30317,15 @@
         },
         "countries_iso2": {
           "name": "countries_iso2",
-          "description": " "
+          "description": "If set, only users from the specified ISO 3166-1 alpha-2 country codes may vote, see country-restricted polls »¹; a user may vote only if the phone_country_iso2 »² configuration parameter is contained in this list.",
+          "links": [
+            "https://core.telegram.org/api/poll#country-restricted-polls",
+            "https://core.telegram.org/api/config#phone-country-iso2"
+          ]
         },
         "creator": {
           "name": "creator",
-          "description": " "
+          "description": "Whether the current user created this poll"
         },
         "flags": {
           "name": "flags",
@@ -30153,11 +30336,14 @@
         },
         "hash": {
           "name": "hash",
-          "description": " "
+          "description": "Hash for use with messages.getPollResults¹",
+          "links": [
+            "https://core.telegram.org/method/messages.getPollResults"
+          ]
         },
         "hide_results_until_close": {
           "name": "hide_results_until_close",
-          "description": " "
+          "description": "Whether vote results are hidden from all participants until the poll is closed"
         },
         "id": {
           "name": "id",
@@ -30169,7 +30355,10 @@
         },
         "open_answers": {
           "name": "open_answers",
-          "description": " "
+          "description": "Whether users can add new answer options after the poll is created, see open-answer polls »¹",
+          "links": [
+            "https://core.telegram.org/api/poll#open-answer-polls"
+          ]
         },
         "public_voters": {
           "name": "public_voters",
@@ -30185,19 +30374,25 @@
         },
         "quiz": {
           "name": "quiz",
-          "description": "Whether this is a quiz (with wrong and correct answers, results shown in the return type)"
+          "description": "Whether this is a quiz (with wrong and correct answers, results shown in the return type). When creating a poll, the correct answers are specified in inputMediaPoll¹.correct_answers.",
+          "links": [
+            "https://core.telegram.org/constructor/inputMediaPoll"
+          ]
         },
         "revoting_disabled": {
           "name": "revoting_disabled",
-          "description": " "
+          "description": "If set, users cannot change their vote after casting it"
         },
         "shuffle_answers": {
           "name": "shuffle_answers",
-          "description": " "
+          "description": "Whether answer options are displayed in a randomized order to each user"
         },
         "subscribers_only": {
           "name": "subscribers_only",
-          "description": " "
+          "description": "Whether only subscribers can vote: a user may vote only if they are currently a member of the channel/supergroup and joined it at least 24 hours before the poll was posted, see subscriber-only polls »¹.",
+          "links": [
+            "https://core.telegram.org/api/poll#subscriber-only-polls"
+          ]
         }
       }
     },
@@ -30209,11 +30404,14 @@
       "fields": {
         "added_by": {
           "name": "added_by",
-          "description": " "
+          "description": "The peer who added this answer; only set for answers dynamically added to an open-answer poll, see polls »¹",
+          "links": [
+            "https://core.telegram.org/api/poll#open-answer-polls"
+          ]
         },
         "date": {
           "name": "date",
-          "description": " "
+          "description": "When this answer was added; only set for answers dynamically added to an open-answer poll"
         },
         "flags": {
           "name": "flags",
@@ -30224,7 +30422,7 @@
         },
         "media": {
           "name": "media",
-          "description": " "
+          "description": "Optional media attachment displayed alongside the answer"
         },
         "option": {
           "name": "option",
@@ -30273,7 +30471,7 @@
         },
         "recent_voters": {
           "name": "recent_voters",
-          "description": " "
+          "description": "Peers of the most recent voters for this option; mutually exclusive with voters"
         },
         "voters": {
           "name": "voters",
@@ -30289,7 +30487,10 @@
       "fields": {
         "can_view_stats": {
           "name": "can_view_stats",
-          "description": " "
+          "description": "Whether the current user can view detailed poll statistics »¹",
+          "links": [
+            "https://core.telegram.org/api/stats#poll-statistics"
+          ]
         },
         "flags": {
           "name": "flags",
@@ -30300,7 +30501,10 @@
         },
         "has_unread_votes": {
           "name": "has_unread_votes",
-          "description": " "
+          "description": "Whether there are unread votes in this non-anonymous poll, see polls »¹",
+          "links": [
+            "https://core.telegram.org/api/poll#unread-poll-votes"
+          ]
         },
         "min": {
           "name": "min",
@@ -30331,7 +30535,7 @@
         },
         "solution_media": {
           "name": "solution_media",
-          "description": " "
+          "description": "Optional media attachment shown alongside the quiz solution explanation"
         },
         "total_voters": {
           "name": "total_voters",
@@ -31183,7 +31387,10 @@
         },
         "poll_votes_notify_from": {
           "name": "poll_votes_notify_from",
-          "description": " "
+          "description": "Non-anonymous poll vote »¹ notification settings, if not set completely disables notifications/updates about votes cast in the user's non-anonymous polls.",
+          "links": [
+            "https://core.telegram.org/api/poll#unread-poll-votes"
+          ]
         },
         "show_previews": {
           "name": "show_previews",
@@ -31315,6 +31522,15 @@
     },
     "recentStory": {
       "name": "recentStory",
+      "description": [
+        "Summary of a peer's active stories »¹, embedded in user².stories_max_id and channel³.stories_max_id and returned by stories.getPeerMaxIDs⁴."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#recent-story-summaries",
+        "https://core.telegram.org/constructor/user",
+        "https://core.telegram.org/constructor/channel",
+        "https://core.telegram.org/method/stories.getPeerMaxIDs"
+      ],
       "fields": {
         "flags": {
           "name": "flags",
@@ -31325,18 +31541,24 @@
         },
         "live": {
           "name": "live",
-          "description": " "
+          "description": "Whether the peer is currently broadcasting a live story »¹.",
+          "links": [
+            "https://core.telegram.org/api/stories#live-stories"
+          ]
         },
         "max_id": {
           "name": "max_id",
-          "description": " "
+          "description": "If live is set, ID of the peer's active live story »¹; otherwise, ID of the peer's maximum active story.",
+          "links": [
+            "https://core.telegram.org/api/stories#live-stories"
+          ]
         }
       }
     },
     "replyInlineMarkup": {
       "name": "replyInlineMarkup",
       "description": [
-        "Bot or inline keyboard"
+        "Represents an inline keyboard"
       ],
       "fields": {
         "rows": {
@@ -31375,7 +31597,7 @@
     "replyKeyboardHide": {
       "name": "replyKeyboardHide",
       "description": [
-        "Hide sent bot keyboard"
+        "Hide sent reply keyboard"
       ],
       "fields": {
         "flags": {
@@ -31394,7 +31616,7 @@
     "replyKeyboardMarkup": {
       "name": "replyKeyboardMarkup",
       "description": [
-        "Bot keyboard"
+        "Represents a reply keyboard"
       ],
       "fields": {
         "flags": {
@@ -33686,7 +33908,7 @@
         },
         "gift_num": {
           "name": "gift_num",
-          "description": "If set, the collectible number of the won gift among all collectibles of the same type."
+          "description": "If set, the collectible number of the won gift among all collectibles of the same type. This field is optional because only auction collectibles won before this field was introduced in the API will not have this flag set."
         },
         "message": {
           "name": "message",
@@ -34738,7 +34960,10 @@
         },
         "phonegroup_message": {
           "name": "phonegroup_message",
-          "description": " "
+          "description": "Represents payment for a paid text message sent during a group call or live video stream »¹.",
+          "links": [
+            "https://core.telegram.org/api/group-calls"
+          ]
         },
         "photo": {
           "name": "photo",
@@ -36190,7 +36415,7 @@
         },
         "music": {
           "name": "music",
-          "description": " "
+          "description": "If set, the audio track played as background music for the story."
         },
         "noforwards": {
           "name": "noforwards",
@@ -36281,7 +36506,10 @@
         },
         "live": {
           "name": "live",
-          "description": " "
+          "description": "Whether this story is a live video stream »¹.",
+          "links": [
+            "https://core.telegram.org/api/stories"
+          ]
         }
       }
     },
@@ -38700,10 +38928,13 @@
     },
     "updateEmojiGameInfo": {
       "name": "updateEmojiGameInfo",
+      "description": [
+        "Dice game update."
+      ],
       "fields": {
         "info": {
           "name": "info",
-          "description": " "
+          "description": "Dice game information."
         }
       }
     },
@@ -39104,11 +39335,11 @@
         },
         "msg_id": {
           "name": "msg_id",
-          "description": " "
+          "description": "Message ID of the poll"
         },
         "peer": {
           "name": "peer",
-          "description": " "
+          "description": "Peer of the message containing the poll"
         },
         "poll": {
           "name": "poll",
@@ -39124,7 +39355,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": " "
+          "description": "If the poll is in a forum topic, the ID of the top message of the topic"
         }
       }
     },
@@ -39148,7 +39379,7 @@
         },
         "positions": {
           "name": "positions",
-          "description": " "
+          "description": "0-based indices of the voted options within the answers vector, corresponding element-by-element to options"
         },
         "qts": {
           "name": "qts",
@@ -41746,7 +41977,11 @@
         },
         "bot_can_manage_bots": {
           "name": "bot_can_manage_bots",
-          "description": " "
+          "description": "If set, this bot is a manager bot¹ that can create and manage managed bots »² on behalf of the user.",
+          "links": [
+            "https://core.telegram.org/api/bots/managed-bots",
+            "https://core.telegram.org/api/bots/managed-bots"
+          ]
         },
         "bot_chat_history": {
           "name": "bot_chat_history",
@@ -41768,7 +42003,10 @@
         },
         "bot_guestchat": {
           "name": "bot_guestchat",
-          "description": " "
+          "description": "If set, this bot can be invoked as a guest in chats »¹.",
+          "links": [
+            "https://core.telegram.org/api/bots/guest-mode"
+          ]
         },
         "bot_has_main_app": {
           "name": "bot_has_main_app",
@@ -41982,9 +42220,9 @@
         },
         "stories_max_id": {
           "name": "stories_max_id",
-          "description": "ID of the maximum read story¹.  When updating the local peer database², do not apply changes to this field if the min flag of the incoming constructor is set.",
+          "description": "Summary of the user's active stories »¹.  When updating the local peer database², do not apply changes to this field if the min flag of the incoming constructor is set.",
           "links": [
-            "https://core.telegram.org/api/stories",
+            "https://core.telegram.org/api/stories#recent-story-summaries",
             "https://core.telegram.org/api/peers"
           ]
         },
@@ -42091,7 +42329,10 @@
         },
         "bot_manager_id": {
           "name": "bot_manager_id",
-          "description": " "
+          "description": "If this user is a managed bot »¹, the ID of the user or manager bot that manages it.",
+          "links": [
+            "https://core.telegram.org/api/bots/managed-bots"
+          ]
         },
         "bot_verification": {
           "name": "bot_verification",
@@ -42389,7 +42630,7 @@
         },
         "unofficial_security_risk": {
           "name": "unofficial_security_risk",
-          "description": " "
+          "description": "If set, this user uses an unofficial Telegram client, and messages sent to them may be less secure; clients should display a warning in the user's profile."
         },
         "video_calls_available": {
           "name": "video_calls_available",
@@ -43052,7 +43293,11 @@
     "webPage": {
       "name": "webPage",
       "description": [
-        "Webpage preview"
+        "Webpage preview",
+        "The type field indicates the type of the web page, which influences how the preview is rendered (i.e. which extra action button is offered, where the media is taken from, and which WebPageAttribute¹ is present in the attributes field). It can be one of the following:"
+      ],
+      "links": [
+        "https://core.telegram.org/type/WebPageAttribute"
       ],
       "fields": {
         "attributes": {
@@ -43138,7 +43383,11 @@
         },
         "type": {
           "name": "type",
-          "description": "Type of the web page. One of the following: - app- article- document- gif- photo- profile- telegram_album- telegram_auction- telegram_background- telegram_bot- telegram_botapp- telegram_call- telegram_channel- telegram_channel_boost- telegram_channel_direct- telegram_channel_request- telegram_chat- telegram_chat_request- telegram_chatlist- telegram_collection- telegram_community- telegram_giftcode- telegram_group_boost- telegram_livestream- telegram_megagroup- telegram_megagroup_request- telegram_message- telegram_newbot- telegram_nft- telegram_stickerset- telegram_story- telegram_story_album- telegram_theme- telegram_user- telegram_videochat- telegram_voicechat- video"
+          "description": "Type of the web page, which influences how the preview is rendered (i.e. which extra action button is offered, where the media is taken from, and which WebPageAttribute¹ is present in the attributes field). See above² for the list of possible values.",
+          "links": [
+            "https://core.telegram.org/type/WebPageAttribute",
+            "https://core.telegram.org#"
+          ]
         },
         "url": {
           "name": "url",
@@ -44758,10 +45007,22 @@
       ]
     },
     "InputPasskeyCredential": {
-      "name": "InputPasskeyCredential"
+      "name": "InputPasskeyCredential",
+      "description": [
+        "Credential used to register a passkey »¹ or to log in with one."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys"
+      ]
     },
     "InputPasskeyResponse": {
-      "name": "InputPasskeyResponse"
+      "name": "InputPasskeyResponse",
+      "description": [
+        "WebAuthn response generated by the authenticator when registering or logging in with a public-key passkey »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/passkeys"
+      ]
     },
     "InputPaymentCredentials": {
       "name": "InputPaymentCredentials",
@@ -44872,7 +45133,13 @@
       ]
     },
     "InputStarGiftAuction": {
-      "name": "InputStarGiftAuction"
+      "name": "InputStarGiftAuction",
+      "description": [
+        "Identifies a collectible gift auction »¹, either by the ID of the linked collectible gift or by an auction deep link slug."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "InputStarsTransaction": {
       "name": "InputStarsTransaction",
@@ -45172,10 +45439,16 @@
       ]
     },
     "Messages.EmojiGameInfo": {
-      "name": "Messages.EmojiGameInfo"
+      "name": "Messages.EmojiGameInfo",
+      "description": [
+        "Dice game information."
+      ]
     },
     "Messages.EmojiGameOutcome": {
-      "name": "Messages.EmojiGameOutcome"
+      "name": "Messages.EmojiGameOutcome",
+      "description": [
+        "Dice game outcome."
+      ]
     },
     "Messages.FavedStickers": {
       "name": "Messages.FavedStickers",
@@ -45497,7 +45770,13 @@
       ]
     },
     "Payments.StarGiftActiveAuctions": {
-      "name": "Payments.StarGiftActiveAuctions"
+      "name": "Payments.StarGiftActiveAuctions",
+      "description": [
+        "List of currently active gift auctions »¹ where the user has placed a bid, or an indication that the locally cached list hasn't changed."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "Payments.StarGiftAuctionAcquiredGifts": {
       "name": "Payments.StarGiftAuctionAcquiredGifts",
@@ -45852,7 +46131,13 @@
       ]
     },
     "RecentStory": {
-      "name": "RecentStory"
+      "name": "RecentStory",
+      "description": [
+        "Summary of a peer's active stories »¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#recent-story-summaries"
+      ]
     },
     "ReplyMarkup": {
       "name": "ReplyMarkup",
@@ -46133,7 +46418,13 @@
       ]
     },
     "StarGiftAttributeRarity": {
-      "name": "StarGiftAttributeRarity"
+      "name": "StarGiftAttributeRarity",
+      "description": [
+        "Rarity of a collectible gift »¹ attribute, either as an exact permille value or as one of the named rarity tiers (uncommon, rare, epic, legendary)."
+      ],
+      "links": [
+        "https://core.telegram.org/api/gifts#collectible-gifts"
+      ]
     },
     "StarGiftAuctionAcquiredGift": {
       "name": "StarGiftAuctionAcquiredGift",
@@ -46142,10 +46433,22 @@
       ]
     },
     "StarGiftAuctionRound": {
-      "name": "StarGiftAuctionRound"
+      "name": "StarGiftAuctionRound",
+      "description": [
+        "Describes one or more rounds of a collectible gift auction »¹, optionally extendable."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "StarGiftAuctionState": {
-      "name": "StarGiftAuctionState"
+      "name": "StarGiftAuctionState",
+      "description": [
+        "State of a collectible gift auction »¹: active/pending, finished, or unchanged with respect to a locally cached version."
+      ],
+      "links": [
+        "https://core.telegram.org/api/auctions"
+      ]
     },
     "StarGiftAuctionUserState": {
       "name": "StarGiftAuctionUserState",
@@ -57117,7 +57420,10 @@
         },
         "bots_guestchat": {
           "name": "bots_guestchat",
-          "description": " "
+          "description": "Most frequently used guest bots »¹",
+          "links": [
+            "https://core.telegram.org/api/bots/guest-mode"
+          ]
         },
         "bots_inline": {
           "name": "bots_inline",
@@ -58992,7 +59298,10 @@
         },
         "title_missing": {
           "name": "title_missing",
-          "description": " "
+          "description": "If set, the topic has no user-defined title, can only be set for the per-user topics of bot forums¹; if this field is set, the topic title likely needs to be changed by the bot.",
+          "links": [
+            "https://core.telegram.org/api/forum#bot-forums"
+          ]
         }
       },
       "errors": [
@@ -61934,7 +62243,10 @@
       ]
     },
     "messages.getEmojiGameInfo": {
-      "name": "messages.getEmojiGameInfo"
+      "name": "messages.getEmojiGameInfo",
+      "description": [
+        "Fetch dice game information."
+      ]
     },
     "messages.getEmojiGroups": {
       "name": "messages.getEmojiGroups",
@@ -63251,7 +63563,7 @@
         },
         "poll_hash": {
           "name": "poll_hash",
-          "description": " "
+          "description": "Pass the poll.hash from the last received poll state; the server skips returning unchanged data"
         }
       },
       "errors": [
@@ -66854,7 +67166,11 @@
         },
         "webapp_req_id": {
           "name": "webapp_req_id",
-          "description": " "
+          "description": "If the button was prepared for a Mini App »¹, the Mini App request ID returned by bots.requestWebViewButton².",
+          "links": [
+            "https://core.telegram.org/api/bots/buttons#requesting-peers-via-mini-apps",
+            "https://core.telegram.org/method/bots.requestWebViewButton"
+          ]
         }
       },
       "errors": [
@@ -69208,11 +69524,16 @@
       "name": "messages.sendVote",
       "description": [
         "Vote in a poll¹",
-        "Starting from layer 159, the vote will be sent from the peer specified using messages.saveDefaultSendAs¹."
+        "Starting from layer 159, the vote will be sent from the peer specified using messages.saveDefaultSendAs¹.",
+        "Before voting, clients should check that the user is actually allowed to vote: voting is not possible if the poll is closed, if it is subscriber-only »¹ and the user is not an eligible subscriber, or if it is country-restricted »² and the user's phone_country_iso2 »³ is not in the poll's allowed country list. See vote restrictions »⁴ for the full list of conditions."
       ],
       "links": [
         "https://core.telegram.org/constructor/poll",
-        "https://core.telegram.org/method/messages.saveDefaultSendAs"
+        "https://core.telegram.org/method/messages.saveDefaultSendAs",
+        "https://core.telegram.org/api/poll#subscriber-only-polls",
+        "https://core.telegram.org/api/poll#country-restricted-polls",
+        "https://core.telegram.org/api/config#phone-country-iso2",
+        "https://core.telegram.org/api/poll#vote-restrictions"
       ],
       "parameters": {
         "msg_id": {
@@ -70407,10 +70728,12 @@
     "messages.summarizeText": {
       "name": "messages.summarizeText",
       "description": [
-        "Summarize the contents of a message with AI, see here »¹ for more info."
+        "Summarize the contents of a message with AI, see here »¹ for more info.",
+        "Clients should use message¹.summary_from_language as a hint for showing a summarization button; its absence does not forbid invoking this method."
       ],
       "links": [
-        "https://core.telegram.org/api/ai#summarize-messages"
+        "https://core.telegram.org/api/ai#summarize-messages",
+        "https://core.telegram.org/constructor/message"
       ],
       "parameters": {
         "flags": {
@@ -70430,11 +70753,14 @@
         },
         "to_lang": {
           "name": "to_lang",
-          "description": " "
+          "description": "If set, generates the summary in the specified target language (two-letter ISO 639-1 language code) instead of the message's language."
         },
         "tone": {
           "name": "tone",
-          "description": " "
+          "description": "If set, rephrases the summary using the specified AI composer tone »¹ (pass the tone identifier)",
+          "links": [
+            "https://core.telegram.org/api/ai#ai-compose-tones"
+          ]
         }
       },
       "errors": [
@@ -70908,7 +71234,10 @@
         },
         "tone": {
           "name": "tone",
-          "description": " "
+          "description": "If set, rephrases the translation using the specified AI composer tone »¹ (pass the tone identifier)",
+          "links": [
+            "https://core.telegram.org/api/ai#ai-compose-tones"
+          ]
         }
       },
       "errors": [
@@ -72624,7 +72953,11 @@
         },
         "exclude_hosted": {
           "name": "exclude_hosted",
-          "description": " "
+          "description": "If set, excludes collectible gifts¹ that are merely hosted² on the profile (i.e. displayed by the peer while ownership belongs to a TON wallet), returning only gifts actually owned by the peer.",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts",
+            "https://core.telegram.org/constructor/starGiftUnique"
+          ]
         },
         "exclude_saved": {
           "name": "exclude_saved",
@@ -72695,7 +73028,11 @@
         },
         "peer_color_available": {
           "name": "peer_color_available",
-          "description": " "
+          "description": "If set, only returns collectible gifts¹ whose palette can be used as a collectible message palette »².",
+          "links": [
+            "https://core.telegram.org/api/gifts#collectible-gifts",
+            "https://core.telegram.org/api/colors#collectible-message-palettes"
+          ]
         },
         "sort_by_value": {
           "name": "sort_by_value",
@@ -77751,7 +78088,7 @@
         },
         "music": {
           "name": "music",
-          "description": " "
+          "description": "If set, the new audio track to play as background music for the story."
         },
         "peer": {
           "name": "peer",
@@ -77944,12 +78281,18 @@
     "stories.getPeerMaxIDs": {
       "name": "stories.getPeerMaxIDs",
       "description": [
-        "Get the IDs of the maximum read stories for a set of peers."
+        "Get compact active story summaries »¹ for a set of peers."
+      ],
+      "links": [
+        "https://core.telegram.org/api/stories#recent-story-summaries"
       ],
       "parameters": {
         "id": {
           "name": "id",
-          "description": "Peers"
+          "description": "Peers whose active story summaries »¹ should be fetched.",
+          "links": [
+            "https://core.telegram.org/api/stories#recent-story-summaries"
+          ]
         }
       }
     },
@@ -78607,7 +78950,7 @@
         },
         "music": {
           "name": "music",
-          "description": " "
+          "description": "If set, the audio track to play as background music for the story."
         },
         "noforwards": {
           "name": "noforwards",
