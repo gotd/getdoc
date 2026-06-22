@@ -4038,9 +4038,9 @@
         },
         "tmp_sessions": {
           "name": "tmp_sessions",
-          "description": "Temporary passport¹ sessions",
+          "description": "Number of parallel sessions¹ the client may open to the main connection of its home DC to increase throughput; if absent or ≤ 1, a single main session must be used",
           "links": [
-            "https://core.telegram.org/passport"
+            "https://core.telegram.org/api/datacenter#parallel-sessions"
           ]
         },
         "user": {
@@ -6464,11 +6464,11 @@
         "Channel/supergroup info",
         "When updating the local peer database¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).",
         "The only exception to the above rule is when the min flag is set, in which case only the following fields must be applied over any locally stored version:",
-        "See here »¹ for an implementation of the logic to use when updating the local user peer database²."
+        "See here »¹ for an implementation of the logic to use when updating the local channel peer database²."
       ],
       "links": [
         "https://core.telegram.org/api/peers",
-        "https://github.com/tdlib/td/blob/a24af0992245f838f2b4b418a0a2d5fa9caa27b5/td/telegram/ChatManager.cpp#L8329",
+        "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/ChatManager.cpp#L9176",
         "https://core.telegram.org/api/peers"
       ],
       "fields": {
@@ -8769,11 +8769,11 @@
       "description": [
         "Info about a group.",
         "When updating the local peer database¹, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).",
-        "See here »¹ for an implementation of the logic to use when updating the local user peer database²."
+        "See here »¹ for an implementation of the logic to use when updating the local chat peer database²."
       ],
       "links": [
         "https://core.telegram.org/api/peers",
-        "https://github.com/tdlib/td/blob/a24af0992245f838f2b4b418a0a2d5fa9caa27b5/td/telegram/ChatManager.cpp#L5152",
+        "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/ChatManager.cpp#L5679",
         "https://core.telegram.org/api/peers"
       ],
       "fields": {
@@ -9901,8 +9901,9 @@
       "fields": {
         "gift": {
           "name": "gift",
-          "description": "The owned collectible gift on which this theme is based, as a starGiftUnique¹ constructor.",
+          "description": "The owned or hosted collectible gift »¹ on which this theme is based, as a starGiftUnique² constructor.",
           "links": [
+            "https://core.telegram.org/api/gifts#hosted-collectible-gifts",
             "https://core.telegram.org/constructor/starGiftUnique"
           ]
         },
@@ -10345,9 +10346,9 @@
         },
         "tmp_sessions": {
           "name": "tmp_sessions",
-          "description": "Temporary passport¹ sessions",
+          "description": "Number of parallel sessions¹ the client may open to the main connection of its home DC to increase throughput; if absent or ≤ 1, a single main session must be used",
           "links": [
-            "https://core.telegram.org/passport"
+            "https://core.telegram.org/api/datacenter#parallel-sessions"
           ]
         },
         "venue_search_username": {
@@ -11340,7 +11341,7 @@
           "name": "waveform",
           "description": "Waveform: consists in a series of bitpacked 5-bit values. Example implementation: android¹.",
           "links": [
-            "https://github.com/DrKLO/Telegram/blob/96dce2c9aabc33b87db61d830aa087b6b03fe397/TMessagesProj/jni/audio.c#L546"
+            "https://github.com/DrKLO/Telegram/blob/9b50143d8896d255d03155598937e4f3e28afd86/TMessagesProj/jni/audio.c#L562"
           ]
         }
       }
@@ -11861,11 +11862,11 @@
     "emojiStatusCollectible": {
       "name": "emojiStatusCollectible",
       "description": [
-        "An owned collectible gift »¹ as emoji status.",
+        "An owned or hosted collectible gift »¹ as emoji status.",
         "Cannot be passed to account.updateEmojiStatus¹, must be converted to an inputEmojiStatusCollectible² first before passing it to that method."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts",
         "https://core.telegram.org/method/account.updateEmojiStatus",
         "https://core.telegram.org/constructor/inputEmojiStatusCollectible"
       ],
@@ -12543,7 +12544,13 @@
     "forumTopicDeleted": {
       "name": "forumTopicDeleted",
       "description": [
-        "Represents a deleted forum topic."
+        "Represents a deleted forum topic¹.",
+        "This constructor is returned in place of a forumTopic¹ by messages.getForumTopicsByID² (and the other topic-fetching methods) when a topic no longer exists, allowing clients and bots to confirm that a topic was deleted."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum#forum-topics",
+        "https://core.telegram.org/constructor/forumTopic",
+        "https://core.telegram.org/method/messages.getForumTopicsByID"
       ],
       "fields": {
         "id": {
@@ -12802,7 +12809,11 @@
     "groupCall": {
       "name": "groupCall",
       "description": [
-        "Describes a group call¹."
+        "Describes a group call¹.",
+        "If the min flag is set, this is a partial (min) constructor: only a subset of its fields contains up-to-date information, and it must be merged into a previously cached non-min constructor as described below. If no full (non-min) constructor for this call was cached previously, the min constructor must be discarded.",
+        "When min is set, the following mandatory fields may be used: id, access_hash, participants_count and version. In addition, only the following conditional fields may be used if present, subject to the usual version check:",
+        "When min is set, the following fields must be ignored, keeping the values from the previously cached non-min constructor:",
+        "The join_date_asc flag is set only when the call is created and never changes afterwards, so it too is not applied from a min constructor."
       ],
       "links": [
         "https://core.telegram.org/api/group-calls"
@@ -12814,21 +12825,21 @@
         },
         "can_change_join_muted": {
           "name": "can_change_join_muted",
-          "description": "Whether the current user can change the value of the join_muted flag using phone.toggleGroupCallSettings¹",
+          "description": "Whether the current user can change the value of the join_muted flag using phone.toggleGroupCallSettings¹. Must be ignored if the min flag is set.",
           "links": [
             "https://core.telegram.org/method/phone.toggleGroupCallSettings"
           ]
         },
         "can_change_messages_enabled": {
           "name": "can_change_messages_enabled",
-          "description": "Whether the current user may enable or disable the in-call message overlay »¹",
+          "description": "Whether the current user may enable or disable the in-call message overlay »¹. Must be ignored if the min flag is set.",
           "links": [
             "https://core.telegram.org/api/group-calls#in-call-messages"
           ]
         },
         "can_start_video": {
           "name": "can_start_video",
-          "description": "Whether you can start streaming video into the call"
+          "description": "Whether you can start streaming video into the call. Must be ignored if the min flag is set."
         },
         "conference": {
           "name": "conference",
@@ -12836,11 +12847,11 @@
         },
         "creator": {
           "name": "creator",
-          "description": "Whether the current user created this group call."
+          "description": "Whether the current user created this group call. Must be ignored if the min flag is set."
         },
         "default_send_as": {
           "name": "default_send_as",
-          "description": "Default peer displayed as the author of live story comments and reactions »¹",
+          "description": "Default peer displayed as the author of live story comments and reactions »¹. Must be ignored if the min flag is set.",
           "links": [
             "https://core.telegram.org/api/group-calls#in-call-messages"
           ]
@@ -12858,18 +12869,18 @@
         },
         "invite_link": {
           "name": "invite_link",
-          "description": "Invitation link for a conference call »¹.",
+          "description": "Invitation link for a conference call »¹. Must be ignored if the min flag is set.",
           "links": [
             "https://core.telegram.org/api/group-calls#conference-calls"
           ]
         },
         "join_date_asc": {
           "name": "join_date_asc",
-          "description": "Specifies the ordering to use when locally sorting by date and displaying in the UI group call participants."
+          "description": "Specifies the ordering to use when locally sorting by date and displaying in the UI group call participants. Set only when the call is created and never changed afterwards, so it is not applied from a min constructor."
         },
         "join_muted": {
           "name": "join_muted",
-          "description": "Whether the user should be muted upon joining the call"
+          "description": "Whether the user should be muted upon joining the call. Must be ignored if the min flag is set."
         },
         "listeners_hidden": {
           "name": "listeners_hidden",
@@ -12887,10 +12898,7 @@
         },
         "min": {
           "name": "min",
-          "description": "Whether this is a partial constructor that must be applied using the group call update rules »¹",
-          "links": [
-            "https://core.telegram.org/api/group-calls#applying-group-call-updates"
-          ]
+          "description": "Whether this is a partial constructor that must be merged into a previously cached non-min constructor, following the rules described above."
         },
         "participants_count": {
           "name": "participants_count",
@@ -12917,7 +12925,7 @@
         },
         "schedule_start_subscribed": {
           "name": "schedule_start_subscribed",
-          "description": "Whether we subscribed to the scheduled call"
+          "description": "Whether we subscribed to the scheduled call. Must be ignored if the min flag is set."
         },
         "send_paid_messages_stars": {
           "name": "send_paid_messages_stars",
@@ -12928,7 +12936,7 @@
         },
         "stream_dc_id": {
           "name": "stream_dc_id",
-          "description": "Media DC ID to use for RTMP stream requests »¹",
+          "description": "Media DC ID to use for RTMP stream requests »¹. Must be ignored if the min flag is set.",
           "links": [
             "https://core.telegram.org/api/group-calls#playing-an-rtmp-livestream"
           ]
@@ -12939,11 +12947,11 @@
         },
         "unmuted_video_count": {
           "name": "unmuted_video_count",
-          "description": "Number of people currently streaming video into the call"
+          "description": "Number of people currently streaming video into the call. Must be ignored if the min flag is set."
         },
         "unmuted_video_limit": {
           "name": "unmuted_video_limit",
-          "description": "Maximum number of people allowed to stream video into the call"
+          "description": "Maximum number of people allowed to stream video into the call. Must be ignored if the min flag is set."
         },
         "version": {
           "name": "version",
@@ -14910,10 +14918,10 @@
     "inputChatThemeUniqueGift": {
       "name": "inputChatThemeUniqueGift",
       "description": [
-        "Set a theme based on an owned collectible gift »¹, returned by account.getUniqueGiftChatThemes²."
+        "Set a theme based on an owned or hosted collectible gift »¹, returned by account.getUniqueGiftChatThemes²."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts",
         "https://core.telegram.org/method/account.getUniqueGiftChatThemes"
       ],
       "fields": {
@@ -15162,11 +15170,11 @@
     "inputEmojiStatusCollectible": {
       "name": "inputEmojiStatusCollectible",
       "description": [
-        "An owned collectible gift »¹ as emoji status: can only be used in account.updateEmojiStatus², is never returned by the API.",
+        "An owned or hosted collectible gift »¹ as emoji status: can only be used in account.updateEmojiStatus², is never returned by the API.",
         "Note that once set, the status will be returned to users as a emojiStatusCollectible¹ constructor, instead (which cannot be passed to account.updateEmojiStatus², and must be converted to an inputEmojiStatusCollectible³ first)."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts#collectible-gifts",
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts",
         "https://core.telegram.org/method/account.updateEmojiStatus",
         "https://core.telegram.org/constructor/emojiStatusCollectible",
         "https://core.telegram.org/method/account.updateEmojiStatus",
@@ -19869,7 +19877,7 @@
       ],
       "links": [
         "https://core.telegram.org/constructor/replyInlineMarkup",
-        "https://github.com/DrKLO/Telegram/blob/002c01ecd37cd08ed07b3ed84d79318d091dfc85/TMessagesProj/src/main/java/org/telegram/messenger/browser/Browser.java#L351"
+        "https://github.com/DrKLO/Telegram/blob/9b50143d8896d255d03155598937e4f3e28afd86/TMessagesProj/src/main/java/org/telegram/messenger/browser/Browser.java#L680"
       ],
       "fields": {
         "flags": {
@@ -20640,7 +20648,7 @@
         },
         "paid_suggested_post_ton": {
           "name": "paid_suggested_post_ton",
-          "description": "Set if this is a suggested channel post »¹ that was paid using Toncoins.",
+          "description": "Set if this is a suggested channel post »¹ that was paid using Grams.",
           "links": [
             "https://core.telegram.org/api/suggested-posts"
           ]
@@ -20731,7 +20739,7 @@
         },
         "summary_from_language": {
           "name": "summary_from_language",
-          "description": "If set, clients should offer a summarization button »¹ for this message; contains the two-letter ISO 639-1 language code of the message text that will be summarized.",
+          "description": "If set, clients should offer a summarization button »¹ for this message; contains the two-letter ISO 639-1 language code of the inferred language of the current message.",
           "links": [
             "https://core.telegram.org/api/ai#summarize-messages"
           ]
@@ -21267,7 +21275,7 @@
     "messageActionGiftTon": {
       "name": "messageActionGiftTon",
       "description": [
-        "You were gifted some toncoins.",
+        "You were gifted some Grams.",
         "This service message should be displayed below the appropriate sticker from the inputStickerSetTonGifts »¹ stickerset »²:"
       ],
       "links": [
@@ -21281,7 +21289,7 @@
         },
         "crypto_amount": {
           "name": "crypto_amount",
-          "description": "Amount in the smallest unit of the cryptocurrency (for TONs, one billionth of a ton, AKA a nanoton)."
+          "description": "Amount in the smallest unit of the cryptocurrency (for TONs, one billionth of a ton, AKA a nanogram)."
         },
         "crypto_currency": {
           "name": "crypto_currency",
@@ -22057,7 +22065,7 @@
         },
         "to_id": {
           "name": "to_id",
-          "description": "For gifts acquired in an auction »¹ (i.e. when auction_acquired is set), the peer the gift was assigned to.",
+          "description": "For gifts acquired in an auction »¹ (i.e. when auction_acquired is set), the peer the gift was assigned to; only present if the target peer is different from the bidder, in which case it will only be present to the messageActionStarGift sent to the bidder, not to the messageActionStarGift sent to the target peer.",
           "links": [
             "https://core.telegram.org/api/auctions"
           ]
@@ -22178,9 +22186,9 @@
       "fields": {
         "assigned": {
           "name": "assigned",
-          "description": "This collectible gift was assigned from the TON blockchain »¹.",
+          "description": "This collectible gift was linked from the TON blockchain to a Telegram profile »¹.",
           "links": [
-            "https://core.telegram.org/api/gifts#withdraw-a-collectible-gift-to-the-ton-blockchain"
+            "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
           ]
         },
         "can_craft_at": {
@@ -30104,7 +30112,10 @@
         },
         "type": {
           "name": "type",
-          "description": "Thumbnail type"
+          "description": "PhotoSize.type value »¹",
+          "links": [
+            "https://core.telegram.org/api/files#photosizetype-values"
+          ]
         },
         "w": {
           "name": "w",
@@ -30132,14 +30143,17 @@
       "fields": {
         "bytes": {
           "name": "bytes",
-          "description": "Compressed SVG path payload, see here for decompression instructions¹",
+          "description": "Compressed SVG path payload, see vector thumbnails »¹",
           "links": [
             "https://core.telegram.org/api/files#vector-thumbnails"
           ]
         },
         "type": {
           "name": "type",
-          "description": "Always j"
+          "description": "Always j »¹",
+          "links": [
+            "https://core.telegram.org/api/files#j"
+          ]
         }
       }
     },
@@ -30159,9 +30173,9 @@
         },
         "type": {
           "name": "type",
-          "description": "Thumbnail type »¹",
+          "description": "PhotoSize.type value »¹",
           "links": [
-            "https://core.telegram.org/api/files#image-thumbnail-types"
+            "https://core.telegram.org/api/files#photosizetype-values"
           ]
         },
         "w": {
@@ -30178,9 +30192,9 @@
       "fields": {
         "type": {
           "name": "type",
-          "description": "Thumbnail type »¹",
+          "description": "PhotoSize.type value »¹",
           "links": [
-            "https://core.telegram.org/api/files#image-thumbnail-types"
+            "https://core.telegram.org/api/files#photosizetype-values"
           ]
         }
       }
@@ -30201,9 +30215,9 @@
         },
         "type": {
           "name": "type",
-          "description": "Photosize type »¹",
+          "description": "PhotoSize.type value »¹",
           "links": [
-            "https://core.telegram.org/api/files#image-thumbnail-types"
+            "https://core.telegram.org/api/files#photosizetype-values"
           ]
         },
         "w": {
@@ -30220,14 +30234,17 @@
       "fields": {
         "bytes": {
           "name": "bytes",
-          "description": "Thumbnail data, see here for more info on decompression »¹",
+          "description": "Thumbnail data, see stripped thumbnails »¹",
           "links": [
             "https://core.telegram.org/api/files#stripped-thumbnails"
           ]
         },
         "type": {
           "name": "type",
-          "description": "Thumbnail type"
+          "description": "PhotoSize.type value »¹",
+          "links": [
+            "https://core.telegram.org/api/files#photosizetype-values"
+          ]
         }
       }
     },
@@ -34305,7 +34322,10 @@
         },
         "host_id": {
           "name": "host_id",
-          "description": "If set, the gift is currently hosted on the specified user or channel profile even though ownership belongs to a TON wallet. The owner may transfer, resell or export the gift, while the host or owner may show it on the profile, use it as a theme/status and add it to a collection."
+          "description": "If set, the gift is currently hosted on the specified user or channel profile »¹, while ownership remains with the TON wallet in owner_address.",
+          "links": [
+            "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
+          ]
         },
         "id": {
           "name": "id",
@@ -34358,7 +34378,7 @@
         },
         "resale_ton_only": {
           "name": "resale_ton_only",
-          "description": "Whether the gift can be bought only using Toncoins."
+          "description": "Whether the gift can be bought only using Grams."
         },
         "resell_amount": {
           "name": "resell_amount",
@@ -34789,12 +34809,12 @@
     "starsTonAmount": {
       "name": "starsTonAmount",
       "description": [
-        "Describes an amount of toncoin in nanotons (i.e. 1/1_000_000_000 of a toncoin)."
+        "Describes an amount of Gram in nanograms (i.e. 1/1_000_000_000 of a Gram)."
       ],
       "fields": {
         "amount": {
           "name": "amount",
-          "description": "The amount in nanotons."
+          "description": "The amount in nanograms."
         }
       }
     },
@@ -41914,7 +41934,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/peers",
-        "https://github.com/tdlib/td/blob/cb164927417f22811c74cd8678ed4a5ab7cb80ba/td/telegram/UserManager.cpp#L2267",
+        "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/UserManager.cpp#L3106",
         "https://core.telegram.org/api/peers"
       ],
       "fields": {
@@ -42950,7 +42970,10 @@
         },
         "type": {
           "name": "type",
-          "description": "u for animated profile pictures, and v for trimmed and downscaled video previews"
+          "description": "videoSize.type value »¹",
+          "links": [
+            "https://core.telegram.org/api/files#videosizetype-values"
+          ]
         },
         "video_start_ts": {
           "name": "video_start_ts",
@@ -48792,11 +48815,11 @@
     "account.getCollectibleEmojiStatuses": {
       "name": "account.getCollectibleEmojiStatuses",
       "description": [
-        "Obtain a list of emoji statuses »¹ for owned collectible gifts²."
+        "Obtain a list of emoji statuses »¹ for owned or hosted collectible gifts »²."
       ],
       "links": [
         "https://core.telegram.org/api/emoji-status",
-        "https://core.telegram.org/api/gifts#collectible-gifts"
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
       ],
       "parameters": {
         "hash": {
@@ -49256,11 +49279,11 @@
     "account.getUniqueGiftChatThemes": {
       "name": "account.getUniqueGiftChatThemes",
       "description": [
-        "Obtain all chat themes »¹ associated to owned collectible gifts »²."
+        "Obtain all chat themes »¹ associated to owned or hosted collectible gifts »²."
       ],
       "links": [
         "https://core.telegram.org/api/themes#chat-themes",
-        "https://core.telegram.org/api/gifts#collectible-gifts"
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
       ],
       "parameters": {
         "hash": {
@@ -49609,11 +49632,13 @@
       "errors": [
         {
           "code": 400,
-          "type": "CREDENTIAL_INVALID"
+          "type": "CREDENTIAL_INVALID",
+          "description": "The specified credential is invalid."
         },
         {
           "code": 400,
-          "type": "PASSKEY_ORIGIN_MISMATCH"
+          "type": "PASSKEY_ORIGIN_MISMATCH",
+          "description": "Third-party clients currently don't support passkeys even when changing the origin."
         }
       ]
     },
@@ -50835,11 +50860,6 @@
           "code": 400,
           "type": "BUSINESS_RECIPIENTS_EMPTY",
           "description": "You didn't set any flag in inputBusinessBotRecipients, thus the bot cannot work with any peer."
-        },
-        {
-          "code": 403,
-          "type": "PREMIUM_ACCOUNT_REQUIRED",
-          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -51440,7 +51460,7 @@
     "auth.bindTempAuthKey": {
       "name": "auth.bindTempAuthKey",
       "description": [
-        "Binds a temporary authorization key temp_auth_key_id to the permanent authorization key perm_auth_key_id. Each permanent key may only be bound to one temporary key at a time, binding a new temporary key overwrites the previous one.",
+        "Binds a temporary authorization key temp_auth_key_id to the permanent authorization key perm_auth_key_id.",
         "For more information, see Perfect Forward Secrecy¹."
       ],
       "links": [
@@ -51759,7 +51779,8 @@
         },
         {
           "code": 400,
-          "type": "CREDENTIAL_INVALID"
+          "type": "CREDENTIAL_INVALID",
+          "description": "The specified credential is invalid."
         },
         {
           "code": 500,
@@ -51767,7 +51788,8 @@
         },
         {
           "code": 400,
-          "type": "PASSKEY_ORIGIN_MISMATCH"
+          "type": "PASSKEY_ORIGIN_MISMATCH",
+          "description": "Third-party clients currently don't support passkeys even when changing the origin."
         }
       ]
     },
@@ -52172,7 +52194,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "EMAIL_INSTALL_MISSING"
+          "type": "EMAIL_INSTALL_MISSING",
+          "description": "Attempting to send a code to the recovery email, but no email is configured."
         },
         {
           "code": 400,
@@ -52248,7 +52271,8 @@
       "errors": [
         {
           "code": 400,
-          "type": "EMAIL_INSTALL_MISSING"
+          "type": "EMAIL_INSTALL_MISSING",
+          "description": "Attempting to send a code to the recovery email, but no email is configured."
         },
         {
           "code": 400,
@@ -57288,7 +57312,7 @@
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/contacts.contacts",
-            "https://github.com/tdlib/td/blob/63c7d0301825b78c30dc7307f1f1466be049eb79/td/telegram/UserManager.cpp#L5754"
+            "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/UserManager.cpp#L7865"
           ]
         }
       }
@@ -59307,7 +59331,8 @@
       "errors": [
         {
           "code": 403,
-          "type": "BOT_FORUM_CREATE_FORBIDDEN"
+          "type": "BOT_FORUM_CREATE_FORBIDDEN",
+          "description": "Since the bot's user.bot_forum_can_manage_topics flag is not set, the user cannot create or modify bot forum topics."
         },
         {
           "code": 400,
@@ -59904,10 +59929,6 @@
           "code": 400,
           "type": "ENCRYPTION_ALREADY_DECLINED",
           "description": "The secret chat was already declined."
-        },
-        {
-          "code": 500,
-          "type": "ENCRYPTION_DECLINE_ADMIN_FAILED"
         },
         {
           "code": 400,
@@ -68004,7 +68025,8 @@
         },
         {
           "code": 400,
-          "type": "EXTENDED_MEDIA_EMPTY"
+          "type": "EXTENDED_MEDIA_EMPTY",
+          "description": "The specified extended media is empty."
         },
         {
           "code": 400,
@@ -69364,11 +69386,6 @@
       },
       "errors": [
         {
-          "code": 403,
-          "type": "ANONYMOUS_REACTIONS_DISABLED",
-          "description": "Sorry, anonymous administrators cannot leave reactions or participate in polls."
-        },
-        {
           "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
@@ -69589,6 +69606,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 406,
+          "type": "POLL_MEMBER_RESTRICTED",
+          "description": "Only channel subscribers can vote in this poll."
         },
         {
           "code": 400,
@@ -69874,7 +69896,8 @@
         },
         {
           "code": 400,
-          "type": "LIMIT_PER_POST_INVALID"
+          "type": "LIMIT_PER_POST_INVALID",
+          "description": "The specified reactions_limit value is invalid."
         },
         {
           "code": 400,
@@ -70386,6 +70409,11 @@
           "description": "Invalid URL provided."
         },
         {
+          "code": 403,
+          "type": "USER_BOT_INVALID",
+          "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
+        },
+        {
           "code": 400,
           "type": "USER_BOT_REQUIRED",
           "description": "This method can only be called by a bot."
@@ -70764,6 +70792,16 @@
         }
       },
       "errors": [
+        {
+          "code": 400,
+          "type": "INPUT_TEXT_TOO_LONG",
+          "description": "The specified text is too long."
+        },
+        {
+          "code": 400,
+          "type": "MSG_ID_INVALID",
+          "description": "Invalid message ID provided."
+        },
         {
           "code": 400,
           "type": "PEER_ID_INVALID",
@@ -72196,11 +72234,12 @@
       "description": [
         "Craft a new collectible gift »¹ by combining 1 to 4 owned collectible gifts of the same base gift type.",
         "The passed gifts must all have the same starGiftUnique¹.gift_id, must be usable for crafting, and must not be blocked by a future can_craft_at timestamp.",
-        "The first passed gift must not be located on the TON blockchain."
+        "The first passed gift must not be located on the TON blockchain¹."
       ],
       "links": [
         "https://core.telegram.org/api/gifts#collectible-gifts",
-        "https://core.telegram.org/constructor/starGiftUnique"
+        "https://core.telegram.org/constructor/starGiftUnique",
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
       ],
       "parameters": {
         "stargift": {
@@ -72655,7 +72694,8 @@
         },
         {
           "code": 400,
-          "type": "PREMIUM_PURPOSE_INVALID"
+          "type": "PREMIUM_PURPOSE_INVALID",
+          "description": "The specified InputStorePaymentPurpose is invalid."
         },
         {
           "code": 400,
@@ -72724,7 +72764,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_RESELL_TOO_EARLY_%d"
+          "type": "STARGIFT_RESELL_TOO_EARLY_%d",
+          "description": "You will be able to resell this gift in %d seconds."
         },
         {
           "code": 400,
@@ -72937,11 +72978,12 @@
     "payments.getSavedStarGifts": {
       "name": "payments.getSavedStarGifts",
       "description": [
-        "Fetch the full list of gifts¹ owned by a peer.",
+        "Fetch the full list of gifts »¹ owned, received or hosted »² by a peer.",
         "Note that unlike what the name suggests, the method can be used to fetch both \"saved\" and \"unsaved\" gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts"
+        "https://core.telegram.org/api/gifts#list-all-received-gifts",
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
       ],
       "parameters": {
         "collection_id": {
@@ -72953,10 +72995,9 @@
         },
         "exclude_hosted": {
           "name": "exclude_hosted",
-          "description": "If set, excludes collectible gifts¹ that are merely hosted² on the profile (i.e. displayed by the peer while ownership belongs to a TON wallet), returning only gifts actually owned by the peer.",
+          "description": "If set, excludes hosted collectible gifts »¹, returning only gifts owned or received by peer.",
           "links": [
-            "https://core.telegram.org/api/gifts#collectible-gifts",
-            "https://core.telegram.org/constructor/starGiftUnique"
+            "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
           ]
         },
         "exclude_saved": {
@@ -73018,8 +73059,9 @@
         },
         "peer": {
           "name": "peer",
-          "description": "Fetch only gifts owned by the specified peer, such as: a user, with peer=inputPeerUser¹; a channel, with peer=inputPeerChannel²; a connected business user³ (when executing the method as a bot, over the business connection), with peer=inputPeerUser⁴.",
+          "description": "Fetch only gifts owned, received or hosted »¹ by the specified peer, such as: a user, with peer=inputPeerUser²; a channel, with peer=inputPeerChannel³; a connected business user »⁴ (when executing the method as a bot, over the business connection), with peer=inputPeerUser⁵.",
           "links": [
+            "https://core.telegram.org/api/gifts#hosted-collectible-gifts",
             "https://core.telegram.org/constructor/inputPeerUser",
             "https://core.telegram.org/constructor/inputPeerChannel",
             "https://core.telegram.org/api/bots/connected-business-bots",
@@ -73065,10 +73107,14 @@
     "payments.getStarGiftActiveAuctions": {
       "name": "payments.getStarGiftActiveAuctions",
       "description": [
-        "Fetches all currently active gift auctions¹ where the user has placed a bid."
+        "Fetches all currently active gift auctions¹ the user has ever bid on (including auctions where the user was outbid and their bid was returned), as long as the auction hasn't ended yet.",
+        "This method is primarily used to display an auction badge in the chat list immediately on app startup, without waiting for real-time updateStarGiftAuctionState¹ updates to arrive: the client calls it to discover which auctions the user is participating in and show the badge proactively.",
+        "To instead fetch the full state of a single auction, subscribe to its real-time updates and render the detailed auction UI (typically when the user opens a specific auction), use payments.getStarGiftAuctionState¹."
       ],
       "links": [
-        "https://core.telegram.org/api/auctions"
+        "https://core.telegram.org/api/auctions",
+        "https://core.telegram.org/constructor/updateStarGiftAuctionState",
+        "https://core.telegram.org/method/payments.getStarGiftAuctionState"
       ],
       "parameters": {
         "hash": {
@@ -73417,7 +73463,7 @@
       "parameters": {
         "amount": {
           "name": "amount",
-          "description": "The amount of stars or nanotons to withdraw."
+          "description": "The amount of stars or nanograms to withdraw."
         },
         "flags": {
           "name": "flags",
@@ -73488,7 +73534,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": "If set, returns the channel/ad revenue balance in nanotons."
+          "description": "If set, returns the channel/ad revenue balance in nanograms."
         }
       },
       "errors": [
@@ -73621,7 +73667,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": "If set, returns the channel/ad revenue transactions in nanotons, instead."
+          "description": "If set, returns the channel/ad revenue transactions in nanograms, instead."
         }
       },
       "errors": [
@@ -73668,7 +73714,7 @@
         },
         "ton": {
           "name": "ton",
-          "description": "If set, returns channel/bot ad revenue transactions in nanotons."
+          "description": "If set, returns channel/bot ad revenue transactions in nanograms."
         }
       },
       "errors": [
@@ -73923,10 +73969,10 @@
     "payments.saveStarGift": {
       "name": "payments.saveStarGift",
       "description": [
-        "Display or remove a received gift »¹ from our profile."
+        "Display or remove a received or hosted gift »¹ from our profile."
       ],
       "links": [
-        "https://core.telegram.org/api/gifts"
+        "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
       ],
       "parameters": {
         "flags": {
@@ -73938,7 +73984,10 @@
         },
         "stargift": {
           "name": "stargift",
-          "description": "The gift to display or remove."
+          "description": "The gift to display or remove. A hosted collectible gift »¹ may be used by its host or owner.",
+          "links": [
+            "https://core.telegram.org/api/gifts#hosted-collectible-gifts"
+          ]
         },
         "unsave": {
           "name": "unsave",
@@ -73958,7 +74007,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_OBJECT_INVALID"
+          "type": "STARGIFT_OBJECT_INVALID",
+          "description": "The specified star gift object is invalid."
         },
         {
           "code": 400,
@@ -74124,11 +74174,13 @@
         },
         {
           "code": 400,
-          "type": "RESELL_STARS_TOO_FEW"
+          "type": "RESELL_STARS_TOO_FEW",
+          "description": "The offered price is too low."
         },
         {
           "code": 400,
-          "type": "RESELL_STARS_TOO_MUCH"
+          "type": "RESELL_STARS_TOO_MUCH",
+          "description": "The offered price is too high."
         },
         {
           "code": 400,
@@ -74137,7 +74189,8 @@
         },
         {
           "code": 400,
-          "type": "STARGIFT_OFFER_NOT_ALLOWED"
+          "type": "STARGIFT_OFFER_NOT_ALLOWED",
+          "description": "You can't send a purchase offer for this gift."
         },
         {
           "code": 400,
@@ -76372,7 +76425,8 @@
       "errors": [
         {
           "code": 403,
-          "type": "GROUPCALL_CHANGE_FORBIDDEN"
+          "type": "GROUPCALL_CHANGE_FORBIDDEN",
+          "description": "You cannot change this group call setting."
         },
         {
           "code": 403,
@@ -80255,11 +80309,6 @@
       "type": "ALLOW_PAYMENT_REQUIRED_%d",
       "description": "This peer charges %d Telegram Stars per message, but the allow_paid_stars was not set or its value is smaller than %d."
     },
-    "ANONYMOUS_REACTIONS_DISABLED": {
-      "code": 403,
-      "type": "ANONYMOUS_REACTIONS_DISABLED",
-      "description": "Sorry, anonymous administrators cannot leave reactions or participate in polls."
-    },
     "API_GIFT_RESTRICTED_UPDATE_APP": {
       "code": 406,
       "type": "API_GIFT_RESTRICTED_UPDATE_APP",
@@ -80442,7 +80491,8 @@
     },
     "BOT_FORUM_CREATE_FORBIDDEN": {
       "code": 403,
-      "type": "BOT_FORUM_CREATE_FORBIDDEN"
+      "type": "BOT_FORUM_CREATE_FORBIDDEN",
+      "description": "Since the bot's user.bot_forum_can_manage_topics flag is not set, the user cannot create or modify bot forum topics."
     },
     "BOT_GAMES_DISABLED": {
       "code": 400,
@@ -81031,7 +81081,8 @@
     },
     "CREDENTIAL_INVALID": {
       "code": 400,
-      "type": "CREDENTIAL_INVALID"
+      "type": "CREDENTIAL_INVALID",
+      "description": "The specified credential is invalid."
     },
     "CURRENCY_TOTAL_AMOUNT_INVALID": {
       "code": 400,
@@ -81104,7 +81155,8 @@
     },
     "EMAIL_INSTALL_MISSING": {
       "code": 400,
-      "type": "EMAIL_INSTALL_MISSING"
+      "type": "EMAIL_INSTALL_MISSING",
+      "description": "Attempting to send a code to the recovery email, but no email is configured."
     },
     "EMAIL_INVALID": {
       "code": 400,
@@ -81186,10 +81238,6 @@
       "type": "ENCRYPTION_DECLINED",
       "description": "The secret chat was declined."
     },
-    "ENCRYPTION_DECLINE_ADMIN_FAILED": {
-      "code": 500,
-      "type": "ENCRYPTION_DECLINE_ADMIN_FAILED"
-    },
     "ENCRYPTION_ID_INVALID": {
       "code": 400,
       "type": "ENCRYPTION_ID_INVALID",
@@ -81246,7 +81294,8 @@
     },
     "EXTENDED_MEDIA_EMPTY": {
       "code": 400,
-      "type": "EXTENDED_MEDIA_EMPTY"
+      "type": "EXTENDED_MEDIA_EMPTY",
+      "description": "The specified extended media is empty."
     },
     "EXTENDED_MEDIA_INVALID": {
       "code": 400,
@@ -81528,7 +81577,8 @@
     },
     "GROUPCALL_CHANGE_FORBIDDEN": {
       "code": 403,
-      "type": "GROUPCALL_CHANGE_FORBIDDEN"
+      "type": "GROUPCALL_CHANGE_FORBIDDEN",
+      "description": "You cannot change this group call setting."
     },
     "GROUPCALL_FORBIDDEN": {
       "code": 403,
@@ -81777,7 +81827,8 @@
     },
     "LIMIT_PER_POST_INVALID": {
       "code": 400,
-      "type": "LIMIT_PER_POST_INVALID"
+      "type": "LIMIT_PER_POST_INVALID",
+      "description": "The specified reactions_limit value is invalid."
     },
     "LINK_NOT_MODIFIED": {
       "code": 400,
@@ -81980,7 +82031,7 @@
       "description": "The specified voice message is too long to be transcribed."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -82018,7 +82069,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -82113,7 +82164,8 @@
     },
     "PASSKEY_ORIGIN_MISMATCH": {
       "code": 400,
-      "type": "PASSKEY_ORIGIN_MISMATCH"
+      "type": "PASSKEY_ORIGIN_MISMATCH",
+      "description": "Third-party clients currently don't support passkeys even when changing the origin."
     },
     "PASSWORD_EMPTY": {
       "code": 400,
@@ -82355,6 +82407,11 @@
       "type": "POLL_ANSWER_INVALID",
       "description": "One of the poll answers is not acceptable."
     },
+    "POLL_MEMBER_RESTRICTED": {
+      "code": 406,
+      "type": "POLL_MEMBER_RESTRICTED",
+      "description": "Only channel subscribers can vote in this poll."
+    },
     "POLL_OPTION_DUPLICATE": {
       "code": 400,
       "type": "POLL_OPTION_DUPLICATE",
@@ -82392,7 +82449,8 @@
     },
     "PREMIUM_PURPOSE_INVALID": {
       "code": 400,
-      "type": "PREMIUM_PURPOSE_INVALID"
+      "type": "PREMIUM_PURPOSE_INVALID",
+      "description": "The specified InputStorePaymentPurpose is invalid."
     },
     "PREMIUM_SUB_ACTIVE_UNTIL_%d": {
       "code": 420,
@@ -82626,11 +82684,13 @@
     },
     "RESELL_STARS_TOO_FEW": {
       "code": 400,
-      "type": "RESELL_STARS_TOO_FEW"
+      "type": "RESELL_STARS_TOO_FEW",
+      "description": "The offered price is too low."
     },
     "RESELL_STARS_TOO_MUCH": {
       "code": 400,
-      "type": "RESELL_STARS_TOO_MUCH"
+      "type": "RESELL_STARS_TOO_MUCH",
+      "description": "The offered price is too high."
     },
     "RESET_REQUEST_MISSING": {
       "code": 400,
@@ -82923,7 +82983,8 @@
     },
     "STARGIFT_OBJECT_INVALID": {
       "code": 400,
-      "type": "STARGIFT_OBJECT_INVALID"
+      "type": "STARGIFT_OBJECT_INVALID",
+      "description": "The specified star gift object is invalid."
     },
     "STARGIFT_OFFER_INVALID": {
       "code": 400,
@@ -82932,7 +82993,8 @@
     },
     "STARGIFT_OFFER_NOT_ALLOWED": {
       "code": 400,
-      "type": "STARGIFT_OFFER_NOT_ALLOWED"
+      "type": "STARGIFT_OFFER_NOT_ALLOWED",
+      "description": "You can't send a purchase offer for this gift."
     },
     "STARGIFT_OWNER_INVALID": {
       "code": 400,
@@ -82951,7 +83013,8 @@
     },
     "STARGIFT_RESELL_TOO_EARLY_%d": {
       "code": 400,
-      "type": "STARGIFT_RESELL_TOO_EARLY_%d"
+      "type": "STARGIFT_RESELL_TOO_EARLY_%d",
+      "description": "You will be able to resell this gift in %d seconds."
     },
     "STARGIFT_SLUG_INVALID": {
       "code": 400,
@@ -83368,7 +83431,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -83558,7 +83621,7 @@
       "description": "Bots can only be admins in channels."
     },
     "USER_BOT_INVALID": {
-      "code": 400,
+      "code": 403,
       "type": "USER_BOT_INVALID",
       "description": "User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts."
     },
@@ -83572,7 +83635,7 @@
       "type": "USER_BOT_TO_BOT_DISABLED"
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 400,
+      "code": 403,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
