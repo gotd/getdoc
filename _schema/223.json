@@ -6468,7 +6468,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/peers",
-        "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/ChatManager.cpp#L9176",
+        "https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176",
         "https://core.telegram.org/api/peers"
       ],
       "fields": {
@@ -8773,7 +8773,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/peers",
-        "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/ChatManager.cpp#L5679",
+        "https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679",
         "https://core.telegram.org/api/peers"
       ],
       "fields": {
@@ -11341,7 +11341,7 @@
           "name": "waveform",
           "description": "Waveform: consists in a series of bitpacked 5-bit values. Example implementation: android¹.",
           "links": [
-            "https://github.com/DrKLO/Telegram/blob/9b50143d8896d255d03155598937e4f3e28afd86/TMessagesProj/jni/audio.c#L562"
+            "https://github.com/DrKLO/Telegram/blob/4d7a3a40c88ce28a211aa2814e9569389fc40567/TMessagesProj/jni/audio.c#L562"
           ]
         }
       }
@@ -13143,11 +13143,9 @@
         },
         "versioned": {
           "name": "versioned",
-          "description": "If set, and updateGroupCallParticipants¹.version \u003c locally stored call.version, info about this participant should be ignored. If (...), and updateGroupCallParticipants².version \u003e call.version+1, the participant list should be refetched using phone.getGroupParticipants³.",
+          "description": "If set, the application logic for this update is slightly different, see here »¹ for more info on the full flow.",
           "links": [
-            "https://core.telegram.org/constructor/updateGroupCallParticipants",
-            "https://core.telegram.org/constructor/updateGroupCallParticipants",
-            "https://core.telegram.org/method/phone.getGroupParticipants"
+            "https://core.telegram.org/api/group-calls#applying-group-call-updates"
           ]
         },
         "video": {
@@ -19877,7 +19875,7 @@
       ],
       "links": [
         "https://core.telegram.org/constructor/replyInlineMarkup",
-        "https://github.com/DrKLO/Telegram/blob/9b50143d8896d255d03155598937e4f3e28afd86/TMessagesProj/src/main/java/org/telegram/messenger/browser/Browser.java#L680"
+        "https://github.com/DrKLO/Telegram/blob/68d51749c4fcbaffa584829f23936565df55e08b/TMessagesProj/src/main/java/org/telegram/messenger/browser/Browser.java#L680"
       ],
       "fields": {
         "flags": {
@@ -29576,9 +29574,9 @@
         },
         "conference_supported": {
           "name": "conference_supported",
-          "description": "If set, the other party supports upgrading of the call to a conference call¹.",
+          "description": "If set, the other party supports migrating the call to a conference call »¹; clients should only offer the migrate/\"Add participants\" option in the call UI when this flag is set.",
           "links": [
-            "https://core.telegram.org/api/end-to-end/group-calls"
+            "https://core.telegram.org/api/calls#migrating-to-a-conference-call"
           ]
         },
         "connections": {
@@ -30152,7 +30150,7 @@
           "name": "type",
           "description": "Always j »¹",
           "links": [
-            "https://core.telegram.org/api/files#j"
+            "https://core.telegram.org/api/files#vector-thumbnails"
           ]
         }
       }
@@ -33114,14 +33112,14 @@
         "Used by bots to implement live message streaming »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/bots/ai#live-message-streaming"
+        "https://core.telegram.org/api/bots/ai#live-response-streaming"
       ],
       "fields": {
         "random_id": {
           "name": "random_id",
           "description": "Live draft ID: used by graphical clients to slightly change the rendering behavior, see here »¹ for more info.",
           "links": [
-            "https://core.telegram.org/api/bots/ai#live-message-streaming"
+            "https://core.telegram.org/api/bots/ai#live-response-streaming"
           ]
         },
         "text": {
@@ -41934,7 +41932,7 @@
       ],
       "links": [
         "https://core.telegram.org/api/peers",
-        "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/UserManager.cpp#L3106",
+        "https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106",
         "https://core.telegram.org/api/peers"
       ],
       "fields": {
@@ -57312,7 +57310,7 @@
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/api/offsets#hash-generation",
             "https://core.telegram.org/constructor/contacts.contacts",
-            "https://github.com/tdlib/td/blob/a17f87c4cff7b90b278d12b91ba0614383aaee82/td/telegram/UserManager.cpp#L7865"
+            "https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L7865"
           ]
         }
       }
@@ -60057,7 +60055,7 @@
         "Transfer the ownership of a basic group, supergroup or channel to another user, see here »¹ for the full flow."
       ],
       "links": [
-        "https://core.telegram.org/api/channel#transferring-ownership-of-a-groupchannel"
+        "https://core.telegram.org/api/channel#transferring-ownership-of-a-group-channel"
       ],
       "parameters": {
         "password": {
