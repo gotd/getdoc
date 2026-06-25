@@ -83419,7 +83419,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -83429,7 +83429,7 @@
       "description": "The close flag cannot be provided together with any of the other flags."
     },
     "TOPIC_DELETED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_DELETED",
       "description": "The specified topic was deleted."
     },
@@ -83633,7 +83633,7 @@
       "type": "USER_BOT_TO_BOT_DISABLED"
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
