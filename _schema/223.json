@@ -15202,12 +15202,15 @@
     "inputEncryptedChat": {
       "name": "inputEncryptedChat",
       "description": [
-        "Creates an encrypted chat."
+        "An e2e encrypted chat¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end"
       ],
       "fields": {
         "access_hash": {
           "name": "access_hash",
-          "description": "Checking sum from constructor encryptedChat¹, encryptedChatWaiting² or encryptedChatRequested³",
+          "description": "Access hash from encryptedChat¹, encryptedChatWaiting² or encryptedChatRequested³",
           "links": [
             "https://core.telegram.org/constructor/encryptedChat",
             "https://core.telegram.org/constructor/encryptedChatWaiting",
@@ -44958,7 +44961,10 @@
     "InputEncryptedChat": {
       "name": "InputEncryptedChat",
       "description": [
-        "Object sets an encrypted chat ID."
+        "An e2e encrypted chat¹."
+      ],
+      "links": [
+        "https://core.telegram.org/api/end-to-end"
       ]
     },
     "InputEncryptedFile": {
