@@ -13,8 +13,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-faster/errors v0.7.1 h1:MkJTnDoEdi9pDabt1dpWf7AA8/BaSYZqibYyhZ20AYg=
 github.com/go-faster/errors v0.7.1/go.mod h1:5ySTjWFiphBs07IKuiL69nxdfd5+fzh1u7FPGZP2quo=
-github.com/go-faster/sdk v0.35.0 h1:AmI8VHE2Ffu/fyWbQ6nSbD+itWnHU5pa9h6nj9Up3m8=
-github.com/go-faster/sdk v0.35.0/go.mod h1:U5aImdJt2+c0bx9F2xeOER77F1tqHhWbyZ5NQYKI6vA=
+github.com/go-faster/sdk v0.37.0 h1:Ed7sL5r/ItkZZJnlPSDBGDhkNfZ3Sqk9GNMfCgE0neU=
+github.com/go-faster/sdk v0.37.0/go.mod h1:QxudqQe9++z5CwdRHQH/MLpnQ/bC05mF+c9fKgHSMz4=
 github.com/go-logr/logr v1.4.3 h1:CjnDlHq8ikf6E492q6eKboGOC0T8CDaOvkHCIg8idEI=
 github.com/go-logr/logr v1.4.3/go.mod h1:9T104GzyrTigFIr8wt5mBrctHMim0Nb2HLGrmQ40KvY=
 github.com/go-logr/stdr v1.2.2 h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=
