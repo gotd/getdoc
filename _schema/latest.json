@@ -12181,7 +12181,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random message ID, assigned by the author of message"
+          "description": "Random message ID, assigned by the author of message. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -12208,7 +12211,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random message ID, assigned by the author of message"
+          "description": "Random message ID, assigned by the author of message. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -12922,7 +12928,7 @@
           "name": "rtmp_stream",
           "description": "Whether this call uses RTMP livestream mode »¹",
           "links": [
-            "https://core.telegram.org/api/group-calls#rtmp-livestreams"
+            "https://core.telegram.org/api/group-calls#stream-mode"
           ]
         },
         "schedule_date": {
@@ -12944,7 +12950,7 @@
           "name": "stream_dc_id",
           "description": "Media DC ID to use for RTMP stream requests »¹. Must be ignored if the min flag is set.",
           "links": [
-            "https://core.telegram.org/api/group-calls#playing-an-rtmp-livestream"
+            "https://core.telegram.org/api/group-calls#downloading-media-chunks"
           ]
         },
         "title": {
@@ -13226,7 +13232,7 @@
         "Describes an available RTMP stream channel and its current playback timestamp, see playing an RTMP livestream »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/group-calls#playing-an-rtmp-livestream"
+        "https://core.telegram.org/api/group-calls#rtmp-mode"
       ],
       "fields": {
         "channel": {
@@ -15581,7 +15587,7 @@
         "Identifies a media chunk of an RTMP-mode video chat, livestream or live story, see playing an RTMP livestream »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/group-calls#playing-an-rtmp-livestream"
+        "https://core.telegram.org/api/group-calls#downloading-media-chunks"
       ],
       "fields": {
         "call": {
@@ -18271,7 +18277,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client media ID required to prevent message resending"
+          "description": "Unique client media ID required to prevent message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -18721,7 +18730,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid resending the giveaway"
+          "description": "Random ID to avoid resending the giveaway. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "until_date": {
           "name": "until_date",
@@ -18855,7 +18867,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid resending the giveaway"
+          "description": "Random ID to avoid resending the giveaway. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "stars": {
           "name": "stars",
@@ -23934,7 +23949,7 @@
           "name": "rtmp_stream",
           "description": "Whether the live story uses RTMP livestream mode »¹",
           "links": [
-            "https://core.telegram.org/api/group-calls#rtmp-livestreams"
+            "https://core.telegram.org/api/group-calls#stream-mode"
           ]
         }
       }
@@ -29482,7 +29497,7 @@
         "Contains the available channels of an RTMP-mode group call, see playing an RTMP livestream »¹."
       ],
       "links": [
-        "https://core.telegram.org/api/group-calls#playing-an-rtmp-livestream"
+        "https://core.telegram.org/api/group-calls#rtmp-mode"
       ],
       "fields": {
         "channels": {
@@ -33161,9 +33176,10 @@
       "fields": {
         "random_id": {
           "name": "random_id",
-          "description": "Live draft ID: used by graphical clients to slightly change the rendering behavior, see here »¹ for more info.",
+          "description": "Live draft ID: used by graphical clients to slightly change the rendering behavior, see here »¹ for more info. See here »² for more info on random ID deduplication and updateMessageID mapping.",
           "links": [
-            "https://core.telegram.org/api/bots/ai#live-response-streaming"
+            "https://core.telegram.org/api/bots/ai#live-response-streaming",
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
           ]
         },
         "text": {
@@ -33426,7 +33442,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Message ID"
+          "description": "Message ID. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "recommended": {
           "name": "recommended",
@@ -33491,12 +33510,13 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "ID of the sponsored peer, to be passed to messages.viewSponsoredMessage¹, messages.clickSponsoredMessage² or messages.reportSponsoredMessage³ (the same methods used for sponsored messages \u0026raquo⁴).",
+          "description": "ID of the sponsored peer, to be passed to messages.viewSponsoredMessage¹, messages.clickSponsoredMessage² or messages.reportSponsoredMessage³ (the same methods used for sponsored messages \u0026raquo⁴). See here »⁵ for more info on random ID deduplication and updateMessageID mapping.",
           "links": [
             "https://core.telegram.org/method/messages.viewSponsoredMessage",
             "https://core.telegram.org/method/messages.clickSponsoredMessage",
             "https://core.telegram.org/method/messages.reportSponsoredMessage",
-            "https://core.telegram.org/api/sponsored-messages"
+            "https://core.telegram.org/api/sponsored-messages",
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
           ]
         },
         "sponsor_info": {
@@ -39175,16 +39195,21 @@
     "updateGroupCallConnection": {
       "name": "updateGroupCallConnection",
       "description": [
-        "Connection parameters returned after joining a group call, see presentations »¹ and RTMP livestreams »².",
+        "Connection parameters returned after joining a group call, see presentations »¹ and stream mode »².",
         "If presentation is set, the parameters belong to the separate presentation connection¹; otherwise they belong to the main connection.",
         "For a normal WebRTC connection, pass params to the local tgcalls group-call engine as its join response payload.",
-        "For RTMP-mode calls¹, params instead has the following shape:"
+        "For stream-mode calls¹, where the client plays the call by downloading media chunks »² instead of using WebRTC, params instead has one of the following shapes:",
+        "for a call that entered stream mode¹, or",
+        "for an RTMP-mode call¹."
       ],
       "links": [
         "https://core.telegram.org/api/group-calls#presentations",
-        "https://core.telegram.org/api/group-calls#rtmp-livestreams",
+        "https://core.telegram.org/api/group-calls#stream-mode",
         "https://core.telegram.org/api/group-calls#presentations",
-        "https://core.telegram.org/api/group-calls#rtmp-livestreams"
+        "https://core.telegram.org/api/group-calls#detecting-stream-mode",
+        "https://core.telegram.org/api/group-calls#downloading-media-chunks",
+        "https://core.telegram.org/api/group-calls#stream-mode",
+        "https://core.telegram.org/api/group-calls#creating-and-publishing-an-rtmp-livestream"
       ],
       "fields": {
         "flags": {
@@ -39385,7 +39410,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Previously transferred client random_id identifier"
+          "description": "Previously transferred client random_id identifier. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -39431,7 +39459,7 @@
     "updateMessagePollVote": {
       "name": "updateMessagePollVote",
       "description": [
-        "A specific peer has voted in a poll"
+        "A specific peer has voted in a poll (this update can only be received by a bot)."
       ],
       "fields": {
         "options": {
@@ -41184,9 +41212,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "The random_id that was passed to stories.sendStory¹.",
+          "description": "The random_id that was passed to stories.sendStory¹. See here »² for more info on random ID deduplication and updateMessageID mapping.",
           "links": [
-            "https://core.telegram.org/method/stories.sendStory"
+            "https://core.telegram.org/method/stories.sendStory",
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
           ]
         }
       }
@@ -49434,7 +49463,7 @@
       "parameters": {
         "403": {
           "name": "403",
-          "description": " "
+          "description": "The account was deactivated, or is a bot/service account."
         },
         "406": {
           "name": "406",
@@ -49444,7 +49473,8 @@
       "errors": [
         {
           "code": 403,
-          "type": "ACCESS_DENIED"
+          "type": "ACCESS_DENIED",
+          "description": "The account was deactivated, or is a bot/service account."
         },
         {
           "code": 406,
@@ -51844,10 +51874,6 @@
           "description": "The specified credential is invalid."
         },
         {
-          "code": 500,
-          "type": "PASSKEY_AUTH_RESTART"
-        },
-        {
           "code": 400,
           "type": "PASSKEY_ORIGIN_MISMATCH",
           "description": "Third-party clients currently don't support passkeys even when changing the origin."
@@ -52048,10 +52074,6 @@
           "code": 500,
           "type": "AUTH_RESTART",
           "description": "Restart the authorization process."
-        },
-        {
-          "code": 500,
-          "type": "PASSKEY_AUTH_RESTART"
         }
       ]
     },
@@ -59260,7 +59282,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "The ad's unique ID."
+          "description": "The ad's unique ID. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -59371,7 +59396,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID to prevent duplicate sending of the same event"
+          "description": "Unique client message ID to prevent duplicate sending of the same event. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "send_as": {
           "name": "send_as",
@@ -59409,6 +59437,11 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
+        },
+        {
+          "code": 403,
+          "type": "PREMIUM_ACCOUNT_REQUIRED",
+          "description": "A premium account is required to execute this action."
         }
       ]
     },
@@ -60811,6 +60844,11 @@
           "description": "The specified document is invalid."
         },
         {
+          "code": 406,
+          "type": "EDIT_MESSAGE_TEMP_RESTRICTED",
+          "description": "Message editing is temporarily forbidden for this user due to regulatory restrictions."
+        },
+        {
           "code": 400,
           "type": "ENTITIES_TOO_LONG",
           "description": "You provided too many styled message entities."
@@ -61220,7 +61258,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to prevent resending of messages"
+          "description": "Random ID to prevent resending of messages. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "reply_to": {
           "name": "reply_to",
@@ -61433,10 +61474,6 @@
           "description": "Invalid message ID provided."
         },
         {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
-        },
-        {
           "code": 406,
           "type": "PAYMENT_UNSUPPORTED",
           "description": "A detailed description of the error will be received separately as described here »."
@@ -61543,7 +61580,8 @@
         },
         {
           "code": 400,
-          "type": "USER_BOT_TO_BOT_DISABLED"
+          "type": "USER_BOT_TO_BOT_DISABLED",
+          "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
         },
         {
           "code": 403,
@@ -62772,6 +62810,11 @@
       "errors": [
         {
           "code": 400,
+          "type": "CHANNEL_FORUM_MISSING",
+          "description": "This supergroup is not a forum."
+        },
+        {
+          "code": 400,
           "type": "CHANNEL_INVALID",
           "description": "The provided channel is invalid."
         }
@@ -62967,10 +63010,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -65517,7 +65556,8 @@
         },
         {
           "code": 400,
-          "type": "SAVED_PEER_INVALID"
+          "type": "SAVED_PEER_INVALID",
+          "description": "top_msg_id is mandatory for monoforums."
         }
       ]
     },
@@ -66012,7 +66052,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "The ad's unique ID."
+          "description": "The ad's unique ID. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -66130,7 +66173,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client request ID required to prevent resending. This also doubles as the chat ID."
+          "description": "Unique client request ID required to prevent resending. This also doubles as the chat ID. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -67294,7 +67340,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID, necessary to avoid message resending"
+          "description": "Unique client message ID, necessary to avoid message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "silent": {
           "name": "silent",
@@ -67364,7 +67413,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID necessary to prevent message resending"
+          "description": "Unique client message ID necessary to prevent message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "silent": {
           "name": "silent",
@@ -67423,7 +67475,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent message resending"
+          "description": "Unique client message ID required to prevent message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       },
       "errors": [
@@ -67538,7 +67593,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid resending the same query"
+          "description": "Random ID to avoid resending the same query. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "reply_to": {
           "name": "reply_to",
@@ -67842,7 +67900,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid resending the same message"
+          "description": "Random ID to avoid resending the same message. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -68062,7 +68123,8 @@
         },
         {
           "code": 400,
-          "type": "EFFECT_CHAT_INVALID"
+          "type": "EFFECT_CHAT_INVALID",
+          "description": "Message effects can only be used in private 1-on-1 chats, but the caller tried to send a message with an effect to a group or channel."
         },
         {
           "code": 400,
@@ -68096,7 +68158,8 @@
         },
         {
           "code": 400,
-          "type": "EXTENDED_MEDIA_PEER_INVALID"
+          "type": "EXTENDED_MEDIA_PEER_INVALID",
+          "description": "Paid media is not allowed for the target peer."
         },
         {
           "code": 400,
@@ -68162,6 +68225,11 @@
           "code": 400,
           "type": "MEDIA_EMPTY",
           "description": "The provided media object is invalid."
+        },
+        {
+          "code": 400,
+          "type": "MEDIA_FILE_INVALID",
+          "description": "The specified media file is invalid."
         },
         {
           "code": 400,
@@ -68400,7 +68468,8 @@
         },
         {
           "code": 400,
-          "type": "USER_BOT_TO_BOT_DISABLED"
+          "type": "USER_BOT_TO_BOT_DISABLED",
+          "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
         },
         {
           "code": 403,
@@ -68536,7 +68605,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent message resending"
+          "description": "Unique client message ID required to prevent message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "reply_markup": {
           "name": "reply_markup",
@@ -68721,7 +68793,8 @@
         },
         {
           "code": 400,
-          "type": "EFFECT_CHAT_INVALID"
+          "type": "EFFECT_CHAT_INVALID",
+          "description": "Message effects can only be used in private 1-on-1 chats, but the caller tried to send a message with an effect to a group or channel."
         },
         {
           "code": 400,
@@ -68750,7 +68823,8 @@
         },
         {
           "code": 400,
-          "type": "ENTITY_DATE_TOO_LONG"
+          "type": "ENTITY_DATE_TOO_LONG",
+          "description": "The maximum text span that can be covered by a date entity is 31 UTF-16 code units if any of the date formatting flags is set, or 127 UTF-16 code units without.  ."
         },
         {
           "code": 400,
@@ -68949,7 +69023,8 @@
         },
         {
           "code": 400,
-          "type": "USER_BOT_TO_BOT_DISABLED"
+          "type": "USER_BOT_TO_BOT_DISABLED",
+          "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
         },
         {
           "code": 403,
@@ -69305,7 +69380,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent message resending. Note: this argument must be composed of a 64-bit integer where the lower 32 bits are random, and the higher 32 bits are equal to the current unixtime, i.e. `uint64_t random_id = (time() \u003c\u003c 32)"
+          "description": "Unique client message ID required to prevent message resending. Note: this argument must be composed of a 64-bit integer where the lower 32 bits are random, and the higher 32 bits are equal to the current unixtime, i.e. `uint64_t random_id = (time() \u003c\u003c 32). See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       },
       "errors": [
@@ -69380,7 +69458,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client IDs required to prevent message resending, one for each message we're sending, may be empty (but not recommended)."
+          "description": "Unique client IDs required to prevent message resending, one for each message we're sending, may be empty (but not recommended). See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "shortcut_id": {
           "name": "shortcut_id",
@@ -69563,7 +69644,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid message resending"
+          "description": "Random ID to avoid message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "reply_to": {
           "name": "reply_to",
@@ -69670,6 +69754,11 @@
         },
         {
           "code": 406,
+          "type": "POLL_COUNTRY_RESTRICTED",
+          "description": "Users from the current user's country cannot vote in this country-restricted poll »."
+        },
+        {
+          "code": 406,
           "type": "POLL_MEMBER_RESTRICTED",
           "description": "Only channel subscribers can vote in this poll."
         },
@@ -69709,7 +69798,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID to prevent duplicate sending of the same event"
+          "description": "Unique client message ID to prevent duplicate sending of the same event. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       },
       "errors": [
@@ -70644,7 +70736,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -70668,7 +70760,8 @@
         },
         {
           "code": 400,
-          "type": "TEXTDRAFT_PEER_INVALID"
+          "type": "TEXTDRAFT_PEER_INVALID",
+          "description": "sendMessageTextDraftAction can only be used in private 1-on-1 chats."
         },
         {
           "code": 400,
@@ -70706,7 +70799,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid resending the same message"
+          "description": "Random ID to avoid resending the same message. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "start_param": {
           "name": "start_param",
@@ -71953,7 +72049,10 @@
       "parameters": {
         "random_id": {
           "name": "random_id",
-          "description": "The ad's unique ID."
+          "description": "The ad's unique ID. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       }
     },
@@ -72860,7 +72959,8 @@
         },
         {
           "code": 403,
-          "type": "USER_DISALLOWED_STARGIFTS"
+          "type": "USER_DISALLOWED_STARGIFTS",
+          "description": "The recipient user has configured restrictions on which categories of star gifts they're willing to accept (unique, limited, or unlimited): the sender attempted to get a payment form for a gift that falls into a category the recipient has blocked."
         }
       ]
     },
@@ -74202,7 +74302,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random 64-bit identifier used to avoid sending the same offer twice in case of network issues."
+          "description": "Random 64-bit identifier used to avoid sending the same offer twice in case of network issues. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "slug": {
           "name": "slug",
@@ -74911,7 +75014,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent creation of duplicate group calls."
+          "description": "Unique client message ID required to prevent creation of duplicate group calls. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "video_stopped": {
           "name": "video_stopped",
@@ -74944,13 +75050,16 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent creation of duplicate group calls"
+          "description": "Unique client message ID required to prevent creation of duplicate group calls. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "rtmp_stream": {
           "name": "rtmp_stream",
           "description": "Create the call in RTMP livestream mode »¹, where one external streamer publishes all audio and video",
           "links": [
-            "https://core.telegram.org/api/group-calls#rtmp-livestreams"
+            "https://core.telegram.org/api/group-calls#stream-mode"
           ]
         },
         "schedule_date": {
@@ -75225,7 +75334,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -75290,7 +75399,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -75351,7 +75460,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -75440,7 +75549,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -75549,7 +75658,7 @@
         "The group call must be joined before invoking this method. Send the request to the media DC specified by groupCall².stream_dc_id."
       ],
       "links": [
-        "https://core.telegram.org/api/group-calls#playing-an-rtmp-livestream",
+        "https://core.telegram.org/api/group-calls#rtmp-mode",
         "https://core.telegram.org/constructor/groupCall"
       ],
       "parameters": {
@@ -75729,7 +75838,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -75841,13 +75950,9 @@
           "description": "The provided JSON data is invalid."
         },
         {
-          "code": 500,
-          "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
-        },
-        {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -76006,7 +76111,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Random ID to avoid resending the same object"
+          "description": "Random ID to avoid resending the same object. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "user_id": {
           "name": "user_id",
@@ -76266,7 +76374,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Fresh client-generated random ID used to deduplicate the message or donation"
+          "description": "Fresh client-generated random ID used to deduplicate the message or donation. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "send_as": {
           "name": "send_as",
@@ -76432,7 +76543,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -76492,7 +76603,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -76533,7 +76644,7 @@
         {
           "code": 403,
           "type": "GROUPCALL_FORBIDDEN",
-          "description": "The group call has already ended."
+          "description": "The specified group call cannot be used in this context."
         },
         {
           "code": 400,
@@ -76738,7 +76849,8 @@
         },
         {
           "code": 400,
-          "type": "NEED_ACTION_MISSING"
+          "type": "NEED_ACTION_MISSING",
+          "description": "The caller didn't specify a valid action (either save or suggest) for the contact profile photo upload."
         },
         {
           "code": 400,
@@ -79095,7 +79207,10 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Unique client message ID required to prevent message resending."
+          "description": "Unique client message ID required to prevent message resending. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         }
       },
       "errors": [
@@ -79243,13 +79358,16 @@
         },
         "random_id": {
           "name": "random_id",
-          "description": "Client-generated random ID used to prevent duplicate live stories"
+          "description": "Client-generated random ID used to prevent duplicate live stories. See here »¹ for more info on random ID deduplication and updateMessageID mapping.",
+          "links": [
+            "https://core.telegram.org/api/updates#updatemessageid-updates"
+          ]
         },
         "rtmp_stream": {
           "name": "rtmp_stream",
           "description": "Create the live story in RTMP livestream mode »¹, where one external streamer publishes all audio and video",
           "links": [
-            "https://core.telegram.org/api/group-calls#rtmp-livestreams"
+            "https://core.telegram.org/api/group-calls#stream-mode"
           ]
         },
         "send_paid_messages_stars": {
@@ -79505,10 +79623,6 @@
           "code": 400,
           "type": "MSG_ID_INVALID",
           "description": "Invalid message ID provided."
-        },
-        {
-          "code": 500,
-          "type": "NEED_DOC_INVALID"
         },
         {
           "code": 400,
@@ -80313,7 +80427,8 @@
     },
     "ACCESS_DENIED": {
       "code": 403,
-      "type": "ACCESS_DENIED"
+      "type": "ACCESS_DENIED",
+      "description": "The account was deactivated, or is a bot/service account."
     },
     "ACCESS_TOKEN_EXPIRED": {
       "code": 400,
@@ -81200,9 +81315,15 @@
       "type": "EDIT_BOT_INVITE_FORBIDDEN",
       "description": "Normal users can't edit invites that were created by bots."
     },
+    "EDIT_MESSAGE_TEMP_RESTRICTED": {
+      "code": 406,
+      "type": "EDIT_MESSAGE_TEMP_RESTRICTED",
+      "description": "Message editing is temporarily forbidden for this user due to regulatory restrictions."
+    },
     "EFFECT_CHAT_INVALID": {
       "code": 400,
-      "type": "EFFECT_CHAT_INVALID"
+      "type": "EFFECT_CHAT_INVALID",
+      "description": "Message effects can only be used in private 1-on-1 chats, but the caller tried to send a message with an effect to a group or channel."
     },
     "EFFECT_ID_INVALID": {
       "code": 400,
@@ -81326,7 +81447,8 @@
     },
     "ENTITY_DATE_TOO_LONG": {
       "code": 400,
-      "type": "ENTITY_DATE_TOO_LONG"
+      "type": "ENTITY_DATE_TOO_LONG",
+      "description": "The maximum text span that can be covered by a date entity is 31 UTF-16 code units if any of the date formatting flags is set, or 127 UTF-16 code units without.  ."
     },
     "ENTITY_MENTION_USER_INVALID": {
       "code": 400,
@@ -81365,7 +81487,8 @@
     },
     "EXTENDED_MEDIA_PEER_INVALID": {
       "code": 400,
-      "type": "EXTENDED_MEDIA_PEER_INVALID"
+      "type": "EXTENDED_MEDIA_PEER_INVALID",
+      "description": "Paid media is not allowed for the target peer."
     },
     "EXTERNAL_URL_INVALID": {
       "code": 400,
@@ -81622,10 +81745,6 @@
       "type": "GRAPH_OUTDATED_RELOAD",
       "description": "The graph is outdated, please get a new async token using stats.getBroadcastStats."
     },
-    "GROUPCALL_ADD_PARTICIPANTS_FAILED": {
-      "code": 500,
-      "type": "GROUPCALL_ADD_PARTICIPANTS_FAILED"
-    },
     "GROUPCALL_ALREADY_DISCARDED": {
       "code": 400,
       "type": "GROUPCALL_ALREADY_DISCARDED",
@@ -81644,7 +81763,7 @@
     "GROUPCALL_FORBIDDEN": {
       "code": 403,
       "type": "GROUPCALL_FORBIDDEN",
-      "description": "The group call has already ended."
+      "description": "The specified group call cannot be used in this context."
     },
     "GROUPCALL_INVALID": {
       "code": 400,
@@ -82092,7 +82211,7 @@
       "description": "The specified voice message is too long to be transcribed."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -82103,11 +82222,8 @@
     },
     "NEED_ACTION_MISSING": {
       "code": 400,
-      "type": "NEED_ACTION_MISSING"
-    },
-    "NEED_DOC_INVALID": {
-      "code": 500,
-      "type": "NEED_DOC_INVALID"
+      "type": "NEED_ACTION_MISSING",
+      "description": "The caller didn't specify a valid action (either save or suggest) for the contact profile photo upload."
     },
     "NEW_SALT_INVALID": {
       "code": 400,
@@ -82130,7 +82246,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -82218,10 +82334,6 @@
       "code": 400,
       "type": "PARTICIPANT_VERSION_OUTDATED",
       "description": "The other participant does not use an up to date telegram client with support for calls."
-    },
-    "PASSKEY_AUTH_RESTART": {
-      "code": 500,
-      "type": "PASSKEY_AUTH_RESTART"
     },
     "PASSKEY_ORIGIN_MISMATCH": {
       "code": 400,
@@ -82467,6 +82579,11 @@
       "code": 400,
       "type": "POLL_ANSWER_INVALID",
       "description": "One of the poll answers is not acceptable."
+    },
+    "POLL_COUNTRY_RESTRICTED": {
+      "code": 406,
+      "type": "POLL_COUNTRY_RESTRICTED",
+      "description": "Users from the current user's country cannot vote in this country-restricted poll »."
     },
     "POLL_MEMBER_RESTRICTED": {
       "code": 406,
@@ -82820,7 +82937,8 @@
     },
     "SAVED_PEER_INVALID": {
       "code": 400,
-      "type": "SAVED_PEER_INVALID"
+      "type": "SAVED_PEER_INVALID",
+      "description": "top_msg_id is mandatory for monoforums."
     },
     "SCHEDULE_BOT_NOT_ALLOWED": {
       "code": 400,
@@ -83384,7 +83502,8 @@
     },
     "TEXTDRAFT_PEER_INVALID": {
       "code": 400,
-      "type": "TEXTDRAFT_PEER_INVALID"
+      "type": "TEXTDRAFT_PEER_INVALID",
+      "description": "sendMessageTextDraftAction can only be used in private 1-on-1 chats."
     },
     "THEME_FILE_INVALID": {
       "code": 400,
@@ -83482,7 +83601,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -83693,10 +83812,11 @@
     },
     "USER_BOT_TO_BOT_DISABLED": {
       "code": 400,
-      "type": "USER_BOT_TO_BOT_DISABLED"
+      "type": "USER_BOT_TO_BOT_DISABLED",
+      "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
@@ -83712,7 +83832,8 @@
     },
     "USER_DISALLOWED_STARGIFTS": {
       "code": 403,
-      "type": "USER_DISALLOWED_STARGIFTS"
+      "type": "USER_DISALLOWED_STARGIFTS",
+      "description": "The recipient user has configured restrictions on which categories of star gifts they're willing to accept (unique, limited, or unlimited): the sender attempted to get a payment form for a gift that falls into a category the recipient has blocked."
     },
     "USER_GIFT_UNAVAILABLE": {
       "code": 400,
