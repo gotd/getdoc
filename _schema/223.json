@@ -11305,15 +11305,13 @@
     "documentAttributeAnimated": {
       "name": "documentAttributeAnimated",
       "description": [
-        "Defines an animated GIF",
-        "API schema:"
+        "Defines an animated GIF"
       ]
     },
     "documentAttributeAudio": {
       "name": "documentAttributeAudio",
       "description": [
-        "Represents an audio file",
-        "API schema:"
+        "Represents an audio file"
       ],
       "fields": {
         "duration": {
@@ -11382,8 +11380,7 @@
     "documentAttributeFilename": {
       "name": "documentAttributeFilename",
       "description": [
-        "A simple document with a file name",
-        "API schema:"
+        "A simple document with a file name"
       ],
       "fields": {
         "file_name": {
@@ -11401,8 +11398,7 @@
     "documentAttributeImageSize": {
       "name": "documentAttributeImageSize",
       "description": [
-        "Defines the width and height of an image uploaded as document",
-        "API schema:"
+        "Defines the width and height of an image uploaded as document"
       ],
       "fields": {
         "h": {
@@ -11418,8 +11414,7 @@
     "documentAttributeSticker": {
       "name": "documentAttributeSticker",
       "description": [
-        "Defines a sticker",
-        "API schema:"
+        "Defines a sticker"
       ],
       "fields": {
         "alt": {
@@ -11450,8 +11445,7 @@
     "documentAttributeVideo": {
       "name": "documentAttributeVideo",
       "description": [
-        "Defines a video",
-        "API schema:"
+        "Defines a video"
       ],
       "fields": {
         "duration": {
@@ -13034,8 +13028,7 @@
     "groupCallMessage": {
       "name": "groupCallMessage",
       "description": [
-        "Represents an in-call message »¹, emoji reaction, paid live story comment or standalone paid live story donation.",
-        "API schema:"
+        "Represents an in-call message »¹, emoji reaction, paid live story comment or standalone paid live story donation."
       ],
       "links": [
         "https://core.telegram.org/api/group-calls#in-call-messages"
@@ -13251,7 +13244,10 @@
         },
         "scale": {
           "name": "scale",
-          "description": "Specifies the duration of the media segment to fetch. To obtain this value in milliseconds, bitshift 1000 to the right scale times: duration_ms := 1000 \u003e\u003e scale."
+          "description": "Deprecated, ignored by clients »¹: use the media segment duration hardcoded in clients (1000 milliseconds, i.e. scale = 0) instead. Historically, it specified the duration of the media segment to fetch, obtained in milliseconds by bitshifting 1000 to the right scale times: duration_ms := 1000 \u003e\u003e scale.",
+          "links": [
+            "https://core.telegram.org/api/group-calls#rtmp-mode"
+          ]
         }
       }
     },
@@ -18415,8 +18411,7 @@
     "inputStickerSetEmpty": {
       "name": "inputStickerSetEmpty",
       "description": [
-        "Empty constructor",
-        "API schema:"
+        "Empty constructor"
       ]
     },
     "inputStickerSetID": {
@@ -18475,8 +18470,7 @@
     "inputStickerSetShortName": {
       "name": "inputStickerSetShortName",
       "description": [
-        "Stickerset by short name, from a stickerset deep link »¹",
-        "API schema:"
+        "Stickerset by short name, from a stickerset deep link »¹"
       ],
       "links": [
         "https://core.telegram.org/api/links#stickerset-links"
@@ -19347,8 +19341,7 @@
     "jsonArray": {
       "name": "jsonArray",
       "description": [
-        "JSON array",
-        "API schema:"
+        "JSON array"
       ],
       "fields": {
         "value": {
@@ -19360,8 +19353,7 @@
     "jsonBool": {
       "name": "jsonBool",
       "description": [
-        "JSON boolean value",
-        "API schema:"
+        "JSON boolean value"
       ],
       "fields": {
         "value": {
@@ -19373,15 +19365,13 @@
     "jsonNull": {
       "name": "jsonNull",
       "description": [
-        "null JSON value",
-        "API schema:"
+        "null JSON value"
       ]
     },
     "jsonNumber": {
       "name": "jsonNumber",
       "description": [
-        "JSON numeric value",
-        "API schema:"
+        "JSON numeric value"
       ],
       "fields": {
         "value": {
@@ -19393,8 +19383,7 @@
     "jsonObject": {
       "name": "jsonObject",
       "description": [
-        "JSON object value",
-        "API schema:"
+        "JSON object value"
       ],
       "fields": {
         "value": {
@@ -19406,8 +19395,7 @@
     "jsonObjectValue": {
       "name": "jsonObjectValue",
       "description": [
-        "JSON key: value pair",
-        "API schema:"
+        "JSON key: value pair"
       ],
       "fields": {
         "key": {
@@ -19423,8 +19411,7 @@
     "jsonString": {
       "name": "jsonString",
       "description": [
-        "JSON string",
-        "API schema:"
+        "JSON string"
       ],
       "fields": {
         "value": {
@@ -22649,8 +22636,7 @@
     "messageEntityBlockquote": {
       "name": "messageEntityBlockquote",
       "description": [
-        "Message entity representing a block quote.",
-        "API schema:"
+        "Message entity representing a block quote."
       ],
       "fields": {
         "collapsed": {
@@ -22683,8 +22669,7 @@
     "messageEntityBold": {
       "name": "messageEntityBold",
       "description": [
-        "Message entity representing bold text.",
-        "API schema:"
+        "Message entity representing bold text."
       ],
       "fields": {
         "length": {
@@ -22706,8 +22691,7 @@
     "messageEntityBotCommand": {
       "name": "messageEntityBotCommand",
       "description": [
-        "Message entity representing a bot /command",
-        "API schema:"
+        "Message entity representing a bot /command"
       ],
       "fields": {
         "length": {
@@ -22751,8 +22735,7 @@
     "messageEntityCode": {
       "name": "messageEntityCode",
       "description": [
-        "Message entity representing a codeblock.",
-        "API schema:"
+        "Message entity representing a codeblock."
       ],
       "fields": {
         "length": {
@@ -22775,8 +22758,7 @@
       "name": "messageEntityCustomEmoji",
       "description": [
         "Represents a custom emoji.",
-        "Note that this entity must wrap exactly one regular emoji (the one contained in documentAttributeCustomEmoji¹.alt) in the related text, otherwise the server will ignore it.",
-        "API schema:"
+        "Note that this entity must wrap exactly one regular emoji (the one contained in documentAttributeCustomEmoji¹.alt) in the related text, otherwise the server will ignore it."
       ],
       "links": [
         "https://core.telegram.org/constructor/documentAttributeCustomEmoji"
@@ -22809,8 +22791,7 @@
     "messageEntityEmail": {
       "name": "messageEntityEmail",
       "description": [
-        "Message entity representing an email@example.com¹.",
-        "API schema:"
+        "Message entity representing an email@example.com¹."
       ],
       "links": [
         "https://core.telegram.orgmailto:email@example.com"
@@ -22900,8 +22881,7 @@
     "messageEntityHashtag": {
       "name": "messageEntityHashtag",
       "description": [
-        "#hashtag message entity",
-        "API schema:"
+        "#hashtag message entity"
       ],
       "fields": {
         "length": {
@@ -22923,8 +22903,7 @@
     "messageEntityItalic": {
       "name": "messageEntityItalic",
       "description": [
-        "Message entity representing italic text.",
-        "API schema:"
+        "Message entity representing italic text."
       ],
       "fields": {
         "length": {
@@ -22946,8 +22925,7 @@
     "messageEntityMention": {
       "name": "messageEntityMention",
       "description": [
-        "Message entity mentioning¹ a user by @username; messageEntityMentionName² can also be used to mention users by their ID.",
-        "API schema:"
+        "Message entity mentioning¹ a user by @username; messageEntityMentionName² can also be used to mention users by their ID."
       ],
       "links": [
         "https://core.telegram.org/api/mentions",
@@ -23025,8 +23003,7 @@
     "messageEntityPre": {
       "name": "messageEntityPre",
       "description": [
-        "Message entity representing a preformatted codeblock, allowing the user to specify a programming language for the codeblock.",
-        "API schema:"
+        "Message entity representing a preformatted codeblock, allowing the user to specify a programming language for the codeblock."
       ],
       "fields": {
         "language": {
@@ -23052,8 +23029,7 @@
     "messageEntitySpoiler": {
       "name": "messageEntitySpoiler",
       "description": [
-        "Message entity representing a spoiler",
-        "API schema:"
+        "Message entity representing a spoiler"
       ],
       "fields": {
         "length": {
@@ -23075,8 +23051,7 @@
     "messageEntityStrike": {
       "name": "messageEntityStrike",
       "description": [
-        "Message entity representing strikethrough text.",
-        "API schema:"
+        "Message entity representing strikethrough text."
       ],
       "fields": {
         "length": {
@@ -23099,8 +23074,7 @@
       "name": "messageEntityTextUrl",
       "description": [
         "Message entity representing a text url¹: for in-text urls like https://google.com² use messageEntityUrl³.",
-        "Note that an additional confirmation popup with the full URL must be displayed to the user before opening this link, unless the domain satisfies the conditions specified in the domain whitelist documentation »¹.",
-        "API schema:"
+        "Note that an additional confirmation popup with the full URL must be displayed to the user before opening this link, unless the domain satisfies the conditions specified in the domain whitelist documentation »¹."
       ],
       "links": [
         "https://google.com",
@@ -23132,8 +23106,7 @@
     "messageEntityUnderline": {
       "name": "messageEntityUnderline",
       "description": [
-        "Message entity representing underlined text.",
-        "API schema:"
+        "Message entity representing underlined text."
       ],
       "fields": {
         "length": {
@@ -23155,8 +23128,7 @@
     "messageEntityUnknown": {
       "name": "messageEntityUnknown",
       "description": [
-        "Unknown message entity",
-        "API schema:"
+        "Unknown message entity"
       ],
       "fields": {
         "length": {
@@ -23178,8 +23150,7 @@
     "messageEntityUrl": {
       "name": "messageEntityUrl",
       "description": [
-        "Message entity representing an in-text url: https://google.com¹; for text urls², use messageEntityTextUrl³.",
-        "API schema:"
+        "Message entity representing an in-text url: https://google.com¹; for text urls², use messageEntityTextUrl³."
       ],
       "links": [
         "https://google.com",
@@ -30147,8 +30118,7 @@
     "photoCachedSize": {
       "name": "photoCachedSize",
       "description": [
-        "Description of an image and its content.",
-        "API schema:"
+        "Description of an image and its content."
       ],
       "fields": {
         "bytes": {
@@ -30209,8 +30179,7 @@
     "photoSize": {
       "name": "photoSize",
       "description": [
-        "Image description.",
-        "API schema:"
+        "Image description."
       ],
       "fields": {
         "h": {
@@ -30237,8 +30206,7 @@
     "photoSizeEmpty": {
       "name": "photoSizeEmpty",
       "description": [
-        "Empty constructor. Image with this thumbnail is unavailable.",
-        "API schema:"
+        "Empty constructor. Image with this thumbnail is unavailable."
       ],
       "fields": {
         "type": {
@@ -33061,15 +33029,13 @@
     "sendMessageCancelAction": {
       "name": "sendMessageCancelAction",
       "description": [
-        "Invalidate all previous action updates. E.g. when user deletes entered text or aborts a video upload.",
-        "API schema:"
+        "Invalidate all previous action updates. E.g. when user deletes entered text or aborts a video upload."
       ]
     },
     "sendMessageChooseContactAction": {
       "name": "sendMessageChooseContactAction",
       "description": [
-        "User is selecting a contact to share.",
-        "API schema:"
+        "User is selecting a contact to share."
       ]
     },
     "sendMessageChooseStickerAction": {
@@ -33128,8 +33094,7 @@
     "sendMessageGeoLocationAction": {
       "name": "sendMessageGeoLocationAction",
       "description": [
-        "User is selecting a location to share.",
-        "API schema:"
+        "User is selecting a location to share."
       ]
     },
     "sendMessageHistoryImportAction": {
@@ -33147,22 +33112,19 @@
     "sendMessageRecordAudioAction": {
       "name": "sendMessageRecordAudioAction",
       "description": [
-        "User is recording a voice message.",
-        "API schema:"
+        "User is recording a voice message."
       ]
     },
     "sendMessageRecordRoundAction": {
       "name": "sendMessageRecordRoundAction",
       "description": [
-        "User is recording a round video to share",
-        "API schema:"
+        "User is recording a round video to share"
       ]
     },
     "sendMessageRecordVideoAction": {
       "name": "sendMessageRecordVideoAction",
       "description": [
-        "User is recording a video.",
-        "API schema:"
+        "User is recording a video."
       ]
     },
     "sendMessageTextDraftAction": {
@@ -33191,15 +33153,13 @@
     "sendMessageTypingAction": {
       "name": "sendMessageTypingAction",
       "description": [
-        "User is typing.",
-        "API schema:"
+        "User is typing."
       ]
     },
     "sendMessageUploadAudioAction": {
       "name": "sendMessageUploadAudioAction",
       "description": [
-        "User is uploading a voice message.",
-        "API schema:"
+        "User is uploading a voice message."
       ],
       "fields": {
         "progress": {
@@ -33211,8 +33171,7 @@
     "sendMessageUploadDocumentAction": {
       "name": "sendMessageUploadDocumentAction",
       "description": [
-        "User is uploading a file.",
-        "API schema:"
+        "User is uploading a file."
       ],
       "fields": {
         "progress": {
@@ -33224,8 +33183,7 @@
     "sendMessageUploadPhotoAction": {
       "name": "sendMessageUploadPhotoAction",
       "description": [
-        "User is uploading a photo.",
-        "API schema:"
+        "User is uploading a photo."
       ],
       "fields": {
         "progress": {
@@ -33237,8 +33195,7 @@
     "sendMessageUploadRoundAction": {
       "name": "sendMessageUploadRoundAction",
       "description": [
-        "User is uploading a round video",
-        "API schema:"
+        "User is uploading a round video"
       ],
       "fields": {
         "progress": {
@@ -33250,8 +33207,7 @@
     "sendMessageUploadVideoAction": {
       "name": "sendMessageUploadVideoAction",
       "description": [
-        "User is uploading a video.",
-        "API schema:"
+        "User is uploading a video."
       ],
       "fields": {
         "progress": {
@@ -37059,8 +37015,7 @@
     "textWithEntities": {
       "name": "textWithEntities",
       "description": [
-        "Styled text with message entities¹",
-        "API schema:"
+        "Styled text with message entities¹"
       ],
       "links": [
         "https://core.telegram.org/api/entities"
@@ -65511,7 +65466,11 @@
     "messages.readMentions": {
       "name": "messages.readMentions",
       "description": [
-        "Mark mentions as read"
+        "Mark mentions as read; can be used in forums¹ but cannot be used in monoforums²."
+      ],
+      "links": [
+        "https://core.telegram.org/api/forum",
+        "https://core.telegram.org/api/monoforum"
       ],
       "parameters": {
         "flags": {
@@ -65527,7 +65486,7 @@
         },
         "top_msg_id": {
           "name": "top_msg_id",
-          "description": "Mark as read only mentions within the specified forum topic¹",
+          "description": "Mark as read only mentions within the specified forum topic¹ (except for monoforums).",
           "links": [
             "https://core.telegram.org/api/forum#forum-topics"
           ]
@@ -65553,11 +65512,6 @@
           "code": 400,
           "type": "PEER_ID_INVALID",
           "description": "The provided peer id is invalid."
-        },
-        {
-          "code": 400,
-          "type": "SAVED_PEER_INVALID",
-          "description": "top_msg_id is mandatory for monoforums."
         }
       ]
     },
@@ -66193,6 +66147,11 @@
           "code": 400,
           "type": "INPUT_USER_DEACTIVATED",
           "description": "The specified user was deleted."
+        },
+        {
+          "code": 400,
+          "type": "RANDOM_ID_DUPLICATE",
+          "description": "You provided a random ID that was already used."
         },
         {
           "code": 400,
@@ -82934,11 +82893,6 @@
       "code": 400,
       "type": "SAVED_ID_EMPTY",
       "description": "The passed inputSavedStarGiftChat.saved_id is empty."
-    },
-    "SAVED_PEER_INVALID": {
-      "code": 400,
-      "type": "SAVED_PEER_INVALID",
-      "description": "top_msg_id is mandatory for monoforums."
     },
     "SCHEDULE_BOT_NOT_ALLOWED": {
       "code": 400,
