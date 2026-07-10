@@ -24974,30 +24974,36 @@
     "messages.dhConfig": {
       "name": "messages.dhConfig",
       "description": [
-        "New set of configuring parameters."
+        "New set of Diffie-Hellman parameters."
       ],
       "fields": {
         "g": {
           "name": "g",
-          "description": "New value prime, see Wikipedia¹",
+          "description": "The primitive root, see Wikipedia¹",
           "links": [
             "https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
           ]
         },
         "p": {
           "name": "p",
-          "description": "New value primitive root, see Wikipedia¹",
+          "description": "The prime, see Wikipedia¹",
           "links": [
             "https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
           ]
         },
         "random": {
           "name": "random",
-          "description": "Random sequence of bytes of assigned length"
+          "description": "Random sequence of bytes of the length requested in messages.getDhConfig¹.random_length.",
+          "links": [
+            "https://core.telegram.org/method/messages.getDhConfig"
+          ]
         },
         "version": {
           "name": "version",
-          "description": "Version of set of parameters"
+          "description": "The version of these parameters, passed to messages.getDhConfig¹ to avoid refetching them if they haven't changed.",
+          "links": [
+            "https://core.telegram.org/method/messages.getDhConfig"
+          ]
         }
       }
     },
