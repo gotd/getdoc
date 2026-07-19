@@ -81006,7 +81006,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 400,
+      "code": 500,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -82176,7 +82176,7 @@
       "description": "The specified voice message is too long to be transcribed."
     },
     "MSG_WAIT_FAILED": {
-      "code": 400,
+      "code": 500,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -82446,7 +82446,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -83438,7 +83438,7 @@
     "TAKEOUT_REQUIRED": {
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
-      "description": "A takeout¹ session needs to be initialized first, see here » for more info²."
+      "description": "A takeout session needs to be initialized first, see here » for more info."
     },
     "TASK_ALREADY_EXISTS": {
       "code": 400,
@@ -83776,7 +83776,7 @@
       "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
