@@ -81006,7 +81006,7 @@
       "description": "The provided chat id is invalid."
     },
     "CHAT_INVALID": {
-      "code": 500,
+      "code": 400,
       "type": "CHAT_INVALID",
       "description": "Invalid chat."
     },
@@ -82176,7 +82176,7 @@
       "description": "The specified voice message is too long to be transcribed."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -82446,7 +82446,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -83246,7 +83246,7 @@
       "description": "There are too many stickers in this stickerpack, you can't add any more."
     },
     "STICKERSET_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "STICKERSET_INVALID",
       "description": "The provided sticker set is invalid."
     },
@@ -83438,7 +83438,7 @@
     "TAKEOUT_REQUIRED": {
       "code": 403,
       "type": "TAKEOUT_REQUIRED",
-      "description": "A takeout session needs to be initialized first, see here » for more info."
+      "description": "A takeout¹ session needs to be initialized first, see here » for more info²."
     },
     "TASK_ALREADY_EXISTS": {
       "code": 400,
