@@ -80891,7 +80891,7 @@
       "description": "The current user is not in the channel."
     },
     "CHANNEL_PRIVATE": {
-      "code": 406,
+      "code": 400,
       "type": "CHANNEL_PRIVATE",
       "description": "You haven't joined this channel/supergroup."
     },
@@ -81891,7 +81891,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -82371,7 +82371,7 @@
       "description": "You can't pin an empty chat with a user."
     },
     "PEER_ID_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PEER_ID_INVALID",
       "description": "The provided peer id is invalid."
     },
@@ -83776,7 +83776,7 @@
       "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 403,
+      "code": 400,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
