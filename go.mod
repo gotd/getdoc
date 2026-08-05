@@ -6,11 +6,11 @@ require (
 	github.com/PuerkitoBio/goquery v1.11.0
 	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/go-faster/errors v0.8.0
-	github.com/go-faster/sdk v0.37.0
+	github.com/go-faster/sdk v0.38.0
 	github.com/stretchr/testify v1.11.1
 	go.uber.org/ratelimit v0.3.1
 	go.uber.org/zap v1.28.0
-	golang.org/x/sync v0.21.0
+	golang.org/x/sync v0.22.0
 )
 
 require (
