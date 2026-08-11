@@ -80971,7 +80971,7 @@
       "description": "You do not have the rights to do this."
     },
     "CHAT_ADMIN_REQUIRED": {
-      "code": 403,
+      "code": 400,
       "type": "CHAT_ADMIN_REQUIRED",
       "description": "You must be an admin in this chat to do this."
     },
@@ -81891,7 +81891,7 @@
       "description": "The invite hash is empty."
     },
     "INVITE_HASH_EXPIRED": {
-      "code": 406,
+      "code": 400,
       "type": "INVITE_HASH_EXPIRED",
       "description": "The invite link has expired."
     },
@@ -82211,7 +82211,7 @@
       "description": "The specified offset is longer than 64 bytes."
     },
     "NOT_ELIGIBLE": {
-      "code": 403,
+      "code": 400,
       "type": "NOT_ELIGIBLE",
       "description": "The current user is not eligible to join the Peer-to-Peer Login Program."
     },
@@ -82716,7 +82716,7 @@
       "description": "You cannot raise your hand."
     },
     "RANDOM_ID_DUPLICATE": {
-      "code": 400,
+      "code": 500,
       "type": "RANDOM_ID_DUPLICATE",
       "description": "You provided a random ID that was already used."
     },
