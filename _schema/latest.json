@@ -82176,7 +82176,7 @@
       "description": "The specified voice message is too long to be transcribed."
     },
     "MSG_WAIT_FAILED": {
-      "code": 500,
+      "code": 400,
       "type": "MSG_WAIT_FAILED",
       "description": "A waiting call returned an error."
     },
@@ -83776,7 +83776,7 @@
       "description": "Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather."
     },
     "USER_CHANNELS_TOO_MUCH": {
-      "code": 400,
+      "code": 403,
       "type": "USER_CHANNELS_TOO_MUCH",
       "description": "One of the users you tried to add is already in too many channels/supergroups."
     },
