@@ -84243,7 +84243,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 406,
+      "code": 400,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
