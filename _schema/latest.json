@@ -82673,7 +82673,7 @@
       "description": "The current user is not in the channel."
     },
     "CHANNEL_PRIVATE": {
-      "code": 400,
+      "code": 406,
       "type": "CHANNEL_PRIVATE",
       "description": "You haven't joined this channel/supergroup."
     },
@@ -84243,7 +84243,7 @@
       "description": "You asked for the code too many times."
     },
     "PHONE_NUMBER_INVALID": {
-      "code": 400,
+      "code": 406,
       "type": "PHONE_NUMBER_INVALID",
       "description": "The phone number is invalid."
     },
@@ -85358,7 +85358,7 @@
       "description": "You specified no topic IDs."
     },
     "TOPIC_CLOSED": {
-      "code": 406,
+      "code": 400,
       "type": "TOPIC_CLOSED",
       "description": "This topic was closed, you can't send messages to it anymore."
     },
@@ -85628,7 +85628,7 @@
       "description": "This user was kicked from this supergroup/channel."
     },
     "USER_NOT_MUTUAL_CONTACT": {
-      "code": 400,
+      "code": 403,
       "type": "USER_NOT_MUTUAL_CONTACT",
       "description": "The provided user is not a mutual contact."
     },
